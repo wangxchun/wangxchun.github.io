@@ -202,19 +202,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>C++報錯 no matching function for call to transform</title>
-    <url>/2021/03/24/no-matching-function-for-call-to-transform/</url>
-    <content><![CDATA[<h3 id="報錯"><a href="#報錯" class="headerlink" title="報錯"></a>報錯</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>報錯：no matching function for call to transform</p>
-<h3 id="有三種解決方法："><a href="#有三種解決方法：" class="headerlink" title="有三種解決方法："></a>有三種解決方法：</h3><h4 id="1-因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g-環境中沒有問題："><a href="#1-因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g-環境中沒有問題：" class="headerlink" title="1.因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g++環境中沒有問題："></a>1.因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g++環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), ::toupper);</span><br></pre></td></tr></table></figure>
-<h4 id="2-自己寫一個函數出來—wraper"><a href="#2-自己寫一個函數出來—wraper" class="headerlink" title="2.自己寫一個函數出來—wraper"></a>2.自己寫一個函數出來—wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span><span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span>(c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。"><a href="#3-強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。" class="headerlink" title="3.強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。"></a>3.強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>))toupper);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++報錯</category>
-      </categories>
-  </entry>
-  <entry>
     <title>vbox安装Ubuntu清理整个磁盘会怎样</title>
     <url>/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/</url>
     <content><![CDATA[<h4 id="vbox安装Ubuntu清理整个磁盘会怎样"><a href="#vbox安装Ubuntu清理整个磁盘会怎样" class="headerlink" title="vbox安装Ubuntu清理整个磁盘会怎样"></a>vbox安装Ubuntu清理整个磁盘会怎样</h4><p>不用担心。它不会影响你的整个系统。因为你是在VirtualBox虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。</p>
@@ -228,6 +215,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>linux</tag>
         <tag>Ubuntu</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>C++報錯 no matching function for call to transform</title>
+    <url>/2021/03/24/no-matching-function-for-call-to-transform/</url>
+    <content><![CDATA[<h3 id="報錯"><a href="#報錯" class="headerlink" title="報錯"></a>報錯</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>報錯：no matching function for call to transform</p>
+<h3 id="有三種解決方法："><a href="#有三種解決方法：" class="headerlink" title="有三種解決方法："></a>有三種解決方法：</h3><h4 id="1-因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g-環境中沒有問題："><a href="#1-因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g-環境中沒有問題：" class="headerlink" title="1.因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g++環境中沒有問題："></a>1.因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g++環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), ::toupper);</span><br></pre></td></tr></table></figure>
+<h4 id="2-自己寫一個函數出來—wraper"><a href="#2-自己寫一個函數出來—wraper" class="headerlink" title="2.自己寫一個函數出來—wraper"></a>2.自己寫一個函數出來—wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span><span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span>(c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。"><a href="#3-強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。" class="headerlink" title="3.強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。"></a>3.強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>))toupper);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++報錯</category>
+      </categories>
   </entry>
   <entry>
     <title>三連擊（洛谷P1008）</title>
@@ -250,20 +250,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>如何在hexo blog中發表一篇文章</title>
-    <url>/2019/03/22/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h4 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1.新建一篇文章"></a>1.新建一篇文章</h4><p>(1) 在hexo blog目錄下，進入cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;文章名稱&quot;</span><br></pre></td></tr></table></figure></p>
-<p>(2) 在blog目錄下的/source/_posts/ 資料夾下，可以看到生成的 blog文章（文章名稱.md）<br>(3) 在.md檔案中編輯自己的文章即可<br>注意：Hexo 發表的文章是 Markdown 格式的檔案</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>發表文章</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构 -- (2)树</title>
     <url>/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
     <content><![CDATA[<h3 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h3><h4 id="1-树的定义：递归定义"><a href="#1-树的定义：递归定义" class="headerlink" title="1.树的定义：递归定义"></a>1.树的定义：递归定义</h4><h4 id="2-基本术语"><a href="#2-基本术语" class="headerlink" title="2.基本术语"></a>2.基本术语</h4><p>父节点，子节点，兄弟节点<br>根节点，叶节点<br>层(深度)，高度(树的高度=根节点的高度)<br>有序树(兄弟节点之间是有顺序的)，无序树<br>路径(树的边是单向的)，路径长度(一条路径边的个数)，带权路径<br>节点的度(子节点的数量)，树的度(最大的度)</p>
@@ -279,6 +265,20 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="5-二叉树的遍历"><a href="#5-二叉树的遍历" class="headerlink" title="5.二叉树的遍历"></a>5.二叉树的遍历</h4><h5 id="1-遍历有先序-NLR-、中序-LNR-、后序-LRN-三种遍历算法，其中”序”指的是根节点在何时被访问"><a href="#1-遍历有先序-NLR-、中序-LNR-、后序-LRN-三种遍历算法，其中”序”指的是根节点在何时被访问" class="headerlink" title="(1) 遍历有先序(NLR)、中序(LNR)、后序(LRN)三种遍历算法，其中”序”指的是根节点在何时被访问"></a>(1) 遍历有先序(NLR)、中序(LNR)、后序(LRN)三种遍历算法，其中”序”指的是根节点在何时被访问</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;先序遍历</span><br><span class="line">void PreOrder(BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	if(T!&#x3D;NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		visit(T);            &#x2F;&#x2F;访问根节点</span><br><span class="line">		PreOrder(T-&gt;ichild); &#x2F;&#x2F;递归遍历左子树</span><br><span class="line">		PreOrder(T-&gt;echild); &#x2F;&#x2F;递归遍历右子树</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="2-非递归算法"><a href="#2-非递归算法" class="headerlink" title="(2) 非递归算法"></a>(2) 非递归算法</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;中序遍历的非递归算法</span><br><span class="line">void InOrder2(BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	InitStack(S); BiTree p &#x3D; T;</span><br><span class="line">	while(p || !IsEmpty(S))</span><br><span class="line">	&#123;</span><br><span class="line">		if(p)</span><br><span class="line">		&#123;</span><br><span class="line">			Push(S,p);</span><br><span class="line">			p &#x3D; p-&gt;lchild;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			Pop(S,p); visit(p);</span><br><span class="line">			p &#x3D; p-&gt;rchild;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;入栈序列：先序</span><br><span class="line">&#x2F;&#x2F;出栈序列：中序</span><br></pre></td></tr></table></figure>
 ]]></content>
+  </entry>
+  <entry>
+    <title>如何在hexo blog中發表一篇文章</title>
+    <url>/2019/03/22/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h4 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1.新建一篇文章"></a>1.新建一篇文章</h4><p>(1) 在hexo blog目錄下，進入cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;文章名稱&quot;</span><br></pre></td></tr></table></figure></p>
+<p>(2) 在blog目錄下的/source/_posts/ 資料夾下，可以看到生成的 blog文章（文章名稱.md）<br>(3) 在.md檔案中編輯自己的文章即可<br>注意：Hexo 發表的文章是 Markdown 格式的檔案</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>發表文章</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据结构 -- (1)线性表</title>
@@ -343,30 +343,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>slam小車：(一)前期準備--2.Linux目錄結構與常用指令</title>
-    <url>/2019/03/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/</url>
-    <content><![CDATA[<h3 id="一、Linux目錄結構"><a href="#一、Linux目錄結構" class="headerlink" title="一、Linux目錄結構"></a>一、Linux目錄結構</h3><h3 id="二、Linux常用指令"><a href="#二、Linux常用指令" class="headerlink" title="二、Linux常用指令"></a>二、Linux常用指令</h3><h4 id="1-打开terminal"><a href="#1-打开terminal" class="headerlink" title="1.打开terminal"></a>1.打开terminal</h4><p>(1) 右鍵-&gt;打開終端<br>(2) Ctrl+Alt+t 或者 Ctrl+Shift+t</p>
-<h4 id="2-常用快速鍵"><a href="#2-常用快速鍵" class="headerlink" title="2.常用快速鍵"></a>2.常用快速鍵</h4><p>(1) tab<br>一次tab：命令補齊<br>兩次tab：提示內容<br>(2) Ctrl+c<br>Ctrl+c中斷，強行打斷進程<br>(3)Ctrl+d<br>Ctrl+d退出，相當於exit和quit<br>比如用python命令進入python交互環境後，就可以用Ctrl+d退出python交互環境<br>(4)Ctrl+Shift+c 和 Ctrl+Shift+v<br>先用滑鼠選中需要複製的內容，然後用Ctrl+Shift+c進行複製，再用Ctrl+Shift+v進行貼上<br>(5)圖形介面與純文字互動模式切換<br>Ctrl+Alt+F1-F6：純文字交互模式登入tty1-tty6終端機<br>Ctrl+Alt+F7：切回圖形介面</p>
-<h3 id="3-關機與重啟命令"><a href="#3-關機與重啟命令" class="headerlink" title="3.關機與重啟命令"></a>3.關機與重啟命令</h3><p>(1) 關機<br>$ sudo poweroff<br>(2) 重新啟動<br>$ sudo reboot</p>
-<h3 id="4-終端命令列中一些常用符號瞭解"><a href="#4-終端命令列中一些常用符號瞭解" class="headerlink" title="4.終端命令列中一些常用符號瞭解"></a>4.終端命令列中一些常用符號瞭解</h3><p>(1) 使用者家目錄：~<br>(2) 系統根目錄：/<br>(3) 一般使用者提示符：$<br>(4) root 使用者提示符：#</p>
-<h3 id="5-目錄與文件相關命令"><a href="#5-目錄與文件相關命令" class="headerlink" title="5.目錄與文件相關命令"></a>5.目錄與文件相關命令</h3><p>(1) 顯示檔案與目錄清單<br>$ ls<br>(2) 切換目錄（ 2）<br>$ cd &lt;目標目錄&gt;<br>(3) 顯示目前所在工作目錄<br>$ pwd<br>(4) 建立檔案<br>$ touch &lt;檔名&gt;<br>(5) 複製檔案<br>$ cp &lt;源檔案路徑&gt; &lt;目標檔案路徑&gt;<br>(6) 移動檔案<br>$ mv &lt;源檔案路徑&gt; &lt;目標檔案路徑&gt;<br>(7) 刪除檔案<br>$ rm &lt;檔名&gt;<br>(8) 顯示檔案內容<br>$ cat &lt;檔名&gt;<br>(9) 建立資料夾<br>$ mkdir &lt;資料夾名&gt;<br>(10) 刪除資料夾<br>$ rmdir &lt;資料夾名&gt;</p>
-<h3 id="6-文件許可權"><a href="#6-文件許可權" class="headerlink" title="6.文件許可權"></a>6.文件許可權</h3><p>(1) 修改檔案讀寫可執行權限，該權限由遮罩， 如 777 權限全開<br>$ sudo chmod 777 &lt;檔名&gt;<br>(2) 修改檔案擁有者<br>$ sudo chown &lt;使用者名&gt;：&lt;組名&gt; &lt;檔名&gt;</p>
-<h3 id="7-檔案查找"><a href="#7-檔案查找" class="headerlink" title="7.檔案查找"></a>7.檔案查找</h3><p>(1) locate<br>$ sudo updatedb<br>$ locate &lt;待查找檔名&gt;<br>(2) find<br>$ find -name &lt;待查找檔名&gt;</p>
-<h3 id="8-網路相關命令"><a href="#8-網路相關命令" class="headerlink" title="8.網路相關命令"></a>8.網路相關命令</h3><p>(1) 網路連線與否測試<br>$ ping &lt;待測目標主機IP或域名&gt;<br>(2) 本地 IP 位址檢視<br>$ ifconfig<br>(3) 遠端登入目標主機<br>$ ssh &lt;目標主機使用者名&gt;@&lt;目標主機IP位址&gt;</p>
-<h3 id="9-系統軟體安裝與軟體運行方法"><a href="#9-系統軟體安裝與軟體運行方法" class="headerlink" title="9.系統軟體安裝與軟體運行方法"></a>9.系統軟體安裝與軟體運行方法</h3><p>(1) 系統預設的套件安裝方法apt-get<br>$ sudo apt-get update<br>$ sudo apt-get install &lt;軟體套件名稱&gt;<br>(2) source方法執行系統文稿，例如執行使用者預設配置文件.bashrc<br>$ source ~/.bashrc<br>(3) ./方法執行一般可執行檔<br>$ ./&lt;可执行文件&gt;</p>
-<h3 id="10-文字編輯器vim使用"><a href="#10-文字編輯器vim使用" class="headerlink" title="10.文字編輯器vim使用"></a>10.文字編輯器vim使用</h3><p>(1) vim 檢視檔案內容<br>$ vim &lt;檔名&gt;<br>(2) vim 進入編輯模式<br>在vim 查看檔案內容的介面中，按 i 鍵進入編輯模式，然後就可以編輯檔案的內容了<br>(3) vim 退出編輯模式<br>在vim 編輯檔案內容的介面中，按Esc鍵退出編輯模式，然後就又回到查看檔案內容的介面了<br>(4) vim 編輯內容儲存<br>vim在編輯完檔內容，退出到查看檔內容的介面後，可以輸入”：w”對編輯內容進行保存，也可以輸入”：wq”對編輯內容進行保存並退出vim</p>
-]]></content>
-      <categories>
-        <category>激光slam小車</category>
-      </categories>
-      <tags>
-        <tag>slam</tag>
-        <tag>智能車</tag>
-        <tag>Linux</tag>
-        <tag>命令列指令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>讓Dev C++支持C++11</title>
     <url>/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/</url>
     <content><![CDATA[<p>在DevC++中<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a&#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br>會出現如下錯誤<br><img src="./讓Dev-C-支持C-11/wrong1.png" alt="wrong1"></p>
@@ -409,6 +385,31 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="3-vim常用指令"><a href="#3-vim常用指令" class="headerlink" title="3.vim常用指令"></a>3.vim常用指令</h4><p><img src="./计算机网络lab1/photo9.png" alt="photo9"><br><img src="./计算机网络lab1/photo10.png" alt="photo10"></p>
 <h3 id="详细名词解释"><a href="#详细名词解释" class="headerlink" title="详细名词解释"></a>详细名词解释</h3><p><a href="https://sls.weco.net/node/28883">https://sls.weco.net/node/28883</a></p>
 <h3 id="讨论：安装VirtualBox-VMWare-or-Parallels-哪个比较好？"><a href="#讨论：安装VirtualBox-VMWare-or-Parallels-哪个比较好？" class="headerlink" title="讨论：安装VirtualBox, VMWare, or Parallels 哪个比较好？"></a>讨论：安装VirtualBox, VMWare, or Parallels 哪个比较好？</h3>]]></content>
+  </entry>
+  <entry>
+    <title>slam小車：(一)前期準備--2.Linux目錄結構與常用指令</title>
+    <url>/2019/03/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/">(一)前期準備—1.機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/">(一)前期準備—2.Linux目錄結構與常用指令</a></p>
+<h3 id="一、Linux目錄結構"><a href="#一、Linux目錄結構" class="headerlink" title="一、Linux目錄結構"></a>一、Linux目錄結構</h3><h3 id="二、Linux常用指令"><a href="#二、Linux常用指令" class="headerlink" title="二、Linux常用指令"></a>二、Linux常用指令</h3><h4 id="1-打开terminal"><a href="#1-打开terminal" class="headerlink" title="1.打开terminal"></a>1.打开terminal</h4><p>(1) 右鍵-&gt;打開終端<br>(2) Ctrl+Alt+t 或者 Ctrl+Shift+t</p>
+<h4 id="2-常用快速鍵"><a href="#2-常用快速鍵" class="headerlink" title="2.常用快速鍵"></a>2.常用快速鍵</h4><p>(1) tab<br>一次tab：命令補齊<br>兩次tab：提示內容<br>(2) Ctrl+c<br>Ctrl+c中斷，強行打斷進程<br>(3)Ctrl+d<br>Ctrl+d退出，相當於exit和quit<br>比如用python命令進入python交互環境後，就可以用Ctrl+d退出python交互環境<br>(4)Ctrl+Shift+c 和 Ctrl+Shift+v<br>先用滑鼠選中需要複製的內容，然後用Ctrl+Shift+c進行複製，再用Ctrl+Shift+v進行貼上<br>(5)圖形介面與純文字互動模式切換<br>Ctrl+Alt+F1-F6：純文字交互模式登入tty1-tty6終端機<br>Ctrl+Alt+F7：切回圖形介面</p>
+<h3 id="3-關機與重啟命令"><a href="#3-關機與重啟命令" class="headerlink" title="3.關機與重啟命令"></a>3.關機與重啟命令</h3><p>(1) 關機<br>$ sudo poweroff<br>(2) 重新啟動<br>$ sudo reboot</p>
+<h3 id="4-終端命令列中一些常用符號瞭解"><a href="#4-終端命令列中一些常用符號瞭解" class="headerlink" title="4.終端命令列中一些常用符號瞭解"></a>4.終端命令列中一些常用符號瞭解</h3><p>(1) 使用者家目錄：~<br>(2) 系統根目錄：/<br>(3) 一般使用者提示符：$<br>(4) root 使用者提示符：#</p>
+<h3 id="5-目錄與文件相關命令"><a href="#5-目錄與文件相關命令" class="headerlink" title="5.目錄與文件相關命令"></a>5.目錄與文件相關命令</h3><p>(1) 顯示檔案與目錄清單<br>$ ls<br>(2) 切換目錄（ 2）<br>$ cd &lt;目標目錄&gt;<br>(3) 顯示目前所在工作目錄<br>$ pwd<br>(4) 建立檔案<br>$ touch &lt;檔名&gt;<br>(5) 複製檔案<br>$ cp &lt;源檔案路徑&gt; &lt;目標檔案路徑&gt;<br>(6) 移動檔案<br>$ mv &lt;源檔案路徑&gt; &lt;目標檔案路徑&gt;<br>(7) 刪除檔案<br>$ rm &lt;檔名&gt;<br>(8) 顯示檔案內容<br>$ cat &lt;檔名&gt;<br>(9) 建立資料夾<br>$ mkdir &lt;資料夾名&gt;<br>(10) 刪除資料夾<br>$ rmdir &lt;資料夾名&gt;</p>
+<h3 id="6-文件許可權"><a href="#6-文件許可權" class="headerlink" title="6.文件許可權"></a>6.文件許可權</h3><p>(1) 修改檔案讀寫可執行權限，該權限由遮罩， 如 777 權限全開<br>$ sudo chmod 777 &lt;檔名&gt;<br>(2) 修改檔案擁有者<br>$ sudo chown &lt;使用者名&gt;：&lt;組名&gt; &lt;檔名&gt;</p>
+<h3 id="7-檔案查找"><a href="#7-檔案查找" class="headerlink" title="7.檔案查找"></a>7.檔案查找</h3><p>(1) locate<br>$ sudo updatedb<br>$ locate &lt;待查找檔名&gt;<br>(2) find<br>$ find -name &lt;待查找檔名&gt;</p>
+<h3 id="8-網路相關命令"><a href="#8-網路相關命令" class="headerlink" title="8.網路相關命令"></a>8.網路相關命令</h3><p>(1) 網路連線與否測試<br>$ ping &lt;待測目標主機IP或域名&gt;<br>(2) 本地 IP 位址檢視<br>$ ifconfig<br>(3) 遠端登入目標主機<br>$ ssh &lt;目標主機使用者名&gt;@&lt;目標主機IP位址&gt;</p>
+<h3 id="9-系統軟體安裝與軟體運行方法"><a href="#9-系統軟體安裝與軟體運行方法" class="headerlink" title="9.系統軟體安裝與軟體運行方法"></a>9.系統軟體安裝與軟體運行方法</h3><p>(1) 系統預設的套件安裝方法apt-get<br>$ sudo apt-get update<br>$ sudo apt-get install &lt;軟體套件名稱&gt;<br>(2) source方法執行系統文稿，例如執行使用者預設配置文件.bashrc<br>$ source ~/.bashrc<br>(3) ./方法執行一般可執行檔<br>$ ./&lt;可执行文件&gt;</p>
+<h3 id="10-文字編輯器vim使用"><a href="#10-文字編輯器vim使用" class="headerlink" title="10.文字編輯器vim使用"></a>10.文字編輯器vim使用</h3><p>(1) vim 檢視檔案內容<br>$ vim &lt;檔名&gt;<br>(2) vim 進入編輯模式<br>在vim 查看檔案內容的介面中，按 i 鍵進入編輯模式，然後就可以編輯檔案的內容了<br>(3) vim 退出編輯模式<br>在vim 編輯檔案內容的介面中，按Esc鍵退出編輯模式，然後就又回到查看檔案內容的介面了<br>(4) vim 編輯內容儲存<br>vim在編輯完檔內容，退出到查看檔內容的介面後，可以輸入”：w”對編輯內容進行保存，也可以輸入”：wq”對編輯內容進行保存並退出vim</p>
+]]></content>
+      <categories>
+        <category>激光slam小車</category>
+      </categories>
+      <tags>
+        <tag>slam</tag>
+        <tag>智能車</tag>
+        <tag>Linux</tag>
+        <tag>命令列指令</tag>
+      </tags>
   </entry>
   <entry>
     <title>C++復習--2.C++入門之後</title>
