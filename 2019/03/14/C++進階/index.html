@@ -21,14 +21,14 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="C++復習–1.C++基礎入門C++復習–2.C++入門之後C++復習–3.C++進階 一、模板1.模板的概念2.函數模板3.類模板二、STL初識三、STL常用容器四、STL函數對象五、STL常用算法">
+<meta name="description" content="C++復習—1.C++基礎入門C++復習—2.C++入門之後C++復習—3.C++進階 一、模板1.模板的概念2.函數模板3.類模板二、STL初識三、STL常用容器四、STL函數對象五、STL常用算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++復習--3.C++進階">
 <meta property="og:url" content="https://wangxchun.github.io/2019/03/14/C++%E9%80%B2%E9%9A%8E/index.html">
 <meta property="og:site_name" content="Be Friend with Time">
-<meta property="og:description" content="C++復習–1.C++基礎入門C++復習–2.C++入門之後C++復習–3.C++進階 一、模板1.模板的概念2.函數模板3.類模板二、STL初識三、STL常用容器四、STL函數對象五、STL常用算法">
+<meta property="og:description" content="C++復習—1.C++基礎入門C++復習—2.C++入門之後C++復習—3.C++進階 一、模板1.模板的概念2.函數模板3.類模板二、STL初識三、STL常用容器四、STL函數對象五、STL常用算法">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2019-03-14T12:35:13.000Z">
 <meta property="article:modified_time" content="2021-03-24T06:41:28.538Z">
@@ -99,6 +99,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -120,6 +123,15 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
 
 
 
@@ -154,27 +166,42 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chris Wang"
+      src="/img/avatar.jpg">
   <p class="site-author-name" itemprop="name">Chris Wang</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">分類</span>
+        <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">27</span>
-        <span class="site-state-item-name">標籤</span>
+        <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chriswang0205@outlook.com" title="E-Mail → mailto:chriswang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -212,7 +239,7 @@
     <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/14/C++%E9%80%B2%E9%9A%8E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/img/avatar.jpg">
       <meta itemprop="name" content="Chris Wang">
       <meta itemprop="description" content="">
     </span>
@@ -262,7 +289,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a href="https://wangxchun.github.io/2018/09/13/C-%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/">C++復習–1.C++基礎入門</a><br><a href="https://wangxchun.github.io/2018/10/14/C-%E5%85%A5%E9%96%80%E4%B9%8B%E5%BE%8C/">C++復習–2.C++入門之後</a><br><a href="https://wangxchun.github.io/2019/03/14/C-%E9%80%B2%E9%9A%8E/">C++復習–3.C++進階</a></p>
+        <p><a href="https://wangxchun.github.io/2018/09/13/C-%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/">C++復習—1.C++基礎入門</a><br><a href="https://wangxchun.github.io/2018/10/14/C-%E5%85%A5%E9%96%80%E4%B9%8B%E5%BE%8C/">C++復習—2.C++入門之後</a><br><a href="https://wangxchun.github.io/2019/03/14/C-%E9%80%B2%E9%9A%8E/">C++復習—3.C++進階</a></p>
 <h3 id="一、模板"><a href="#一、模板" class="headerlink" title="一、模板"></a>一、模板</h3><h4 id="1-模板的概念"><a href="#1-模板的概念" class="headerlink" title="1.模板的概念"></a>1.模板的概念</h4><h4 id="2-函數模板"><a href="#2-函數模板" class="headerlink" title="2.函數模板"></a>2.函數模板</h4><h4 id="3-類模板"><a href="#3-類模板" class="headerlink" title="3.類模板"></a>3.類模板</h4><h3 id="二、STL初識"><a href="#二、STL初識" class="headerlink" title="二、STL初識"></a>二、STL初識</h3><h3 id="三、STL常用容器"><a href="#三、STL常用容器" class="headerlink" title="三、STL常用容器"></a>三、STL常用容器</h3><h3 id="四、STL函數對象"><a href="#四、STL函數對象" class="headerlink" title="四、STL函數對象"></a>四、STL函數對象</h3><h3 id="五、STL常用算法"><a href="#五、STL常用算法" class="headerlink" title="五、STL常用算法"></a>五、STL常用算法</h3>
     </div>
 
@@ -332,7 +359,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Chris Wang</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
   </div>
 
     </div>

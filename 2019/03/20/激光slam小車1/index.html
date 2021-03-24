@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
 <meta name="description" content="一、了解機器人架構機器人包含四大部分：機械結構、驅動裝置、感測裝置、控制與算法。機器人的研發涉及機械工程、電機工程、資訊工程、醫學工程等領域，次技術領域包括能量學、驅動技術、感知技術和決策技術等。 二、機器人概念設計（選擇機器人平台）1.定義機器人的功能：2.決定機器人的載具和移動方式：機械手臂、雙腳、四肢、八腳蜘蛛、輪車等。 3.確認機器人的控制方式：(1) 有線控制（電線、網路線）(2) 無線">
 <meta property="og:type" content="article">
@@ -103,6 +103,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -124,6 +127,15 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
 
 
 
@@ -158,27 +170,42 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chris Wang"
+      src="/img/avatar.jpg">
   <p class="site-author-name" itemprop="name">Chris Wang</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">分類</span>
+        <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">27</span>
-        <span class="site-state-item-name">標籤</span>
+        <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chriswang0205@outlook.com" title="E-Mail → mailto:chriswang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -216,7 +243,7 @@
     <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/img/avatar.jpg">
       <meta itemprop="name" content="Chris Wang">
       <meta itemprop="description" content="">
     </span>
@@ -275,14 +302,12 @@
 <h5 id="1-機身本身的測量"><a href="#1-機身本身的測量" class="headerlink" title="(1) 機身本身的測量"></a>(1) 機身本身的測量</h5><p>方向（指南針、陀螺儀、傾斜儀）<br>位置（輪子編碼器、信標、GPS）<br>運動（慣性測量單元：量測線性和角位移、速度和加速度）</p>
 <h5 id="2-環境的測量"><a href="#2-環境的測量" class="headerlink" title="(2) 環境的測量"></a>(2) 環境的測量</h5><p>距離（聲納、雷射測距儀、超聲波測距儀紅、外線感測器）<br>化學成分（光譜儀）<br>視覺（相機）</p>
 <h4 id="3-控制器（機器人的大腦）"><a href="#3-控制器（機器人的大腦）" class="headerlink" title="3.控制器（機器人的大腦）"></a>3.控制器（機器人的大腦）</h4><h5 id="1-微控制器（MCU-單片機）：Arduino，STM32，BasicATOM，BasicX，POB技術，-Pololu，Parallax等等"><a href="#1-微控制器（MCU-單片機）：Arduino，STM32，BasicATOM，BasicX，POB技術，-Pololu，Parallax等等" class="headerlink" title="(1) 微控制器（MCU 單片機）：Arduino，STM32，BasicATOM，BasicX，POB技術， Pololu，Parallax等等"></a>(1) 微控制器（MCU 單片機）：Arduino，STM32，BasicATOM，BasicX，POB技術， Pololu，Parallax等等</h5><pre><code>因為Arduino開發了簡單的函數，還有許多應用庫，這樣就不用直接去操作暫存器了，適合沒有單片機基礎的
-</code></pre>
-<p>製作小車使用的是微控制器，選擇時需要考慮以下三點：<br>(a) 哪個微控制器在我應用領域上是最常用的？<br>(b) 它有機器人需要的所有特殊功能嗎？<br>有些功能所有微控制器都有支持（例如: 數位輸入和輸出，執行簡單的數學運算，比較值和做決定），而有些功能則需要特定的硬體做搭配才能完成（例如ADC，PWM和通訊協議的支援）。另外,還需要考慮記憶體和速度的要求，還有接腳數。<br>(c) 是否找得到所選定微控制器可以搭配的相關零件？</p>
+</code></pre><p>製作小車使用的是微控制器，選擇時需要考慮以下三點：<br>(a) 哪個微控制器在我應用領域上是最常用的？<br>(b) 它有機器人需要的所有特殊功能嗎？<br>有些功能所有微控制器都有支持（例如: 數位輸入和輸出，執行簡單的數學運算，比較值和做決定），而有些功能則需要特定的硬體做搭配才能完成（例如ADC，PWM和通訊協議的支援）。另外,還需要考慮記憶體和速度的要求，還有接腳數。<br>(c) 是否找得到所選定微控制器可以搭配的相關零件？</p>
 <h5 id="2-微處理器（MPU）：树莓派，S3C2440，CubieBoard-CC80，Jetson-TK1等等"><a href="#2-微處理器（MPU）：树莓派，S3C2440，CubieBoard-CC80，Jetson-TK1等等" class="headerlink" title="(2) 微處理器（MPU）：树莓派，S3C2440，CubieBoard CC80，Jetson TK1等等"></a>(2) 微處理器（MPU）：树莓派，S3C2440，CubieBoard CC80，Jetson TK1等等</h5><p>嵌入式微處理器MPU和一般的電腦CPU還有區別，嵌入式微處理器大多工作在特定設計的系統中，其中主流的体系有ARM、MIPS、PowerPC、X86和SH等，与全球PC市场不同的是，没有一种嵌入式微处理器可以主导市场。</p>
 <h5 id="3-工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA"><a href="#3-工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA" class="headerlink" title="(3) 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA"></a>(3) 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA</h5><pre><code>補充：選擇馬達控制器（控制器-馬達控制器-馬達）
 雖然微控制器決定馬達的速度和方向，它卻不能直接驅動它們，因為它的功率（電流和電壓）輸出非常有限。
 另一方面，馬達控制器可以提供所需電壓的電流，但不能決定馬達應該轉動多快。
-</code></pre>
-<h3 id="四、機器人組裝"><a href="#四、機器人組裝" class="headerlink" title="四、機器人組裝"></a>四、機器人組裝</h3><p>瓦楞紙、木材、金屬薄板、3D列印等等。</p>
+</code></pre><h3 id="四、機器人組裝"><a href="#四、機器人組裝" class="headerlink" title="四、機器人組裝"></a>四、機器人組裝</h3><p>瓦楞紙、木材、金屬薄板、3D列印等等。</p>
 <h3 id="五、控制與算法"><a href="#五、控制與算法" class="headerlink" title="五、控制與算法"></a>五、控制與算法</h3><p>這是我們激光slam小車專題的重點，後面文章會詳細闡述。</p>
 
     </div>
@@ -359,7 +384,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Chris Wang</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
   </div>
 
     </div>

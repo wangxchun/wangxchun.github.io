@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
 <meta name="description" content="线性表(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用vector(数组) &#x2F;&#x2F;iterator除了用迭代器获取vector容器中的元素，[]和at也可以vector(v).swap(v); &#x2F;&#x2F;收缩内存&#x2F;&#x2F;vector 利用v调用拷贝构造函数，创建匿名对象，它会用v目前使用的元素个数来初始化这个匿名对象&#x2F;&#x2F;swap()互换函数的本质类似于指针的交换&#x2F;&#x2F;调换后v指向了创建的匿名对象">
 <meta property="og:type" content="article">
@@ -102,6 +102,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -123,6 +126,15 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
 
 
 
@@ -157,27 +169,42 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chris Wang"
+      src="/img/avatar.jpg">
   <p class="site-author-name" itemprop="name">Chris Wang</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">分類</span>
+        <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">27</span>
-        <span class="site-state-item-name">標籤</span>
+        <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chriswang0205@outlook.com" title="E-Mail → mailto:chriswang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -215,7 +242,7 @@
     <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/img/avatar.jpg">
       <meta itemprop="name" content="Chris Wang">
       <meta itemprop="description" content="">
     </span>
@@ -266,9 +293,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h3><p>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用vector(数组) //iterator<br>除了用迭代器获取vector容器中的元素，[]和at也可以<br>vector<int>(v).swap(v); //收缩内存<br>//vector<int> 利用v调用拷贝构造函数，创建匿名对象，它会用v目前使用的元素个数来初始化这个匿名对象<br>//swap()互换函数的本质类似于指针的交换<br>//调换后v指向了创建的匿名对象，而本来匿名对象的指针x指向原本的v，并且在该语句过后由系统自动回收</p>
-<p>如果没有用reserve预留空间，随着push进去的数据越来越多，可能需要重新分配内存</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//统计内存重新开辟的次数</span></span><br><span class="line"><span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span>* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100000</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">	v.<span class="built_in">push_back</span>(i);</span><br><span class="line">	<span class="keyword">if</span> (p != &amp;v[<span class="number">0</span>])</span><br><span class="line">	&#123;</span><br><span class="line">		p = &amp;v[<span class="number">0</span>];</span><br><span class="line">		num++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;num:&quot;</span> &lt;&lt; num &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
-<p>(2) 如果你需要大量的插入和刪除，而不關心隨機存取，則應使用list(双向循环链表) //const_iterator<br>list的迭代器是双向迭代器，不支持随机访问（不可以通过[]或at方式访问数据）<br>it++ //可以<br>it = it + 1 //会报错<br>(3) 如果你需要隨機存取，而且關心兩端數據的插入和刪除，則應使用deque</p>
+<p>如果没有用reserve预留空间，随着push进去的数据越来越多，可能需要重新分配内存<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//统计内存重新开辟的次数</span></span><br><span class="line"><span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span>* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100000</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">	v.<span class="built_in">push_back</span>(i);</span><br><span class="line">	<span class="keyword">if</span> (p != &amp;v[<span class="number">0</span>])</span><br><span class="line">	&#123;</span><br><span class="line">		p = &amp;v[<span class="number">0</span>];</span><br><span class="line">		num++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;num:&quot;</span> &lt;&lt; num &lt;&lt; endl;</span><br></pre></td></tr></table></figure><br>(2) 如果你需要大量的插入和刪除，而不關心隨機存取，則應使用list(双向循环链表) //const_iterator<br>list的迭代器是双向迭代器，不支持随机访问（不可以通过[]或at方式访问数据）<br>it++ //可以<br>it = it + 1 //会报错<br>(3) 如果你需要隨機存取，而且關心兩端數據的插入和刪除，則應使用deque</p>
 <h3 id="UVA12657"><a href="#UVA12657" class="headerlink" title="UVA12657"></a>UVA12657</h3><pre><code>你有n个盒子在桌子上的一条线上从左到右编号为1……n。你的任务是模拟四种操作
 1 X Y 移动盒子编号X到盒子编号Y的左边（如果X已经在Y的左边了就忽略）
 2 X Y 移动盒子编号X到盒子编号Y的右边（如果X已经在Y的右边了就忽略）
@@ -278,10 +303,7 @@
 举一个例子，如果n=6，操作 1 1 4然后就变成了2 3 1 4 5 6；再操作 2 3 5就变成了 2 1 4 5 3 6；再操作 3 1 6 就变成 2 6 4 5 3 1；
 输入：最多有10组数据，每个数据会包含两个整数n,m（1≤n,m&lt;100,000）, 接下来是m行数据，表示操作。
 输出:对于每组数据，输出他们奇数位置的编号的和。
-</code></pre>
-<p>思路：利用双向静态链表，且反转不用真的反转，只要做标记就好了。<br>(移动元素需要链表的特性，但是查找是链表不擅长的，所以使用静态链表)<br>检讨：一开始把if(a!=3&amp;&amp;flag) a=3-a;的顺序放在下两个if的后面，这样就没有考虑到翻转的情形</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a!=<span class="number">3</span>&amp;&amp;flag)</span><br><span class="line">	a=<span class="number">3</span>-a;</span><br><span class="line"><span class="keyword">if</span>(a==<span class="number">1</span>&amp;&amp;x==l[y])</span><br><span class="line">	<span class="keyword">continue</span>;</span><br><span class="line"><span class="keyword">if</span>(a==<span class="number">2</span>&amp;&amp;x==r[y])</span><br><span class="line">	<span class="keyword">continue</span>;</span><br></pre></td></tr></table></figure>
-
+</code></pre><p>思路：利用双向静态链表，且反转不用真的反转，只要做标记就好了。<br>(移动元素需要链表的特性，但是查找是链表不擅长的，所以使用静态链表)<br>检讨：一开始把if(a!=3&amp;&amp;flag) a=3-a;的顺序放在下两个if的后面，这样就没有考虑到翻转的情形<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a!=<span class="number">3</span>&amp;&amp;flag)</span><br><span class="line">	a=<span class="number">3</span>-a;</span><br><span class="line"><span class="keyword">if</span>(a==<span class="number">1</span>&amp;&amp;x==l[y])</span><br><span class="line">	<span class="keyword">continue</span>;</span><br><span class="line"><span class="keyword">if</span>(a==<span class="number">2</span>&amp;&amp;x==r[y])</span><br><span class="line">	<span class="keyword">continue</span>;</span><br></pre></td></tr></table></figure></p>
 <h3 id="UVA101-The-Blocks-Problem"><a href="#UVA101-The-Blocks-Problem" class="headerlink" title="UVA101 The Blocks Problem"></a>UVA101 The Blocks Problem</h3><pre><code>初始时从左到右有 nn 个木块，编号为 0 \ldots n-10…n−1,要求实现下列四种操作：
 move a onto b : 把 aa 和 bb 上方的木块归位，然后把 aa 放到 bb 上面。
 move a over b : 把 aa 上方的木块归位，然后把 aa 放在 bb 所在木块堆的最上方。
@@ -289,18 +311,14 @@ pile a onto b : 把 bb 上方的木块归位，然后把 aa 及以上的木块�
 pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 一组数据的结束标志为 quit，如果有非法指令（如 aa 与 bb 在同一堆），无需处理。
 输出:所有操作输入完毕后，从左到右，从下到上输出每个位置的木块编号。
-</code></pre>
-<p>思路：使用线性表 vector 来实现<br>注释：vector是单端数组（这题最主要涉及的动作是查找，还有向尾端加元素的移动）</p>
+</code></pre><p>思路：使用线性表 vector 来实现<br>注释：vector是单端数组（这题最主要涉及的动作是查找，还有向尾端加元素的移动）</p>
 <h3 id="UVA11988-破损的键盘-Broken-Keyboard-a-k-a-Beiju-Text"><a href="#UVA11988-破损的键盘-Broken-Keyboard-a-k-a-Beiju-Text" class="headerlink" title="UVA11988 破损的键盘 Broken Keyboard (a.k.a. Beiju Text)"></a>UVA11988 破损的键盘 Broken Keyboard (a.k.a. Beiju Text)</h3><pre><code>你在输入文章的时候，键盘上的Home键和End键出了问题，会不定时的按下。你却不知道此问题，而是专心致志地打稿子，甚至显示器都没开。当你打开显示器之后，展现你面前的数一段悲剧文本。你的任务是在显示器打开前计算出这段悲剧的文本。 给你一段按键的文本，其中&#39;[&#39;表示Home键，&#39;]&#39;表示End键，输入结束标志是文件结束符（EOF）。
 输出一行，即这段悲剧文本。
-</code></pre>
-<p>思路：涉及行首和行尾的操作，使用链表list（不宜用线性表vector）</p>
+</code></pre><p>思路：涉及行首和行尾的操作，使用链表list（不宜用线性表vector）</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(string s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = s.<span class="built_in">length</span>();</span><br><span class="line">	list&lt;<span class="keyword">char</span>&gt; text;</span><br><span class="line">	list&lt;<span class="keyword">char</span>&gt;::iterator it = text.<span class="built_in">begin</span>();</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//报错TLE</span></span><br><span class="line">list&lt;<span class="keyword">char</span>&gt; text;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(string s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = s.<span class="built_in">length</span>();</span><br><span class="line">	list&lt;<span class="keyword">char</span>&gt;::iterator it = text.<span class="built_in">begin</span>();</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>为什么注释掉那行代码结果是错的？<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(string s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = s.<span class="built_in">length</span>();</span><br><span class="line">	list&lt;<span class="keyword">char</span>&gt; text;</span><br><span class="line">	list&lt;<span class="keyword">char</span>&gt;::iterator it = text.<span class="built_in">begin</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		it = text.<span class="built_in">insert</span>(it, s[i]);</span><br><span class="line">		it++;</span><br><span class="line">		<span class="comment">//text.insert(it++, s[i]);</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(it=text.<span class="built_in">begin</span>(); it!=text.<span class="built_in">end</span>(); it++)</span><br><span class="line">		cout &lt;&lt; *it;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
-<p>为什么注释掉那行代码结果是错的？</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(string s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = s.<span class="built_in">length</span>();</span><br><span class="line">	list&lt;<span class="keyword">char</span>&gt; text;</span><br><span class="line">	list&lt;<span class="keyword">char</span>&gt;::iterator it = text.<span class="built_in">begin</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		it = text.<span class="built_in">insert</span>(it, s[i]);</span><br><span class="line">		it++;</span><br><span class="line">		<span class="comment">//text.insert(it++, s[i]);</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(it=text.<span class="built_in">begin</span>(); it!=text.<span class="built_in">end</span>(); it++)</span><br><span class="line">		cout &lt;&lt; *it;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -374,7 +392,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   </span>
   <span class="author" itemprop="copyrightHolder">Chris Wang</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
   </div>
 
     </div>
