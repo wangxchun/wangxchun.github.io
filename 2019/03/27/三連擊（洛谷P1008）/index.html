@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="題目描述將1，2,...,9共9個數分成三組，分別組成三個三位數，且使這三個三位數構成1：2：3的比例，試求出所有滿足條件的三個三位數。   輸入輸出格式輸入格式：沒有輸入。 輸出格式：若干行，每行3個數位。 按照每行第一個數位升序排列。  我的解法：1234567891011121314151617181920212223#include&lt;iostream&gt;#include&lt;s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三連擊（洛谷P1008）">
+<meta property="og:url" content="https://wangxchun.github.io/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/index.html">
+<meta property="og:site_name" content="Be Friend with Time">
+<meta property="og:description" content="題目描述將1，2,...,9共9個數分成三組，分別組成三個三位數，且使這三個三位數構成1：2：3的比例，試求出所有滿足條件的三個三位數。   輸入輸出格式輸入格式：沒有輸入。 輸出格式：若干行，每行3個數位。 按照每行第一個數位升序排列。  我的解法：1234567891011121314151617181920212223#include&lt;iostream&gt;#include&lt;s">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2019-03-27T06:50:22.000Z">
+<meta property="article:modified_time" content="2021-03-24T07:12:42.614Z">
+<meta property="article:author" content="Chris Wang">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="OJ">
+<meta property="article:tag" content="set">
+<meta property="article:tag" content="洛谷刷題">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>三連擊（洛谷P1008） | Be Friend with Time</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Be Friend with Time</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">learn diary</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">題目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%85%A5%E8%BC%B8%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">輸入輸出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E8%A7%A3%E6%B3%95%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">我的解法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A5%E7%9A%84%E8%A7%A3%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">別的解法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E5%88%B0%E7%9A%84%E7%9F%A5%E8%AD%98%E9%BB%9E"><span class="nav-number">5.</span> <span class="nav-text">用到的知識點</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Chris Wang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分類</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Be Friend with Time">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          三連擊（洛谷P1008）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-03-27 14:50:22" itemprop="dateCreated datePublished" datetime="2019-03-27T14:50:22+08:00">2019-03-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-24 15:12:42" itemprop="dateModified" datetime="2021-03-24T15:12:42+08:00">2021-03-24</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E5%88%B7%E9%A1%8C/" itemprop="url" rel="index"><span itemprop="name">C++刷題</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h4 id="題目描述"><a href="#題目描述" class="headerlink" title="題目描述"></a>題目描述</h4><pre><code>將1，2,...,9共9個數分成三組，分別組成三個三位數，且使這三個三位數構成1：2：3的比例，試求出所有滿足條件的三個三位數。 
+</code></pre>
+<h4 id="輸入輸出格式"><a href="#輸入輸出格式" class="headerlink" title="輸入輸出格式"></a>輸入輸出格式</h4><pre><code>輸入格式：沒有輸入。
+輸出格式：若干行，每行3個數位。 按照每行第一個數位升序排列。
+</code></pre>
+<h4 id="我的解法："><a href="#我的解法：" class="headerlink" title="我的解法："></a>我的解法：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//將i分別乘以2和3，若這兩個三位數都滿足：(1)自身沒有重複的數字 (2)與i沒有重複的數字 (3)不包含0這個數字 ，則輸出</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">123</span>; i&lt;=<span class="number">329</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; test1, test2, test3;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; a&#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br><span class="line">		<span class="keyword">int</span> double_i = i*<span class="number">2</span>, triple_i = i*<span class="number">3</span>;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; b&#123;double_i/<span class="number">100</span>, double_i/<span class="number">10</span>%<span class="number">10</span>, double_i%<span class="number">10</span>&#125;;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; c&#123;triple_i/<span class="number">100</span>, triple_i/<span class="number">10</span>%<span class="number">10</span>, triple_i%<span class="number">10</span>&#125;;</span><br><span class="line">		<span class="built_in">set_intersection</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), b.<span class="built_in">begin</span>(), b.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test1, test1.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="built_in">set_intersection</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), c.<span class="built_in">begin</span>(), c.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test2, test2.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="built_in">set_intersection</span>(c.<span class="built_in">begin</span>(), c.<span class="built_in">end</span>(), b.<span class="built_in">begin</span>(), b.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test3, test3.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="keyword">if</span>(test1.<span class="built_in">empty</span>() &amp;&amp; test2.<span class="built_in">empty</span>() &amp;&amp; test3.<span class="built_in">empty</span>() &amp;&amp; a.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; b.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; c.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; a.<span class="built_in">size</span>()==<span class="number">3</span> &amp;&amp; b.<span class="built_in">size</span>()==<span class="number">3</span> &amp;&amp; c.<span class="built_in">size</span>()==<span class="number">3</span>)</span><br><span class="line">			cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; double_i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; triple_i &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h4 id="別的解法"><a href="#別的解法" class="headerlink" title="別的解法"></a>別的解法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> i,j,v;<span class="keyword">bool</span> a[<span class="number">10</span>];<span class="comment">//a[i]表示第i个数已经用过了</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">192</span>;i&lt;=<span class="number">327</span>;i++)<span class="comment">//第一个数最小192，最大327。其实不知道的情况下简单来说是从123-329的但是算出来是最值就稍微改了下下</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="built_in"><span class="keyword">sizeof</span></span>(a));v=<span class="number">0</span>;<span class="comment">//清零</span></span><br><span class="line">        a[i%<span class="number">10</span>]=a[i/<span class="number">10</span>%<span class="number">10</span>]=a[i/<span class="number">100</span>]=a[i*<span class="number">2</span>%<span class="number">10</span>]=a[i*<span class="number">2</span>/<span class="number">10</span>%<span class="number">10</span>]=a[i*<span class="number">2</span>/<span class="number">100</span>]=a[i*<span class="number">3</span>%<span class="number">10</span>]=a[i*<span class="number">3</span>/<span class="number">10</span>%<span class="number">10</span>]=a[i*<span class="number">3</span>/<span class="number">100</span>]=<span class="number">1</span>;<span class="comment">//统计数字,赋值所有数组1；</span></span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=<span class="number">9</span>;j++) v+=a[j];<span class="comment">//v表示1-9这些数字是否全部齐了，如果有相同的数，就会缺某个数组导致得数&lt;9；</span></span><br><span class="line">        <span class="keyword">if</span>(v==<span class="number">9</span>) <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>,i,i*<span class="number">2</span>,i*<span class="number">3</span>);<span class="comment">//如果齐了就输出</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//以上代码来自洛谷题解作者：Kelin</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="用到的知識點"><a href="#用到的知識點" class="headerlink" title="用到的知識點"></a>用到的知識點</h4><p>memset：作用是在一段記憶體塊中填充某個給定的值，它是對較大的結構體或陣列進行清零操作的一種最快方法，清空后換為自己給定的值，可以是符號。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/OJ/" rel="tag"># OJ</a>
+              <a href="/tags/set/" rel="tag"># set</a>
+              <a href="/tags/%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A1%8C/" rel="tag"># 洛谷刷題</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/03/22/C++%20%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5/" rel="prev" title="C++四捨五入">
+                  <i class="fa fa-chevron-left"></i> C++四捨五入
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/03/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/" rel="next" title="解釋一個語句">
+                  解釋一個語句 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chris Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
