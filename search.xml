@@ -26,18 +26,6 @@
       </categories>
   </entry>
   <entry>
-    <title>取出一個數的每一位</title>
-    <url>/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>刷题检讨--(1)线性表</title>
     <url>/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8/</url>
     <content><![CDATA[<h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h3><p>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用vector(数组) //iterator<br>除了用迭代器获取vector容器中的元素，[]和at也可以<br>vector<int>(v).swap(v); //收缩内存<br>//vector<int> 利用v调用拷贝构造函数，创建匿名对象，它会用v目前使用的元素个数来初始化这个匿名对象<br>//swap()互换函数的本质类似于指针的交换<br>//调换后v指向了创建的匿名对象，而本来匿名对象的指针x指向原本的v，并且在该语句过后由系统自动回收</p>
@@ -74,6 +62,18 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>数据结构</tag>
         <tag>刷题</tag>
         <tag>线性表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>取出一個數的每一位</title>
+    <url>/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -147,6 +147,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>解釋一個語句</title>
+    <url>/2019/03/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C++資料結構與算法--一.線性表--1.線性表的存儲結構</title>
     <url>/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/</url>
     <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
@@ -156,16 +166,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="二、棧（Stack）"><a href="#二、棧（Stack）" class="headerlink" title="二、棧（Stack）"></a>二、棧（Stack）</h3><h3 id="三、隊列（Queue）"><a href="#三、隊列（Queue）" class="headerlink" title="三、隊列（Queue）"></a>三、隊列（Queue）</h3><h3 id="四、串（String）"><a href="#四、串（String）" class="headerlink" title="四、串（String）"></a>四、串（String）</h3><h3 id="五、陣列（Array）"><a href="#五、陣列（Array）" class="headerlink" title="五、陣列（Array）"></a>五、陣列（Array）</h3><h3 id="六、廣義表（Generalize-List）"><a href="#六、廣義表（Generalize-List）" class="headerlink" title="六、廣義表（Generalize List）"></a>六、廣義表（Generalize List）</h3>]]></content>
       <categories>
         <category>C++資料結構</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>解釋一個語句</title>
-    <url>/2019/03/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-<p>在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>C++學習</category>
       </categories>
   </entry>
   <entry>
@@ -202,6 +202,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>C++報錯 no matching function for call to transform</title>
+    <url>/2021/03/24/no-matching-function-for-call-to-transform/</url>
+    <content><![CDATA[<h3 id="報錯"><a href="#報錯" class="headerlink" title="報錯"></a>報錯</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>報錯：no matching function for call to transform</p>
+<h3 id="有三種解決方法："><a href="#有三種解決方法：" class="headerlink" title="有三種解決方法："></a>有三種解決方法：</h3><h4 id="1-因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g-環境中沒有問題："><a href="#1-因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g-環境中沒有問題：" class="headerlink" title="1.因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g++環境中沒有問題："></a>1.因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g++環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), ::toupper);</span><br></pre></td></tr></table></figure>
+<h4 id="2-自己寫一個函數出來—wraper"><a href="#2-自己寫一個函數出來—wraper" class="headerlink" title="2.自己寫一個函數出來—wraper"></a>2.自己寫一個函數出來—wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span><span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span>(c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。"><a href="#3-強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。" class="headerlink" title="3.強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。"></a>3.強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>))toupper);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++報錯</category>
+      </categories>
+  </entry>
+  <entry>
     <title>vbox安装Ubuntu清理整个磁盘会怎样</title>
     <url>/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/</url>
     <content><![CDATA[<h4 id="vbox安装Ubuntu清理整个磁盘会怎样"><a href="#vbox安装Ubuntu清理整个磁盘会怎样" class="headerlink" title="vbox安装Ubuntu清理整个磁盘会怎样"></a>vbox安装Ubuntu清理整个磁盘会怎样</h4><p>不用担心。它不会影响你的整个系统。因为你是在VirtualBox虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。</p>
@@ -215,19 +228,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>linux</tag>
         <tag>Ubuntu</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>C++報錯 no matching function for call to transform</title>
-    <url>/2021/03/24/no-matching-function-for-call-to-transform/</url>
-    <content><![CDATA[<h3 id="報錯"><a href="#報錯" class="headerlink" title="報錯"></a>報錯</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>報錯：no matching function for call to transform</p>
-<h3 id="有三種解決方法："><a href="#有三種解決方法：" class="headerlink" title="有三種解決方法："></a>有三種解決方法：</h3><h4 id="1-因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g-環境中沒有問題："><a href="#1-因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g-環境中沒有問題：" class="headerlink" title="1.因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g++環境中沒有問題："></a>1.因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的g++環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), ::toupper);</span><br></pre></td></tr></table></figure>
-<h4 id="2-自己寫一個函數出來—wraper"><a href="#2-自己寫一個函數出來—wraper" class="headerlink" title="2.自己寫一個函數出來—wraper"></a>2.自己寫一個函數出來—wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span><span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span>(c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。"><a href="#3-強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。" class="headerlink" title="3.強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。"></a>3.強制轉化：將toupper轉換為一個返回值為int，引數只有一個int的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>(), str.<span class="built_in">begin</span>(), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>))toupper);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++報錯</category>
-      </categories>
   </entry>
   <entry>
     <title>三連擊（洛谷P1008）</title>
@@ -314,7 +314,8 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   <entry>
     <title>slam小車：(一)前期準備--1.機器人架構設計流程</title>
     <url>/2019/03/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/</url>
-    <content><![CDATA[<h3 id="一、了解機器人架構"><a href="#一、了解機器人架構" class="headerlink" title="一、了解機器人架構"></a>一、了解機器人架構</h3><p>機器人包含四大部分：機械結構、驅動裝置、感測裝置、控制與算法。<br>機器人的研發涉及機械工程、電機工程、資訊工程、醫學工程等領域，次技術領域包括能量學、驅動技術、感知技術和決策技術等。</p>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/">(一)前期準備—1.機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/">(一)前期準備—2.Linux目錄結構與常用指令</a></p>
+<h3 id="一、了解機器人架構"><a href="#一、了解機器人架構" class="headerlink" title="一、了解機器人架構"></a>一、了解機器人架構</h3><p>機器人包含四大部分：機械結構、驅動裝置、感測裝置、控制與算法。<br>機器人的研發涉及機械工程、電機工程、資訊工程、醫學工程等領域，次技術領域包括能量學、驅動技術、感知技術和決策技術等。</p>
 <h3 id="二、機器人概念設計（選擇機器人平台）"><a href="#二、機器人概念設計（選擇機器人平台）" class="headerlink" title="二、機器人概念設計（選擇機器人平台）"></a>二、機器人概念設計（選擇機器人平台）</h3><h4 id="1-定義機器人的功能："><a href="#1-定義機器人的功能：" class="headerlink" title="1.定義機器人的功能："></a>1.定義機器人的功能：</h4><h4 id="2-決定機器人的載具和移動方式："><a href="#2-決定機器人的載具和移動方式：" class="headerlink" title="2.決定機器人的載具和移動方式："></a>2.決定機器人的載具和移動方式：</h4><p>機械手臂、雙腳、四肢、八腳蜘蛛、輪車等。</p>
 <h4 id="3-確認機器人的控制方式："><a href="#3-確認機器人的控制方式：" class="headerlink" title="3.確認機器人的控制方式："></a>3.確認機器人的控制方式：</h4><h5 id="1-有線控制（電線、網路線）"><a href="#1-有線控制（電線、網路線）" class="headerlink" title="(1) 有線控制（電線、網路線）"></a>(1) 有線控制（電線、網路線）</h5><h5 id="2-無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）"><a href="#2-無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）" class="headerlink" title="(2) 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）"></a>(2) 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）</h5><h5 id="3-自主控制"><a href="#3-自主控制" class="headerlink" title="(3) 自主控制"></a>(3) 自主控制</h5><h3 id="三、零件選用"><a href="#三、零件選用" class="headerlink" title="三、零件選用"></a>三、零件選用</h3><h4 id="1-動力源與驅動器"><a href="#1-動力源與驅動器" class="headerlink" title="1.動力源與驅動器"></a>1.動力源與驅動器</h4><p>考量因素：功率和比能量，還有位置控制、雙向運動、可靠度、力量控制。</p>
 <h5 id="1-液壓驅動：多用於特大功率的機器人系統"><a href="#1-液壓驅動：多用於特大功率的機器人系統" class="headerlink" title="(1) 液壓驅動：多用於特大功率的機器人系統"></a>(1) 液壓驅動：多用於特大功率的機器人系統</h5><h5 id="2-氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統"><a href="#2-氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統" class="headerlink" title="(2) 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統"></a>(2) 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統</h5><h5 id="3-電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）"><a href="#3-電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）" class="headerlink" title="(3) 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）"></a>(3) 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）</h5><p>線性驅動器：將電動馬達的旋轉運動轉換為線性運動</p>
