@@ -478,7 +478,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-25 16:34:34" itemprop="dateModified" datetime="2021-03-25T16:34:34+08:00">2021-03-25</time>
+        <time title="修改時間：2021-03-25 16:37:33" itemprop="dateModified" datetime="2021-03-25T16:37:33+08:00">2021-03-25</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -500,7 +500,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h3><h4 id="1-树的定义：递归定义"><a href="#1-树的定义：递归定义" class="headerlink" title="1.树的定义：递归定义"></a>1.树的定义：递归定义</h4><h4 id="2-基本术语"><a href="#2-基本术语" class="headerlink" title="2.基本术语"></a>2.基本术语</h4><p>父节点，子节点，兄弟节点<br>根节点，叶节点<br>层(深度)，高度(树的高度=根节点的高度)<br>有序树(兄弟节点之间是有顺序的)，无序树<br>路径(树的边是单向的)，路径长度(一条路径边的个数)，带权路径<br>节点的度(子节点的数量)，树的度(最大的度)</p>
+          <p><a href="https://wangxchun.github.io/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">数据结构 — (1)线性表</a><br><a href="https://wangxchun.github.io/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/">数据结构 — (2)树</a></p>
+<h3 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h3><h4 id="1-树的定义：递归定义"><a href="#1-树的定义：递归定义" class="headerlink" title="1.树的定义：递归定义"></a>1.树的定义：递归定义</h4><h4 id="2-基本术语"><a href="#2-基本术语" class="headerlink" title="2.基本术语"></a>2.基本术语</h4><p>父节点，子节点，兄弟节点<br>根节点，叶节点<br>层(深度)，高度(树的高度=根节点的高度)<br>有序树(兄弟节点之间是有顺序的)，无序树<br>路径(树的边是单向的)，路径长度(一条路径边的个数)，带权路径<br>节点的度(子节点的数量)，树的度(最大的度)</p>
 <h4 id="3-数的性质"><a href="#3-数的性质" class="headerlink" title="3.数的性质"></a>3.数的性质</h4><h5 id="1-n-e-1-树中的节点数等于所有结点的度数加1"><a href="#1-n-e-1-树中的节点数等于所有结点的度数加1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加1</h5><p>边数$d$，度数$e$，$d=e$<br>可以用归纳法证明</p>
 <h5 id="2-度为-m-的树中，第-i-层上至多有-m-i-1-个节点-i-geq-1"><a href="#2-度为-m-的树中，第-i-层上至多有-m-i-1-个节点-i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m{^i-1}$ 个节点( $i \geq 1$ )"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m{^i-1}$ 个节点( $i \geq 1$ )</h5><h5 id="3-高度为-h-的-m-叉树中至多有-m-h-1-over-m-1-个节点"><a href="#3-高度为-h-的-m-叉树中至多有-m-h-1-over-m-1-个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $(m^h-1) \over (m-1)$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $(m^h-1) \over (m-1)$ 个节点</h5><p>$由性质（2）可得：n \leq 1+m+m^2+…+m^{h-1}$<br>$n \leq {(m^h-1) \over (m-1)}$</p>
 <h5 id="4-具有-n-个节点的-m-叉树的最小高度为-lceil-log-m-n-m-1-1-rceil"><a href="#4-具有-n-个节点的-m-叉树的最小高度为-lceil-log-m-n-m-1-1-rceil" class="headerlink" title="(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m{(n(m-1)+1)} \rceil$"></a>(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m{(n(m-1)+1)} \rceil$</h5><p>$由性质（3）可得：h \geq \log_m{n(m-1)+1}$</p>
