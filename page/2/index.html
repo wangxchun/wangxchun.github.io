@@ -171,7 +171,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -230,6 +230,172 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Be Friend with Time">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/" class="post-title-link" itemprop="url">三連擊（洛谷P1008）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-03-27 14:50:22" itemprop="dateCreated datePublished" datetime="2019-03-27T14:50:22+08:00">2019-03-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-24 15:12:42" itemprop="dateModified" datetime="2021-03-24T15:12:42+08:00">2021-03-24</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E5%88%B7%E9%A1%8C/" itemprop="url" rel="index"><span itemprop="name">C++刷題</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="題目描述"><a href="#題目描述" class="headerlink" title="題目描述"></a>題目描述</h4><pre><code>將1，2,...,9共9個數分成三組，分別組成三個三位數，且使這三個三位數構成1：2：3的比例，試求出所有滿足條件的三個三位數。 
+</code></pre><h4 id="輸入輸出格式"><a href="#輸入輸出格式" class="headerlink" title="輸入輸出格式"></a>輸入輸出格式</h4><pre><code>輸入格式：沒有輸入。
+輸出格式：若干行，每行3個數位。 按照每行第一個數位升序排列。
+</code></pre><h4 id="我的解法："><a href="#我的解法：" class="headerlink" title="我的解法："></a>我的解法：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//將i分別乘以2和3，若這兩個三位數都滿足：(1)自身沒有重複的數字 (2)與i沒有重複的數字 (3)不包含0這個數字 ，則輸出</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">123</span>; i&lt;=<span class="number">329</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; test1, test2, test3;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; a&#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br><span class="line">		<span class="keyword">int</span> double_i = i*<span class="number">2</span>, triple_i = i*<span class="number">3</span>;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; b&#123;double_i/<span class="number">100</span>, double_i/<span class="number">10</span>%<span class="number">10</span>, double_i%<span class="number">10</span>&#125;;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; c&#123;triple_i/<span class="number">100</span>, triple_i/<span class="number">10</span>%<span class="number">10</span>, triple_i%<span class="number">10</span>&#125;;</span><br><span class="line">		<span class="built_in">set_intersection</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), b.<span class="built_in">begin</span>(), b.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test1, test1.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="built_in">set_intersection</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), c.<span class="built_in">begin</span>(), c.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test2, test2.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="built_in">set_intersection</span>(c.<span class="built_in">begin</span>(), c.<span class="built_in">end</span>(), b.<span class="built_in">begin</span>(), b.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test3, test3.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="keyword">if</span>(test1.<span class="built_in">empty</span>() &amp;&amp; test2.<span class="built_in">empty</span>() &amp;&amp; test3.<span class="built_in">empty</span>() &amp;&amp; a.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; b.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; c.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; a.<span class="built_in">size</span>()==<span class="number">3</span> &amp;&amp; b.<span class="built_in">size</span>()==<span class="number">3</span> &amp;&amp; c.<span class="built_in">size</span>()==<span class="number">3</span>)</span><br><span class="line">			cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; double_i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; triple_i &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h4 id="別的解法"><a href="#別的解法" class="headerlink" title="別的解法"></a>別的解法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> i,j,v;<span class="keyword">bool</span> a[<span class="number">10</span>];<span class="comment">//a[i]表示第i个数已经用过了</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">192</span>;i&lt;=<span class="number">327</span>;i++)<span class="comment">//第一个数最小192，最大327。其实不知道的情况下简单来说是从123-329的但是算出来是最值就稍微改了下下</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="built_in"><span class="keyword">sizeof</span></span>(a));v=<span class="number">0</span>;<span class="comment">//清零</span></span><br><span class="line">        a[i%<span class="number">10</span>]=a[i/<span class="number">10</span>%<span class="number">10</span>]=a[i/<span class="number">100</span>]=a[i*<span class="number">2</span>%<span class="number">10</span>]=a[i*<span class="number">2</span>/<span class="number">10</span>%<span class="number">10</span>]=a[i*<span class="number">2</span>/<span class="number">100</span>]=a[i*<span class="number">3</span>%<span class="number">10</span>]=a[i*<span class="number">3</span>/<span class="number">10</span>%<span class="number">10</span>]=a[i*<span class="number">3</span>/<span class="number">100</span>]=<span class="number">1</span>;<span class="comment">//统计数字,赋值所有数组1；</span></span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=<span class="number">9</span>;j++) v+=a[j];<span class="comment">//v表示1-9这些数字是否全部齐了，如果有相同的数，就会缺某个数组导致得数&lt;9；</span></span><br><span class="line">        <span class="keyword">if</span>(v==<span class="number">9</span>) <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>,i,i*<span class="number">2</span>,i*<span class="number">3</span>);<span class="comment">//如果齐了就输出</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//以上代码来自洛谷题解作者：Kelin</span></span><br></pre></td></tr></table></figure>
+<h4 id="用到的知識點"><a href="#用到的知識點" class="headerlink" title="用到的知識點"></a>用到的知識點</h4><p>memset：作用是在一段記憶體塊中填充某個給定的值，它是對較大的結構體或陣列進行清零操作的一種最快方法，清空后換為自己給定的值，可以是符號。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/22/C++%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Be Friend with Time">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/03/22/C++%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5/" class="post-title-link" itemprop="url">C++四捨五入</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-03-22 14:55:01" itemprop="dateCreated datePublished" datetime="2019-03-22T14:55:01+08:00">2019-03-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-11 23:03:51" itemprop="dateModified" datetime="2021-03-11T23:03:51+08:00">2021-03-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>round(a)：回傳a之小數經四捨五入後之值。<br>floor(a)：回傳a之小數無條件捨去後之值。<br>ceil(a)：回傳a之小數無條件進位後之值。<br>setprecision() 是輸入/輸出操縱器庫 <iomanip> 的一個操作符，可以用來修改浮點數的預設精度。<br>使用setprecision(n)可控制輸出流顯示浮點數的數字個數。C++預設的流輸出數值有效位是6。<br>如果setprecision(n)與setiosflags(ios::fixed)合用，可以控制小數點右邊的數字個數。<br>setiosflags(ios::fixed)是用定點方式表示實數</iomanip></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span> <span class="comment">//輸出流控制，setiosflags(ios::fixed)，setprecision(n)的標頭檔案</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> n = <span class="number">50.26548</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%.4f&quot;</span>, n); cout &lt;&lt; endl; <span class="comment">//列印輸出小數點後4位，會四捨五入</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//輸出4位有效數字，包括整數和小數部分，會四捨五入 </span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//輸出小數點後4位，會四捨五入，會影響後面的setprecision()輸出</span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//只輸出小數點後4位，而不再是包括整數部分的7位,會四捨五入（但是此處受到前面影響，所以會輸出包含整數）</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>)&lt;&lt; <span class="built_in">floor</span>(n * <span class="number">10000</span>)/<span class="number">10000</span>&lt;&lt; endl;<span class="comment">//不會四捨五入，保留幾位小數就乘和除10的幾次方</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/22/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -261,7 +427,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-14 15:07:05" itemprop="dateModified" datetime="2021-03-14T15:07:05+08:00">2021-03-14</time>
+        <time title="修改時間：2021-03-25 19:05:01" itemprop="dateModified" datetime="2021-03-25T19:05:01+08:00">2021-03-25</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -841,101 +1007,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/02/23/Mathjax/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/02/23/Mathjax/" class="post-title-link" itemprop="url">hexo中Mathjax的用法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2019-02-23 21:24:55" itemprop="dateCreated datePublished" datetime="2019-02-23T21:24:55+08:00">2019-02-23</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-23 23:11:00" itemprop="dateModified" datetime="2021-03-23T23:11:00+08:00">2021-03-23</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Mathjax的安装"><a href="#Mathjax的安装" class="headerlink" title="Mathjax的安装"></a>Mathjax的安装</h3><p>在 hexo 中，你会发现我们不能用 Latex 语法来书写数学公式，这对于书写学术博客来说是很大的不便，因为我们会经常碰到很多的数学公式推导，但是我们可以通过安装第三方库来解决这一问题。</p>
-<h4 id="第一步：-使用Kramed代替-Marked"><a href="#第一步：-使用Kramed代替-Marked" class="headerlink" title="第一步： 使用Kramed代替 Marked"></a>第一步： 使用Kramed代替 Marked</h4><p>hexo 默认的渲染引擎是 marked，但是 marked 不支持 mathjax。 kramed 是在 marked 的基础上进行修改。我们在工程目录下执行以下命令来安装 kramed。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure></p>
-<p>然后，更改/node_modules/hexo-renderer-kramed/lib/renderer.js，更改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Change inline math rule</span><br><span class="line">function formatText(text) &#123;</span><br><span class="line">    &#x2F;&#x2F; Fit kramed&#39;s rule: $$ + \1 + $$</span><br><span class="line">    return text.replace(&#x2F;&#96;\$(.*?)\$&#96;&#x2F;g, &#39;$$$$$1$$$$&#39;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Change inline math rule</span><br><span class="line">function formatText(text) &#123;</span><br><span class="line">    return text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="第二步-停止使用-hexo-math"><a href="#第二步-停止使用-hexo-math" class="headerlink" title="第二步: 停止使用 hexo-math"></a>第二步: 停止使用 hexo-math</h4><p>首先，如果你已经安装 hexo-math, 请卸载它：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-math --save</span><br></pre></td></tr></table></figure>
-<p>然后安装 hexo-renderer-mathjax 包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-mathjax --save</span><br></pre></td></tr></table></figure></p>
-<h4 id="第三步-更新-Mathjax-的-CDN-链接"><a href="#第三步-更新-Mathjax-的-CDN-链接" class="headerlink" title="第三步: 更新 Mathjax 的 CDN 链接"></a>第三步: 更新 Mathjax 的 CDN 链接</h4><p>首先，打开/node_modules/hexo-renderer-mathjax/mathjax.html<br>然后，把 script 更改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;mathjax&#x2F;2.7.1&#x2F;MathJax.js?config&#x3D;TeX-MML-AM_CHTML&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></p>
-<h4 id="第四步-更改默认转义规则"><a href="#第四步-更改默认转义规则" class="headerlink" title="第四步: 更改默认转义规则"></a>第四步: 更改默认转义规则</h4><p>因为 hexo 默认的转义规则会将一些字符进行转义，比如 _ 转为 <em>, 所以我们需要对默认的规则进行修改.<br>首先， 打开 /node_modules/kramed/lib/rules、inline.js</em></p>
-<p>然后，把<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">escape: &#x2F;^\\([\\&#96;*&#123;&#125;\[\]()#$+\-.!_&gt;])&#x2F;,</span><br></pre></td></tr></table></figure></p>
-<p>更改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">escape: &#x2F;^\\([&#96;*\[\]()# +\-.!_&gt;])&#x2F;,</span><br></pre></td></tr></table></figure></p>
-<p>把<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: &#x2F;^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)&#x2F;,</span><br></pre></td></tr></table></figure></p>
-<p>更改为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: &#x2F;^\*((?:\*\*|[\s\S])+?)\*(?!\*)&#x2F;,</span><br></pre></td></tr></table></figure></p>
-<p>第五步: 开启mathjax<br>在主题 _config.yml 中开启 Mathjax， 找到 mathjax 字段添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure></p>
-<p>这一步可选，在博客中开启 Mathjax，， 添加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: Testing Mathjax with Hexo</span><br><span class="line">category: Uncategorized</span><br><span class="line">date: 2017&#x2F;05&#x2F;03</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure></p>
-<p>通过以上步骤，我们就可以在 hexo 中使用 Mathjax 来书写数学公式。</p>
-<h3 id="语法使用"><a href="#语法使用" class="headerlink" title="语法使用"></a>语法使用</h3><h4 id><a href="#" class="headerlink" title=" "></a> </h4>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/14/C++%E5%85%A5%E9%96%80%E4%B9%8B%E5%BE%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1055,87 +1126,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/" class="post-title-link" itemprop="url">讓Dev C++支持C++11</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2018-09-27 15:31:00" itemprop="dateCreated datePublished" datetime="2018-09-27T15:31:00+08:00">2018-09-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-24 20:45:52" itemprop="dateModified" datetime="2021-03-24T20:45:52+08:00">2021-03-24</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>在DevC++中<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a&#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br>會出現如下錯誤<br><img src="/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/wrong1.png" alt></p>
-<h4 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h4><p>(1) 先在dev的[工具]里找到[編譯選項]<br>(2) 勾選[編譯時加入以下命令]欄位並填入-std=c++11</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
@@ -1199,38 +1189,7 @@
 
 
 
-  <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'none'
-      },
-      options: {
-        renderActions: {
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              const target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
-    script.defer = true;
-    document.head.appendChild(script);
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.typesetClear();
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
+  
 
 
 </body>
