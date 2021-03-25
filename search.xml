@@ -11,18 +11,6 @@
       </categories>
   </entry>
   <entry>
-    <title>取出一個數的每一位</title>
-    <url>/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>刷题检讨--(1)线性表</title>
     <url>/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8/</url>
     <content><![CDATA[<h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h3><p>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用vector(数组) //iterator<br>除了用迭代器获取vector容器中的元素，[]和at也可以<br>vector<int>(v).swap(v); //收缩内存<br>//vector<int> 利用v调用拷贝构造函数，创建匿名对象，它会用v目前使用的元素个数来初始化这个匿名对象<br>//swap()互换函数的本质类似于指针的交换<br>//调换后v指向了创建的匿名对象，而本来匿名对象的指针x指向原本的v，并且在该语句过后由系统自动回收</int></int></p>
@@ -62,18 +50,15 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>C++四捨五入</title>
-    <url>/2019/03/22/C++%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5/</url>
-    <content><![CDATA[<p>round(a)：回傳a之小數經四捨五入後之值。<br>floor(a)：回傳a之小數無條件捨去後之值。<br>ceil(a)：回傳a之小數無條件進位後之值。<br>setprecision() 是輸入/輸出操縱器庫 <iomanip> 的一個操作符，可以用來修改浮點數的預設精度。<br>使用setprecision(n)可控制輸出流顯示浮點數的數字個數。C++預設的流輸出數值有效位是6。<br>如果setprecision(n)與setiosflags(ios::fixed)合用，可以控制小數點右邊的數字個數。<br>setiosflags(ios::fixed)是用定點方式表示實數</iomanip></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span> <span class="comment">//輸出流控制，setiosflags(ios::fixed)，setprecision(n)的標頭檔案</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> n = <span class="number">50.26548</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%.4f&quot;</span>, n); cout &lt;&lt; endl; <span class="comment">//列印輸出小數點後4位，會四捨五入</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//輸出4位有效數字，包括整數和小數部分，會四捨五入 </span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//輸出小數點後4位，會四捨五入，會影響後面的setprecision()輸出</span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//只輸出小數點後4位，而不再是包括整數部分的7位,會四捨五入（但是此處受到前面影響，所以會輸出包含整數）</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>)&lt;&lt; <span class="built_in">floor</span>(n * <span class="number">10000</span>)/<span class="number">10000</span>&lt;&lt; endl;<span class="comment">//不會四捨五入，保留幾位小數就乘和除10的幾次方</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>取出一個數的每一位</title>
+    <url>/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>C++學習</category>
       </categories>
       <tags>
         <tag>C++</tag>
-        <tag>刷題</tag>
-        <tag>四捨五入</tag>
       </tags>
   </entry>
   <entry>
@@ -148,14 +133,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>解釋一個語句</title>
-    <url>/2019/03/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-<p>在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
+    <title>C++四捨五入</title>
+    <url>/2019/03/22/C++%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5/</url>
+    <content><![CDATA[<p>round(a)：回傳a之小數經四捨五入後之值。<br>floor(a)：回傳a之小數無條件捨去後之值。<br>ceil(a)：回傳a之小數無條件進位後之值。<br>setprecision() 是輸入/輸出操縱器庫 <iomanip> 的一個操作符，可以用來修改浮點數的預設精度。<br>使用setprecision(n)可控制輸出流顯示浮點數的數字個數。C++預設的流輸出數值有效位是6。<br>如果setprecision(n)與setiosflags(ios::fixed)合用，可以控制小數點右邊的數字個數。<br>setiosflags(ios::fixed)是用定點方式表示實數</iomanip></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span> <span class="comment">//輸出流控制，setiosflags(ios::fixed)，setprecision(n)的標頭檔案</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> n = <span class="number">50.26548</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%.4f&quot;</span>, n); cout &lt;&lt; endl; <span class="comment">//列印輸出小數點後4位，會四捨五入</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//輸出4位有效數字，包括整數和小數部分，會四捨五入 </span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//輸出小數點後4位，會四捨五入，會影響後面的setprecision()輸出</span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">//只輸出小數點後4位，而不再是包括整數部分的7位,會四捨五入（但是此處受到前面影響，所以會輸出包含整數）</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">4</span>)&lt;&lt; <span class="built_in">floor</span>(n * <span class="number">10000</span>)/<span class="number">10000</span>&lt;&lt; endl;<span class="comment">//不會四捨五入，保留幾位小數就乘和除10的幾次方</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>C++學習</category>
       </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>刷題</tag>
+        <tag>四捨五入</tag>
+      </tags>
   </entry>
   <entry>
     <title>C++復習--3.C++進階</title>
@@ -164,6 +154,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="一、模板"><a href="#一、模板" class="headerlink" title="一、模板"></a>一、模板</h3><h4 id="1-模板的概念"><a href="#1-模板的概念" class="headerlink" title="1.模板的概念"></a>1.模板的概念</h4><h4 id="2-函數模板"><a href="#2-函數模板" class="headerlink" title="2.函數模板"></a>2.函數模板</h4><h4 id="3-類模板"><a href="#3-類模板" class="headerlink" title="3.類模板"></a>3.類模板</h4><h3 id="二、STL初識"><a href="#二、STL初識" class="headerlink" title="二、STL初識"></a>二、STL初識</h3><h3 id="三、STL常用容器"><a href="#三、STL常用容器" class="headerlink" title="三、STL常用容器"></a>三、STL常用容器</h3><h3 id="四、STL函數對象"><a href="#四、STL函數對象" class="headerlink" title="四、STL函數對象"></a>四、STL函數對象</h3><h3 id="五、STL常用算法"><a href="#五、STL常用算法" class="headerlink" title="五、STL常用算法"></a>五、STL常用算法</h3>]]></content>
       <categories>
         <category>C++復習</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>解釋一個語句</title>
+    <url>/2019/03/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
       </categories>
   </entry>
   <entry>
@@ -231,40 +231,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>如何在hexo blog中發表一篇文章</title>
-    <url>/2019/03/22/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h4 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1.新建一篇文章"></a>1.新建一篇文章</h4><p>(1) 在hexo blog目錄下，進入cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;文章名稱&quot;</span><br></pre></td></tr></table></figure></p>
-<p>(2) 在blog目錄下的/source/_posts/ 資料夾下，可以看到生成的 blog文章（文章名稱.md）<br>(3) 在.md檔案中編輯自己的文章即可<br>注意：Hexo 發表的文章是 Markdown 格式的檔案</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>發表文章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三連擊（洛谷P1008）</title>
-    <url>/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="題目描述"><a href="#題目描述" class="headerlink" title="題目描述"></a>題目描述</h4><pre><code>將1，2,...,9共9個數分成三組，分別組成三個三位數，且使這三個三位數構成1：2：3的比例，試求出所有滿足條件的三個三位數。 
-</code></pre><h4 id="輸入輸出格式"><a href="#輸入輸出格式" class="headerlink" title="輸入輸出格式"></a>輸入輸出格式</h4><pre><code>輸入格式：沒有輸入。
-輸出格式：若干行，每行3個數位。 按照每行第一個數位升序排列。
-</code></pre><h4 id="我的解法："><a href="#我的解法：" class="headerlink" title="我的解法："></a>我的解法：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//將i分別乘以2和3，若這兩個三位數都滿足：(1)自身沒有重複的數字 (2)與i沒有重複的數字 (3)不包含0這個數字 ，則輸出</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">123</span>; i&lt;=<span class="number">329</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; test1, test2, test3;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; a&#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br><span class="line">		<span class="keyword">int</span> double_i = i*<span class="number">2</span>, triple_i = i*<span class="number">3</span>;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; b&#123;double_i/<span class="number">100</span>, double_i/<span class="number">10</span>%<span class="number">10</span>, double_i%<span class="number">10</span>&#125;;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; c&#123;triple_i/<span class="number">100</span>, triple_i/<span class="number">10</span>%<span class="number">10</span>, triple_i%<span class="number">10</span>&#125;;</span><br><span class="line">		<span class="built_in">set_intersection</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), b.<span class="built_in">begin</span>(), b.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test1, test1.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="built_in">set_intersection</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), c.<span class="built_in">begin</span>(), c.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test2, test2.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="built_in">set_intersection</span>(c.<span class="built_in">begin</span>(), c.<span class="built_in">end</span>(), b.<span class="built_in">begin</span>(), b.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test3, test3.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="keyword">if</span>(test1.<span class="built_in">empty</span>() &amp;&amp; test2.<span class="built_in">empty</span>() &amp;&amp; test3.<span class="built_in">empty</span>() &amp;&amp; a.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; b.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; c.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; a.<span class="built_in">size</span>()==<span class="number">3</span> &amp;&amp; b.<span class="built_in">size</span>()==<span class="number">3</span> &amp;&amp; c.<span class="built_in">size</span>()==<span class="number">3</span>)</span><br><span class="line">			cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; double_i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; triple_i &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<h4 id="別的解法"><a href="#別的解法" class="headerlink" title="別的解法"></a>別的解法</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> i,j,v;<span class="keyword">bool</span> a[<span class="number">10</span>];<span class="comment">//a[i]表示第i个数已经用过了</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">192</span>;i&lt;=<span class="number">327</span>;i++)<span class="comment">//第一个数最小192，最大327。其实不知道的情况下简单来说是从123-329的但是算出来是最值就稍微改了下下</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="built_in"><span class="keyword">sizeof</span></span>(a));v=<span class="number">0</span>;<span class="comment">//清零</span></span><br><span class="line">        a[i%<span class="number">10</span>]=a[i/<span class="number">10</span>%<span class="number">10</span>]=a[i/<span class="number">100</span>]=a[i*<span class="number">2</span>%<span class="number">10</span>]=a[i*<span class="number">2</span>/<span class="number">10</span>%<span class="number">10</span>]=a[i*<span class="number">2</span>/<span class="number">100</span>]=a[i*<span class="number">3</span>%<span class="number">10</span>]=a[i*<span class="number">3</span>/<span class="number">10</span>%<span class="number">10</span>]=a[i*<span class="number">3</span>/<span class="number">100</span>]=<span class="number">1</span>;<span class="comment">//统计数字,赋值所有数组1；</span></span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=<span class="number">9</span>;j++) v+=a[j];<span class="comment">//v表示1-9这些数字是否全部齐了，如果有相同的数，就会缺某个数组导致得数&lt;9；</span></span><br><span class="line">        <span class="keyword">if</span>(v==<span class="number">9</span>) <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>,i,i*<span class="number">2</span>,i*<span class="number">3</span>);<span class="comment">//如果齐了就输出</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//以上代码来自洛谷题解作者：Kelin</span></span><br></pre></td></tr></table></figure>
-<h4 id="用到的知識點"><a href="#用到的知識點" class="headerlink" title="用到的知識點"></a>用到的知識點</h4><p>memset：作用是在一段記憶體塊中填充某個給定的值，它是對較大的結構體或陣列進行清零操作的一種最快方法，清空后換為自己給定的值，可以是符號。</p>
-]]></content>
-      <categories>
-        <category>C++刷題</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>OJ</tag>
-        <tag>set</tag>
-        <tag>洛谷刷題</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构 -- (2)树</title>
     <url>/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
     <content><![CDATA[<h3 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h3><h4 id="1-树的定义：递归定义"><a href="#1-树的定义：递归定义" class="headerlink" title="1.树的定义：递归定义"></a>1.树的定义：递归定义</h4><h4 id="2-基本术语"><a href="#2-基本术语" class="headerlink" title="2.基本术语"></a>2.基本术语</h4><p>父节点，子节点，兄弟节点<br>根节点，叶节点<br>层(深度)，高度(树的高度=根节点的高度)<br>有序树(兄弟节点之间是有顺序的)，无序树<br>路径(树的边是单向的)，路径长度(一条路径边的个数)，带权路径<br>节点的度(子节点的数量)，树的度(最大的度)</p>
@@ -280,6 +246,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="5-二叉树的遍历"><a href="#5-二叉树的遍历" class="headerlink" title="5.二叉树的遍历"></a>5.二叉树的遍历</h4><h5 id="1-遍历有先序-NLR-、中序-LNR-、后序-LRN-三种遍历算法，其中”序”指的是根节点在何时被访问"><a href="#1-遍历有先序-NLR-、中序-LNR-、后序-LRN-三种遍历算法，其中”序”指的是根节点在何时被访问" class="headerlink" title="(1) 遍历有先序(NLR)、中序(LNR)、后序(LRN)三种遍历算法，其中”序”指的是根节点在何时被访问"></a>(1) 遍历有先序(NLR)、中序(LNR)、后序(LRN)三种遍历算法，其中”序”指的是根节点在何时被访问</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;先序遍历</span><br><span class="line">void PreOrder(BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	if(T!&#x3D;NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		visit(T);            &#x2F;&#x2F;访问根节点</span><br><span class="line">		PreOrder(T-&gt;ichild); &#x2F;&#x2F;递归遍历左子树</span><br><span class="line">		PreOrder(T-&gt;echild); &#x2F;&#x2F;递归遍历右子树</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="2-非递归算法"><a href="#2-非递归算法" class="headerlink" title="(2) 非递归算法"></a>(2) 非递归算法</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;中序遍历的非递归算法</span><br><span class="line">void InOrder2(BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	InitStack(S); BiTree p &#x3D; T;</span><br><span class="line">	while(p || !IsEmpty(S))</span><br><span class="line">	&#123;</span><br><span class="line">		if(p)</span><br><span class="line">		&#123;</span><br><span class="line">			Push(S,p);</span><br><span class="line">			p &#x3D; p-&gt;lchild;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			Pop(S,p); visit(p);</span><br><span class="line">			p &#x3D; p-&gt;rchild;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;入栈序列：先序</span><br><span class="line">&#x2F;&#x2F;出栈序列：中序</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
   </entry>
   <entry>
     <title>数据结构 -- (1)线性表</title>
@@ -344,18 +313,29 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>讓Dev C++支持C++11</title>
-    <url>/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/</url>
-    <content><![CDATA[<p>在DevC++中<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a&#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br>會出現如下錯誤<br><img src="/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/wrong1.png" alt></p>
-<h4 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h4><p>(1) 先在dev的[工具]里找到[編譯選項]<br>(2) 勾選[編譯時加入以下命令]欄位並填入-std=c++11</p>
+    <title>三連擊（洛谷P1008）</title>
+    <url>/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="題目描述"><a href="#題目描述" class="headerlink" title="題目描述"></a>題目描述</h4><pre><code>將1，2,...,9共9個數分成三組，分別組成三個三位數，且使這三個三位數構成1：2：3的比例，試求出所有滿足條件的三個三位數。 
+</code></pre><h4 id="輸入輸出格式"><a href="#輸入輸出格式" class="headerlink" title="輸入輸出格式"></a>輸入輸出格式</h4><pre><code>輸入格式：沒有輸入。
+輸出格式：若干行，每行3個數位。 按照每行第一個數位升序排列。
+</code></pre><h4 id="我的解法："><a href="#我的解法：" class="headerlink" title="我的解法："></a>我的解法：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//將i分別乘以2和3，若這兩個三位數都滿足：(1)自身沒有重複的數字 (2)與i沒有重複的數字 (3)不包含0這個數字 ，則輸出</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">123</span>; i&lt;=<span class="number">329</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; test1, test2, test3;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; a&#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br><span class="line">		<span class="keyword">int</span> double_i = i*<span class="number">2</span>, triple_i = i*<span class="number">3</span>;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; b&#123;double_i/<span class="number">100</span>, double_i/<span class="number">10</span>%<span class="number">10</span>, double_i%<span class="number">10</span>&#125;;</span><br><span class="line">		set&lt;<span class="keyword">int</span>&gt; c&#123;triple_i/<span class="number">100</span>, triple_i/<span class="number">10</span>%<span class="number">10</span>, triple_i%<span class="number">10</span>&#125;;</span><br><span class="line">		<span class="built_in">set_intersection</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), b.<span class="built_in">begin</span>(), b.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test1, test1.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="built_in">set_intersection</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), c.<span class="built_in">begin</span>(), c.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test2, test2.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="built_in">set_intersection</span>(c.<span class="built_in">begin</span>(), c.<span class="built_in">end</span>(), b.<span class="built_in">begin</span>(), b.<span class="built_in">end</span>(), <span class="built_in">inserter</span>(test3, test3.<span class="built_in">begin</span>()));</span><br><span class="line">		<span class="keyword">if</span>(test1.<span class="built_in">empty</span>() &amp;&amp; test2.<span class="built_in">empty</span>() &amp;&amp; test3.<span class="built_in">empty</span>() &amp;&amp; a.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; b.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; c.<span class="built_in">count</span>(<span class="number">0</span>)==<span class="number">0</span> &amp;&amp; a.<span class="built_in">size</span>()==<span class="number">3</span> &amp;&amp; b.<span class="built_in">size</span>()==<span class="number">3</span> &amp;&amp; c.<span class="built_in">size</span>()==<span class="number">3</span>)</span><br><span class="line">			cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; double_i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; triple_i &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h4 id="別的解法"><a href="#別的解法" class="headerlink" title="別的解法"></a>別的解法</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> i,j,v;<span class="keyword">bool</span> a[<span class="number">10</span>];<span class="comment">//a[i]表示第i个数已经用过了</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">192</span>;i&lt;=<span class="number">327</span>;i++)<span class="comment">//第一个数最小192，最大327。其实不知道的情况下简单来说是从123-329的但是算出来是最值就稍微改了下下</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="built_in"><span class="keyword">sizeof</span></span>(a));v=<span class="number">0</span>;<span class="comment">//清零</span></span><br><span class="line">        a[i%<span class="number">10</span>]=a[i/<span class="number">10</span>%<span class="number">10</span>]=a[i/<span class="number">100</span>]=a[i*<span class="number">2</span>%<span class="number">10</span>]=a[i*<span class="number">2</span>/<span class="number">10</span>%<span class="number">10</span>]=a[i*<span class="number">2</span>/<span class="number">100</span>]=a[i*<span class="number">3</span>%<span class="number">10</span>]=a[i*<span class="number">3</span>/<span class="number">10</span>%<span class="number">10</span>]=a[i*<span class="number">3</span>/<span class="number">100</span>]=<span class="number">1</span>;<span class="comment">//统计数字,赋值所有数组1；</span></span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=<span class="number">9</span>;j++) v+=a[j];<span class="comment">//v表示1-9这些数字是否全部齐了，如果有相同的数，就会缺某个数组导致得数&lt;9；</span></span><br><span class="line">        <span class="keyword">if</span>(v==<span class="number">9</span>) <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>,i,i*<span class="number">2</span>,i*<span class="number">3</span>);<span class="comment">//如果齐了就输出</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//以上代码来自洛谷题解作者：Kelin</span></span><br></pre></td></tr></table></figure>
+<h4 id="用到的知識點"><a href="#用到的知識點" class="headerlink" title="用到的知識點"></a>用到的知識點</h4><p>memset：作用是在一段記憶體塊中填充某個給定的值，它是對較大的結構體或陣列進行清零操作的一種最快方法，清空后換為自己給定的值，可以是符號。</p>
 ]]></content>
       <categories>
-        <category>C++學習</category>
+        <category>C++刷題</category>
       </categories>
       <tags>
-        <tag>Dev C++</tag>
-        <tag>C++ 11</tag>
+        <tag>C++</tag>
+        <tag>OJ</tag>
+        <tag>set</tag>
+        <tag>洛谷刷題</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>算法</title>
+    <url>/2021/03/25/%E7%AE%97%E6%B3%953/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>slam小車：(一)前期準備--2.Linux目錄結構與常用指令</title>
@@ -380,6 +360,34 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>智能車</tag>
         <tag>Linux</tag>
         <tag>命令列指令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在hexo blog中發表一篇文章</title>
+    <url>/2019/03/22/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h4 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1.新建一篇文章"></a>1.新建一篇文章</h4><p>(1) 在hexo blog目錄下，進入cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;文章名稱&quot;</span><br></pre></td></tr></table></figure></p>
+<p>(2) 在blog目錄下的/source/_posts/ 資料夾下，可以看到生成的 blog文章（文章名稱.md）<br>(3) 在.md檔案中編輯自己的文章即可<br>注意：Hexo 發表的文章是 Markdown 格式的檔案</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>發表文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>讓Dev C++支持C++11</title>
+    <url>/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/</url>
+    <content><![CDATA[<p>在DevC++中<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a&#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br>會出現如下錯誤<br><img src="/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/wrong1.png" alt></p>
+<h4 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h4><p>(1) 先在dev的[工具]里找到[編譯選項]<br>(2) 勾選[編譯時加入以下命令]欄位並填入-std=c++11</p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>Dev C++</tag>
+        <tag>C++ 11</tag>
       </tags>
   </entry>
   <entry>
