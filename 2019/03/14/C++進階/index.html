@@ -23,12 +23,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="C++復習—1.C++基礎入門C++復習—2.C++入門之後C++復習—3.C++進階 一、模板1.模板的概念2.函數模板3.類模板二、STL初識三、STL常用容器四、STL函數對象五、STL常用算法">
+<meta name="description" content="C++ 復習 —1.C++ 基礎入門C++ 復習 —2.C++ 入門之後C++ 復習 —3.C++ 進階 一、模板 1. 模板的概念2. 函數模板3. 類模板 二、STL 初識  三、STL 常用容器  四、STL 函數對象  五、STL 常用算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++復習--3.C++進階">
+<meta property="og:title" content="C++ 復習 --3.C++ 進階">
 <meta property="og:url" content="https://wangxchun.github.io/2019/03/14/C++%E9%80%B2%E9%9A%8E/index.html">
 <meta property="og:site_name" content="Be Friend with Time">
-<meta property="og:description" content="C++復習—1.C++基礎入門C++復習—2.C++入門之後C++復習—3.C++進階 一、模板1.模板的概念2.函數模板3.類模板二、STL初識三、STL常用容器四、STL函數對象五、STL常用算法">
+<meta property="og:description" content="C++ 復習 —1.C++ 基礎入門C++ 復習 —2.C++ 入門之後C++ 復習 —3.C++ 進階 一、模板 1. 模板的概念2. 函數模板3. 類模板 二、STL 初識  三、STL 常用容器  四、STL 函數對象  五、STL 常用算法">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2019-03-14T12:35:13.000Z">
 <meta property="article:modified_time" content="2021-03-24T06:41:28.538Z">
@@ -48,7 +48,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>C++復習--3.C++進階 | Be Friend with Time</title>
+<title>C++ 復習 --3.C++ 進階 | Be Friend with Time</title>
   
 
 
@@ -160,7 +160,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A8%A1%E6%9D%BF"><span class="nav-text">一、模板</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%A8%A1%E6%9D%BF%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">1.模板的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%87%BD%E6%95%B8%E6%A8%A1%E6%9D%BF"><span class="nav-text">2.函數模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E9%A1%9E%E6%A8%A1%E6%9D%BF"><span class="nav-text">3.類模板</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81STL%E5%88%9D%E8%AD%98"><span class="nav-text">二、STL初識</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81STL%E5%B8%B8%E7%94%A8%E5%AE%B9%E5%99%A8"><span class="nav-text">三、STL常用容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81STL%E5%87%BD%E6%95%B8%E5%B0%8D%E8%B1%A1"><span class="nav-text">四、STL函數對象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81STL%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95"><span class="nav-text">五、STL常用算法</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A8%A1%E6%9D%BF"><span class="nav-text">一、模板 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E6%A8%A1%E6%9D%BF%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">1. 模板的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%87%BD%E6%95%B8%E6%A8%A1%E6%9D%BF"><span class="nav-text">2. 函數模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E9%A1%9E%E6%A8%A1%E6%9D%BF"><span class="nav-text">3. 類模板</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81STL-%20%E5%88%9D%E8%AD%98"><span class="nav-text"> 二、STL 初識 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81STL-%20%E5%B8%B8%E7%94%A8%E5%AE%B9%E5%99%A8"><span class="nav-text"> 三、STL 常用容器 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81STL-%20%E5%87%BD%E6%95%B8%E5%B0%8D%E8%B1%A1"><span class="nav-text"> 四、STL 函數對象 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81STL-%20%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95"><span class="nav-text"> 五、STL 常用算法</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -176,7 +176,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -249,7 +249,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          C++復習--3.C++進階
+          C++ 復習 --3.C++ 進階
         </h1>
 
         <div class="post-meta-container">
@@ -289,8 +289,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a href="https://wangxchun.github.io/2018/09/13/C-%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/">C++復習—1.C++基礎入門</a><br><a href="https://wangxchun.github.io/2018/10/14/C-%E5%85%A5%E9%96%80%E4%B9%8B%E5%BE%8C/">C++復習—2.C++入門之後</a><br><a href="https://wangxchun.github.io/2019/03/14/C-%E9%80%B2%E9%9A%8E/">C++復習—3.C++進階</a></p>
-<h3 id="一、模板"><a href="#一、模板" class="headerlink" title="一、模板"></a>一、模板</h3><h4 id="1-模板的概念"><a href="#1-模板的概念" class="headerlink" title="1.模板的概念"></a>1.模板的概念</h4><h4 id="2-函數模板"><a href="#2-函數模板" class="headerlink" title="2.函數模板"></a>2.函數模板</h4><h4 id="3-類模板"><a href="#3-類模板" class="headerlink" title="3.類模板"></a>3.類模板</h4><h3 id="二、STL初識"><a href="#二、STL初識" class="headerlink" title="二、STL初識"></a>二、STL初識</h3><h3 id="三、STL常用容器"><a href="#三、STL常用容器" class="headerlink" title="三、STL常用容器"></a>三、STL常用容器</h3><h3 id="四、STL函數對象"><a href="#四、STL函數對象" class="headerlink" title="四、STL函數對象"></a>四、STL函數對象</h3><h3 id="五、STL常用算法"><a href="#五、STL常用算法" class="headerlink" title="五、STL常用算法"></a>五、STL常用算法</h3>
+        <p><a href="https://wangxchun.github.io/2018/09/13/C-% E5%9F% BA% E7% A4%8E% E5%85% A5% E9%96%80/">C++ 復習 —1.C++ 基礎入門</a><br><a href="https://wangxchun.github.io/2018/10/14/C-% E5%85% A5% E9%96%80% E4% B9%8B% E5% BE%8C/">C++ 復習 —2.C++ 入門之後</a><br><a href="https://wangxchun.github.io/2019/03/14/C-% E9%80% B2% E9%9A%8E/">C++ 復習 —3.C++ 進階</a></p>
+<h3 id="一、模板"><a href="# 一、模板" class="headerlink" title="一、模板"></a>一、模板 </h3><h4 id="1- 模板的概念"><a href="#1- 模板的概念" class="headerlink" title="1. 模板的概念"></a>1. 模板的概念</h4><h4 id="2- 函數模板"><a href="#2- 函數模板" class="headerlink" title="2. 函數模板"></a>2. 函數模板</h4><h4 id="3- 類模板"><a href="#3- 類模板" class="headerlink" title="3. 類模板"></a>3. 類模板</h4><h3 id="二、STL- 初識"><a href="# 二、STL- 初識" class="headerlink" title="二、STL 初識"></a> 二、STL 初識 </h3><h3 id="三、STL- 常用容器"><a href="# 三、STL- 常用容器" class="headerlink" title="三、STL 常用容器"></a> 三、STL 常用容器 </h3><h3 id="四、STL- 函數對象"><a href="# 四、STL- 函數對象" class="headerlink" title="四、STL 函數對象"></a> 四、STL 函數對象 </h3><h3 id="五、STL- 常用算法"><a href="# 五、STL- 常用算法" class="headerlink" title="五、STL 常用算法"></a> 五、STL 常用算法</h3>
     </div>
 
     
@@ -303,13 +303,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/02/23/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/" rel="prev" title="hexo中Mathjax的用法">
-                  <i class="fa fa-chevron-left"></i> hexo中Mathjax的用法
+                <a href="/2019/02/23/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/" rel="prev" title="hexo 中 Mathjax 的用法">
+                  <i class="fa fa-chevron-left"></i> hexo 中 Mathjax 的用法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/" rel="next" title="利用rand()產生隨機數">
-                  利用rand()產生隨機數 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/" rel="next" title="利用 rand () 產生隨機數">
+                  利用 rand () 產生隨機數 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
