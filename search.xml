@@ -276,9 +276,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构 -- (2)树</title>
+    <title>数据结构 -- (2) 树</title>
     <url>/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">数据结构 — (1)线性表</a><br><a href="https://wangxchun.github.io/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/">数据结构 — (2)树</a></p>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">数据结构 — (1) 线性表</a><br><a href="https://wangxchun.github.io/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/">数据结构 — (2) 树</a></p>
 <h3 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h3><h4 id="1-树的定义：递归定义"><a href="#1-树的定义：递归定义" class="headerlink" title="1.树的定义：递归定义"></a>1.树的定义：递归定义</h4><h4 id="2-基本术语"><a href="#2-基本术语" class="headerlink" title="2.基本术语"></a>2.基本术语</h4><p>父节点，子节点，兄弟节点<br>根节点，叶节点<br>层(深度)，高度(树的高度=根节点的高度)<br>有序树(兄弟节点之间是有顺序的)，无序树<br>路径(树的边是单向的)，路径长度(一条路径边的个数)，带权路径<br>节点的度(子节点的数量)，树的度(最大的度)</p>
 <h4 id="3-树的性质"><a href="#3-树的性质" class="headerlink" title="3.树的性质"></a>3.树的性质</h4><h5 id="1-n-e-1-树中的节点数等于所有结点的度数加1"><a href="#1-n-e-1-树中的节点数等于所有结点的度数加1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加1</h5><p>边数$d$，度数$e$，$d=e$<br>可以用归纳法证明</p>
 <h5 id="2-度为-m-的树中，第-i-层上至多有-m-i-1-个节点-i-geq-1"><a href="#2-度为-m-的树中，第-i-层上至多有-m-i-1-个节点-i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m{^i-1}$ 个节点( $i \geq 1$ )"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m{^i-1}$ 个节点( $i \geq 1$ )</h5><h5 id="3-高度为-h-的-m-叉树中至多有-m-h-1-over-m-1-个节点"><a href="#3-高度为-h-的-m-叉树中至多有-m-h-1-over-m-1-个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $(m^h-1) \over (m-1)$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $(m^h-1) \over (m-1)$ 个节点</h5><p>$由性质（2）可得：n \leq 1+m+m^2+…+m^{h-1}$<br>$n \leq {(m^h-1) \over (m-1)}$</p>
@@ -295,7 +295,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="4-由遍历序列构造二叉树"><a href="#4-由遍历序列构造二叉树" class="headerlink" title="(4)由遍历序列构造二叉树"></a>(4)由遍历序列构造二叉树</h4><h5 id="a-先序-中序"><a href="#a-先序-中序" class="headerlink" title="(a)先序+中序"></a>(a)先序+中序</h5><p>中序遍历最左端元素第一个访问，排序树的插入会用到这个性质<br>先序序列第一个元素是根节点</p>
 <h5 id="b-后序-中序"><a href="#b-后序-中序" class="headerlink" title="(b)后序+中序"></a>(b)后序+中序</h5><h5 id="c-层次-中序"><a href="#c-层次-中序" class="headerlink" title="(c)层次+中序"></a>(c)层次+中序</h5>]]></content>
       <categories>
-        <category>数据结构</category>
+        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
@@ -330,9 +330,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>数据结构 -- (1)线性表</title>
+    <title>数据结构 -- (1) 线性表</title>
     <url>/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">数据结构 — (1)线性表</a><br><a href="https://wangxchun.github.io/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/">数据结构 — (2)树</a></p>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">数据结构 — (1) 线性表</a><br><a href="https://wangxchun.github.io/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/">数据结构 — (2) 树</a></p>
 <p>存储结构：顺序，链接，索引，哈希</p>
 <h3 id="一、顺序表"><a href="#一、顺序表" class="headerlink" title="一、顺序表"></a>一、顺序表</h3><p>线性表的寻顺序存储又称为顺序表</p>
 <h4 id="1-随机存储"><a href="#1-随机存储" class="headerlink" title="1.随机存储"></a>1.随机存储</h4><p>相同数据类型，所以可以用公式 LOC(A) + (i-1)xsize(ElemType)</p>
@@ -358,7 +358,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="五、静态链表"><a href="#五、静态链表" class="headerlink" title="五、静态链表"></a>五、静态链表</h3><p>移动-&gt;使用链表<br>查找-&gt;使用顺序表<br>移动又查找-&gt;使用静态链表<br>既有前向操作又有后向操作-&gt;选择双向链表</p>
 ]]></content>
       <categories>
-        <category>数据结构</category>
+        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
@@ -502,6 +502,41 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="7-多態"><a href="#7-多態" class="headerlink" title="7.多態"></a>7.多態</h4><h3 id="五、檔案操作"><a href="#五、檔案操作" class="headerlink" title="五、檔案操作"></a>五、檔案操作</h3>]]></content>
       <categories>
         <category>C++復習</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>hexo中Mathjax的用法</title>
+    <url>/2019/02/23/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="Mathjax的安装"><a href="#Mathjax的安装" class="headerlink" title="Mathjax的安装"></a>Mathjax的安装</h3><p>在 hexo 中，你会发现我们不能用 Latex 语法来书写数学公式，这对于书写学术博客来说是很大的不便，因为我们会经常碰到很多的数学公式推导，但是我们可以通过安装第三方库来解决这一问题。</p>
+<h4 id="第一步：-使用Kramed代替-Marked"><a href="#第一步：-使用Kramed代替-Marked" class="headerlink" title="第一步： 使用Kramed代替 Marked"></a>第一步： 使用Kramed代替 Marked</h4><p>hexo 默认的渲染引擎是 marked，但是 marked 不支持 mathjax。 kramed 是在 marked 的基础上进行修改。我们在工程目录下执行以下命令来安装 kramed。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure></p>
+<p>然后，更改/node_modules/hexo-renderer-kramed/lib/renderer.js，更改：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Change inline math rule</span><br><span class="line">function formatText(text) &#123;</span><br><span class="line">    &#x2F;&#x2F; Fit kramed&#39;s rule: $$ + \1 + $$</span><br><span class="line">    return text.replace(&#x2F;&#96;\$(.*?)\$&#96;&#x2F;g, &#39;$$$$$1$$$$&#39;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>为：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Change inline math rule</span><br><span class="line">function formatText(text) &#123;</span><br><span class="line">    return text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="第二步-停止使用-hexo-math"><a href="#第二步-停止使用-hexo-math" class="headerlink" title="第二步: 停止使用 hexo-math"></a>第二步: 停止使用 hexo-math</h4><p>首先，如果你已经安装 hexo-math, 请卸载它：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-math --save</span><br></pre></td></tr></table></figure>
+<p>然后安装 hexo-renderer-mathjax 包：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-mathjax --save</span><br></pre></td></tr></table></figure></p>
+<h4 id="第三步-更新-Mathjax-的-CDN-链接"><a href="#第三步-更新-Mathjax-的-CDN-链接" class="headerlink" title="第三步: 更新 Mathjax 的 CDN 链接"></a>第三步: 更新 Mathjax 的 CDN 链接</h4><p>首先，打开/node_modules/hexo-renderer-mathjax/mathjax.html<br>然后，把 script 更改为：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;mathjax&#x2F;2.7.1&#x2F;MathJax.js?config&#x3D;TeX-MML-AM_CHTML&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="第四步-更改默认转义规则"><a href="#第四步-更改默认转义规则" class="headerlink" title="第四步: 更改默认转义规则"></a>第四步: 更改默认转义规则</h4><p>因为 hexo 默认的转义规则会将一些字符进行转义，比如 _ 转为 <em>, 所以我们需要对默认的规则进行修改.<br>首先， 打开 /node_modules/kramed/lib/rules、inline.js</em></p>
+<p>然后，把<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">escape: &#x2F;^\\([\\&#96;*&#123;&#125;\[\]()#$+\-.!_&gt;])&#x2F;,</span><br></pre></td></tr></table></figure></p>
+<p>更改为：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">escape: &#x2F;^\\([&#96;*\[\]()# +\-.!_&gt;])&#x2F;,</span><br></pre></td></tr></table></figure></p>
+<p>把<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">em: &#x2F;^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)&#x2F;,</span><br></pre></td></tr></table></figure></p>
+<p>更改为:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">em: &#x2F;^\*((?:\*\*|[\s\S])+?)\*(?!\*)&#x2F;,</span><br></pre></td></tr></table></figure></p>
+<p>第五步: 开启mathjax<br>在主题 _config.yml 中开启 Mathjax， 找到 mathjax 字段添加如下代码：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure></p>
+<p>到博客根目录下，找到themes/next/_config.yml，把math默认的flase修改为true，具体如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Math Equations Render Support</span><br><span class="line">math:</span><br><span class="line">  enable: true</span><br><span class="line">  per_page: true</span><br><span class="line">  engine: mathjax</span><br></pre></td></tr></table></figure></p>
+<p>通过以上步骤，我们就可以在 hexo 中使用 Mathjax 来书写数学公式。</p>
+<h3 id="语法使用"><a href="#语法使用" class="headerlink" title="语法使用"></a>语法使用</h3><h4 id><a href="#" class="headerlink" title=" "></a> </h4>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C++的RALL实现</title>
+    <url>/2021/03/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = <span class="keyword">new</span> <span class="keyword">int32_t</span>[<span class="number">3</span>];</span><br><span class="line">		ptr[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr[<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">delete</span> ptr;     <span class="comment">//假设忘记了释放内存，会消耗大量内存</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>RALL机制便是通过利用对象的自动销毁，使得资源也具有了生命周期，有了自动销毁（自动回收）的功能。<br>使用<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">auto_release_ptr</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">auto_release_ptr</span>(T *t) :<span class="keyword">_t</span>(t)&#123;&#125;;</span><br><span class="line">	~<span class="built_in">auto_release_ptr</span>()</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">delete</span> <span class="keyword">_t</span>;</span><br><span class="line">	&#125;;</span><br><span class="line"> </span><br><span class="line">	<span class="function">T * <span class="title">getPtr</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">_t</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T *<span class="keyword">_t</span>;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> arp = auto_release_ptr&lt;<span class="keyword">int32_t</span>&gt;(<span class="keyword">new</span> <span class="keyword">int32_t</span>[<span class="number">3</span>]);</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = arp.<span class="built_in">getPtr</span>();</span><br><span class="line">		<span class="comment">//auto_release_ptr 有一个数据成员在构造时完成了初始化并指向了 new 出来的空间</span></span><br><span class="line">		ptr[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr[<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>更多的如智能指针，lock_guard都利用了RALL机制来实现。</p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
       </categories>
   </entry>
 </search>

@@ -171,7 +171,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -221,6 +221,110 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Be Friend with Time">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/" class="post-title-link" itemprop="url">计算机网络lab1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-03-20 20:37:54" itemprop="dateCreated datePublished" datetime="2021-03-20T20:37:54+08:00">2021-03-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-27 14:23:14" itemprop="dateModified" datetime="2021-03-27T14:23:14+08:00">2021-03-27</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Lab-1-Set-Up-Environment-and-Test-Basic-Softwares"><a href="#Lab-1-Set-Up-Environment-and-Test-Basic-Softwares" class="headerlink" title="Lab 1: Set Up Environment and Test Basic Softwares"></a>Lab 1: Set Up Environment and Test Basic Softwares</h3><p>准备工作：</p>
+<h5 id="1-安装-Virtualbox"><a href="#1-安装-Virtualbox" class="headerlink" title="(1) 安装 Virtualbox"></a>(1) 安装 Virtualbox</h5><h5 id="2-在-Virtualbox-中建立安装-ubuntu-作业系统的虚拟机"><a href="#2-在-Virtualbox-中建立安装-ubuntu-作业系统的虚拟机" class="headerlink" title="(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机"></a>(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机</h5><p>在 Windows 下安裝 VirtualBox 及 Ubuntu 18.04：<br>(Ubuntu18.04可以在官网下载，或是下载阿里镜像)<br><a target="_blank" rel="noopener" href="https://hth322.pixnet.net/blog/post/183391361-%E5%AE%89%E8%A3%9Dubuntu%E5%9C%A8oracle-vm-virtualbox%E7%B4%AE%E8%A8%98">https://hth322.pixnet.net/blog/post/183391361-%E5%AE%89%E8%A3%9Dubuntu%E5%9C%A8oracle-vm-virtualbox%E7%B4%AE%E8%A8%98</a><br><a target="_blank" rel="noopener" href="https://murphymind.blogspot.com/2020/01/windows-virtualbox-ubuntu-1804.html">https://murphymind.blogspot.com/2020/01/windows-virtualbox-ubuntu-1804.html</a></p>
+<h5 id="3-设置虚拟机网卡（net-hostonly）"><a href="#3-设置虚拟机网卡（net-hostonly）" class="headerlink" title="(3) 设置虚拟机网卡（net + hostonly）"></a>(3) 设置虚拟机网卡（net + hostonly）</h5><p><img src="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/photo4.png" alt></p>
+<h5 id="4-在-linux-上安装-wireshark"><a href="#4-在-linux-上安装-wireshark" class="headerlink" title="(4) 在 linux 上安装 wireshark"></a>(4) 在 linux 上安装 wireshark</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -l |grep wrieshark&#x2F;&#x2F;查看系统是否有这个包</span><br><span class="line">&#x2F;&#x2F;如果没有，在网络原配置好的情况下</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install wireshark &#x2F;&#x2F;等待安装完成</span><br></pre></td></tr></table></figure>
+<p>若出现”Should non-superusers be able to capture packages?” ，选择yes<br>若没有，则手动设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-reconfigure wireshark-common</span><br></pre></td></tr></table></figure><br>把当前用户加入到wireshark组当中:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim &#x2F;etc&#x2F;group</span><br></pre></td></tr></table></figure></p>
+<h5 id="5-运行-wireshark，选择要检测的端口"><a href="#5-运行-wireshark，选择要检测的端口" class="headerlink" title="(5) 运行 wireshark，选择要检测的端口"></a>(5) 运行 wireshark，选择要检测的端口</h5><p><img src="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/photo5.png" alt></p>
+<h4 id="1-What-protocol-does-“ping”-and-“traceroute”-use-10-points"><a href="#1-What-protocol-does-“ping”-and-“traceroute”-use-10-points" class="headerlink" title="1. What protocol does “ping” and “traceroute” use? (10 points)"></a>1. What protocol does “ping” and “traceroute” use? (10 points)</h4><p>打开 wireshark 开始监测<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ping google.com &#x2F;&#x2F;可以看到使用的协议是ICMP</span><br><span class="line">$ traceroute google.com &#x2F;&#x2F;可以看到使用的协议是UDP</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-What-is-the-IP-address-of-www-sjtu-edu-cn-10-points"><a href="#2-What-is-the-IP-address-of-www-sjtu-edu-cn-10-points" class="headerlink" title="2. What is the IP address of www.sjtu.edu.cn? (10 points)"></a>2. What is the IP address of www.sjtu.edu.cn? (10 points)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ping www.sjtu.edu.cn &#x2F;&#x2F;可以看到 IP</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/photo7.png" alt></p>
+<h4 id="3-What-is-the-average-round-trip-time-RTT-from-your-VM-to-www-sjtu-edu-cn-and-mit-edu"><a href="#3-What-is-the-average-round-trip-time-RTT-from-your-VM-to-www-sjtu-edu-cn-and-mit-edu" class="headerlink" title="3. What is the average round trip time (RTT) from your VM to www.sjtu.edu.cn and mit.edu."></a>3. What is the average round trip time (RTT) from your VM to www.sjtu.edu.cn and mit.edu.</h4><p>Analyze the reason for the difference of their RTTs. (25 points)<br>(1) ping to send 10 packets and get the average RTT<br><img src="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/photo8.png" alt><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ping www.sjtu.edu.cn -c 10 &#x2F;&#x2F;可以看到 rtt</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-What-is-the-TCP-bandwidth-between-your-two-VMs-25-points"><a href="#4-What-is-the-TCP-bandwidth-between-your-two-VMs-25-points" class="headerlink" title="4. What is the TCP bandwidth between your two VMs? (25 points)"></a>4. What is the TCP bandwidth between your two VMs? (25 points)</h4><p>(1) 安裝 iPerf3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install iperf3</span><br></pre></td></tr></table></figure><br>(2) 测试网络频宽<br>Server 端:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ iperf3 -s</span><br></pre></td></tr></table></figure><br>Client 端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ iperf3 -c SERVER_IP</span><br></pre></td></tr></table></figure><br>(3) connection timeout 问题解决<br><a target="_blank" rel="noopener" href="https://www.mdeditor.tw/pl/2NjU/zh-tw">https://www.mdeditor.tw/pl/2NjU/zh-tw</a><br>如何诊断：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;檢查 ipv4 forwarding 是否開啟</span><br><span class="line">$ sysctl net.ipv4.ip_forward</span><br><span class="line">&#x2F;&#x2F;net.ipv4.ip_forward &#x3D; 0，意味著未開啟</span><br></pre></td></tr></table></figure><br>如何修復：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;this will turn things back on a live server</span><br><span class="line">$ sysctl -w net.ipv4.ip_forward&#x3D;1</span><br><span class="line">&#x2F;&#x2F;on Centos this will make the setting apply after reboot</span><br><span class="line">$ echo net.ipv4.ip_forward&#x3D;1 &gt;&gt; &#x2F;etc&#x2F;sysconf.d&#x2F;10-ipv4-forwarding-on.conf</span><br><span class="line">&#x2F;&#x2F;驗證並生效</span><br><span class="line">$ sysctl -p</span><br></pre></td></tr></table></figure></p>
+<p>如何診斷：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;檢查 bridge netfilter 是否開啟</span><br><span class="line">$ sysctl net.bridge.bridge-nf-call-iptables</span><br><span class="line">net.bridge.bridge-nf-call-iptables &#x3D; 0，表示未開啟</span><br></pre></td></tr></table></figure><br>如何修復：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Note some distributions may have this compiled with kernel,</span><br><span class="line">check with cat &#x2F;lib&#x2F;modules&#x2F;$ (uname -r)&#x2F;modules.builtin | grep netfilter</span><br><span class="line">$ modprobe br_netfilter</span><br><span class="line">開啟這個 iptables 設定</span><br><span class="line">$ sysctl -w net.bridge.bridge-nf-call-iptables&#x3D;1</span><br><span class="line">$ echo net.bridge.bridge-nf-call-iptables&#x3D;1 &gt;&gt; &#x2F;etc&#x2F;sysconf.d&#x2F;10-bridge-nf-call-iptables.conf</span><br><span class="line">$ sysctl -p</span><br></pre></td></tr></table></figure></p>
+<p><a target="_blank" rel="noopener" href="https://gist.github.com/iamcryptoki/ed6925ce95f047673e7709f23e0b9939">https://gist.github.com/iamcryptoki/ed6925ce95f047673e7709f23e0b9939</a><br>Fix sysctl: cannot stat /proc/sys/net/bridge/bridge-nf-call-iptables.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$  modprobe bridge</span><br><span class="line">$  echo &quot;net.bridge.bridge-nf-call-iptables &#x3D; 1&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf</span><br><span class="line">$  sysctl -p &#x2F;etc&#x2F;sysctl.conf</span><br><span class="line"></span><br><span class="line">sysctl: cannot stat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-iptables: No such file or directory sysctl: cannot stat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-ip6tables: No such file or directory</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; SOLUTION</span><br><span class="line">$  modprobe br_netfilter</span><br><span class="line">$  sysctl -p &#x2F;etc&#x2F;sysctl.conf</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-Select-a-VM-as-your-host-machine-and-another-VM-as-your-server-machine-then-use-ssh-on-your-host-to-connect-to-the-server-15-points"><a href="#5-Select-a-VM-as-your-host-machine-and-another-VM-as-your-server-machine-then-use-ssh-on-your-host-to-connect-to-the-server-15-points" class="headerlink" title="5. Select a VM as your host machine, and another VM as your server machine, then use ssh on your host to connect to the server. (15 points)"></a>5. Select a VM as your host machine, and another VM as your server machine, then use ssh on your host to connect to the server. (15 points)</h4><h5 id="1-在UBuntu安装ssh"><a href="#1-在UBuntu安装ssh" class="headerlink" title="(1) 在UBuntu安装ssh"></a>(1) 在UBuntu安装ssh</h5><p>(a) 开启terminal<br>(b) 更新套件清单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure><br>(c) 安装 OpenSSH Server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install -y openssh-server</span><br></pre></td></tr></table></figure><br>(d) 确认 SSH 服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service ssh status</span><br></pre></td></tr></table></figure><br>(e) 查询 Ubuntu 的 IP<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ifconfig &#x2F;&#x2F;server的IP</span><br></pre></td></tr></table></figure><br>(f) 在 host mechine 上,ssh到server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh chris@192.158.xx.xxx</span><br></pre></td></tr></table></figure></p>
+<h4 id="6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points"><a href="#6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points" class="headerlink" title="6. Use scp to copy a file from your host to the server. (15 points)"></a>6. Use scp to copy a file from your host to the server. (15 points)</h4><p>sudo chmod 777 /home/test //改变权限<br>scp a.txt chris@192.168.xx.xxx</p>
+<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><h4 id="E-无法获取-dpkg-前端锁-var-lib-dpkg-lock-frontend-，是否有其他进程正占用它？"><a href="#E-无法获取-dpkg-前端锁-var-lib-dpkg-lock-frontend-，是否有其他进程正占用它？" class="headerlink" title="E: 无法获取 dpkg 前端锁 (/var/lib/dpkg/lock-frontend)，是否有其他进程正占用它？"></a>E: 无法获取 dpkg 前端锁 (/var/lib/dpkg/lock-frontend)，是否有其他进程正占用它？</h4><p>(1) 杀死进程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ps -e|grep apt-get</span><br><span class="line">sudo kill [进程]</span><br></pre></td></tr></table></figure><br>(2) 重新启动</p>
+<h3 id="知识补充"><a href="#知识补充" class="headerlink" title="知识补充"></a>知识补充</h3><h4 id="1-本地接口列表包含一个-Random-packet-generator，这是什么"><a href="#1-本地接口列表包含一个-Random-packet-generator，这是什么" class="headerlink" title="1. 本地接口列表包含一个 Random packet generator，这是什么"></a>1. 本地接口列表包含一个 Random packet generator，这是什么</h4><p>这是wireshark提供的一个模拟；每次随机生成某种协议的1000个包；供研究学习使用。</p>
+<h4 id="透过-wireshark-查看封包，可以了解到為什麼端到端加密很重要。"><a href="#透过-wireshark-查看封包，可以了解到為什麼端到端加密很重要。" class="headerlink" title="透过 wireshark 查看封包，可以了解到為什麼端到端加密很重要。"></a>透过 wireshark 查看封包，可以了解到為什麼端到端加密很重要。</h4><p>假設你正在登入一個不使用 HTTPS 的網站。與你在同一網路上的任何人都可以嗅探封包，並在原始資料中看到使用者名稱和密碼。<br>這就是為什麼現在大多數聊天應用程式使用端到端加密，而大多數網站使用 https(而不是 http)</p>
+<h4 id="2-Traceroute工作原理"><a href="#2-Traceroute工作原理" class="headerlink" title="2. Traceroute工作原理"></a>2. Traceroute工作原理</h4><p><img src="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/photo6.png" alt><br>Traceroute最简单的基本用法是：traceroute hostname<br>    Traceroute程序的设计是利用ICMP及IP header的TTL(Time To Live)栏位(field)。首先，traceroute送出一个TTL是1的IP datagram（其实，每次送出的为3个40字节的包括源地址，目的地址和包发出的时间标签）到目的地，当路径上的第一个路由器(router)收到这个datagram时，它将TTL减1。此时，TTL变为0了，所以路由器会将此datagram丢掉，并送回一个「ICMP time exceeded」消息（包括发IP包的源地址，IP包的所有内容及路由器的IP地址），traceroute 收到这个消息后，便知道这个路由器存在于这个路径上，接着traceroute 再送出另一个TTL是2 的datagram，发现第2个路由器…… traceroute 每次将送出的datagram的 TTL 加1来发现另一个路由器，这个重复的动作一直持续到某个datagram 目的地。当datagram到达目的地后，该主机并不会送回ICMP time exceed消息，因为它已经是目的地了，那么traceroute如何得知目的地到达了呢？</p>
+<p>Traceroute在送出UDP datagrams到目的地时，它所选择送达的 port number是一个一般应用程序都不会用的号码（30000 以上），所以当此UDP datagram 到达目的地后该主机会送回一个「ICMP port unreachable」的消息，而当traceroute 收到这个消息时，便知道目的地已经到达了。所以traceroute 在 Server也是没有所谓的Daemon 程式。<br>Traceroute 提取发 ICMP TTL 到期消息设备的IP地址并作域名解析。每次，Traceroute都打印出一系列数据,包括所经过的路由设备的域名及IP地址,三个包每次来回所花时间。其中CDN( 内容分发网络)就是为了降低与用户路由的个数而设计的。</p>
+<h4 id="3-Ping工作原理"><a href="#3-Ping工作原理" class="headerlink" title="3. Ping工作原理"></a>3. Ping工作原理</h4><p>運作原理：向目標主機傳出一個要求封包，並等待接收回應封包。程式會按時間和成功回應的次數估算封包遺失率（丟包率）和封包來回的時間（即RTT）</p>
+<h3 id="操作补充"><a href="#操作补充" class="headerlink" title="操作补充"></a>操作补充</h3><h4 id="1-查看主机ip地址方式："><a href="#1-查看主机ip地址方式：" class="headerlink" title="1.查看主机ip地址方式："></a>1.查看主机ip地址方式：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ifconfig</span><br><span class="line">&#x2F;&#x2F;windows cmd 是使用 $ ipconfig</span><br></pre></td></tr></table></figure>
+<h4 id="2-Linux从一般用户切换到root用户"><a href="#2-Linux从一般用户切换到root用户" class="headerlink" title="2.Linux从一般用户切换到root用户"></a>2.Linux从一般用户切换到root用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo su</span><br><span class="line">$ exit &#x2F;&#x2F;从root切换回一般用户</span><br></pre></td></tr></table></figure>
+<h4 id="3-vim常用指令"><a href="#3-vim常用指令" class="headerlink" title="3.vim常用指令"></a>3.vim常用指令</h4><p><img src="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/photo9.png" alt><br><img src="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/photo10.png" alt></p>
+<h3 id="详细名词解释"><a href="#详细名词解释" class="headerlink" title="详细名词解释"></a>详细名词解释</h3><p><a target="_blank" rel="noopener" href="https://sls.weco.net/node/28883">https://sls.weco.net/node/28883</a></p>
+<h3 id="讨论：安装VirtualBox-VMWare-or-Parallels-哪个比较好？"><a href="#讨论：安装VirtualBox-VMWare-or-Parallels-哪个比较好？" class="headerlink" title="讨论：安装VirtualBox, VMWare, or Parallels 哪个比较好？"></a>讨论：安装VirtualBox, VMWare, or Parallels 哪个比较好？</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -840,7 +944,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="post-title-link" itemprop="url">数据结构 -- (1)线性表</a>
+          <a href="/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="post-title-link" itemprop="url">数据结构 -- (1) 线性表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -858,7 +962,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-25 16:37:30" itemprop="dateModified" datetime="2021-03-25T16:37:30+08:00">2021-03-25</time>
+        <time title="修改時間：2021-03-27 14:26:02" itemprop="dateModified" datetime="2021-03-27T14:26:02+08:00">2021-03-27</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -866,7 +970,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
         </span>
     </span>
 
@@ -880,7 +984,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="https://wangxchun.github.io/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">数据结构 — (1)线性表</a><br><a href="https://wangxchun.github.io/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/">数据结构 — (2)树</a></p>
+          <p><a href="https://wangxchun.github.io/2019/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">数据结构 — (1) 线性表</a><br><a href="https://wangxchun.github.io/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/">数据结构 — (2) 树</a></p>
 <p>存储结构：顺序，链接，索引，哈希</p>
 <h3 id="一、顺序表"><a href="#一、顺序表" class="headerlink" title="一、顺序表"></a>一、顺序表</h3><p>线性表的寻顺序存储又称为顺序表</p>
 <h4 id="1-随机存储"><a href="#1-随机存储" class="headerlink" title="1.随机存储"></a>1.随机存储</h4><p>相同数据类型，所以可以用公式 LOC(A) + (i-1)xsize(ElemType)</p>
@@ -985,87 +1089,6 @@
     <div class="post-body" itemprop="articleBody">
           <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/" class="post-title-link" itemprop="url">利用rand()產生隨機數</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2019-03-14 21:53:50" itemprop="dateCreated datePublished" datetime="2019-03-14T21:53:50+08:00">2019-03-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-15 16:33:14" itemprop="dateModified" datetime="2021-03-15T16:33:14+08:00">2021-03-15</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="1-rand-函數介紹"><a href="#1-rand-函數介紹" class="headerlink" title="1.rand()函數介紹"></a>1.rand()函數介紹</h4><p>rand()的效果可以產生從0~RAND_MAX(int的最大值)之間的隨機整數。<br>在模擬亂數時，需要設定一個亂數種子,所以如果要讓每次執行程式的結果都不一樣的話，必須要設定不同的亂數種子，設定亂數種子的函數為srand(int)。<br>一般來說，會在程式加上srand( time(NULL));這一行，讓亂數種子以現在的時間做設定，這樣每次執行程式的結果就不同了。</p>
-<h4 id="2-任意浮點數範圍或是任意整數範圍的隨機數"><a href="#2-任意浮點數範圍或是任意整數範圍的隨機數" class="headerlink" title="2.任意浮點數範圍或是任意整數範圍的隨機數"></a>2.任意浮點數範圍或是任意整數範圍的隨機數</h4><p>0~1之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (<span class="keyword">double</span>) <span class="built_in">rand</span>() / (RAND_MAX + <span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><br>a~b之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (b - a) * <span class="built_in">rand</span>() / (RAND_MAX + <span class="number">1.0</span>) + a;</span><br></pre></td></tr></table></figure><br>a~b之間的隨機整數<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="built_in">rand</span>() % (b - a + <span class="number">1</span>) + a;</span><br></pre></td></tr></table></figure></p>
-<h4 id="3-不公平的骰子"><a href="#3-不公平的骰子" class="headerlink" title="3.不公平的骰子"></a>3.不公平的骰子</h4>
       
     </div>
 
