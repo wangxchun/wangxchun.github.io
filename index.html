@@ -178,13 +178,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -255,7 +255,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2021-03-28 11:33:46 / 修改時間：11:38:32" itemprop="dateCreated datePublished" datetime="2021-03-28T11:33:46+08:00">2021-03-28</time>
+      <time title="創建時間：2021-03-28 11:33:46 / 修改時間：13:48:46" itemprop="dateCreated datePublished" datetime="2021-03-28T11:33:46+08:00">2021-03-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -312,7 +312,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/28/%E5%9B%9E%E5%BD%92/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -325,7 +325,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/28/%E5%9B%9E%E5%BD%92/" class="post-title-link" itemprop="url">回归</a>
+          <a href="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/" class="post-title-link" itemprop="url">机器学习算法 --（1）回归</a>
         </h2>
 
         <div class="post-meta-container">
@@ -335,8 +335,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2021-03-28 10:42:55" itemprop="dateCreated datePublished" datetime="2021-03-28T10:42:55+08:00">2021-03-28</time>
+      <time title="創建時間：2021-03-28 10:42:55 / 修改時間：23:12:45" itemprop="dateCreated datePublished" datetime="2021-03-28T10:42:55+08:00">2021-03-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+        </span>
     </span>
 
   
@@ -349,7 +359,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h3 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h3><h4 id="1- 数据挖掘和机器学习的关系"><a href="#1- 数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2- 训练数据 -vs- 验证数据 -vs- 测试数据"><a href="#2- 训练数据 -vs- 验证数据 -vs- 测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3- 监督学习 -vs- 无监督学习 -vs- 半监督学习"><a href="#3- 监督学习 -vs- 无监督学习 -vs- 半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4- 回归 -vs- 分类 -vs- 聚类"><a href="#4- 回归 -vs- 分类 -vs- 聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="# 一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a> 一、一元线性回归概念 </h3><p> 回归：高尔顿提出 <br> 回归分析：建立方程模拟两个或多个变量之间如何关联 <br> 一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟 <br> 一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率</p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
+<h3 id="三、相关系数和决定系数"><a href="# 三、相关系数和决定系数" class="headerlink" title="三、相关系数和决定系数"></a>三、相关系数和决定系数 </h3><h4 id="相关系数：衡量线性相关性的强弱"><a href="# 相关系数：衡量线性相关性的强弱" class="headerlink" title="相关系数：衡量线性相关性的强弱"></a> 相关系数：衡量线性相关性的强弱</h4><p>$r_{xy} = {{\sum {(X_i - \bar X)(Y_i - \bar Y)}} \over {\sqrt {\sum {(X_i - \bar X)^2 (Y_i - \bar Y)^2}}} }$  </p>
+<h4 id="决定系数"><a href="# 决定系数" class="headerlink" title="决定系数"></a>决定系数 </h4><p> 总平方和（SST）：$\sum_{i=0}^n (y_i - \bar y)^2$<br>残差平方和（SSE）：$\sum_{i=0}^n (y_i - \hat y)^2$<br>回归平方和（SSR）：$\sum_{i=0}^n (\hat y - \bar y)^2$<br>它们三者的关系是：$SST = SSE + SSR$<br>决定系数：$R^2 = {SSR \over SST} = 1 - {SSE \over SST}$</p>
+<h3 id="四、梯度下降法"><a href="# 四、梯度下降法" class="headerlink" title="四、梯度下降法"></a>四、梯度下降法 </h3><h4 id="概念"><a href="# 概念" class="headerlink" title="概念"></a> 概念 </h4><p> 缺点：初始值的选取会影响到最后的结果，只能找到局部最优解<br>(凸函数的局部最值就是全局最值)<br>repeat until convergence<br>{<br>    $\qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,\theta_1)$ $\quad (for\quad j = 0 \quad and \quad j = 1)$<br>}</p>
+<p>同步更新：<br>$temp0 := \theta_0 - \alpha {\partial \over \partial\theta_0} J (\theta_0,\theta_1)$<br>$temp1 := \theta_1 - \alpha {\partial \over \partial\theta_1} J (\theta_0,\theta_1)$<br>$\theta_0 := temp0$<br>$\theta_0 := temp1$</p>
+<p>学习率 $\alpha$ 不能太大也不能太小，<br>太大可能会导致在收敛值附近不断震荡，一直无法收敛；<br>太小会导致收敛速度过慢</p>
+<h4 id="用梯度下降法来求解线性回归"><a href="# 用梯度下降法来求解线性回归" class="headerlink" title="用梯度下降法来求解线性回归"></a>用梯度下降法来求解线性回归</h4><p>$h_\theta (x) = \theta_0 + \theta_1x -(1)$<br>$J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br>$ 将 (1) 式代入 (2) 式 $<br>${\partial \over \partial\theta_0} J (\theta_0,\theta_1) = {1 \over m}\sum_{i=0}^m (h_\theta (x_i) - y_i)$ </p>
+<h3 id="五、sklearn- 实现一元线性回归"><a href="# 五、sklearn- 实现一元线性回归" class="headerlink" title="五、sklearn 实现一元线性回归"></a>五、sklearn 实现一元线性回归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x_data = data [:,<span class="number">0</span>,np.newaxis]</span><br><span class="line">y_data = data [:,<span class="number">1</span>,np.newaxis]</span><br><span class="line"><span class="comment"># 创建并拟合模型</span></span><br><span class="line">model = LinearRegression ()</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, model.predict (x_data), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
+<h3 id="六、多元线性回归"><a href="# 六、多元线性回归" class="headerlink" title="六、多元线性回归"></a>六、多元线性回归</h3><h4 id="Hypothesis"><a href="#Hypothesis" class="headerlink" title="Hypothesis:"></a>Hypothesis:</h4><p>$h_\theta (x) = \theta^Tx = \theta_0x_1 + \theta_2x_2 + … + \theta_nx_n$</p>
+<h4 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters:"></a>Parameters:</h4><p>theta_0,theta_1,…,theta_n</p>
+<h4 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h4><p>$J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$</p>
+<h4 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h4><p>repeat until convergence<br>{<br>    $\qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,…,\theta_n)$<br>    $\quad\qquad (for\quad j = 0,1,…,n)$<br>}</p>
+<h3 id="七、多项式回归"><a href="# 七、多项式回归" class="headerlink" title="七、多项式回归"></a>七、多项式回归</h3>
       
     </div>
 
@@ -406,7 +429,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-28 00:08:14" itemprop="dateModified" datetime="2021-03-28T00:08:14+08:00">2021-03-28</time>
+        <time title="修改時間：2021-03-28 13:53:27" itemprop="dateModified" datetime="2021-03-28T13:53:27+08:00">2021-03-28</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -429,7 +452,9 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>.<br>├── node_modules  // 套件暫存處，基本上你所有安裝的套件也都會在這裡 <br>├── public        // 執行 hexo generate 後，輸出的靜態網頁 <br>├── scaffolds     // 模板。Hexo 會根據 scaffold 來建立新文章 / 新頁面 <br>├── scripts       // 存放自定義 js 文件 <br>├── source<br>|   ├── _drafts   // 草稿文章 <br>|   └── _posts    // 發佈文章 <br>├── themes        // Hexo 主题文件，Next 主題的樹狀結構請看下面 <br>├── _config.yml   // 整個 Blog 的配置 <br>├── .gitignore    // 舉凡只要你不想被加入版本控制甚至是上傳到 GitHub 的資料夾或檔案，都可寫在這 <br>├── package-lock.json 主要用途是用於記錄當前狀態安裝的每一個套件版本，他會自己調整，不需要動它 <br>└── package.json  // 主要是拿來放置並管理我們透過 npm 下載回來的檔案，其中部分指令也是直接寫在這裡面 </p>
+<p>.<br>└──themes<br>   └── next<br>          ├── doc<br>       ├── languages    // 主題語言字眼 <br>       ├── layout       //pug 文件，後會渲染成 html<br>       ├── scripts      //js 文件 <br>       ├── source<br>       |   ├── css      //styl 文件，後會渲染成 css<br>       |   ├── img      // 主題配置用到的圖片 <br>       |   └── js       //js 文件 <br>       ├── test<br>       └── _config.yml  // Butterfly 主題配置 </p>
 <p> 試著學 Hexo 系列 <br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20119486/ironman/2944">https://ithelp.ithome.com.tw/users/20119486/ironman/2944</a></p>
+<p> 參考：<br><a target="_blank" rel="noopener" href="https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%">https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%</a> E5%89%8D% E8% A8%80</p>
 
       
     </div>
@@ -629,10 +654,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-03-27 16:22:55 / 修改時間：17:57:24" itemprop="dateCreated datePublished" datetime="2021-03-27T16:22:55+08:00">2021-03-27</time>
+      <time title="創建時間：2021-03-27 16:22:55" itemprop="dateCreated datePublished" datetime="2021-03-27T16:22:55+08:00">2021-03-27</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-28 13:47:45" itemprop="dateModified" datetime="2021-03-28T13:47:45+08:00">2021-03-28</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -655,7 +686,11 @@
     <div class="post-body" itemprop="articleBody">
           <h3 id="返回多个参数的方法："><a href="# 返回多个参数的方法：" class="headerlink" title="返回多个参数的方法："></a>返回多个参数的方法：</h3><h4 id="1- 定义结构体"><a href="#1- 定义结构体" class="headerlink" title="1. 定义结构体"></a>1. 定义结构体 </h4><h4 id="2- 利用引用参数"><a href="#2- 利用引用参数" class="headerlink" title="2. 利用引用参数"></a>2. 利用引用参数</h4><h3 id="解决 -“数组大小必须事先决定”- 这个问题"><a href="# 解决 -“数组大小必须事先决定”- 这个问题" class="headerlink" title="解决 “数组大小必须事先决定” 这个问题"></a> 解决 “数组大小必须事先决定” 这个问题</h3><h4 id="1- 使用 -new- 和 -delete，有程序员自行分配内"><a href="#1- 使用 -new- 和 -delete，有程序员自行分配内" class="headerlink" title="1. 使用 new 和 delete，有程序员自行分配内"></a>1. 使用 new 和 delete，有程序员自行分配内</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 输入长度：&quot;</span>; </span><br><span class="line">    cin &gt;&gt; size; </span><br><span class="line">    <span class="keyword">int</span> *arr = <span class="keyword">new</span> <span class="keyword">int</span> [size]&#123;<span class="number">0</span>&#125;; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 输入元素值：&quot;</span> &lt;&lt; endl; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123; </span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;arr [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] =&quot;</span>; </span><br><span class="line">        cin &gt;&gt; arr [i]; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 显示元素值：&quot;</span> &lt;&lt; endl; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;arr [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] =&quot;</span> &lt;&lt; arr [i]</span><br><span class="line">             &lt;&lt; endl; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span> [] arr; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注释：二维矩阵就是多段一维数组 <br> 例如需要一个 3X6 的矩阵<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> **arr = <span class="keyword">new</span> <span class="keyword">int</span>*[<span class="number">3</span>]; <span class="comment">//arr [0] 和 arr [1] 分别存储一维数组的位置</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        arr [i] = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">6</span>]&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 既然可以动态分配，那每一段数组的长度当然可以不一样</span></span><br><span class="line">    <span class="comment">//arr [0] = new int [3]&#123;0&#125;;</span></span><br><span class="line">    <span class="comment">//arr [1] = new int [5]&#123;0&#125;;</span></span><br><span class="line">    <span class="comment">//arr [3] = new int [3]&#123;0&#125;;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">6</span>; j++) &#123;</span><br><span class="line">            cout &lt;&lt; arr [i][j] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">delete</span> [] arr [i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> [] arr; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="2- 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 -vector- 之类的容器"><a href="#2- 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 -vector- 之类的容器" class="headerlink" title="2. 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 vector 之类的容器"></a>2. 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 vector 之类的容器</h4>
+<h4 id="2- 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 -vector- 之类的容器"><a href="#2- 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 -vector- 之类的容器" class="headerlink" title="2. 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 vector 之类的容器"></a>2. 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 vector 之类的容器 </h4><h3 id="static- 的使用时机"><a href="#static- 的使用时机" class="headerlink" title="static 的使用时机"></a>static 的使用时机</h3><h4 id="1- 改变变量的存储方式和生存周期"><a href="#1- 改变变量的存储方式和生存周期" class="headerlink" title="1. 改变变量的存储方式和生存周期"></a>1. 改变变量的存储方式和生存周期</h4><p> 局部变量</p>
+<h4 id="2- 限制作用域"><a href="#2- 限制作用域" class="headerlink" title="2. 限制作用域"></a>2. 限制作用域 </h4><p> 全局函数和变量</p>
+<h4 id="3- 唯一性"><a href="#3- 唯一性" class="headerlink" title="3. 唯一性"></a>3. 唯一性 </h4><p> 函数成员</p>
+<h3 id="堆和栈的比较"><a href="# 堆和栈的比较" class="headerlink" title="堆和栈的比较"></a>堆和栈的比较 </h3><h4 id="堆是由低地址向高地址扩充的"><a href="# 堆是由低地址向高地址扩充的" class="headerlink" title="堆是由低地址向高地址扩充的"></a> 堆是由低地址向高地址扩充的 </h4><h4 id="堆是不连续的空间"><a href="# 堆是不连续的空间" class="headerlink" title="堆是不连续的空间"></a> 堆是不连续的空间 </h4><h4 id="在申请空间后，栈的分配要比堆还快"><a href="# 在申请空间后，栈的分配要比堆还快" class="headerlink" title="在申请空间后，栈的分配要比堆还快"></a> 在申请空间后，栈的分配要比堆还快 </h4><h4 id="生命周期"><a href="# 生命周期" class="headerlink" title="生命周期"></a> 生命周期</h4><h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>volatile 可以保证对特殊地址的稳定访问，通常用到如下几个地方</p>
+<h4 id="1- 中断服务程式修改的供其他程式检测的变量"><a href="#1- 中断服务程式修改的供其他程式检测的变量" class="headerlink" title="1. 中断服务程式修改的供其他程式检测的变量"></a>1. 中断服务程式修改的供其他程式检测的变量</h4><h4 id="2- 多工环境下各任务共享的标志"><a href="#2- 多工环境下各任务共享的标志" class="headerlink" title="2. 多工环境下各任务共享的标志"></a>2. 多工环境下各任务共享的标志</h4><h4 id="3- 存储器对应的硬体暂存器也要加 -volatile- 说明，因为每次对它的读写都可能有不同意义"><a href="#3- 存储器对应的硬体暂存器也要加 -volatile- 说明，因为每次对它的读写都可能有不同意义" class="headerlink" title="3. 存储器对应的硬体暂存器也要加 volatile 说明，因为每次对它的读写都可能有不同意义"></a>3. 存储器对应的硬体暂存器也要加 volatile 说明，因为每次对它的读写都可能有不同意义</h4>
       
     </div>
 
@@ -1027,7 +1062,38 @@
 
 
 
-  
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
 
 
 </body>

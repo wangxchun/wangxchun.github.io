@@ -178,13 +178,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -853,7 +853,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -866,7 +866,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8/" class="post-title-link" itemprop="url">刷题检讨 --(1) 线性表</a>
+          <a href="/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="post-title-link" itemprop="url">刷题检讨 --(1) 线性表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -884,7 +884,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-27 17:58:01" itemprop="dateModified" datetime="2021-03-27T17:58:01+08:00">2021-03-27</time>
+        <time title="修改時間：2021-03-28 11:49:37" itemprop="dateModified" datetime="2021-03-28T11:49:37+08:00">2021-03-28</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -990,7 +990,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-27 14:23:14" itemprop="dateModified" datetime="2021-03-27T14:23:14+08:00">2021-03-27</time>
+        <time title="修改時間：2021-03-28 12:01:27" itemprop="dateModified" datetime="2021-03-28T12:01:27+08:00">2021-03-28</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1026,7 +1026,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <p>如何診斷：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 檢查 bridge netfilter 是否開啟 </span><br><span class="line">$ sysctl net.bridge.bridge-nf-call-iptables</span><br><span class="line">net.bridge.bridge-nf-call-iptables &#x3D; 0，表示未開啟</span><br></pre></td></tr></table></figure><br> 如何修復：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Note some distributions may have this compiled with kernel,</span><br><span class="line">check with cat &#x2F;lib&#x2F;modules&#x2F;$ (uname -r)&#x2F;modules.builtin | grep netfilter</span><br><span class="line">$ modprobe br_netfilter</span><br><span class="line">開啟這個 iptables 設定</span><br><span class="line">$ sysctl -w net.bridge.bridge-nf-call-iptables&#x3D;1</span><br><span class="line">$ echo net.bridge.bridge-nf-call-iptables&#x3D;1 &gt;&gt; &#x2F;etc&#x2F;sysconf.d&#x2F;10-bridge-nf-call-iptables.conf</span><br><span class="line">$ sysctl -p</span><br></pre></td></tr></table></figure></p>
 <p><a target="_blank" rel="noopener" href="https://gist.github.com/iamcryptoki/ed6925ce95f047673e7709f23e0b9939">https://gist.github.com/iamcryptoki/ed6925ce95f047673e7709f23e0b9939</a><br>Fix sysctl: cannot stat /proc/sys/net/bridge/bridge-nf-call-iptables.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$  modprobe bridge</span><br><span class="line">$  echo &quot;net.bridge.bridge-nf-call-iptables &#x3D; 1&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf</span><br><span class="line">$  sysctl -p &#x2F;etc&#x2F;sysctl.conf</span><br><span class="line"></span><br><span class="line">sysctl: cannot stat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-iptables: No such file or directory sysctl: cannot stat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-ip6tables: No such file or directory</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; SOLUTION</span><br><span class="line">$  modprobe br_netfilter</span><br><span class="line">$  sysctl -p &#x2F;etc&#x2F;sysctl.conf</span><br></pre></td></tr></table></figure></p>
 <h4 id="5-Select-a-VM-as-your-host-machine-and-another-VM-as-your-server-machine-then-use-ssh-on-your-host-to-connect-to-the-server-15-points"><a href="#5-Select-a-VM-as-your-host-machine-and-another-VM-as-your-server-machine-then-use-ssh-on-your-host-to-connect-to-the-server-15-points" class="headerlink" title="5. Select a VM as your host machine, and another VM as your server machine, then use ssh on your host to connect to the server. (15 points)"></a>5. Select a VM as your host machine, and another VM as your server machine, then use ssh on your host to connect to the server. (15 points)</h4><h5 id="1- 在 -UBuntu- 安装 -ssh"><a href="#1- 在 -UBuntu- 安装 -ssh" class="headerlink" title="(1) 在 UBuntu 安装 ssh"></a>(1) 在 UBuntu 安装 ssh</h5><p>(a) 开启 terminal<br>(b) 更新套件清单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure><br>(c) 安装 OpenSSH Server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install -y openssh-server</span><br></pre></td></tr></table></figure><br>(d) 确认 SSH 服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service ssh status</span><br></pre></td></tr></table></figure><br>(e) 查询 Ubuntu 的 IP<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ifconfig &#x2F;&#x2F;server 的 IP</span><br></pre></td></tr></table></figure><br>(f) 在 host mechine 上，ssh 到 server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh chris@192.158.xx.xxx</span><br></pre></td></tr></table></figure></p>
-<h4 id="6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points"><a href="#6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points" class="headerlink" title="6. Use scp to copy a file from your host to the server. (15 points)"></a>6. Use scp to copy a file from your host to the server. (15 points)</h4><p>sudo chmod 777 /home/test// 改变权限<br>scp a.txt chris@192.168.xx.xxx</p>
+<h4 id="6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points"><a href="#6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points" class="headerlink" title="6. Use scp to copy a file from your host to the server. (15 points)"></a>6. Use scp to copy a file from your host to the server. (15 points)</h4><h5 id="1- 本地端 -Host- 需安装 -openssh-client- 套件"><a href="#1- 本地端 -Host- 需安装 -openssh-client- 套件" class="headerlink" title="(1) 本地端 Host 需安装 openssh-client 套件"></a>(1) 本地端 Host 需安装 openssh-client 套件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install openssh-client</span><br></pre></td></tr></table></figure>
+<h5 id="2- 远端 -Server- 需安装 -openssh-server- 套件"><a href="#2- 远端 -Server- 需安装 -openssh-server- 套件" class="headerlink" title="(2) 远端 Server 需安装 openssh-server 套件"></a>(2) 远端 Server 需安装 openssh-server 套件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install openssh-server</span><br></pre></td></tr></table></figure>
+<h5 id="3- 将文件从本机 -Host- 复制到远端主机 -Server"><a href="#3- 将文件从本机 -Host- 复制到远端主机 -Server" class="headerlink" title="(3) 将文件从本机 Host 复制到远端主机 Server"></a>(3) 将文件从本机 Host 复制到远端主机 Server</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod 777 &#x2F;home&#x2F;test&#x2F;&#x2F; 改变权限</span><br><span class="line">$ scp a.txt chris@192.168.xx.xxx</span><br></pre></td></tr></table></figure>
 <h3 id="问题解决"><a href="# 问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><h4 id="E- 无法获取 -dpkg- 前端锁 -var-lib-dpkg-lock-frontend-，是否有其他进程正占用它？"><a href="#E- 无法获取 -dpkg- 前端锁 -var-lib-dpkg-lock-frontend-，是否有其他进程正占用它？" class="headerlink" title="E: 无法获取 dpkg 前端锁 (/var/lib/dpkg/lock-frontend)，是否有其他进程正占用它？"></a>E: 无法获取 dpkg 前端锁 (/var/lib/dpkg/lock-frontend)，是否有其他进程正占用它？</h4><p>(1) 杀死进程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ps -e|grep apt-get</span><br><span class="line">sudo kill [进程]</span><br></pre></td></tr></table></figure><br>(2) 重新启动</p>
 <h3 id="知识补充"><a href="# 知识补充" class="headerlink" title="知识补充"></a>知识补充 </h3><h4 id="1- 本地接口列表包含一个 -Random-packet-generator，这是什么"><a href="#1- 本地接口列表包含一个 -Random-packet-generator，这是什么" class="headerlink" title="1. 本地接口列表包含一个 Random packet generator，这是什么"></a>1. 本地接口列表包含一个 Random packet generator，这是什么</h4><p> 这是 wireshark 提供的一个模拟；每次随机生成某种协议的 1000 个包；供研究学习使用。</p>
 <h4 id="透过 -wireshark- 查看封包，可以了解到為什麼端到端加密很重要。"><a href="# 透过 -wireshark- 查看封包，可以了解到為什麼端到端加密很重要。" class="headerlink" title="透过 wireshark 查看封包，可以了解到為什麼端到端加密很重要。"></a>透过 wireshark 查看封包，可以了解到為什麼端到端加密很重要。</h4><p>假設你正在登入一個不使用 HTTPS 的網站。與你在同一網路上的任何人都可以嗅探封包，並在原始資料中看到使用者名稱和密碼。<br>這就是為什麼現在大多數聊天應用程式使用端到端加密，而大多數網站使用 https (而不是 http)</p>
