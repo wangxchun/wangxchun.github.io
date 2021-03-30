@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>利用 rand () 產生隨機數</title>
+    <url>/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/</url>
+    <content><![CDATA[<h4 id="1-rand- 函數介紹"><a href="#1-rand- 函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹 </h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br> 在模擬亂數時，需要設定一個亂數種子，所以如果要讓每次執行程式的結果都不一樣的話，必須要設定不同的亂數種子，設定亂數種子的函數為 srand (int)。<br>一般來說，會在程式加上 srand (time (NULL)); 這一行，讓亂數種子以現在的時間做設定，這樣每次執行程式的結果就不同了。</p>
+<h4 id="2- 任意浮點數範圍或是任意整數範圍的隨機數"><a href="#2- 任意浮點數範圍或是任意整數範圍的隨機數" class="headerlink" title="2. 任意浮點數範圍或是任意整數範圍的隨機數"></a>2. 任意浮點數範圍或是任意整數範圍的隨機數</h4><p>0~1 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (<span class="keyword">double</span>) <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (b - a) * <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>) + a;</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機整數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="built_in">rand</span> () % (b - a + <span class="number">1</span>) + a;</span><br></pre></td></tr></table></figure></p>
+<h4 id="3- 不公平的骰子"><a href="#3- 不公平的骰子" class="headerlink" title="3. 不公平的骰子"></a>3. 不公平的骰子</h4>]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>刷题检讨 --(1) 线性表</title>
     <url>/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
     <content><![CDATA[<h3 id="线性表"><a href="# 线性表" class="headerlink" title="线性表"></a>线性表 </h3><h5 id="1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator"><a href="#1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator" class="headerlink" title="(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator"></a>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator</h5><p> 除了用迭代器获取 vector 容器中的元素，[] 和 at 也可以<br>vector<int>(v).swap (v); // 收缩内存<br>//vector<int> 利用 v 调用拷贝构造函数，创建匿名对象，它会用 v 目前使用的元素个数来初始化这个匿名对象<br>//swap () 互换函数的本质类似于指针的交换<br>// 调换后 v 指向了创建的匿名对象，而本来匿名对象的指针 x 指向原本的 v，并且在该语句过后由系统自动回收</int></int></p>
@@ -39,19 +52,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>数据结构</tag>
         <tag>刷题</tag>
         <tag>线性表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>利用 rand () 產生隨機數</title>
-    <url>/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/</url>
-    <content><![CDATA[<h4 id="1-rand- 函數介紹"><a href="#1-rand- 函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹 </h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br> 在模擬亂數時，需要設定一個亂數種子，所以如果要讓每次執行程式的結果都不一樣的話，必須要設定不同的亂數種子，設定亂數種子的函數為 srand (int)。<br>一般來說，會在程式加上 srand (time (NULL)); 這一行，讓亂數種子以現在的時間做設定，這樣每次執行程式的結果就不同了。</p>
-<h4 id="2- 任意浮點數範圍或是任意整數範圍的隨機數"><a href="#2- 任意浮點數範圍或是任意整數範圍的隨機數" class="headerlink" title="2. 任意浮點數範圍或是任意整數範圍的隨機數"></a>2. 任意浮點數範圍或是任意整數範圍的隨機數</h4><p>0~1 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (<span class="keyword">double</span>) <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (b - a) * <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>) + a;</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機整數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="built_in">rand</span> () % (b - a + <span class="number">1</span>) + a;</span><br></pre></td></tr></table></figure></p>
-<h4 id="3- 不公平的骰子"><a href="#3- 不公平的骰子" class="headerlink" title="3. 不公平的骰子"></a>3. 不公平的骰子</h4>]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -154,22 +154,8 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>C++ 的 #include</title>
-    <url>/2021/03/27/C++%E7%9A%84#include/</url>
-    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義 </h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案</h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
-<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
-<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ 小知识点总结</title>
-    <url>/2021/03/27/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
+    <url>/2018/11/05/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h3 id="返回多个参数的方法："><a href="# 返回多个参数的方法：" class="headerlink" title="返回多个参数的方法："></a>返回多个参数的方法：</h3><h4 id="1- 定义结构体"><a href="#1- 定义结构体" class="headerlink" title="1. 定义结构体"></a>1. 定义结构体 </h4><h4 id="2- 利用引用参数"><a href="#2- 利用引用参数" class="headerlink" title="2. 利用引用参数"></a>2. 利用引用参数</h4><h3 id="解决 -“数组大小必须事先决定”- 这个问题"><a href="# 解决 -“数组大小必须事先决定”- 这个问题" class="headerlink" title="解决 “数组大小必须事先决定” 这个问题"></a> 解决 “数组大小必须事先决定” 这个问题</h3><h4 id="1- 使用 -new- 和 -delete，有程序员自行分配内"><a href="#1- 使用 -new- 和 -delete，有程序员自行分配内" class="headerlink" title="1. 使用 new 和 delete，有程序员自行分配内"></a>1. 使用 new 和 delete，有程序员自行分配内</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 输入长度：&quot;</span>; </span><br><span class="line">    cin &gt;&gt; size; </span><br><span class="line">    <span class="keyword">int</span> *arr = <span class="keyword">new</span> <span class="keyword">int</span> [size]&#123;<span class="number">0</span>&#125;; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 输入元素值：&quot;</span> &lt;&lt; endl; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123; </span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;arr [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] =&quot;</span>; </span><br><span class="line">        cin &gt;&gt; arr [i]; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 显示元素值：&quot;</span> &lt;&lt; endl; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;arr [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] =&quot;</span> &lt;&lt; arr [i]</span><br><span class="line">             &lt;&lt; endl; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span> [] arr; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注释：二维矩阵就是多段一维数组 <br> 例如需要一个 3X6 的矩阵<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> **arr = <span class="keyword">new</span> <span class="keyword">int</span>*[<span class="number">3</span>]; <span class="comment">//arr [0] 和 arr [1] 分别存储一维数组的位置</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        arr [i] = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">6</span>]&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 既然可以动态分配，那每一段数组的长度当然可以不一样</span></span><br><span class="line">    <span class="comment">//arr [0] = new int [3]&#123;0&#125;;</span></span><br><span class="line">    <span class="comment">//arr [1] = new int [5]&#123;0&#125;;</span></span><br><span class="line">    <span class="comment">//arr [3] = new int [3]&#123;0&#125;;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">6</span>; j++) &#123;</span><br><span class="line">            cout &lt;&lt; arr [i][j] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">delete</span> [] arr [i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> [] arr; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h4 id="2- 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 -vector- 之类的容器"><a href="#2- 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 -vector- 之类的容器" class="headerlink" title="2. 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 vector 之类的容器"></a>2. 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 vector 之类的容器 </h4><h3 id="static- 的使用时机"><a href="#static- 的使用时机" class="headerlink" title="static 的使用时机"></a>static 的使用时机</h3><h4 id="1- 改变变量的存储方式和生存周期"><a href="#1- 改变变量的存储方式和生存周期" class="headerlink" title="1. 改变变量的存储方式和生存周期"></a>1. 改变变量的存储方式和生存周期</h4><p> 局部变量</p>
@@ -185,8 +171,22 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>C++ 的 #include</title>
+    <url>/2018/10/27/C++%E7%9A%84#include/</url>
+    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義 </h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案</h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
+<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
+<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ 的 RALL 实现</title>
-    <url>/2021/03/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/</url>
+    <url>/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = <span class="keyword">new</span> <span class="keyword">int32_t</span> [<span class="number">3</span>];</span><br><span class="line">		ptr [<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr [<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr [<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">delete</span> ptr;     <span class="comment">// 假设忘记了释放内存，会消耗大量内存 </span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span> (<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>RALL 机制便是通过利用对象的自动销毁，使得资源也具有了生命周期，有了自动销毁（自动回收）的功能。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">auto_release_ptr</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">auto_release_ptr</span> (T *t) :<span class="keyword">_t</span> (t)&#123;&#125;;</span><br><span class="line">	~<span class="built_in">auto_release_ptr</span> ()</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">delete</span> <span class="keyword">_t</span>;</span><br><span class="line">	&#125;;</span><br><span class="line"> </span><br><span class="line">	<span class="function">T * <span class="title">getPtr</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">_t</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T *<span class="keyword">_t</span>;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> arp = auto_release_ptr&lt;<span class="keyword">int32_t</span>&gt;(<span class="keyword">new</span> <span class="keyword">int32_t</span> [<span class="number">3</span>]);</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = arp.<span class="built_in">getPtr</span> ();</span><br><span class="line">		<span class="comment">//auto_release_ptr 有一个数据成员在构造时完成了初始化并指向了 new 出来的空间 </span></span><br><span class="line">		ptr [<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr [<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr [<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span> (<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p> 更多的如智能指针，lock_guard 都利用了 RALL 机制来实现。</p>
@@ -200,7 +200,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   </entry>
   <entry>
     <title>C++ 萬能標題檔案</title>
-    <url>/2021/03/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/</url>
+    <url>/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/</url>
     <content><![CDATA[<p> 萬能標頭檔案 </p>
 ]]></content>
       <categories>
@@ -212,7 +212,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   </entry>
   <entry>
     <title>解釋一個語句</title>
-    <url>/2019/03/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
+    <url>/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
     <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 <p> 在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
@@ -240,7 +240,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   </entry>
   <entry>
     <title>C++ 运算符</title>
-    <url>/2021/03/27/C++%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <url>/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
     <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。</p>
 <h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
 <h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
@@ -352,6 +352,32 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>在 hexo 文章中插入图片</title>
+    <url>/2021/03/25/%E5%9C%A8hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h3 id="绝对路径"><a href="# 绝对路径" class="headerlink" title="绝对路径"></a>绝对路径 </h3><p> 当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/img 文件夹中<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](&#x2F;images&#x2F;image.jpg)</span><br></pre></td></tr></table></figure></p>
+<h3 id="相对路径"><a href="# 相对路径" class="headerlink" title="相对路径"></a>相对路径 </h3><p> 将_config.yml 文件中的配置项 post_asset_folder 设为 true 后，<br>执行命令 $ hexo new post_name，在 source/posts 中会生成文章 post_name.md 和同名文件夹 post_name。<br>将图片资源放在 post_name 中，文章就可以使用相对路径引用图片资源了。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure></p>
+<h3 id="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"><a href="# 如果希望图片在文章和首页中同时显示，可以使用标签插件语法" class="headerlink" title="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"></a>如果希望图片在文章和首页中同时显示，可以使用标签插件语法</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>參考：架設網站的第一步</title>
+    <url>/2021/03/27/%E5%8F%83%E8%80%83%EF%BC%9A%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</url>
+    <content><![CDATA[<p>從零開始：使用 npm 套件 <br><a href="https://medium.com/html-test/%">https://medium.com/html-test/%</a> E5% BE%9E% E9%9B% B6% E9%96%8B% E5% A7%8B-% E4% BD% BF% E7%94% A8npm% E5% A5%97% E4% BB% B6-317beefdf182<br> 介紹 npm 的概念與使用，可以與使用 hexo 的經驗和架構結合參考</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三連擊（洛谷 P1008）</title>
     <url>/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/</url>
     <content><![CDATA[<h4 id="題目描述"><a href="# 題目描述" class="headerlink" title="題目描述"></a>題目描述 </h4><pre><code> 將 1，2,...,9 共 9 個數分成三組，分別組成三個三位數，且使這三個三位數構成 1：2：3 的比例，試求出所有滿足條件的三個三位數。 
@@ -372,30 +398,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>參考：架設網站的第一步</title>
-    <url>/2021/03/27/%E5%8F%83%E8%80%83%EF%BC%9A%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</url>
-    <content><![CDATA[<p>從零開始：使用 npm 套件 <br><a href="https://medium.com/html-test/%">https://medium.com/html-test/%</a> E5% BE%9E% E9%9B% B6% E9%96%8B% E5% A7%8B-% E4% BD% BF% E7%94% A8npm% E5% A5%97% E4% BB% B6-317beefdf182<br> 介紹 npm 的概念與使用，可以與使用 hexo 的經驗和架構結合參考</p>
+    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
+    <url>/2021/03/27/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
+    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false</p>
+<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
 ]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 hexo 文章中插入图片</title>
-    <url>/2021/03/25/%E5%9C%A8hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h3 id="绝对路径"><a href="# 绝对路径" class="headerlink" title="绝对路径"></a>绝对路径 </h3><p> 当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/img 文件夹中<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](&#x2F;images&#x2F;image.jpg)</span><br></pre></td></tr></table></figure></p>
-<h3 id="相对路径"><a href="# 相对路径" class="headerlink" title="相对路径"></a>相对路径 </h3><p> 将_config.yml 文件中的配置项 post_asset_folder 设为 true 后，<br>执行命令 $ hexo new post_name，在 source/posts 中会生成文章 post_name.md 和同名文件夹 post_name。<br>将图片资源放在 post_name 中，文章就可以使用相对路径引用图片资源了。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure></p>
-<h3 id="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"><a href="# 如果希望图片在文章和首页中同时显示，可以使用标签插件语法" class="headerlink" title="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"></a>如果希望图片在文章和首页中同时显示，可以使用标签插件语法</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
     <title>如何在 hexo blog 中發表一篇文章</title>
@@ -413,19 +420,35 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
-    <url>/2021/03/27/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
-    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false</p>
-<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>怎么取消文章目录中对标题的自动编号</title>
     <url>/2021/03/25/%E6%80%8E%E4%B9%88%E5%8F%96%E6%B6%88%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%E5%AF%B9%E6%A0%87%E9%A2%98%E7%9A%84%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7/</url>
     <content><![CDATA[<p> 修改主题配置文件_config.yml 那里的 number 为 false</p>
 ]]></content>
       <categories>
         <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>数据结构 -- (2) 树</title>
+    <url>/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树</a></p>
+<h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
+<h4 id="3- 树的性质"><a href="#3- 树的性质" class="headerlink" title="3. 树的性质"></a>3. 树的性质 </h4><h5 id="1-n-e-1- 树中的节点数等于所有结点的度数加 -1"><a href="#1-n-e-1- 树中的节点数等于所有结点的度数加 -1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1</h5><p> 边数 $d$，度数 $e$，$d=e$<br>可以用归纳法证明</p>
+<h5 id="2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1"><a href="#2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)</h5><h5 id="3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点"><a href="#3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点 </h5><p> 由性质（2）可得：$n \leq 1+m+m^2+…+m^{h-1}$<br>$\displaystyle n \leq {(m^h-1) \over (m-1)}$</p>
+<h5 id="4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil"><a href="#4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil" class="headerlink" title="(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$"></a>(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$</h5><p>由性质（3）可得：$h \geq \log_m {n (m-1)+1}$</p>
+<h5 id="5- 叶节点个数"><a href="#5- 叶节点个数" class="headerlink" title="(5) 叶节点个数"></a>(5) 叶节点个数</h5><p>$n=k_0+k_1+…+k_m -(1)$<br>$n=\sum_{i=0}^n d_i +1 \quad (d_i = 节点 n_i 的度数)$<br>$\quad =\sum_{i=0}^m i \cdot k_i \quad (k_i = 度为 i 的节点的数量)$<br>$\quad =k_1+2k_2+…+mk_m+1 -(2)$<br>$ 由式 (1) 和式 (2) 可得 $<br>$k_0=k_2+k_3+…+(m-1) k_m+1$</p>
+<h3 id="二、二叉树"><a href="# 二、二叉树" class="headerlink" title="二、二叉树"></a>二、二叉树 </h3><h4 id="1- 与 - 度为 -2- 的有序树 - 不同"><a href="#1- 与 - 度为 -2- 的有序树 - 不同" class="headerlink" title="1. 与 {度为 2 的有序树} 不同"></a>1. 与 {度为 2 的有序树} 不同</h4><p> 只有一个根节点不属于 {度为 2 的有序树}</p>
+<h4 id="2- 特殊二叉树种类"><a href="#2- 特殊二叉树种类" class="headerlink" title="2. 特殊二叉树种类"></a>2. 特殊二叉树种类 </h4><p> 满二叉树，完全二叉树</p>
+<h4 id="3- 性质"><a href="#3- 性质" class="headerlink" title="3. 性质"></a>3. 性质</h4><p>$n=k_0+k_1+k_2$<br>$k_0=k_2+1$<br>$ 两式相减得：k_0-n=1-k_0-k_1$<br>$2k_0=n+1-k_1$<br>$\displaystyle 当 k_1=0，n 为奇数，k_0={(n+1) \over 2}$<br>$\displaystyle 当 k_1=0，n 为偶数，k_0={n \over 2}$<br>$\displaystyle 结论：在完成二叉树或满二叉树中，k_0=\lceil {n \over 2} \rceil$</p>
+<h4 id="4- 存储结构"><a href="#4- 存储结构" class="headerlink" title="4. 存储结构"></a>4. 存储结构 </h4><h5 id="1- 顺序存储"><a href="#1- 顺序存储" class="headerlink" title="(1) 顺序存储"></a>(1) 顺序存储</h5><p> 按照完全二叉树的顺序，父节点和子节点之间有简单的关系 <br> 但是可能会造成空间浪费</p>
+<h5 id="2- 链式存储"><a href="#2- 链式存储" class="headerlink" title="(2) 链式存储"></a>(2) 链式存储</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">typedef struct BiTNode</span><br><span class="line">&#123;</span><br><span class="line">	ElemType data;</span><br><span class="line">	struct BiTNode *ichild, *rchild;</span><br><span class="line">&#125; BiTNode, *BiTree;</span><br></pre></td></tr></table></figure>
+<h4 id="5- 二叉树的遍历"><a href="#5- 二叉树的遍历" class="headerlink" title="5. 二叉树的遍历"></a>5. 二叉树的遍历</h4><h5 id="1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问"><a href="#1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问" class="headerlink" title="(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问"></a>(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 先序遍历</span><br><span class="line">void PreOrder (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	if (T!&#x3D;NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		visit (T);            &#x2F;&#x2F; 访问根节点</span><br><span class="line">		PreOrder (T-&gt;ichild); &#x2F;&#x2F; 递归遍历左子树</span><br><span class="line">		PreOrder (T-&gt;echild); &#x2F;&#x2F; 递归遍历右子树</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2- 非递归算法"><a href="#2- 非递归算法" class="headerlink" title="(2) 非递归算法"></a>(2) 非递归算法</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 中序遍历的非递归算法</span><br><span class="line">void InOrder2 (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	InitStack (S); BiTree p &#x3D; T;</span><br><span class="line">	while (p || !IsEmpty (S))</span><br><span class="line">	&#123;</span><br><span class="line">		if (p)</span><br><span class="line">		&#123;</span><br><span class="line">			Push (S,p);</span><br><span class="line">			p &#x3D; p-&gt;lchild;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			Pop (S,p); visit (p);</span><br><span class="line">			p &#x3D; p-&gt;rchild;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 入栈序列：先序</span><br><span class="line">&#x2F;&#x2F; 出栈序列：中序</span><br></pre></td></tr></table></figure>
+<h5 id="3- 层次遍历"><a href="#3- 层次遍历" class="headerlink" title="(3) 层次遍历"></a>(3) 层次遍历 </h5><p> 利用队列：<br>将根节点入队 <br> 若队列不为空：队头元素出队，访问队头元素若有子节点，子节点入队</p>
+<h5 id="4- 由遍历序列构造二叉树"><a href="#4- 由遍历序列构造二叉树" class="headerlink" title="(4) 由遍历序列构造二叉树"></a>(4) 由遍历序列构造二叉树 </h5><h6 id="a- 先序 - 中序"><a href="#a- 先序 - 中序" class="headerlink" title="(a) 先序 + 中序"></a>(a) 先序 + 中序</h6><p> 中序遍历最左端元素第一个访问，排序树的插入会用到这个性质 <br> 先序序列第一个元素是根节点</p>
+<h6 id="b- 后序 - 中序"><a href="#b- 后序 - 中序" class="headerlink" title="(b) 后序 + 中序"></a>(b) 后序 + 中序</h6><h6 id="c- 层次 - 中序"><a href="#c- 层次 - 中序" class="headerlink" title="(c) 层次 + 中序"></a>(c) 层次 + 中序</h6>]]></content>
+      <categories>
+        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
@@ -444,53 +467,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <categories>
         <category>hexo</category>
       </categories>
-  </entry>
-  <entry>
-    <title>数据结构 -- (2) 树</title>
-    <url>/2021/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树</a></p>
-<h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
-<h4 id="3- 树的性质"><a href="#3- 树的性质" class="headerlink" title="3. 树的性质"></a>3. 树的性质 </h4><h5 id="1-n-e-1- 树中的节点数等于所有结点的度数加 -1"><a href="#1-n-e-1- 树中的节点数等于所有结点的度数加 -1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1</h5><p> 边数 $d$，度数 $e$，$d=e$<br>可以用归纳法证明</p>
-<h5 id="2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1"><a href="#2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m {^i-1}$ 个节点 ($i \geq 1$)"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m {^i-1}$ 个节点 ($i \geq 1$)</h5><h5 id="3- 高度为 -h- 的 -m- 叉树中至多有 -m-h-1-over-m-1- 个节点"><a href="#3- 高度为 -h- 的 -m- 叉树中至多有 -m-h-1-over-m-1- 个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $(m^h-1) \over (m-1)$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $(m^h-1) \over (m-1)$ 个节点</h5><p>$ 由性质（2）可得：n \leq 1+m+m^2+…+m^{h-1}$<br>$n \leq {(m^h-1) \over (m-1)}$</p>
-<h5 id="4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil"><a href="#4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil" class="headerlink" title="(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$"></a>(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$</h5><p>$ 由性质（3）可得：h \geq \log_m {n (m-1)+1}$</p>
-<h5 id="5- 叶节点个数"><a href="#5- 叶节点个数" class="headerlink" title="(5) 叶节点个数"></a>(5) 叶节点个数</h5><p>$n=k_0+k_1+…+k_m -(1)$<br>$n=\sum_{i=0}^n d_i +1$<br>$\quad =\sum_{i=0}^m i \cdot k_i$<br>$\quad =k_1+2k_2+…+mk_m+1 -(2)$<br>$ 由式 (1) 和式 (2) 可得 $<br>$k_0=k_2+k_3+…+(m-1) k_m+1$</p>
-<h3 id="二、二叉树"><a href="# 二、二叉树" class="headerlink" title="二、二叉树"></a>二、二叉树 </h3><h4 id="1- 与 - 度为 -2- 的有序树 - 不同"><a href="#1- 与 - 度为 -2- 的有序树 - 不同" class="headerlink" title="1. 与 {度为 2 的有序树} 不同"></a>1. 与 {度为 2 的有序树} 不同</h4><p> 只有一个根节点不属于 {度为 2 的有序树}</p>
-<h4 id="2- 特殊二叉树种类"><a href="#2- 特殊二叉树种类" class="headerlink" title="2. 特殊二叉树种类"></a>2. 特殊二叉树种类 </h4><p> 满二叉树，完全二叉树</p>
-<h4 id="3- 性质"><a href="#3- 性质" class="headerlink" title="3. 性质"></a>3. 性质</h4><p>$n=k_0+k_1+k_2$<br>$k_0=k_2+1$<br>$ 两式相减得：k_0-n=1-k_0-k_1$<br>$2k_0=n+1-k_1$<br>$ 当 k_1=0，n 为奇数，k_0={(n+1) \over 2}$<br>$ 当 k_1=0，n 为偶数，k_0={n \over 2}$<br>$ 结论：在完成二叉树或满二叉树中，k_0=\lceil {n \over 2} \rceil$</p>
-<h4 id="4- 存储结构"><a href="#4- 存储结构" class="headerlink" title="4. 存储结构"></a>4. 存储结构 </h4><h5 id="1- 顺序存储"><a href="#1- 顺序存储" class="headerlink" title="(1) 顺序存储"></a>(1) 顺序存储</h5><p> 按照完全二叉树的顺序，父节点和子节点之间有简单的关系 <br> 但是可能会造成空间浪费</p>
-<h5 id="2- 链式存储"><a href="#2- 链式存储" class="headerlink" title="(2) 链式存储"></a>(2) 链式存储</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">typedef struct BiTNode</span><br><span class="line">&#123;</span><br><span class="line">	ElemType data;</span><br><span class="line">	struct BiTNode *ichild, *rchild;</span><br><span class="line">&#125; BiTNode, *BiTree;</span><br></pre></td></tr></table></figure>
-<h4 id="5- 二叉树的遍历"><a href="#5- 二叉树的遍历" class="headerlink" title="5. 二叉树的遍历"></a>5. 二叉树的遍历</h4><h5 id="1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问"><a href="#1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问" class="headerlink" title="(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问"></a>(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 先序遍历</span><br><span class="line">void PreOrder (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	if (T!&#x3D;NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		visit (T);            &#x2F;&#x2F; 访问根节点</span><br><span class="line">		PreOrder (T-&gt;ichild); &#x2F;&#x2F; 递归遍历左子树</span><br><span class="line">		PreOrder (T-&gt;echild); &#x2F;&#x2F; 递归遍历右子树</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="2- 非递归算法"><a href="#2- 非递归算法" class="headerlink" title="(2) 非递归算法"></a>(2) 非递归算法</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 中序遍历的非递归算法</span><br><span class="line">void InOrder2 (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	InitStack (S); BiTree p &#x3D; T;</span><br><span class="line">	while (p || !IsEmpty (S))</span><br><span class="line">	&#123;</span><br><span class="line">		if (p)</span><br><span class="line">		&#123;</span><br><span class="line">			Push (S,p);</span><br><span class="line">			p &#x3D; p-&gt;lchild;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			Pop (S,p); visit (p);</span><br><span class="line">			p &#x3D; p-&gt;rchild;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 入栈序列：先序</span><br><span class="line">&#x2F;&#x2F; 出栈序列：中序</span><br></pre></td></tr></table></figure>
-<h5 id="3- 层次遍历"><a href="#3- 层次遍历" class="headerlink" title="(3) 层次遍历"></a>(3) 层次遍历 </h5><p> 利用队列：<br>将根节点入队 <br> 若队列不为空：队头元素出队，访问队头元素若有子节点，子节点入队</p>
-<h4 id="4- 由遍历序列构造二叉树"><a href="#4- 由遍历序列构造二叉树" class="headerlink" title="(4) 由遍历序列构造二叉树"></a>(4) 由遍历序列构造二叉树 </h4><h5 id="a- 先序 - 中序"><a href="#a- 先序 - 中序" class="headerlink" title="(a) 先序 + 中序"></a>(a) 先序 + 中序</h5><p> 中序遍历最左端元素第一个访问，排序树的插入会用到这个性质 <br> 先序序列第一个元素是根节点</p>
-<h5 id="b- 后序 - 中序"><a href="#b- 后序 - 中序" class="headerlink" title="(b) 后序 + 中序"></a>(b) 后序 + 中序</h5><h5 id="c- 层次 - 中序"><a href="#c- 层次 - 中序" class="headerlink" title="(c) 层次 + 中序"></a>(c) 层次 + 中序</h5>]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（1）回归</title>
-    <url>/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/</url>
-    <content><![CDATA[<h3 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h3><h4 id="1- 数据挖掘和机器学习的关系"><a href="#1- 数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2- 训练数据 -vs- 验证数据 -vs- 测试数据"><a href="#2- 训练数据 -vs- 验证数据 -vs- 测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3- 监督学习 -vs- 无监督学习 -vs- 半监督学习"><a href="#3- 监督学习 -vs- 无监督学习 -vs- 半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4- 回归 -vs- 分类 -vs- 聚类"><a href="#4- 回归 -vs- 分类 -vs- 聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="# 一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a> 一、一元线性回归概念 </h3><p> 回归：高尔顿提出 <br> 回归分析：建立方程模拟两个或多个变量之间如何关联 <br> 一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟 <br> 一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率</p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
-<h3 id="三、相关系数和决定系数"><a href="# 三、相关系数和决定系数" class="headerlink" title="三、相关系数和决定系数"></a>三、相关系数和决定系数 </h3><h4 id="相关系数：衡量线性相关性的强弱"><a href="# 相关系数：衡量线性相关性的强弱" class="headerlink" title="相关系数：衡量线性相关性的强弱"></a> 相关系数：衡量线性相关性的强弱</h4><p>$r_{xy} = {{\sum {(X_i - \bar X)(Y_i - \bar Y)}} \over {\sqrt {\sum {(X_i - \bar X)^2 (Y_i - \bar Y)^2}}} }$  </p>
-<h4 id="决定系数"><a href="# 决定系数" class="headerlink" title="决定系数"></a>决定系数 </h4><p> 总平方和（SST）：$\sum_{i=0}^n (y_i - \bar y)^2$<br>残差平方和（SSE）：$\sum_{i=0}^n (y_i - \hat y)^2$<br>回归平方和（SSR）：$\sum_{i=0}^n (\hat y - \bar y)^2$<br>它们三者的关系是：$SST = SSE + SSR$<br>决定系数：$R^2 = {SSR \over SST} = 1 - {SSE \over SST}$</p>
-<h3 id="四、梯度下降法"><a href="# 四、梯度下降法" class="headerlink" title="四、梯度下降法"></a>四、梯度下降法 </h3><h4 id="概念"><a href="# 概念" class="headerlink" title="概念"></a> 概念 </h4><p> 缺点：初始值的选取会影响到最后的结果，只能找到局部最优解<br>(凸函数的局部最值就是全局最值)<br>repeat until convergence<br>{<br>    $\qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,\theta_1)$ $\quad (for\quad j = 0 \quad and \quad j = 1)$<br>}</p>
-<p>同步更新：<br>$temp0 := \theta_0 - \alpha {\partial \over \partial\theta_0} J (\theta_0,\theta_1)$<br>$temp1 := \theta_1 - \alpha {\partial \over \partial\theta_1} J (\theta_0,\theta_1)$<br>$\theta_0 := temp0$<br>$\theta_0 := temp1$</p>
-<p>学习率 $\alpha$ 不能太大也不能太小，<br>太大可能会导致在收敛值附近不断震荡，一直无法收敛；<br>太小会导致收敛速度过慢</p>
-<h4 id="用梯度下降法来求解线性回归"><a href="# 用梯度下降法来求解线性回归" class="headerlink" title="用梯度下降法来求解线性回归"></a>用梯度下降法来求解线性回归</h4><p>$h_\theta (x) = \theta_0 + \theta_1x -(1)$<br>$J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br>$ 将 (1) 式代入 (2) 式 $<br>${\partial \over \partial\theta_0} J (\theta_0,\theta_1) = {1 \over m}\sum_{i=0}^m (h_\theta (x_i) - y_i)$ </p>
-<h3 id="五、sklearn- 实现一元线性回归"><a href="# 五、sklearn- 实现一元线性回归" class="headerlink" title="五、sklearn 实现一元线性回归"></a>五、sklearn 实现一元线性回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x_data = data [:,<span class="number">0</span>,np.newaxis]</span><br><span class="line">y_data = data [:,<span class="number">1</span>,np.newaxis]</span><br><span class="line"><span class="comment"># 创建并拟合模型</span></span><br><span class="line">model = LinearRegression ()</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, model.predict (x_data), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
-<h3 id="六、多元线性回归"><a href="# 六、多元线性回归" class="headerlink" title="六、多元线性回归"></a>六、多元线性回归</h3><h4 id="Hypothesis"><a href="#Hypothesis" class="headerlink" title="Hypothesis:"></a>Hypothesis:</h4><p>$h_\theta (x) = \theta^Tx = \theta_0x_1 + \theta_2x_2 + … + \theta_nx_n$</p>
-<h4 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters:"></a>Parameters:</h4><p>theta_0,theta_1,…,theta_n</p>
-<h4 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h4><p>$J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$</p>
-<h4 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h4><p>repeat until convergence<br>{<br>    $\qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,…,\theta_n)$<br>    $\quad\qquad (for\quad j = 0,1,…,n)$<br>}</p>
-<h3 id="七、多项式回归"><a href="# 七、多项式回归" class="headerlink" title="七、多项式回归"></a>七、多项式回归</h3>]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>一元线性回归</tag>
-      </tags>
   </entry>
   <entry>
     <title>数据结构 -- (1) 线性表</title>
@@ -531,9 +507,10 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="深度学习爆发三要素"><a href="# 深度学习爆发三要素" class="headerlink" title="深度学习爆发三要素"></a>深度学习爆发三要素 </h4><p> 数据、算法、算力</p>
 <h4 id="机器学习三巨头"><a href="# 机器学习三巨头" class="headerlink" title="机器学习三巨头"></a>机器学习三巨头 </h4><p>Hinton：BP 算法<br>Lecun：卷积神经网络<br>Bengio：预训练和自动编码器<br> 吴恩达：创建 Coursera 和 Google Brain</p>
 <p><img src="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo1.jpg" alt></p>
-<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a> 介绍 </h4><p><img src="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\delta w_i = \eta (t-y) x_i$<br> 输入节点：<br>输出节点：<br>权向量：<br>偏置因子：b（也可以看成是 x_0=1）<br>激活函数：$$sign () =<br>\begin {cases}<br>1,  &amp; \text {x \ge 0} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}</p>
-<p>$$</p>
-<h4 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子 </h4><h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a> 三、</h3>]]></content>
+<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a> 介绍 </h4><p><img src="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\Delta w_i = \eta (t-y) x_i$<br> 输入节点：$x_1, x_2, x_3$<br>输出节点：$y$<br>权向量：$w_1, w_2, w_3$<br>偏置因子：$b$（也可以看成是 $x_0=1$）<br>激活函数：$sign (x) =<br>\begin {cases}<br>1,  &amp; \text {$x \geq 0$} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}<br>$</p>
+<h4 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子 </h4><p> 题目：假设平面坐标系上有四个点，$(3,3),(4,3)$ 这两个点的标签为 $1$；$(1,1),(0,2)$ 这两个点的标签为 $-1$。构建神经网络来分类。</p>
+<p>思路：我们要分类的数据是 $2$ 维数据，所以只需要 $2$ 个输入节点，我们可以把神经元的偏置值也设置成一个节点，这样我们需要 $3$ 个输入节点。输入数据有 $4$ 个 $(1,3,3),(1,4,3),(1,1,1),(1,0,2)$ 数据对应的标签为 $(1,1,-1,-1)$。初始化权值 $w_0,w_1,w_2$，取 $-1$ 到 $1$ 的随机数。学习率设置为 $0.11$，激活函数为 sign 函数。</p>
+<h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a>三、</h3>]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
@@ -542,12 +519,61 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>算法</title>
-    <url>/2021/03/25/%E7%AE%97%E6%B3%953/</url>
-    <content><![CDATA[]]></content>
+    <title>机器学习算法 --（1）回归</title>
+    <url>/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/</url>
+    <content><![CDATA[<h3 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h3><h4 id="1- 数据挖掘和机器学习的关系"><a href="#1- 数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2- 训练数据 -vs- 验证数据 -vs- 测试数据"><a href="#2- 训练数据 -vs- 验证数据 -vs- 测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3- 监督学习 -vs- 无监督学习 -vs- 半监督学习"><a href="#3- 监督学习 -vs- 无监督学习 -vs- 半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4- 回归 -vs- 分类 -vs- 聚类"><a href="#4- 回归 -vs- 分类 -vs- 聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="# 一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a> 一、一元线性回归概念 </h3><p> 回归：高尔顿提出 <br> 回归分析：建立方程模拟两个或多个变量之间如何关联 <br> 一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟 <br> 一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率</p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
+<h3 id="三、相关系数和决定系数"><a href="# 三、相关系数和决定系数" class="headerlink" title="三、相关系数和决定系数"></a>三、相关系数和决定系数 </h3><h4 id="相关系数：衡量线性相关性的强弱"><a href="# 相关系数：衡量线性相关性的强弱" class="headerlink" title="相关系数：衡量线性相关性的强弱"></a> 相关系数：衡量线性相关性的强弱</h4><p>$\displaystyle r_{xy} = {{\sum {(X_i - \bar X)(Y_i - \bar Y)}} \over {\sqrt {\sum {(X_i - \bar X)^2 (Y_i - \bar Y)^2}}} }$  </p>
+<h4 id="决定系数"><a href="# 决定系数" class="headerlink" title="决定系数"></a>决定系数 </h4><p> 总平方和（SST）：$\sum_{i=0}^n (y_i - \bar y)^2$<br>残差平方和（SSE）：$\sum_{i=0}^n (y_i - \hat y)^2$<br>回归平方和（SSR）：$\sum_{i=0}^n (\hat y - \bar y)^2$<br>它们三者的关系是：$SST = SSE + SSR$<br>决定系数：$\displaystyle R^2 = {SSR \over SST} = 1 - {SSE \over SST}$</p>
+<h3 id="四、梯度下降法"><a href="# 四、梯度下降法" class="headerlink" title="四、梯度下降法"></a>四、梯度下降法 </h3><h4 id="概念"><a href="# 概念" class="headerlink" title="概念"></a> 概念 </h4><p> 缺点：初始值的选取会影响到最后的结果，只能找到局部最优解<br>(凸函数的局部最值就是全局最值)<br>repeat until convergence<br>{<br>    $\displaystyle \qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,\theta_1)$ $\quad (for\quad j = 0 \quad and \quad j = 1)$<br>}</p>
+<p>同步更新：<br>$\displaystyle temp0 := \theta_0 - \alpha {\partial \over \partial\theta_0} J (\theta_0,\theta_1)$<br>$\displaystyle temp1 := \theta_1 - \alpha {\partial \over \partial\theta_1} J (\theta_0,\theta_1)$<br>$\theta_0 := temp0$<br>$\theta_0 := temp1$</p>
+<p>学习率 $\alpha$ 不能太大也不能太小，<br>太大可能会导致在收敛值附近不断震荡，一直无法收敛；<br>太小会导致收敛速度过慢</p>
+<h4 id="用梯度下降法来求解线性回归"><a href="# 用梯度下降法来求解线性回归" class="headerlink" title="用梯度下降法来求解线性回归"></a>用梯度下降法来求解线性回归</h4><p>$h_\theta (x) = \theta_0 + \theta_1x -(1)$<br>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br>$ 将 (1) 式代入 (2) 式 $<br>$\displaystyle {\partial \over \partial\theta_0} J (\theta_0,\theta_1) = {1 \over m}\sum_{i=0}^m (h_\theta (x_i) - y_i)$ </p>
+<h3 id="五、sklearn- 实现一元线性回归（sklearn- 使用的是标准方程法）"><a href="# 五、sklearn- 实现一元线性回归（sklearn- 使用的是标准方程法）" class="headerlink" title="五、sklearn 实现一元线性回归（sklearn 使用的是标准方程法）"></a>五、sklearn 实现一元线性回归（sklearn 使用的是标准方程法）</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x_data = data [:,<span class="number">0</span>,np.newaxis]</span><br><span class="line">y_data = data [:,<span class="number">1</span>,np.newaxis]</span><br><span class="line"><span class="comment"># 创建并拟合模型</span></span><br><span class="line">model = LinearRegression ()</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, model.predict (x_data), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
+<h3 id="六、多元线性回归"><a href="# 六、多元线性回归" class="headerlink" title="六、多元线性回归"></a>六、多元线性回归</h3><h4 id="Hypothesis"><a href="#Hypothesis" class="headerlink" title="Hypothesis:"></a>Hypothesis:</h4><p>$h_\theta (x) = \theta^Tx = \theta_0x_1 + \theta_2x_2 + … + \theta_nx_n$</p>
+<h4 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters:"></a>Parameters:</h4><p>theta_0,theta_1,…,theta_n</p>
+<h4 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h4><p>$\displaystyle J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$</p>
+<h4 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h4><p>repeat until convergence<br>{<br>    $\displaystyle \qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,…,\theta_n)$<br>    $\displaystyle \quad\qquad (for\quad j = 0,1,…,n)$<br>}</p>
+<h3 id="七、多项式回归"><a href="# 七、多项式回归" class="headerlink" title="七、多项式回归"></a>七、多项式回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> PolynomialFeatures</span><br><span class="line"><span class="comment"># 定义多项式回归，degree 的值可以调节多项式的特征</span></span><br><span class="line">poly_reg = PolynomialFeatures (degree=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 特征处理</span></span><br><span class="line">x_poly =  poly_reg.fit_transform (x_data)</span><br><span class="line"><span class="comment"># 定义回归模型</span></span><br><span class="line">lin_reg = LinearRegression ()</span><br><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">lin_reg.fit (x_poly, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, lin_reg.predict (x_poly), c=<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
+<h3 id="八、标准方程法（vs- 梯度下降法）"><a href="# 八、标准方程法（vs- 梯度下降法）" class="headerlink" title="八、标准方程法（vs 梯度下降法）"></a>八、标准方程法（vs 梯度下降法）</h3><h4 id="概念 -1"><a href="# 概念 -1" class="headerlink" title="概念"></a>概念 </h4><p>$\displaystyle J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br> 令 $\displaystyle {\partial \over \partial\theta_j} J (\theta)=…=0$<br>求解：$\theta_1,\theta_2,…,\theta_n$</p>
+<p>例：X 为 $4 \times 5$ 矩阵，$4$ 个样本，$4+1$ 个参数</p>
+<p>$X=<br>\begin {bmatrix}<br>    1 &amp; 2104 &amp; 5 &amp; 1 &amp; 45 \\<br>    1 &amp; 1416 &amp; 3 &amp; 2 &amp; 40 \\<br>    1 &amp; 1534 &amp; 3 &amp; 2 &amp; 30 \\<br>    1 &amp; 852 &amp; 2 &amp; 1 &amp; 36 \\<br>\end {bmatrix}<br>$ $\quad\quad$ $w=<br>\begin {bmatrix}<br>    w_0 \\<br>    w_1 \\<br>    w_2 \\<br>    w_3 \\<br>    w_4 \\<br>\end {bmatrix}<br>$ $\quad\quad$ $y=<br>\begin {bmatrix}<br>    460 \\<br>    232 \\<br>    315 \\<br>    178 \\<br>\end {bmatrix}<br>$</p>
+<p>$\sum_{i=0}^m (h_w (x_i) - y_i)^2=(y-Xw)^T (y-Xw)$</p>
+<p>$\displaystyle {\partial (y-Xw)^T (y-Xw) \over \partial w} = 0$<br>$\displaystyle {\partial (y^Ty - y^TXw - w^TX^Ty + w^TX^TXw) \over \partial w} = 0$<br>$\displaystyle {\partial y^Ty \over \partial w} - {\partial y^TXw \over \partial w} - {\partial w^TX^Ty \over \partial w} + {\partial w^TX^TXw \over \partial w} = 0$<br>$0 - X^Ty - X^Ty + 2X^TXw = 0$<br>$X^TXw = X^Ty$<br>$w = (X^TX)^(-1) X^Ty$<br>注释：矩阵的求导</p>
+<h4 id="标准方程法 -vs- 梯度下降法"><a href="# 标准方程法 -vs- 梯度下降法" class="headerlink" title="标准方程法 vs 梯度下降法"></a>标准方程法 vs 梯度下降法</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>梯度下降法</th>
+<th>标准方程法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>缺点：<br> 需要选择合适的学习率 <br> 需要迭代很多个周期 <br> 只能得到最优解的近似值</td>
+<td>优点：<br> 不需要学习率 <br> 不需要迭代 <br> 可以得到全局最优解</td>
+</tr>
+<tr>
+<td>优点：<br> 当特征值非常多的时候也可以很好的工作</td>
+<td>缺点：<br> 需要计算 $(𝑋^T𝑋)^{−1}$ 时间复杂度大约是 O ($n^3$) <br>n 是特征数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="自己写标准方程法"><a href="# 自己写标准方程法" class="headerlink" title="自己写标准方程法"></a>自己写标准方程法</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">weights</span> (<span class="params">xArr, yArr</span>)</span></span><br><span class="line">	xMat = np.mat (xArr)</span><br><span class="line">	yMat = np.mat (yArr)</span><br><span class="line">	xTx = xMat.T * xMat <span class="comment"># 矩阵乘法</span></span><br><span class="line">	<span class="comment"># 如果矩阵的 det 值为零，说明该矩阵没有逆矩阵</span></span><br><span class="line">	<span class="keyword">if</span> np.linalg.det (xTx) == <span class="number">0.0</span>:</span><br><span class="line">		<span class="built_in">print</span> (<span class="string">&quot;This matrix cannot do inverse&quot;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="comment">#xTx.I 为 xTx 的逆矩阵</span></span><br><span class="line">	ws = xTx.I * xMat.T * yMat</span><br><span class="line">	<span class="keyword">return</span> ws</span><br></pre></td></tr></table></figure>
+<h3 id="九、特征缩放"><a href="# 九、特征缩放" class="headerlink" title="九、特征缩放"></a>九、特征缩放 </h3><p> 假设不同的特征的取值范围相差非常大，就会造成天然的权重不一 <br> 解决方法：特征缩放</p>
+<h4 id="数据归一化"><a href="# 数据归一化" class="headerlink" title="数据归一化"></a>数据归一化 </h4><p> 转化成 $(0,1)$ 之间：$newValue = \displaystyle {oldValue - min \over max - min}$</p>
+<p>转化成 $(-1,1)$ 之间：$newValue = (\displaystyle {oldValue - min \over max - min}-0.5) \times 2$</p>
+<h4 id="数据标准化"><a href="# 数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h4><p>$newValue = \displaystyle {oldValue - u \over s}$ 其中 u 为数据的平均值，s 为数据的方差</p>
+<h3 id="十、交叉验证法"><a href="# 十、交叉验证法" class="headerlink" title="十、交叉验证法"></a>十、交叉验证法 </h3><p> 若样本数据较少时，可以一部分作为训练集，一部分作为测试集，没有验证集。<br>例如有 100 组数据，可以 80 组作为训练集，20 组作为测试集。<br>但是当样本更少，8/2 拆分也不适合的时候，就可以使用交叉验证法<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo2.jpg" alt></p>
+<h3 id="十一、过拟合与正则化"><a href="# 十一、过拟合与正则化" class="headerlink" title="十一、过拟合与正则化"></a>十一、过拟合与正则化 </h3><h4 id="过拟合"><a href="# 过拟合" class="headerlink" title="过拟合"></a> 过拟合</h4><p><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo3.jpg" alt></p>
+<h4 id="防止过拟合："><a href="# 防止过拟合：" class="headerlink" title="防止过拟合："></a>防止过拟合：</h4><h5 id="减少特征"><a href="# 减少特征" class="headerlink" title="减少特征"></a>减少特征 </h5><h5 id="增加数据量"><a href="# 增加数据量" class="headerlink" title="增加数据量"></a> 增加数据量 </h5><h5 id="正则化"><a href="# 正则化" class="headerlink" title="正则化"></a> 正则化</h5>]]></content>
       <categories>
-        <category>数据结构与算法</category>
+        <category>机器学习</category>
       </categories>
+      <tags>
+        <tag>一元线性回归</tag>
+      </tags>
   </entry>
   <entry>
     <title>slam 小車：(一) 前期準備 --1. 機器人架構設計流程</title>
@@ -606,13 +632,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>設定 Github SSH 金鑰</title>
-    <url>/2021/03/27/%E8%A8%AD%E5%AE%9A-Github-SSH-%E9%87%91%E9%91%B0/</url>
-    <content><![CDATA[<p> 設定 Github SSH 金鑰 <br><a href="https://ithelp.ithome.com.tw/articles/10205988">https://ithelp.ithome.com.tw/articles/10205988</a></p>
-<p>ssh-keygen 常用命令与参数 <br><a href="https://p3terx.com/archives/ssh-keygen-common-parameters.html">https://p3terx.com/archives/ssh-keygen-common-parameters.html</a></p>
-]]></content>
+    <title>算法</title>
+    <url>/2019/04/05/%E7%AE%97%E6%B3%953/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>hexo</category>
+        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
@@ -628,6 +652,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>Dev C++</tag>
         <tag>C++ 11</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>設定 Github SSH 金鑰</title>
+    <url>/2021/03/27/%E8%A8%AD%E5%AE%9A-Github-SSH-%E9%87%91%E9%91%B0/</url>
+    <content><![CDATA[<p> 設定 Github SSH 金鑰 <br><a href="https://ithelp.ithome.com.tw/articles/10205988">https://ithelp.ithome.com.tw/articles/10205988</a></p>
+<p>ssh-keygen 常用命令与参数 <br><a href="https://p3terx.com/archives/ssh-keygen-common-parameters.html">https://p3terx.com/archives/ssh-keygen-common-parameters.html</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
   </entry>
   <entry>
     <title>计算机网络 lab1</title>
@@ -662,6 +696,30 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="讨论：安装 -VirtualBox-VMWare-or-Parallels- 哪个比较好？"><a href="# 讨论：安装 -VirtualBox-VMWare-or-Parallels- 哪个比较好？" class="headerlink" title="讨论：安装 VirtualBox, VMWare, or Parallels 哪个比较好？"></a>讨论：安装 VirtualBox, VMWare, or Parallels 哪个比较好？</h3>]]></content>
       <categories>
         <category>计算机网络</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算机体系结构：(一) 硬件 --3. 通信概述</title>
+    <url>/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h3 id="一、电子设备的通信过程"><a href="# 一、电子设备的通信过程" class="headerlink" title="一、电子设备的通信过程"></a>一、电子设备的通信过程</h3><p><img src="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo1.jpg" alt></p>
+<h4 id="1- 协议：通信规则"><a href="#1- 协议：通信规则" class="headerlink" title="1. 协议：通信规则"></a>1. 协议：通信规则</h4><p><img src="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo2.jpg" alt></p>
+<h5 id="简单通信协议：只有底层协议"><a href="# 简单通信协议：只有底层协议" class="headerlink" title="简单通信协议：只有底层协议"></a>简单通信协议：只有底层协议 </h5><p>Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信<br> 编写程序需参考硬件的 “时序图”</p>
+<h5 id="复杂通信协议：底层和高层协议组合而成"><a href="# 复杂通信协议：底层和高层协议组合而成" class="headerlink" title="复杂通信协议：底层和高层协议组合而成"></a>复杂通信协议：底层和高层协议组合而成 </h5><p> 编程者要做的是学会调用 “协议程序” 的函数接口</p>
+<h4 id="2- 数据编码不一定要 -ex：单片机的串口的 -SPI，I2C- 通信"><a href="#2- 数据编码不一定要 -ex：单片机的串口的 -SPI，I2C- 通信" class="headerlink" title="2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信"></a>2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信 </h4><h4 id="3- 调制"><a href="#3- 调制" class="headerlink" title="3. 调制"></a>3. 调制</h4><h5 id="为什么需要调制？"><a href="# 为什么需要调制？" class="headerlink" title="为什么需要调制？"></a> 为什么需要调制？</h5><p>(1) 便于制作小尺寸天线 <br> 无线通信中，无线的尺寸与电磁波波长成正比，如果基波信号很低，用频率高的载波信后，就可以用尺寸小的天线接收 <br>(2) 便于对信道进行频分复用<br>(3) 能够提高信号的抗噪能力<br> 当我们说某个天线通信为 XXXX Hz 时，指的都是载波信号，而不是基带信号的频率</p>
+<h5 id="调制种类"><a href="# 调制种类" class="headerlink" title="调制种类"></a>调制种类 </h5><p>(1) 数字调制技术：<br>ASK、FSK、PSK<br>(2) 模拟调制技术：<br> 幅度调制：DSB，AM，SSB，VSB<br>角度调制：FM，PM</p>
+<h3 id="二、通信的分类"><a href="# 二、通信的分类" class="headerlink" title="二、通信的分类"></a>二、通信的分类 </h3><h4 id="串行和并行"><a href="# 串行和并行" class="headerlink" title="串行和并行"></a> 串行和并行 </h4><h4 id="同步和异步，阻塞和非阻塞"><a href="# 同步和异步，阻塞和非阻塞" class="headerlink" title="同步和异步，阻塞和非阻塞"></a> 同步和异步，阻塞和非阻塞 </h4><p> 串行通信中分为同步通信和异步通信</p>
+<h5 id="同步通信：事先通过 -“应答机制 -“来约定碰头时间点，双方都会对这个时间点做好准备"><a href="# 同步通信：事先通过 -“应答机制 -“来约定碰头时间点，双方都会对这个时间点做好准备" class="headerlink" title="同步通信：事先通过 “应答机制 “来约定碰头时间点，双方都会对这个时间点做好准备"></a>同步通信：事先通过 “应答机制 “来约定碰头时间点，双方都会对这个时间点做好准备</h5><p>Ex：单片机的 I2C 和 SPI 通信</p>
+<ul>
+<li>阻塞等：什么都不做，等约定时间点到</li>
+<li>非阻塞等：继续做自己的事，等约定时间点到 <h5 id="异步通信：碰头时间点是随机的"><a href="# 异步通信：碰头时间点是随机的" class="headerlink" title="异步通信：碰头时间点是随机的"></a> 异步通信：碰头时间点是随机的</h5>Ex：单片机的串口 (UART) 通信</li>
+<li>阻塞等：什么都不做，等随机时间到</li>
+<li>非阻塞等：继续做自己的事，等随机时间到 <br> 对异步通信来说，非阻塞等比较靠谱 <h5 id="单工，半双工，全双工"><a href="# 单工，半双工，全双工" class="headerlink" title="单工，半双工，全双工"></a> 单工，半双工，全双工</h5></li>
+</ul>
+<h3 id="三、噪声"><a href="# 三、噪声" class="headerlink" title="三、噪声"></a>三、噪声 </h3><h4 id="不同的传输距离"><a href="# 不同的传输距离" class="headerlink" title="不同的传输距离"></a> 不同的传输距离 </h4><p> 短距离通信：主要考虑内部噪声的影响，外部噪声的影响可以忽略 <br>Ex：I2C，SPI，RS232 (串口)，usb<br> 中长距离通信：除了考虑内部噪声，还要考虑外部噪声<br>Ex：中距离通信：RS485<br>Ex：长距离通信：网络通信，电话通信，广播通信</p>
+<h4 id="如何降低噪声影响？"><a href="# 如何降低噪声影响？" class="headerlink" title="如何降低噪声影响？"></a>如何降低噪声影响？</h4><h4 id="1- 内部噪声：通过各种滤波电路过滤噪声"><a href="#1- 内部噪声：通过各种滤波电路过滤噪声" class="headerlink" title="1. 内部噪声：通过各种滤波电路过滤噪声"></a>1. 内部噪声：通过各种滤波电路过滤噪声 </h4><h4 id="2- 外部噪声"><a href="#2- 外部噪声" class="headerlink" title="2. 外部噪声"></a>2. 外部噪声</h4><p>(1) 提高信号能量，提高信号的抗干扰能力（无线传输可用）<br>(2) 屏蔽网 (屏蔽网) (有线传输)<br>(3) 传输差分信号（有线传输）<br>Ex：USB (距离近，使用是为了提高质量)，RS485 (无中继器传输距离不超过 1200 米)，网络<br> 芯片外部 90% 通信都是串行通信，传输距离较长时需使用差分信号传输<br>(例外，ex：CPU 芯片和内存芯片的通信时并行的)</p>
+<h3 id="通信例子"><a href="# 通信例子" class="headerlink" title="通信例子"></a>通信例子</h3><h4 id="1- 有线通信"><a href="#1- 有线通信" class="headerlink" title="1. 有线通信"></a>1. 有线通信</h4><h4 id="2- 无线远距离"><a href="#2- 无线远距离" class="headerlink" title="2. 无线远距离"></a>2. 无线远距离</h4><h4 id="3- 无线近距离"><a href="#3- 无线近距离" class="headerlink" title="3. 无线近距离"></a>3. 无线近距离</h4>]]></content>
+      <categories>
+        <category>计算机体系结构</category>
       </categories>
   </entry>
   <entry>

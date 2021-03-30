@@ -24,9 +24,9 @@
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
 <meta property="og:type" content="website">
-<meta property="og:title" content="Be Friend with Time">
+<meta property="og:title" content="前進機器視覺">
 <meta property="og:url" content="https://wangxchun.github.io/index.html">
-<meta property="og:site_name" content="Be Friend with Time">
+<meta property="og:site_name" content="前進機器視覺">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
@@ -44,7 +44,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>Be Friend with Time</title>
+<title>前進機器視覺</title>
   
 
 
@@ -105,10 +105,10 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Be Friend with Time</h1>
+      <h1 class="site-title">前進機器視覺</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">learn diary</p>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
   </div>
 
   <div class="site-nav-right">
@@ -171,7 +171,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -239,7 +239,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
+      <meta itemprop="name" content="前進機器視覺">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -253,10 +253,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-03-29 08:57:52 / 修改時間：13:53:00" itemprop="dateCreated datePublished" datetime="2021-03-29T08:57:52+08:00">2021-03-29</time>
+      <time title="創建時間：2021-03-29 08:57:52" itemprop="dateCreated datePublished" datetime="2021-03-29T08:57:52+08:00">2021-03-29</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-30 15:46:23" itemprop="dateModified" datetime="2021-03-30T15:46:23+08:00">2021-03-30</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -281,9 +287,10 @@
 <h4 id="深度学习爆发三要素"><a href="# 深度学习爆发三要素" class="headerlink" title="深度学习爆发三要素"></a>深度学习爆发三要素 </h4><p> 数据、算法、算力</p>
 <h4 id="机器学习三巨头"><a href="# 机器学习三巨头" class="headerlink" title="机器学习三巨头"></a>机器学习三巨头 </h4><p>Hinton：BP 算法<br>Lecun：卷积神经网络<br>Bengio：预训练和自动编码器<br> 吴恩达：创建 Coursera 和 Google Brain</p>
 <p><img src="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo1.jpg" alt></p>
-<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a> 介绍 </h4><p><img src="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\delta w_i = \eta (t-y) x_i$<br> 输入节点：<br>输出节点：<br>权向量：<br>偏置因子：b（也可以看成是 x_0=1）<br>激活函数：$$sign () =<br>\begin {cases}<br>1,  &amp; \text {x \ge 0} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}</p>
-<p>$$</p>
-<h4 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子 </h4><h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a> 三、</h3>
+<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a> 介绍 </h4><p><img src="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\Delta w_i = \eta (t-y) x_i$<br> 输入节点：$x_1, x_2, x_3$<br>输出节点：$y$<br>权向量：$w_1, w_2, w_3$<br>偏置因子：$b$（也可以看成是 $x_0=1$）<br>激活函数：$sign (x) =<br>\begin {cases}<br>1,  &amp; \text {$x \geq 0$} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}<br>$</p>
+<h4 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子 </h4><p> 题目：假设平面坐标系上有四个点，$(3,3),(4,3)$ 这两个点的标签为 $1$；$(1,1),(0,2)$ 这两个点的标签为 $-1$。构建神经网络来分类。</p>
+<p>思路：我们要分类的数据是 $2$ 维数据，所以只需要 $2$ 个输入节点，我们可以把神经元的偏置值也设置成一个节点，这样我们需要 $3$ 个输入节点。输入数据有 $4$ 个 $(1,3,3),(1,4,3),(1,1,1),(1,0,2)$ 数据对应的标签为 $(1,1,-1,-1)$。初始化权值 $w_0,w_1,w_2$，取 $-1$ 到 $1$ 的随机数。学习率设置为 $0.11$，激活函数为 sign 函数。</p>
+<h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a>三、</h3>
       
     </div>
 
@@ -318,7 +325,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
+      <meta itemprop="name" content="前進機器視覺">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -400,7 +407,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
+      <meta itemprop="name" content="前進機器視覺">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -414,10 +421,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-03-28 10:42:55 / 修改時間：23:12:45" itemprop="dateCreated datePublished" datetime="2021-03-28T10:42:55+08:00">2021-03-28</time>
+      <time title="創建時間：2021-03-28 10:42:55" itemprop="dateCreated datePublished" datetime="2021-03-28T10:42:55+08:00">2021-03-28</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-30 18:56:32" itemprop="dateModified" datetime="2021-03-30T18:56:32+08:00">2021-03-30</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -439,19 +452,52 @@
     
     <div class="post-body" itemprop="articleBody">
           <h3 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h3><h4 id="1- 数据挖掘和机器学习的关系"><a href="#1- 数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2- 训练数据 -vs- 验证数据 -vs- 测试数据"><a href="#2- 训练数据 -vs- 验证数据 -vs- 测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3- 监督学习 -vs- 无监督学习 -vs- 半监督学习"><a href="#3- 监督学习 -vs- 无监督学习 -vs- 半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4- 回归 -vs- 分类 -vs- 聚类"><a href="#4- 回归 -vs- 分类 -vs- 聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="# 一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a> 一、一元线性回归概念 </h3><p> 回归：高尔顿提出 <br> 回归分析：建立方程模拟两个或多个变量之间如何关联 <br> 一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟 <br> 一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率</p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
-<h3 id="三、相关系数和决定系数"><a href="# 三、相关系数和决定系数" class="headerlink" title="三、相关系数和决定系数"></a>三、相关系数和决定系数 </h3><h4 id="相关系数：衡量线性相关性的强弱"><a href="# 相关系数：衡量线性相关性的强弱" class="headerlink" title="相关系数：衡量线性相关性的强弱"></a> 相关系数：衡量线性相关性的强弱</h4><p>$r_{xy} = {{\sum {(X_i - \bar X)(Y_i - \bar Y)}} \over {\sqrt {\sum {(X_i - \bar X)^2 (Y_i - \bar Y)^2}}} }$  </p>
-<h4 id="决定系数"><a href="# 决定系数" class="headerlink" title="决定系数"></a>决定系数 </h4><p> 总平方和（SST）：$\sum_{i=0}^n (y_i - \bar y)^2$<br>残差平方和（SSE）：$\sum_{i=0}^n (y_i - \hat y)^2$<br>回归平方和（SSR）：$\sum_{i=0}^n (\hat y - \bar y)^2$<br>它们三者的关系是：$SST = SSE + SSR$<br>决定系数：$R^2 = {SSR \over SST} = 1 - {SSE \over SST}$</p>
-<h3 id="四、梯度下降法"><a href="# 四、梯度下降法" class="headerlink" title="四、梯度下降法"></a>四、梯度下降法 </h3><h4 id="概念"><a href="# 概念" class="headerlink" title="概念"></a> 概念 </h4><p> 缺点：初始值的选取会影响到最后的结果，只能找到局部最优解<br>(凸函数的局部最值就是全局最值)<br>repeat until convergence<br>{<br>    $\qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,\theta_1)$ $\quad (for\quad j = 0 \quad and \quad j = 1)$<br>}</p>
-<p>同步更新：<br>$temp0 := \theta_0 - \alpha {\partial \over \partial\theta_0} J (\theta_0,\theta_1)$<br>$temp1 := \theta_1 - \alpha {\partial \over \partial\theta_1} J (\theta_0,\theta_1)$<br>$\theta_0 := temp0$<br>$\theta_0 := temp1$</p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
+<h3 id="三、相关系数和决定系数"><a href="# 三、相关系数和决定系数" class="headerlink" title="三、相关系数和决定系数"></a>三、相关系数和决定系数 </h3><h4 id="相关系数：衡量线性相关性的强弱"><a href="# 相关系数：衡量线性相关性的强弱" class="headerlink" title="相关系数：衡量线性相关性的强弱"></a> 相关系数：衡量线性相关性的强弱</h4><p>$\displaystyle r_{xy} = {{\sum {(X_i - \bar X)(Y_i - \bar Y)}} \over {\sqrt {\sum {(X_i - \bar X)^2 (Y_i - \bar Y)^2}}} }$  </p>
+<h4 id="决定系数"><a href="# 决定系数" class="headerlink" title="决定系数"></a>决定系数 </h4><p> 总平方和（SST）：$\sum_{i=0}^n (y_i - \bar y)^2$<br>残差平方和（SSE）：$\sum_{i=0}^n (y_i - \hat y)^2$<br>回归平方和（SSR）：$\sum_{i=0}^n (\hat y - \bar y)^2$<br>它们三者的关系是：$SST = SSE + SSR$<br>决定系数：$\displaystyle R^2 = {SSR \over SST} = 1 - {SSE \over SST}$</p>
+<h3 id="四、梯度下降法"><a href="# 四、梯度下降法" class="headerlink" title="四、梯度下降法"></a>四、梯度下降法 </h3><h4 id="概念"><a href="# 概念" class="headerlink" title="概念"></a> 概念 </h4><p> 缺点：初始值的选取会影响到最后的结果，只能找到局部最优解<br>(凸函数的局部最值就是全局最值)<br>repeat until convergence<br>{<br>    $\displaystyle \qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,\theta_1)$ $\quad (for\quad j = 0 \quad and \quad j = 1)$<br>}</p>
+<p>同步更新：<br>$\displaystyle temp0 := \theta_0 - \alpha {\partial \over \partial\theta_0} J (\theta_0,\theta_1)$<br>$\displaystyle temp1 := \theta_1 - \alpha {\partial \over \partial\theta_1} J (\theta_0,\theta_1)$<br>$\theta_0 := temp0$<br>$\theta_0 := temp1$</p>
 <p>学习率 $\alpha$ 不能太大也不能太小，<br>太大可能会导致在收敛值附近不断震荡，一直无法收敛；<br>太小会导致收敛速度过慢</p>
-<h4 id="用梯度下降法来求解线性回归"><a href="# 用梯度下降法来求解线性回归" class="headerlink" title="用梯度下降法来求解线性回归"></a>用梯度下降法来求解线性回归</h4><p>$h_\theta (x) = \theta_0 + \theta_1x -(1)$<br>$J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br>$ 将 (1) 式代入 (2) 式 $<br>${\partial \over \partial\theta_0} J (\theta_0,\theta_1) = {1 \over m}\sum_{i=0}^m (h_\theta (x_i) - y_i)$ </p>
-<h3 id="五、sklearn- 实现一元线性回归"><a href="# 五、sklearn- 实现一元线性回归" class="headerlink" title="五、sklearn 实现一元线性回归"></a>五、sklearn 实现一元线性回归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x_data = data [:,<span class="number">0</span>,np.newaxis]</span><br><span class="line">y_data = data [:,<span class="number">1</span>,np.newaxis]</span><br><span class="line"><span class="comment"># 创建并拟合模型</span></span><br><span class="line">model = LinearRegression ()</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, model.predict (x_data), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
+<h4 id="用梯度下降法来求解线性回归"><a href="# 用梯度下降法来求解线性回归" class="headerlink" title="用梯度下降法来求解线性回归"></a>用梯度下降法来求解线性回归</h4><p>$h_\theta (x) = \theta_0 + \theta_1x -(1)$<br>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br>$ 将 (1) 式代入 (2) 式 $<br>$\displaystyle {\partial \over \partial\theta_0} J (\theta_0,\theta_1) = {1 \over m}\sum_{i=0}^m (h_\theta (x_i) - y_i)$ </p>
+<h3 id="五、sklearn- 实现一元线性回归（sklearn- 使用的是标准方程法）"><a href="# 五、sklearn- 实现一元线性回归（sklearn- 使用的是标准方程法）" class="headerlink" title="五、sklearn 实现一元线性回归（sklearn 使用的是标准方程法）"></a>五、sklearn 实现一元线性回归（sklearn 使用的是标准方程法）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x_data = data [:,<span class="number">0</span>,np.newaxis]</span><br><span class="line">y_data = data [:,<span class="number">1</span>,np.newaxis]</span><br><span class="line"><span class="comment"># 创建并拟合模型</span></span><br><span class="line">model = LinearRegression ()</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, model.predict (x_data), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
 <h3 id="六、多元线性回归"><a href="# 六、多元线性回归" class="headerlink" title="六、多元线性回归"></a>六、多元线性回归</h3><h4 id="Hypothesis"><a href="#Hypothesis" class="headerlink" title="Hypothesis:"></a>Hypothesis:</h4><p>$h_\theta (x) = \theta^Tx = \theta_0x_1 + \theta_2x_2 + … + \theta_nx_n$</p>
 <h4 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters:"></a>Parameters:</h4><p>theta_0,theta_1,…,theta_n</p>
-<h4 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h4><p>$J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$</p>
-<h4 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h4><p>repeat until convergence<br>{<br>    $\qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,…,\theta_n)$<br>    $\quad\qquad (for\quad j = 0,1,…,n)$<br>}</p>
-<h3 id="七、多项式回归"><a href="# 七、多项式回归" class="headerlink" title="七、多项式回归"></a>七、多项式回归</h3>
+<h4 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h4><p>$\displaystyle J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$</p>
+<h4 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h4><p>repeat until convergence<br>{<br>    $\displaystyle \qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,…,\theta_n)$<br>    $\displaystyle \quad\qquad (for\quad j = 0,1,…,n)$<br>}</p>
+<h3 id="七、多项式回归"><a href="# 七、多项式回归" class="headerlink" title="七、多项式回归"></a>七、多项式回归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> PolynomialFeatures</span><br><span class="line"><span class="comment"># 定义多项式回归，degree 的值可以调节多项式的特征</span></span><br><span class="line">poly_reg = PolynomialFeatures (degree=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 特征处理</span></span><br><span class="line">x_poly =  poly_reg.fit_transform (x_data)</span><br><span class="line"><span class="comment"># 定义回归模型</span></span><br><span class="line">lin_reg = LinearRegression ()</span><br><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">lin_reg.fit (x_poly, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, lin_reg.predict (x_poly), c=<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
+<h3 id="八、标准方程法（vs- 梯度下降法）"><a href="# 八、标准方程法（vs- 梯度下降法）" class="headerlink" title="八、标准方程法（vs 梯度下降法）"></a>八、标准方程法（vs 梯度下降法）</h3><h4 id="概念 -1"><a href="# 概念 -1" class="headerlink" title="概念"></a>概念 </h4><p>$\displaystyle J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br> 令 $\displaystyle {\partial \over \partial\theta_j} J (\theta)=…=0$<br>求解：$\theta_1,\theta_2,…,\theta_n$</p>
+<p>例：X 为 $4 \times 5$ 矩阵，$4$ 个样本，$4+1$ 个参数</p>
+<p>$X=<br>\begin {bmatrix}<br>    1 &amp; 2104 &amp; 5 &amp; 1 &amp; 45 \\<br>    1 &amp; 1416 &amp; 3 &amp; 2 &amp; 40 \\<br>    1 &amp; 1534 &amp; 3 &amp; 2 &amp; 30 \\<br>    1 &amp; 852 &amp; 2 &amp; 1 &amp; 36 \\<br>\end {bmatrix}<br>$ $\quad\quad$ $w=<br>\begin {bmatrix}<br>    w_0 \\<br>    w_1 \\<br>    w_2 \\<br>    w_3 \\<br>    w_4 \\<br>\end {bmatrix}<br>$ $\quad\quad$ $y=<br>\begin {bmatrix}<br>    460 \\<br>    232 \\<br>    315 \\<br>    178 \\<br>\end {bmatrix}<br>$</p>
+<p>$\sum_{i=0}^m (h_w (x_i) - y_i)^2=(y-Xw)^T (y-Xw)$</p>
+<p>$\displaystyle {\partial (y-Xw)^T (y-Xw) \over \partial w} = 0$<br>$\displaystyle {\partial (y^Ty - y^TXw - w^TX^Ty + w^TX^TXw) \over \partial w} = 0$<br>$\displaystyle {\partial y^Ty \over \partial w} - {\partial y^TXw \over \partial w} - {\partial w^TX^Ty \over \partial w} + {\partial w^TX^TXw \over \partial w} = 0$<br>$0 - X^Ty - X^Ty + 2X^TXw = 0$<br>$X^TXw = X^Ty$<br>$w = (X^TX)^(-1) X^Ty$<br>注释：矩阵的求导</p>
+<h4 id="标准方程法 -vs- 梯度下降法"><a href="# 标准方程法 -vs- 梯度下降法" class="headerlink" title="标准方程法 vs 梯度下降法"></a>标准方程法 vs 梯度下降法</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>梯度下降法</th>
+<th>标准方程法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>缺点：<br> 需要选择合适的学习率 <br> 需要迭代很多个周期 <br> 只能得到最优解的近似值</td>
+<td>优点：<br> 不需要学习率 <br> 不需要迭代 <br> 可以得到全局最优解</td>
+</tr>
+<tr>
+<td>优点：<br> 当特征值非常多的时候也可以很好的工作</td>
+<td>缺点：<br> 需要计算 $(𝑋^T𝑋)^{−1}$ 时间复杂度大约是 O ($n^3$) <br>n 是特征数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="自己写标准方程法"><a href="# 自己写标准方程法" class="headerlink" title="自己写标准方程法"></a>自己写标准方程法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">weights</span> (<span class="params">xArr, yArr</span>)</span></span><br><span class="line">	xMat = np.mat (xArr)</span><br><span class="line">	yMat = np.mat (yArr)</span><br><span class="line">	xTx = xMat.T * xMat <span class="comment"># 矩阵乘法</span></span><br><span class="line">	<span class="comment"># 如果矩阵的 det 值为零，说明该矩阵没有逆矩阵</span></span><br><span class="line">	<span class="keyword">if</span> np.linalg.det (xTx) == <span class="number">0.0</span>:</span><br><span class="line">		<span class="built_in">print</span> (<span class="string">&quot;This matrix cannot do inverse&quot;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="comment">#xTx.I 为 xTx 的逆矩阵</span></span><br><span class="line">	ws = xTx.I * xMat.T * yMat</span><br><span class="line">	<span class="keyword">return</span> ws</span><br></pre></td></tr></table></figure>
+<h3 id="九、特征缩放"><a href="# 九、特征缩放" class="headerlink" title="九、特征缩放"></a>九、特征缩放 </h3><p> 假设不同的特征的取值范围相差非常大，就会造成天然的权重不一 <br> 解决方法：特征缩放</p>
+<h4 id="数据归一化"><a href="# 数据归一化" class="headerlink" title="数据归一化"></a>数据归一化 </h4><p> 转化成 $(0,1)$ 之间：$newValue = \displaystyle {oldValue - min \over max - min}$</p>
+<p>转化成 $(-1,1)$ 之间：$newValue = (\displaystyle {oldValue - min \over max - min}-0.5) \times 2$</p>
+<h4 id="数据标准化"><a href="# 数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h4><p>$newValue = \displaystyle {oldValue - u \over s}$ 其中 u 为数据的平均值，s 为数据的方差</p>
+<h3 id="十、交叉验证法"><a href="# 十、交叉验证法" class="headerlink" title="十、交叉验证法"></a>十、交叉验证法 </h3><p> 若样本数据较少时，可以一部分作为训练集，一部分作为测试集，没有验证集。<br>例如有 100 组数据，可以 80 组作为训练集，20 组作为测试集。<br>但是当样本更少，8/2 拆分也不适合的时候，就可以使用交叉验证法<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo2.jpg" alt></p>
+<h3 id="十一、过拟合与正则化"><a href="# 十一、过拟合与正则化" class="headerlink" title="十一、过拟合与正则化"></a>十一、过拟合与正则化 </h3><h4 id="过拟合"><a href="# 过拟合" class="headerlink" title="过拟合"></a> 过拟合</h4><p><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E5%9B%9E%E5%BD%92/photo3.jpg" alt></p>
+<h4 id="防止过拟合："><a href="# 防止过拟合：" class="headerlink" title="防止过拟合："></a>防止过拟合：</h4><h5 id="减少特征"><a href="# 减少特征" class="headerlink" title="减少特征"></a>减少特征 </h5><h5 id="增加数据量"><a href="# 增加数据量" class="headerlink" title="增加数据量"></a> 增加数据量 </h5><h5 id="正则化"><a href="# 正则化" class="headerlink" title="正则化"></a> 正则化</h5>
       
     </div>
 
@@ -486,7 +532,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
+      <meta itemprop="name" content="前進機器視覺">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -560,317 +606,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/C++%E7%9A%84#include/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/27/C++%E7%9A%84#include/" class="post-title-link" itemprop="url">C++ 的 #include</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-03-27 18:04:38 / 修改時間：18:07:49" itemprop="dateCreated datePublished" datetime="2021-03-27T18:04:38+08:00">2021-03-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義 </h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案</h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
-<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
-<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/" class="post-title-link" itemprop="url">C++ 萬能標題檔案</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-03-27 17:56:35 / 修改時間：17:57:13" itemprop="dateCreated datePublished" datetime="2021-03-27T17:56:35+08:00">2021-03-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p> 萬能標頭檔案 </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/27/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">C++ 小知识点总结</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-03-27 16:22:55" itemprop="dateCreated datePublished" datetime="2021-03-27T16:22:55+08:00">2021-03-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-28 13:47:45" itemprop="dateModified" datetime="2021-03-28T13:47:45+08:00">2021-03-28</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="返回多个参数的方法："><a href="# 返回多个参数的方法：" class="headerlink" title="返回多个参数的方法："></a>返回多个参数的方法：</h3><h4 id="1- 定义结构体"><a href="#1- 定义结构体" class="headerlink" title="1. 定义结构体"></a>1. 定义结构体 </h4><h4 id="2- 利用引用参数"><a href="#2- 利用引用参数" class="headerlink" title="2. 利用引用参数"></a>2. 利用引用参数</h4><h3 id="解决 -“数组大小必须事先决定”- 这个问题"><a href="# 解决 -“数组大小必须事先决定”- 这个问题" class="headerlink" title="解决 “数组大小必须事先决定” 这个问题"></a> 解决 “数组大小必须事先决定” 这个问题</h3><h4 id="1- 使用 -new- 和 -delete，有程序员自行分配内"><a href="#1- 使用 -new- 和 -delete，有程序员自行分配内" class="headerlink" title="1. 使用 new 和 delete，有程序员自行分配内"></a>1. 使用 new 和 delete，有程序员自行分配内</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 输入长度：&quot;</span>; </span><br><span class="line">    cin &gt;&gt; size; </span><br><span class="line">    <span class="keyword">int</span> *arr = <span class="keyword">new</span> <span class="keyword">int</span> [size]&#123;<span class="number">0</span>&#125;; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 输入元素值：&quot;</span> &lt;&lt; endl; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123; </span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;arr [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] =&quot;</span>; </span><br><span class="line">        cin &gt;&gt; arr [i]; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 显示元素值：&quot;</span> &lt;&lt; endl; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;arr [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] =&quot;</span> &lt;&lt; arr [i]</span><br><span class="line">             &lt;&lt; endl; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span> [] arr; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注释：二维矩阵就是多段一维数组 <br> 例如需要一个 3X6 的矩阵<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> **arr = <span class="keyword">new</span> <span class="keyword">int</span>*[<span class="number">3</span>]; <span class="comment">//arr [0] 和 arr [1] 分别存储一维数组的位置</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        arr [i] = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">6</span>]&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 既然可以动态分配，那每一段数组的长度当然可以不一样</span></span><br><span class="line">    <span class="comment">//arr [0] = new int [3]&#123;0&#125;;</span></span><br><span class="line">    <span class="comment">//arr [1] = new int [5]&#123;0&#125;;</span></span><br><span class="line">    <span class="comment">//arr [3] = new int [3]&#123;0&#125;;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">6</span>; j++) &#123;</span><br><span class="line">            cout &lt;&lt; arr [i][j] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">delete</span> [] arr [i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> [] arr; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="2- 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 -vector- 之类的容器"><a href="#2- 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 -vector- 之类的容器" class="headerlink" title="2. 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 vector 之类的容器"></a>2. 动态分配会使得程序难以理解，在需要建立长度不定的容器时，建议使用 vector 之类的容器 </h4><h3 id="static- 的使用时机"><a href="#static- 的使用时机" class="headerlink" title="static 的使用时机"></a>static 的使用时机</h3><h4 id="1- 改变变量的存储方式和生存周期"><a href="#1- 改变变量的存储方式和生存周期" class="headerlink" title="1. 改变变量的存储方式和生存周期"></a>1. 改变变量的存储方式和生存周期</h4><p> 局部变量</p>
-<h4 id="2- 限制作用域"><a href="#2- 限制作用域" class="headerlink" title="2. 限制作用域"></a>2. 限制作用域 </h4><p> 全局函数和变量</p>
-<h4 id="3- 唯一性"><a href="#3- 唯一性" class="headerlink" title="3. 唯一性"></a>3. 唯一性 </h4><p> 函数成员</p>
-<h3 id="堆和栈的比较"><a href="# 堆和栈的比较" class="headerlink" title="堆和栈的比较"></a>堆和栈的比较 </h3><h4 id="堆是由低地址向高地址扩充的"><a href="# 堆是由低地址向高地址扩充的" class="headerlink" title="堆是由低地址向高地址扩充的"></a> 堆是由低地址向高地址扩充的 </h4><h4 id="堆是不连续的空间"><a href="# 堆是不连续的空间" class="headerlink" title="堆是不连续的空间"></a> 堆是不连续的空间 </h4><h4 id="在申请空间后，栈的分配要比堆还快"><a href="# 在申请空间后，栈的分配要比堆还快" class="headerlink" title="在申请空间后，栈的分配要比堆还快"></a> 在申请空间后，栈的分配要比堆还快 </h4><h4 id="生命周期"><a href="# 生命周期" class="headerlink" title="生命周期"></a> 生命周期</h4><h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>volatile 可以保证对特殊地址的稳定访问，通常用到如下几个地方</p>
-<h4 id="1- 中断服务程式修改的供其他程式检测的变量"><a href="#1- 中断服务程式修改的供其他程式检测的变量" class="headerlink" title="1. 中断服务程式修改的供其他程式检测的变量"></a>1. 中断服务程式修改的供其他程式检测的变量</h4><h4 id="2- 多工环境下各任务共享的标志"><a href="#2- 多工环境下各任务共享的标志" class="headerlink" title="2. 多工环境下各任务共享的标志"></a>2. 多工环境下各任务共享的标志</h4><h4 id="3- 存储器对应的硬体暂存器也要加 -volatile- 说明，因为每次对它的读写都可能有不同意义"><a href="#3- 存储器对应的硬体暂存器也要加 -volatile- 说明，因为每次对它的读写都可能有不同意义" class="headerlink" title="3. 存储器对应的硬体暂存器也要加 volatile 说明，因为每次对它的读写都可能有不同意义"></a>3. 存储器对应的硬体暂存器也要加 volatile 说明，因为每次对它的读写都可能有不同意义</h4>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/C++%E8%BF%90%E7%AE%97%E7%AC%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/27/C++%E8%BF%90%E7%AE%97%E7%AC%A6/" class="post-title-link" itemprop="url">C++ 运算符</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-03-27 15:39:47 / 修改時間：17:57:35" itemprop="dateCreated datePublished" datetime="2021-03-27T15:39:47+08:00">2021-03-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。</p>
-<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
-<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -880,7 +615,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
+      <meta itemprop="name" content="前進機器視覺">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -946,7 +681,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Be Friend with Time">
+      <meta itemprop="name" content="前進機器視覺">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -986,6 +721,305 @@
     <div class="post-body" itemprop="articleBody">
           <h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a> 显示目录下的文件 </h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录 <br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br>dir/ah 只显示当前路径下隐藏文件和目录 <br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
 <h3 id="Linux- 与 -Windows- 命令对比"><a href="#Linux- 与 -Windows- 命令对比" class="headerlink" title="Linux 与 Windows 命令对比"></a>Linux 与 Windows 命令对比 </h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xzwspy/article/details/80183849">https://blog.csdn.net/xzwspy/article/details/80183849</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/git%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前進機器視覺">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/27/git%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">git 安装</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-03-27 15:04:16 / 修改時間：15:04:36" itemprop="dateCreated datePublished" datetime="2021-03-27T15:04:16+08:00">2021-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ScottePerk/article/details/81571251">https://blog.csdn.net/ScottePerk/article/details/81571251</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/%E5%8F%83%E8%80%83%EF%BC%9A%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前進機器視覺">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/27/%E5%8F%83%E8%80%83%EF%BC%9A%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/" class="post-title-link" itemprop="url">參考：架設網站的第一步</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-03-27 14:19:42 / 修改時間：14:43:08" itemprop="dateCreated datePublished" datetime="2021-03-27T14:19:42+08:00">2021-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>從零開始：使用 npm 套件 <br><a target="_blank" rel="noopener" href="https://medium.com/html-test/%">https://medium.com/html-test/%</a> E5% BE%9E% E9%9B% B6% E9%96%8B% E5% A7%8B-% E4% BD% BF% E7%94% A8npm% E5% A5%97% E4% BB% B6-317beefdf182<br> 介紹 npm 的概念與使用，可以與使用 hexo 的經驗和架構結合參考</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/%E8%A8%AD%E5%AE%9A-Github-SSH-%E9%87%91%E9%91%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前進機器視覺">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/27/%E8%A8%AD%E5%AE%9A-Github-SSH-%E9%87%91%E9%91%B0/" class="post-title-link" itemprop="url">設定 Github SSH 金鑰</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-03-27 14:07:17 / 修改時間：14:22:50" itemprop="dateCreated datePublished" datetime="2021-03-27T14:07:17+08:00">2021-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p> 設定 Github SSH 金鑰 <br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10205988">https://ithelp.ithome.com.tw/articles/10205988</a></p>
+<p>ssh-keygen 常用命令与参数 <br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/ssh-keygen-common-parameters.html">https://p3terx.com/archives/ssh-keygen-common-parameters.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/25/%E5%9C%A8hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前進機器視覺">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/25/%E5%9C%A8hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="post-title-link" itemprop="url">在 hexo 文章中插入图片</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-03-25 19:04:24 / 修改時間：19:09:28" itemprop="dateCreated datePublished" datetime="2021-03-25T19:04:24+08:00">2021-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="绝对路径"><a href="# 绝对路径" class="headerlink" title="绝对路径"></a>绝对路径 </h3><p> 当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/img 文件夹中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](&#x2F;images&#x2F;image.jpg)</span><br></pre></td></tr></table></figure></p>
+<h3 id="相对路径"><a href="# 相对路径" class="headerlink" title="相对路径"></a>相对路径 </h3><p> 将_config.yml 文件中的配置项 post_asset_folder 设为 true 后，<br>执行命令 $ hexo new post_name，在 source/posts 中会生成文章 post_name.md 和同名文件夹 post_name。<br>将图片资源放在 post_name 中，文章就可以使用相对路径引用图片资源了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure></p>
+<h3 id="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"><a href="# 如果希望图片在文章和首页中同时显示，可以使用标签插件语法" class="headerlink" title="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"></a>如果希望图片在文章和首页中同时显示，可以使用标签插件语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
