@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="google-site-verification" content="SEuuKcxiY0Z6R9aAPIZyU5Y9rFqpgO9gKES--zhFX24" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="機器視覺 &#x2F; 機器學習 &#x2F; C++">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chris自强不息">
+<meta property="og:url" content="https://wangxchun.github.io/page/5/index.html">
+<meta property="og:site_name" content="Chris自强不息">
+<meta property="og:description" content="機器視覺 &#x2F; 機器學習 &#x2F; C++">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Chris Wang">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/page/5/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>Chris自强不息</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Chris自强不息</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chris Wang"
+      src="/img/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Chris Wang</p>
+  <div class="site-description" itemprop="description">機器視覺 / 機器學習 / C++</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chriswang0205@outlook.com" title="E-Mail → mailto:chriswang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/" class="post-title-link" itemprop="url">C++ 运算符</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2018-09-23 15:39:47" itemprop="dateCreated datePublished" datetime="2018-09-23T15:39:47+08:00">2018-09-23</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-30 08:51:21" itemprop="dateModified" datetime="2021-03-30T08:51:21+08:00">2021-03-30</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。</p>
+<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
+<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/13/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/09/13/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/" class="post-title-link" itemprop="url">C++ 復習 --1.C++ 基礎入門</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2018-09-13 18:17:47" itemprop="dateCreated datePublished" datetime="2018-09-13T18:17:47+08:00">2018-09-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-27 17:58:11" itemprop="dateModified" datetime="2021-03-27T17:58:11+08:00">2021-03-27</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E5%BE%A9%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++復習</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="https://wangxchun.github.io/2018/09/13/C++% E5%9F% BA% E7% A4%8E% E5%85% A5% E9%96%80/">C++ 復習 —1.C++ 基礎入門</a><br><a href="https://wangxchun.github.io/2018/10/14/C++% E5%85% A5% E9%96%80% E4% B9%8B% E5% BE%8C/">C++ 復習 —2.C++ 入門之後</a><br><a href="https://wangxchun.github.io/2019/03/14/C++% E9%80% B2% E9%9A%8E/">C++ 復習 —3.C++ 進階</a></p>
+<h3 id="一、認識 -C"><a href="# 一、認識 -C" class="headerlink" title="一、認識 C++"></a>一、認識 C++</h3><h3 id="二、數據類型"><a href="# 二、數據類型" class="headerlink" title="二、數據類型"></a>二、數據類型 </h3><h4 id="1- 基本數據類型"><a href="#1- 基本數據類型" class="headerlink" title="1. 基本數據類型"></a>1. 基本數據類型</h4><h4 id="2- 變量"><a href="#2- 變量" class="headerlink" title="2. 變量"></a>2. 變量</h4><h5 id="1- 變量的聲明和定義"><a href="#1- 變量的聲明和定義" class="headerlink" title="(1) 變量的聲明和定義"></a>(1) 變量的聲明和定義</h5><p> 聲明一個變量只是將變量名稱標識符的有關信息告訴編譯器，使編譯器 “認識” 該標識符，不一定分配記憶體空間。<br>定義一個變量意味著給變量分配内存空間，變量名就是對相應記憶體單元的命名。<br>在 C++ 程式中，大多數情況下，聲明變量的同時也就完成了變量的定義，只有聲明外部變量時例外。</p>
+<h5 id="2- 外部變量"><a href="#2- 外部變量" class="headerlink" title="(2) 外部變量"></a>(2) 外部變量 </h5><p> 外部變量：一個變量除了在定義它的原始檔案中可以使用，還能被其他檔案使用。<br>命名空間作用域中定義的變量，默認情況下都是外部變量，若其他檔案要使用，則要加上 extern 關鍵字聲明。<br>定義性聲明（1. 命名空間中不加 extern 關鍵字的聲明 2.extern 聲明同時指定了初值）<br>引用性聲明（只有使用 extern 關鍵字，extern int i;）</p>
+<h5 id="3- 變量的存儲類型"><a href="#3- 變量的存儲類型" class="headerlink" title="(3) 變量的存儲類型"></a>(3) 變量的存儲類型 </h5><p>auto：采用堆棧方式分配記憶體空間，屬於暫時性存儲。<br>register：存放在通用寄存器中。(register 存取速度優於 RAM)<br>extern：在所有函數和程式段中都可以引用。<br>static：在記憶體中是以固定地址存放的，在整個程式運行期間都有效。<br>(a) 靜態局部變量<br> 靜態局部變量的生存期為整個源程式，但是其作用域仍與自動變量相同，只能在定義該變量的函數内使用該變量。雖然離開定義它的函數後不能使用，但如再次調用定義它的函數，它又可繼續使用，且保存了前次被調用後留下的值。<br>因此，當多次調用一個函數且要求在調用之間保留某些變量的值時，可考慮采用靜態局部變量。雖然用全局變量也可以達到上述目的，但全局變量有時會造成意外的副作用（全局變量在離開函數之後，依舊可以操作）。<br>(b) 靜態全局變量（與 static 函數類似，内部函數和外部函數，内部函數又稱爲靜態函數）<br>非靜態全局變量的作用域是整個源程式，當一個源程式由多個原始檔案組成時，非靜態的全局變量在各個原始檔案中都是有效的（只要加上 extern 聲明）。<br>而靜態全局變量則只在定義該變量的原始檔案内有效，在同一個源程式中的其他原始檔案不能使用它，因此可以避免在其他原始檔案中引起錯誤。<br>    把局部變量改變成靜態變量後是改變了它的存儲方式，即改變了它的生存期。<br>    把全局變量改變成靜態變量，則是改變了它的作用域，限制了它的使用範圍。</p>
+<h4 id="3- 常量"><a href="#3- 常量" class="headerlink" title="3. 常量"></a>3. 常量</h4><h5 id="1- 宏常量"><a href="#1- 宏常量" class="headerlink" title="(1) 宏常量"></a>(1) 宏常量</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> day 7</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-const- 修飾的變量"><a href="#2-const- 修飾的變量" class="headerlink" title="(2) const 修飾的變量"></a>(2) const 修飾的變量</h5><p>const int month = 12;</p>
+<h5 id="3- 符號常量"><a href="#3- 符號常量" class="headerlink" title="(3) 符號常量"></a>(3) 符號常量</h5><p>const float PI = 3.1415926;</p>
+<h4 id="4- 關鍵字"><a href="#4- 關鍵字" class="headerlink" title="4. 關鍵字"></a>4. 關鍵字 </h4><h4 id="5- 標識符命名規則"><a href="#5- 標識符命名規則" class="headerlink" title="5. 標識符命名規則"></a>5. 標識符命名規則</h4><h3 id="三、運算符、表達式、語句"><a href="# 三、運算符、表達式、語句" class="headerlink" title="三、運算符、表達式、語句"></a> 三、運算符、表達式、語句 </h3><h3 id="四、程式流程控制"><a href="# 四、程式流程控制" class="headerlink" title="四、程式流程控制"></a> 四、程式流程控制 </h3><h3 id="五、陣列"><a href="# 五、陣列" class="headerlink" title="五、陣列"></a> 五、陣列 </h3><h4 id="1- 一維陣列"><a href="#1- 一維陣列" class="headerlink" title="1. 一維陣列"></a>1. 一維陣列</h4><h5 id="1- 陣列名"><a href="#1- 陣列名" class="headerlink" title="(1) 陣列名"></a>(1) 陣列名</h5><p> 在大多數用到陣列的表達式中，陣列會自動轉換成指向陣列首元素的指針，例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> ia [<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> *p = ia;</span><br></pre></td></tr></table></figure><br>但在以下情形，上述轉換不會發生<br>(a) 當陣列被用作 decltype 關鍵字的參數時<br>(b) 作爲取地址符 (&amp;)、sizeof、typeid 等運算符的運算對象時<br><img src="/2018/09/13/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/test1.png" alt></p>
+<pre><code>補充：類型轉換
+(1) 舊有 C 風格的强制轉換是不推薦的，因爲不顯眼，容易被忽略
+    (int) x;
+    int (x);
+(2) 隱式轉換
+    (a) 將比較小的整型值提升到較大的整數類型
+    (b) 在條件判斷中，將非 bool 類型轉換成 bool 類型
+    (c) 初始化過程中，初始化值轉換成變量的類型；賦值語句中，右側運算對象轉換成左側運算對象的類型
+    (d) 函數調用的時候會發生實參類型轉換
+(3) 顯式轉換：C++ 四種 explicit 關鍵字
+    (a) static_cast &lt;new_type&gt; (expression)
+        static_cast 也不能去掉 expression 的 const、volitale、或者__unaligned 屬性
+    (b) const_cast &lt;new_type&gt; (expression)
+        它僅僅把一個它作用的表達式轉換成常量。它可以使一個本來不是 const 類型的數據轉換成 const 類型的，或者把 const 屬性去掉。
+        const int p = 0;
+        int &amp;rb = const_cast&lt;int&amp;&gt;(p);// 正確
+        rb =10;
+    (c) dynamic_cast &lt;new_type&gt; (expression)
+    (d) reinterpret_cast &lt;new_type&gt; (expression)
+</code></pre><h5 id="2- 找最大 - 小 - 值"><a href="#2- 找最大 - 小 - 值" class="headerlink" title="(2) 找最大 (小) 值"></a>(2) 找最大 (小) 值 </h5><p> 要找一個陣列中的最大值，可以設定一個變量，然後遍歷整個陣列，如果找到更大的數就更新該變量</p>
+<h5 id="3- 排序"><a href="#3- 排序" class="headerlink" title="(3) 排序"></a>(3) 排序 </h5><p> 冒泡排序</p>
+<h4 id="2- 二維陣列"><a href="#2- 二維陣列" class="headerlink" title="2. 二維陣列"></a>2. 二維陣列 </h4><h4 id="3- 從函數返回數組"><a href="#3- 從函數返回數組" class="headerlink" title="3. 從函數返回數組"></a>3. 從函數返回數組</h4><p> 如果想要從函數返回一個一維數組，必須聲明一個返回指針的函數 <br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">myFunction</span> <span class="params">()</span></span>;</span><br></pre></td></tr></table></figure><br> 實例：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span> <span class="comment">//rand () 函數</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">getRandom</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> r [<span class="number">10</span>];</span><br><span class="line">	<span class="comment">// 設置種子</span></span><br><span class="line">	<span class="built_in">srand</span> ((unsingned) <span class="built_in">time</span> (<span class="literal">NULL</span>));</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</span><br><span class="line">		r [i] = <span class="built_in">rand</span> ();</span><br><span class="line">	<span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> *p;</span><br><span class="line">	p = <span class="built_in">getRandom</span> ();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; *(p+i) &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="六、函數"><a href="# 六、函數" class="headerlink" title="六、函數"></a>六、函數 </h3><h4 id="1- 函數的分檔案編寫：讓程式結構更加清晰"><a href="#1- 函數的分檔案編寫：讓程式結構更加清晰" class="headerlink" title="1. 函數的分檔案編寫：讓程式結構更加清晰"></a>1. 函數的分檔案編寫：讓程式結構更加清晰</h4><h5 id="1- 創建後綴名為 -h- 的頭檔案，並在頭檔案中寫函數的聲明，例如：swap-h"><a href="#1- 創建後綴名為 -h- 的頭檔案，並在頭檔案中寫函數的聲明，例如：swap-h" class="headerlink" title="(1) 創建後綴名為.h 的頭檔案，並在頭檔案中寫函數的聲明，例如：swap.h"></a>(1) 創建後綴名為.h 的頭檔案，並在頭檔案中寫函數的聲明，例如：swap.h</h5><h5 id="2- 創建後綴名為 -cpp- 的原始檔案，在原始檔案中 -include-“swap-h”- 並寫函數的定義"><a href="#2- 創建後綴名為 -cpp- 的原始檔案，在原始檔案中 -include-“swap-h”- 並寫函數的定義" class="headerlink" title="(2) 創建後綴名為.cpp 的原始檔案，在原始檔案中 #include “swap.h” 並寫函數的定義"></a>(2) 創建後綴名為.cpp 的原始檔案，在原始檔案中 #include “swap.h” 並寫函數的定義</h5><h5 id="3- 在 -main- 函數檔案中，-include-“swap-h”，並可以使用該函數"><a href="#3- 在 -main- 函數檔案中，-include-“swap-h”，並可以使用該函數" class="headerlink" title="(3) 在 main 函數檔案中，#include “swap.h”，並可以使用該函數"></a>(3) 在 main 函數檔案中，#include “swap.h”，並可以使用該函數</h5><pre><code> 補充：
+#include 實質的作用是預編譯的時候 copy include 標頭檔案的內容到當前列
+#include 的路徑 (&quot;&quot; 和 &lt;&gt; 的區別)
+#include &quot;swap.h&quot; 通常為自定義函數，在 Project 所在的路徑，若 complier 找不到則會去系統設定的目錄底下找
+#include &lt;iostream&gt; 為 C++ 系統的函數庫，complier 會去系統設定的目錄底下去找
+</code></pre><p>將需要分配記憶體空間的定義放在原始檔案中，例如：函數的定義，命名空間作用域中變量的定義；<br>而將不需要分配空間的聲明放在頭檔案中，例如：類聲明、外部函數的原型聲明、外部變量的聲明、基本數據類型常量的聲明。<br>内聯函數由於需要嵌入到每個調用它的函數之中，應該被編譯單元可見，定義應該出現在頭檔案當中。</p>
+<h4 id="2- 外部函數"><a href="#2- 外部函數" class="headerlink" title="2. 外部函數"></a>2. 外部函數 </h4><p> 非成員函數，都是命名空間作用域的，如果沒有特殊説明，可以在不同的編譯單元中被調用，只要在調用之前聲明即可。</p>
+<h4 id="3-static- 修飾命名空間作用域的變量或函數"><a href="#3-static- 修飾命名空間作用域的變量或函數" class="headerlink" title="3.static 修飾命名空間作用域的變量或函數"></a>3.static 修飾命名空間作用域的變量或函數 </h4><p> 命名空間作用域中聲明的變量或函數，在默認情況下都可以被其他編譯單元訪問，但有時並不希望被其他原始檔案引用，可以使用 static。<br>然而，ISO C++ 2.0 標準中，不鼓勵使用這種方式隱藏，而是使用匿名空間：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">f</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		n++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="七、指針"><a href="# 七、指針" class="headerlink" title="七、指針"></a>七、指針</h3><h4 id="1- 指針的概念與使用"><a href="#1- 指針的概念與使用" class="headerlink" title="1. 指針的概念與使用"></a>1. 指針的概念與使用</h4><p>(1) 可以通過 &amp; 符號獲取變量的地址<br>(2) 利用指針可以記錄地址<br>(3) 對指針變量解引用，可以操作指針指向的記憶體存放的數據<br><img src="/2018/09/13/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/test2.png" alt></p>
+<h4 id="2- 指針所佔的記憶體空間"><a href="#2- 指針所佔的記憶體空間" class="headerlink" title="2. 指針所佔的記憶體空間"></a>2. 指針所佔的記憶體空間 </h4><p> 所有指針類型在 32 位作業系統下是 4 字節；在 64 位作業系統是 8 字節</p>
+<h4 id="3- 空指針和野指針"><a href="#3- 空指針和野指針" class="headerlink" title="3. 空指針和野指針"></a>3. 空指針和野指針 </h4><p> 空指針指向記憶體中編號為 0 的空間，是用來初始化指針變量的 <br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p = <span class="literal">NULL</span>;</span><br><span class="line">cout &lt;&lt; *p &lt;&lt; endl; <span class="comment">// 訪問空指針報錯</span></span><br></pre></td></tr></table></figure><br> 空指針指向的記憶體是不可以訪問的（記憶體編號 0-255 為系統占用記憶體，不允許用戶訪問）<br>野指針指向非法的記憶體空間，也是不可以訪問的</p>
+<h4 id="4-const- 和指針"><a href="#4-const- 和指針" class="headerlink" title="4.const 和指針"></a>4.const 和指針 </h4><h5 id="1- 指向常量的指針，稱爲常量指針"><a href="#1- 指向常量的指針，稱爲常量指針" class="headerlink" title="(1) 指向常量的指針，稱爲常量指針"></a>(1) 指向常量的指針，稱爲常量指針</h5><p> 只能防止通過指針修改記憶體中的數據，並不能保護指針所指向的對象。<br>可以將一個常量的地址賦值給常量指針。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>; <span class="comment">//const 在星號 * 前</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p1 = &amp;a;</span><br><span class="line">p1 = &amp;b; <span class="comment">// 正確</span></span><br><span class="line">*p1 = <span class="number">100</span>; <span class="comment">// 報錯</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="2- 指針本身是一個常量，指針指向的記憶體位置不能改變，稱爲指針常量"><a href="#2- 指針本身是一個常量，指針指向的記憶體位置不能改變，稱爲指針常量" class="headerlink" title="(2) 指針本身是一個常量，指針指向的記憶體位置不能改變，稱爲指針常量"></a>(2) 指針本身是一個常量，指針指向的記憶體位置不能改變，稱爲指針常量 </h5><p> 指針常量必須在聲明的時候同時初始化，這和聲明一般的常量是一樣的<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p2 = &amp;a; <span class="comment">//const 在星號 * 後</span></span><br><span class="line">*p2 =<span class="number">100</span>; <span class="comment">// 正確</span></span><br><span class="line">p2 = &amp;b; <span class="comment">// 報錯</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="3-const- 既修飾指針又修飾常量"><a href="#3-const- 既修飾指針又修飾常量" class="headerlink" title="(3) const 既修飾指針又修飾常量"></a>(3) const 既修飾指針又修飾常量</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p2 = &amp;a; <span class="comment">//const 在星號 * 前後都有</span></span><br><span class="line">*p2 =<span class="number">100</span>; <span class="comment">// 報錯</span></span><br><span class="line">p2 = &amp;b; <span class="comment">// 報錯</span></span><br></pre></td></tr></table></figure>
+<h4 id="5- 指針和陣列"><a href="#5- 指針和陣列" class="headerlink" title="5. 指針和陣列"></a>5. 指針和陣列 </h4><p> 利用指針訪問陣列中的元素<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> arr [] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> *p = arr; <span class="comment">// 陣列名轉換成指向陣列第一個元素的指針</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">	cout &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">	p++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="6- 指針和函數"><a href="#6- 指針和函數" class="headerlink" title="6. 指針和函數"></a>6. 指針和函數 </h4><p> 利用指針作爲函數的參數，可以修改實參的值<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span> <span class="params">(<span class="keyword">int</span>* p1, <span class="keyword">int</span>* p2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp = *p1;</span><br><span class="line">	*p1 = *p2;</span><br><span class="line">	*p2 = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>, b=<span class="number">20</span>;</span><br><span class="line">	<span class="built_in">swap</span> (&amp;a, &amp;b);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;a =&quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;b =&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></p>
+<h4 id="7- 當陣列名傳入到函數作爲參數時，被退化為指向陣列首元素的指針"><a href="#7- 當陣列名傳入到函數作爲參數時，被退化為指向陣列首元素的指針" class="headerlink" title="7. 當陣列名傳入到函數作爲參數時，被退化為指向陣列首元素的指針"></a>7. 當陣列名傳入到函數作爲參數時，被退化為指向陣列首元素的指針 </h4><p> 例如：可以封裝一個函數，利用冒泡排序，實現對整型陣列的升序排序<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubbleSort</span> <span class="params">(<span class="keyword">int</span>* arr, <span class="keyword">int</span> len)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubbleSort</span> <span class="params">(<span class="keyword">int</span> arr [], <span class="keyword">int</span> len)</span></span>;</span><br><span class="line"><span class="comment">// 以上兩者是一樣的</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="8- 函數返回指針"><a href="#8- 函數返回指針" class="headerlink" title="8. 函數返回指針"></a>8. 函數返回指針 </h4><p> 如果想要從函數返回一個一維數組，必須聲明一個返回指針的函數</p>
+<h4 id="9- 多級指針"><a href="#9- 多級指針" class="headerlink" title="9. 多級指針"></a>9. 多級指針 </h4><h3 id="八、結構體"><a href="# 八、結構體" class="headerlink" title="八、結構體"></a> 八、結構體</h3><h4 id="1- 結構體變量通過 -“-”- 訪問結構體成員"><a href="#1- 結構體變量通過 -“-”- 訪問結構體成員" class="headerlink" title="1. 結構體變量通過 “.” 訪問結構體成員"></a>1. 結構體變量通過 “.” 訪問結構體成員</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> // 類型名的首字母習慣大寫</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	string name; <span class="comment">// 姓名</span></span><br><span class="line">	<span class="keyword">int</span> age; <span class="comment">// 年齡</span></span><br><span class="line">	<span class="keyword">int</span> score; <span class="comment">// 分數</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="title">stu1</span> =</span> &#123; <span class="string">&quot; 李四 &quot;</span>,<span class="number">19</span>,<span class="number">60</span> &#125;;</span><br><span class="line">	stu1.name = <span class="string">&quot; 王五 &quot;</span>；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2- 結構體陣列"><a href="#2- 結構體陣列" class="headerlink" title="2. 結構體陣列"></a>2. 結構體陣列 </h4><p> 把自定義的結構體放到陣列中方便維護<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	string name; <span class="comment">// 姓名</span></span><br><span class="line">	<span class="keyword">int</span> age; <span class="comment">// 年齡</span></span><br><span class="line">	<span class="keyword">int</span> score; <span class="comment">// 分數</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Student arr [<span class="number">3</span>]=</span><br><span class="line">	&#123;</span><br><span class="line">		&#123;<span class="string">&quot; 张三 &quot;</span>,<span class="number">18</span>,<span class="number">80</span> &#125;,</span><br><span class="line">		&#123;<span class="string">&quot; 李四 &quot;</span>,<span class="number">19</span>,<span class="number">60</span> &#125;,</span><br><span class="line">		&#123;<span class="string">&quot; 王五 &quot;</span>,<span class="number">20</span>,<span class="number">70</span> &#125;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot; 姓名：&quot;</span> &lt;&lt; arr [i].name &lt;&lt; <span class="string">&quot; 年龄：&quot;</span> &lt;&lt; arr [i].age &lt;&lt; <span class="string">&quot; 分数：&quot;</span> &lt;&lt; arr [i].score &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="3- 結構體指針可以通過 -gt- 操作符來訪問結構體成員"><a href="#3- 結構體指針可以通過 -gt- 操作符來訪問結構體成員" class="headerlink" title="3. 結構體指針可以通過 -&gt; 操作符來訪問結構體成員"></a>3. 結構體指針可以通過 -&gt; 操作符來訪問結構體成員</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	string name; <span class="comment">// 姓名</span></span><br><span class="line">	<span class="keyword">int</span> age; <span class="comment">// 年齡</span></span><br><span class="line">	<span class="keyword">int</span> score; <span class="comment">// 分數</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Student stu1 = &#123; <span class="string">&quot; 李四 &quot;</span>,<span class="number">19</span>,<span class="number">60</span> &#125;;</span><br><span class="line">	Student* p = &amp;stu1;</span><br><span class="line">	p-&gt;acore = <span class="number">80</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">weekday</span> <span class="params">(struct week *wd)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    wd-&gt;sleep_time = <span class="number">7.0</span>;       <span class="comment">// 7 小时</span></span><br><span class="line">    wd-&gt;work_time = <span class="number">8.5</span>;        <span class="comment">// 8.5 小时</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">weekend</span> <span class="params">(struct week *we)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    we-&gt;sleep_time = <span class="number">9.0</span>;       <span class="comment">// 9 小时</span></span><br><span class="line">    we-&gt;work_time = <span class="number">2.5</span>;        <span class="comment">// 2.5 小时</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">week</span> <span class="title">w</span>;</span></span><br><span class="line">    <span class="built_in">weekday</span> (&amp;w);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;weekday: sleep time =&quot;</span> &lt;&lt; w.sleep_time; &lt;&lt; <span class="string">&quot;, work time =&quot;</span> &lt;&lt; w.work_time;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">weekend</span> (&amp;w);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;weekend: sleep time =&quot;</span> &lt;&lt; w.sleep_time; &lt;&lt; <span class="string">&quot;, work time =&quot;</span> &lt;&lt; w.work_time;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4- 結構體嵌套結構體"><a href="#4- 結構體嵌套結構體" class="headerlink" title="4. 結構體嵌套結構體"></a>4. 結構體嵌套結構體 </h4><p> 結構體中的成員可以是另一個結構體 <br> 例如：每一個老師輔導一個學員，一個老師的結構體中，記錄一個學生的結構體<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	string name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	<span class="keyword">int</span> score;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Teacher</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> id;</span><br><span class="line">	string name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	Student stu;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 訪問老師輔導的學生的成績</span></span><br><span class="line"><span class="comment">//Teacher t1 = &#123;...&#125;;</span></span><br><span class="line"><span class="comment">//t1.stu.score = 80;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="5- 結構體作爲函數參數"><a href="#5- 結構體作爲函數參數" class="headerlink" title="5. 結構體作爲函數參數"></a>5. 結構體作爲函數參數 </h4><p> 如果不想修改主函數中的數據，用值傳遞，反之用地址傳遞<br>(還有一種情形是爲了避免占用太多記憶體，用址傳遞，但是不想修改數據，則可以使用 const)<br>void printStudent (Student stu);<br>void setStudent (Student* stu);</p>
+<h4 id="6- 結構體中 -const- 使用場景"><a href="#6- 結構體中 -const- 使用場景" class="headerlink" title="6. 結構體中 const 使用場景"></a>6. 結構體中 const 使用場景 </h4><p> 若結構體數據量太大，用值傳遞會占用太多記憶體，用址傳遞，指針只占用 8 個字節 (64 位作業系統)<br>加入 const 修飾，若在函數中不小心修改實參，編譯器會檢測出問題，讓 programmer 修改<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printStudent</span> <span class="params">(<span class="keyword">const</span> Student *stu)</span></span>;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+  </nav>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chris Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+</body>
+</html>
