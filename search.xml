@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>利用 rand () 產生隨機數</title>
-    <url>/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/</url>
-    <content><![CDATA[<h4 id="1-rand- 函數介紹"><a href="#1-rand- 函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹 </h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br> 在模擬亂數時，需要設定一個亂數種子，所以如果要讓每次執行程式的結果都不一樣的話，必須要設定不同的亂數種子，設定亂數種子的函數為 srand (int)。<br>一般來說，會在程式加上 srand (time (NULL)); 這一行，讓亂數種子以現在的時間做設定，這樣每次執行程式的結果就不同了。</p>
-<h4 id="2- 任意浮點數範圍或是任意整數範圍的隨機數"><a href="#2- 任意浮點數範圍或是任意整數範圍的隨機數" class="headerlink" title="2. 任意浮點數範圍或是任意整數範圍的隨機數"></a>2. 任意浮點數範圍或是任意整數範圍的隨機數</h4><p>0~1 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (<span class="keyword">double</span>) <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (b - a) * <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>) + a;</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機整數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="built_in">rand</span> () % (b - a + <span class="number">1</span>) + a;</span><br></pre></td></tr></table></figure></p>
-<h4 id="3- 不公平的骰子"><a href="#3- 不公平的骰子" class="headerlink" title="3. 不公平的骰子"></a>3. 不公平的骰子</h4>]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>刷题检讨 --(1) 线性表</title>
     <url>/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
     <content><![CDATA[<h3 id="线性表"><a href="# 线性表" class="headerlink" title="线性表"></a>线性表 </h3><h5 id="1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator"><a href="#1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator" class="headerlink" title="(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator"></a>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator</h5><p> 除了用迭代器获取 vector 容器中的元素，[] 和 at 也可以<br>vector<int>(v).swap (v); // 收缩内存<br>//vector<int> 利用 v 调用拷贝构造函数，创建匿名对象，它会用 v 目前使用的元素个数来初始化这个匿名对象<br>//swap () 互换函数的本质类似于指针的交换<br>// 调换后 v 指向了创建的匿名对象，而本来匿名对象的指针 x 指向原本的 v，并且在该语句过后由系统自动回收</int></int></p>
@@ -52,6 +39,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>数据结构</tag>
         <tag>刷题</tag>
         <tag>线性表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用 rand () 產生隨機數</title>
+    <url>/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/</url>
+    <content><![CDATA[<h4 id="1-rand- 函數介紹"><a href="#1-rand- 函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹 </h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br> 在模擬亂數時，需要設定一個亂數種子，所以如果要讓每次執行程式的結果都不一樣的話，必須要設定不同的亂數種子，設定亂數種子的函數為 srand (int)。<br>一般來說，會在程式加上 srand (time (NULL)); 這一行，讓亂數種子以現在的時間做設定，這樣每次執行程式的結果就不同了。</p>
+<h4 id="2- 任意浮點數範圍或是任意整數範圍的隨機數"><a href="#2- 任意浮點數範圍或是任意整數範圍的隨機數" class="headerlink" title="2. 任意浮點數範圍或是任意整數範圍的隨機數"></a>2. 任意浮點數範圍或是任意整數範圍的隨機數</h4><p>0~1 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (<span class="keyword">double</span>) <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (b - a) * <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>) + a;</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機整數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="built_in">rand</span> () % (b - a + <span class="number">1</span>) + a;</span><br></pre></td></tr></table></figure></p>
+<h4 id="3- 不公平的骰子"><a href="#3- 不公平的骰子" class="headerlink" title="3. 不公平的骰子"></a>3. 不公平的骰子</h4>]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -154,6 +154,20 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>C++ 的 RALL 实现</title>
+    <url>/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = <span class="keyword">new</span> <span class="keyword">int32_t</span> [<span class="number">3</span>];</span><br><span class="line">		ptr [<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr [<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr [<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">delete</span> ptr;     <span class="comment">// 假设忘记了释放内存，会消耗大量内存 </span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span> (<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>RALL 机制便是通过利用对象的自动销毁，使得资源也具有了生命周期，有了自动销毁（自动回收）的功能。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">auto_release_ptr</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">auto_release_ptr</span> (T *t) :<span class="keyword">_t</span> (t)&#123;&#125;;</span><br><span class="line">	~<span class="built_in">auto_release_ptr</span> ()</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">delete</span> <span class="keyword">_t</span>;</span><br><span class="line">	&#125;;</span><br><span class="line"> </span><br><span class="line">	<span class="function">T * <span class="title">getPtr</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">_t</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T *<span class="keyword">_t</span>;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> arp = auto_release_ptr&lt;<span class="keyword">int32_t</span>&gt;(<span class="keyword">new</span> <span class="keyword">int32_t</span> [<span class="number">3</span>]);</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = arp.<span class="built_in">getPtr</span> ();</span><br><span class="line">		<span class="comment">//auto_release_ptr 有一个数据成员在构造时完成了初始化并指向了 new 出来的空间 </span></span><br><span class="line">		ptr [<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr [<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr [<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span> (<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> 更多的如智能指针，lock_guard 都利用了 RALL 机制来实现。</p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ 小知识点总结</title>
     <url>/2018/11/05/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h3 id="返回多个参数的方法："><a href="# 返回多个参数的方法：" class="headerlink" title="返回多个参数的方法："></a>返回多个参数的方法：</h3><h4 id="1- 定义结构体"><a href="#1- 定义结构体" class="headerlink" title="1. 定义结构体"></a>1. 定义结构体 </h4><h4 id="2- 利用引用参数"><a href="#2- 利用引用参数" class="headerlink" title="2. 利用引用参数"></a>2. 利用引用参数</h4><h3 id="解决 -“数组大小必须事先决定”- 这个问题"><a href="# 解决 -“数组大小必须事先决定”- 这个问题" class="headerlink" title="解决 “数组大小必须事先决定” 这个问题"></a> 解决 “数组大小必须事先决定” 这个问题</h3><h4 id="1- 使用 -new- 和 -delete，有程序员自行分配内"><a href="#1- 使用 -new- 和 -delete，有程序员自行分配内" class="headerlink" title="1. 使用 new 和 delete，有程序员自行分配内"></a>1. 使用 new 和 delete，有程序员自行分配内</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 输入长度：&quot;</span>; </span><br><span class="line">    cin &gt;&gt; size; </span><br><span class="line">    <span class="keyword">int</span> *arr = <span class="keyword">new</span> <span class="keyword">int</span> [size]&#123;<span class="number">0</span>&#125;; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 输入元素值：&quot;</span> &lt;&lt; endl; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123; </span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;arr [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] =&quot;</span>; </span><br><span class="line">        cin &gt;&gt; arr [i]; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; 显示元素值：&quot;</span> &lt;&lt; endl; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;arr [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] =&quot;</span> &lt;&lt; arr [i]</span><br><span class="line">             &lt;&lt; endl; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span> [] arr; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -185,36 +199,22 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>C++ 萬能標題檔案</title>
-    <url>/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/</url>
-    <content><![CDATA[<p> 萬能標頭檔案 </p>
-]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 的 RALL 实现</title>
-    <url>/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = <span class="keyword">new</span> <span class="keyword">int32_t</span> [<span class="number">3</span>];</span><br><span class="line">		ptr [<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr [<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr [<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">delete</span> ptr;     <span class="comment">// 假设忘记了释放内存，会消耗大量内存 </span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span> (<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>RALL 机制便是通过利用对象的自动销毁，使得资源也具有了生命周期，有了自动销毁（自动回收）的功能。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">auto_release_ptr</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">auto_release_ptr</span> (T *t) :<span class="keyword">_t</span> (t)&#123;&#125;;</span><br><span class="line">	~<span class="built_in">auto_release_ptr</span> ()</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">delete</span> <span class="keyword">_t</span>;</span><br><span class="line">	&#125;;</span><br><span class="line"> </span><br><span class="line">	<span class="function">T * <span class="title">getPtr</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">_t</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T *<span class="keyword">_t</span>;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> arp = auto_release_ptr&lt;<span class="keyword">int32_t</span>&gt;(<span class="keyword">new</span> <span class="keyword">int32_t</span> [<span class="number">3</span>]);</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = arp.<span class="built_in">getPtr</span> ();</span><br><span class="line">		<span class="comment">//auto_release_ptr 有一个数据成员在构造时完成了初始化并指向了 new 出来的空间 </span></span><br><span class="line">		ptr [<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr [<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr [<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span> (<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p> 更多的如智能指针，lock_guard 都利用了 RALL 机制来实现。</p>
-]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解釋一個語句</title>
     <url>/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
     <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 <p> 在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 萬能標題檔案</title>
+    <url>/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/</url>
+    <content><![CDATA[<p> 萬能標頭檔案 </p>
 ]]></content>
       <categories>
         <category>C++學習</category>
@@ -265,6 +265,15 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>git 安装</title>
+    <url>/2021/03/27/git%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/ScottePerk/article/details/81571251">https://blog.csdn.net/ScottePerk/article/details/81571251</a></p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+  </entry>
+  <entry>
     <title>dos 使用</title>
     <url>/2021/03/27/dos%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a> 显示目录下的文件 </h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录 <br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br>dir/ah 只显示当前路径下隐藏文件和目录 <br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
@@ -272,15 +281,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>git 安装</title>
-    <url>/2021/03/27/git%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/ScottePerk/article/details/81571251">https://blog.csdn.net/ScottePerk/article/details/81571251</a></p>
-]]></content>
-      <categories>
-        <category>git</category>
       </categories>
   </entry>
   <entry>
@@ -398,6 +398,13 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
+    <url>/2021/03/27/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
+    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false</p>
+<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>如何在 hexo blog 中發表一篇文章</title>
     <url>/2019/03/22/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h4 id="新建一篇文章"><a href="# 新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h4><p>(1) 在 hexo blog 目錄下，進入 cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot; 文章名稱 &quot;</span><br></pre></td></tr></table></figure></p>
@@ -411,13 +418,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>hexo</tag>
         <tag>發表文章</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
-    <url>/2021/03/27/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
-    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false</p>
-<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
-]]></content>
   </entry>
   <entry>
     <title>怎么取消文章目录中对标题的自动编号</title>
@@ -478,23 +478,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构 -- (3) 图</title>
-    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(3)%20%E5%9B%BE/</url>
-    <content><![CDATA[<h3 id="图的定义"><a href="# 图的定义" class="headerlink" title="图的定义"></a>图的定义 </h3><p> 图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G=(V,E)$<br>$V={v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶 <br>$E=\lbrace (u,v)|u \in V,v \in V \rbrace$<br> 注释：图不能为空集</p>
-<h3 id="图的分类和术语"><a href="# 图的分类和术语" class="headerlink" title="图的分类和术语"></a>图的分类和术语 </h3><h4 id="1- 有向图 - 无向图"><a href="#1- 有向图 - 无向图" class="headerlink" title="1. 有向图 / 无向图"></a>1. 有向图 / 无向图</h4><h4 id="2- 简单图 - 多重图"><a href="#2- 简单图 - 多重图" class="headerlink" title="2. 简单图 / 多重图"></a>2. 简单图 / 多重图</h4><p> 简单图：(1) 不存在重复边 (2) 不存在 $(u,u)$ 点</p>
-<h4 id="3- 完全图 - 有向完全图 - 无向完全图"><a href="#3- 完全图 - 有向完全图 - 无向完全图" class="headerlink" title="3. 完全图 (有向完全图 / 无向完全图)"></a>3. 完全图 (有向完全图 / 无向完全图)</h4><p>任意两个点 $(u,v)$ 之间存在边 $(u,v)$</p>
-<h4 id="4- 子图"><a href="#4- 子图" class="headerlink" title="4. 子图"></a>4. 子图 </h4><p> 若 V 是 E 的子图 <br> 则 ${\forall} e \in E \quad e_u,e_v \in V$</p>
-<h4 id="5- 连通，连通图，连通分量（无向图中考虑）"><a href="#5- 连通，连通图，连通分量（无向图中考虑）" class="headerlink" title="5. 连通，连通图，连通分量（无向图中考虑）"></a>5. 连通，连通图，连通分量（无向图中考虑）</h4><p>连通：当且仅当 $u,v$ 存在一条路径，称为 $u,v$ 连通 <br> 连通图：图中任意两点皆连通 <br> 连通分量：极大连通子图</p>
-<h4 id="6- 强连通，强连通图，强连通分量（有向图中讨论）"><a href="#6- 强连通，强连通图，强连通分量（有向图中讨论）" class="headerlink" title="6. 强连通，强连通图，强连通分量（有向图中讨论）"></a>6. 强连通，强连通图，强连通分量（有向图中讨论）</h4><h4 id="7- 生成树，生成森林"><a href="#7- 生成树，生成森林" class="headerlink" title="7. 生成树，生成森林"></a>7. 生成树，生成森林 </h4><p> 只有连通图可以考虑生成树，非连通图只能考虑连通森林 <br> 生成树：极小连通子图 $V’=V$（极小指的是边最少）<br>生成森林：非连通图的每个连通分量都有一个生成森林</p>
-<h4 id="8- 顶点的度（无向图或无向图），入度 - 出度（有向图）"><a href="#8- 顶点的度（无向图或无向图），入度 - 出度（有向图）" class="headerlink" title="8. 顶点的度（无向图或无向图），入度 / 出度（有向图）"></a>8. 顶点的度（无向图或无向图），入度 / 出度（有向图）</h4><p>$d_i:v_i 的边数 $<br>$\sum d_i = 2e$<br>$\sum id_i = e$<br>$\sum od_i = e$</p>
-<h4 id="9- 边的权值，网 - 带权图"><a href="#9- 边的权值，网 - 带权图" class="headerlink" title="9. 边的权值，网 (带权图)"></a>9. 边的权值，网 (带权图)</h4><h4 id="10- 稠密图，稀疏图（没有严格的定义）"><a href="#10- 稠密图，稀疏图（没有严格的定义）" class="headerlink" title="10. 稠密图，稀疏图（没有严格的定义）"></a>10. 稠密图，稀疏图（没有严格的定义）</h4><p>$|E| &lt; |V|log|V|$</p>
-<h4 id="11- 路径，路径长度，回路 - 环 - 圈"><a href="#11- 路径，路径长度，回路 - 环 - 圈" class="headerlink" title="11. 路径，路径长度，回路 / 环 / 圈"></a>11. 路径，路径长度，回路 / 环 / 圈 </h4><p> 路径长度：$u$ 到 $v$ 经过的边数<br>$e &lt; n-1$：非连通<br>$e &gt; n-1$：一定有环</p>
-<h4 id="12- 简单路径，简单回路"><a href="#12- 简单路径，简单回路" class="headerlink" title="12. 简单路径，简单回路"></a>12. 简单路径，简单回路 </h4><p> 简单路径：顶点不重复 <br> 简单回路：除首末节点，不存在重复顶点</p>
-<h4 id="13- 距离"><a href="#13- 距离" class="headerlink" title="13. 距离"></a>13. 距离 </h4><p> 若 $u,v$ 存在路径，最短的路径长度称为距离</p>
-<h4 id="14- 有向树"><a href="#14- 有向树" class="headerlink" title="14. 有向树"></a>14. 有向树 </h4><p>${\exists} v_o, \;\; id_{v_o}=0$<br> 其余 $v_i \;\; id_{v_o}=1$</p>
-]]></content>
-  </entry>
-  <entry>
     <title>数据结构 -- (2) 树</title>
     <url>/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(2)%20%E6%A0%91/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树</a></p>
@@ -516,6 +499,23 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <categories>
         <category>数据结构与算法</category>
       </categories>
+  </entry>
+  <entry>
+    <title>数据结构 -- (3) 图</title>
+    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(3)%20%E5%9B%BE/</url>
+    <content><![CDATA[<h3 id="图的定义"><a href="# 图的定义" class="headerlink" title="图的定义"></a>图的定义 </h3><p> 图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G=(V,E)$<br>$V={v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶 <br>$E=\lbrace (u,v)|u \in V,v \in V \rbrace$<br> 注释：图不能为空集</p>
+<h3 id="图的分类和术语"><a href="# 图的分类和术语" class="headerlink" title="图的分类和术语"></a>图的分类和术语 </h3><h4 id="1- 有向图 - 无向图"><a href="#1- 有向图 - 无向图" class="headerlink" title="1. 有向图 / 无向图"></a>1. 有向图 / 无向图</h4><h4 id="2- 简单图 - 多重图"><a href="#2- 简单图 - 多重图" class="headerlink" title="2. 简单图 / 多重图"></a>2. 简单图 / 多重图</h4><p> 简单图：(1) 不存在重复边 (2) 不存在 $(u,u)$ 点</p>
+<h4 id="3- 完全图 - 有向完全图 - 无向完全图"><a href="#3- 完全图 - 有向完全图 - 无向完全图" class="headerlink" title="3. 完全图 (有向完全图 / 无向完全图)"></a>3. 完全图 (有向完全图 / 无向完全图)</h4><p>任意两个点 $(u,v)$ 之间存在边 $(u,v)$</p>
+<h4 id="4- 子图"><a href="#4- 子图" class="headerlink" title="4. 子图"></a>4. 子图 </h4><p> 若 V 是 E 的子图 <br> 则 ${\forall} e \in E \quad e_u,e_v \in V$</p>
+<h4 id="5- 连通，连通图，连通分量（无向图中考虑）"><a href="#5- 连通，连通图，连通分量（无向图中考虑）" class="headerlink" title="5. 连通，连通图，连通分量（无向图中考虑）"></a>5. 连通，连通图，连通分量（无向图中考虑）</h4><p>连通：当且仅当 $u,v$ 存在一条路径，称为 $u,v$ 连通 <br> 连通图：图中任意两点皆连通 <br> 连通分量：极大连通子图</p>
+<h4 id="6- 强连通，强连通图，强连通分量（有向图中讨论）"><a href="#6- 强连通，强连通图，强连通分量（有向图中讨论）" class="headerlink" title="6. 强连通，强连通图，强连通分量（有向图中讨论）"></a>6. 强连通，强连通图，强连通分量（有向图中讨论）</h4><h4 id="7- 生成树，生成森林"><a href="#7- 生成树，生成森林" class="headerlink" title="7. 生成树，生成森林"></a>7. 生成树，生成森林 </h4><p> 只有连通图可以考虑生成树，非连通图只能考虑连通森林 <br> 生成树：极小连通子图 $V’=V$（极小指的是边最少）<br>生成森林：非连通图的每个连通分量都有一个生成森林</p>
+<h4 id="8- 顶点的度（无向图或无向图），入度 - 出度（有向图）"><a href="#8- 顶点的度（无向图或无向图），入度 - 出度（有向图）" class="headerlink" title="8. 顶点的度（无向图或无向图），入度 / 出度（有向图）"></a>8. 顶点的度（无向图或无向图），入度 / 出度（有向图）</h4><p>$d_i:v_i 的边数 $<br>$\sum d_i = 2e$<br>$\sum id_i = e$<br>$\sum od_i = e$</p>
+<h4 id="9- 边的权值，网 - 带权图"><a href="#9- 边的权值，网 - 带权图" class="headerlink" title="9. 边的权值，网 (带权图)"></a>9. 边的权值，网 (带权图)</h4><h4 id="10- 稠密图，稀疏图（没有严格的定义）"><a href="#10- 稠密图，稀疏图（没有严格的定义）" class="headerlink" title="10. 稠密图，稀疏图（没有严格的定义）"></a>10. 稠密图，稀疏图（没有严格的定义）</h4><p>$|E| &lt; |V|log|V|$</p>
+<h4 id="11- 路径，路径长度，回路 - 环 - 圈"><a href="#11- 路径，路径长度，回路 - 环 - 圈" class="headerlink" title="11. 路径，路径长度，回路 / 环 / 圈"></a>11. 路径，路径长度，回路 / 环 / 圈 </h4><p> 路径长度：$u$ 到 $v$ 经过的边数<br>$e &lt; n-1$：非连通<br>$e &gt; n-1$：一定有环</p>
+<h4 id="12- 简单路径，简单回路"><a href="#12- 简单路径，简单回路" class="headerlink" title="12. 简单路径，简单回路"></a>12. 简单路径，简单回路 </h4><p> 简单路径：顶点不重复 <br> 简单回路：除首末节点，不存在重复顶点</p>
+<h4 id="13- 距离"><a href="#13- 距离" class="headerlink" title="13. 距离"></a>13. 距离 </h4><p> 若 $u,v$ 存在路径，最短的路径长度称为距离</p>
+<h4 id="14- 有向树"><a href="#14- 有向树" class="headerlink" title="14. 有向树"></a>14. 有向树 </h4><p>${\exists} v_o, \;\; id_{v_o}=0$<br> 其余 $v_i \;\; id_{v_o}=1$</p>
+]]></content>
   </entry>
   <entry>
     <title>数据结构数据结构 -- (4) 查找</title>
@@ -571,7 +571,14 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="数据标准化"><a href="# 数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h4><p>$newValue = \displaystyle {oldValue - u \over s}$ 其中 u 为数据的平均值，s 为数据的方差</p>
 <h3 id="十、交叉验证法"><a href="# 十、交叉验证法" class="headerlink" title="十、交叉验证法"></a>十、交叉验证法 </h3><p> 若样本数据较少时，可以一部分作为训练集，一部分作为测试集，没有验证集。<br>例如有 100 组数据，可以 80 组作为训练集，20 组作为测试集。<br>但是当样本更少，8/2 拆分也不适合的时候，就可以使用交叉验证法<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo2.jpg" alt></p>
 <h3 id="十一、过拟合与正则化"><a href="# 十一、过拟合与正则化" class="headerlink" title="十一、过拟合与正则化"></a>十一、过拟合与正则化 </h3><h4 id="过拟合"><a href="# 过拟合" class="headerlink" title="过拟合"></a> 过拟合</h4><p><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo3.jpg" alt></p>
-<h4 id="防止过拟合："><a href="# 防止过拟合：" class="headerlink" title="防止过拟合："></a>防止过拟合：</h4><h5 id="1- 减少特征"><a href="#1- 减少特征" class="headerlink" title="1. 减少特征"></a>1. 减少特征 </h5><h5 id="2- 增加数据量"><a href="#2- 增加数据量" class="headerlink" title="2. 增加数据量"></a>2. 增加数据量</h5><h5 id="3- 正则化"><a href="#3- 正则化" class="headerlink" title="3. 正则化"></a>3. 正则化</h5><h4 id="正则化"><a href="# 正则化" class="headerlink" title="正则化"></a> 正则化</h4><h5 id="L2- 正则化：-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2"><a href="#L2- 正则化：-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2" class="headerlink" title="L2 正则化：$J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$"></a>L2 正则化：$J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$</h5><h5 id="L1- 正则化："><a href="#L1- 正则化：" class="headerlink" title="L1 正则化：$$"></a>L1 正则化：$$</h5>]]></content>
+<h4 id="防止过拟合："><a href="# 防止过拟合：" class="headerlink" title="防止过拟合："></a>防止过拟合：</h4><h5 id="1- 减少特征"><a href="#1- 减少特征" class="headerlink" title="1. 减少特征"></a>1. 减少特征 </h5><h5 id="2- 增加数据量"><a href="#2- 增加数据量" class="headerlink" title="2. 增加数据量"></a>2. 增加数据量</h5><h5 id="3- 正则化"><a href="#3- 正则化" class="headerlink" title="3. 正则化"></a>3. 正则化</h5><h5 id="4- 深度学习中有其他防止过拟合的方式"><a href="#4- 深度学习中有其他防止过拟合的方式" class="headerlink" title="4. 深度学习中有其他防止过拟合的方式"></a>4. 深度学习中有其他防止过拟合的方式</h5><h4 id="正则化"><a href="# 正则化" class="headerlink" title="正则化"></a> 正则化 </h4><h5 id="L1- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j"><a href="#L1- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j" class="headerlink" title="L1 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$"></a>L1 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$</h5><h5 id="L2- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2"><a href="#L2- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2" class="headerlink" title="L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$"></a>L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$</h5><h3 id="十二、岭回归"><a href="# 十二、岭回归" class="headerlink" title="十二、岭回归"></a> 十二、岭回归 </h3><h4 id="概念 -2"><a href="# 概念 -2" class="headerlink" title="概念"></a> 概念 </h4><p> 在使用标准方程解多元线性回归的时候，$w=(X^TX)^{-1} X^Ty$<br>如果数据的特征比样本点还多，数据特征 $n$ 个 ，样本个数 $m$ 个，如果 $n&gt;m$<br>，则计算 $(X^TX)^{-1}$ 时会出错。因为 $(X^TX)$ 不是满秩矩阵，所以不可逆。<br>为了解决这个问题，统计学家引入了岭回归的概念。<br>$w=(X^TX+\lambda I)^{-1} X^Ty$<br>$\lambda$ 为岭系数，$I$ 为单位矩阵</p>
+<h4 id="推导"><a href="# 推导" class="headerlink" title="推导"></a>推导 </h4><p> 岭回归的代价函数是 L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$<br>$\displaystyle J (\theta)={1 \over 2} (w^TX^TXw - y^TXw - w^TX^Ty + y^Ty) + \lambda \theta^T\theta$</p>
+<p>$\displaystyle {\partial J (\theta) \over \partial \theta}=0$</p>
+<p>$X^TX\theta - X^TY + \lambda \theta=0$<br>$\theta=(X^TX+\lambda I)^{-1} X^TY$</p>
+<h4 id="用处"><a href="# 用处" class="headerlink" title="用处"></a>用处 </h4><p> 岭回归最早是用来处理特征数多于样本的情况，现在也用于在估计中加入偏差，从而得到更好的估计。<br>同时也可以解决多重共线性的问题。<br>岭回归是一种有偏估计。</p>
+<h4 id="lambda- 的选择"><a href="#lambda- 的选择" class="headerlink" title="\lambda 的选择"></a>\lambda 的选择 </h4><p> 选择 \lambda 值，使得 <br>(1) 各个回归系数的岭估计基本稳定<br>(2) 残差平方和增大不太多<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo4.jpg" alt><br> 横轴是 \lambda 值，纵轴是参数 \theta 的取值范围</p>
+<h3 id><a href="#" class="headerlink" title="#"></a>#</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建模型</span></span><br><span class="line"><span class="comment"># 生成 50 个值（默认是 50 个值）</span></span><br><span class="line">alphas_to_test = np.linspace (<span class="number">0.001</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment"># 创建模型，保存误差值</span></span><br><span class="line">model = linear_model.RidgeCV (alphas=alphas_to_test, store_cv_values=<span class="literal">True</span>)</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 岭系数</span></span><br><span class="line"><span class="built_in">print</span> (model.alpha_)</span><br><span class="line"><span class="comment"># loss 值</span></span><br><span class="line"><span class="built_in">print</span> (model.cv_values_.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line"><span class="comment"># 岭系数跟 loss 值的关系</span></span><br><span class="line">plt.plot (alphas_to_test, model.cv_values_.mean (axis=<span class="number">0</span>))</span><br><span class="line"><span class="comment"># 选取的岭系数值的位置</span></span><br><span class="line">plt.plot (model.alpha_, <span class="built_in">min</span> (model.cv_values_.mean (axis=<span class="number">0</span>)),<span class="string">&#x27;ro&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
@@ -581,7 +588,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   </entry>
   <entry>
     <title>机器学习算法 --（2）逻辑回归</title>
-    <url>/2021/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
+    <url>/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -634,14 +641,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>算法</title>
-    <url>/2019/04/05/%E7%AE%97%E6%B3%953/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
     <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
     <url>/2019/03/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
@@ -665,6 +664,14 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>Linux</tag>
         <tag>命令列指令</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>算法</title>
+    <url>/2019/04/05/%E7%AE%97%E6%B3%953/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
   </entry>
   <entry>
     <title>設定 Github SSH 金鑰</title>
