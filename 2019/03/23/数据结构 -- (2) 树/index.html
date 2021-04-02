@@ -24,15 +24,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="数据结构 — (1) 线性表  数据结构 — (2) 树 一、基本概念 1. 树的定义：递归定义2. 基本术语 父节点，子节点，兄弟节点  根节点，叶节点  层 (深度)，高度 (树的高度 &#x3D; 根节点的高度)有序树 (兄弟节点之间是有顺序的)，无序树  路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径  节点的度 (子节点的数量)，树的度 (最大的度) 3. 树的性质 (1) $">
+<meta name="description" content="数据结构 — (1) 线性表数据结构 — (2) 树 一、基本概念1. 树的定义：递归定义2. 基本术语父节点，子节点，兄弟节点根节点，叶节点层 (深度)，高度 (树的高度 &#x3D; 根节点的高度)有序树 (兄弟节点之间是有顺序的)，无序树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构 -- (2) 树">
 <meta property="og:url" content="https://wangxchun.github.io/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(2)%20%E6%A0%91/index.html">
 <meta property="og:site_name" content="Chris自强不息">
-<meta property="og:description" content="数据结构 — (1) 线性表  数据结构 — (2) 树 一、基本概念 1. 树的定义：递归定义2. 基本术语 父节点，子节点，兄弟节点  根节点，叶节点  层 (深度)，高度 (树的高度 &#x3D; 根节点的高度)有序树 (兄弟节点之间是有顺序的)，无序树  路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径  节点的度 (子节点的数量)，树的度 (最大的度) 3. 树的性质 (1) $">
+<meta property="og:description" content="数据结构 — (1) 线性表数据结构 — (2) 树 一、基本概念1. 树的定义：递归定义2. 基本术语父节点，子节点，兄弟节点根节点，叶节点层 (深度)，高度 (树的高度 &#x3D; 根节点的高度)有序树 (兄弟节点之间是有顺序的)，无序树">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2019-03-23T07:27:54.000Z">
-<meta property="article:modified_time" content="2021-03-30T07:46:21.797Z">
+<meta property="article:modified_time" content="2021-04-01T12:37:26.697Z">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
 
@@ -268,7 +268,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-30 15:46:21" itemprop="dateModified" datetime="2021-03-30T15:46:21+08:00">2021-03-30</time>
+        <time title="修改時間：2021-04-01 20:37:26" itemprop="dateModified" datetime="2021-04-01T20:37:26+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,7 +291,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树</a></p>
-<h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
+<h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br><span id="more"></span><br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
 <h4 id="3- 树的性质"><a href="#3- 树的性质" class="headerlink" title="3. 树的性质"></a>3. 树的性质 </h4><h5 id="1-n-e-1- 树中的节点数等于所有结点的度数加 -1"><a href="#1-n-e-1- 树中的节点数等于所有结点的度数加 -1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1</h5><p> 边数 $d$，度数 $e$，$d=e$<br>可以用归纳法证明</p>
 <h5 id="2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1"><a href="#2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)</h5><h5 id="3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点"><a href="#3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点 </h5><p> 由性质（2）可得：$n \leq 1+m+m^2+…+m^{h-1}$<br>$\displaystyle n \leq {(m^h-1) \over (m-1)}$</p>
 <h5 id="4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil"><a href="#4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil" class="headerlink" title="(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$"></a>(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$</h5><p>由性质（3）可得：$h \geq \log_m {n (m-1)+1}$</p>
@@ -318,13 +318,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/03/22/C++%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5/" rel="prev" title="C++ 四捨五入">
-                  <i class="fa fa-chevron-left"></i> C++ 四捨五入
+                <a href="/2019/03/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/" rel="prev" title="数据结构 -- (1) 线性表">
+                  <i class="fa fa-chevron-left"></i> 数据结构 -- (1) 线性表
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019/03/27/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/" rel="next" title="三連擊（洛谷 P1008）">
-                  三連擊（洛谷 P1008） <i class="fa fa-chevron-right"></i>
+                <a href="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(3)%20%E5%9B%BE/" rel="next" title="数据结构 -- (3) 图">
+                  数据结构 -- (3) 图 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

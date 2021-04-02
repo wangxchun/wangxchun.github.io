@@ -233,88 +233,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(3)%20%E5%9B%BE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chris自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(3)%20%E5%9B%BE/" class="post-title-link" itemprop="url">数据结构 -- (3) 图</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-03-31 08:31:29" itemprop="dateCreated datePublished" datetime="2021-03-31T08:31:29+08:00">2021-03-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 09:19:35" itemprop="dateModified" datetime="2021-04-01T09:19:35+08:00">2021-04-01</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="图的定义"><a href="# 图的定义" class="headerlink" title="图的定义"></a>图的定义 </h3><p> 图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G=(V,E)$<br>$V={v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶 <br>$E=\lbrace (u,v)|u \in V,v \in V \rbrace$<br> 注释：图不能为空集</p>
-<h3 id="图的分类和术语"><a href="# 图的分类和术语" class="headerlink" title="图的分类和术语"></a>图的分类和术语 </h3><h4 id="1- 有向图 - 无向图"><a href="#1- 有向图 - 无向图" class="headerlink" title="1. 有向图 / 无向图"></a>1. 有向图 / 无向图</h4><h4 id="2- 简单图 - 多重图"><a href="#2- 简单图 - 多重图" class="headerlink" title="2. 简单图 / 多重图"></a>2. 简单图 / 多重图</h4><p> 简单图：(1) 不存在重复边 (2) 不存在 $(u,u)$ 点</p>
-<h4 id="3- 完全图 - 有向完全图 - 无向完全图"><a href="#3- 完全图 - 有向完全图 - 无向完全图" class="headerlink" title="3. 完全图 (有向完全图 / 无向完全图)"></a>3. 完全图 (有向完全图 / 无向完全图)</h4><p>任意两个点 $(u,v)$ 之间存在边 $(u,v)$</p>
-<h4 id="4- 子图"><a href="#4- 子图" class="headerlink" title="4. 子图"></a>4. 子图 </h4><p> 若 V 是 E 的子图 <br> 则 ${\forall} e \in E \quad e_u,e_v \in V$</p>
-<h4 id="5- 连通，连通图，连通分量（无向图中考虑）"><a href="#5- 连通，连通图，连通分量（无向图中考虑）" class="headerlink" title="5. 连通，连通图，连通分量（无向图中考虑）"></a>5. 连通，连通图，连通分量（无向图中考虑）</h4><p>连通：当且仅当 $u,v$ 存在一条路径，称为 $u,v$ 连通 <br> 连通图：图中任意两点皆连通 <br> 连通分量：极大连通子图</p>
-<h4 id="6- 强连通，强连通图，强连通分量（有向图中讨论）"><a href="#6- 强连通，强连通图，强连通分量（有向图中讨论）" class="headerlink" title="6. 强连通，强连通图，强连通分量（有向图中讨论）"></a>6. 强连通，强连通图，强连通分量（有向图中讨论）</h4><h4 id="7- 生成树，生成森林"><a href="#7- 生成树，生成森林" class="headerlink" title="7. 生成树，生成森林"></a>7. 生成树，生成森林 </h4><p> 只有连通图可以考虑生成树，非连通图只能考虑连通森林 <br> 生成树：极小连通子图 $V’=V$（极小指的是边最少）<br>生成森林：非连通图的每个连通分量都有一个生成森林</p>
-<h4 id="8- 顶点的度（无向图或无向图），入度 - 出度（有向图）"><a href="#8- 顶点的度（无向图或无向图），入度 - 出度（有向图）" class="headerlink" title="8. 顶点的度（无向图或无向图），入度 / 出度（有向图）"></a>8. 顶点的度（无向图或无向图），入度 / 出度（有向图）</h4><p>$d_i:v_i 的边数 $<br>$\sum d_i = 2e$<br>$\sum id_i = e$<br>$\sum od_i = e$</p>
-<h4 id="9- 边的权值，网 - 带权图"><a href="#9- 边的权值，网 - 带权图" class="headerlink" title="9. 边的权值，网 (带权图)"></a>9. 边的权值，网 (带权图)</h4><h4 id="10- 稠密图，稀疏图（没有严格的定义）"><a href="#10- 稠密图，稀疏图（没有严格的定义）" class="headerlink" title="10. 稠密图，稀疏图（没有严格的定义）"></a>10. 稠密图，稀疏图（没有严格的定义）</h4><p>$|E| &lt; |V|log|V|$</p>
-<h4 id="11- 路径，路径长度，回路 - 环 - 圈"><a href="#11- 路径，路径长度，回路 - 环 - 圈" class="headerlink" title="11. 路径，路径长度，回路 / 环 / 圈"></a>11. 路径，路径长度，回路 / 环 / 圈 </h4><p> 路径长度：$u$ 到 $v$ 经过的边数<br>$e &lt; n-1$：非连通<br>$e &gt; n-1$：一定有环</p>
-<h4 id="12- 简单路径，简单回路"><a href="#12- 简单路径，简单回路" class="headerlink" title="12. 简单路径，简单回路"></a>12. 简单路径，简单回路 </h4><p> 简单路径：顶点不重复 <br> 简单回路：除首末节点，不存在重复顶点</p>
-<h4 id="13- 距离"><a href="#13- 距离" class="headerlink" title="13. 距离"></a>13. 距离 </h4><p> 若 $u,v$ 存在路径，最短的路径长度称为距离</p>
-<h4 id="14- 有向树"><a href="#14- 有向树" class="headerlink" title="14. 有向树"></a>14. 有向树 </h4><p>${\exists} v_o, \;\; id_{v_o}=0$<br> 其余 $v_i \;\; id_{v_o}=1$</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab2%20%E4%BD%BF%E7%94%A8Mininet%E5%88%9B%E5%BB%BA%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -346,7 +264,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 08:35:42" itemprop="dateModified" datetime="2021-04-01T08:35:42+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-01 21:39:25" itemprop="dateModified" datetime="2021-04-01T21:39:25+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -368,10 +286,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="Miniset- 简介"><a href="#Miniset- 简介" class="headerlink" title="Miniset 简介"></a>Miniset 简介</h3><p>Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。<br>Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。<br>Mininet 提供 python API，简单易用</p>
-<h3 id="环境搭建"><a href="# 环境搭建" class="headerlink" title="环境搭建"></a>环境搭建 </h3><h3 id="Mininet- 常用指令"><a href="#Mininet- 常用指令" class="headerlink" title="Mininet 常用指令"></a>Mininet 常用指令</h3><h3 id="熟悉常用指令"><a href="# 熟悉常用指令" class="headerlink" title="熟悉常用指令"></a> 熟悉常用指令</h3><p>$su root<br>$cd mininet/mininet<br>$cd examples<br>// 里面有很多 python 脚本，可以随便选择一个执行，熟悉<br>// 在执行之前，要在另一个终端将 ryu 控制器打开<br>//$su root<br>//$cd<br>//$cd ryu/app<br>//$ryumanager simple_switch.py<br>$python 427.py<br>miniset&gt; nodes // 显示节点列表<br>miniset&gt; pingall // 查看连通性<br>miniset&gt; net // 查看网络拓扑<br>miniset&gt; links // 查看网阔健壮性<br>miniset&gt; dump // 节点的接口设置和进程 PID<br>miniset&gt; iperf h1 h2 // 网络带宽设置<br>miniset&gt; help // 帮助<br>miniset&gt; exit // 退出 miniset</p>
-<h3 id="Mini- 搭建网络拓扑的三种方式"><a href="#Mini- 搭建网络拓扑的三种方式" class="headerlink" title="Mini 搭建网络拓扑的三种方式"></a>Mini 搭建网络拓扑的三种方式 </h3><h4 id="通过命令行 -terminal"><a href="# 通过命令行 -terminal" class="headerlink" title="通过命令行 terminal"></a> 通过命令行 terminal</h4><h5 id="单一拓扑 -Single"><a href="# 单一拓扑 -Single" class="headerlink" title="单一拓扑 (Single)"></a>单一拓扑 (Single)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --topo&#x3D;single,3</span><br></pre></td></tr></table></figure>
-<h5 id="线性拓扑"><a href="# 线性拓扑" class="headerlink" title="线性拓扑"></a>线性拓扑 </h5><h5 id="树形拓扑"><a href="# 树形拓扑" class="headerlink" title="树形拓扑"></a> 树形拓扑 </h5><h5 id="自定义拓扑"><a href="# 自定义拓扑" class="headerlink" title="自定义拓扑"></a> 自定义拓扑 </h5><h4 id="通过可视化界面"><a href="# 通过可视化界面" class="headerlink" title="通过可视化界面"></a> 通过可视化界面 </h4><h4 id="通过 -python- 文件"><a href="# 通过 -python- 文件" class="headerlink" title="通过 python 文件"></a> 通过 python 文件</h4><h3 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h3>
+          <h3 id="一、Miniset-简介"><a href="#一、Miniset-简介" class="headerlink" title="一、Miniset 简介"></a>一、Miniset 简介</h3><p>Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。<br>Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。<br>Mininet 提供 python API，简单易用</p>
+<h3 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab2%20%E4%BD%BF%E7%94%A8Mininet%E5%88%9B%E5%BB%BA%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -397,7 +321,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -410,7 +334,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" class="post-title-link" itemprop="url">机器学习算法 --（3）神经网络</a>
+          <a href="/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/" class="post-title-link" itemprop="url">vbox 安装 Ubuntu 清理整个磁盘会怎样</a>
         </h2>
 
         <div class="post-meta-container">
@@ -421,14 +345,276 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2021-03-29 08:57:52" itemprop="dateCreated datePublished" datetime="2021-03-29T08:57:52+08:00">2021-03-29</time>
+      <time title="創建時間：2021-03-23 21:45:10" itemprop="dateCreated datePublished" datetime="2021-03-23T21:45:10+08:00">2021-03-23</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 16:58:47" itemprop="dateModified" datetime="2021-04-01T16:58:47+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-01 20:35:47" itemprop="dateModified" datetime="2021-04-01T20:35:47+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="vbox-安装-Ubuntu-清理整个磁盘会怎样"><a href="#vbox-安装-Ubuntu-清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样</h4><p>不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="post-title-link" itemprop="url">刷题检讨 --(1) 线性表</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-03-21 13:58:33" itemprop="dateCreated datePublished" datetime="2021-03-21T13:58:33+08:00">2021-03-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-01 20:33:06" itemprop="dateModified" datetime="2021-04-01T20:33:06+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E5%88%B7%E9%A1%8C/" itemprop="url" rel="index"><span itemprop="name">C++刷題</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h3><h5 id="1-如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用-vector-数组-iterator"><a href="#1-如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用-vector-数组-iterator" class="headerlink" title="(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator"></a>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator</h5><p>除了用迭代器获取 vector 容器中的元素，[] 和 at 也可以<br>vector<int>(v).swap (v); // 收缩内存<br></int></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/" class="post-title-link" itemprop="url">计算机网络 lab1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-03-20 20:37:54" itemprop="dateCreated datePublished" datetime="2021-03-20T20:37:54+08:00">2021-03-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-01 20:39:16" itemprop="dateModified" datetime="2021-04-01T20:39:16+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Lab-1-Set-Up-Environment-and-Test-Basic-Softwares"><a href="#Lab-1-Set-Up-Environment-and-Test-Basic-Softwares" class="headerlink" title="Lab 1: Set Up Environment and Test Basic Softwares"></a>Lab 1: Set Up Environment and Test Basic Softwares</h3><p>准备工作：</p>
+<h5 id="1-安装-Virtualbox"><a href="#1-安装-Virtualbox" class="headerlink" title="(1) 安装 Virtualbox"></a>(1) 安装 Virtualbox</h5><h5 id="2-在-Virtualbox-中建立安装-ubuntu-作业系统的虚拟机"><a href="#2-在-Virtualbox-中建立安装-ubuntu-作业系统的虚拟机" class="headerlink" title="(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机"></a>(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机</h5><p>在 Windows 下安裝 VirtualBox 及 Ubuntu 18.04：<br>(Ubuntu18.04 可以在官网下载，或是下载阿里镜像)<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" class="post-title-link" itemprop="url">机器学习算法 --（3）神经网络</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2020-10-13 08:57:52" itemprop="dateCreated datePublished" datetime="2020-10-13T08:57:52+08:00">2020-10-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-01 21:07:46" itemprop="dateModified" datetime="2021-04-01T21:07:46+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -450,14 +636,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="一、深度学习"><a href="# 一、深度学习" class="headerlink" title="一、深度学习"></a>一、深度学习 </h3><h4 id="深度学习三次热潮"><a href="# 深度学习三次热潮" class="headerlink" title="深度学习三次热潮"></a> 深度学习三次热潮</h4><p>1950 年代：图灵提出图灵测试<br>1980 年代：李开复语音识别，BP 算法<br>2006 年至今：李飞飞 ImageNet，AlphoGo 战胜人类棋手</p>
-<h4 id="深度学习爆发三要素"><a href="# 深度学习爆发三要素" class="headerlink" title="深度学习爆发三要素"></a>深度学习爆发三要素 </h4><p> 数据、算法、算力</p>
-<h4 id="机器学习三巨头"><a href="# 机器学习三巨头" class="headerlink" title="机器学习三巨头"></a>机器学习三巨头 </h4><p>Hinton：BP 算法<br>Lecun：卷积神经网络<br>Bengio：预训练和自动编码器<br> 吴恩达：创建 Coursera 和 Google Brain</p>
-<p><img src="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo1.jpg" alt></p>
-<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a> 介绍 </h4><p><img src="/2021/03/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\Delta w_i = \eta (t-y) x_i$<br> 输入节点：$x_1, x_2, x_3$<br>输出节点：$y$<br>权向量：$w_1, w_2, w_3$<br>偏置因子：$b$（也可以看成是 $x_0=1$）<br>激活函数：$sign (x) =<br>\begin {cases}<br>1,  &amp; \text {$x \geq 0$} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}<br>$</p>
-<h4 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子 </h4><p> 题目：假设平面坐标系上有四个点，$(3,3),(4,3)$ 这两个点的标签为 $1$；$(1,1),(0,2)$ 这两个点的标签为 $-1$。构建神经网络来分类。</p>
-<p>思路：我们要分类的数据是 $2$ 维数据，所以只需要 $2$ 个输入节点，我们可以把神经元的偏置值也设置成一个节点，这样我们需要 $3$ 个输入节点。输入数据有 $4$ 个 $(1,3,3),(1,4,3),(1,1,1),(1,0,2)$ 数据对应的标签为 $(1,1,-1,-1)$。初始化权值 $w_0,w_1,w_2$，取 $-1$ 到 $1$ 的随机数。学习率设置为 $0.11$，激活函数为 sign 函数。</p>
-<h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a>三、</h3>
+          <h3 id="一、深度学习"><a href="#一、深度学习" class="headerlink" title="一、深度学习"></a>一、深度学习</h3><h4 id="深度学习三次热潮"><a href="#深度学习三次热潮" class="headerlink" title="深度学习三次热潮"></a>深度学习三次热潮</h4><p>1950 年代：图灵提出图灵测试<br>1980 年代：李开复语音识别，BP 算法<br>2006 年至今：李飞飞 ImageNet，AlphoGo 战胜人类棋手</p>
+<h4 id="深度学习爆发三要素"><a href="#深度学习爆发三要素" class="headerlink" title="深度学习爆发三要素"></a>深度学习爆发三要素</h4><p>数据、算法、算力<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -483,7 +671,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/10/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -496,7 +684,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="post-title-link" itemprop="url">机器学习算法 --（2）逻辑回归</a>
+          <a href="/2020/10/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="post-title-link" itemprop="url">机器学习算法 --（2）逻辑回归</a>
         </h2>
 
         <div class="post-meta-container">
@@ -507,14 +695,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2021-03-28 16:59:25" itemprop="dateCreated datePublished" datetime="2021-03-28T16:59:25+08:00">2021-03-28</time>
+      <time title="創建時間：2020-10-11 16:59:25" itemprop="dateCreated datePublished" datetime="2020-10-11T16:59:25+08:00">2020-10-11</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:22:36" itemprop="dateModified" datetime="2021-04-01T20:22:36+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-01 21:07:49" itemprop="dateModified" datetime="2021-04-01T21:07:49+08:00">2021-04-01</time>
       </span>
 
   
@@ -527,88 +715,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/28/%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chris自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/28/%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">撰写文章基本操作</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-03-28 11:33:46 / 修改時間：13:48:46" itemprop="dateCreated datePublished" datetime="2021-03-28T11:33:46+08:00">2021-03-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a> 加入代码 </h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;figure class&#x3D;&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;&quot;code&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;...&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a> 加入链结 </h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://www.google.com.tw/">google</a></p>
-<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a> 加入引用 </h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> 引用 1</p>
-</blockquote>
-<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a> 改变文字颜色和大小 </h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;2&quot;&gt; 颜色 &lt;&#x2F;font&gt;</span><br><span class="line">&lt;code&gt;&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;3&quot;&gt; 大小 &lt;&#x2F;font&gt;&lt;&#x2F;code&gt;</span><br></pre></td></tr></table></figure>
-<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
+          <span id="more"></span>
 
       
     </div>
@@ -635,7 +742,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -648,7 +755,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="post-title-link" itemprop="url">机器学习算法 --（1）线性回归和非线性回归</a>
+          <a href="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="post-title-link" itemprop="url">机器学习算法 --（1）线性回归和非线性回归</a>
         </h2>
 
         <div class="post-meta-container">
@@ -659,14 +766,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2021-03-28 10:42:55" itemprop="dateCreated datePublished" datetime="2021-03-28T10:42:55+08:00">2021-03-28</time>
+      <time title="創建時間：2020-10-06 10:42:55" itemprop="dateCreated datePublished" datetime="2020-10-06T10:42:55+08:00">2020-10-06</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 18:27:51" itemprop="dateModified" datetime="2021-04-01T18:27:51+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-02 09:14:18" itemprop="dateModified" datetime="2021-04-02T09:14:18+08:00">2021-04-02</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -688,60 +795,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h3><h4 id="1- 数据挖掘和机器学习的关系"><a href="#1- 数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2- 训练数据 -vs- 验证数据 -vs- 测试数据"><a href="#2- 训练数据 -vs- 验证数据 -vs- 测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3- 监督学习 -vs- 无监督学习 -vs- 半监督学习"><a href="#3- 监督学习 -vs- 无监督学习 -vs- 半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4- 回归 -vs- 分类 -vs- 聚类"><a href="#4- 回归 -vs- 分类 -vs- 聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="# 一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a> 一、一元线性回归概念 </h3><p> 回归：高尔顿提出 <br> 回归分析：建立方程模拟两个或多个变量之间如何关联 <br> 一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟 <br> 一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率</p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
-<h3 id="三、相关系数和决定系数"><a href="# 三、相关系数和决定系数" class="headerlink" title="三、相关系数和决定系数"></a>三、相关系数和决定系数 </h3><h4 id="相关系数：衡量线性相关性的强弱"><a href="# 相关系数：衡量线性相关性的强弱" class="headerlink" title="相关系数：衡量线性相关性的强弱"></a> 相关系数：衡量线性相关性的强弱</h4><p>$\displaystyle r_{xy} = {{\sum {(X_i - \bar X)(Y_i - \bar Y)}} \over {\sqrt {\sum {(X_i - \bar X)^2 (Y_i - \bar Y)^2}}} }$  </p>
-<h4 id="决定系数"><a href="# 决定系数" class="headerlink" title="决定系数"></a>决定系数 </h4><p> 总平方和（SST）：$\sum_{i=0}^n (y_i - \bar y)^2$<br>残差平方和（SSE）：$\sum_{i=0}^n (y_i - \hat y)^2$<br>回归平方和（SSR）：$\sum_{i=0}^n (\hat y - \bar y)^2$<br>它们三者的关系是：$SST = SSE + SSR$<br>决定系数：$\displaystyle R^2 = {SSR \over SST} = 1 - {SSE \over SST}$</p>
-<h3 id="四、梯度下降法"><a href="# 四、梯度下降法" class="headerlink" title="四、梯度下降法"></a>四、梯度下降法 </h3><h4 id="概念"><a href="# 概念" class="headerlink" title="概念"></a> 概念 </h4><p> 缺点：初始值的选取会影响到最后的结果，只能找到局部最优解<br>(凸函数的局部最值就是全局最值)<br>repeat until convergence<br>{<br>    $\displaystyle \qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,\theta_1)$ $\quad (for\quad j = 0 \quad and \quad j = 1)$<br>}</p>
-<p>同步更新：<br>$\displaystyle temp0 := \theta_0 - \alpha {\partial \over \partial\theta_0} J (\theta_0,\theta_1)$<br>$\displaystyle temp1 := \theta_1 - \alpha {\partial \over \partial\theta_1} J (\theta_0,\theta_1)$<br>$\theta_0 := temp0$<br>$\theta_0 := temp1$</p>
-<p>学习率 $\alpha$ 不能太大也不能太小，<br>太大可能会导致在收敛值附近不断震荡，一直无法收敛；<br>太小会导致收敛速度过慢</p>
-<h4 id="用梯度下降法来求解线性回归"><a href="# 用梯度下降法来求解线性回归" class="headerlink" title="用梯度下降法来求解线性回归"></a>用梯度下降法来求解线性回归</h4><p>$h_\theta (x) = \theta_0 + \theta_1x -(1)$<br>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br>$ 将 (1) 式代入 (2) 式 $<br>$\displaystyle {\partial \over \partial\theta_0} J (\theta_0,\theta_1) = {1 \over m}\sum_{i=0}^m (h_\theta (x_i) - y_i)$ </p>
-<h3 id="五、sklearn- 实现一元线性回归（sklearn- 使用的是标准方程法）"><a href="# 五、sklearn- 实现一元线性回归（sklearn- 使用的是标准方程法）" class="headerlink" title="五、sklearn 实现一元线性回归（sklearn 使用的是标准方程法）"></a>五、sklearn 实现一元线性回归（sklearn 使用的是标准方程法）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x_data = data [:,<span class="number">0</span>,np.newaxis]</span><br><span class="line">y_data = data [:,<span class="number">1</span>,np.newaxis]</span><br><span class="line"><span class="comment"># 创建并拟合模型</span></span><br><span class="line">model = LinearRegression ()</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, model.predict (x_data), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
-<h3 id="六、多元线性回归"><a href="# 六、多元线性回归" class="headerlink" title="六、多元线性回归"></a>六、多元线性回归</h3><h4 id="Hypothesis"><a href="#Hypothesis" class="headerlink" title="Hypothesis:"></a>Hypothesis:</h4><p>$h_\theta (x) = \theta^Tx = \theta_0x_1 + \theta_2x_2 + … + \theta_nx_n$</p>
-<h4 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters:"></a>Parameters:</h4><p>theta_0,theta_1,…,theta_n</p>
-<h4 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h4><p>$\displaystyle J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$</p>
-<h4 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h4><p>repeat until convergence<br>{<br>    $\displaystyle \qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,…,\theta_n)$<br>    $\displaystyle \quad\qquad (for\quad j = 0,1,…,n)$<br>}</p>
-<h3 id="七、多项式回归"><a href="# 七、多项式回归" class="headerlink" title="七、多项式回归"></a>七、多项式回归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> PolynomialFeatures</span><br><span class="line"><span class="comment"># 定义多项式回归，degree 的值可以调节多项式的特征</span></span><br><span class="line">poly_reg = PolynomialFeatures (degree=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 特征处理</span></span><br><span class="line">x_poly =  poly_reg.fit_transform (x_data)</span><br><span class="line"><span class="comment"># 定义回归模型</span></span><br><span class="line">lin_reg = LinearRegression ()</span><br><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">lin_reg.fit (x_poly, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">plt.plot (x_data, y_data, <span class="string">&#x27;b.&#x27;</span>)</span><br><span class="line">plt.plot (x_data, lin_reg.predict (x_poly), c=<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
-<h3 id="八、标准方程法（vs- 梯度下降法）"><a href="# 八、标准方程法（vs- 梯度下降法）" class="headerlink" title="八、标准方程法（vs 梯度下降法）"></a>八、标准方程法（vs 梯度下降法）</h3><h4 id="概念 -1"><a href="# 概念 -1" class="headerlink" title="概念"></a>概念 </h4><p>$\displaystyle J (\theta_0,\theta_1,…,\theta_n) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2 -(2)$<br> 令 $\displaystyle {\partial \over \partial\theta_j} J (\theta)=…=0$<br>求解：$\theta_1,\theta_2,…,\theta_n$</p>
-<p>例：X 为 $4 \times 5$ 矩阵，$4$ 个样本，$4+1$ 个参数</p>
-<p>$X=<br>\begin {bmatrix}<br>    1 &amp; 2104 &amp; 5 &amp; 1 &amp; 45 \\<br>    1 &amp; 1416 &amp; 3 &amp; 2 &amp; 40 \\<br>    1 &amp; 1534 &amp; 3 &amp; 2 &amp; 30 \\<br>    1 &amp; 852 &amp; 2 &amp; 1 &amp; 36 \\<br>\end {bmatrix}<br>$ $\quad\quad$ $w=<br>\begin {bmatrix}<br>    w_0 \\<br>    w_1 \\<br>    w_2 \\<br>    w_3 \\<br>    w_4 \\<br>\end {bmatrix}<br>$ $\quad\quad$ $y=<br>\begin {bmatrix}<br>    460 \\<br>    232 \\<br>    315 \\<br>    178 \\<br>\end {bmatrix}<br>$</p>
-<p>$\sum_{i=0}^m (h_w (x_i) - y_i)^2=(y-Xw)^T (y-Xw)$</p>
-<p>$\displaystyle {\partial (y-Xw)^T (y-Xw) \over \partial w} = 0$<br>$\displaystyle {\partial (y^Ty - y^TXw - w^TX^Ty + w^TX^TXw) \over \partial w} = 0$<br>$\displaystyle {\partial y^Ty \over \partial w} - {\partial y^TXw \over \partial w} - {\partial w^TX^Ty \over \partial w} + {\partial w^TX^TXw \over \partial w} = 0$<br>$0 - X^Ty - X^Ty + 2X^TXw = 0$<br>$X^TXw = X^Ty$<br>$w = (X^TX)^(-1) X^Ty$<br>注释：矩阵的求导</p>
-<h4 id="标准方程法 -vs- 梯度下降法"><a href="# 标准方程法 -vs- 梯度下降法" class="headerlink" title="标准方程法 vs 梯度下降法"></a>标准方程法 vs 梯度下降法</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>梯度下降法</th>
-<th>标准方程法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>缺点：<br> 需要选择合适的学习率 <br> 需要迭代很多个周期 <br> 只能得到最优解的近似值</td>
-<td>优点：<br> 不需要学习率 <br> 不需要迭代 <br> 可以得到全局最优解</td>
-</tr>
-<tr>
-<td>优点：<br> 当特征值非常多的时候也可以很好的工作</td>
-<td>缺点：<br> 需要计算 $(𝑋^T𝑋)^{−1}$ 时间复杂度大约是 O ($n^3$) <br>n 是特征数量</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="自己写标准方程法"><a href="# 自己写标准方程法" class="headerlink" title="自己写标准方程法"></a>自己写标准方程法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">weights</span> (<span class="params">xArr, yArr</span>)</span></span><br><span class="line">	xMat = np.mat (xArr)</span><br><span class="line">	yMat = np.mat (yArr)</span><br><span class="line">	xTx = xMat.T * xMat <span class="comment"># 矩阵乘法</span></span><br><span class="line">	<span class="comment"># 如果矩阵的 det 值为零，说明该矩阵没有逆矩阵</span></span><br><span class="line">	<span class="keyword">if</span> np.linalg.det (xTx) == <span class="number">0.0</span>:</span><br><span class="line">		<span class="built_in">print</span> (<span class="string">&quot;This matrix cannot do inverse&quot;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="comment">#xTx.I 为 xTx 的逆矩阵</span></span><br><span class="line">	ws = xTx.I * xMat.T * yMat</span><br><span class="line">	<span class="keyword">return</span> ws</span><br></pre></td></tr></table></figure>
-<h3 id="九、特征缩放"><a href="# 九、特征缩放" class="headerlink" title="九、特征缩放"></a>九、特征缩放 </h3><p> 假设不同的特征的取值范围相差非常大，就会造成天然的权重不一 <br> 解决方法：特征缩放</p>
-<h4 id="数据归一化"><a href="# 数据归一化" class="headerlink" title="数据归一化"></a>数据归一化 </h4><p> 转化成 $(0,1)$ 之间：$newValue = \displaystyle {oldValue - min \over max - min}$</p>
-<p>转化成 $(-1,1)$ 之间：$newValue = (\displaystyle {oldValue - min \over max - min}-0.5) \times 2$</p>
-<h4 id="数据标准化"><a href="# 数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h4><p>$newValue = \displaystyle {oldValue - u \over s}$ 其中 u 为数据的平均值，s 为数据的方差</p>
-<h3 id="十、交叉验证法"><a href="# 十、交叉验证法" class="headerlink" title="十、交叉验证法"></a>十、交叉验证法 </h3><p> 若样本数据较少时，可以一部分作为训练集，一部分作为测试集，没有验证集。<br>例如有 100 组数据，可以 80 组作为训练集，20 组作为测试集。<br>但是当样本更少，8/2 拆分也不适合的时候，就可以使用交叉验证法<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo2.jpg" alt></p>
-<h3 id="十一、过拟合与正则化"><a href="# 十一、过拟合与正则化" class="headerlink" title="十一、过拟合与正则化"></a>十一、过拟合与正则化 </h3><h4 id="过拟合"><a href="# 过拟合" class="headerlink" title="过拟合"></a> 过拟合</h4><p><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo3.jpg" alt></p>
-<h4 id="防止过拟合："><a href="# 防止过拟合：" class="headerlink" title="防止过拟合："></a>防止过拟合：</h4><h5 id="1- 减少特征"><a href="#1- 减少特征" class="headerlink" title="1. 减少特征"></a>1. 减少特征 </h5><h5 id="2- 增加数据量"><a href="#2- 增加数据量" class="headerlink" title="2. 增加数据量"></a>2. 增加数据量</h5><h5 id="3- 正则化"><a href="#3- 正则化" class="headerlink" title="3. 正则化"></a>3. 正则化</h5><h5 id="4- 深度学习中有其他防止过拟合的方式"><a href="#4- 深度学习中有其他防止过拟合的方式" class="headerlink" title="4. 深度学习中有其他防止过拟合的方式"></a>4. 深度学习中有其他防止过拟合的方式</h5><h4 id="正则化"><a href="# 正则化" class="headerlink" title="正则化"></a> 正则化 </h4><h5 id="L1- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j"><a href="#L1- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j" class="headerlink" title="L1 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$"></a>L1 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$</h5><h5 id="L2- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2"><a href="#L2- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2" class="headerlink" title="L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$"></a>L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$</h5><h3 id="十二、岭回归"><a href="# 十二、岭回归" class="headerlink" title="十二、岭回归"></a> 十二、岭回归 </h3><h4 id="概念 -2"><a href="# 概念 -2" class="headerlink" title="概念"></a> 概念 </h4><p> 在使用标准方程解多元线性回归的时候，$w=(X^TX)^{-1} X^Ty$<br>如果数据的特征比样本点还多，数据特征 $n$ 个 ，样本个数 $m$ 个，如果 $n&gt;m$<br>，则计算 $(X^TX)^{-1}$ 时会出错。因为 $(X^TX)$ 不是满秩矩阵，所以不可逆。<br>为了解决这个问题，统计学家引入了岭回归的概念。<br>$w=(X^TX+\lambda I)^{-1} X^Ty$<br>$\lambda$ 为岭系数，$I$ 为单位矩阵</p>
-<h4 id="推导"><a href="# 推导" class="headerlink" title="推导"></a>推导 </h4><p> 岭回归的代价函数是 L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$<br>$\displaystyle J (\theta)={1 \over 2} (w^TX^TXw - y^TXw - w^TX^Ty + y^Ty) + \lambda \theta^T\theta$</p>
-<p>$\displaystyle {\partial J (\theta) \over \partial \theta}=0$</p>
-<p>$X^TX\theta - X^TY + \lambda \theta=0$<br>$\theta=(X^TX+\lambda I)^{-1} X^TY$</p>
-<h4 id="用处"><a href="# 用处" class="headerlink" title="用处"></a>用处 </h4><p> 岭回归最早是用来处理特征数多于样本的情况，现在也用于在估计中加入偏差，从而得到更好的估计。<br>同时也可以解决多重共线性的问题。<br>岭回归是一种有偏估计。</p>
-<h4 id="lambda- 的选择"><a href="#lambda- 的选择" class="headerlink" title="\lambda 的选择"></a>\lambda 的选择 </h4><p> 选择 \lambda 值，使得 <br>(1) 各个回归系数的岭估计基本稳定<br>(2) 残差平方和增大不太多<br><img src="/2021/03/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo4.jpg" alt><br> 横轴是 \lambda 值，纵轴是参数 \theta 的取值范围</p>
-<h3 id><a href="#" class="headerlink" title="#"></a>#</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建模型</span></span><br><span class="line"><span class="comment"># 生成 50 个值（默认是 50 个值）</span></span><br><span class="line">alphas_to_test = np.linspace (<span class="number">0.001</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment"># 创建模型，保存误差值</span></span><br><span class="line">model = linear_model.RidgeCV (alphas=alphas_to_test, store_cv_values=<span class="literal">True</span>)</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 岭系数</span></span><br><span class="line"><span class="built_in">print</span> (model.alpha_)</span><br><span class="line"><span class="comment"># loss 值</span></span><br><span class="line"><span class="built_in">print</span> (model.cv_values_.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line"><span class="comment"># 岭系数跟 loss 值的关系</span></span><br><span class="line">plt.plot (alphas_to_test, model.cv_values_.mean (axis=<span class="number">0</span>))</span><br><span class="line"><span class="comment"># 选取的岭系数值的位置</span></span><br><span class="line">plt.plot (model.alpha_, <span class="built_in">min</span> (model.cv_values_.mean (axis=<span class="number">0</span>)),<span class="string">&#x27;ro&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
-
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-数据挖掘和机器学习的关系"><a href="#1-数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2-训练数据-vs-验证数据-vs-测试数据"><a href="#2-训练数据-vs-验证数据-vs-测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3-监督学习-vs-无监督学习-vs-半监督学习"><a href="#3-监督学习-vs-无监督学习-vs-半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4-回归-vs-分类-vs-聚类"><a href="#4-回归-vs-分类-vs-聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="#一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a>一、一元线性回归概念</h3><p>回归：高尔顿提出<br>回归分析：建立方程模拟两个或多个变量之间如何关联<br>一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟<br>一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -767,7 +829,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/hexo%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -780,7 +842,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/27/hexo%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/" class="post-title-link" itemprop="url">hexo 目錄結構</a>
+          <a href="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">计算机体系结构：(一) 硬件 --3. 通信概述</a>
         </h2>
 
         <div class="post-meta-container">
@@ -791,14 +853,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2021-03-27 18:10:05" itemprop="dateCreated datePublished" datetime="2021-03-27T18:10:05+08:00">2021-03-27</time>
+      <time title="創建時間：2020-09-03 15:44:15" itemprop="dateCreated datePublished" datetime="2020-09-03T15:44:15+08:00">2020-09-03</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-28 13:53:27" itemprop="dateModified" datetime="2021-03-28T13:53:27+08:00">2021-03-28</time>
+        <time title="修改時間：2021-04-01 20:39:10" itemprop="dateModified" datetime="2021-04-01T20:39:10+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -806,7 +868,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">计算机体系结构</span></a>
         </span>
     </span>
 
@@ -820,11 +882,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>.<br>├── node_modules  // 套件暫存處，基本上你所有安裝的套件也都會在這裡 <br>├── public        // 執行 hexo generate 後，輸出的靜態網頁 <br>├── scaffolds     // 模板。Hexo 會根據 scaffold 來建立新文章 / 新頁面 <br>├── scripts       // 存放自定義 js 文件 <br>├── source<br>|   ├── _drafts   // 草稿文章 <br>|   └── _posts    // 發佈文章 <br>├── themes        // Hexo 主题文件，Next 主題的樹狀結構請看下面 <br>├── _config.yml   // 整個 Blog 的配置 <br>├── .gitignore    // 舉凡只要你不想被加入版本控制甚至是上傳到 GitHub 的資料夾或檔案，都可寫在這 <br>├── package-lock.json 主要用途是用於記錄當前狀態安裝的每一個套件版本，他會自己調整，不需要動它 <br>└── package.json  // 主要是拿來放置並管理我們透過 npm 下載回來的檔案，其中部分指令也是直接寫在這裡面 </p>
-<p>.<br>└──themes<br>   └── next<br>          ├── doc<br>       ├── languages    // 主題語言字眼 <br>       ├── layout       //pug 文件，後會渲染成 html<br>       ├── scripts      //js 文件 <br>       ├── source<br>       |   ├── css      //styl 文件，後會渲染成 css<br>       |   ├── img      // 主題配置用到的圖片 <br>       |   └── js       //js 文件 <br>       ├── test<br>       └── _config.yml  // Butterfly 主題配置 </p>
-<p> 試著學 Hexo 系列 <br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20119486/ironman/2944">https://ithelp.ithome.com.tw/users/20119486/ironman/2944</a></p>
-<p> 參考：<br><a target="_blank" rel="noopener" href="https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%">https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%</a> E5%89%8D% E8% A8%80</p>
-
+          <h3 id="一、电子设备的通信过程"><a href="#一、电子设备的通信过程" class="headerlink" title="一、电子设备的通信过程"></a>一、电子设备的通信过程</h3><p><img src="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo1.jpg" alt></p>
+<h4 id="1-协议：通信规则"><a href="#1-协议：通信规则" class="headerlink" title="1. 协议：通信规则"></a>1. 协议：通信规则</h4><p><img src="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo2.jpg" alt></p>
+<h5 id="简单通信协议：只有底层协议"><a href="#简单通信协议：只有底层协议" class="headerlink" title="简单通信协议：只有底层协议"></a>简单通信协议：只有底层协议</h5><p>Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信<br>编写程序需参考硬件的 “时序图”<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -850,7 +918,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -863,7 +931,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/27/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/" class="post-title-link" itemprop="url">如何是实现 hexo 文章中文和英文之间自动空格</a>
+          <a href="/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/" class="post-title-link" itemprop="url">C++ 資料結構與算法 -- 一。線性表 --1. 線性表的存儲結構</a>
         </h2>
 
         <div class="post-meta-container">
@@ -873,9 +941,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-03-27 15:10:46 / 修改時間：15:12:55" itemprop="dateCreated datePublished" datetime="2021-03-27T15:10:46+08:00">2021-03-27</time>
+      <time title="創建時間：2019-06-02 14:39:34" itemprop="dateCreated datePublished" datetime="2019-06-02T14:39:34+08:00">2019-06-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-01 20:34:42" itemprop="dateModified" datetime="2021-04-01T20:34:42+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/" itemprop="url" rel="index"><span itemprop="name">C++資料結構</span></a>
+        </span>
     </span>
 
   
@@ -888,9 +971,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>安装插件 <br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false</p>
-<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
-
+          <h3 id="一、順序表"><a href="#一、順序表" class="headerlink" title="一、順序表"></a>一、順序表</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -916,7 +1005,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/dos%E4%BD%BF%E7%94%A8/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -929,7 +1018,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/27/dos%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">dos 使用</a>
+          <a href="/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/" class="post-title-link" itemprop="url">slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</a>
         </h2>
 
         <div class="post-meta-container">
@@ -939,17 +1028,23 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-03-27 15:06:15 / 修改時間：15:07:45" itemprop="dateCreated datePublished" datetime="2021-03-27T15:06:15+08:00">2021-03-27</time>
+      <time title="創建時間：2019-05-21 09:46:26" itemprop="dateCreated datePublished" datetime="2019-05-21T09:46:26+08:00">2019-05-21</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-01 21:01:47" itemprop="dateModified" datetime="2021-04-01T21:01:47+08:00">2021-04-01</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+          <a href="/categories/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A/" itemprop="url" rel="index"><span itemprop="name">激光slam小車</span></a>
         </span>
     </span>
 
@@ -963,83 +1058,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a> 显示目录下的文件 </h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录 <br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br>dir/ah 只显示当前路径下隐藏文件和目录 <br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
-<h3 id="Linux- 与 -Windows- 命令对比"><a href="#Linux- 与 -Windows- 命令对比" class="headerlink" title="Linux 与 Windows 命令对比"></a>Linux 与 Windows 命令对比 </h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xzwspy/article/details/80183849">https://blog.csdn.net/xzwspy/article/details/80183849</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/27/git%E5%AE%89%E8%A3%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chris自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/27/git%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">git 安装</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-03-27 15:04:16 / 修改時間：15:04:36" itemprop="dateCreated datePublished" datetime="2021-03-27T15:04:16+08:00">2021-03-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ScottePerk/article/details/81571251">https://blog.csdn.net/ScottePerk/article/details/81571251</a></p>
-
+          <p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
+<h3 id="一、Linux-目錄結構"><a href="#一、Linux-目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構</h3><h3 id="二、Linux-常用指令"><a href="#二、Linux-常用指令" class="headerlink" title="二、Linux 常用指令"></a>二、Linux 常用指令</h3><h4 id="1-打开-terminal"><a href="#1-打开-terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

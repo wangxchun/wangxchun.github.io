@@ -24,17 +24,17 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="一、电子设备的通信过程 1. 协议：通信规则 简单通信协议：只有底层协议 Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信 编写程序需参考硬件的 “时序图” 复杂通信协议：底层和高层协议组合而成  编程者要做的是学会调用 “协议程序” 的函数接口 2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信 3. 调制 为什么需要调制？(1) 便于制作小尺寸天线  无线">
+<meta name="description" content="一、电子设备的通信过程 1. 协议：通信规则 简单通信协议：只有底层协议Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信编写程序需参考硬件的 “时序图”">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机体系结构：(一) 硬件 --3. 通信概述">
 <meta property="og:url" content="https://wangxchun.github.io/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/index.html">
 <meta property="og:site_name" content="Chris自强不息">
-<meta property="og:description" content="一、电子设备的通信过程 1. 协议：通信规则 简单通信协议：只有底层协议 Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信 编写程序需参考硬件的 “时序图” 复杂通信协议：底层和高层协议组合而成  编程者要做的是学会调用 “协议程序” 的函数接口 2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信 3. 调制 为什么需要调制？(1) 便于制作小尺寸天线  无线">
+<meta property="og:description" content="一、电子设备的通信过程 1. 协议：通信规则 简单通信协议：只有底层协议Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信编写程序需参考硬件的 “时序图”">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://wangxchun.github.io/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo1.jpg">
 <meta property="og:image" content="https://wangxchun.github.io/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo2.jpg">
 <meta property="article:published_time" content="2020-09-03T07:44:15.000Z">
-<meta property="article:modified_time" content="2021-03-30T10:12:27.778Z">
+<meta property="article:modified_time" content="2021-04-01T12:39:10.048Z">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wangxchun.github.io/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo1.jpg">
@@ -271,7 +271,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-30 18:12:27" itemprop="dateModified" datetime="2021-03-30T18:12:27+08:00">2021-03-30</time>
+        <time title="修改時間：2021-04-01 20:39:10" itemprop="dateModified" datetime="2021-04-01T20:39:10+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -295,7 +295,7 @@
     <div class="post-body" itemprop="articleBody">
         <h3 id="一、电子设备的通信过程"><a href="# 一、电子设备的通信过程" class="headerlink" title="一、电子设备的通信过程"></a>一、电子设备的通信过程</h3><p><img src="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo1.jpg" alt></p>
 <h4 id="1- 协议：通信规则"><a href="#1- 协议：通信规则" class="headerlink" title="1. 协议：通信规则"></a>1. 协议：通信规则</h4><p><img src="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo2.jpg" alt></p>
-<h5 id="简单通信协议：只有底层协议"><a href="# 简单通信协议：只有底层协议" class="headerlink" title="简单通信协议：只有底层协议"></a>简单通信协议：只有底层协议 </h5><p>Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信<br> 编写程序需参考硬件的 “时序图”</p>
+<h5 id="简单通信协议：只有底层协议"><a href="# 简单通信协议：只有底层协议" class="headerlink" title="简单通信协议：只有底层协议"></a>简单通信协议：只有底层协议 </h5><p>Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信<br> 编写程序需参考硬件的 “时序图”<br><span id="more"></span></p>
 <h5 id="复杂通信协议：底层和高层协议组合而成"><a href="# 复杂通信协议：底层和高层协议组合而成" class="headerlink" title="复杂通信协议：底层和高层协议组合而成"></a>复杂通信协议：底层和高层协议组合而成 </h5><p> 编程者要做的是学会调用 “协议程序” 的函数接口</p>
 <h4 id="2- 数据编码不一定要 -ex：单片机的串口的 -SPI，I2C- 通信"><a href="#2- 数据编码不一定要 -ex：单片机的串口的 -SPI，I2C- 通信" class="headerlink" title="2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信"></a>2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信 </h4><h4 id="3- 调制"><a href="#3- 调制" class="headerlink" title="3. 调制"></a>3. 调制</h4><h5 id="为什么需要调制？"><a href="# 为什么需要调制？" class="headerlink" title="为什么需要调制？"></a> 为什么需要调制？</h5><p>(1) 便于制作小尺寸天线 <br> 无线通信中，无线的尺寸与电磁波波长成正比，如果基波信号很低，用频率高的载波信后，就可以用尺寸小的天线接收 <br>(2) 便于对信道进行频分复用<br>(3) 能够提高信号的抗噪能力<br> 当我们说某个天线通信为 XXXX Hz 时，指的都是载波信号，而不是基带信号的频率</p>
 <h5 id="调制种类"><a href="# 调制种类" class="headerlink" title="调制种类"></a>调制种类 </h5><p>(1) 数字调制技术：<br>ASK、FSK、PSK<br>(2) 模拟调制技术：<br> 幅度调制：DSB，AM，SSB，VSB<br>角度调制：FM，PM</p>
@@ -327,8 +327,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/" rel="next" title="计算机网络 lab1">
-                  计算机网络 lab1 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" rel="next" title="机器学习算法 --（1）线性回归和非线性回归">
+                  机器学习算法 --（1）线性回归和非线性回归 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
