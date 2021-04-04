@@ -174,14 +174,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -233,6 +233,83 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/04/jupyter-notebook%E9%97%AA%E9%80%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/04/jupyter-notebook%E9%97%AA%E9%80%80/" class="post-title-link" itemprop="url">jupyter notebook 闪退</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-04-04 17:43:53 / 修改時間：17:54:27" itemprop="dateCreated datePublished" datetime="2021-04-04T17:43:53+08:00">2021-04-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="起始位置"><a href="# 起始位置" class="headerlink" title="起始位置"></a>起始位置 </h3><p> 查看 jupyter 快捷文件的属性里的快捷方式，修改 “目标” 里的目录或文件，看看有没有 % HOME%，有的话去掉再运行试试。可能是找不到目标目录或文件了。</p>
+<h3 id="jupyter-notebook-config"><a href="#jupyter-notebook-config" class="headerlink" title="jupyter_notebook_config"></a>jupyter_notebook_config</h3><p>打开 C:\Users 用户名 .jupyter 中的 jupyter_notebook_config<br>更改 #c.NotebookApp.notebook_dir = ‘’<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/LawenceRay/article/details/88622610">https://blog.csdn.net/LawenceRay/article/details/88622610</a></p>
+<p>如果没有设置文件，则在 Anaconda Prompt 终端输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jupyter notebook --generate-config</span><br></pre></td></tr></table></figure></p>
+<p>更改默认浏览器 <a target="_blank" rel="noopener" href="https://hackmd.io/@lido2370/SkfHHh6er">https://hackmd.io/@lido2370/SkfHHh6er</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab2%20%E4%BD%BF%E7%94%A8Mininet%E5%88%9B%E5%BB%BA%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -264,7 +341,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 21:39:25" itemprop="dateModified" datetime="2021-04-01T21:39:25+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-04 18:28:39" itemprop="dateModified" datetime="2021-04-04T18:28:39+08:00">2021-04-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -287,7 +364,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <h3 id="一、Miniset-简介"><a href="#一、Miniset-简介" class="headerlink" title="一、Miniset 简介"></a>一、Miniset 简介</h3><p>Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。<br>Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。<br>Mininet 提供 python API，简单易用</p>
-<h3 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h3>
+<h3 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h3><h4 id="安装-mininet"><a href="#安装-mininet" class="headerlink" title="安装 mininet"></a>安装 mininet</h4>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab2%20%E4%BD%BF%E7%94%A8Mininet%E5%88%9B%E5%BB%BA%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/#more" rel="contents">
@@ -614,7 +691,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 21:07:46" itemprop="dateModified" datetime="2021-04-01T21:07:46+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-04 16:40:12" itemprop="dateModified" datetime="2021-04-04T16:40:12+08:00">2021-04-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -702,8 +779,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 21:07:49" itemprop="dateModified" datetime="2021-04-01T21:07:49+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-04 16:40:11" itemprop="dateModified" datetime="2021-04-04T16:40:11+08:00">2021-04-04</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -773,7 +859,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-02 09:14:18" itemprop="dateModified" datetime="2021-04-02T09:14:18+08:00">2021-04-02</time>
+        <time title="修改時間：2021-04-04 16:40:10" itemprop="dateModified" datetime="2021-04-04T16:40:10+08:00">2021-04-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -975,94 +1061,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chris自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/" class="post-title-link" itemprop="url">slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2019-05-21 09:46:26" itemprop="dateCreated datePublished" datetime="2019-05-21T09:46:26+08:00">2019-05-21</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 21:01:47" itemprop="dateModified" datetime="2021-04-01T21:01:47+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A/" itemprop="url" rel="index"><span itemprop="name">激光slam小車</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
-<h3 id="一、Linux-目錄結構"><a href="#一、Linux-目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構</h3><h3 id="二、Linux-常用指令"><a href="#二、Linux-常用指令" class="headerlink" title="二、Linux 常用指令"></a>二、Linux 常用指令</h3><h4 id="1-打开-terminal"><a href="#1-打开-terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>

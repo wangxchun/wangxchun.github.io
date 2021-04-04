@@ -174,14 +174,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -224,6 +224,94 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/" class="post-title-link" itemprop="url">slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-05-21 09:46:26" itemprop="dateCreated datePublished" datetime="2019-05-21T09:46:26+08:00">2019-05-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-01 21:01:47" itemprop="dateModified" datetime="2021-04-01T21:01:47+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A/" itemprop="url" rel="index"><span itemprop="name">激光slam小車</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
+<h3 id="一、Linux-目錄結構"><a href="#一、Linux-目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構</h3><h3 id="二、Linux-常用指令"><a href="#二、Linux-常用指令" class="headerlink" title="二、Linux 常用指令"></a>二、Linux 常用指令</h3><h4 id="1-打开-terminal"><a href="#1-打开-terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -962,93 +1050,6 @@
     <div class="post-body" itemprop="articleBody">
           <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chris自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/" class="post-title-link" itemprop="url">利用 rand () 產生隨機數</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2019-03-14 21:53:50" itemprop="dateCreated datePublished" datetime="2019-03-14T21:53:50+08:00">2019-03-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:32:53" itemprop="dateModified" datetime="2021-04-01T20:32:53+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="1-rand-函數介紹"><a href="#1-rand-函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹</h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
