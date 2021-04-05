@@ -154,6 +154,20 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>C++ 報錯 no matching function for call to transform</title>
+    <url>/2018/10/24/C++%E5%A0%B1%E9%8C%AF%20no-matching-function-for-call-to-transform/</url>
+    <content><![CDATA[<h3 id="報錯"><a href="# 報錯" class="headerlink" title="報錯"></a> 報錯 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p> 報錯：no matching function for call to transform</p>
+<h3 id="有三種解決方法："><a href="# 有三種解決方法：" class="headerlink" title="有三種解決方法："></a> 有三種解決方法：</h3><h4 id="1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題："><a href="#1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題：" class="headerlink" title="1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題："></a>1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br></pre></td></tr></table></figure>
+<h4 id="2- 自己寫一個函數出來 -—wraper"><a href="#2- 自己寫一個函數出來 -—wraper" class="headerlink" title="2. 自己寫一個函數出來 —wraper"></a>2. 自己寫一個函數出來 —wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span> <span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span> (c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。"><a href="#3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。" class="headerlink" title="3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。"></a>3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>)) toupper);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++報錯</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C++ 小知识点总结</title>
     <url>/2018/11/05/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h3 id="返回多个参数的方法："><a href="# 返回多个参数的方法：" class="headerlink" title="返回多个参数的方法："></a>返回多个参数的方法：</h3><h4 id="1- 定义结构体"><a href="#1- 定义结构体" class="headerlink" title="1. 定义结构体"></a>1. 定义结构体 </h4><h4 id="2- 利用引用参数"><a href="#2- 利用引用参数" class="headerlink" title="2. 利用引用参数"></a>2. 利用引用参数</h4><h3 id="解决 -“数组大小必须事先决定”- 这个问题"><a href="# 解决 -“数组大小必须事先决定”- 这个问题" class="headerlink" title="解决 “数组大小必须事先决定” 这个问题"></a> 解决 “数组大小必须事先决定” 这个问题</h3><h4 id="1- 使用 -new- 和 -delete，有程序员自行分配内"><a href="#1- 使用 -new- 和 -delete，有程序员自行分配内" class="headerlink" title="1. 使用 new 和 delete，有程序员自行分配内"></a>1. 使用 new 和 delete，有程序员自行分配内</h4><span id="more"></span>
@@ -170,20 +184,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <tags>
         <tag>C++</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>C++ 報錯 no matching function for call to transform</title>
-    <url>/2018/10/24/C++%E5%A0%B1%E9%8C%AF%20no-matching-function-for-call-to-transform/</url>
-    <content><![CDATA[<h3 id="報錯"><a href="# 報錯" class="headerlink" title="報錯"></a> 報錯 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<p> 報錯：no matching function for call to transform</p>
-<h3 id="有三種解決方法："><a href="# 有三種解決方法：" class="headerlink" title="有三種解決方法："></a> 有三種解決方法：</h3><h4 id="1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題："><a href="#1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題：" class="headerlink" title="1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題："></a>1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br></pre></td></tr></table></figure>
-<h4 id="2- 自己寫一個函數出來 -—wraper"><a href="#2- 自己寫一個函數出來 -—wraper" class="headerlink" title="2. 自己寫一個函數出來 —wraper"></a>2. 自己寫一個函數出來 —wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span> <span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span> (c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。"><a href="#3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。" class="headerlink" title="3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。"></a>3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>)) toupper);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++報錯</category>
-      </categories>
   </entry>
   <entry>
     <title>C++ 的 #include</title>
@@ -242,20 +242,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>C++ 运算符</title>
-    <url>/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
-<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
-<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
-]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ 資料結構與算法 -- 一。線性表 --1. 線性表的存儲結構</title>
     <url>/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/</url>
     <content><![CDATA[<h3 id="一、順序表"><a href="# 一、順序表" class="headerlink" title="一、順序表"></a> 一、順序表 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
@@ -278,6 +264,20 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="1- 模板的概念"><a href="#1- 模板的概念" class="headerlink" title="1. 模板的概念"></a>1. 模板的概念 </h4><h4 id="2- 函數模板"><a href="#2- 函數模板" class="headerlink" title="2. 函數模板"></a>2. 函數模板</h4><h4 id="3- 類模板"><a href="#3- 類模板" class="headerlink" title="3. 類模板"></a>3. 類模板</h4><h3 id="二、STL- 初識"><a href="# 二、STL- 初識" class="headerlink" title="二、STL 初識"></a> 二、STL 初識 </h3><h3 id="三、STL- 常用容器"><a href="# 三、STL- 常用容器" class="headerlink" title="三、STL 常用容器"></a> 三、STL 常用容器 </h3><h3 id="四、STL- 函數對象"><a href="# 四、STL- 函數對象" class="headerlink" title="四、STL 函數對象"></a> 四、STL 函數對象 </h3><h3 id="五、STL- 常用算法"><a href="# 五、STL- 常用算法" class="headerlink" title="五、STL 常用算法"></a> 五、STL 常用算法</h3>]]></content>
       <categories>
         <category>C++復習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 运算符</title>
+    <url>/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
+<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
+<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -339,6 +339,48 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>hexo 目錄結構</title>
+    <url>/2018/09/19/hexo%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/</url>
+    <content><![CDATA[<p>.<br>├── node_modules  // 套件暫存處，基本上你所有安裝的套件也都會在這裡 <br>├── public        // 執行 hexo generate 後，輸出的靜態網頁 <br>├── scaffolds     // 模板。Hexo 會根據 scaffold 來建立新文章 / 新頁面 <br>├── scripts       // 存放自定義 js 文件 <br>├── source<br>|   ├── _drafts   // 草稿文章 <br>|   └── _posts    // 發佈文章 <br>├── themes        // Hexo 主题文件，Next 主題的樹狀結構請看下面 <br>├── _config.yml   // 整個 Blog 的配置 <br>├── .gitignore    // 舉凡只要你不想被加入版本控制甚至是上傳到 GitHub 的資料夾或檔案，都可寫在這 <br>├── package-lock.json// 主要是記錄當前狀態安裝的每一個套件版本，他會自己調整，不需要動它 <br>└── package.json  // 主要是放置並管理透過 npm 下載的檔案，其中部分指令也是直接寫在這裡面 <br><span id="more"></span><br>.<br>└──themes<br>   └── next<br>          ├── doc<br>       ├── languages    // 主題語言字眼 <br>       ├── layout       //pug 文件，後會渲染成 html<br>       ├── scripts      //js 文件 <br>       ├── source<br>       |   ├── css      //styl 文件，後會渲染成 css<br>       |   ├── img      // 主題配置用到的圖片 <br>       |   └── js       //js 文件 <br>       ├── test<br>       └── _config.yml  // Butterfly 主題配置 </p>
+<p> 試著學 Hexo 系列 <br><a href="https://ithelp.ithome.com.tw/users/20119486/ironman/2944">https://ithelp.ithome.com.tw/users/20119486/ironman/2944</a></p>
+<p> 參考：<br><a href="https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%">https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%</a> E5%89%8D% E8% A8%80</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>目錄結構</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jupyter notebook 闪退</title>
+    <url>/2021/04/04/jupyter-notebook%E9%97%AA%E9%80%80/</url>
+    <content><![CDATA[<h3 id="起始位置"><a href="# 起始位置" class="headerlink" title="起始位置"></a>起始位置 </h3><p> 查看 jupyter 快捷文件的属性里的快捷方式，修改 “目标” 里的目录或文件，看看有没有 % HOME%，有的话去掉再运行试试。可能是找不到目标目录或文件了。</p>
+<h3 id="jupyter-notebook-config"><a href="#jupyter-notebook-config" class="headerlink" title="jupyter_notebook_config"></a>jupyter_notebook_config</h3><p>打开 C:\Users 用户名 .jupyter 中的 jupyter_notebook_config<br>更改 #c.NotebookApp.notebook_dir = ‘’<br><a href="https://blog.csdn.net/LawenceRay/article/details/88622610">https://blog.csdn.net/LawenceRay/article/details/88622610</a></p>
+<p>如果没有设置文件，则在 Anaconda Prompt 终端输入：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ jupyter notebook --generate-config</span><br></pre></td></tr></table></figure></p>
+<p>更改默认浏览器 <a href="https://hackmd.io/@lido2370/SkfHHh6er">https://hackmd.io/@lido2370/SkfHHh6er</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
+    <url>/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/</url>
+    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
+<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
+<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三連擊（洛谷 P1008）</title>
     <url>/2019/04/01/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/</url>
     <content><![CDATA[<h4 id="題目描述"><a href="# 題目描述" class="headerlink" title="題目描述"></a>題目描述 </h4><pre><code> 將 1，2,...,9 共 9 個數分成三組，分別組成三個三位數，且使這三個三位數構成 1：2：3 的比例，試求出所有滿足條件的三個三位數。 
@@ -386,31 +428,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
-    <url>/2018/09/22/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
-    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
-<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
-    <url>/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/</url>
-    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
-<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
-<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何在 hexo blog 中發表一篇文章</title>
     <url>/2018/09/16/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h4 id="新建一篇文章"><a href="# 新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h4><p>(1) 在 hexo blog 目錄下，進入 cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot; 文章名稱 &quot;</span><br></pre></td></tr></table></figure><br><span id="more"></span></p>
@@ -424,6 +441,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>hexo</tag>
         <tag>發表文章</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
+    <url>/2018/09/22/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
+    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
+<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
   </entry>
   <entry>
     <title>怎么取消文章目录中对标题的自动编号</title>
@@ -448,56 +475,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a> 加入代码 </h4>]]></content>
       <categories>
         <category>hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hexo 目錄結構</title>
-    <url>/2018/09/19/hexo%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/</url>
-    <content><![CDATA[<p>.<br>├── node_modules  // 套件暫存處，基本上你所有安裝的套件也都會在這裡 <br>├── public        // 執行 hexo generate 後，輸出的靜態網頁 <br>├── scaffolds     // 模板。Hexo 會根據 scaffold 來建立新文章 / 新頁面 <br>├── scripts       // 存放自定義 js 文件 <br>├── source<br>|   ├── _drafts   // 草稿文章 <br>|   └── _posts    // 發佈文章 <br>├── themes        // Hexo 主题文件，Next 主題的樹狀結構請看下面 <br>├── _config.yml   // 整個 Blog 的配置 <br>├── .gitignore    // 舉凡只要你不想被加入版本控制甚至是上傳到 GitHub 的資料夾或檔案，都可寫在這 <br>├── package-lock.json// 主要是記錄當前狀態安裝的每一個套件版本，他會自己調整，不需要動它 <br>└── package.json  // 主要是放置並管理透過 npm 下載的檔案，其中部分指令也是直接寫在這裡面 <br><span id="more"></span><br>.<br>└──themes<br>   └── next<br>          ├── doc<br>       ├── languages    // 主題語言字眼 <br>       ├── layout       //pug 文件，後會渲染成 html<br>       ├── scripts      //js 文件 <br>       ├── source<br>       |   ├── css      //styl 文件，後會渲染成 css<br>       |   ├── img      // 主題配置用到的圖片 <br>       |   └── js       //js 文件 <br>       ├── test<br>       └── _config.yml  // Butterfly 主題配置 </p>
-<p> 試著學 Hexo 系列 <br><a href="https://ithelp.ithome.com.tw/users/20119486/ironman/2944">https://ithelp.ithome.com.tw/users/20119486/ironman/2944</a></p>
-<p> 參考：<br><a href="https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%">https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%</a> E5%89%8D% E8% A8%80</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>目錄結構</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构 -- (2) 树</title>
-    <url>/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(2)%20%E6%A0%91/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树</a></p>
-<h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br><span id="more"></span><br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
-<h4 id="3- 树的性质"><a href="#3- 树的性质" class="headerlink" title="3. 树的性质"></a>3. 树的性质 </h4><h5 id="1-n-e-1- 树中的节点数等于所有结点的度数加 -1"><a href="#1-n-e-1- 树中的节点数等于所有结点的度数加 -1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1</h5><p> 边数 $d$，度数 $e$，$d=e$<br>可以用归纳法证明</p>
-<h5 id="2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1"><a href="#2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)</h5><h5 id="3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点"><a href="#3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点 </h5><p> 由性质（2）可得：$n \leq 1+m+m^2+…+m^{h-1}$<br>$\displaystyle n \leq {(m^h-1) \over (m-1)}$</p>
-<h5 id="4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil"><a href="#4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil" class="headerlink" title="(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$"></a>(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$</h5><p>由性质（3）可得：$h \geq \log_m {n (m-1)+1}$</p>
-<h5 id="5- 叶节点个数"><a href="#5- 叶节点个数" class="headerlink" title="(5) 叶节点个数"></a>(5) 叶节点个数</h5><p>$n=k_0+k_1+…+k_m -(1)$<br>$n=\sum_{i=0}^n d_i +1 \quad (d_i = 节点 n_i 的度数)$<br>$\quad =\sum_{i=0}^m i \cdot k_i \quad (k_i = 度为 i 的节点的数量)$<br>$\quad =k_1+2k_2+…+mk_m+1 -(2)$<br>$ 由式 (1) 和式 (2) 可得 $<br>$k_0=k_2+k_3+…+(m-1) k_m+1$</p>
-<h3 id="二、二叉树"><a href="# 二、二叉树" class="headerlink" title="二、二叉树"></a>二、二叉树 </h3><h4 id="1- 与 - 度为 -2- 的有序树 - 不同"><a href="#1- 与 - 度为 -2- 的有序树 - 不同" class="headerlink" title="1. 与 {度为 2 的有序树} 不同"></a>1. 与 {度为 2 的有序树} 不同</h4><p> 只有一个根节点不属于 {度为 2 的有序树}</p>
-<h4 id="2- 特殊二叉树种类"><a href="#2- 特殊二叉树种类" class="headerlink" title="2. 特殊二叉树种类"></a>2. 特殊二叉树种类 </h4><p> 满二叉树，完全二叉树</p>
-<h4 id="3- 性质"><a href="#3- 性质" class="headerlink" title="3. 性质"></a>3. 性质</h4><p>$n=k_0+k_1+k_2$<br>$k_0=k_2+1$<br>$ 两式相减得：k_0-n=1-k_0-k_1$<br>$2k_0=n+1-k_1$<br>$\displaystyle 当 k_1=0，n 为奇数，k_0={(n+1) \over 2}$<br>$\displaystyle 当 k_1=0，n 为偶数，k_0={n \over 2}$<br>$\displaystyle 结论：在完成二叉树或满二叉树中，k_0=\lceil {n \over 2} \rceil$</p>
-<h4 id="4- 存储结构"><a href="#4- 存储结构" class="headerlink" title="4. 存储结构"></a>4. 存储结构 </h4><h5 id="1- 顺序存储"><a href="#1- 顺序存储" class="headerlink" title="(1) 顺序存储"></a>(1) 顺序存储</h5><p> 按照完全二叉树的顺序，父节点和子节点之间有简单的关系 <br> 但是可能会造成空间浪费</p>
-<h5 id="2- 链式存储"><a href="#2- 链式存储" class="headerlink" title="(2) 链式存储"></a>(2) 链式存储</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">typedef struct BiTNode</span><br><span class="line">&#123;</span><br><span class="line">	ElemType data;</span><br><span class="line">	struct BiTNode *ichild, *rchild;</span><br><span class="line">&#125; BiTNode, *BiTree;</span><br></pre></td></tr></table></figure>
-<h4 id="5- 二叉树的遍历"><a href="#5- 二叉树的遍历" class="headerlink" title="5. 二叉树的遍历"></a>5. 二叉树的遍历</h4><h5 id="1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问"><a href="#1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问" class="headerlink" title="(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问"></a>(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 先序遍历</span><br><span class="line">void PreOrder (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	if (T!&#x3D;NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		visit (T);            &#x2F;&#x2F; 访问根节点</span><br><span class="line">		PreOrder (T-&gt;ichild); &#x2F;&#x2F; 递归遍历左子树</span><br><span class="line">		PreOrder (T-&gt;echild); &#x2F;&#x2F; 递归遍历右子树</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="2- 非递归算法"><a href="#2- 非递归算法" class="headerlink" title="(2) 非递归算法"></a>(2) 非递归算法</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 中序遍历的非递归算法</span><br><span class="line">void InOrder2 (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	InitStack (S); BiTree p &#x3D; T;</span><br><span class="line">	while (p || !IsEmpty (S))</span><br><span class="line">	&#123;</span><br><span class="line">		if (p)</span><br><span class="line">		&#123;</span><br><span class="line">			Push (S,p);</span><br><span class="line">			p &#x3D; p-&gt;lchild;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			Pop (S,p); visit (p);</span><br><span class="line">			p &#x3D; p-&gt;rchild;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 入栈序列：先序</span><br><span class="line">&#x2F;&#x2F; 出栈序列：中序</span><br></pre></td></tr></table></figure>
-<h5 id="3- 层次遍历"><a href="#3- 层次遍历" class="headerlink" title="(3) 层次遍历"></a>(3) 层次遍历 </h5><p> 利用队列：<br>将根节点入队 <br> 若队列不为空：队头元素出队，访问队头元素若有子节点，子节点入队</p>
-<h5 id="4- 由遍历序列构造二叉树"><a href="#4- 由遍历序列构造二叉树" class="headerlink" title="(4) 由遍历序列构造二叉树"></a>(4) 由遍历序列构造二叉树 </h5><h6 id="a- 先序 - 中序"><a href="#a- 先序 - 中序" class="headerlink" title="(a) 先序 + 中序"></a>(a) 先序 + 中序</h6><p> 中序遍历最左端元素第一个访问，排序树的插入会用到这个性质 <br> 先序序列第一个元素是根节点</p>
-<h6 id="b- 后序 - 中序"><a href="#b- 后序 - 中序" class="headerlink" title="(b) 后序 + 中序"></a>(b) 后序 + 中序</h6><h6 id="c- 层次 - 中序"><a href="#c- 层次 - 中序" class="headerlink" title="(c) 层次 + 中序"></a>(c) 层次 + 中序</h6>]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>jupyter notebook 闪退</title>
-    <url>/2021/04/04/jupyter-notebook%E9%97%AA%E9%80%80/</url>
-    <content><![CDATA[<h3 id="起始位置"><a href="# 起始位置" class="headerlink" title="起始位置"></a>起始位置 </h3><p> 查看 jupyter 快捷文件的属性里的快捷方式，修改 “目标” 里的目录或文件，看看有没有 % HOME%，有的话去掉再运行试试。可能是找不到目标目录或文件了。</p>
-<h3 id="jupyter-notebook-config"><a href="#jupyter-notebook-config" class="headerlink" title="jupyter_notebook_config"></a>jupyter_notebook_config</h3><p>打开 C:\Users 用户名 .jupyter 中的 jupyter_notebook_config<br>更改 #c.NotebookApp.notebook_dir = ‘’<br><a href="https://blog.csdn.net/LawenceRay/article/details/88622610">https://blog.csdn.net/LawenceRay/article/details/88622610</a></p>
-<p>如果没有设置文件，则在 Anaconda Prompt 终端输入：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ jupyter notebook --generate-config</span><br></pre></td></tr></table></figure></p>
-<p>更改默认浏览器 <a href="https://hackmd.io/@lido2370/SkfHHh6er">https://hackmd.io/@lido2370/SkfHHh6er</a></p>
-]]></content>
-      <categories>
-        <category>python</category>
       </categories>
   </entry>
   <entry>
@@ -533,6 +510,29 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>数据结构 -- (2) 树</title>
+    <url>/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(2)%20%E6%A0%91/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树</a></p>
+<h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br><span id="more"></span><br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
+<h4 id="3- 树的性质"><a href="#3- 树的性质" class="headerlink" title="3. 树的性质"></a>3. 树的性质 </h4><h5 id="1-n-e-1- 树中的节点数等于所有结点的度数加 -1"><a href="#1-n-e-1- 树中的节点数等于所有结点的度数加 -1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1</h5><p> 边数 $d$，度数 $e$，$d=e$<br>可以用归纳法证明</p>
+<h5 id="2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1"><a href="#2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)</h5><h5 id="3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点"><a href="#3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点 </h5><p> 由性质（2）可得：$n \leq 1+m+m^2+…+m^{h-1}$<br>$\displaystyle n \leq {(m^h-1) \over (m-1)}$</p>
+<h5 id="4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil"><a href="#4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil" class="headerlink" title="(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$"></a>(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$</h5><p>由性质（3）可得：$h \geq \log_m {n (m-1)+1}$</p>
+<h5 id="5- 叶节点个数"><a href="#5- 叶节点个数" class="headerlink" title="(5) 叶节点个数"></a>(5) 叶节点个数</h5><p>$n=k_0+k_1+…+k_m -(1)$<br>$n=\sum_{i=0}^n d_i +1 \quad (d_i = 节点 n_i 的度数)$<br>$\quad =\sum_{i=0}^m i \cdot k_i \quad (k_i = 度为 i 的节点的数量)$<br>$\quad =k_1+2k_2+…+mk_m+1 -(2)$<br>$ 由式 (1) 和式 (2) 可得 $<br>$k_0=k_2+k_3+…+(m-1) k_m+1$</p>
+<h3 id="二、二叉树"><a href="# 二、二叉树" class="headerlink" title="二、二叉树"></a>二、二叉树 </h3><h4 id="1- 与 - 度为 -2- 的有序树 - 不同"><a href="#1- 与 - 度为 -2- 的有序树 - 不同" class="headerlink" title="1. 与 {度为 2 的有序树} 不同"></a>1. 与 {度为 2 的有序树} 不同</h4><p> 只有一个根节点不属于 {度为 2 的有序树}</p>
+<h4 id="2- 特殊二叉树种类"><a href="#2- 特殊二叉树种类" class="headerlink" title="2. 特殊二叉树种类"></a>2. 特殊二叉树种类 </h4><p> 满二叉树，完全二叉树</p>
+<h4 id="3- 性质"><a href="#3- 性质" class="headerlink" title="3. 性质"></a>3. 性质</h4><p>$n=k_0+k_1+k_2$<br>$k_0=k_2+1$<br>$ 两式相减得：k_0-n=1-k_0-k_1$<br>$2k_0=n+1-k_1$<br>$\displaystyle 当 k_1=0，n 为奇数，k_0={(n+1) \over 2}$<br>$\displaystyle 当 k_1=0，n 为偶数，k_0={n \over 2}$<br>$\displaystyle 结论：在完成二叉树或满二叉树中，k_0=\lceil {n \over 2} \rceil$</p>
+<h4 id="4- 存储结构"><a href="#4- 存储结构" class="headerlink" title="4. 存储结构"></a>4. 存储结构 </h4><h5 id="1- 顺序存储"><a href="#1- 顺序存储" class="headerlink" title="(1) 顺序存储"></a>(1) 顺序存储</h5><p> 按照完全二叉树的顺序，父节点和子节点之间有简单的关系 <br> 但是可能会造成空间浪费</p>
+<h5 id="2- 链式存储"><a href="#2- 链式存储" class="headerlink" title="(2) 链式存储"></a>(2) 链式存储</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">typedef struct BiTNode</span><br><span class="line">&#123;</span><br><span class="line">	ElemType data;</span><br><span class="line">	struct BiTNode *ichild, *rchild;</span><br><span class="line">&#125; BiTNode, *BiTree;</span><br></pre></td></tr></table></figure>
+<h4 id="5- 二叉树的遍历"><a href="#5- 二叉树的遍历" class="headerlink" title="5. 二叉树的遍历"></a>5. 二叉树的遍历</h4><h5 id="1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问"><a href="#1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问" class="headerlink" title="(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问"></a>(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 先序遍历</span><br><span class="line">void PreOrder (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	if (T!&#x3D;NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		visit (T);            &#x2F;&#x2F; 访问根节点</span><br><span class="line">		PreOrder (T-&gt;ichild); &#x2F;&#x2F; 递归遍历左子树</span><br><span class="line">		PreOrder (T-&gt;echild); &#x2F;&#x2F; 递归遍历右子树</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2- 非递归算法"><a href="#2- 非递归算法" class="headerlink" title="(2) 非递归算法"></a>(2) 非递归算法</h5><figure class="highlight plain"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 中序遍历的非递归算法</span><br><span class="line">void InOrder2 (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	InitStack (S); BiTree p &#x3D; T;</span><br><span class="line">	while (p || !IsEmpty (S))</span><br><span class="line">	&#123;</span><br><span class="line">		if (p)</span><br><span class="line">		&#123;</span><br><span class="line">			Push (S,p);</span><br><span class="line">			p &#x3D; p-&gt;lchild;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			Pop (S,p); visit (p);</span><br><span class="line">			p &#x3D; p-&gt;rchild;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 入栈序列：先序</span><br><span class="line">&#x2F;&#x2F; 出栈序列：中序</span><br></pre></td></tr></table></figure>
+<h5 id="3- 层次遍历"><a href="#3- 层次遍历" class="headerlink" title="(3) 层次遍历"></a>(3) 层次遍历 </h5><p> 利用队列：<br>将根节点入队 <br> 若队列不为空：队头元素出队，访问队头元素若有子节点，子节点入队</p>
+<h5 id="4- 由遍历序列构造二叉树"><a href="#4- 由遍历序列构造二叉树" class="headerlink" title="(4) 由遍历序列构造二叉树"></a>(4) 由遍历序列构造二叉树 </h5><h6 id="a- 先序 - 中序"><a href="#a- 先序 - 中序" class="headerlink" title="(a) 先序 + 中序"></a>(a) 先序 + 中序</h6><p> 中序遍历最左端元素第一个访问，排序树的插入会用到这个性质 <br> 先序序列第一个元素是根节点</p>
+<h6 id="b- 后序 - 中序"><a href="#b- 后序 - 中序" class="headerlink" title="(b) 后序 + 中序"></a>(b) 后序 + 中序</h6><h6 id="c- 层次 - 中序"><a href="#c- 层次 - 中序" class="headerlink" title="(c) 层次 + 中序"></a>(c) 层次 + 中序</h6>]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数据结构 -- (3) 图</title>
     <url>/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(3)%20%E5%9B%BE/</url>
     <content><![CDATA[<h3 id="一、图的定义"><a href="# 一、图的定义" class="headerlink" title="一、图的定义"></a>一、图的定义 </h3><p> 图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G=(V,E)$<br>$V={v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶 <br>$E=\lbrace (u,v)|u \in V,v \in V \rbrace$<br> 注释：图不能为空集</p>
@@ -556,15 +556,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
     <url>/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20--%20(4)%20%E6%9F%A5%E6%89%BE/</url>
     <content><![CDATA[<span id="more"></span>
 ]]></content>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（2）逻辑回归</title>
-    <url>/2020/10/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
-    <content><![CDATA[<span id="more"></span>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
   </entry>
   <entry>
     <title>机器学习算法 --（1）线性回归和非线性回归</title>
@@ -634,6 +625,44 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>机器学习算法 --（3）神经网络</title>
+    <url>/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h3 id="一、深度学习"><a href="# 一、深度学习" class="headerlink" title="一、深度学习"></a>一、深度学习 </h3><h4 id="深度学习三次热潮"><a href="# 深度学习三次热潮" class="headerlink" title="深度学习三次热潮"></a> 深度学习三次热潮</h4><p>1950 年代：图灵提出图灵测试<br>1980 年代：李开复语音识别，BP 算法<br>2006 年至今：李飞飞 ImageNet，AlphoGo 战胜人类棋手</p>
+<h4 id="深度学习爆发三要素"><a href="# 深度学习爆发三要素" class="headerlink" title="深度学习爆发三要素"></a>深度学习爆发三要素 </h4><p> 数据、算法、算力<br><span id="more"></span></p>
+<h4 id="机器学习三巨头"><a href="# 机器学习三巨头" class="headerlink" title="机器学习三巨头"></a>机器学习三巨头 </h4><p>Hinton：BP 算法<br>Lecun：卷积神经网络<br>Bengio：预训练和自动编码器<br> 吴恩达：创建 Coursera 和 Google Brain</p>
+<p><img src="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo1.jpg" alt></p>
+<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a> 介绍 </h4><p><img src="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\Delta w_i = \eta (t-y) x_i$<br> 输入节点：$x_1, x_2, x_3$<br>输出节点：$y$<br>权向量：$w_1, w_2, w_3$<br>偏置因子：$b$（也可以看成是 $x_0=1$）<br>激活函数：$sign (x) =<br>\begin {cases}<br>1,  &amp; \text {$x \geq 0$} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}<br>$</p>
+<h4 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子 </h4><p> 题目：假设平面坐标系上有四个点，$(3,3),(4,3)$ 这两个点的标签为 $1$；$(1,1),(0,2)$ 这两个点的标签为 $-1$。构建神经网络来分类。</p>
+<p>思路：我们要分类的数据是 $2$ 维数据，所以只需要 $2$ 个输入节点，我们可以把神经元的偏置值也设置成一个节点，这样我们需要 $3$ 个输入节点。输入数据有 $4$ 个 $(1,3,3),(1,4,3),(1,1,1),(1,0,2)$ 数据对应的标签为 $(1,1,-1,-1)$。初始化权值 $w_0,w_1,w_2$，取 $-1$ 到 $1$ 的随机数。学习率设置为 $0.11$，激活函数为 sign 函数。</p>
+<p>程序：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">n 个输入，m 个输出，权值矩阵就设置成 nXm 大小</span><br></pre></td></tr></table></figure></p>
+<h3 id="三、线性神经网络"><a href="# 三、线性神经网络" class="headerlink" title="三、线性神经网络"></a>三、线性神经网络</h3><p>(1) 实际输出等于期望输出<br>(2) 权值的该变量比较小的时候<br>(3) 循环一定次数之后</p>
+<h3 id="四、BP- 神经网络"><a href="# 四、BP- 神经网络" class="headerlink" title="四、BP 神经网络"></a>四、BP 神经网络 </h3><p> 通常有三层，输入不算一层 <br>Q：为什么 ReLU 是常用的激活函数？<br> 因为其他的激活函数会导致导数趋近于 0，反向传播的时候权值的改变就会趋近于 0<br>如果神经网络的层数过多，也容易导致传播到前面的层数的时候，权值的该变量趋近于 0<br>Q：线性激活函数 $y=x$ 的导数也是等于 1，为什么不用？因为不能描述复杂的边界</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习算法 --（2）逻辑回归</title>
+    <url>/2020/10/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
+    <content><![CDATA[<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/10/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/photo1.jpg" alt></p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p> 线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$</p>
+<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
+<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
+<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
+<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
+<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$<br><span id="more"></span></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>slam 小車：(一) 前期準備 --1. 機器人架構設計流程</title>
     <url>/2019/05/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
@@ -663,27 +692,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>智能車</tag>
         <tag>機器人</tag>
         <tag>設計流程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（3）神经网络</title>
-    <url>/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<h3 id="一、深度学习"><a href="# 一、深度学习" class="headerlink" title="一、深度学习"></a>一、深度学习 </h3><h4 id="深度学习三次热潮"><a href="# 深度学习三次热潮" class="headerlink" title="深度学习三次热潮"></a> 深度学习三次热潮</h4><p>1950 年代：图灵提出图灵测试<br>1980 年代：李开复语音识别，BP 算法<br>2006 年至今：李飞飞 ImageNet，AlphoGo 战胜人类棋手</p>
-<h4 id="深度学习爆发三要素"><a href="# 深度学习爆发三要素" class="headerlink" title="深度学习爆发三要素"></a>深度学习爆发三要素 </h4><p> 数据、算法、算力<br><span id="more"></span></p>
-<h4 id="机器学习三巨头"><a href="# 机器学习三巨头" class="headerlink" title="机器学习三巨头"></a>机器学习三巨头 </h4><p>Hinton：BP 算法<br>Lecun：卷积神经网络<br>Bengio：预训练和自动编码器<br> 吴恩达：创建 Coursera 和 Google Brain</p>
-<p><img src="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo1.jpg" alt></p>
-<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a> 介绍 </h4><p><img src="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\Delta w_i = \eta (t-y) x_i$<br> 输入节点：$x_1, x_2, x_3$<br>输出节点：$y$<br>权向量：$w_1, w_2, w_3$<br>偏置因子：$b$（也可以看成是 $x_0=1$）<br>激活函数：$sign (x) =<br>\begin {cases}<br>1,  &amp; \text {$x \geq 0$} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}<br>$</p>
-<h4 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子 </h4><p> 题目：假设平面坐标系上有四个点，$(3,3),(4,3)$ 这两个点的标签为 $1$；$(1,1),(0,2)$ 这两个点的标签为 $-1$。构建神经网络来分类。</p>
-<p>思路：我们要分类的数据是 $2$ 维数据，所以只需要 $2$ 个输入节点，我们可以把神经元的偏置值也设置成一个节点，这样我们需要 $3$ 个输入节点。输入数据有 $4$ 个 $(1,3,3),(1,4,3),(1,1,1),(1,0,2)$ 数据对应的标签为 $(1,1,-1,-1)$。初始化权值 $w_0,w_1,w_2$，取 $-1$ 到 $1$ 的随机数。学习率设置为 $0.11$，激活函数为 sign 函数。</p>
-<p>程序：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">n 个输入，m 个输出，权值矩阵就设置成 nXm 大小</span><br></pre></td></tr></table></figure></p>
-<h3 id="三、线性神经网络"><a href="# 三、线性神经网络" class="headerlink" title="三、线性神经网络"></a>三、线性神经网络</h3><p>(1) 实际输出等于期望输出<br>(2) 权值的该变量比较小的时候<br>(3) 循环一定次数之后</p>
-<h3 id="四、BP- 神经网络"><a href="# 四、BP- 神经网络" class="headerlink" title="四、BP 神经网络"></a>四、BP 神经网络 </h3><p> 通常有三层，输入不算一层 <br>Q：为什么 ReLU 是常用的激活函数？<br> 因为其他的激活函数会导致导数趋近于 0，反向传播的时候权值的改变就会趋近于 0<br>如果神经网络的层数过多，也容易导致传播到前面的层数的时候，权值的该变量趋近于 0<br>Q：线性激活函数 $y=x$ 的导数也是等于 1，为什么不用？因为不能描述复杂的边界</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
