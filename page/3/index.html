@@ -174,14 +174,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -233,7 +233,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -246,7 +246,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/" class="post-title-link" itemprop="url">取出一個數的每一位</a>
+          <a href="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="post-title-link" itemprop="url">机器学习算法 --（1）线性回归和非线性回归</a>
         </h2>
 
         <div class="post-meta-container">
@@ -257,14 +257,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2019-03-16 22:31:48" itemprop="dateCreated datePublished" datetime="2019-03-16T22:31:48+08:00">2019-03-16</time>
+      <time title="創建時間：2020-10-06 10:42:55" itemprop="dateCreated datePublished" datetime="2020-10-06T10:42:55+08:00">2020-10-06</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:33:18" itemprop="dateModified" datetime="2021-04-01T20:33:18+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-05 16:01:35" itemprop="dateModified" datetime="2021-04-05T16:01:35+08:00">2021-04-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -272,7 +272,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
         </span>
     </span>
 
@@ -286,90 +286,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chris自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/" class="post-title-link" itemprop="url">利用 rand () 產生隨機數</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2019-03-14 21:53:50" itemprop="dateCreated datePublished" datetime="2019-03-14T21:53:50+08:00">2019-03-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:32:53" itemprop="dateModified" datetime="2021-04-01T20:32:53+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="1-rand-函數介紹"><a href="#1-rand-函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹</h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br></p>
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-数据挖掘和机器学习的关系"><a href="#1-数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2-训练数据-vs-验证数据-vs-测试数据"><a href="#2-训练数据-vs-验证数据-vs-测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3-监督学习-vs-无监督学习-vs-半监督学习"><a href="#3-监督学习-vs-无监督学习-vs-半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4-回归-vs-分类-vs-聚类"><a href="#4-回归-vs-分类-vs-聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="#一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a>一、一元线性回归概念</h3><p>回归：高尔顿提出<br>回归分析：建立方程模拟两个或多个变量之间如何关联<br>一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟<br>一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率<br></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/#more" rel="contents">
+              <a class="btn" href="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -400,7 +320,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/11/05/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -413,7 +333,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/11/05/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">C++ 小知识点总结</a>
+          <a href="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">计算机体系结构：(一) 硬件 --3. 通信概述</a>
         </h2>
 
         <div class="post-meta-container">
@@ -424,14 +344,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-11-05 16:22:55" itemprop="dateCreated datePublished" datetime="2018-11-05T16:22:55+08:00">2018-11-05</time>
+      <time title="創建時間：2020-09-03 15:44:15" itemprop="dateCreated datePublished" datetime="2020-09-03T15:44:15+08:00">2020-09-03</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:33:48" itemprop="dateModified" datetime="2021-04-01T20:33:48+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-06 17:46:36" itemprop="dateModified" datetime="2021-04-06T17:46:36+08:00">2021-04-06</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -439,7 +359,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">计算机体系结构</span></a>
         </span>
     </span>
 
@@ -453,10 +373,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="返回多个参数的方法："><a href="#返回多个参数的方法：" class="headerlink" title="返回多个参数的方法："></a>返回多个参数的方法：</h3><h4 id="1-定义结构体"><a href="#1-定义结构体" class="headerlink" title="1. 定义结构体"></a>1. 定义结构体</h4><h4 id="2-利用引用参数"><a href="#2-利用引用参数" class="headerlink" title="2. 利用引用参数"></a>2. 利用引用参数</h4><h3 id="解决-“数组大小必须事先决定”-这个问题"><a href="#解决-“数组大小必须事先决定”-这个问题" class="headerlink" title="解决 “数组大小必须事先决定” 这个问题"></a>解决 “数组大小必须事先决定” 这个问题</h3><h4 id="1-使用-new-和-delete，有程序员自行分配内"><a href="#1-使用-new-和-delete，有程序员自行分配内" class="headerlink" title="1. 使用 new 和 delete，有程序员自行分配内"></a>1. 使用 new 和 delete，有程序员自行分配内</h4>
+          <h3 id="一、电子设备的通信过程"><a href="#一、电子设备的通信过程" class="headerlink" title="一、电子设备的通信过程"></a>一、电子设备的通信过程</h3><p><img src="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo1.jpg" alt></p>
+<h4 id="1-协议：通信规则"><a href="#1-协议：通信规则" class="headerlink" title="1. 协议：通信规则"></a>1. 协议：通信规则</h4><p><img src="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/photo2.jpg" alt></p>
+<h5 id="简单通信协议：只有底层协议"><a href="#简单通信协议：只有底层协议" class="headerlink" title="简单通信协议：只有底层协议"></a>简单通信协议：只有底层协议</h5><p>Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信<br>编写程序需参考硬件的 “时序图”<br></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/11/05/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/#more" rel="contents">
+              <a class="btn" href="/2020/09/03/%E9%80%9A%E4%BF%A1%E6%A6%82%E8%BF%B0/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -487,7 +409,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -500,7 +422,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/" class="post-title-link" itemprop="url">解釋一個語句</a>
+          <a href="/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/" class="post-title-link" itemprop="url">C++ 資料結構與算法 -- 一。線性表 --1. 線性表的存儲結構</a>
         </h2>
 
         <div class="post-meta-container">
@@ -511,14 +433,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-10-28 22:45:48" itemprop="dateCreated datePublished" datetime="2018-10-28T22:45:48+08:00">2018-10-28</time>
+      <time title="創建時間：2019-06-02 14:39:34" itemprop="dateCreated datePublished" datetime="2019-06-02T14:39:34+08:00">2019-06-02</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:34:26" itemprop="dateModified" datetime="2021-04-01T20:34:26+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-01 20:34:42" itemprop="dateModified" datetime="2021-04-01T20:34:42+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -526,7 +448,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
+          <a href="/categories/C-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/" itemprop="url" rel="index"><span itemprop="name">C++資料結構</span></a>
         </span>
     </span>
 
@@ -540,10 +462,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+          <h3 id="一、順序表"><a href="#一、順序表" class="headerlink" title="一、順序表"></a>一、順序表</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/#more" rel="contents">
+              <a class="btn" href="/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -574,7 +496,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/27/C++%E7%9A%84#include/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -587,7 +509,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/27/C++%E7%9A%84#include/" class="post-title-link" itemprop="url">C++ 的 #include</a>
+          <a href="/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/" class="post-title-link" itemprop="url">slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</a>
         </h2>
 
         <div class="post-meta-container">
@@ -598,14 +520,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-10-27 18:04:38" itemprop="dateCreated datePublished" datetime="2018-10-27T18:04:38+08:00">2018-10-27</time>
+      <time title="創建時間：2019-05-21 09:46:26" itemprop="dateCreated datePublished" datetime="2019-05-21T09:46:26+08:00">2019-05-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:33:54" itemprop="dateModified" datetime="2021-04-01T20:33:54+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-01 21:01:47" itemprop="dateModified" datetime="2021-04-01T21:01:47+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -613,7 +535,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
+          <a href="/categories/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A/" itemprop="url" rel="index"><span itemprop="name">激光slam小車</span></a>
         </span>
     </span>
 
@@ -627,10 +549,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="被-include-的-header-file-中最常見的內容分為哪幾類？"><a href="#被-include-的-header-file-中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1-巨集定義"><a href="#1-巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5>
+          <p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
+<h3 id="一、Linux-目錄結構"><a href="#一、Linux-目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構</h3><h3 id="二、Linux-常用指令"><a href="#二、Linux-常用指令" class="headerlink" title="二、Linux 常用指令"></a>二、Linux 常用指令</h3><h4 id="1-打开-terminal"><a href="#1-打开-terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/27/C++%E7%9A%84#include/#more" rel="contents">
+              <a class="btn" href="/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -661,7 +584,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/27/dos%E4%BD%BF%E7%94%A8/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/05/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -674,7 +597,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/27/dos%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">dos 使用</a>
+          <a href="/2019/05/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/" class="post-title-link" itemprop="url">slam 小車：(一) 前期準備 --1. 機器人架構設計流程</a>
         </h2>
 
         <div class="post-meta-container">
@@ -685,14 +608,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-10-27 15:06:15" itemprop="dateCreated datePublished" datetime="2018-10-27T15:06:15+08:00">2018-10-27</time>
+      <time title="創建時間：2019-05-20 10:26:36" itemprop="dateCreated datePublished" datetime="2019-05-20T10:26:36+08:00">2019-05-20</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 21:03:55" itemprop="dateModified" datetime="2021-04-01T21:03:55+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-01 21:01:54" itemprop="dateModified" datetime="2021-04-01T21:01:54+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -700,7 +623,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+          <a href="/categories/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A/" itemprop="url" rel="index"><span itemprop="name">激光slam小車</span></a>
         </span>
     </span>
 
@@ -714,10 +637,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="显示目录下的文件"><a href="#显示目录下的文件" class="headerlink" title="显示目录下的文件"></a>显示目录下的文件</h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录<br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br></p>
+          <p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
+<h3 id="一、了解機器人架構"><a href="#一、了解機器人架構" class="headerlink" title="一、了解機器人架構"></a>一、了解機器人架構</h3><p>機器人包含四大部分：機械結構、驅動裝置、感測裝置、控制與算法。<br>機器人的研發涉及機械工程、電機工程、資訊工程、醫學工程等領域，次技術領域包括能量學、驅動技術、感知技術和決策技術等。</p>
+<h3 id="二、機器人概念設計（選擇機器人平台）"><a href="#二、機器人概念設計（選擇機器人平台）" class="headerlink" title="二、機器人概念設計（選擇機器人平台）"></a>二、機器人概念設計（選擇機器人平台）</h3>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/27/dos%E4%BD%BF%E7%94%A8/#more" rel="contents">
+              <a class="btn" href="/2019/05/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -748,7 +673,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/27/git%E5%AE%89%E8%A3%85/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/04/05/%E7%AE%97%E6%B3%953/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -761,7 +686,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/27/git%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">git 安装</a>
+          <a href="/2019/04/05/%E7%AE%97%E6%B3%953/" class="post-title-link" itemprop="url">算法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -772,14 +697,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-10-27 15:04:16" itemprop="dateCreated datePublished" datetime="2018-10-27T15:04:16+08:00">2018-10-27</time>
+      <time title="創建時間：2019-04-05 08:54:36" itemprop="dateCreated datePublished" datetime="2019-04-05T08:54:36+08:00">2019-04-05</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 21:03:31" itemprop="dateModified" datetime="2021-04-01T21:03:31+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-01 20:38:55" itemprop="dateModified" datetime="2021-04-01T20:38:55+08:00">2021-04-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -787,7 +712,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
         </span>
     </span>
 
@@ -801,7 +726,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ScottePerk/article/details/81571251">https://blog.csdn.net/ScottePerk/article/details/81571251</a></p>
+          <span id="more"></span>
 
       
     </div>
@@ -828,7 +753,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/04/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%885%EF%BC%89%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -841,7 +766,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">C++ 的 RALL 实现</a>
+          <a href="/2019/04/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%885%EF%BC%89%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">数据结构与算法 --（5）排序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -852,14 +777,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-10-27 14:13:15" itemprop="dateCreated datePublished" datetime="2018-10-27T14:13:15+08:00">2018-10-27</time>
+      <time title="創建時間：2019-04-03 14:22:22" itemprop="dateCreated datePublished" datetime="2019-04-03T14:22:22+08:00">2019-04-03</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:34:05" itemprop="dateModified" datetime="2021-04-01T20:34:05+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-07 15:09:34" itemprop="dateModified" datetime="2021-04-07T15:09:34+08:00">2021-04-07</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -867,7 +792,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%AD%B8%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++學習</span></a>
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
         </span>
     </span>
 
@@ -881,10 +806,92 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = <span class="keyword">new</span> <span class="keyword">int32_t</span> [<span class="number">3</span>];</span><br><span class="line">		ptr [<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr [<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr [<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">delete</span> ptr;     <span class="comment">// 假设忘记了释放内存，会消耗大量内存</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span> (<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/04/01/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/04/01/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/" class="post-title-link" itemprop="url">三連擊（洛谷 P1008）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-04-01 14:50:22" itemprop="dateCreated datePublished" datetime="2019-04-01T14:50:22+08:00">2019-04-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-01 21:06:30" itemprop="dateModified" datetime="2021-04-01T21:06:30+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-%E5%88%B7%E9%A1%8C/" itemprop="url" rel="index"><span itemprop="name">C++刷題</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="題目描述"><a href="#題目描述" class="headerlink" title="題目描述"></a>題目描述</h4><pre><code>將 1，2,...,9 共 9 個數分成三組，分別組成三個三位數，且使這三個三位數構成 1：2：3 的比例，試求出所有滿足條件的三個三位數。 
+</code></pre><h4 id="輸入輸出格式"><a href="#輸入輸出格式" class="headerlink" title="輸入輸出格式"></a>輸入輸出格式</h4><pre><code>輸入格式：沒有輸入。
+輸出格式：若干行，每行 3 個數位。 按照每行第一個數位升序排列。
+</code></pre>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/#more" rel="contents">
+              <a class="btn" href="/2019/04/01/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -915,7 +922,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/24/C++%E5%A0%B1%E9%8C%AF%20no-matching-function-for-call-to-transform/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -928,7 +935,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/24/C++%E5%A0%B1%E9%8C%AF%20no-matching-function-for-call-to-transform/" class="post-title-link" itemprop="url">C++ 報錯 no matching function for call to transform</a>
+          <a href="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">数据结构与算法 --（4）查找</a>
         </h2>
 
         <div class="post-meta-container">
@@ -939,14 +946,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-10-24 14:23:14" itemprop="dateCreated datePublished" datetime="2018-10-24T14:23:14+08:00">2018-10-24</time>
+      <time title="創建時間：2019-03-31 08:32:49" itemprop="dateCreated datePublished" datetime="2019-03-31T08:32:49+08:00">2019-03-31</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 21:04:48" itemprop="dateModified" datetime="2021-04-01T21:04:48+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-08 15:52:38" itemprop="dateModified" datetime="2021-04-08T15:52:38+08:00">2021-04-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -954,7 +961,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%A0%B1%E9%8C%AF/" itemprop="url" rel="index"><span itemprop="name">C++報錯</span></a>
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
         </span>
     </span>
 
@@ -968,10 +975,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="報錯"><a href="#報錯" class="headerlink" title="報錯"></a>報錯</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><h4 id="1-查找：在数据集合-查找表-中寻找满足某种条件的数据元素的过程。"><a href="#1-查找：在数据集合-查找表-中寻找满足某种条件的数据元素的过程。" class="headerlink" title="1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。"></a>1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。</h4><p>查找表：$\begin {cases}<br>静态查找表：  &amp; \text {} \\<br>动态查找表：有增删 &amp; \text {}<br>\end {cases}$<br>查找的结果一般分为两种：<br>(1) 查找成功：在数据集合中找到了满足条件的数据元素<br>(2) 查找失败<br></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/24/C++%E5%A0%B1%E9%8C%AF%20no-matching-function-for-call-to-transform/#more" rel="contents">
+              <a class="btn" href="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -1002,7 +1009,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/14/C++%E9%80%B2%E9%9A%8E/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -1015,7 +1022,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/14/C++%E9%80%B2%E9%9A%8E/" class="post-title-link" itemprop="url">C++ 復習 --3.C++ 進階</a>
+          <a href="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/" class="post-title-link" itemprop="url">数据结构与算法 --（3）图</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1026,14 +1033,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-10-14 20:35:13" itemprop="dateCreated datePublished" datetime="2018-10-14T20:35:13+08:00">2018-10-14</time>
+      <time title="創建時間：2019-03-27 08:31:29" itemprop="dateCreated datePublished" datetime="2019-03-27T08:31:29+08:00">2019-03-27</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-01 20:59:12" itemprop="dateModified" datetime="2021-04-01T20:59:12+08:00">2021-04-01</time>
+        <time title="修改時間：2021-04-07 14:02:53" itemprop="dateModified" datetime="2021-04-07T14:02:53+08:00">2021-04-07</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1041,7 +1048,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-%E5%BE%A9%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">C++復習</span></a>
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
         </span>
     </span>
 
@@ -1055,11 +1062,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="https://wangxchun.github.io/2018/09/13/C-% E5%9F% BA% E7% A4%8E% E5%85% A5% E9%96%80/">C++ 復習 —1.C++ 基礎入門</a><br><a href="https://wangxchun.github.io/2018/10/14/C-% E5%85% A5% E9%96%80% E4% B9%8B% E5% BE%8C/">C++ 復習 —2.C++ 入門之後</a><br><a href="https://wangxchun.github.io/2019/03/14/C-% E9%80% B2% E9%9A%8E/">C++ 復習 —3.C++ 進階</a></p>
-<h3 id="一、模板"><a href="#一、模板" class="headerlink" title="一、模板"></a>一、模板</h3>
+          <h3 id="一、图的定义"><a href="#一、图的定义" class="headerlink" title="一、图的定义"></a>一、图的定义</h3><p>图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G=(V,E)$<br>$V={v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶<br>$E=\lbrace (u,v)|u \in V,v \in V \rbrace$<br>注释：图不能为空集</p>
+<h3 id="二、图的分类和术语"><a href="#二、图的分类和术语" class="headerlink" title="二、图的分类和术语"></a>二、图的分类和术语</h3>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/14/C++%E9%80%B2%E9%9A%8E/#more" rel="contents">
+              <a class="btn" href="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -1083,7 +1090,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
 
 
@@ -1145,7 +1152,38 @@
 
 
 
-  
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
 
 
 </body>
