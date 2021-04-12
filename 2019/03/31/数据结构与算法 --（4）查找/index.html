@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://wangxchun.github.io/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo4.jpg">
 <meta property="og:image" content="https://wangxchun.github.io/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo5.jpg">
 <meta property="article:published_time" content="2019-03-31T00:32:49.000Z">
-<meta property="article:modified_time" content="2021-04-08T07:52:38.957Z">
+<meta property="article:modified_time" content="2021-04-12T15:00:21.809Z">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wangxchun.github.io/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo1.png">
@@ -274,7 +274,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-08 15:52:38" itemprop="dateModified" datetime="2021-04-08T15:52:38+08:00">2021-04-08</time>
+        <time title="修改時間：2021-04-12 23:00:21" itemprop="dateModified" datetime="2021-04-12T23:00:21+08:00">2021-04-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -317,7 +317,7 @@
 <p>$log_m (n+1) \leq h \leq log_{\lceil \frac {m}{2} \rceil} \displaystyle ({n+1 \over 2}) +1$</p>
 <h4 id="2- 查找"><a href="#2- 查找" class="headerlink" title="2. 查找"></a>2. 查找 </h4><p> 节点上查找 $\begin {cases}<br>成功  &amp; \text {} \\<br>失败：子树查找 &amp; \text {}<br>\end {cases}$</p>
 <h4 id="3-B- 树插入"><a href="#3-B- 树插入" class="headerlink" title="3.B 树插入"></a>3.B 树插入 </h4><h5 id="1- 定位：某个非叶节点"><a href="#1- 定位：某个非叶节点" class="headerlink" title="(1) 定位：某个非叶节点"></a>(1) 定位：某个非叶节点</h5><h5 id="2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点"><a href="#2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点" class="headerlink" title="(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点"></a>(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点</h5><h4 id="4-B- 树删除"><a href="#4-B- 树删除" class="headerlink" title="4.B 树删除"></a>4.B 树删除</h4><p> 分层两大类情形：</p>
-<h5 id="1- 删除的节点是最底层分支"><a href="#1- 删除的节点是最底层分支" class="headerlink" title="(1) 删除的节点是最底层分支"></a>(1) 删除的节点是最底层分支 </h5><p>$\quad$(a) 欲删除节点的父节点关键字 $&gt; \lceil \frac {m}{2} \rceil -1$，直接删除<br>$\quad$(b) 欲删除节点的父节点关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad$ (i) 兄弟节点够借：关键字 $\leq \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 父子易位，再平衡<br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo3.jpg" alt><br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo4.jpg" alt><br>$\quad \quad$ (ii) 兄弟节点不够借：关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 合并 (左 / 右 + 父亲 + 自己)<br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo5.jpg" alt><br>Q：为什么能合并，不会超过关键字数量的上界吗？<br> 合并：$(\lceil \frac {m}{2} \rceil -1) + 1 + (\lceil \frac {m}{2} \rceil -2)$</p>
+<h5 id="1- 删除的节点是最底层分支"><a href="#1- 删除的节点是最底层分支" class="headerlink" title="(1) 删除的节点是最底层分支"></a>(1) 删除的节点是最底层分支 </h5><p>$\quad$(a) 欲删除节点的父节点关键字 $&gt; \lceil \frac {m}{2} \rceil -1$，直接删除<br>$\quad$(b) 欲删除节点的父节点关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad$ (i) 兄弟节点够借：关键字 $\leq \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 父子易位，再平衡<br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo3.jpg" alt><br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo4.jpg" alt><br>$\quad \quad$ (ii) 兄弟节点不够借：关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 合并 (左 / 右 + 父亲 + 自己)<br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo5.jpg" alt><br>Q：为什么能合并，不会超过关键字数量的上界吗？<br> 合并：$(\lceil \frac {m}{2} \rceil -1) + 1 + (\lceil \frac {m}{2} \rceil -2)=$</p>
 <h5 id="2- 删除的节点不是最底层分支"><a href="#2- 删除的节点不是最底层分支" class="headerlink" title="(2) 删除的节点不是最底层分支"></a>(2) 删除的节点不是最底层分支</h5>
     </div>
 
