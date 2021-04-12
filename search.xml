@@ -14,18 +14,6 @@
       </tags>
   </entry>
   <entry>
-    <title>取出一個數的每一位</title>
-    <url>/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>刷题检讨 --(1) 线性表</title>
     <url>/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
     <content><![CDATA[<h3 id="线性表"><a href="# 线性表" class="headerlink" title="线性表"></a>线性表 </h3><h5 id="1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator"><a href="#1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator" class="headerlink" title="(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator"></a>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator</h5><p> 除了用迭代器获取 vector 容器中的元素，[] 和 at 也可以<br>vector<int>(v).swap (v); // 收缩内存<br><span id="more"></span><br>//vector<int> 利用 v 调用拷贝构造函数，创建匿名对象，它会用 v 目前使用的元素个数来初始化这个匿名对象<br>//swap () 互换函数的本质类似于指针的交换<br>// 调换后 v 指向了创建的匿名对象，而本来匿名对象的指针 x 指向原本的 v，并且在该语句过后由系统自动回收</int></int></p>
@@ -64,6 +52,18 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>数据结构</tag>
         <tag>刷题</tag>
         <tag>线性表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>取出一個數的每一位</title>
+    <url>/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -154,35 +154,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>C++ 報錯 no matching function for call to transform</title>
-    <url>/2018/10/24/C++%E5%A0%B1%E9%8C%AF%20no-matching-function-for-call-to-transform/</url>
-    <content><![CDATA[<h3 id="報錯"><a href="# 報錯" class="headerlink" title="報錯"></a> 報錯 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<p> 報錯：no matching function for call to transform</p>
-<h3 id="有三種解決方法："><a href="# 有三種解決方法：" class="headerlink" title="有三種解決方法："></a> 有三種解決方法：</h3><h4 id="1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題："><a href="#1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題：" class="headerlink" title="1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題："></a>1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br></pre></td></tr></table></figure>
-<h4 id="2- 自己寫一個函數出來 -—wraper"><a href="#2- 自己寫一個函數出來 -—wraper" class="headerlink" title="2. 自己寫一個函數出來 —wraper"></a>2. 自己寫一個函數出來 —wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span> <span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span> (c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。"><a href="#3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。" class="headerlink" title="3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。"></a>3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>)) toupper);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++報錯</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C++ 的 #include</title>
-    <url>/2018/10/27/C++%E7%9A%84#include/</url>
-    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
-<h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
-<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
-<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
-]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ 小知识点总结</title>
     <url>/2018/11/05/C++%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h3 id="返回多个参数的方法："><a href="# 返回多个参数的方法：" class="headerlink" title="返回多个参数的方法："></a>返回多个参数的方法：</h3><h4 id="1- 定义结构体"><a href="#1- 定义结构体" class="headerlink" title="1. 定义结构体"></a>1. 定义结构体 </h4><h4 id="2- 利用引用参数"><a href="#2- 利用引用参数" class="headerlink" title="2. 利用引用参数"></a>2. 利用引用参数</h4><h3 id="解决 -“数组大小必须事先决定”- 这个问题"><a href="# 解决 -“数组大小必须事先决定”- 这个问题" class="headerlink" title="解决 “数组大小必须事先决定” 这个问题"></a> 解决 “数组大小必须事先决定” 这个问题</h3><h4 id="1- 使用 -new- 和 -delete，有程序员自行分配内"><a href="#1- 使用 -new- 和 -delete，有程序员自行分配内" class="headerlink" title="1. 使用 new 和 delete，有程序员自行分配内"></a>1. 使用 new 和 delete，有程序员自行分配内</h4><span id="more"></span>
@@ -217,9 +188,12 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>C++ 萬能標題檔案</title>
-    <url>/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/</url>
-    <content><![CDATA[<p> 萬能標頭檔案 </p>
+    <title>C++ 的 #include</title>
+    <url>/2018/10/27/C++%E7%9A%84#include/</url>
+    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
+<h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
+<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
+<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
 ]]></content>
       <categories>
         <category>C++學習</category>
@@ -244,18 +218,18 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>解釋一個語句</title>
-    <url>/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+    <title>C++ 報錯 no matching function for call to transform</title>
+    <url>/2018/10/24/C++%E5%A0%B1%E9%8C%AF%20no-matching-function-for-call-to-transform/</url>
+    <content><![CDATA[<h3 id="報錯"><a href="# 報錯" class="headerlink" title="報錯"></a> 報錯 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
-<p> 在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
+<p> 報錯：no matching function for call to transform</p>
+<h3 id="有三種解決方法："><a href="# 有三種解決方法：" class="headerlink" title="有三種解決方法："></a> 有三種解決方法：</h3><h4 id="1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題："><a href="#1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題：" class="headerlink" title="1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題："></a>1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br></pre></td></tr></table></figure>
+<h4 id="2- 自己寫一個函數出來 -—wraper"><a href="#2- 自己寫一個函數出來 -—wraper" class="headerlink" title="2. 自己寫一個函數出來 —wraper"></a>2. 自己寫一個函數出來 —wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span> <span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span> (c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。"><a href="#3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。" class="headerlink" title="3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。"></a>3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>)) toupper);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>C++學習</category>
+        <category>C++報錯</category>
       </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
   </entry>
   <entry>
     <title>C++ 資料結構與算法 -- 一。線性表 --1. 線性表的存儲結構</title>
@@ -267,6 +241,32 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="二、棧（Stack）"><a href="# 二、棧（Stack）" class="headerlink" title="二、棧（Stack）"></a> 二、棧（Stack）</h3><h3 id="三、隊列（Queue）"><a href="# 三、隊列（Queue）" class="headerlink" title="三、隊列（Queue）"></a> 三、隊列（Queue）</h3><h3 id="四、串（String）"><a href="# 四、串（String）" class="headerlink" title="四、串（String）"></a> 四、串（String）</h3><h3 id="五、陣列（Array）"><a href="# 五、陣列（Array）" class="headerlink" title="五、陣列（Array）"></a> 五、陣列（Array）</h3><h3 id="六、廣義表（Generalize-List）"><a href="# 六、廣義表（Generalize-List）" class="headerlink" title="六、廣義表（Generalize List）"></a> 六、廣義表（Generalize List）</h3>]]></content>
       <categories>
         <category>C++資料結構</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 萬能標題檔案</title>
+    <url>/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/</url>
+    <content><![CDATA[<p> 萬能標頭檔案 </p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解釋一個語句</title>
+    <url>/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p> 在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -370,21 +370,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
-    <url>/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/</url>
-    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
-<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
-<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>jupyter notebook 闪退</title>
     <url>/2021/04/04/jupyter-notebook%E9%97%AA%E9%80%80/</url>
     <content><![CDATA[<h3 id="起始位置"><a href="# 起始位置" class="headerlink" title="起始位置"></a>起始位置 </h3><p> 查看 jupyter 快捷文件的属性里的快捷方式，修改 “目标” 里的目录或文件，看看有没有 % HOME%，有的话去掉再运行试试。可能是找不到目标目录或文件了。</p>
@@ -395,13 +380,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <categories>
         <category>python</category>
       </categories>
-  </entry>
-  <entry>
-    <title>刷题检讨</title>
-    <url>/2021/04/08/%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8/</url>
-    <content><![CDATA[<h3 id="P1047"><a href="#P1047" class="headerlink" title="P1047"></a>P1047</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>* buffer = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">512</span>]&#123;<span class="number">5</span>&#125;; <span class="comment">// 第一个 int 初始化为 5，其余初始化为 0</span></span><br></pre></td></tr></table></figure>
-<p> 上面是合法的，但是其结果与我们设想的不一样，它并不是将分配的 512 个 int 都初始化为 5，而仅仅是将第一个 int 初始化为 5，其余的 511 个仍然初始化为 0！<br> 无法将分配的所有元素同时初始化为非 0 值。</p>
-]]></content>
   </entry>
   <entry>
     <title>三連擊（洛谷 P1008）</title>
@@ -423,6 +401,59 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>set</tag>
         <tag>洛谷刷題</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
+    <url>/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/</url>
+    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
+<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
+<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>刷题检讨</title>
+    <url>/2021/04/08/%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8/</url>
+    <content><![CDATA[<h3 id="P1047"><a href="#P1047" class="headerlink" title="P1047"></a>P1047</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>* buffer = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">512</span>]&#123;<span class="number">5</span>&#125;; <span class="comment">// 第一个 int 初始化为 5，其余初始化为 0</span></span><br></pre></td></tr></table></figure>
+<p> 上面是合法的，但是其结果与我们设想的不一样，它并不是将分配的 512 个 int 都初始化为 5，而仅仅是将第一个 int 初始化为 5，其余的 511 个仍然初始化为 0！<br> 无法将分配的所有元素同时初始化为非 0 值。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>历史 -- （1）欧洲简史</title>
+    <url>/2019/07/06/%E5%8E%86%E5%8F%B2%20--%20%EF%BC%881%EF%BC%89%E6%AC%A7%E6%B4%B2%E7%AE%80%E5%8F%B2/</url>
+    <content><![CDATA[<p>395 年，迪奥多西一世将帝国分给两个儿子，分裂成东西罗马帝国 </p>
+<p> 公元 5 世纪，北方的日尔曼民族向南方入侵 </p>
+<pre><code> 西：法兰克人
+东：查士丁尼
+</code></pre><p> 阿拉伯人占领东罗马帝国很多地区 </p>
+<p> 公元 8 世纪末，法兰克王国的查理大帝向东扩张 -&gt; 三个孙子签订凡尔登条约 </p>
+<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国 </p>
+<p> 突厥人入侵欧洲东部，征服巴格达，建立苏丹帝国 </p>
+<p>-&gt; 十字军东征 </p>
+<p>1202 年，第四次十字军东征导致东罗马帝国灭亡，拉丁帝国建立 </p>
+<p>1240 年，蒙古金帐汗国入侵基辅罗斯，且苏丹王国和阿拉伯王国消亡 </p>
+<p>1281 年，奥斯曼帝国成立 </p>
+<p>1337 年，英法百年战争 </p>
+<p>1453 年，奥斯曼帝国攻占君士坦丁堡 </p>
+<p>1480 年，莫斯科公国推翻蒙古异族统治 </p>
+<p> 奥斯曼帝国扩张，神圣罗马帝国衰微 </p>
+<p>1618 年，三十年战争爆发，神圣罗马帝国彻底灭亡 </p>
+<p>1707 年，英国完成统一 </p>
+<p> 普鲁士在腓特烈二世的手中兴起 </p>
+<p>1799 年拿破仑上台，扩大了法国的领土。1813 年，远征俄国失败，欧洲召开维也纳会议，德意志联邦成立 </p>
+<p> 意大利统一 </p>
+<p> 奥匈帝国成立 </p>
+<p> 铁血宰相俾斯麦统一德国 </p>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
   </entry>
   <entry>
     <title>历史 -- （2）俄国简史</title>
@@ -507,37 +538,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>历史 -- （1）欧洲简史</title>
-    <url>/2019/07/06/%E5%8E%86%E5%8F%B2%20--%20%EF%BC%881%EF%BC%89%E6%AC%A7%E6%B4%B2%E7%AE%80%E5%8F%B2/</url>
-    <content><![CDATA[<p>395 年，迪奥多西一世将帝国分给两个儿子，分裂成东西罗马帝国 </p>
-<p> 公元 5 世纪，北方的日尔曼民族向南方入侵 </p>
-<pre><code> 西：法兰克人
-东：查士丁尼
-</code></pre><p> 阿拉伯人占领东罗马帝国很多地区 </p>
-<p> 公元 8 世纪末，法兰克王国的查理大帝向东扩张 -&gt; 三个孙子签订凡尔登条约 </p>
-<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国 </p>
-<p> 突厥人入侵欧洲东部，征服巴格达，建立苏丹帝国 </p>
-<p>-&gt; 十字军东征 </p>
-<p>1202 年，第四次十字军东征导致东罗马帝国灭亡，拉丁帝国建立 </p>
-<p>1240 年，蒙古金帐汗国入侵基辅罗斯，且苏丹王国和阿拉伯王国消亡 </p>
-<p>1281 年，奥斯曼帝国成立 </p>
-<p>1337 年，英法百年战争 </p>
-<p>1453 年，奥斯曼帝国攻占君士坦丁堡 </p>
-<p>1480 年，莫斯科公国推翻蒙古异族统治 </p>
-<p> 奥斯曼帝国扩张，神圣罗马帝国衰微 </p>
-<p>1618 年，三十年战争爆发，神圣罗马帝国彻底灭亡 </p>
-<p>1707 年，英国完成统一 </p>
-<p> 普鲁士在腓特烈二世的手中兴起 </p>
-<p>1799 年拿破仑上台，扩大了法国的领土。1813 年，远征俄国失败，欧洲召开维也纳会议，德意志联邦成立 </p>
-<p> 意大利统一 </p>
-<p> 奥匈帝国成立 </p>
-<p> 铁血宰相俾斯麦统一德国 </p>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-  </entry>
-  <entry>
     <title>历史 -- （3）德国简史</title>
     <url>/2019/07/10/%E5%8E%86%E5%8F%B2%20--%20%EF%BC%883%EF%BC%89%E5%BE%B7%E5%9B%BD%E7%AE%80%E5%8F%B2/</url>
     <content><![CDATA[<h3 id><a href="#" class="headerlink" title=" "></a> </h3><p>西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
@@ -564,18 +564,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <categories>
         <category>历史</category>
       </categories>
-  </entry>
-  <entry>
-    <title>參考：架設網站的第一步</title>
-    <url>/2018/08/03/%E5%8F%83%E8%80%83%EF%BC%9A%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</url>
-    <content><![CDATA[<p>從零開始：使用 npm 套件 <br><a href="https://medium.com/html-test/%">https://medium.com/html-test/%</a> E5% BE%9E% E9%9B% B6% E9%96%8B% E5% A7%8B-% E4% BD% BF% E7%94% A8npm% E5% A5%97% E4% BB% B6-317beefdf182<br> 介紹 npm 的概念與使用，可以與使用 hexo 的經驗和架構結合參考<br><span id="more"></span></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-      </tags>
   </entry>
   <entry>
     <title>历史 -- （4）威尼斯和第四次十字军东征</title>
@@ -608,18 +596,15 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>如何在 hexo blog 中發表一篇文章</title>
-    <url>/2018/09/16/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h4 id="新建一篇文章"><a href="# 新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h4><p>(1) 在 hexo blog 目錄下，進入 cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot; 文章名稱 &quot;</span><br></pre></td></tr></table></figure><br><span id="more"></span></p>
-<p>(2) 在 blog 目錄下的 /source/_posts/ 資料夾下，可以看到生成的 blog 文章（文章名稱.md）<br>(3) 在.md 檔案中編輯自己的文章即可 <br> 注意：Hexo 發表的文章是 Markdown 格式的檔案</p>
-<h3 id="Hexo- 使用的 -Markdown- 語法及 -NEXT- 的 -Tags"><a href="#Hexo- 使用的 -Markdown- 語法及 -NEXT- 的 -Tags" class="headerlink" title="Hexo 使用的 Markdown 語法及 NEXT 的 Tags"></a>Hexo 使用的 Markdown 語法及 NEXT 的 Tags</h3><p><a href="https://blog.akizukineko.tw/hexo-new-NEXT-tags/">https://blog.akizukineko.tw/hexo-new-NEXT-tags/</a></p>
+    <title>參考：架設網站的第一步</title>
+    <url>/2018/08/03/%E5%8F%83%E8%80%83%EF%BC%9A%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</url>
+    <content><![CDATA[<p>從零開始：使用 npm 套件 <br><a href="https://medium.com/html-test/%">https://medium.com/html-test/%</a> E5% BE%9E% E9%9B% B6% E9%96%8B% E5% A7%8B-% E4% BD% BF% E7%94% A8npm% E5% A5%97% E4% BB% B6-317beefdf182<br> 介紹 npm 的概念與使用，可以與使用 hexo 的經驗和架構結合參考<br><span id="more"></span></p>
 ]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>發表文章</tag>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -637,29 +622,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>撰写文章基本操作</title>
-    <url>/2018/09/13/%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a> 加入链结 </h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
-<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a> 加入引用 </h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> 引用 1</p>
-</blockquote>
-<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a> 改变文字颜色和大小 </h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;2&quot;&gt; 颜色 &lt;&#x2F;font&gt;</span><br><span class="line">&lt;code&gt;&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;3&quot;&gt; 大小 &lt;&#x2F;font&gt;&lt;&#x2F;code&gt;</span><br></pre></td></tr></table></figure>
-<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
-<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a> 加入代码 </h4>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>怎么取消文章目录中对标题的自动编号</title>
-    <url>/2018/09/05/%E6%80%8E%E4%B9%88%E5%8F%96%E6%B6%88%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%E5%AF%B9%E6%A0%87%E9%A2%98%E7%9A%84%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7/</url>
-    <content><![CDATA[<p> 修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
+    <title>如何在 hexo blog 中發表一篇文章</title>
+    <url>/2018/09/16/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h4 id="新建一篇文章"><a href="# 新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h4><p>(1) 在 hexo blog 目錄下，進入 cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot; 文章名稱 &quot;</span><br></pre></td></tr></table></figure><br><span id="more"></span></p>
+<p>(2) 在 blog 目錄下的 /source/_posts/ 資料夾下，可以看到生成的 blog 文章（文章名稱.md）<br>(3) 在.md 檔案中編輯自己的文章即可 <br> 注意：Hexo 發表的文章是 Markdown 格式的檔案</p>
+<h3 id="Hexo- 使用的 -Markdown- 語法及 -NEXT- 的 -Tags"><a href="#Hexo- 使用的 -Markdown- 語法及 -NEXT- 的 -Tags" class="headerlink" title="Hexo 使用的 Markdown 語法及 NEXT 的 Tags"></a>Hexo 使用的 Markdown 語法及 NEXT 的 Tags</h3><p><a href="https://blog.akizukineko.tw/hexo-new-NEXT-tags/">https://blog.akizukineko.tw/hexo-new-NEXT-tags/</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>發表文章</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
@@ -701,6 +676,31 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>怎么取消文章目录中对标题的自动编号</title>
+    <url>/2018/09/05/%E6%80%8E%E4%B9%88%E5%8F%96%E6%B6%88%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%E5%AF%B9%E6%A0%87%E9%A2%98%E7%9A%84%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7/</url>
+    <content><![CDATA[<p> 修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>撰写文章基本操作</title>
+    <url>/2018/09/13/%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a> 加入链结 </h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
+<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a> 加入引用 </h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> 引用 1</p>
+</blockquote>
+<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a> 改变文字颜色和大小 </h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;2&quot;&gt; 颜色 &lt;&#x2F;font&gt;</span><br><span class="line">&lt;code&gt;&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;3&quot;&gt; 大小 &lt;&#x2F;font&gt;&lt;&#x2F;code&gt;</span><br></pre></td></tr></table></figure>
+<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
+<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a> 加入代码 </h4>]]></content>
+      <categories>
+        <category>hexo</category>
       </categories>
   </entry>
   <entry>
@@ -810,29 +810,10 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>机器学习算法 --（2）逻辑回归</title>
-    <url>/2020/10/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
-    <content><![CDATA[<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/10/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/photo1.jpg" alt></p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p> 线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$<br><span id="more"></span></p>
-<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
-<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
-<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
-<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
-<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
-<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
-<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>机器学习算法 --（1）线性回归和非线性回归</title>
-    <url>/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</url>
+    <url>/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</url>
     <content><![CDATA[<h3 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h3><h4 id="1- 数据挖掘和机器学习的关系"><a href="#1- 数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2- 训练数据 -vs- 验证数据 -vs- 测试数据"><a href="#2- 训练数据 -vs- 验证数据 -vs- 测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3- 监督学习 -vs- 无监督学习 -vs- 半监督学习"><a href="#3- 监督学习 -vs- 无监督学习 -vs- 半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4- 回归 -vs- 分类 -vs- 聚类"><a href="#4- 回归 -vs- 分类 -vs- 聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="# 一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a> 一、一元线性回归概念 </h3><p> 回归：高尔顿提出 <br> 回归分析：建立方程模拟两个或多个变量之间如何关联 <br> 一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟 <br> 一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率<br><span id="more"></span></p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
 <h3 id="三、相关系数和决定系数"><a href="# 三、相关系数和决定系数" class="headerlink" title="三、相关系数和决定系数"></a>三、相关系数和决定系数 </h3><h4 id="相关系数：衡量线性相关性的强弱"><a href="# 相关系数：衡量线性相关性的强弱" class="headerlink" title="相关系数：衡量线性相关性的强弱"></a> 相关系数：衡量线性相关性的强弱</h4><p>$\displaystyle r_{xy} = {{\sum {(X_i - \bar X)(Y_i - \bar Y)}} \over {\sqrt {\sum {(X_i - \bar X)^2 (Y_i - \bar Y)^2}}} }$  </p>
 <h4 id="决定系数"><a href="# 决定系数" class="headerlink" title="决定系数"></a>决定系数 </h4><p> 总平方和（SST）：$\sum_{i=0}^n (y_i - \bar y)^2$<br>残差平方和（SSE）：$\sum_{i=0}^n (y_i - \hat y)^2$<br>回归平方和（SSR）：$\sum_{i=0}^n (\hat y - \bar y)^2$<br>它们三者的关系是：$SST = SSE + SSR$<br>决定系数：$\displaystyle R^2 = {SSR \over SST} = 1 - {SSE \over SST}$</p>
 <h3 id="四、梯度下降法"><a href="# 四、梯度下降法" class="headerlink" title="四、梯度下降法"></a>四、梯度下降法 </h3><h4 id="概念"><a href="# 概念" class="headerlink" title="概念"></a> 概念 </h4><p> 缺点：初始值的选取会影响到最后的结果，只能找到局部最优解<br>(凸函数的局部最值就是全局最值)<br>repeat until convergence<br>{<br>    $\displaystyle \qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,\theta_1)$ $\quad (for\quad j = 0 \quad and \quad j = 1)$<br>}</p>
@@ -875,17 +856,17 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="数据归一化"><a href="# 数据归一化" class="headerlink" title="数据归一化"></a>数据归一化 </h4><p> 转化成 $(0,1)$ 之间：$newValue = \displaystyle {oldValue - min \over max - min}$</p>
 <p>转化成 $(-1,1)$ 之间：$newValue = (\displaystyle {oldValue - min \over max - min}-0.5) \times 2$</p>
 <h4 id="数据标准化"><a href="# 数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h4><p>$newValue = \displaystyle {oldValue - u \over s}$ 其中 u 为数据的平均值，s 为数据的方差</p>
-<h3 id="十、交叉验证法"><a href="# 十、交叉验证法" class="headerlink" title="十、交叉验证法"></a>十、交叉验证法 </h3><p> 若样本数据较少时，可以一部分作为训练集，一部分作为测试集，没有验证集。<br>例如有 100 组数据，可以 80 组作为训练集，20 组作为测试集。<br>但是当样本更少，8/2 拆分也不适合的时候，就可以使用交叉验证法<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo2.jpg" alt></p>
-<h3 id="十一、过拟合与正则化"><a href="# 十一、过拟合与正则化" class="headerlink" title="十一、过拟合与正则化"></a>十一、过拟合与正则化 </h3><h4 id="过拟合"><a href="# 过拟合" class="headerlink" title="过拟合"></a> 过拟合</h4><p><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo3.jpg" alt></p>
+<h3 id="十、交叉验证法"><a href="# 十、交叉验证法" class="headerlink" title="十、交叉验证法"></a>十、交叉验证法 </h3><p> 若样本数据较少时，可以一部分作为训练集，一部分作为测试集，没有验证集。<br>例如有 100 组数据，可以 80 组作为训练集，20 组作为测试集。<br>但是当样本更少，8/2 拆分也不适合的时候，就可以使用交叉验证法<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo2.jpg" alt></p>
+<h3 id="十一、过拟合与正则化"><a href="# 十一、过拟合与正则化" class="headerlink" title="十一、过拟合与正则化"></a>十一、过拟合与正则化 </h3><h4 id="过拟合"><a href="# 过拟合" class="headerlink" title="过拟合"></a> 过拟合</h4><p><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo3.jpg" alt></p>
 <h4 id="防止过拟合："><a href="# 防止过拟合：" class="headerlink" title="防止过拟合："></a>防止过拟合：</h4><h5 id="1- 减少特征"><a href="#1- 减少特征" class="headerlink" title="1. 减少特征"></a>1. 减少特征 </h5><h5 id="2- 增加数据量"><a href="#2- 增加数据量" class="headerlink" title="2. 增加数据量"></a>2. 增加数据量</h5><h5 id="3- 正则化"><a href="#3- 正则化" class="headerlink" title="3. 正则化"></a>3. 正则化</h5><h5 id="4- 深度学习中有其他防止过拟合的方式"><a href="#4- 深度学习中有其他防止过拟合的方式" class="headerlink" title="4. 深度学习中有其他防止过拟合的方式"></a>4. 深度学习中有其他防止过拟合的方式</h5><h4 id="正则化"><a href="# 正则化" class="headerlink" title="正则化"></a> 正则化 </h4><h5 id="L1- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j"><a href="#L1- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j" class="headerlink" title="L1 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$"></a>L1 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$</h5><h5 id="L2- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2"><a href="#L2- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2" class="headerlink" title="L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$"></a>L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$</h5><h3 id="十二、岭回归"><a href="# 十二、岭回归" class="headerlink" title="十二、岭回归"></a> 十二、岭回归 </h3><h4 id="概念 -2"><a href="# 概念 -2" class="headerlink" title="概念"></a> 概念 </h4><p> 在使用标准方程解多元线性回归的时候，$w=(X^TX)^{-1} X^Ty$<br>如果数据的特征比样本点还多，数据特征 $n$ 个 ，样本个数 $m$ 个，如果 $n&gt;m$<br>，则计算 $(X^TX)^{-1}$ 时会出错。因为 $(X^TX)$ 不是满秩矩阵，所以不可逆。<br>为了解决这个问题，统计学家引入了岭回归的概念。<br>$w=(X^TX+\lambda I)^{-1} X^Ty$<br>$\lambda$ 为岭系数，$I$ 为单位矩阵</p>
 <h4 id="推导"><a href="# 推导" class="headerlink" title="推导"></a>推导 </h4><p> 岭回归的代价函数是 L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$<br>$\displaystyle J (\theta)={1 \over 2} (w^TX^TXw - y^TXw - w^TX^Ty + y^Ty) + \lambda \theta^T\theta$</p>
 <p>$\displaystyle {\partial J (\theta) \over \partial \theta}=0$</p>
 <p>$X^TX\theta - X^TY + \lambda \theta=0$<br>$\theta=(X^TX+\lambda I)^{-1} X^TY$</p>
 <h4 id="用处"><a href="# 用处" class="headerlink" title="用处"></a>用处 </h4><p> 岭回归最早是用来处理特征数多于样本的情况，现在也用于在估计中加入偏差，从而得到更好的估计。<br>同时也可以解决多重共线性的问题。<br>岭回归是一种有偏估计。</p>
-<h4 id="lambda- 的选择"><a href="#lambda- 的选择" class="headerlink" title="\lambda 的选择"></a>\lambda 的选择 </h4><p> 选择 \lambda 值，使得 <br>(1) 各个回归系数的岭估计基本稳定<br>(2) 残差平方和增大不太多<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo4.jpg" alt><br> 横轴是 \lambda 值，纵轴是参数 \theta 的取值范围</p>
+<h4 id="lambda- 的选择"><a href="#lambda- 的选择" class="headerlink" title="\lambda 的选择"></a>\lambda 的选择 </h4><p> 选择 \lambda 值，使得 <br>(1) 各个回归系数的岭估计基本稳定<br>(2) 残差平方和增大不太多<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo4.jpg" alt><br> 横轴是 \lambda 值，纵轴是参数 \theta 的取值范围</p>
 <h3 id><a href="#" class="headerlink" title="#"></a>#</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建模型</span></span><br><span class="line"><span class="comment"># 生成 50 个值（默认是 50 个值）</span></span><br><span class="line">alphas_to_test = np.linspace (<span class="number">0.001</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment"># 创建模型，保存误差值</span></span><br><span class="line">model = linear_model.RidgeCV (alphas=alphas_to_test, store_cv_values=<span class="literal">True</span>)</span><br><span class="line">//CV 是交叉验证法的意思，可是设置 alphas</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 岭系数</span></span><br><span class="line"><span class="built_in">print</span> (model.alpha_)</span><br><span class="line"><span class="comment"># loss 值</span></span><br><span class="line"><span class="built_in">print</span> (model.cv_values_.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line"><span class="comment"># 岭系数跟 loss 值的关系</span></span><br><span class="line">plt.plot (alphas_to_test, model.cv_values_.mean (axis=<span class="number">0</span>))</span><br><span class="line"><span class="comment"># 选取的岭系数值的位置</span></span><br><span class="line">plt.plot (model.alpha_, <span class="built_in">min</span> (model.cv_values_.mean (axis=<span class="number">0</span>)),<span class="string">&#x27;ro&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
 <h3 id="十三、LASSO- 算法"><a href="# 十三、LASSO- 算法" class="headerlink" title="十三、LASSO 算法"></a>十三、LASSO 算法 </h3><h4 id="概念 -3"><a href="# 概念 -3" class="headerlink" title="概念"></a> 概念 </h4><p> 通过构造一个一阶惩罚函数获得一个精炼的模型；通过最终确定一些指标（变量）的系数为零（岭回归估计系数等于 0 的机会微乎其微，造成筛选变量困难），解释力很强。<br>擅长处理具有多重共线性的数据，与岭回归一样是有偏估计 。</p>
-<h4 id="LASSO- 的代价函数"><a href="#LASSO- 的代价函数" class="headerlink" title="LASSO 的代价函数"></a>LASSO 的代价函数 </h4><p>$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$<br>$\lambda$ 的值可以用于限制 $\sum_{i=0}^n |\theta_j| \leq t$<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo5.jpg" alt><br> 一圈圈椭圆是 loss 函数的等高线，最中间的 $\beta$ 值使得 loss 函数最小 <br> 有图中可以观察出，lasso 算法容易使得某些 $\beta$ 取值为零<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo6.jpg" alt></p>
+<h4 id="LASSO- 的代价函数"><a href="#LASSO- 的代价函数" class="headerlink" title="LASSO 的代价函数"></a>LASSO 的代价函数 </h4><p>$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$<br>$\lambda$ 的值可以用于限制 $\sum_{i=0}^n |\theta_j| \leq t$<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo5.jpg" alt><br> 一圈圈椭圆是 loss 函数的等高线，最中间的 $\beta$ 值使得 loss 函数最小 <br> 有图中可以观察出，lasso 算法容易使得某些 $\beta$ 取值为零<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo6.jpg" alt></p>
 <h3 id="十四、弹性网"><a href="# 十四、弹性网" class="headerlink" title="十四、弹性网"></a>十四、弹性网 </h3><h4 id="代价函数"><a href="# 代价函数" class="headerlink" title="代价函数"></a> 代价函数</h4><p>$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|^q$</p>
 ]]></content>
       <categories>
@@ -896,13 +877,32 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>机器学习算法 --（2）逻辑回归</title>
+    <url>/2020/11/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
+    <content><![CDATA[<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/photo1.jpg" alt></p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p> 线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$<br><span id="more"></span></p>
+<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
+<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
+<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
+<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
+<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
+<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
+<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>机器学习算法 --（3）神经网络</title>
-    <url>/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+    <url>/2020/11/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[<h3 id="一、深度学习"><a href="# 一、深度学习" class="headerlink" title="一、深度学习"></a>一、深度学习</h3><h4 id="1- 深度学习三次热潮"><a href="#1- 深度学习三次热潮" class="headerlink" title="1. 深度学习三次热潮"></a>1. 深度学习三次热潮</h4><p>1950 年代：图灵提出图灵测试<br>1980 年代：李开复语音识别，BP 算法<br>2006 年至今：李飞飞 ImageNet，AlphoGo 战胜人类棋手</p>
 <h4 id="2- 深度学习爆发三要素"><a href="#2- 深度学习爆发三要素" class="headerlink" title="2. 深度学习爆发三要素"></a>2. 深度学习爆发三要素 </h4><p> 数据、算法、算力<br><span id="more"></span></p>
 <h4 id="3- 机器学习三巨头"><a href="#3- 机器学习三巨头" class="headerlink" title="3. 机器学习三巨头"></a>3. 机器学习三巨头 </h4><p>Hinton：BP 算法<br>Lecun：卷积神经网络<br>Bengio：预训练和自动编码器<br> 吴恩达：创建 Coursera 和 Google Brain</p>
-<p><img src="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo1.jpg" alt></p>
-<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="1- 介绍"><a href="#1- 介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h4><p><img src="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\Delta w_i = \eta (t-y) x_i$<br> 输入节点：$x_1, x_2, x_3$<br>输出节点：$y$<br>权向量：$w_1, w_2, w_3$<br>偏置因子：$b$（也可以看成是 $x_0=1$）<br>激活函数：$sign (x) =<br>\begin {cases}<br>1,  &amp; \text {$x \geq 0$} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}<br>$</p>
+<p><img src="/2020/11/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo1.jpg" alt></p>
+<h3 id="二、单层感知机"><a href="# 二、单层感知机" class="headerlink" title="二、单层感知机"></a>二、单层感知机 </h3><h4 id="1- 介绍"><a href="#1- 介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h4><p><img src="/2020/11/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo2.jpg" alt><br>$\Delta w_i = \eta (t-y) x_i$<br> 输入节点：$x_1, x_2, x_3$<br>输出节点：$y$<br>权向量：$w_1, w_2, w_3$<br>偏置因子：$b$（也可以看成是 $x_0=1$）<br>激活函数：$sign (x) =<br>\begin {cases}<br>1,  &amp; \text {$x \geq 0$} \\<br>-1, &amp; \text {x &lt; 0}<br>\end {cases}<br>$</p>
 <h4 id="2- 例子 -sklearn- 实现单层感知器"><a href="#2- 例子 -sklearn- 实现单层感知器" class="headerlink" title="2. 例子 sklearn 实现单层感知器"></a>2. 例子 sklearn 实现单层感知器 </h4><p> 题目：假设平面坐标系上有四个点，$(3,3),(4,3)$ 这两个点的标签为 $1$；$(1,1),(0,2)$ 这两个点的标签为 $-1$。构建神经网络来分类。</p>
 <p>思路：我们要分类的数据是 $2$ 维数据，所以只需要 $2$ 个输入节点，我们可以把神经元的偏置值也设置成一个节点，这样我们需要 $3$ 个输入节点。输入数据有 $4$ 个 $(1,3,3),(1,4,3),(1,1,1),(1,0,2)$ 数据对应的标签为 $(1,1,-1,-1)$。初始化权值 $w_0,w_1,w_2$，取 $-1$ 到 $1$ 的随机数。学习率设置为 $0.11$，激活函数为 sign 函数。</p>
 <p>程序：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># n 个输入，m 个输出，权值矩阵就设置成 nXm 大小 </span></span><br><span class="line"><span class="comment"># 权值初始化，3 行 1 列，取值范围 - 1 到 1</span></span><br><span class="line">W = (np.random.random ([<span class="number">3</span>,<span class="number">1</span>])-<span class="number">0.5</span>)*<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (W)</span><br><span class="line"><span class="comment"># 学习率设置</span></span><br><span class="line">lr = <span class="number">0.11</span></span><br><span class="line"><span class="comment"># 神经网络输出</span></span><br><span class="line">O = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update</span> ():</span></span><br><span class="line">    <span class="keyword">global</span> X,Y,W,lr</span><br><span class="line">    O = np.dot (X,W) <span class="comment"># shape:(3,1)</span></span><br><span class="line">    W_C = lr*(X.T.dot (Y-O))/<span class="built_in">int</span> (X.shape [<span class="number">0</span>])</span><br><span class="line">    W = W + W_C</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (<span class="number">100</span>):</span><br><span class="line">    update ()<span class="comment"># 更新权值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算分界线的斜率以及截距</span></span><br><span class="line">k = -W [<span class="number">1</span>]/W [<span class="number">2</span>]</span><br><span class="line">d = -W [<span class="number">0</span>]/W [<span class="number">2</span>]</span><br><span class="line">plt.figure ()</span><br><span class="line">plt.plot (xdata,xdata*k+d,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.scatter (x1,y1,c=<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">plt.scatter (x2,y2,c=<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure><br> 问题：单层感知器没办法解决异或问题</p>
@@ -913,7 +913,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 </code></pre><h3 id="三、线性神经网络"><a href="# 三、线性神经网络" class="headerlink" title="三、线性神经网络"></a>三、线性神经网络 </h3><h4 id="1- 概念"><a href="#1- 概念" class="headerlink" title="1. 概念"></a>1. 概念</h4><p> 线性神经网络在结构上和感知器非常类似，只是激活函数不同。<br>在模型训练时把原来激活函数 sign 函数改成 purelin 函数：$y=x$</p>
 <h4 id="2- 代价函数（损失函数）"><a href="#2- 代价函数（损失函数）" class="headerlink" title="2. 代价函数（损失函数）"></a>2. 代价函数（损失函数）</h4><p>二次代价函数：$\displaystyle E={1 \over 2} (t-y)^2={1 \over 2} [t-f (WX)]^2$<br>误差 E 是权值向量 $W$ 的函数，我们可以使用梯度下降法来最小化 $E$ 的值：<br>$\Delta W = -\eta E’ = \eta X^T (t-y) f’(WX) = \eta X^T \delta$<br>$\Delta w_i = -\eta E’ = \eta x_i X^T (t-y) f’(WX) = \eta \, x_i \delta$</p>
 <h4 id="3-sklearn- 实现线性神经网络"><a href="#3-sklearn- 实现线性神经网络" class="headerlink" title="3.sklearn 实现线性神经网络"></a>3.sklearn 实现线性神经网络</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># n 个输入，m 个输出，权值矩阵就设置成 nXm 大小</span></span><br><span class="line"><span class="comment"># 权值初始化，3 行 1 列，取值范围 - 1 到 1</span></span><br><span class="line">W = (np.random.random ([<span class="number">3</span>,<span class="number">1</span>])-<span class="number">0.5</span>)*<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (W)</span><br><span class="line"><span class="comment"># 学习率设置</span></span><br><span class="line">lr = <span class="number">0.11</span></span><br><span class="line"><span class="comment"># 神经网络输出</span></span><br><span class="line">O = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update</span> ():</span></span><br><span class="line">    <span class="keyword">global</span> X,Y,W,lr</span><br><span class="line">    O = np.sign (np.dot (X,W)) <span class="comment"># shape:(3,1)</span></span><br><span class="line">    W_C = lr*(X.T.dot (Y-O))/<span class="built_in">int</span> (X.shape [<span class="number">0</span>])</span><br><span class="line">    W = W + W_C</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (<span class="number">100</span>):</span><br><span class="line">    update ()<span class="comment"># 更新权值</span></span><br><span class="line">    O = np.sign (np.dot (X,W))<span class="comment"># 计算当前输出  </span></span><br><span class="line">    <span class="keyword">if</span> (O == Y).<span class="built_in">all</span> (): <span class="comment"># 如果实际输出等于期望输出，模型收敛，循环结束</span></span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;Finished&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;epoch:&#x27;</span>,i)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算分界线的斜率以及截距</span></span><br><span class="line">k = -W [<span class="number">1</span>]/W [<span class="number">2</span>]</span><br><span class="line">d = -W [<span class="number">0</span>]/W [<span class="number">2</span>]</span><br><span class="line">plt.figure ()</span><br><span class="line">plt.plot (xdata,xdata*k+d,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.scatter (x1,y1,c=<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">plt.scatter (x2,y2,c=<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
-<h3 id="四、BP- 神经网络"><a href="# 四、BP- 神经网络" class="headerlink" title="四、BP 神经网络"></a>四、BP 神经网络 </h3><h4 id="网络结构"><a href="# 网络结构" class="headerlink" title="网络结构"></a> 网络结构 </h4><p><img src="/2020/10/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo3.jpg" alt><br> 通常有三层，输入不算一层</p>
+<h3 id="四、BP- 神经网络"><a href="# 四、BP- 神经网络" class="headerlink" title="四、BP 神经网络"></a>四、BP 神经网络 </h3><h4 id="网络结构"><a href="# 网络结构" class="headerlink" title="网络结构"></a> 网络结构 </h4><p><img src="/2020/11/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/photo3.jpg" alt><br> 通常有三层，输入不算一层</p>
 <h4 id="BP- 算法"><a href="#BP- 算法" class="headerlink" title="BP 算法"></a>BP 算法</h4><p>$Delta$ 学习规则：$\displaystyle E={1 \over 2} (t-y)^2$<br>$\displaystyle {\partial E \over  \partial W^l} = -(X^l)^T \delta^l \quad \quad \Delta W^l = -\eta {\partial E \over  \partial W^l} = \eta (X^l)^T \delta^l$ </p>
 <p>Q：为什么 ReLU 是常用的激活函数？<br>因为其他的激活函数会导致导数趋近于 0，反向传播的时候权值的改变就会趋近于 0<br>如果神经网络的层数过多，也容易导致传播到前面的层数的时候，权值的该变量趋近于 0<br>Q：线性激活函数 $y=x$ 的导数也是等于 1，为什么不用？因为不能描述复杂的边界</p>
 <h4 id="BP- 算法推导"><a href="#BP- 算法推导" class="headerlink" title="BP 算法推导"></a>BP 算法推导</h4>]]></content>
@@ -926,12 +926,38 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   </entry>
   <entry>
     <title>机器学习算法 --（4）KNN</title>
-    <url>/2020/10/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/</url>
+    <url>/2020/11/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/</url>
     <content><![CDATA[<h3 id="一、KNN- 概念"><a href="# 一、KNN- 概念" class="headerlink" title="一、KNN 概念"></a>一、KNN 概念 </h3><h3 id="二、KNN- 的算法实践"><a href="# 二、KNN- 的算法实践" class="headerlink" title="二、KNN 的算法实践"></a> 二、KNN 的算法实践</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">knn</span> (<span class="params">x_test, x_data, y_data, k</span>):</span></span><br><span class="line">    <span class="comment"># 计算样本数量</span></span><br><span class="line">    x_data_size = x_data.shape [<span class="number">0</span>]</span><br><span class="line">    <span class="comment"># 复制 x_test</span></span><br><span class="line">    np.tile (x_test, (x_data_size,<span class="number">1</span>))</span><br><span class="line">    <span class="comment"># 计算 x_test 与每一个样本的差值</span></span><br><span class="line">    diffMat = np.tile (x_test, (x_data_size,<span class="number">1</span>)) - x_data</span><br><span class="line">    <span class="comment"># 计算差值的平方</span></span><br><span class="line">    sqDiffMat = diffMat**<span class="number">2</span></span><br><span class="line">    <span class="comment"># 求和</span></span><br><span class="line">    sqDistances = sqDiffMat.<span class="built_in">sum</span> (axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 开方</span></span><br><span class="line">    distances = sqDistances**<span class="number">0.5</span></span><br><span class="line">    <span class="comment"># 从小到大排序</span></span><br><span class="line">    sortedDistances = distances.argsort ()</span><br><span class="line">    classCount = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (k):</span><br><span class="line">        <span class="comment"># 获取标签</span></span><br><span class="line">        votelabel = y_data [sortedDistances [i]]</span><br><span class="line">        <span class="comment"># 统计标签数量</span></span><br><span class="line">        classCount [votelabel] = classCount.get (votelabel,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    <span class="comment"># 根据 operator.itemgetter (1)- 第 1 个值对 classCount 排序，然后再取倒序</span></span><br><span class="line">    sortedClassCount = <span class="built_in">sorted</span> (classCount.items (),key=operator.itemgetter (<span class="number">1</span>), reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 获取数量最多的标签</span></span><br><span class="line">    <span class="keyword">return</span> sortedClassCount [<span class="number">0</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
 <h3 id="三、sklearn- 实现 -KNN"><a href="# 三、sklearn- 实现 -KNN" class="headerlink" title="三、sklearn 实现 KNN"></a>三、sklearn 实现 KNN</h3>]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
+  </entry>
+  <entry>
+    <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
+    <url>/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
+<h3 id="一、Linux- 目錄結構"><a href="# 一、Linux- 目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構 </h3><h3 id="二、Linux- 常用指令"><a href="# 二、Linux- 常用指令" class="headerlink" title="二、Linux 常用指令"></a> 二、Linux 常用指令</h3><h4 id="1- 打开 -terminal"><a href="#1- 打开 -terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4><span id="more"></span>
+<p>(1) 右鍵 -&gt; 打開終端<br>(2) Ctrl+Alt+t 或者 Ctrl+Shift+t</p>
+<h4 id="2- 常用快速鍵"><a href="#2- 常用快速鍵" class="headerlink" title="2. 常用快速鍵"></a>2. 常用快速鍵 </h4><p>(1) tab<br> 一次 tab：命令補齊 <br> 兩次 tab：提示內容 <br>(2) Ctrl+c<br>Ctrl+c 中斷，強行打斷進程<br>(3) Ctrl+d<br>Ctrl+d 退出，相當於 exit 和 quit<br> 比如用 python 命令進入 python 交互環境後，就可以用 Ctrl+d 退出 python 交互環境 <br>(4) Ctrl+Shift+c 和 Ctrl+Shift+v<br> 先用滑鼠選中需要複製的內容，然後用 Ctrl+Shift+c 進行複製，再用 Ctrl+Shift+v 進行貼上<br>(5) 圖形介面與純文字互動模式切換<br>Ctrl+Alt+F1-F6：純文字交互模式登入 tty1-tty6 終端機<br>Ctrl+Alt+F7：切回圖形介面</p>
+<h3 id="3- 關機與重啟命令"><a href="#3- 關機與重啟命令" class="headerlink" title="3. 關機與重啟命令"></a>3. 關機與重啟命令</h3><p>(1) 關機<br>$ sudo poweroff<br>(2) 重新啟動<br>$ sudo reboot</p>
+<h3 id="4- 終端命令列中一些常用符號瞭解"><a href="#4- 終端命令列中一些常用符號瞭解" class="headerlink" title="4. 終端命令列中一些常用符號瞭解"></a>4. 終端命令列中一些常用符號瞭解</h3><p>(1) 使用者家目錄：~<br>(2) 系統根目錄：/<br>(3) 一般使用者提示符：$<br>(4) root 使用者提示符：#</p>
+<h3 id="5- 目錄與文件相關命令"><a href="#5- 目錄與文件相關命令" class="headerlink" title="5. 目錄與文件相關命令"></a>5. 目錄與文件相關命令</h3><p>(1) 顯示檔案與目錄清單<br>$ ls<br>(2) 切換目錄（ 2）<br>$ cd &lt; 目標目錄 &gt;<br>(3) 顯示目前所在工作目錄<br>$ pwd<br>(4) 建立檔案<br>$ touch &lt; 檔名 &gt;<br>(5) 複製檔案<br>$ cp &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(6) 移動檔案<br>$ mv &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(7) 刪除檔案<br>$ rm &lt; 檔名 &gt;<br>(8) 顯示檔案內容<br>$ cat &lt; 檔名 &gt;<br>(9) 建立資料夾<br>$ mkdir &lt; 資料夾名 &gt;<br>(10) 刪除資料夾<br>$ rmdir &lt; 資料夾名 &gt;</p>
+<h3 id="6- 文件許可權"><a href="#6- 文件許可權" class="headerlink" title="6. 文件許可權"></a>6. 文件許可權</h3><p>(1) 修改檔案讀寫可執行權限，該權限由遮罩， 如 777 權限全開<br>$ sudo chmod 777 &lt; 檔名 &gt;<br>(2) 修改檔案擁有者<br>$ sudo chown &lt; 使用者名 &gt;：&lt; 組名 &gt; &lt; 檔名 &gt;</p>
+<h3 id="7- 檔案查找"><a href="#7- 檔案查找" class="headerlink" title="7. 檔案查找"></a>7. 檔案查找</h3><p>(1) locate<br>$ sudo updatedb<br>$ locate &lt; 待查找檔名 &gt;<br>(2) find<br>$ find -name &lt; 待查找檔名 &gt;</p>
+<h3 id="8- 網路相關命令"><a href="#8- 網路相關命令" class="headerlink" title="8. 網路相關命令"></a>8. 網路相關命令</h3><p>(1) 網路連線與否測試<br>$ ping &lt; 待測目標主機 IP 或域名 &gt;<br>(2) 本地 IP 位址檢視<br>$ ifconfig<br>(3) 遠端登入目標主機<br>$ ssh &lt; 目標主機使用者名 &gt;@&lt; 目標主機 IP 位址 &gt;</p>
+<h3 id="9- 系統軟體安裝與軟體運行方法"><a href="#9- 系統軟體安裝與軟體運行方法" class="headerlink" title="9. 系統軟體安裝與軟體運行方法"></a>9. 系統軟體安裝與軟體運行方法</h3><p>(1) 系統預設的套件安裝方法 apt-get<br>$ sudo apt-get update<br>$ sudo apt-get install &lt; 軟體套件名稱 &gt;<br>(2) source 方法執行系統文稿，例如執行使用者預設配置文件.bashrc<br>$ source ~/.bashrc<br>(3) ./ 方法執行一般可執行檔<br>$ ./&lt; 可执行文件 &gt;</p>
+<h3 id="10- 文字編輯器 -vim- 使用"><a href="#10- 文字編輯器 -vim- 使用" class="headerlink" title="10. 文字編輯器 vim 使用"></a>10. 文字編輯器 vim 使用 </h3><p>(1) vim 檢視檔案內容<br>$ vim &lt; 檔名 &gt;<br>(2) vim 進入編輯模式<br> 在 vim 查看檔案內容的介面中，按 i 鍵進入編輯模式，然後就可以編輯檔案的內容了 <br>(3) vim 退出編輯模式<br> 在 vim 編輯檔案內容的介面中，按 Esc 鍵退出編輯模式，然後就又回到查看檔案內容的介面了<br>(4) vim 編輯內容儲存<br>vim 在編輯完檔內容，退出到查看檔內容的介面後，可以輸入 “：w” 對編輯內容進行保存，也可以輸入 “：wq” 對編輯內容進行保存並退出 vim</p>
+]]></content>
+      <categories>
+        <category>激光slam小車</category>
+      </categories>
+      <tags>
+        <tag>slam</tag>
+        <tag>智能車</tag>
+        <tag>Linux</tag>
+        <tag>命令列指令</tag>
+      </tags>
   </entry>
   <entry>
     <title>slam 小車：(一) 前期準備 --1. 機器人架構設計流程</title>
@@ -963,32 +989,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>智能車</tag>
         <tag>機器人</tag>
         <tag>設計流程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
-    <url>/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
-<h3 id="一、Linux- 目錄結構"><a href="# 一、Linux- 目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構 </h3><h3 id="二、Linux- 常用指令"><a href="# 二、Linux- 常用指令" class="headerlink" title="二、Linux 常用指令"></a> 二、Linux 常用指令</h3><h4 id="1- 打开 -terminal"><a href="#1- 打开 -terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4><span id="more"></span>
-<p>(1) 右鍵 -&gt; 打開終端<br>(2) Ctrl+Alt+t 或者 Ctrl+Shift+t</p>
-<h4 id="2- 常用快速鍵"><a href="#2- 常用快速鍵" class="headerlink" title="2. 常用快速鍵"></a>2. 常用快速鍵 </h4><p>(1) tab<br> 一次 tab：命令補齊 <br> 兩次 tab：提示內容 <br>(2) Ctrl+c<br>Ctrl+c 中斷，強行打斷進程<br>(3) Ctrl+d<br>Ctrl+d 退出，相當於 exit 和 quit<br> 比如用 python 命令進入 python 交互環境後，就可以用 Ctrl+d 退出 python 交互環境 <br>(4) Ctrl+Shift+c 和 Ctrl+Shift+v<br> 先用滑鼠選中需要複製的內容，然後用 Ctrl+Shift+c 進行複製，再用 Ctrl+Shift+v 進行貼上<br>(5) 圖形介面與純文字互動模式切換<br>Ctrl+Alt+F1-F6：純文字交互模式登入 tty1-tty6 終端機<br>Ctrl+Alt+F7：切回圖形介面</p>
-<h3 id="3- 關機與重啟命令"><a href="#3- 關機與重啟命令" class="headerlink" title="3. 關機與重啟命令"></a>3. 關機與重啟命令</h3><p>(1) 關機<br>$ sudo poweroff<br>(2) 重新啟動<br>$ sudo reboot</p>
-<h3 id="4- 終端命令列中一些常用符號瞭解"><a href="#4- 終端命令列中一些常用符號瞭解" class="headerlink" title="4. 終端命令列中一些常用符號瞭解"></a>4. 終端命令列中一些常用符號瞭解</h3><p>(1) 使用者家目錄：~<br>(2) 系統根目錄：/<br>(3) 一般使用者提示符：$<br>(4) root 使用者提示符：#</p>
-<h3 id="5- 目錄與文件相關命令"><a href="#5- 目錄與文件相關命令" class="headerlink" title="5. 目錄與文件相關命令"></a>5. 目錄與文件相關命令</h3><p>(1) 顯示檔案與目錄清單<br>$ ls<br>(2) 切換目錄（ 2）<br>$ cd &lt; 目標目錄 &gt;<br>(3) 顯示目前所在工作目錄<br>$ pwd<br>(4) 建立檔案<br>$ touch &lt; 檔名 &gt;<br>(5) 複製檔案<br>$ cp &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(6) 移動檔案<br>$ mv &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(7) 刪除檔案<br>$ rm &lt; 檔名 &gt;<br>(8) 顯示檔案內容<br>$ cat &lt; 檔名 &gt;<br>(9) 建立資料夾<br>$ mkdir &lt; 資料夾名 &gt;<br>(10) 刪除資料夾<br>$ rmdir &lt; 資料夾名 &gt;</p>
-<h3 id="6- 文件許可權"><a href="#6- 文件許可權" class="headerlink" title="6. 文件許可權"></a>6. 文件許可權</h3><p>(1) 修改檔案讀寫可執行權限，該權限由遮罩， 如 777 權限全開<br>$ sudo chmod 777 &lt; 檔名 &gt;<br>(2) 修改檔案擁有者<br>$ sudo chown &lt; 使用者名 &gt;：&lt; 組名 &gt; &lt; 檔名 &gt;</p>
-<h3 id="7- 檔案查找"><a href="#7- 檔案查找" class="headerlink" title="7. 檔案查找"></a>7. 檔案查找</h3><p>(1) locate<br>$ sudo updatedb<br>$ locate &lt; 待查找檔名 &gt;<br>(2) find<br>$ find -name &lt; 待查找檔名 &gt;</p>
-<h3 id="8- 網路相關命令"><a href="#8- 網路相關命令" class="headerlink" title="8. 網路相關命令"></a>8. 網路相關命令</h3><p>(1) 網路連線與否測試<br>$ ping &lt; 待測目標主機 IP 或域名 &gt;<br>(2) 本地 IP 位址檢視<br>$ ifconfig<br>(3) 遠端登入目標主機<br>$ ssh &lt; 目標主機使用者名 &gt;@&lt; 目標主機 IP 位址 &gt;</p>
-<h3 id="9- 系統軟體安裝與軟體運行方法"><a href="#9- 系統軟體安裝與軟體運行方法" class="headerlink" title="9. 系統軟體安裝與軟體運行方法"></a>9. 系統軟體安裝與軟體運行方法</h3><p>(1) 系統預設的套件安裝方法 apt-get<br>$ sudo apt-get update<br>$ sudo apt-get install &lt; 軟體套件名稱 &gt;<br>(2) source 方法執行系統文稿，例如執行使用者預設配置文件.bashrc<br>$ source ~/.bashrc<br>(3) ./ 方法執行一般可執行檔<br>$ ./&lt; 可执行文件 &gt;</p>
-<h3 id="10- 文字編輯器 -vim- 使用"><a href="#10- 文字編輯器 -vim- 使用" class="headerlink" title="10. 文字編輯器 vim 使用"></a>10. 文字編輯器 vim 使用 </h3><p>(1) vim 檢視檔案內容<br>$ vim &lt; 檔名 &gt;<br>(2) vim 進入編輯模式<br> 在 vim 查看檔案內容的介面中，按 i 鍵進入編輯模式，然後就可以編輯檔案的內容了 <br>(3) vim 退出編輯模式<br> 在 vim 編輯檔案內容的介面中，按 Esc 鍵退出編輯模式，然後就又回到查看檔案內容的介面了<br>(4) vim 編輯內容儲存<br>vim 在編輯完檔內容，退出到查看檔內容的介面後，可以輸入 “：w” 對編輯內容進行保存，也可以輸入 “：wq” 對編輯內容進行保存並退出 vim</p>
-]]></content>
-      <categories>
-        <category>激光slam小車</category>
-      </categories>
-      <tags>
-        <tag>slam</tag>
-        <tag>智能車</tag>
-        <tag>Linux</tag>
-        <tag>命令列指令</tag>
       </tags>
   </entry>
   <entry>
@@ -1092,17 +1092,17 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（3）模拟调制技术</title>
-    <url>/2020/09/17/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%883%EF%BC%89%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF/</url>
-    <content><![CDATA[<h3 id="一、调制的概念和幅度调制"><a href="# 一、调制的概念和幅度调制" class="headerlink" title="一、调制的概念和幅度调制"></a>一、调制的概念和幅度调制 </h3><h3 id="二、幅度调制系统的抗噪声性能"><a href="# 二、幅度调制系统的抗噪声性能" class="headerlink" title="二、幅度调制系统的抗噪声性能"></a> 二、幅度调制系统的抗噪声性能 </h3><h3 id="三、模拟角度调制"><a href="# 三、模拟角度调制" class="headerlink" title="三、模拟角度调制"></a> 三、模拟角度调制 </h3><h3 id="四、调频系统的抗噪声性能"><a href="# 四、调频系统的抗噪声性能" class="headerlink" title="四、调频系统的抗噪声性能"></a> 四、调频系统的抗噪声性能 </h3><h3 id="五、频分复用和模拟调制技术的应用"><a href="# 五、频分复用和模拟调制技术的应用" class="headerlink" title="五、频分复用和模拟调制技术的应用"></a> 五、频分复用和模拟调制技术的应用</h3>]]></content>
+    <title>通信原理 --（2）信道</title>
+    <url>/2020/09/14/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%882%EF%BC%89%E4%BF%A1%E9%81%93/</url>
+    <content><![CDATA[<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道 </h3><h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a> 二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（2）信道</title>
-    <url>/2020/09/14/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%882%EF%BC%89%E4%BF%A1%E9%81%93/</url>
-    <content><![CDATA[<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道 </h3><h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a> 二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
+    <title>通信原理 --（3）模拟调制技术</title>
+    <url>/2020/09/17/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%883%EF%BC%89%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF/</url>
+    <content><![CDATA[<h3 id="一、调制的概念和幅度调制"><a href="# 一、调制的概念和幅度调制" class="headerlink" title="一、调制的概念和幅度调制"></a>一、调制的概念和幅度调制 </h3><h3 id="二、幅度调制系统的抗噪声性能"><a href="# 二、幅度调制系统的抗噪声性能" class="headerlink" title="二、幅度调制系统的抗噪声性能"></a> 二、幅度调制系统的抗噪声性能 </h3><h3 id="三、模拟角度调制"><a href="# 三、模拟角度调制" class="headerlink" title="三、模拟角度调制"></a> 三、模拟角度调制 </h3><h3 id="四、调频系统的抗噪声性能"><a href="# 四、调频系统的抗噪声性能" class="headerlink" title="四、调频系统的抗噪声性能"></a> 四、调频系统的抗噪声性能 </h3><h3 id="五、频分复用和模拟调制技术的应用"><a href="# 五、频分复用和模拟调制技术的应用" class="headerlink" title="五、频分复用和模拟调制技术的应用"></a> 五、频分复用和模拟调制技术的应用</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -1124,17 +1124,17 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（7）最佳接收</title>
-    <url>/2020/10/15/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%887%EF%BC%89%E6%9C%80%E4%BD%B3%E6%8E%A5%E6%94%B6/</url>
-    <content><![CDATA[<h3 id="一、不同类型数字信号的最佳接收及其误码性能"><a href="# 一、不同类型数字信号的最佳接收及其误码性能" class="headerlink" title="一、不同类型数字信号的最佳接收及其误码性能"></a>一、不同类型数字信号的最佳接收及其误码性能 </h3><h3 id="二、数字信号的匹配滤波接收"><a href="# 二、数字信号的匹配滤波接收" class="headerlink" title="二、数字信号的匹配滤波接收"></a> 二、数字信号的匹配滤波接收 </h3><h3 id="三、最佳基带传输系统"><a href="# 三、最佳基带传输系统" class="headerlink" title="三、最佳基带传输系统"></a> 三、最佳基带传输系统</h3>]]></content>
+    <title>通信原理 --（6）数字频带传输</title>
+    <url>/2020/10/03/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%886%EF%BC%89%E6%95%B0%E5%AD%97%E9%A2%91%E5%B8%A6%E4%BC%A0%E8%BE%93/</url>
+    <content><![CDATA[<h3 id="一、二进制振幅键控 -2ASK- 和二进制频移键控 -2FSK"><a href="# 一、二进制振幅键控 -2ASK- 和二进制频移键控 -2FSK" class="headerlink" title="一、二进制振幅键控 2ASK 和二进制频移键控 2FSK"></a>一、二进制振幅键控 2ASK 和二进制频移键控 2FSK</h3><h3 id="二、二进制相移键控 -2PSK- 和差分相移键控"><a href="# 二、二进制相移键控 -2PSK- 和差分相移键控" class="headerlink" title="二、二进制相移键控 2PSK 和差分相移键控"></a>二、二进制相移键控 2PSK 和差分相移键控 </h3><h3 id="三、多进制数字调制"><a href="# 三、多进制数字调制" class="headerlink" title="三、多进制数字调制"></a> 三、多进制数字调制 </h3><h3 id="四、正交幅度调制 -QAM"><a href="# 四、正交幅度调制 -QAM" class="headerlink" title="四、正交幅度调制 QAM"></a> 四、正交幅度调制 QAM</h3><h3 id="五、最小频移键控 -MSK"><a href="# 五、最小频移键控 -MSK" class="headerlink" title="五、最小频移键控 MSK"></a>五、最小频移键控 MSK</h3><h3 id="六、正交频分复用 -OFDM"><a href="# 六、正交频分复用 -OFDM" class="headerlink" title="六、正交频分复用 OFDM"></a>六、正交频分复用 OFDM</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（6）数字频带传输</title>
-    <url>/2020/10/03/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%886%EF%BC%89%E6%95%B0%E5%AD%97%E9%A2%91%E5%B8%A6%E4%BC%A0%E8%BE%93/</url>
-    <content><![CDATA[<h3 id="一、二进制振幅键控 -2ASK- 和二进制频移键控 -2FSK"><a href="# 一、二进制振幅键控 -2ASK- 和二进制频移键控 -2FSK" class="headerlink" title="一、二进制振幅键控 2ASK 和二进制频移键控 2FSK"></a>一、二进制振幅键控 2ASK 和二进制频移键控 2FSK</h3><h3 id="二、二进制相移键控 -2PSK- 和差分相移键控"><a href="# 二、二进制相移键控 -2PSK- 和差分相移键控" class="headerlink" title="二、二进制相移键控 2PSK 和差分相移键控"></a>二、二进制相移键控 2PSK 和差分相移键控 </h3><h3 id="三、多进制数字调制"><a href="# 三、多进制数字调制" class="headerlink" title="三、多进制数字调制"></a> 三、多进制数字调制 </h3><h3 id="四、正交幅度调制 -QAM"><a href="# 四、正交幅度调制 -QAM" class="headerlink" title="四、正交幅度调制 QAM"></a> 四、正交幅度调制 QAM</h3><h3 id="五、最小频移键控 -MSK"><a href="# 五、最小频移键控 -MSK" class="headerlink" title="五、最小频移键控 MSK"></a>五、最小频移键控 MSK</h3><h3 id="六、正交频分复用 -OFDM"><a href="# 六、正交频分复用 -OFDM" class="headerlink" title="六、正交频分复用 OFDM"></a>六、正交频分复用 OFDM</h3>]]></content>
+    <title>通信原理 --（7）最佳接收</title>
+    <url>/2020/10/15/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%887%EF%BC%89%E6%9C%80%E4%BD%B3%E6%8E%A5%E6%94%B6/</url>
+    <content><![CDATA[<h3 id="一、不同类型数字信号的最佳接收及其误码性能"><a href="# 一、不同类型数字信号的最佳接收及其误码性能" class="headerlink" title="一、不同类型数字信号的最佳接收及其误码性能"></a>一、不同类型数字信号的最佳接收及其误码性能 </h3><h3 id="二、数字信号的匹配滤波接收"><a href="# 二、数字信号的匹配滤波接收" class="headerlink" title="二、数字信号的匹配滤波接收"></a> 二、数字信号的匹配滤波接收 </h3><h3 id="三、最佳基带传输系统"><a href="# 三、最佳基带传输系统" class="headerlink" title="三、最佳基带传输系统"></a> 三、最佳基带传输系统</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>

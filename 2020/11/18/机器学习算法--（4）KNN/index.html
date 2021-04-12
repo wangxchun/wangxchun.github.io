@@ -27,17 +27,17 @@
 <meta name="description" content="一、KNN 概念  二、KNN 的算法实践12345678910111213141516171819202122232425def knn (x_test, x_data, y_data, k):    # 计算样本数量    x_data_size &#x3D; x_data.shape [0]    # 复制 x_test    np.tile (x_test, (x_data_size,1))">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习算法 --（4）KNN">
-<meta property="og:url" content="https://wangxchun.github.io/2020/10/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/index.html">
+<meta property="og:url" content="https://wangxchun.github.io/2020/11/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/index.html">
 <meta property="og:site_name" content="Chris自强不息">
 <meta property="og:description" content="一、KNN 概念  二、KNN 的算法实践12345678910111213141516171819202122232425def knn (x_test, x_data, y_data, k):    # 计算样本数量    x_data_size &#x3D; x_data.shape [0]    # 复制 x_test    np.tile (x_test, (x_data_size,1))">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-10-18T07:32:04.000Z">
-<meta property="article:modified_time" content="2021-04-12T15:29:38.273Z">
+<meta property="article:published_time" content="2020-11-18T07:32:04.000Z">
+<meta property="article:modified_time" content="2021-04-12T15:37:43.515Z">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://wangxchun.github.io/2020/10/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/">
+<link rel="canonical" href="https://wangxchun.github.io/2020/11/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/">
 
 
 <script class="page-configurations">
@@ -237,7 +237,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/10/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/11/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -261,14 +261,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2020-10-18 15:32:04" itemprop="dateCreated datePublished" datetime="2020-10-18T15:32:04+08:00">2020-10-18</time>
+      <time title="創建時間：2020-11-18 15:32:04" itemprop="dateCreated datePublished" datetime="2020-11-18T15:32:04+08:00">2020-11-18</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-12 23:29:38" itemprop="dateModified" datetime="2021-04-12T23:29:38+08:00">2021-04-12</time>
+        <time title="修改時間：2021-04-12 23:37:43" itemprop="dateModified" datetime="2021-04-12T23:37:43+08:00">2021-04-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,13 +304,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/10/15/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%887%EF%BC%89%E6%9C%80%E4%BD%B3%E6%8E%A5%E6%94%B6/" rel="prev" title="通信原理 --（7）最佳接收">
-                  <i class="fa fa-chevron-left"></i> 通信原理 --（7）最佳接收
+                <a href="/2020/11/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="prev" title="机器学习算法 --（3）神经网络">
+                  <i class="fa fa-chevron-left"></i> 机器学习算法 --（3）神经网络
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/10/21/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%888%EF%BC%89%E5%90%8C%E6%AD%A5/" rel="next" title="通信原理 --（8）同步">
-                  通信原理 --（8）同步 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab1/" rel="next" title="计算机网络 lab1">
+                  计算机网络 lab1 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

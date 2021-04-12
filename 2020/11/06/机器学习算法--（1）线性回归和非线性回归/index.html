@@ -27,25 +27,25 @@
 <meta name="description" content="前言1. 数据挖掘和机器学习的关系2. 训练数据 vs 验证数据 vs 测试数据3. 监督学习 vs 无监督学习 vs 半监督学习4. 回归 vs 分类 vs 聚类一、一元线性回归概念回归：高尔顿提出回归分析：建立方程模拟两个或多个变量之间如何关联一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟一元线性回归的模型：$h_\theta (x) &#x3D; \theta_0 + \theta_1x$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习算法 --（1）线性回归和非线性回归">
-<meta property="og:url" content="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/index.html">
+<meta property="og:url" content="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/index.html">
 <meta property="og:site_name" content="Chris自强不息">
 <meta property="og:description" content="前言1. 数据挖掘和机器学习的关系2. 训练数据 vs 验证数据 vs 测试数据3. 监督学习 vs 无监督学习 vs 半监督学习4. 回归 vs 分类 vs 聚类一、一元线性回归概念回归：高尔顿提出回归分析：建立方程模拟两个或多个变量之间如何关联一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟一元线性回归的模型：$h_\theta (x) &#x3D; \theta_0 + \theta_1x$">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo2.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo3.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo4.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo5.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo6.jpg">
-<meta property="article:published_time" content="2020-10-06T02:42:55.000Z">
-<meta property="article:modified_time" content="2021-04-05T08:01:35.746Z">
+<meta property="og:image" content="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo2.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo3.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo4.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo5.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo6.jpg">
+<meta property="article:published_time" content="2020-11-06T02:42:55.000Z">
+<meta property="article:modified_time" content="2021-04-12T15:37:31.972Z">
 <meta property="article:author" content="Chris Wang">
 <meta property="article:tag" content="一元线性回归">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg">
+<meta name="twitter:image" content="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg">
 
 
-<link rel="canonical" href="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
+<link rel="canonical" href="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
 
 
 <script class="page-configurations">
@@ -245,7 +245,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -269,14 +269,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2020-10-06 10:42:55" itemprop="dateCreated datePublished" datetime="2020-10-06T10:42:55+08:00">2020-10-06</time>
+      <time title="創建時間：2020-11-06 10:42:55" itemprop="dateCreated datePublished" datetime="2020-11-06T10:42:55+08:00">2020-11-06</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-05 16:01:35" itemprop="dateModified" datetime="2021-04-05T16:01:35+08:00">2021-04-05</time>
+        <time title="修改時間：2021-04-12 23:37:31" itemprop="dateModified" datetime="2021-04-12T23:37:31+08:00">2021-04-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -299,7 +299,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h3 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h3><h4 id="1- 数据挖掘和机器学习的关系"><a href="#1- 数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2- 训练数据 -vs- 验证数据 -vs- 测试数据"><a href="#2- 训练数据 -vs- 验证数据 -vs- 测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3- 监督学习 -vs- 无监督学习 -vs- 半监督学习"><a href="#3- 监督学习 -vs- 无监督学习 -vs- 半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4- 回归 -vs- 分类 -vs- 聚类"><a href="#4- 回归 -vs- 分类 -vs- 聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="# 一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a> 一、一元线性回归概念 </h3><p> 回归：高尔顿提出 <br> 回归分析：建立方程模拟两个或多个变量之间如何关联 <br> 一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟 <br> 一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率<br><span id="more"></span></p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p>$\displaystyle J (\theta_0,\theta_1) = {1 \over 2m} \sum_{i=0}^m (h_\theta (x_i) - y_i)^2$<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo1.jpg" alt><br> 自变量是 $\theta_0$ 和 $\theta_1$，应变量是代价函数 $h_\theta (x)$，<br>本来是一个三维的函数图像，Z 轴是但是这里用等高线表示。<br>Q：如何寻找使得代价函数最小的 $\theta_0$ 和 $\theta_1$，后面会讲解。</p>
 <h3 id="三、相关系数和决定系数"><a href="# 三、相关系数和决定系数" class="headerlink" title="三、相关系数和决定系数"></a>三、相关系数和决定系数 </h3><h4 id="相关系数：衡量线性相关性的强弱"><a href="# 相关系数：衡量线性相关性的强弱" class="headerlink" title="相关系数：衡量线性相关性的强弱"></a> 相关系数：衡量线性相关性的强弱</h4><p>$\displaystyle r_{xy} = {{\sum {(X_i - \bar X)(Y_i - \bar Y)}} \over {\sqrt {\sum {(X_i - \bar X)^2 (Y_i - \bar Y)^2}}} }$  </p>
 <h4 id="决定系数"><a href="# 决定系数" class="headerlink" title="决定系数"></a>决定系数 </h4><p> 总平方和（SST）：$\sum_{i=0}^n (y_i - \bar y)^2$<br>残差平方和（SSE）：$\sum_{i=0}^n (y_i - \hat y)^2$<br>回归平方和（SSR）：$\sum_{i=0}^n (\hat y - \bar y)^2$<br>它们三者的关系是：$SST = SSE + SSR$<br>决定系数：$\displaystyle R^2 = {SSR \over SST} = 1 - {SSE \over SST}$</p>
 <h3 id="四、梯度下降法"><a href="# 四、梯度下降法" class="headerlink" title="四、梯度下降法"></a>四、梯度下降法 </h3><h4 id="概念"><a href="# 概念" class="headerlink" title="概念"></a> 概念 </h4><p> 缺点：初始值的选取会影响到最后的结果，只能找到局部最优解<br>(凸函数的局部最值就是全局最值)<br>repeat until convergence<br>{<br>    $\displaystyle \qquad\qquad\theta_j := \theta_j - \alpha {\partial \over \partial\theta_j} J (\theta_0,\theta_1)$ $\quad (for\quad j = 0 \quad and \quad j = 1)$<br>}</p>
@@ -342,17 +342,17 @@
 <h4 id="数据归一化"><a href="# 数据归一化" class="headerlink" title="数据归一化"></a>数据归一化 </h4><p> 转化成 $(0,1)$ 之间：$newValue = \displaystyle {oldValue - min \over max - min}$</p>
 <p>转化成 $(-1,1)$ 之间：$newValue = (\displaystyle {oldValue - min \over max - min}-0.5) \times 2$</p>
 <h4 id="数据标准化"><a href="# 数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h4><p>$newValue = \displaystyle {oldValue - u \over s}$ 其中 u 为数据的平均值，s 为数据的方差</p>
-<h3 id="十、交叉验证法"><a href="# 十、交叉验证法" class="headerlink" title="十、交叉验证法"></a>十、交叉验证法 </h3><p> 若样本数据较少时，可以一部分作为训练集，一部分作为测试集，没有验证集。<br>例如有 100 组数据，可以 80 组作为训练集，20 组作为测试集。<br>但是当样本更少，8/2 拆分也不适合的时候，就可以使用交叉验证法<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo2.jpg" alt></p>
-<h3 id="十一、过拟合与正则化"><a href="# 十一、过拟合与正则化" class="headerlink" title="十一、过拟合与正则化"></a>十一、过拟合与正则化 </h3><h4 id="过拟合"><a href="# 过拟合" class="headerlink" title="过拟合"></a> 过拟合</h4><p><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo3.jpg" alt></p>
+<h3 id="十、交叉验证法"><a href="# 十、交叉验证法" class="headerlink" title="十、交叉验证法"></a>十、交叉验证法 </h3><p> 若样本数据较少时，可以一部分作为训练集，一部分作为测试集，没有验证集。<br>例如有 100 组数据，可以 80 组作为训练集，20 组作为测试集。<br>但是当样本更少，8/2 拆分也不适合的时候，就可以使用交叉验证法<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo2.jpg" alt></p>
+<h3 id="十一、过拟合与正则化"><a href="# 十一、过拟合与正则化" class="headerlink" title="十一、过拟合与正则化"></a>十一、过拟合与正则化 </h3><h4 id="过拟合"><a href="# 过拟合" class="headerlink" title="过拟合"></a> 过拟合</h4><p><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo3.jpg" alt></p>
 <h4 id="防止过拟合："><a href="# 防止过拟合：" class="headerlink" title="防止过拟合："></a>防止过拟合：</h4><h5 id="1- 减少特征"><a href="#1- 减少特征" class="headerlink" title="1. 减少特征"></a>1. 减少特征 </h5><h5 id="2- 增加数据量"><a href="#2- 增加数据量" class="headerlink" title="2. 增加数据量"></a>2. 增加数据量</h5><h5 id="3- 正则化"><a href="#3- 正则化" class="headerlink" title="3. 正则化"></a>3. 正则化</h5><h5 id="4- 深度学习中有其他防止过拟合的方式"><a href="#4- 深度学习中有其他防止过拟合的方式" class="headerlink" title="4. 深度学习中有其他防止过拟合的方式"></a>4. 深度学习中有其他防止过拟合的方式</h5><h4 id="正则化"><a href="# 正则化" class="headerlink" title="正则化"></a> 正则化 </h4><h5 id="L1- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j"><a href="#L1- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j" class="headerlink" title="L1 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$"></a>L1 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$</h5><h5 id="L2- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2"><a href="#L2- 正则化：-displaystyle-J-theta-1-over-m-sum-i-0-m-h-theta-x-i-y-i-2-lambda-sum-i-0-n-theta-j-2" class="headerlink" title="L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$"></a>L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$</h5><h3 id="十二、岭回归"><a href="# 十二、岭回归" class="headerlink" title="十二、岭回归"></a> 十二、岭回归 </h3><h4 id="概念 -2"><a href="# 概念 -2" class="headerlink" title="概念"></a> 概念 </h4><p> 在使用标准方程解多元线性回归的时候，$w=(X^TX)^{-1} X^Ty$<br>如果数据的特征比样本点还多，数据特征 $n$ 个 ，样本个数 $m$ 个，如果 $n&gt;m$<br>，则计算 $(X^TX)^{-1}$ 时会出错。因为 $(X^TX)$ 不是满秩矩阵，所以不可逆。<br>为了解决这个问题，统计学家引入了岭回归的概念。<br>$w=(X^TX+\lambda I)^{-1} X^Ty$<br>$\lambda$ 为岭系数，$I$ 为单位矩阵</p>
 <h4 id="推导"><a href="# 推导" class="headerlink" title="推导"></a>推导 </h4><p> 岭回归的代价函数是 L2 正则化：$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n \theta_j^2$<br>$\displaystyle J (\theta)={1 \over 2} (w^TX^TXw - y^TXw - w^TX^Ty + y^Ty) + \lambda \theta^T\theta$</p>
 <p>$\displaystyle {\partial J (\theta) \over \partial \theta}=0$</p>
 <p>$X^TX\theta - X^TY + \lambda \theta=0$<br>$\theta=(X^TX+\lambda I)^{-1} X^TY$</p>
 <h4 id="用处"><a href="# 用处" class="headerlink" title="用处"></a>用处 </h4><p> 岭回归最早是用来处理特征数多于样本的情况，现在也用于在估计中加入偏差，从而得到更好的估计。<br>同时也可以解决多重共线性的问题。<br>岭回归是一种有偏估计。</p>
-<h4 id="lambda- 的选择"><a href="#lambda- 的选择" class="headerlink" title="\lambda 的选择"></a>\lambda 的选择 </h4><p> 选择 \lambda 值，使得 <br>(1) 各个回归系数的岭估计基本稳定<br>(2) 残差平方和增大不太多<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo4.jpg" alt><br> 横轴是 \lambda 值，纵轴是参数 \theta 的取值范围</p>
+<h4 id="lambda- 的选择"><a href="#lambda- 的选择" class="headerlink" title="\lambda 的选择"></a>\lambda 的选择 </h4><p> 选择 \lambda 值，使得 <br>(1) 各个回归系数的岭估计基本稳定<br>(2) 残差平方和增大不太多<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo4.jpg" alt><br> 横轴是 \lambda 值，纵轴是参数 \theta 的取值范围</p>
 <h3 id><a href="#" class="headerlink" title="#"></a>#</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建模型</span></span><br><span class="line"><span class="comment"># 生成 50 个值（默认是 50 个值）</span></span><br><span class="line">alphas_to_test = np.linspace (<span class="number">0.001</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment"># 创建模型，保存误差值</span></span><br><span class="line">model = linear_model.RidgeCV (alphas=alphas_to_test, store_cv_values=<span class="literal">True</span>)</span><br><span class="line">//CV 是交叉验证法的意思，可是设置 alphas</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 岭系数</span></span><br><span class="line"><span class="built_in">print</span> (model.alpha_)</span><br><span class="line"><span class="comment"># loss 值</span></span><br><span class="line"><span class="built_in">print</span> (model.cv_values_.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line"><span class="comment"># 岭系数跟 loss 值的关系</span></span><br><span class="line">plt.plot (alphas_to_test, model.cv_values_.mean (axis=<span class="number">0</span>))</span><br><span class="line"><span class="comment"># 选取的岭系数值的位置</span></span><br><span class="line">plt.plot (model.alpha_, <span class="built_in">min</span> (model.cv_values_.mean (axis=<span class="number">0</span>)),<span class="string">&#x27;ro&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
 <h3 id="十三、LASSO- 算法"><a href="# 十三、LASSO- 算法" class="headerlink" title="十三、LASSO 算法"></a>十三、LASSO 算法 </h3><h4 id="概念 -3"><a href="# 概念 -3" class="headerlink" title="概念"></a> 概念 </h4><p> 通过构造一个一阶惩罚函数获得一个精炼的模型；通过最终确定一些指标（变量）的系数为零（岭回归估计系数等于 0 的机会微乎其微，造成筛选变量困难），解释力很强。<br>擅长处理具有多重共线性的数据，与岭回归一样是有偏估计 。</p>
-<h4 id="LASSO- 的代价函数"><a href="#LASSO- 的代价函数" class="headerlink" title="LASSO 的代价函数"></a>LASSO 的代价函数 </h4><p>$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$<br>$\lambda$ 的值可以用于限制 $\sum_{i=0}^n |\theta_j| \leq t$<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo5.jpg" alt><br> 一圈圈椭圆是 loss 函数的等高线，最中间的 $\beta$ 值使得 loss 函数最小 <br> 有图中可以观察出，lasso 算法容易使得某些 $\beta$ 取值为零<br><img src="/2020/10/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo6.jpg" alt></p>
+<h4 id="LASSO- 的代价函数"><a href="#LASSO- 的代价函数" class="headerlink" title="LASSO 的代价函数"></a>LASSO 的代价函数 </h4><p>$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$<br>$\lambda$ 的值可以用于限制 $\sum_{i=0}^n |\theta_j| \leq t$<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo5.jpg" alt><br> 一圈圈椭圆是 loss 函数的等高线，最中间的 $\beta$ 值使得 loss 函数最小 <br> 有图中可以观察出，lasso 算法容易使得某些 $\beta$ 取值为零<br><img src="/2020/11/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/photo6.jpg" alt></p>
 <h3 id="十四、弹性网"><a href="# 十四、弹性网" class="headerlink" title="十四、弹性网"></a>十四、弹性网 </h3><h4 id="代价函数"><a href="# 代价函数" class="headerlink" title="代价函数"></a> 代价函数</h4><p>$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|^q$</p>
 
     </div>
@@ -370,12 +370,12 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/10/03/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%886%EF%BC%89%E6%95%B0%E5%AD%97%E9%A2%91%E5%B8%A6%E4%BC%A0%E8%BE%93/" rel="prev" title="通信原理 --（6）数字频带传输">
-                  <i class="fa fa-chevron-left"></i> 通信原理 --（6）数字频带传输
+                <a href="/2020/10/21/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%888%EF%BC%89%E5%90%8C%E6%AD%A5/" rel="prev" title="通信原理 --（8）同步">
+                  <i class="fa fa-chevron-left"></i> 通信原理 --（8）同步
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/10/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" rel="next" title="机器学习算法 --（2）逻辑回归">
+                <a href="/2020/11/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" rel="next" title="机器学习算法 --（2）逻辑回归">
                   机器学习算法 --（2）逻辑回归 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
