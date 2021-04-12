@@ -25,17 +25,19 @@
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
 <meta name="description" content="機器視覺 &#x2F; 機器學習 &#x2F; C++">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chris自强不息">
-<meta property="og:url" content="https://wangxchun.github.io/archives/2021/04/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KNN">
+<meta property="og:url" content="https://wangxchun.github.io/2021/04/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/index.html">
 <meta property="og:site_name" content="Chris自强不息">
 <meta property="og:description" content="機器視覺 &#x2F; 機器學習 &#x2F; C++">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-04-12T07:32:04.000Z">
+<meta property="article:modified_time" content="2021-04-12T07:32:04.737Z">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://wangxchun.github.io/archives/2021/04/">
+<link rel="canonical" href="https://wangxchun.github.io/2021/04/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/">
 
 
 <script class="page-configurations">
@@ -43,11 +45,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-TW'
   };
 </script>
-<title>歸檔 | Chris自强不息</title>
+<title>KNN | Chris自强不息</title>
   
 
 
@@ -223,233 +225,82 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          KNN
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-04-12 15:32:04" itemprop="dateCreated datePublished" datetime="2021-04-12T15:32:04+08:00">2021-04-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
         
-        <span class="collection-header">好! 目前共有 58 篇文章。 繼續努力。</span>
-      </div>
-
-      
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-12T15:32:04+08:00"
-              content="2021-04-12">
-          04-12
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%884%EF%BC%89KNN/" itemprop="url">
-            <span itemprop="name">KNN</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%888%EF%BC%89%E5%90%8C%E6%AD%A5/" rel="prev" title="通信原理 --（8）同步">
+                  <i class="fa fa-chevron-left"></i> 通信原理 --（8）同步
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-09T09:21:37+08:00"
-              content="2021-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%888%EF%BC%89%E5%90%8C%E6%AD%A5/" itemprop="url">
-            <span itemprop="name">通信原理 --（8）同步</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-09T09:20:39+08:00"
-              content="2021-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%887%EF%BC%89%E6%9C%80%E4%BD%B3%E6%8E%A5%E6%94%B6/" itemprop="url">
-            <span itemprop="name">通信原理 --（7）最佳接收</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-09T09:14:54+08:00"
-              content="2021-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%886%EF%BC%89%E6%95%B0%E5%AD%97%E9%A2%91%E5%B8%A6%E4%BC%A0%E8%BE%93/" itemprop="url">
-            <span itemprop="name">通信原理 --（6）数字频带传输</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-09T09:11:45+08:00"
-              content="2021-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%885%EF%BC%89%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93/" itemprop="url">
-            <span itemprop="name">通信原理 --（5）数字基带传输</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-09T09:08:58+08:00"
-              content="2021-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%884%EF%BC%89%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7%E6%95%B0%E5%AD%97%E5%8C%96/" itemprop="url">
-            <span itemprop="name">通信原理 --（4）模拟信号数字化</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-09T09:05:38+08:00"
-              content="2021-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%883%EF%BC%89%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF/" itemprop="url">
-            <span itemprop="name">通信原理 --（3）模拟调制技术</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-09T09:02:28+08:00"
-              content="2021-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%882%EF%BC%89%E4%BF%A1%E9%81%93/" itemprop="url">
-            <span itemprop="name">通信原理 --（2）信道</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-09T09:00:21+08:00"
-              content="2021-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/09/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%881%EF%BC%89%E7%BB%AA%E8%AE%BA/" itemprop="url">
-            <span itemprop="name">通信原理 --（1）绪论</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-08T20:53:15+08:00"
-              content="2021-04-08">
-          04-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/08/%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8/" itemprop="url">
-            <span itemprop="name">刷题检讨</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2021/04/page/2/">2</a><a class="extend next" rel="next" href="/archives/2021/04/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
-  </nav>
+
+
+
 
 
 <script>
