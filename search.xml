@@ -96,7 +96,7 @@
 <h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
 ]]></content>
       <categories>
-        <category>C++學習</category>
+        <category>C++ learn</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -314,7 +314,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="解決方法"><a href="# 解決方法" class="headerlink" title="解決方法"></a>解決方法</h4><p>(1) 先在 dev 的 [工具] 里找到 [編譯選項]<br>(2) 勾選 [編譯時加入以下命令] 欄位並填入 - std=c++11</p>
 ]]></content>
       <categories>
-        <category>C++學習</category>
+        <category>C++ learn</category>
       </categories>
       <tags>
         <tag>Dev C++</tag>
