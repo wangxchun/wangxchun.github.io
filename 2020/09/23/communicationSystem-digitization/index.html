@@ -24,15 +24,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="一、模拟信号的抽样  二、抽样信号的量化  三、脉冲编码调制  四、差分脉码调制与增量调制  五、时分复用">
+<meta name="description" content="通信原理 —（1）绪论  通信原理 —（2）信道  通信原理 —（3）模拟调制技术  通信原理 —（4）模拟信号数字化  通信原理 —（5）数字基带传输  通信原理 —（6）数字频带传输  通信原理 —（7）最佳接收  通信原理 —（8）同步 一、模拟信号的抽样  二、抽样信号的量化  三、脉冲编码调制  四、差分脉码调制与增量调制  五、时分复用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通信原理 --（4）模拟信号数字化">
 <meta property="og:url" content="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/index.html">
 <meta property="og:site_name" content="Chris自强不息">
-<meta property="og:description" content="一、模拟信号的抽样  二、抽样信号的量化  三、脉冲编码调制  四、差分脉码调制与增量调制  五、时分复用">
+<meta property="og:description" content="通信原理 —（1）绪论  通信原理 —（2）信道  通信原理 —（3）模拟调制技术  通信原理 —（4）模拟信号数字化  通信原理 —（5）数字基带传输  通信原理 —（6）数字频带传输  通信原理 —（7）最佳接收  通信原理 —（8）同步 一、模拟信号的抽样  二、抽样信号的量化  三、脉冲编码调制  四、差分脉码调制与增量调制  五、时分复用">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-09-23T01:08:58.000Z">
-<meta property="article:modified_time" content="2021-04-13T02:18:09.060Z">
+<meta property="article:modified_time" content="2021-04-13T07:19:11.327Z">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
 
@@ -268,7 +268,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 10:18:09" itemprop="dateModified" datetime="2021-04-13T10:18:09+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 15:19:11" itemprop="dateModified" datetime="2021-04-13T15:19:11+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,7 +290,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="一、模拟信号的抽样"><a href="# 一、模拟信号的抽样" class="headerlink" title="一、模拟信号的抽样"></a>一、模拟信号的抽样 </h3><h3 id="二、抽样信号的量化"><a href="# 二、抽样信号的量化" class="headerlink" title="二、抽样信号的量化"></a> 二、抽样信号的量化 </h3><h3 id="三、脉冲编码调制"><a href="# 三、脉冲编码调制" class="headerlink" title="三、脉冲编码调制"></a> 三、脉冲编码调制 </h3><h3 id="四、差分脉码调制与增量调制"><a href="# 四、差分脉码调制与增量调制" class="headerlink" title="四、差分脉码调制与增量调制"></a> 四、差分脉码调制与增量调制 </h3><h3 id="五、时分复用"><a href="# 五、时分复用" class="headerlink" title="五、时分复用"></a> 五、时分复用</h3>
+        <p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
+<h3 id="一、模拟信号的抽样"><a href="# 一、模拟信号的抽样" class="headerlink" title="一、模拟信号的抽样"></a>一、模拟信号的抽样 </h3><h3 id="二、抽样信号的量化"><a href="# 二、抽样信号的量化" class="headerlink" title="二、抽样信号的量化"></a> 二、抽样信号的量化 </h3><h3 id="三、脉冲编码调制"><a href="# 三、脉冲编码调制" class="headerlink" title="三、脉冲编码调制"></a> 三、脉冲编码调制 </h3><h3 id="四、差分脉码调制与增量调制"><a href="# 四、差分脉码调制与增量调制" class="headerlink" title="四、差分脉码调制与增量调制"></a> 四、差分脉码调制与增量调制 </h3><h3 id="五、时分复用"><a href="# 五、时分复用" class="headerlink" title="五、时分复用"></a> 五、时分复用</h3>
     </div>
 
     
