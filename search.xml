@@ -614,18 +614,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>參考：架設網站的第一步</title>
-    <url>/2018/08/03/%E5%8F%83%E8%80%83%EF%BC%9A%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</url>
-    <content><![CDATA[<p>從零開始：使用 npm 套件 <br><a href="https://medium.com/html-test/%">https://medium.com/html-test/%</a> E5% BE%9E% E9%9B% B6% E9%96%8B% E5% A7%8B-% E4% BD% BF% E7%94% A8npm% E5% A5%97% E4% BB% B6-317beefdf182<br> 介紹 npm 的概念與使用，可以與使用 hexo 的經驗和架構結合參考<br><span id="more"></span></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>在 hexo 文章中插入图片</title>
     <url>/2018/09/16/%E5%9C%A8hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
     <content><![CDATA[<h3 id="绝对路径"><a href="# 绝对路径" class="headerlink" title="绝对路径"></a>绝对路径 </h3><p> 当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/img 文件夹中<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](&#x2F;images&#x2F;image.jpg)</span><br></pre></td></tr></table></figure><br><span id="more"></span></p>
@@ -637,6 +625,18 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>參考：架設網站的第一步</title>
+    <url>/2018/08/03/%E5%8F%83%E8%80%83%EF%BC%9A%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</url>
+    <content><![CDATA[<p>從零開始：使用 npm 套件 <br><a href="https://medium.com/html-test/%">https://medium.com/html-test/%</a> E5% BE%9E% E9%9B% B6% E9%96%8B% E5% A7%8B-% E4% BD% BF% E7%94% A8npm% E5% A5%97% E4% BB% B6-317beefdf182<br> 介紹 npm 的概念與使用，可以與使用 hexo 的經驗和架構結合參考<br><span id="more"></span></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -657,19 +657,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>怎么取消文章目录中对标题的自动编号</title>
-    <url>/2018/09/05/%E6%80%8E%E4%B9%88%E5%8F%96%E6%B6%88%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%E5%AF%B9%E6%A0%87%E9%A2%98%E7%9A%84%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7/</url>
-    <content><![CDATA[<p> 修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
+    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
+    <url>/2018/09/22/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
+    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
+<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
 ]]></content>
       <categories>
         <category>hexo</category>
       </categories>
   </entry>
   <entry>
-    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
-    <url>/2018/09/22/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
-    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
-<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
+    <title>怎么取消文章目录中对标题的自动编号</title>
+    <url>/2018/09/05/%E6%80%8E%E4%B9%88%E5%8F%96%E6%B6%88%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%E5%AF%B9%E6%A0%87%E9%A2%98%E7%9A%84%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7/</url>
+    <content><![CDATA[<p> 修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -692,8 +692,18 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构与算法 --（1）线性表</title>
-    <url>/2019/03/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%881%EF%BC%89%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
+    <title>数据结构与算法 --5. 排序</title>
+    <url>/2019/04/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%885%EF%BC%89%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —（3）图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —5. 排序</a></p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>数据结构与算法 --1. 线性表</title>
+    <url>/2019/03/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--1.%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
     <content><![CDATA[<p><a href="https://www.google.com/">google</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%881% EF% BC%89% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%882% EF% BC%89% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —（3）图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
 <p>存储结构：顺序，链接，索引，哈希</p>
 <h3 id="一、顺序表"><a href="# 一、顺序表" class="headerlink" title="一、顺序表"></a>一、顺序表 </h3><p> 线性表的寻顺序存储又称为顺序表</p>
@@ -724,8 +734,8 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构与算法 --（2）树</title>
-    <url>/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%882%EF%BC%89%E6%A0%91/</url>
+    <title>数据结构与算法 --2. 树</title>
+    <url>/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--2.%E6%A0%91/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —（3）图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
 <h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br><span id="more"></span><br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
 <h4 id="3- 树的性质"><a href="#3- 树的性质" class="headerlink" title="3. 树的性质"></a>3. 树的性质 </h4><h5 id="1-n-e-1- 树中的节点数等于所有结点的度数加 -1"><a href="#1-n-e-1- 树中的节点数等于所有结点的度数加 -1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1</h5><p> 边数 $d$，度数 $e$，$d=e$<br>可以用归纳法证明</p>
@@ -747,9 +757,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构与算法 --（3）图</title>
-    <url>/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —（3）图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
+    <title>数据结构与算法 --3. 图</title>
+    <url>/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
 <h3 id="一、图的定义"><a href="# 一、图的定义" class="headerlink" title="一、图的定义"></a>一、图的定义 </h3><p> 图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G=(V,E)$<br>$V={v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶 <br>$E=\lbrace (u,v)|u \in V,v \in V \rbrace$<br> 注释：图不能为空集</p>
 <h3 id="二、图的分类和术语"><a href="# 二、图的分类和术语" class="headerlink" title="二、图的分类和术语"></a>二、图的分类和术语</h3><span id="more"></span>
 <h4 id="1- 有向图 - 无向图"><a href="#1- 有向图 - 无向图" class="headerlink" title="1. 有向图 / 无向图"></a>1. 有向图 / 无向图 </h4><h4 id="2- 简单图 - 多重图"><a href="#2- 简单图 - 多重图" class="headerlink" title="2. 简单图 / 多重图"></a>2. 简单图 / 多重图</h4><p> 简单图：(1) 不存在重复边 (2) 不存在 $(u,u)$ 点</p>
@@ -765,26 +775,26 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="14- 有向树"><a href="#14- 有向树" class="headerlink" title="14. 有向树"></a>14. 有向树 </h4><p>${\exists} v_o, \;\; id_{v_o}=0$<br> 其余 $v_i \;\; id_{v_o}=1$</p>
 <h3 id="三、图的存储和基本操作"><a href="# 三、图的存储和基本操作" class="headerlink" title="三、图的存储和基本操作"></a>三、图的存储和基本操作 </h3><h4 id="1- 邻接矩阵法：有 -n- 个顶点，用一个 -n-times-n- 的矩阵存储"><a href="#1- 邻接矩阵法：有 -n- 个顶点，用一个 -n-times-n- 的矩阵存储" class="headerlink" title="1. 邻接矩阵法：有 $n$ 个顶点，用一个 $n \times n$ 的矩阵存储"></a>1. 邻接矩阵法：有 $n$ 个顶点，用一个 $n \times n$ 的矩阵存储</h4><p>$a [i,j]$ 用来表示顶点 $i$ 到顶点 $j$ 是否有边<br> 有向权值图的权值可能是 0 也可能是负数，所以用 $\infty$ 表示 $u,v$ 之间不存在边<br>$A^n [i][j]$：表示顶点 $i$ 到顶点 $j$ 当中路径长度 $=n$ 的路径条数（后面会证明）</p>
 <h4 id="2- 邻接表"><a href="#2- 邻接表" class="headerlink" title="2. 邻接表"></a>2. 邻接表 </h4><p> 优点：方便找到与顶点相邻的边</p>
-<h4 id="3- 十字链表"><a href="#3- 十字链表" class="headerlink" title="3. 十字链表"></a>3. 十字链表</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo3.png" alt><br>Q：怎么画十字链表？<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo1.png" alt><br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo2.png" alt></p>
-<h4 id="4- 邻接多重表"><a href="#4- 邻接多重表" class="headerlink" title="4. 邻接多重表"></a>4. 邻接多重表</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo4.png" alt></p>
+<h4 id="3- 十字链表"><a href="#3- 十字链表" class="headerlink" title="3. 十字链表"></a>3. 十字链表</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo3.png" alt><br>Q：怎么画十字链表？<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo1.png" alt><br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo2.png" alt></p>
+<h4 id="4- 邻接多重表"><a href="#4- 邻接多重表" class="headerlink" title="4. 邻接多重表"></a>4. 邻接多重表</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo4.png" alt></p>
 <h3 id="四、图的遍历"><a href="# 四、图的遍历" class="headerlink" title="四、图的遍历"></a>四、图的遍历 </h3><h4 id="1- 广度优先搜索 -BFS"><a href="#1- 广度优先搜索 -BFS" class="headerlink" title="1. 广度优先搜索 BFS"></a>1. 广度优先搜索 BFS</h4><h5 id="操作"><a href="# 操作" class="headerlink" title="操作"></a> 操作 </h5><p> 标记起始节点，并把起始节点入队 <br> 从队列中弹出一个元素，访问，并把该元素的未标记的相邻节点入队</p>
 <h5 id="复杂度"><a href="# 复杂度" class="headerlink" title="复杂度"></a>复杂度 </h5><p> 时间复杂度：$\begin {cases}<br>O (n^2),  &amp; \text {邻接矩阵} \\<br>O (n+e), &amp; \text {邻接表}<br>\end {cases}$<br>空间复杂度：$O (n)$</p>
 <h5 id="无权值图的最短路径"><a href="# 无权值图的最短路径" class="headerlink" title="无权值图的最短路径"></a>无权值图的最短路径 </h5><h5 id="广度优先生成树"><a href="# 广度优先生成树" class="headerlink" title="广度优先生成树"></a> 广度优先生成树 </h5><h4 id="2- 深度优先搜索 -DFS"><a href="#2- 深度优先搜索 -DFS" class="headerlink" title="2. 深度优先搜索 DFS"></a>2. 深度优先搜索 DFS</h4><h5 id="操作 -1"><a href="# 操作 -1" class="headerlink" title="操作"></a> 操作 </h5><p> 访问相邻的未标记节点 <br> 如果没有相邻的未标记节点，则向上回溯</p>
 <h5 id="复杂度 -1"><a href="# 复杂度 -1" class="headerlink" title="复杂度"></a>复杂度 </h5><p> 时间复杂度：$\begin {cases}<br>O (n^2),  &amp; \text {邻接矩阵} \\<br>O (n+e), &amp; \text {邻接表}<br>\end {cases}$<br>空间复杂度：$O (n)$</p>
 <h5 id="连通性、连通片数量"><a href="# 连通性、连通片数量" class="headerlink" title="连通性、连通片数量"></a>连通性、连通片数量 </h5><p> 如果回溯到了起始节点，但是还有未标记的节点，代表图是非连通的 <br> 则在未标记的节点中随机选择一个节点，并重复遍历动作 <br> 可以根据 DFS 被调用的次数，判断连通片的数量</p>
 <h5 id="深度优先生成树"><a href="# 深度优先生成树" class="headerlink" title="深度优先生成树"></a>深度优先生成树 </h5><h3 id="五、最小生成树"><a href="# 五、最小生成树" class="headerlink" title="五、最小生成树"></a> 五、最小生成树 </h3><h4 id="1- 概念"><a href="#1- 概念" class="headerlink" title="1. 概念"></a>1. 概念</h4><p> 生成树：连通图中的最小连通子图（边最少）<br>最小生成树：带权图中权值和最小的生成树 <br> 不同的最小生成树，权值合都是相同的</p>
-<h4 id="2- 算法"><a href="#2- 算法" class="headerlink" title="2. 算法"></a>2. 算法 </h4><h5 id="1-Prim- 算法：保持连通，选最小边及其顶点（最小边 - 最权值小的边）"><a href="#1-Prim- 算法：保持连通，选最小边及其顶点（最小边 - 最权值小的边）" class="headerlink" title="(1) Prim 算法：保持连通，选最小边及其顶点（最小边 = 最权值小的边）"></a>(1) Prim 算法：保持连通，选最小边及其顶点（最小边 = 最权值小的边）</h5><p> 从某一个顶点开始，不断加顶点和边 <br> 思路：贪心算法（每一步都考虑当前最优，结果恰好是全局最优，前提是满足最优子结构）<br>时间复杂度：$O (n^2)$<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo5.png" alt></p>
+<h4 id="2- 算法"><a href="#2- 算法" class="headerlink" title="2. 算法"></a>2. 算法 </h4><h5 id="1-Prim- 算法：保持连通，选最小边及其顶点（最小边 - 最权值小的边）"><a href="#1-Prim- 算法：保持连通，选最小边及其顶点（最小边 - 最权值小的边）" class="headerlink" title="(1) Prim 算法：保持连通，选最小边及其顶点（最小边 = 最权值小的边）"></a>(1) Prim 算法：保持连通，选最小边及其顶点（最小边 = 最权值小的边）</h5><p> 从某一个顶点开始，不断加顶点和边 <br> 思路：贪心算法（每一步都考虑当前最优，结果恰好是全局最优，前提是满足最优子结构）<br>时间复杂度：$O (n^2)$<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo5.png" alt></p>
 <h5 id="2-Krushal- 算法：保持无圈，选最小边"><a href="#2-Krushal- 算法：保持无圈，选最小边" class="headerlink" title="(2) Krushal 算法：保持无圈，选最小边"></a>(2) Krushal 算法：保持无圈，选最小边 </h5><p> 先包含全部的节点，因为生成树的节点数都是一样的 <br> 思路：贪心算法 <br> 时间复杂度：$O (eloge)$</p>
-<h5 id="3- 破圈法：找一个圈，删除最大边"><a href="#3- 破圈法：找一个圈，删除最大边" class="headerlink" title="(3) 破圈法：找一个圈，删除最大边"></a>(3) 破圈法：找一个圈，删除最大边 </h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph1.jpg" alt><br> 圈：$abdeca$，删除 $de$ 边 <br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph2.jpg" alt><br> 圈：$abdca$，删除 $dc$ 边 <br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph3.jpg" alt><br> 圈：$abeca$，删除 $be$ 边<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph4.jpg" alt></p>
-<h3 id="六、最短路径"><a href="# 六、最短路径" class="headerlink" title="六、最短路径"></a>六、最短路径 </h3><h4 id="1-Dijkstra- 算法：求单源最短距离（权值非负的有向图）"><a href="#1-Dijkstra- 算法：求单源最短距离（权值非负的有向图）" class="headerlink" title="1.Dijkstra 算法：求单源最短距离（权值非负的有向图）"></a>1.Dijkstra 算法：求单源最短距离（权值非负的有向图）</h4><p> 思想：贪心算法<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo6.png" alt></p>
-<h5 id="1- 将每个点标记一个距离值"><a href="#1- 将每个点标记一个距离值" class="headerlink" title="(1) 将每个点标记一个距离值"></a>(1) 将每个点标记一个距离值</h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo7.png" alt></p>
-<h5 id="2- 选取最小的顶点，加进来"><a href="#2- 选取最小的顶点，加进来" class="headerlink" title="(2) 选取最小的顶点，加进来"></a>(2) 选取最小的顶点，加进来 </h5><h5 id="3- 修改该点的出边的距离值"><a href="#3- 修改该点的出边的距离值" class="headerlink" title="(3) 修改该点的出边的距离值"></a>(3) 修改该点的出边的距离值</h5><p> 若通过该点到达的距离比较近，则修改距离值，并标记前驱节点<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo8.png" alt></p>
-<h5 id="4- 重复该过程，直到全部的点被加进来"><a href="#4- 重复该过程，直到全部的点被加进来" class="headerlink" title="(4) 重复该过程，直到全部的点被加进来"></a>(4) 重复该过程，直到全部的点被加进来 </h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo9.jpg" alt><br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo10.jpg" alt><br> 时间复杂度：$O (n)$<br>例：节点 1 到节点 4 的最短路径？<br>找节点 4 的前驱标记，是 3；再找节点 3 的前驱标记，依次重复<br>1-&gt;3-&gt;2-&gt;4</p>
-<h4 id="2-Floyd- 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）"><a href="#2-Floyd- 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）" class="headerlink" title="2.Floyd 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）"></a>2.Floyd 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）</h4><p>思想：动态规划 <br>$A^{(k)}_{i,j}$：$i$-&gt;$j$ 在顶点集 $\lbrace 1,2,…,k \rbrace$ 中的最短路径<br> 路径集合 $S^{(k)}$ 有两种：<br>(1) 包含 k 的：$A^{(k-1)}_{i,k}+A^{(k-1)}_{k,j}$<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo11.png" alt><br>(2) 不包含 k 的：$A^{(k-1)}_{i,j}$<br>于是可以推得公式：$A^{(k)}_{i,j}=min \lbrace A^{(k-1)}_{i,j},A^{(k-1)}_{i,k}+A^{(k-1)}_{k,j} \rbrace$</p>
-<h3 id="七、拓扑排序"><a href="# 七、拓扑排序" class="headerlink" title="七、拓扑排序"></a>七、拓扑排序 </h3><p> 应用场景：有向无环图 (AOV 网)，顶点代表的是事件<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo12.png" alt><br>$i$-&gt;$j$：$i$ 必须完成，才能开始 $j$</p>
+<h5 id="3- 破圈法：找一个圈，删除最大边"><a href="#3- 破圈法：找一个圈，删除最大边" class="headerlink" title="(3) 破圈法：找一个圈，删除最大边"></a>(3) 破圈法：找一个圈，删除最大边 </h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph1.jpg" alt><br> 圈：$abdeca$，删除 $de$ 边 <br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph2.jpg" alt><br> 圈：$abdca$，删除 $dc$ 边 <br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph3.jpg" alt><br> 圈：$abeca$，删除 $be$ 边<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph4.jpg" alt></p>
+<h3 id="六、最短路径"><a href="# 六、最短路径" class="headerlink" title="六、最短路径"></a>六、最短路径 </h3><h4 id="1-Dijkstra- 算法：求单源最短距离（权值非负的有向图）"><a href="#1-Dijkstra- 算法：求单源最短距离（权值非负的有向图）" class="headerlink" title="1.Dijkstra 算法：求单源最短距离（权值非负的有向图）"></a>1.Dijkstra 算法：求单源最短距离（权值非负的有向图）</h4><p> 思想：贪心算法<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo6.png" alt></p>
+<h5 id="1- 将每个点标记一个距离值"><a href="#1- 将每个点标记一个距离值" class="headerlink" title="(1) 将每个点标记一个距离值"></a>(1) 将每个点标记一个距离值</h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo7.png" alt></p>
+<h5 id="2- 选取最小的顶点，加进来"><a href="#2- 选取最小的顶点，加进来" class="headerlink" title="(2) 选取最小的顶点，加进来"></a>(2) 选取最小的顶点，加进来 </h5><h5 id="3- 修改该点的出边的距离值"><a href="#3- 修改该点的出边的距离值" class="headerlink" title="(3) 修改该点的出边的距离值"></a>(3) 修改该点的出边的距离值</h5><p> 若通过该点到达的距离比较近，则修改距离值，并标记前驱节点<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo8.png" alt></p>
+<h5 id="4- 重复该过程，直到全部的点被加进来"><a href="#4- 重复该过程，直到全部的点被加进来" class="headerlink" title="(4) 重复该过程，直到全部的点被加进来"></a>(4) 重复该过程，直到全部的点被加进来 </h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo9.jpg" alt><br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo10.jpg" alt><br> 时间复杂度：$O (n)$<br>例：节点 1 到节点 4 的最短路径？<br>找节点 4 的前驱标记，是 3；再找节点 3 的前驱标记，依次重复<br>1-&gt;3-&gt;2-&gt;4</p>
+<h4 id="2-Floyd- 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）"><a href="#2-Floyd- 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）" class="headerlink" title="2.Floyd 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）"></a>2.Floyd 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）</h4><p>思想：动态规划 <br>$A^{(k)}_{i,j}$：$i$-&gt;$j$ 在顶点集 $\lbrace 1,2,…,k \rbrace$ 中的最短路径<br> 路径集合 $S^{(k)}$ 有两种：<br>(1) 包含 k 的：$A^{(k-1)}_{i,k}+A^{(k-1)}_{k,j}$<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo11.png" alt><br>(2) 不包含 k 的：$A^{(k-1)}_{i,j}$<br>于是可以推得公式：$A^{(k)}_{i,j}=min \lbrace A^{(k-1)}_{i,j},A^{(k-1)}_{i,k}+A^{(k-1)}_{k,j} \rbrace$</p>
+<h3 id="七、拓扑排序"><a href="# 七、拓扑排序" class="headerlink" title="七、拓扑排序"></a>七、拓扑排序 </h3><p> 应用场景：有向无环图 (AOV 网)，顶点代表的是事件<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo12.png" alt><br>$i$-&gt;$j$：$i$ 必须完成，才能开始 $j$</p>
 <h4 id="1- 选择一个入度 -0- 的点"><a href="#1- 选择一个入度 -0- 的点" class="headerlink" title="(1) 选择一个入度 = 0 的点"></a>(1) 选择一个入度 = 0 的点 </h4><h4 id="2- 删除该点的所有出边"><a href="#2- 删除该点的所有出边" class="headerlink" title="(2) 删除该点的所有出边"></a>(2) 删除该点的所有出边</h4><h4 id="3- 重复这两个步骤，直到"><a href="#3- 重复这两个步骤，直到" class="headerlink" title="(3) 重复这两个步骤，直到"></a>(3) 重复这两个步骤，直到</h4><p>$\begin {cases}<br> 没有点了：得到一个合法的拓扑排序  &amp; \text {} \\<br>有点但是没有入度为 0 的点：图中有环 &amp; \text {}<br>\end {cases}$</p>
 <h3 id="八、关键路径"><a href="# 八、关键路径" class="headerlink" title="八、关键路径"></a>八、关键路径 </h3><h4 id="1- 概念 -1"><a href="#1- 概念 -1" class="headerlink" title="1. 概念"></a>1. 概念</h4><p> 应用场景：有向带权图，顶点代表事件，边代表活动，权值代表开销 (时间)-&gt;AOE 网 <br> 顶点不是重点，顶点只是表示入边代表的事件已经完成了 <br> 关键路径：在 AOE 网中寻找最长路径（最短工期：完成 $e_1-e_5$ 最少需要的时间）<br>关键路径是不唯一的 <br> 目的：缩短关键路径，缩短工期 <br> 关键活动：关键路径上的边所代表的活动</p>
-<h4 id="2- 算法概念"><a href="#2- 算法概念" class="headerlink" title="2. 算法概念"></a>2. 算法概念</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo13.png" alt><br>(1) $ve (k)$：顶点 k 的最早时间<br>$ve ($ 源点 $)=0$<br>$ve (k)=max \lbrace ve (i)+w (i,k) \rbrace$<br>(2) $vl (k)$：顶点 k 最迟时间<br>(3) $ve (k)=vl (k)$：工期不变<br>$vl (k$$)=min \lbrace vl (j)-w (k,j) \rbrace$<br>(4) $e ()$：边的最早时间<br>$e (e_ik)=ve (i)$<br>(5) $l ()$：边的最迟时间<br>$l (e_kj)=l (j)-w (k,j)$<br>(6) $d ()=l ()-e ()$<br>$d ()=0$ 是关键活动</p>
+<h4 id="2- 算法概念"><a href="#2- 算法概念" class="headerlink" title="2. 算法概念"></a>2. 算法概念</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo13.png" alt><br>(1) $ve (k)$：顶点 k 的最早时间<br>$ve ($ 源点 $)=0$<br>$ve (k)=max \lbrace ve (i)+w (i,k) \rbrace$<br>(2) $vl (k)$：顶点 k 最迟时间<br>(3) $ve (k)=vl (k)$：工期不变<br>$vl (k$$)=min \lbrace vl (j)-w (k,j) \rbrace$<br>(4) $e ()$：边的最早时间<br>$e (e_ik)=ve (i)$<br>(5) $l ()$：边的最迟时间<br>$l (e_kj)=l (j)-w (k,j)$<br>(6) $d ()=l ()-e ()$<br>$d ()=0$ 是关键活动</p>
 <h4 id="3- 例子"><a href="#3- 例子" class="headerlink" title="3. 例子"></a>3. 例子</h4><h4 id="4- 缩短工期：缩短所有关键路径"><a href="#4- 缩短工期：缩短所有关键路径" class="headerlink" title="4. 缩短工期：缩短所有关键路径"></a>4. 缩短工期：缩短所有关键路径</h4><p>(1) 公共边<br>(2) 每个路径选一个</p>
 <h4 id="5- 总结"><a href="#5- 总结" class="headerlink" title="5. 总结"></a>5. 总结</h4><p>$ve ()$：起点加权取最大<br>$vl ()$：终点减权取最小<br>$e ()$：就取起点最早值<br>$l ()$：终点最迟减权值</p>
 ]]></content>
@@ -793,22 +803,22 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构与算法 --（4）查找</title>
-    <url>/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —（3）图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
+    <title>数据结构与算法 --4. 查找</title>
+    <url>/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--4.%E6%9F%A5%E6%89%BE/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —（3）图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
 <h3 id="一、概念"><a href="# 一、概念" class="headerlink" title="一、概念"></a>一、概念 </h3><h4 id="1- 查找：在数据集合 - 查找表 - 中寻找满足某种条件的数据元素的过程。"><a href="#1- 查找：在数据集合 - 查找表 - 中寻找满足某种条件的数据元素的过程。" class="headerlink" title="1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。"></a>1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。</h4><p> 查找表：$\begin {cases}<br>静态查找表：  &amp; \text {} \\<br>动态查找表：有增删 &amp; \text {}<br>\end {cases}$<br>查找的结果一般分为两种：<br>(1) 查找成功：在数据集合中找到了满足条件的数据元素<br>(2) 查找失败<br><span id="more"></span></p>
 <h4 id="2- 关键字"><a href="#2- 关键字" class="headerlink" title="2. 关键字"></a>2. 关键字 </h4><h4 id="3- 平均查找长度 -ASL-sum-i-0-n-P-iC-i"><a href="#3- 平均查找长度 -ASL-sum-i-0-n-P-iC-i" class="headerlink" title="3. 平均查找长度 $ASL = \sum_{i=0}^n P_iC_i$"></a>3. 平均查找长度 $ASL = \sum_{i=0}^n P_iC_i$</h4><h3 id="二、顺序查找、折半查找、分块查找"><a href="# 二、顺序查找、折半查找、分块查找" class="headerlink" title="二、顺序查找、折半查找、分块查找"></a> 二、顺序查找、折半查找、分块查找</h3><h4 id="1- 顺序查找：依次查找表中元素"><a href="#1- 顺序查找：依次查找表中元素" class="headerlink" title="1. 顺序查找：依次查找表中元素"></a>1. 顺序查找：依次查找表中元素</h4><h5 id="1- 一般线性表 - 无序 - 中的查找"><a href="#1- 一般线性表 - 无序 - 中的查找" class="headerlink" title="(1) 一般线性表 (无序) 中的查找"></a>(1) 一般线性表 (无序) 中的查找</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>, i&lt;n, i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// 对 a [i] 判断</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>$ASL_{成功} = \displaystyle {1 \over n}(1+2+…+n)={n+1 \over 2}$<br>$ASL_{失败} = n$</p>
 <h5 id="2- 有序表的顺序查找：失败时，可提前返回"><a href="#2- 有序表的顺序查找：失败时，可提前返回" class="headerlink" title="(2) 有序表的顺序查找：失败时，可提前返回"></a>(2) 有序表的顺序查找：失败时，可提前返回</h5><p>$ASL_{成功} = \displaystyle {n+1 \over 2}$<br>$ASL_{失败} = \displaystyle {1 \over n+1}(1+2+…+n+n) = {n \over 2} + {n \over n+1}$<br>$n$ 个分支节点是树有 $n+1$ 个叶子</p>
 <h4 id="2- 折半查找：有序的顺序表中"><a href="#2- 折半查找：有序的顺序表中" class="headerlink" title="2. 折半查找：有序的顺序表中"></a>2. 折半查找：有序的顺序表中</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Binary_Search</span> <span class="params">(SeqList L, ElemType key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> low=<span class="number">0</span>, high=L.TableLen<span class="number">-1</span>, mid;</span><br><span class="line">	<span class="keyword">while</span> (low &lt; high)</span><br><span class="line">	&#123;</span><br><span class="line">	    mid = (low + high) / <span class="number">2</span>;</span><br><span class="line">	    <span class="keyword">if</span> (L.elem [mid] == key)</span><br><span class="line">	        <span class="keyword">return</span> mid;</span><br><span class="line">	    <span class="keyword">else</span> <span class="keyword">if</span> (L.elem [mid] &gt; key)</span><br><span class="line">	        high = mid - <span class="number">1</span>;</span><br><span class="line">	    <span class="keyword">else</span></span><br><span class="line">	    	low = mid + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo1.png" alt><br>判定树是一个平衡二叉树 <br> 判定树的高度：$\lceil log_2 (n+1) \rceil$ 或 $\lfloor log_2 (n) \rfloor + 1$<br>$ASL_{成功} = \displaystyle {1 \over 11}(1 \times 1 + 2 \times 2 + 3 \times 4 + 4 \times 4) = 3$<br>$ASL_{失败} = \displaystyle {1 \over 12}(3 \times 4 + 4 \times 8) = {11 \over 3}$<br>可以构成折半查找的序列：某数字后面的数字都与其有相同的大小关系</p>
+<p><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--4.%E6%9F%A5%E6%89%BE/photo1.png" alt><br>判定树是一个平衡二叉树 <br> 判定树的高度：$\lceil log_2 (n+1) \rceil$ 或 $\lfloor log_2 (n) \rfloor + 1$<br>$ASL_{成功} = \displaystyle {1 \over 11}(1 \times 1 + 2 \times 2 + 3 \times 4 + 4 \times 4) = 3$<br>$ASL_{失败} = \displaystyle {1 \over 12}(3 \times 4 + 4 \times 8) = {11 \over 3}$<br>可以构成折半查找的序列：某数字后面的数字都与其有相同的大小关系</p>
 <h4 id="3- 分块查找：块间有序，块内无序"><a href="#3- 分块查找：块间有序，块内无序" class="headerlink" title="3. 分块查找：块间有序，块内无序"></a>3. 分块查找：块间有序，块内无序 </h4><p> 快的索引表是有序的，所以也可以顺序查找或是二分查找 <br> 问题：怎么分块，效率最高？<br>假设有 $n$ 个元素，$s$ 个元素一个块，块数总共有 $\displaystyle \lceil {n \over s} \rceil$<br>$ASL_{成功} = \displaystyle \frac {\frac {n}{s}+1}{2} + {s+1 \over 2}$</p>
 <p>$\quad \quad \quad  \; \displaystyle ={s \over 2} + {n \over 2s} + 1$</p>
 <p>$\quad \quad \quad  \; \geq \displaystyle 2 \sqrt {\frac {s}{2} \times \frac {n}{2s}} + 1 $</p>
 <p>$\quad \quad \quad  \; = \sqrt {n} + 1 $</p>
 <p>等号成立的条件：$\displaystyle {s \over 2} = {n \over 2s} $ =&gt; $s=\sqrt {n}$</p>
 <h3 id="三、B- 树（多路平衡查找树）"><a href="# 三、B- 树（多路平衡查找树）" class="headerlink" title="三、B 树（多路平衡查找树）"></a>三、B 树（多路平衡查找树）</h3><h4 id="1-B- 树及其基本操作"><a href="#1-B- 树及其基本操作" class="headerlink" title="1.B 树及其基本操作"></a>1.B 树及其基本操作</h4><p>B 树中所有节点的孩子节点数的最大值称为 B 树的阶，通常用 $m$ 表示</p>
-<h5 id="1- 树中每个节点至多有 -m- 棵子树"><a href="#1- 树中每个节点至多有 -m- 棵子树" class="headerlink" title="(1) 树中每个节点至多有 $m$ 棵子树"></a>(1) 树中每个节点至多有 $m$ 棵子树</h5><h5 id="2- 若根节点不是终端节点，则至少有两棵子树"><a href="#2- 若根节点不是终端节点，则至少有两棵子树" class="headerlink" title="(2) 若根节点不是终端节点，则至少有两棵子树"></a>(2) 若根节点不是终端节点，则至少有两棵子树</h5><h5 id="3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个"><a href="#3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个" class="headerlink" title="(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个"></a>(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个</h5><h5 id="4- 非叶节点的结构如下"><a href="#4- 非叶节点的结构如下" class="headerlink" title="(4) 非叶节点的结构如下"></a>(4) 非叶节点的结构如下</h5><p><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo2.png" alt><br>$n$：关键字的个数（$\displaystyle \lceil {m \over 2} \rceil -1 \leq n \leq m-1$）</p>
+<h5 id="1- 树中每个节点至多有 -m- 棵子树"><a href="#1- 树中每个节点至多有 -m- 棵子树" class="headerlink" title="(1) 树中每个节点至多有 $m$ 棵子树"></a>(1) 树中每个节点至多有 $m$ 棵子树</h5><h5 id="2- 若根节点不是终端节点，则至少有两棵子树"><a href="#2- 若根节点不是终端节点，则至少有两棵子树" class="headerlink" title="(2) 若根节点不是终端节点，则至少有两棵子树"></a>(2) 若根节点不是终端节点，则至少有两棵子树</h5><h5 id="3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个"><a href="#3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个" class="headerlink" title="(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个"></a>(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个</h5><h5 id="4- 非叶节点的结构如下"><a href="#4- 非叶节点的结构如下" class="headerlink" title="(4) 非叶节点的结构如下"></a>(4) 非叶节点的结构如下</h5><p><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--4.%E6%9F%A5%E6%89%BE/photo2.png" alt><br>$n$：关键字的个数（$\displaystyle \lceil {m \over 2} \rceil -1 \leq n \leq m-1$）</p>
 <h5 id="5- 关键字 -1- 子树数"><a href="#5- 关键字 -1- 子树数" class="headerlink" title="(5) 关键字 $+1=$ 子树数"></a>(5) 关键字 $+1=$ 子树数 </h5><p>$\displaystyle \lceil {m \over 2} \rceil \leq $ 子树数 $ \leq m$<br> 根是特殊情形：$2 \leq $ 子树数 $ \leq m$</p>
 <h5 id="6- 关键字数 -m- 与高度 -h- 的关系"><a href="#6- 关键字数 -m- 与高度 -h- 的关系" class="headerlink" title="(6) 关键字数 $m$ 与高度 $h$ 的关系"></a>(6) 关键字数 $m$ 与高度 $h$ 的关系 </h5><p> 每个节点最多有 $m$ 个子树，第 $m$ 层最多总共有 $m^i$ 个子树，总共有 $(m-1) m^i$ 个关键字</p>
 <p>$1+2 (\lceil {m \over 2} \rceil -1)(1+ \lceil {m \over 2} \rceil + …+{\lceil {m \over 2} \rceil}^{h-2}) \leq n \leq (m-1)[1+m+m^2+…+m^{h-1}]$</p>
@@ -817,18 +827,8 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <p>$log_m (n+1) \leq h \leq log_{\lceil \frac {m}{2} \rceil} \displaystyle ({n+1 \over 2}) +1$</p>
 <h4 id="2- 查找"><a href="#2- 查找" class="headerlink" title="2. 查找"></a>2. 查找 </h4><p> 节点上查找 $\begin {cases}<br>成功  &amp; \text {} \\<br>失败：子树查找 &amp; \text {}<br>\end {cases}$</p>
 <h4 id="3-B- 树插入"><a href="#3-B- 树插入" class="headerlink" title="3.B 树插入"></a>3.B 树插入 </h4><h5 id="1- 定位：某个非叶节点"><a href="#1- 定位：某个非叶节点" class="headerlink" title="(1) 定位：某个非叶节点"></a>(1) 定位：某个非叶节点</h5><h5 id="2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点"><a href="#2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点" class="headerlink" title="(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点"></a>(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点</h5><h4 id="4-B- 树删除"><a href="#4-B- 树删除" class="headerlink" title="4.B 树删除"></a>4.B 树删除</h4><p> 分层两大类情形：</p>
-<h5 id="1- 删除的节点是最底层分支"><a href="#1- 删除的节点是最底层分支" class="headerlink" title="(1) 删除的节点是最底层分支"></a>(1) 删除的节点是最底层分支 </h5><p>$\quad$(a) 欲删除节点的父节点关键字 $&gt; \lceil \frac {m}{2} \rceil -1$，直接删除<br>$\quad$(b) 欲删除节点的父节点关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad$ (i) 兄弟节点够借：关键字 $\leq \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 父子易位，再平衡<br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo3.jpg" alt><br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo4.jpg" alt><br>$\quad \quad$ (ii) 兄弟节点不够借：关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 合并 (左 / 右 + 父亲 + 自己)<br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/photo5.jpg" alt><br>Q：为什么能合并，不会超过关键字数量的上界吗？<br> 合并：$(\lceil \frac {m}{2} \rceil -1) + 1 + (\lceil \frac {m}{2} \rceil -2)=$</p>
+<h5 id="1- 删除的节点是最底层分支"><a href="#1- 删除的节点是最底层分支" class="headerlink" title="(1) 删除的节点是最底层分支"></a>(1) 删除的节点是最底层分支 </h5><p>$\quad$(a) 欲删除节点的父节点关键字 $&gt; \lceil \frac {m}{2} \rceil -1$，直接删除<br>$\quad$(b) 欲删除节点的父节点关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad$ (i) 兄弟节点够借：关键字 $\leq \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 父子易位，再平衡<br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--4.%E6%9F%A5%E6%89%BE/photo3.jpg" alt><br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--4.%E6%9F%A5%E6%89%BE/photo4.jpg" alt><br>$\quad \quad$ (ii) 兄弟节点不够借：关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 合并 (左 / 右 + 父亲 + 自己)<br><img src="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--4.%E6%9F%A5%E6%89%BE/photo5.jpg" alt><br>Q：为什么能合并，不会超过关键字数量的上界吗？<br> 合并：$(\lceil \frac {m}{2} \rceil -1) + 1 + (\lceil \frac {m}{2} \rceil -2)=$</p>
 <h5 id="2- 删除的节点不是最底层分支"><a href="#2- 删除的节点不是最底层分支" class="headerlink" title="(2) 删除的节点不是最底层分支"></a>(2) 删除的节点不是最底层分支</h5>]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>数据结构与算法 --（5）排序</title>
-    <url>/2019/04/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%885%EF%BC%89%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —（3）图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
-<span id="more"></span>
-]]></content>
       <categories>
         <category>数据结构与算法</category>
       </categories>
@@ -901,6 +901,25 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>机器学习算法 --（2）逻辑回归</title>
+    <url>/2020/11/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
+    <content><![CDATA[<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/photo1.jpg" alt></p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p> 线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$<br><span id="more"></span></p>
+<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
+<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
+<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
+<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
+<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
+<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
+<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>机器学习算法 --（3）神经网络</title>
     <url>/2020/11/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%883%EF%BC%89%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[<h3 id="一、深度学习"><a href="# 一、深度学习" class="headerlink" title="一、深度学习"></a>一、深度学习</h3><h4 id="1- 深度学习三次热潮"><a href="#1- 深度学习三次热潮" class="headerlink" title="1. 深度学习三次热潮"></a>1. 深度学习三次热潮</h4><p>1950 年代：图灵提出图灵测试<br>1980 年代：李开复语音识别，BP 算法<br>2006 年至今：李飞飞 ImageNet，AlphoGo 战胜人类棋手</p>
@@ -928,25 +947,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <tags>
         <tag>深度学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（2）逻辑回归</title>
-    <url>/2020/11/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
-    <content><![CDATA[<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--%EF%BC%882%EF%BC%89%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/photo1.jpg" alt></p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p> 线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$<br><span id="more"></span></p>
-<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
-<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
-<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
-<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
-<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
-<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
-<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
   </entry>
   <entry>
     <title>机器学习算法 --（4）KNN</title>
@@ -1085,15 +1085,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（1）绪论</title>
-    <url>/2020/09/10/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%881%EF%BC%89%E7%BB%AA%E8%AE%BA/</url>
-    <content><![CDATA[<h3 id="一、通信的基本概念和通信系统的组成"><a href="# 一、通信的基本概念和通信系统的组成" class="headerlink" title="一、通信的基本概念和通信系统的组成"></a> 一、通信的基本概念和通信系统的组成 </h3><span id="more"></span>
-<h3 id="二、信息的度量和通信系统的性能指标"><a href="# 二、信息的度量和通信系统的性能指标" class="headerlink" title="二、信息的度量和通信系统的性能指标"></a> 二、信息的度量和通信系统的性能指标 </h3>]]></content>
-      <categories>
-        <category>通信原理</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算机网络 lab2 使用 Mininet 创建网络拓扑</title>
     <url>/2021/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Clab2%20%E4%BD%BF%E7%94%A8Mininet%E5%88%9B%E5%BB%BA%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/</url>
     <content><![CDATA[<h3 id="一、Miniset- 简介"><a href="# 一、Miniset- 简介" class="headerlink" title="一、Miniset 简介"></a>一、Miniset 简介</h3><p>Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。<br>Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。<br>Mininet 提供 python API，简单易用</p>
@@ -1115,6 +1106,15 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>计算机网络</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>通信原理 --（1）绪论</title>
+    <url>/2020/09/10/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%20--%EF%BC%881%EF%BC%89%E7%BB%AA%E8%AE%BA/</url>
+    <content><![CDATA[<h3 id="一、通信的基本概念和通信系统的组成"><a href="# 一、通信的基本概念和通信系统的组成" class="headerlink" title="一、通信的基本概念和通信系统的组成"></a> 一、通信的基本概念和通信系统的组成 </h3><span id="more"></span>
+<h3 id="二、信息的度量和通信系统的性能指标"><a href="# 二、信息的度量和通信系统的性能指标" class="headerlink" title="二、信息的度量和通信系统的性能指标"></a> 二、信息的度量和通信系统的性能指标 </h3>]]></content>
+      <categories>
+        <category>通信原理</category>
       </categories>
   </entry>
   <entry>

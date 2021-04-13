@@ -24,38 +24,38 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="数据结构 — (1) 线性表数据结构 — (2) 树数据结构与算法 —（3）图数据结构与算法 —（4）查找数据结构与算法 —（5）排序 一、图的定义图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G&#x3D;(V,E)$$V&#x3D;{v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶$E&#x3D;\lbrace (u,v)|u \in V,v \in V \rbra">
+<meta name="description" content="数据结构 — (1) 线性表数据结构 — (2) 树数据结构与算法 —3. 图数据结构与算法 —（4）查找数据结构与算法 —（5）排序 一、图的定义图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G&#x3D;(V,E)$$V&#x3D;{v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶$E&#x3D;\lbrace (u,v)|u \in V,v \in V \rbra">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构与算法 --（3）图">
-<meta property="og:url" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/index.html">
+<meta property="og:title" content="数据结构与算法 --3. 图">
+<meta property="og:url" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/index.html">
 <meta property="og:site_name" content="Chris自强不息">
-<meta property="og:description" content="数据结构 — (1) 线性表数据结构 — (2) 树数据结构与算法 —（3）图数据结构与算法 —（4）查找数据结构与算法 —（5）排序 一、图的定义图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G&#x3D;(V,E)$$V&#x3D;{v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶$E&#x3D;\lbrace (u,v)|u \in V,v \in V \rbra">
+<meta property="og:description" content="数据结构 — (1) 线性表数据结构 — (2) 树数据结构与算法 —3. 图数据结构与算法 —（4）查找数据结构与算法 —（5）排序 一、图的定义图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G&#x3D;(V,E)$$V&#x3D;{v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶$E&#x3D;\lbrace (u,v)|u \in V,v \in V \rbra">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo3.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo1.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo2.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo4.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo5.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph1.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph2.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph3.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph4.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo6.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo7.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo8.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo9.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo10.jpg">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo11.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo12.png">
-<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo13.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo3.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo1.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo2.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo4.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo5.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph1.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph2.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph3.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph4.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo6.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo7.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo8.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo9.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo10.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo11.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo12.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo13.png">
 <meta property="article:published_time" content="2019-03-27T00:31:29.000Z">
-<meta property="article:modified_time" content="2021-04-13T01:56:03.149Z">
+<meta property="article:modified_time" content="2021-04-13T06:39:59.893Z">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo3.png">
+<meta name="twitter:image" content="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo3.png">
 
 
-<link rel="canonical" href="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/">
+<link rel="canonical" href="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/">
 
 
 <script class="page-configurations">
@@ -67,7 +67,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>数据结构与算法 --（3）图 | Chris自强不息</title>
+<title>数据结构与算法 --3. 图 | Chris自强不息</title>
   
 
 
@@ -255,7 +255,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -268,7 +268,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          数据结构与算法 --（3）图
+          数据结构与算法 --3. 图
         </h1>
 
         <div class="post-meta-container">
@@ -286,7 +286,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 09:56:03" itemprop="dateModified" datetime="2021-04-13T09:56:03+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 14:39:59" itemprop="dateModified" datetime="2021-04-13T14:39:59+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -308,7 +308,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —（3）图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
+        <p><a href="https://wangxchun.github.io/2019/03/20/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E7% BA% BF% E6%80% A7% E8% A1% A8/">数据结构 — (1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/03/23/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84-% E6% A0%91/"> 数据结构 — (2) 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%883% EF% BC%89% E5%9B% BE/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%884% EF% BC%89% E6%9F% A5% E6%89% BE/"> 数据结构与算法 —（4）查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/% E6%95% B0% E6%8D% AE% E7% BB%93% E6%9E%84% E4% B8%8E% E7% AE%97% E6% B3%95%20--% EF% BC%885% EF% BC%89% E6%8E%92% E5% BA%8F/"> 数据结构与算法 —（5）排序</a></p>
 <h3 id="一、图的定义"><a href="# 一、图的定义" class="headerlink" title="一、图的定义"></a>一、图的定义 </h3><p> 图 $G$ 由顶点集 $V$ 和边集 $E$ 组成，记为 $G=(V,E)$<br>$V={v_1,v_2,…,v_n}, \quad |V|$ 表示图中顶点的个数，也称为图 G 的阶 <br>$E=\lbrace (u,v)|u \in V,v \in V \rbrace$<br> 注释：图不能为空集</p>
 <h3 id="二、图的分类和术语"><a href="# 二、图的分类和术语" class="headerlink" title="二、图的分类和术语"></a>二、图的分类和术语</h3><span id="more"></span>
 <h4 id="1- 有向图 - 无向图"><a href="#1- 有向图 - 无向图" class="headerlink" title="1. 有向图 / 无向图"></a>1. 有向图 / 无向图 </h4><h4 id="2- 简单图 - 多重图"><a href="#2- 简单图 - 多重图" class="headerlink" title="2. 简单图 / 多重图"></a>2. 简单图 / 多重图</h4><p> 简单图：(1) 不存在重复边 (2) 不存在 $(u,u)$ 点</p>
@@ -324,26 +324,26 @@
 <h4 id="14- 有向树"><a href="#14- 有向树" class="headerlink" title="14. 有向树"></a>14. 有向树 </h4><p>${\exists} v_o, \;\; id_{v_o}=0$<br> 其余 $v_i \;\; id_{v_o}=1$</p>
 <h3 id="三、图的存储和基本操作"><a href="# 三、图的存储和基本操作" class="headerlink" title="三、图的存储和基本操作"></a>三、图的存储和基本操作 </h3><h4 id="1- 邻接矩阵法：有 -n- 个顶点，用一个 -n-times-n- 的矩阵存储"><a href="#1- 邻接矩阵法：有 -n- 个顶点，用一个 -n-times-n- 的矩阵存储" class="headerlink" title="1. 邻接矩阵法：有 $n$ 个顶点，用一个 $n \times n$ 的矩阵存储"></a>1. 邻接矩阵法：有 $n$ 个顶点，用一个 $n \times n$ 的矩阵存储</h4><p>$a [i,j]$ 用来表示顶点 $i$ 到顶点 $j$ 是否有边<br> 有向权值图的权值可能是 0 也可能是负数，所以用 $\infty$ 表示 $u,v$ 之间不存在边<br>$A^n [i][j]$：表示顶点 $i$ 到顶点 $j$ 当中路径长度 $=n$ 的路径条数（后面会证明）</p>
 <h4 id="2- 邻接表"><a href="#2- 邻接表" class="headerlink" title="2. 邻接表"></a>2. 邻接表 </h4><p> 优点：方便找到与顶点相邻的边</p>
-<h4 id="3- 十字链表"><a href="#3- 十字链表" class="headerlink" title="3. 十字链表"></a>3. 十字链表</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo3.png" alt><br>Q：怎么画十字链表？<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo1.png" alt><br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo2.png" alt></p>
-<h4 id="4- 邻接多重表"><a href="#4- 邻接多重表" class="headerlink" title="4. 邻接多重表"></a>4. 邻接多重表</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo4.png" alt></p>
+<h4 id="3- 十字链表"><a href="#3- 十字链表" class="headerlink" title="3. 十字链表"></a>3. 十字链表</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo3.png" alt><br>Q：怎么画十字链表？<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo1.png" alt><br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo2.png" alt></p>
+<h4 id="4- 邻接多重表"><a href="#4- 邻接多重表" class="headerlink" title="4. 邻接多重表"></a>4. 邻接多重表</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo4.png" alt></p>
 <h3 id="四、图的遍历"><a href="# 四、图的遍历" class="headerlink" title="四、图的遍历"></a>四、图的遍历 </h3><h4 id="1- 广度优先搜索 -BFS"><a href="#1- 广度优先搜索 -BFS" class="headerlink" title="1. 广度优先搜索 BFS"></a>1. 广度优先搜索 BFS</h4><h5 id="操作"><a href="# 操作" class="headerlink" title="操作"></a> 操作 </h5><p> 标记起始节点，并把起始节点入队 <br> 从队列中弹出一个元素，访问，并把该元素的未标记的相邻节点入队</p>
 <h5 id="复杂度"><a href="# 复杂度" class="headerlink" title="复杂度"></a>复杂度 </h5><p> 时间复杂度：$\begin {cases}<br>O (n^2),  &amp; \text {邻接矩阵} \\<br>O (n+e), &amp; \text {邻接表}<br>\end {cases}$<br>空间复杂度：$O (n)$</p>
 <h5 id="无权值图的最短路径"><a href="# 无权值图的最短路径" class="headerlink" title="无权值图的最短路径"></a>无权值图的最短路径 </h5><h5 id="广度优先生成树"><a href="# 广度优先生成树" class="headerlink" title="广度优先生成树"></a> 广度优先生成树 </h5><h4 id="2- 深度优先搜索 -DFS"><a href="#2- 深度优先搜索 -DFS" class="headerlink" title="2. 深度优先搜索 DFS"></a>2. 深度优先搜索 DFS</h4><h5 id="操作 -1"><a href="# 操作 -1" class="headerlink" title="操作"></a> 操作 </h5><p> 访问相邻的未标记节点 <br> 如果没有相邻的未标记节点，则向上回溯</p>
 <h5 id="复杂度 -1"><a href="# 复杂度 -1" class="headerlink" title="复杂度"></a>复杂度 </h5><p> 时间复杂度：$\begin {cases}<br>O (n^2),  &amp; \text {邻接矩阵} \\<br>O (n+e), &amp; \text {邻接表}<br>\end {cases}$<br>空间复杂度：$O (n)$</p>
 <h5 id="连通性、连通片数量"><a href="# 连通性、连通片数量" class="headerlink" title="连通性、连通片数量"></a>连通性、连通片数量 </h5><p> 如果回溯到了起始节点，但是还有未标记的节点，代表图是非连通的 <br> 则在未标记的节点中随机选择一个节点，并重复遍历动作 <br> 可以根据 DFS 被调用的次数，判断连通片的数量</p>
 <h5 id="深度优先生成树"><a href="# 深度优先生成树" class="headerlink" title="深度优先生成树"></a>深度优先生成树 </h5><h3 id="五、最小生成树"><a href="# 五、最小生成树" class="headerlink" title="五、最小生成树"></a> 五、最小生成树 </h3><h4 id="1- 概念"><a href="#1- 概念" class="headerlink" title="1. 概念"></a>1. 概念</h4><p> 生成树：连通图中的最小连通子图（边最少）<br>最小生成树：带权图中权值和最小的生成树 <br> 不同的最小生成树，权值合都是相同的</p>
-<h4 id="2- 算法"><a href="#2- 算法" class="headerlink" title="2. 算法"></a>2. 算法 </h4><h5 id="1-Prim- 算法：保持连通，选最小边及其顶点（最小边 - 最权值小的边）"><a href="#1-Prim- 算法：保持连通，选最小边及其顶点（最小边 - 最权值小的边）" class="headerlink" title="(1) Prim 算法：保持连通，选最小边及其顶点（最小边 = 最权值小的边）"></a>(1) Prim 算法：保持连通，选最小边及其顶点（最小边 = 最权值小的边）</h5><p> 从某一个顶点开始，不断加顶点和边 <br> 思路：贪心算法（每一步都考虑当前最优，结果恰好是全局最优，前提是满足最优子结构）<br>时间复杂度：$O (n^2)$<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo5.png" alt></p>
+<h4 id="2- 算法"><a href="#2- 算法" class="headerlink" title="2. 算法"></a>2. 算法 </h4><h5 id="1-Prim- 算法：保持连通，选最小边及其顶点（最小边 - 最权值小的边）"><a href="#1-Prim- 算法：保持连通，选最小边及其顶点（最小边 - 最权值小的边）" class="headerlink" title="(1) Prim 算法：保持连通，选最小边及其顶点（最小边 = 最权值小的边）"></a>(1) Prim 算法：保持连通，选最小边及其顶点（最小边 = 最权值小的边）</h5><p> 从某一个顶点开始，不断加顶点和边 <br> 思路：贪心算法（每一步都考虑当前最优，结果恰好是全局最优，前提是满足最优子结构）<br>时间复杂度：$O (n^2)$<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo5.png" alt></p>
 <h5 id="2-Krushal- 算法：保持无圈，选最小边"><a href="#2-Krushal- 算法：保持无圈，选最小边" class="headerlink" title="(2) Krushal 算法：保持无圈，选最小边"></a>(2) Krushal 算法：保持无圈，选最小边 </h5><p> 先包含全部的节点，因为生成树的节点数都是一样的 <br> 思路：贪心算法 <br> 时间复杂度：$O (eloge)$</p>
-<h5 id="3- 破圈法：找一个圈，删除最大边"><a href="#3- 破圈法：找一个圈，删除最大边" class="headerlink" title="(3) 破圈法：找一个圈，删除最大边"></a>(3) 破圈法：找一个圈，删除最大边 </h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph1.jpg" alt><br> 圈：$abdeca$，删除 $de$ 边 <br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph2.jpg" alt><br> 圈：$abdca$，删除 $dc$ 边 <br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph3.jpg" alt><br> 圈：$abeca$，删除 $be$ 边<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/graph4.jpg" alt></p>
-<h3 id="六、最短路径"><a href="# 六、最短路径" class="headerlink" title="六、最短路径"></a>六、最短路径 </h3><h4 id="1-Dijkstra- 算法：求单源最短距离（权值非负的有向图）"><a href="#1-Dijkstra- 算法：求单源最短距离（权值非负的有向图）" class="headerlink" title="1.Dijkstra 算法：求单源最短距离（权值非负的有向图）"></a>1.Dijkstra 算法：求单源最短距离（权值非负的有向图）</h4><p> 思想：贪心算法<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo6.png" alt></p>
-<h5 id="1- 将每个点标记一个距离值"><a href="#1- 将每个点标记一个距离值" class="headerlink" title="(1) 将每个点标记一个距离值"></a>(1) 将每个点标记一个距离值</h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo7.png" alt></p>
-<h5 id="2- 选取最小的顶点，加进来"><a href="#2- 选取最小的顶点，加进来" class="headerlink" title="(2) 选取最小的顶点，加进来"></a>(2) 选取最小的顶点，加进来 </h5><h5 id="3- 修改该点的出边的距离值"><a href="#3- 修改该点的出边的距离值" class="headerlink" title="(3) 修改该点的出边的距离值"></a>(3) 修改该点的出边的距离值</h5><p> 若通过该点到达的距离比较近，则修改距离值，并标记前驱节点<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo8.png" alt></p>
-<h5 id="4- 重复该过程，直到全部的点被加进来"><a href="#4- 重复该过程，直到全部的点被加进来" class="headerlink" title="(4) 重复该过程，直到全部的点被加进来"></a>(4) 重复该过程，直到全部的点被加进来 </h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo9.jpg" alt><br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo10.jpg" alt><br> 时间复杂度：$O (n)$<br>例：节点 1 到节点 4 的最短路径？<br>找节点 4 的前驱标记，是 3；再找节点 3 的前驱标记，依次重复<br>1-&gt;3-&gt;2-&gt;4</p>
-<h4 id="2-Floyd- 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）"><a href="#2-Floyd- 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）" class="headerlink" title="2.Floyd 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）"></a>2.Floyd 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）</h4><p>思想：动态规划 <br>$A^{(k)}_{i,j}$：$i$-&gt;$j$ 在顶点集 $\lbrace 1,2,…,k \rbrace$ 中的最短路径<br> 路径集合 $S^{(k)}$ 有两种：<br>(1) 包含 k 的：$A^{(k-1)}_{i,k}+A^{(k-1)}_{k,j}$<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo11.png" alt><br>(2) 不包含 k 的：$A^{(k-1)}_{i,j}$<br>于是可以推得公式：$A^{(k)}_{i,j}=min \lbrace A^{(k-1)}_{i,j},A^{(k-1)}_{i,k}+A^{(k-1)}_{k,j} \rbrace$</p>
-<h3 id="七、拓扑排序"><a href="# 七、拓扑排序" class="headerlink" title="七、拓扑排序"></a>七、拓扑排序 </h3><p> 应用场景：有向无环图 (AOV 网)，顶点代表的是事件<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo12.png" alt><br>$i$-&gt;$j$：$i$ 必须完成，才能开始 $j$</p>
+<h5 id="3- 破圈法：找一个圈，删除最大边"><a href="#3- 破圈法：找一个圈，删除最大边" class="headerlink" title="(3) 破圈法：找一个圈，删除最大边"></a>(3) 破圈法：找一个圈，删除最大边 </h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph1.jpg" alt><br> 圈：$abdeca$，删除 $de$ 边 <br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph2.jpg" alt><br> 圈：$abdca$，删除 $dc$ 边 <br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph3.jpg" alt><br> 圈：$abeca$，删除 $be$ 边<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/graph4.jpg" alt></p>
+<h3 id="六、最短路径"><a href="# 六、最短路径" class="headerlink" title="六、最短路径"></a>六、最短路径 </h3><h4 id="1-Dijkstra- 算法：求单源最短距离（权值非负的有向图）"><a href="#1-Dijkstra- 算法：求单源最短距离（权值非负的有向图）" class="headerlink" title="1.Dijkstra 算法：求单源最短距离（权值非负的有向图）"></a>1.Dijkstra 算法：求单源最短距离（权值非负的有向图）</h4><p> 思想：贪心算法<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo6.png" alt></p>
+<h5 id="1- 将每个点标记一个距离值"><a href="#1- 将每个点标记一个距离值" class="headerlink" title="(1) 将每个点标记一个距离值"></a>(1) 将每个点标记一个距离值</h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo7.png" alt></p>
+<h5 id="2- 选取最小的顶点，加进来"><a href="#2- 选取最小的顶点，加进来" class="headerlink" title="(2) 选取最小的顶点，加进来"></a>(2) 选取最小的顶点，加进来 </h5><h5 id="3- 修改该点的出边的距离值"><a href="#3- 修改该点的出边的距离值" class="headerlink" title="(3) 修改该点的出边的距离值"></a>(3) 修改该点的出边的距离值</h5><p> 若通过该点到达的距离比较近，则修改距离值，并标记前驱节点<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo8.png" alt></p>
+<h5 id="4- 重复该过程，直到全部的点被加进来"><a href="#4- 重复该过程，直到全部的点被加进来" class="headerlink" title="(4) 重复该过程，直到全部的点被加进来"></a>(4) 重复该过程，直到全部的点被加进来 </h5><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo9.jpg" alt><br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo10.jpg" alt><br> 时间复杂度：$O (n)$<br>例：节点 1 到节点 4 的最短路径？<br>找节点 4 的前驱标记，是 3；再找节点 3 的前驱标记，依次重复<br>1-&gt;3-&gt;2-&gt;4</p>
+<h4 id="2-Floyd- 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）"><a href="#2-Floyd- 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）" class="headerlink" title="2.Floyd 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）"></a>2.Floyd 算法：求各顶点值间最短路径（可以有负权值，但不可以有含负权值的环）</h4><p>思想：动态规划 <br>$A^{(k)}_{i,j}$：$i$-&gt;$j$ 在顶点集 $\lbrace 1,2,…,k \rbrace$ 中的最短路径<br> 路径集合 $S^{(k)}$ 有两种：<br>(1) 包含 k 的：$A^{(k-1)}_{i,k}+A^{(k-1)}_{k,j}$<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo11.png" alt><br>(2) 不包含 k 的：$A^{(k-1)}_{i,j}$<br>于是可以推得公式：$A^{(k)}_{i,j}=min \lbrace A^{(k-1)}_{i,j},A^{(k-1)}_{i,k}+A^{(k-1)}_{k,j} \rbrace$</p>
+<h3 id="七、拓扑排序"><a href="# 七、拓扑排序" class="headerlink" title="七、拓扑排序"></a>七、拓扑排序 </h3><p> 应用场景：有向无环图 (AOV 网)，顶点代表的是事件<br><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo12.png" alt><br>$i$-&gt;$j$：$i$ 必须完成，才能开始 $j$</p>
 <h4 id="1- 选择一个入度 -0- 的点"><a href="#1- 选择一个入度 -0- 的点" class="headerlink" title="(1) 选择一个入度 = 0 的点"></a>(1) 选择一个入度 = 0 的点 </h4><h4 id="2- 删除该点的所有出边"><a href="#2- 删除该点的所有出边" class="headerlink" title="(2) 删除该点的所有出边"></a>(2) 删除该点的所有出边</h4><h4 id="3- 重复这两个步骤，直到"><a href="#3- 重复这两个步骤，直到" class="headerlink" title="(3) 重复这两个步骤，直到"></a>(3) 重复这两个步骤，直到</h4><p>$\begin {cases}<br> 没有点了：得到一个合法的拓扑排序  &amp; \text {} \\<br>有点但是没有入度为 0 的点：图中有环 &amp; \text {}<br>\end {cases}$</p>
 <h3 id="八、关键路径"><a href="# 八、关键路径" class="headerlink" title="八、关键路径"></a>八、关键路径 </h3><h4 id="1- 概念 -1"><a href="#1- 概念 -1" class="headerlink" title="1. 概念"></a>1. 概念</h4><p> 应用场景：有向带权图，顶点代表事件，边代表活动，权值代表开销 (时间)-&gt;AOE 网 <br> 顶点不是重点，顶点只是表示入边代表的事件已经完成了 <br> 关键路径：在 AOE 网中寻找最长路径（最短工期：完成 $e_1-e_5$ 最少需要的时间）<br>关键路径是不唯一的 <br> 目的：缩短关键路径，缩短工期 <br> 关键活动：关键路径上的边所代表的活动</p>
-<h4 id="2- 算法概念"><a href="#2- 算法概念" class="headerlink" title="2. 算法概念"></a>2. 算法概念</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%883%EF%BC%89%E5%9B%BE/photo13.png" alt><br>(1) $ve (k)$：顶点 k 的最早时间<br>$ve ($ 源点 $)=0$<br>$ve (k)=max \lbrace ve (i)+w (i,k) \rbrace$<br>(2) $vl (k)$：顶点 k 最迟时间<br>(3) $ve (k)=vl (k)$：工期不变<br>$vl (k$$)=min \lbrace vl (j)-w (k,j) \rbrace$<br>(4) $e ()$：边的最早时间<br>$e (e_ik)=ve (i)$<br>(5) $l ()$：边的最迟时间<br>$l (e_kj)=l (j)-w (k,j)$<br>(6) $d ()=l ()-e ()$<br>$d ()=0$ 是关键活动</p>
+<h4 id="2- 算法概念"><a href="#2- 算法概念" class="headerlink" title="2. 算法概念"></a>2. 算法概念</h4><p><img src="/2019/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--3.%E5%9B%BE/photo13.png" alt><br>(1) $ve (k)$：顶点 k 的最早时间<br>$ve ($ 源点 $)=0$<br>$ve (k)=max \lbrace ve (i)+w (i,k) \rbrace$<br>(2) $vl (k)$：顶点 k 最迟时间<br>(3) $ve (k)=vl (k)$：工期不变<br>$vl (k$$)=min \lbrace vl (j)-w (k,j) \rbrace$<br>(4) $e ()$：边的最早时间<br>$e (e_ik)=ve (i)$<br>(5) $l ()$：边的最迟时间<br>$l (e_kj)=l (j)-w (k,j)$<br>(6) $d ()=l ()-e ()$<br>$d ()=0$ 是关键活动</p>
 <h4 id="3- 例子"><a href="#3- 例子" class="headerlink" title="3. 例子"></a>3. 例子</h4><h4 id="4- 缩短工期：缩短所有关键路径"><a href="#4- 缩短工期：缩短所有关键路径" class="headerlink" title="4. 缩短工期：缩短所有关键路径"></a>4. 缩短工期：缩短所有关键路径</h4><p>(1) 公共边<br>(2) 每个路径选一个</p>
 <h4 id="5- 总结"><a href="#5- 总结" class="headerlink" title="5. 总结"></a>5. 总结</h4><p>$ve ()$：起点加权取最大<br>$vl ()$：终点减权取最小<br>$e ()$：就取起点最早值<br>$l ()$：终点最迟减权值</p>
 
@@ -359,13 +359,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%882%EF%BC%89%E6%A0%91/" rel="prev" title="数据结构与算法 --（2）树">
-                  <i class="fa fa-chevron-left"></i> 数据结构与算法 --（2）树
+                <a href="/2019/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--2.%E6%A0%91/" rel="prev" title="数据结构与算法 --2. 树">
+                  <i class="fa fa-chevron-left"></i> 数据结构与算法 --2. 树
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%20--%EF%BC%884%EF%BC%89%E6%9F%A5%E6%89%BE/" rel="next" title="数据结构与算法 --（4）查找">
-                  数据结构与算法 --（4）查找 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95--4.%E6%9F%A5%E6%89%BE/" rel="next" title="数据结构与算法 --4. 查找">
+                  数据结构与算法 --4. 查找 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
