@@ -530,7 +530,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 16:21:54" itemprop="dateModified" datetime="2021-04-13T16:21:54+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 16:30:23" itemprop="dateModified" datetime="2021-04-13T16:30:23+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -599,7 +599,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/16/C++%20get-out-each-digit-of-the-number/" class="post-title-link" itemprop="url">取出一個數的每一位</a>
+          <a href="/2019/03/16/C++%20get-out-each-digit-of-the-number/" class="post-title-link" itemprop="url">C++ 取出一個數的每一位</a>
         </h2>
 
         <div class="post-meta-container">
@@ -617,7 +617,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 16:15:05" itemprop="dateModified" datetime="2021-04-13T16:15:05+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 16:30:45" itemprop="dateModified" datetime="2021-04-13T16:30:45+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -639,7 +639,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr [<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr [i] = t /<span class="built_in"><span class="keyword">int</span></span> (<span class="built_in">pow</span> (<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr [i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
 
       
     </div>
@@ -666,7 +667,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/14/C++%20rand()/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/14/C++%20rand/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -679,7 +680,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/14/C++%20rand()/" class="post-title-link" itemprop="url">利用 rand () 產生隨機數</a>
+          <a href="/2019/03/14/C++%20rand/" class="post-title-link" itemprop="url">C++ 利用 rand () 產生隨機數</a>
         </h2>
 
         <div class="post-meta-container">
@@ -697,7 +698,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 16:15:07" itemprop="dateModified" datetime="2021-04-13T16:15:07+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 16:31:19" itemprop="dateModified" datetime="2021-04-13T16:31:19+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -722,7 +723,7 @@
           <h4 id="1-rand-函數介紹"><a href="#1-rand-函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹</h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2019/03/14/C++%20rand()/#more" rel="contents">
+              <a class="btn" href="/2019/03/14/C++%20rand/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -784,7 +785,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 16:11:40" itemprop="dateModified" datetime="2021-04-13T16:11:40+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 16:31:01" itemprop="dateModified" datetime="2021-04-13T16:31:01+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -853,7 +854,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/28/C++%20explain-a-sentence/" class="post-title-link" itemprop="url">解釋一個語句</a>
+          <a href="/2018/10/28/C++%20explain-a-sentence/" class="post-title-link" itemprop="url">C++ 解釋一個語句</a>
         </h2>
 
         <div class="post-meta-container">
@@ -871,7 +872,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 16:15:11" itemprop="dateModified" datetime="2021-04-13T16:15:11+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 16:30:54" itemprop="dateModified" datetime="2021-04-13T16:30:54+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -940,7 +941,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/27/C++%20include/" class="post-title-link" itemprop="url">C++ 的 #include</a>
+          <a href="/2018/10/27/C++%20include/" class="post-title-link" itemprop="url">C++</a>
         </h2>
 
         <div class="post-meta-container">
@@ -958,7 +959,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 16:15:13" itemprop="dateModified" datetime="2021-04-13T16:15:13+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 16:30:50" itemprop="dateModified" datetime="2021-04-13T16:30:50+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
