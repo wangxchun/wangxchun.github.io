@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="google-site-verification" content="SEuuKcxiY0Z6R9aAPIZyU5Y9rFqpgO9gKES--zhFX24" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="数据结构与算法 —1. 线性表数据结构与算法 —2. 树数据结构与算法 —3. 图数据结构与算法 —4. 查找数据结构与算法 —5. 排序 一、概念1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。查找表：$\begin {cases}静态查找表：  &amp; \text {} \\动态查找表：有增删 &amp; \text {}\end {cases}$查找的结果一般分为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构与算法 --4. 查找">
+<meta property="og:url" content="https://wangxchun.github.io/2019/03/31/algorithm-find/index.html">
+<meta property="og:site_name" content="Chris自强不息">
+<meta property="og:description" content="数据结构与算法 —1. 线性表数据结构与算法 —2. 树数据结构与算法 —3. 图数据结构与算法 —4. 查找数据结构与算法 —5. 排序 一、概念1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。查找表：$\begin {cases}静态查找表：  &amp; \text {} \\动态查找表：有增删 &amp; \text {}\end {cases}$查找的结果一般分为">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/31/algorithm-find/photo1.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/31/algorithm-find/photo2.png">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/31/algorithm-find/photo3.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/31/algorithm-find/photo4.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2019/03/31/algorithm-find/photo5.jpg">
+<meta property="article:published_time" content="2019-03-31T00:32:49.000Z">
+<meta property="article:modified_time" content="2021-04-13T07:01:17.611Z">
+<meta property="article:author" content="Chris Wang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2019/03/31/algorithm-find/photo1.png">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/2019/03/31/algorithm-find/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>数据结构与算法 --4. 查找 | Chris自强不息</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Chris自强不息</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E5%BF%B5"><span class="nav-text">一、概念 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E6%9F%A5%E6%89%BE%EF%BC%9A%E5%9C%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%90%88%20-%20%E6%9F%A5%E6%89%BE%E8%A1%A8%20-%20%E4%B8%AD%E5%AF%BB%E6%89%BE%E6%BB%A1%E8%B6%B3%E6%9F%90%E7%A7%8D%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%95%B0%E6%8D%AE%E5%85%83%E7%B4%A0%E7%9A%84%E8%BF%87%E7%A8%8B%E3%80%82"><span class="nav-text">1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">2. 关键字 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E5%B9%B3%E5%9D%87%E6%9F%A5%E6%89%BE%E9%95%BF%E5%BA%A6%20-ASL-sum-i-0-n-P-iC-i"><span class="nav-text">3. 平均查找长度 $ASL &#x3D; \sum_{i&#x3D;0}^n P_iC_i$</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%E3%80%81%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%E3%80%81%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE"><span class="nav-text"> 二、顺序查找、折半查找、分块查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%EF%BC%9A%E4%BE%9D%E6%AC%A1%E6%9F%A5%E6%89%BE%E8%A1%A8%E4%B8%AD%E5%85%83%E7%B4%A0"><span class="nav-text">1. 顺序查找：依次查找表中元素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E4%B8%80%E8%88%AC%E7%BA%BF%E6%80%A7%E8%A1%A8%20-%20%E6%97%A0%E5%BA%8F%20-%20%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE"><span class="nav-text">(1) 一般线性表 (无序) 中的查找</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E6%9C%89%E5%BA%8F%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%EF%BC%9A%E5%A4%B1%E8%B4%A5%E6%97%B6%EF%BC%8C%E5%8F%AF%E6%8F%90%E5%89%8D%E8%BF%94%E5%9B%9E"><span class="nav-text">(2) 有序表的顺序查找：失败时，可提前返回</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%EF%BC%9A%E6%9C%89%E5%BA%8F%E7%9A%84%E9%A1%BA%E5%BA%8F%E8%A1%A8%E4%B8%AD"><span class="nav-text">2. 折半查找：有序的顺序表中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE%EF%BC%9A%E5%9D%97%E9%97%B4%E6%9C%89%E5%BA%8F%EF%BC%8C%E5%9D%97%E5%86%85%E6%97%A0%E5%BA%8F"><span class="nav-text">3. 分块查找：块间有序，块内无序 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81B-%20%E6%A0%91%EF%BC%88%E5%A4%9A%E8%B7%AF%E5%B9%B3%E8%A1%A1%E6%9F%A5%E6%89%BE%E6%A0%91%EF%BC%89"><span class="nav-text">三、B 树（多路平衡查找树）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-B-%20%E6%A0%91%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-text">1.B 树及其基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E6%A0%91%E4%B8%AD%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E8%87%B3%E5%A4%9A%E6%9C%89%20-m-%20%E6%A3%B5%E5%AD%90%E6%A0%91"><span class="nav-text">(1) 树中每个节点至多有 $m$ 棵子树</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E8%8B%A5%E6%A0%B9%E8%8A%82%E7%82%B9%E4%B8%8D%E6%98%AF%E7%BB%88%E7%AB%AF%E8%8A%82%E7%82%B9%EF%BC%8C%E5%88%99%E8%87%B3%E5%B0%91%E6%9C%89%E4%B8%A4%E6%A3%B5%E5%AD%90%E6%A0%91"><span class="nav-text">(2) 若根节点不是终端节点，则至少有两棵子树</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%20%E9%99%A4%E6%A0%B9%E8%8A%82%E7%82%B9%E5%A4%96%E7%9A%84%E6%89%80%E6%9C%89%E9%9D%9E%E5%8F%B6%E8%8A%82%E7%82%B9%E8%87%B3%E5%B0%91%E6%9C%89%20-displaystyle-lceil-m-over-2-rceil-%20%E4%B8%AA"><span class="nav-text">(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%20%E9%9D%9E%E5%8F%B6%E8%8A%82%E7%82%B9%E7%9A%84%E7%BB%93%E6%9E%84%E5%A6%82%E4%B8%8B"><span class="nav-text">(4) 非叶节点的结构如下</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%20%E5%85%B3%E9%94%AE%E5%AD%97%20-1-%20%E5%AD%90%E6%A0%91%E6%95%B0"><span class="nav-text">(5) 关键字 $+1&#x3D;$ 子树数 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-%20%E5%85%B3%E9%94%AE%E5%AD%97%E6%95%B0%20-m-%20%E4%B8%8E%E9%AB%98%E5%BA%A6%20-h-%20%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">(6) 关键字数 $m$ 与高度 $h$ 的关系 </span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E6%9F%A5%E6%89%BE"><span class="nav-text">2. 查找 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-B-%20%E6%A0%91%E6%8F%92%E5%85%A5"><span class="nav-text">3.B 树插入 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E5%AE%9A%E4%BD%8D%EF%BC%9A%E6%9F%90%E4%B8%AA%E9%9D%9E%E5%8F%B6%E8%8A%82%E7%82%B9"><span class="nav-text">(1) 定位：某个非叶节点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E6%8F%92%E5%85%A5%EF%BC%9A%E8%8B%A5%E6%8F%92%E5%85%A5%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%85%B3%E9%94%AE%E5%AD%97%E6%95%B0%E7%9B%AE%20-m-%EF%BC%8C%E5%88%86%E8%A3%82%EF%BC%8C%E5%B0%86%20-displaystyle-lceil-frac-m-2-rceil-%20%E5%85%B3%E9%94%AE%E5%AD%97%E6%8F%92%E5%85%A5%E7%88%B6%E8%8A%82%E7%82%B9"><span class="nav-text">(2) 插入：若插入之后，关键字数目 $&#x3D;m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-B-%20%E6%A0%91%E5%88%A0%E9%99%A4"><span class="nav-text">4.B 树删除</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E5%88%A0%E9%99%A4%E7%9A%84%E8%8A%82%E7%82%B9%E6%98%AF%E6%9C%80%E5%BA%95%E5%B1%82%E5%88%86%E6%94%AF"><span class="nav-text">(1) 删除的节点是最底层分支 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E5%88%A0%E9%99%A4%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%8D%E6%98%AF%E6%9C%80%E5%BA%95%E5%B1%82%E5%88%86%E6%94%AF"><span class="nav-text">(2) 删除的节点不是最底层分支</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chris Wang"
+      src="/img/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Chris Wang</p>
+  <div class="site-description" itemprop="description">機器視覺 / 機器學習 / C++</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chriswang0205@outlook.com" title="E-Mail → mailto:chriswang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/31/algorithm-find/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据结构与算法 --4. 查找
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-03-31 08:32:49" itemprop="dateCreated datePublished" datetime="2019-03-31T08:32:49+08:00">2019-03-31</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-13 15:01:17" itemprop="dateModified" datetime="2021-04-13T15:01:17+08:00">2021-04-13</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
+<h3 id="一、概念"><a href="# 一、概念" class="headerlink" title="一、概念"></a>一、概念 </h3><h4 id="1- 查找：在数据集合 - 查找表 - 中寻找满足某种条件的数据元素的过程。"><a href="#1- 查找：在数据集合 - 查找表 - 中寻找满足某种条件的数据元素的过程。" class="headerlink" title="1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。"></a>1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。</h4><p> 查找表：$\begin {cases}<br>静态查找表：  &amp; \text {} \\<br>动态查找表：有增删 &amp; \text {}<br>\end {cases}$<br>查找的结果一般分为两种：<br>(1) 查找成功：在数据集合中找到了满足条件的数据元素<br>(2) 查找失败<br><span id="more"></span></p>
+<h4 id="2- 关键字"><a href="#2- 关键字" class="headerlink" title="2. 关键字"></a>2. 关键字 </h4><h4 id="3- 平均查找长度 -ASL-sum-i-0-n-P-iC-i"><a href="#3- 平均查找长度 -ASL-sum-i-0-n-P-iC-i" class="headerlink" title="3. 平均查找长度 $ASL = \sum_{i=0}^n P_iC_i$"></a>3. 平均查找长度 $ASL = \sum_{i=0}^n P_iC_i$</h4><h3 id="二、顺序查找、折半查找、分块查找"><a href="# 二、顺序查找、折半查找、分块查找" class="headerlink" title="二、顺序查找、折半查找、分块查找"></a> 二、顺序查找、折半查找、分块查找</h3><h4 id="1- 顺序查找：依次查找表中元素"><a href="#1- 顺序查找：依次查找表中元素" class="headerlink" title="1. 顺序查找：依次查找表中元素"></a>1. 顺序查找：依次查找表中元素</h4><h5 id="1- 一般线性表 - 无序 - 中的查找"><a href="#1- 一般线性表 - 无序 - 中的查找" class="headerlink" title="(1) 一般线性表 (无序) 中的查找"></a>(1) 一般线性表 (无序) 中的查找</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>, i&lt;n, i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// 对 a [i] 判断</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>$ASL_{成功} = \displaystyle {1 \over n}(1+2+…+n)={n+1 \over 2}$<br>$ASL_{失败} = n$</p>
+<h5 id="2- 有序表的顺序查找：失败时，可提前返回"><a href="#2- 有序表的顺序查找：失败时，可提前返回" class="headerlink" title="(2) 有序表的顺序查找：失败时，可提前返回"></a>(2) 有序表的顺序查找：失败时，可提前返回</h5><p>$ASL_{成功} = \displaystyle {n+1 \over 2}$<br>$ASL_{失败} = \displaystyle {1 \over n+1}(1+2+…+n+n) = {n \over 2} + {n \over n+1}$<br>$n$ 个分支节点是树有 $n+1$ 个叶子</p>
+<h4 id="2- 折半查找：有序的顺序表中"><a href="#2- 折半查找：有序的顺序表中" class="headerlink" title="2. 折半查找：有序的顺序表中"></a>2. 折半查找：有序的顺序表中</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Binary_Search</span> <span class="params">(SeqList L, ElemType key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> low=<span class="number">0</span>, high=L.TableLen<span class="number">-1</span>, mid;</span><br><span class="line">	<span class="keyword">while</span> (low &lt; high)</span><br><span class="line">	&#123;</span><br><span class="line">	    mid = (low + high) / <span class="number">2</span>;</span><br><span class="line">	    <span class="keyword">if</span> (L.elem [mid] == key)</span><br><span class="line">	        <span class="keyword">return</span> mid;</span><br><span class="line">	    <span class="keyword">else</span> <span class="keyword">if</span> (L.elem [mid] &gt; key)</span><br><span class="line">	        high = mid - <span class="number">1</span>;</span><br><span class="line">	    <span class="keyword">else</span></span><br><span class="line">	    	low = mid + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/31/algorithm-find/photo1.png" alt><br>判定树是一个平衡二叉树 <br> 判定树的高度：$\lceil log_2 (n+1) \rceil$ 或 $\lfloor log_2 (n) \rfloor + 1$<br>$ASL_{成功} = \displaystyle {1 \over 11}(1 \times 1 + 2 \times 2 + 3 \times 4 + 4 \times 4) = 3$<br>$ASL_{失败} = \displaystyle {1 \over 12}(3 \times 4 + 4 \times 8) = {11 \over 3}$<br>可以构成折半查找的序列：某数字后面的数字都与其有相同的大小关系</p>
+<h4 id="3- 分块查找：块间有序，块内无序"><a href="#3- 分块查找：块间有序，块内无序" class="headerlink" title="3. 分块查找：块间有序，块内无序"></a>3. 分块查找：块间有序，块内无序 </h4><p> 快的索引表是有序的，所以也可以顺序查找或是二分查找 <br> 问题：怎么分块，效率最高？<br>假设有 $n$ 个元素，$s$ 个元素一个块，块数总共有 $\displaystyle \lceil {n \over s} \rceil$<br>$ASL_{成功} = \displaystyle \frac {\frac {n}{s}+1}{2} + {s+1 \over 2}$</p>
+<p>$\quad \quad \quad  \; \displaystyle ={s \over 2} + {n \over 2s} + 1$</p>
+<p>$\quad \quad \quad  \; \geq \displaystyle 2 \sqrt {\frac {s}{2} \times \frac {n}{2s}} + 1 $</p>
+<p>$\quad \quad \quad  \; = \sqrt {n} + 1 $</p>
+<p>等号成立的条件：$\displaystyle {s \over 2} = {n \over 2s} $ =&gt; $s=\sqrt {n}$</p>
+<h3 id="三、B- 树（多路平衡查找树）"><a href="# 三、B- 树（多路平衡查找树）" class="headerlink" title="三、B 树（多路平衡查找树）"></a>三、B 树（多路平衡查找树）</h3><h4 id="1-B- 树及其基本操作"><a href="#1-B- 树及其基本操作" class="headerlink" title="1.B 树及其基本操作"></a>1.B 树及其基本操作</h4><p>B 树中所有节点的孩子节点数的最大值称为 B 树的阶，通常用 $m$ 表示</p>
+<h5 id="1- 树中每个节点至多有 -m- 棵子树"><a href="#1- 树中每个节点至多有 -m- 棵子树" class="headerlink" title="(1) 树中每个节点至多有 $m$ 棵子树"></a>(1) 树中每个节点至多有 $m$ 棵子树</h5><h5 id="2- 若根节点不是终端节点，则至少有两棵子树"><a href="#2- 若根节点不是终端节点，则至少有两棵子树" class="headerlink" title="(2) 若根节点不是终端节点，则至少有两棵子树"></a>(2) 若根节点不是终端节点，则至少有两棵子树</h5><h5 id="3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个"><a href="#3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个" class="headerlink" title="(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个"></a>(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个</h5><h5 id="4- 非叶节点的结构如下"><a href="#4- 非叶节点的结构如下" class="headerlink" title="(4) 非叶节点的结构如下"></a>(4) 非叶节点的结构如下</h5><p><img src="/2019/03/31/algorithm-find/photo2.png" alt><br>$n$：关键字的个数（$\displaystyle \lceil {m \over 2} \rceil -1 \leq n \leq m-1$）</p>
+<h5 id="5- 关键字 -1- 子树数"><a href="#5- 关键字 -1- 子树数" class="headerlink" title="(5) 关键字 $+1=$ 子树数"></a>(5) 关键字 $+1=$ 子树数 </h5><p>$\displaystyle \lceil {m \over 2} \rceil \leq $ 子树数 $ \leq m$<br> 根是特殊情形：$2 \leq $ 子树数 $ \leq m$</p>
+<h5 id="6- 关键字数 -m- 与高度 -h- 的关系"><a href="#6- 关键字数 -m- 与高度 -h- 的关系" class="headerlink" title="(6) 关键字数 $m$ 与高度 $h$ 的关系"></a>(6) 关键字数 $m$ 与高度 $h$ 的关系 </h5><p> 每个节点最多有 $m$ 个子树，第 $m$ 层最多总共有 $m^i$ 个子树，总共有 $(m-1) m^i$ 个关键字</p>
+<p>$1+2 (\lceil {m \over 2} \rceil -1)(1+ \lceil {m \over 2} \rceil + …+{\lceil {m \over 2} \rceil}^{h-2}) \leq n \leq (m-1)[1+m+m^2+…+m^{h-1}]$</p>
+<p>$1+2 \times (\lceil \frac {m}{2} \rceil -1) \times \displaystyle \frac {{\lceil \frac {m}{2} \rceil}^{h-1} - 1}{\lceil \frac {m}{2} \rceil -1} \leq n \leq (m-1) \times {m^h-1 \over m-1}$</p>
+<p>$2 {\lceil \frac {m}{2} \rceil}^{h-1} - 1 \leq n \leq m^h - 1$</p>
+<p>$log_m (n+1) \leq h \leq log_{\lceil \frac {m}{2} \rceil} \displaystyle ({n+1 \over 2}) +1$</p>
+<h4 id="2- 查找"><a href="#2- 查找" class="headerlink" title="2. 查找"></a>2. 查找 </h4><p> 节点上查找 $\begin {cases}<br>成功  &amp; \text {} \\<br>失败：子树查找 &amp; \text {}<br>\end {cases}$</p>
+<h4 id="3-B- 树插入"><a href="#3-B- 树插入" class="headerlink" title="3.B 树插入"></a>3.B 树插入 </h4><h5 id="1- 定位：某个非叶节点"><a href="#1- 定位：某个非叶节点" class="headerlink" title="(1) 定位：某个非叶节点"></a>(1) 定位：某个非叶节点</h5><h5 id="2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点"><a href="#2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点" class="headerlink" title="(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点"></a>(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点</h5><h4 id="4-B- 树删除"><a href="#4-B- 树删除" class="headerlink" title="4.B 树删除"></a>4.B 树删除</h4><p> 分层两大类情形：</p>
+<h5 id="1- 删除的节点是最底层分支"><a href="#1- 删除的节点是最底层分支" class="headerlink" title="(1) 删除的节点是最底层分支"></a>(1) 删除的节点是最底层分支 </h5><p>$\quad$(a) 欲删除节点的父节点关键字 $&gt; \lceil \frac {m}{2} \rceil -1$，直接删除<br>$\quad$(b) 欲删除节点的父节点关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad$ (i) 兄弟节点够借：关键字 $\leq \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 父子易位，再平衡<br><img src="/2019/03/31/algorithm-find/photo3.jpg" alt><br><img src="/2019/03/31/algorithm-find/photo4.jpg" alt><br>$\quad \quad$ (ii) 兄弟节点不够借：关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 合并 (左 / 右 + 父亲 + 自己)<br><img src="/2019/03/31/algorithm-find/photo5.jpg" alt><br>Q：为什么能合并，不会超过关键字数量的上界吗？<br> 合并：$(\lceil \frac {m}{2} \rceil -1) + 1 + (\lceil \frac {m}{2} \rceil -2)=$</p>
+<h5 id="2- 删除的节点不是最底层分支"><a href="#2- 删除的节点不是最底层分支" class="headerlink" title="(2) 删除的节点不是最底层分支"></a>(2) 删除的节点不是最底层分支</h5>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/03/27/algorithm-graph/" rel="prev" title="数据结构与算法 --3. 图">
+                  <i class="fa fa-chevron-left"></i> 数据结构与算法 --3. 图
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/04/01/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/" rel="next" title="三連擊（洛谷 P1008）">
+                  三連擊（洛谷 P1008） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chris Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+</body>
+</html>
