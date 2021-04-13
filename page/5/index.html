@@ -181,7 +181,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -313,7 +313,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -326,7 +326,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">C++ 的 RALL 实现</a>
+          <a href="/2018/10/27/C++%20RALL/" class="post-title-link" itemprop="url">C++ 的 RALL 实现</a>
         </h2>
 
         <div class="post-meta-container">
@@ -369,7 +369,7 @@
           <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int32_t</span> *ptr = <span class="keyword">new</span> <span class="keyword">int32_t</span> [<span class="number">3</span>];</span><br><span class="line">		ptr [<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		ptr [<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		ptr [<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">delete</span> ptr;     <span class="comment">// 假设忘记了释放内存，会消耗大量内存</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">system</span> (<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/27/C++%E7%9A%84RALL%E5%AE%9E%E7%8E%B0/#more" rel="contents">
+              <a class="btn" href="/2018/10/27/C++%20RALL/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -431,7 +431,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 15:53:15" itemprop="dateModified" datetime="2021-04-13T15:53:15+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 15:58:48" itemprop="dateModified" datetime="2021-04-13T15:58:48+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -453,7 +453,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="報錯"><a href="#報錯" class="headerlink" title="報錯"></a>報錯</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a></p>
+<h3 id="報錯"><a href="#報錯" class="headerlink" title="報錯"></a>報錯</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/#more" rel="contents">
@@ -695,7 +696,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 15:53:14" itemprop="dateModified" datetime="2021-04-13T15:53:14+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 15:58:42" itemprop="dateModified" datetime="2021-04-13T15:58:42+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -717,7 +718,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> 可能有如下原因：</p>
+          <p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a></p>
+<p> 可能有如下原因：</p>
 <p>1、库函数拼写错误。如：printf，scanf, 等 </p>
 <p>2、定义的函数名在调用时，函数名拼写错误 </p>
 <p>3、在执行函数时可能函数体本身的问题 </p>
@@ -836,7 +838,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -849,7 +851,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/" class="post-title-link" itemprop="url">C++ 萬能標題檔案</a>
+          <a href="/2018/09/27/C++%20universal-header-files/" class="post-title-link" itemprop="url">C++ 萬能標題檔案</a>
         </h2>
 
         <div class="post-meta-container">
@@ -916,7 +918,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -929,7 +931,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/" class="post-title-link" itemprop="url">讓 Dev C++ 支持 C++11</a>
+          <a href="/2018/09/27/Dev%20C++11/" class="post-title-link" itemprop="url">讓 Dev C++ 支持 C++11</a>
         </h2>
 
         <div class="post-meta-container">
@@ -947,7 +949,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 10:18:09" itemprop="dateModified" datetime="2021-04-13T10:18:09+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 16:10:26" itemprop="dateModified" datetime="2021-04-13T16:10:26+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -969,10 +971,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在 DevC++ 中<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a &#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br>會出現如下錯誤<br><img src="/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/wrong1.png" alt><br></p>
+          <p>在 DevC++ 中<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a &#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br>會出現如下錯誤<br><img src="/2018/09/27/Dev%20C++11/wrong1.png" alt><br></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/09/27/%E8%AE%93Dev-C-%E6%94%AF%E6%8C%81C-11/#more" rel="contents">
+              <a class="btn" href="/2018/09/27/Dev%20C++11/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -1003,7 +1005,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/23/C++%20operator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -1016,7 +1018,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/" class="post-title-link" itemprop="url">C++ 运算符</a>
+          <a href="/2018/09/23/C++%20operator/" class="post-title-link" itemprop="url">C++ 运算符</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1059,7 +1061,7 @@
           <h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="#使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/#more" rel="contents">
+              <a class="btn" href="/2018/09/23/C++%20operator/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
