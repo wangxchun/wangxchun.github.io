@@ -17,19 +17,9 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ error:invalid types for array subscript</title>
-    <url>/2018/10/29/C++%20error%20invalid-types-for-array-subscript/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br><a href>C++ error: invalid types for array subscript</a></p>
-<p>當全域性變數與區域性變數為同名，格式卻不同的時候會報此錯 <br> 如全域性中 int a [10]; 主函式中 int a=1；<br><span id="more"></span><br>再次使用 a [] 時會報錯</p>
-]]></content>
-      <categories>
-        <category>C++ error</category>
-      </categories>
-  </entry>
-  <entry>
     <title>dev C++ error:Id returned 1 exit status</title>
     <url>/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br>[]</p>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br><a href="https://wangxchun.github.io/2018/10/29/C++%20error%20invalid-types-for-array-subscript/">C++ error: invalid types for array subscript</a></p>
 <p> 可能有如下原因：</p>
 <p>1、库函数拼写错误。如：printf，scanf, 等 <br><span id="more"></span><br>2、定义的函数名在调用时，函数名拼写错误 </p>
 <p>3、在执行函数时可能函数体本身的问题 </p>
@@ -43,9 +33,19 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ error:invalid types for array subscript</title>
+    <url>/2018/10/29/C++%20error%20invalid-types-for-array-subscript/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br><a href="https://wangxchun.github.io/2018/10/29/C++%20error%20invalid-types-for-array-subscript/">C++ error: invalid types for array subscript</a></p>
+<p>當全域性變數與區域性變數為同名，格式卻不同的時候會報此錯 <br> 如全域性中 int a [10]; 主函式中 int a=1；<br><span id="more"></span><br>再次使用 a [] 時會報錯</p>
+]]></content>
+      <categories>
+        <category>C++ error</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C++ error:no matching function for call to transform</title>
     <url>/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br>[]</p>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br><a href="https://wangxchun.github.io/2018/10/29/C++%20error%20invalid-types-for-array-subscript/">C++ error: invalid types for array subscript</a></p>
 <h3 id="報錯"><a href="# 報錯" class="headerlink" title="報錯"></a> 報錯 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 <p> 報錯：no matching function for call to transform</p>
@@ -86,11 +86,12 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 运算符</title>
-    <url>/2018/09/23/C++%20operator/</url>
-    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
-<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
-<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
+    <title>C++ include</title>
+    <url>/2018/10/27/C++%20include/</url>
+    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
+<h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
+<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
+<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
 <h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
 ]]></content>
       <categories>
@@ -101,12 +102,11 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ include</title>
-    <url>/2018/10/27/C++%20include/</url>
-    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
-<h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
-<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
-<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
+    <title>C++ 运算符</title>
+    <url>/2018/09/23/C++%20operator/</url>
+    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
+<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
+<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
 <h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
 ]]></content>
       <categories>
@@ -277,6 +277,19 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ 万能标头档</title>
+    <url>/2018/09/27/C++%20universal-header-files/</url>
+    <content><![CDATA[<p>C++ 万能标头档</p>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>刷题检讨 --(1) 线性表</title>
     <url>/2021/03/21/C++%E5%88%B7%E9%A2%98%E6%A3%80%E8%AE%A8--(1)%20%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
     <content><![CDATA[<h3 id="线性表"><a href="# 线性表" class="headerlink" title="线性表"></a>线性表 </h3><h5 id="1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator"><a href="#1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator" class="headerlink" title="(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator"></a>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator</h5><p> 除了用迭代器获取 vector 容器中的元素，[] 和 at 也可以<br>vector<int>(v).swap (v); // 收缩内存<br><span id="more"></span><br>//vector<int> 利用 v 调用拷贝构造函数，创建匿名对象，它会用 v 目前使用的元素个数来初始化这个匿名对象<br>//swap () 互换函数的本质类似于指针的交换<br>// 调换后 v 指向了创建的匿名对象，而本来匿名对象的指针 x 指向原本的 v，并且在该语句过后由系统自动回收</int></int></p>
@@ -315,19 +328,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>数据结构</tag>
         <tag>刷题</tag>
         <tag>线性表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 万能标头档</title>
-    <url>/2018/09/27/C++%20universal-header-files/</url>
-    <content><![CDATA[<p>C++ 万能标头档</p>
-<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -492,6 +492,15 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>数据结构与算法 --5. 排序</title>
+    <url>/2019/04/03/algorithm-sort/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
     <title>通信原理 --（7）最佳接收</title>
     <url>/2020/10/15/communicationSystem-BestAccepted/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
@@ -502,30 +511,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构与算法 --5. 排序</title>
-    <url>/2019/04/03/algorithm-sort/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
     <title>通信原理 --（3）模拟调制技术</title>
     <url>/2020/09/17/communicationSystem-analogModulation/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
 <h3 id="一、调制的概念和幅度调制"><a href="# 一、调制的概念和幅度调制" class="headerlink" title="一、调制的概念和幅度调制"></a>一、调制的概念和幅度调制</h3><span id="more"></span>
 <h3 id="二、幅度调制系统的抗噪声性能"><a href="# 二、幅度调制系统的抗噪声性能" class="headerlink" title="二、幅度调制系统的抗噪声性能"></a>二、幅度调制系统的抗噪声性能 </h3><h3 id="三、模拟角度调制"><a href="# 三、模拟角度调制" class="headerlink" title="三、模拟角度调制"></a> 三、模拟角度调制 </h3><h3 id="四、调频系统的抗噪声性能"><a href="# 四、调频系统的抗噪声性能" class="headerlink" title="四、调频系统的抗噪声性能"></a> 四、调频系统的抗噪声性能 </h3><h3 id="五、频分复用和模拟调制技术的应用"><a href="# 五、频分复用和模拟调制技术的应用" class="headerlink" title="五、频分复用和模拟调制技术的应用"></a> 五、频分复用和模拟调制技术的应用</h3>]]></content>
-      <categories>
-        <category>通信原理</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>通信原理 --（2）信道</title>
-    <url>/2020/09/14/communicationSystem-channel/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道</h3><span id="more"></span>
-<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -541,11 +531,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（1）绪论</title>
-    <url>/2020/09/10/communicationSystem-introduction/</url>
+    <title>通信原理 --（2）信道</title>
+    <url>/2020/09/14/communicationSystem-channel/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、通信的基本概念和通信系统的组成"><a href="# 一、通信的基本概念和通信系统的组成" class="headerlink" title="一、通信的基本概念和通信系统的组成"></a>一、通信的基本概念和通信系统的组成</h3><span id="more"></span>
-<h3 id="二、信息的度量和通信系统的性能指标"><a href="# 二、信息的度量和通信系统的性能指标" class="headerlink" title="二、信息的度量和通信系统的性能指标"></a>二、信息的度量和通信系统的性能指标</h3>]]></content>
+<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道</h3><span id="more"></span>
+<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -565,6 +555,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
     <url>/2020/09/23/communicationSystem-digitization/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
 <h3 id="一、模拟信号的抽样"><a href="# 一、模拟信号的抽样" class="headerlink" title="一、模拟信号的抽样"></a>一、模拟信号的抽样 </h3><h3 id="二、抽样信号的量化"><a href="# 二、抽样信号的量化" class="headerlink" title="二、抽样信号的量化"></a> 二、抽样信号的量化 </h3><h3 id="三、脉冲编码调制"><a href="# 三、脉冲编码调制" class="headerlink" title="三、脉冲编码调制"></a> 三、脉冲编码调制 </h3><h3 id="四、差分脉码调制与增量调制"><a href="# 四、差分脉码调制与增量调制" class="headerlink" title="四、差分脉码调制与增量调制"></a> 四、差分脉码调制与增量调制 </h3><h3 id="五、时分复用"><a href="# 五、时分复用" class="headerlink" title="五、时分复用"></a> 五、时分复用</h3>]]></content>
+      <categories>
+        <category>通信原理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>通信原理 --（1）绪论</title>
+    <url>/2020/09/10/communicationSystem-introduction/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
+<h3 id="一、通信的基本概念和通信系统的组成"><a href="# 一、通信的基本概念和通信系统的组成" class="headerlink" title="一、通信的基本概念和通信系统的组成"></a>一、通信的基本概念和通信系统的组成</h3><span id="more"></span>
+<h3 id="二、信息的度量和通信系统的性能指标"><a href="# 二、信息的度量和通信系统的性能指标" class="headerlink" title="二、信息的度量和通信系统的性能指标"></a>二、信息的度量和通信系统的性能指标</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -600,42 +600,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>计算机网络 lab1</title>
-    <url>/2021/03/20/computerNetwork-lab1/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑</a></p>
-<h3 id="Lab-1-Set-Up-Environment-and-Test-Basic-Softwares"><a href="#Lab-1-Set-Up-Environment-and-Test-Basic-Softwares" class="headerlink" title="Lab 1: Set Up Environment and Test Basic Softwares"></a>Lab 1: Set Up Environment and Test Basic Softwares</h3><p>准备工作：</p>
-<h5 id="1- 安装 -Virtualbox"><a href="#1- 安装 -Virtualbox" class="headerlink" title="(1) 安装 Virtualbox"></a>(1) 安装 Virtualbox</h5><h5 id="2- 在 -Virtualbox- 中建立安装 -ubuntu- 作业系统的虚拟机"><a href="#2- 在 -Virtualbox- 中建立安装 -ubuntu- 作业系统的虚拟机" class="headerlink" title="(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机"></a>(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机 </h5><p> 在 Windows 下安裝 VirtualBox 及 Ubuntu 18.04：<br>(Ubuntu18.04 可以在官网下载，或是下载阿里镜像)<br><span id="more"></span><br><a href="https://hth322.pixnet.net/blog/post/183391361-%">https://hth322.pixnet.net/blog/post/183391361-%</a> E5% AE%89% E8% A3%9Dubuntu% E5%9C% A8oracle-vm-virtualbox% E7% B4% AE% E8% A8%98<br><a href="https://murphymind.blogspot.com/2020/01/windows-virtualbox-ubuntu-1804.html">https://murphymind.blogspot.com/2020/01/windows-virtualbox-ubuntu-1804.html</a></p>
-<h5 id="3- 设置虚拟机网卡（net-hostonly）"><a href="#3- 设置虚拟机网卡（net-hostonly）" class="headerlink" title="(3) 设置虚拟机网卡（net + hostonly）"></a>(3) 设置虚拟机网卡（net + hostonly）</h5><p><img src="/2021/03/20/computerNetwork-lab1/photo4.png" alt></p>
-<h5 id="4- 在 -linux- 上安装 -wireshark"><a href="#4- 在 -linux- 上安装 -wireshark" class="headerlink" title="(4) 在 linux 上安装 wireshark"></a>(4) 在 linux 上安装 wireshark</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ dpkg -l |grep wrieshark&#x2F;&#x2F; 查看系统是否有这个包</span><br><span class="line">&#x2F;&#x2F; 如果没有，在网络原配置好的情况下</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install wireshark &#x2F;&#x2F; 等待安装完成</span><br></pre></td></tr></table></figure>
-<p>若出现 “Should non-superusers be able to capture packages?” ，选择 yes<br>若没有，则手动设置 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ dpkg-reconfigure wireshark-common</span><br></pre></td></tr></table></figure><br> 把当前用户加入到 wireshark 组当中:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo vim &#x2F;etc&#x2F;group</span><br></pre></td></tr></table></figure></p>
-<h5 id="5- 运行 -wireshark，选择要检测的端口"><a href="#5- 运行 -wireshark，选择要检测的端口" class="headerlink" title="(5) 运行 wireshark，选择要检测的端口"></a>(5) 运行 wireshark，选择要检测的端口</h5><p><img src="/2021/03/20/computerNetwork-lab1/photo5.png" alt></p>
-<h4 id="1-What-protocol-does-“ping”-and-“traceroute”-use-10-points"><a href="#1-What-protocol-does-“ping”-and-“traceroute”-use-10-points" class="headerlink" title="1. What protocol does “ping” and “traceroute” use? (10 points)"></a>1. What protocol does “ping” and “traceroute” use? (10 points)</h4><p>打开 wireshark 开始监测<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ping google.com&#x2F;&#x2F; 可以看到使用的协议是 ICMP</span><br><span class="line">$ traceroute google.com&#x2F;&#x2F; 可以看到使用的协议是 UDP</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-What-is-the-IP-address-of-www-sjtu-edu-cn-10-points"><a href="#2-What-is-the-IP-address-of-www-sjtu-edu-cn-10-points" class="headerlink" title="2. What is the IP address of www.sjtu.edu.cn? (10 points)"></a>2. What is the IP address of www.sjtu.edu.cn? (10 points)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ping www.sjtu.edu.cn&#x2F;&#x2F; 可以看到 IP</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/03/20/computerNetwork-lab1/photo7.png" alt></p>
-<h4 id="3-What-is-the-average-round-trip-time-RTT-from-your-VM-to-www-sjtu-edu-cn-and-mit-edu"><a href="#3-What-is-the-average-round-trip-time-RTT-from-your-VM-to-www-sjtu-edu-cn-and-mit-edu" class="headerlink" title="3. What is the average round trip time (RTT) from your VM to www.sjtu.edu.cn and mit.edu."></a>3. What is the average round trip time (RTT) from your VM to www.sjtu.edu.cn and mit.edu.</h4><p>Analyze the reason for the difference of their RTTs. (25 points)<br>(1) ping to send 10 packets and get the average RTT<br><img src="/2021/03/20/computerNetwork-lab1/photo8.png" alt><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ping www.sjtu.edu.cn -c 10 &#x2F;&#x2F; 可以看到 rtt</span><br></pre></td></tr></table></figure></p>
-<h4 id="4-What-is-the-TCP-bandwidth-between-your-two-VMs-25-points"><a href="#4-What-is-the-TCP-bandwidth-between-your-two-VMs-25-points" class="headerlink" title="4. What is the TCP bandwidth between your two VMs? (25 points)"></a>4. What is the TCP bandwidth between your two VMs? (25 points)</h4><p>(1) 安裝 iPerf3<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install iperf3</span><br></pre></td></tr></table></figure><br>(2) 测试网络频宽 <br>Server 端:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ iperf3 -s</span><br></pre></td></tr></table></figure><br>Client 端<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ iperf3 -c SERVER_IP</span><br></pre></td></tr></table></figure><br>(3) connection timeout 问题解决<br><a href="https://www.mdeditor.tw/pl/2NjU/zh-tw">https://www.mdeditor.tw/pl/2NjU/zh-tw</a><br> 如何诊断：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 檢查 ipv4 forwarding 是否開啟 </span><br><span class="line">$ sysctl net.ipv4.ip_forward</span><br><span class="line">&#x2F;&#x2F;net.ipv4.ip_forward &#x3D; 0，意味著未開啟</span><br></pre></td></tr></table></figure><br> 如何修復：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;this will turn things back on a live server</span><br><span class="line">$ sysctl -w net.ipv4.ip_forward&#x3D;1</span><br><span class="line">&#x2F;&#x2F;on Centos this will make the setting apply after reboot</span><br><span class="line">$ echo net.ipv4.ip_forward&#x3D;1 &gt;&gt; &#x2F;etc&#x2F;sysconf.d&#x2F;10-ipv4-forwarding-on.conf</span><br><span class="line">&#x2F;&#x2F; 驗證並生效</span><br><span class="line">$ sysctl -p</span><br></pre></td></tr></table></figure></p>
-<p>如何診斷：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 檢查 bridge netfilter 是否開啟 </span><br><span class="line">$ sysctl net.bridge.bridge-nf-call-iptables</span><br><span class="line">net.bridge.bridge-nf-call-iptables &#x3D; 0，表示未開啟</span><br></pre></td></tr></table></figure><br> 如何修復：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Note some distributions may have this compiled with kernel,</span><br><span class="line">check with cat &#x2F;lib&#x2F;modules&#x2F;$ (uname -r)&#x2F;modules.builtin | grep netfilter</span><br><span class="line">$ modprobe br_netfilter</span><br><span class="line">開啟這個 iptables 設定</span><br><span class="line">$ sysctl -w net.bridge.bridge-nf-call-iptables&#x3D;1</span><br><span class="line">$ echo net.bridge.bridge-nf-call-iptables&#x3D;1 &gt;&gt; &#x2F;etc&#x2F;sysconf.d&#x2F;10-bridge-nf-call-iptables.conf</span><br><span class="line">$ sysctl -p</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://gist.github.com/iamcryptoki/ed6925ce95f047673e7709f23e0b9939">https://gist.github.com/iamcryptoki/ed6925ce95f047673e7709f23e0b9939</a><br>Fix sysctl: cannot stat /proc/sys/net/bridge/bridge-nf-call-iptables.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$  modprobe bridge</span><br><span class="line">$  echo &quot;net.bridge.bridge-nf-call-iptables &#x3D; 1&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf</span><br><span class="line">$  sysctl -p &#x2F;etc&#x2F;sysctl.conf</span><br><span class="line"></span><br><span class="line">sysctl: cannot stat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-iptables: No such file or directory sysctl: cannot stat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-ip6tables: No such file or directory</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; SOLUTION</span><br><span class="line">$  modprobe br_netfilter</span><br><span class="line">$  sysctl -p &#x2F;etc&#x2F;sysctl.conf</span><br></pre></td></tr></table></figure></p>
-<h4 id="5-Select-a-VM-as-your-host-machine-and-another-VM-as-your-server-machine-then-use-ssh-on-your-host-to-connect-to-the-server-15-points"><a href="#5-Select-a-VM-as-your-host-machine-and-another-VM-as-your-server-machine-then-use-ssh-on-your-host-to-connect-to-the-server-15-points" class="headerlink" title="5. Select a VM as your host machine, and another VM as your server machine, then use ssh on your host to connect to the server. (15 points)"></a>5. Select a VM as your host machine, and another VM as your server machine, then use ssh on your host to connect to the server. (15 points)</h4><h5 id="1- 在 -UBuntu- 安装 -ssh"><a href="#1- 在 -UBuntu- 安装 -ssh" class="headerlink" title="(1) 在 UBuntu 安装 ssh"></a>(1) 在 UBuntu 安装 ssh</h5><p>(a) 开启 terminal<br>(b) 更新套件清单<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure><br>(c) 安装 OpenSSH Server<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install -y openssh-server</span><br></pre></td></tr></table></figure><br>(d) 确认 SSH 服务<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo service ssh status</span><br></pre></td></tr></table></figure><br>(e) 查询 Ubuntu 的 IP<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ifconfig &#x2F;&#x2F;server 的 IP</span><br></pre></td></tr></table></figure><br>(f) 在 host mechine 上，ssh 到 server<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh chris@192.158.xx.xxx</span><br></pre></td></tr></table></figure></p>
-<h4 id="6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points"><a href="#6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points" class="headerlink" title="6. Use scp to copy a file from your host to the server. (15 points)"></a>6. Use scp to copy a file from your host to the server. (15 points)</h4><h5 id="1- 本地端 -Host- 需安装 -openssh-client- 套件"><a href="#1- 本地端 -Host- 需安装 -openssh-client- 套件" class="headerlink" title="(1) 本地端 Host 需安装 openssh-client 套件"></a>(1) 本地端 Host 需安装 openssh-client 套件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openssh-client</span><br></pre></td></tr></table></figure>
-<h5 id="2- 远端 -Server- 需安装 -openssh-server- 套件"><a href="#2- 远端 -Server- 需安装 -openssh-server- 套件" class="headerlink" title="(2) 远端 Server 需安装 openssh-server 套件"></a>(2) 远端 Server 需安装 openssh-server 套件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openssh-server</span><br></pre></td></tr></table></figure>
-<h5 id="3- 将文件从本机 -Host- 复制到远端主机 -Server"><a href="#3- 将文件从本机 -Host- 复制到远端主机 -Server" class="headerlink" title="(3) 将文件从本机 Host 复制到远端主机 Server"></a>(3) 将文件从本机 Host 复制到远端主机 Server</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo chmod 777 &#x2F;home&#x2F;test&#x2F;&#x2F; 改变权限</span><br><span class="line">$ scp a.txt chris@192.168.xx.xxx</span><br></pre></td></tr></table></figure>
-<h3 id="问题解决"><a href="# 问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><h4 id="E- 无法获取 -dpkg- 前端锁 -var-lib-dpkg-lock-frontend-，是否有其他进程正占用它？"><a href="#E- 无法获取 -dpkg- 前端锁 -var-lib-dpkg-lock-frontend-，是否有其他进程正占用它？" class="headerlink" title="E: 无法获取 dpkg 前端锁 (/var/lib/dpkg/lock-frontend)，是否有其他进程正占用它？"></a>E: 无法获取 dpkg 前端锁 (/var/lib/dpkg/lock-frontend)，是否有其他进程正占用它？</h4><p>(1) 杀死进程<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ps -e|grep apt-get</span><br><span class="line">sudo kill [进程]</span><br></pre></td></tr></table></figure><br>(2) 重新启动</p>
-<h3 id="知识补充"><a href="# 知识补充" class="headerlink" title="知识补充"></a>知识补充 </h3><h4 id="1- 本地接口列表包含一个 -Random-packet-generator，这是什么"><a href="#1- 本地接口列表包含一个 -Random-packet-generator，这是什么" class="headerlink" title="1. 本地接口列表包含一个 Random packet generator，这是什么"></a>1. 本地接口列表包含一个 Random packet generator，这是什么</h4><p> 这是 wireshark 提供的一个模拟；每次随机生成某种协议的 1000 个包；供研究学习使用。</p>
-<h4 id="透过 -wireshark- 查看封包，可以了解到為什麼端到端加密很重要。"><a href="# 透过 -wireshark- 查看封包，可以了解到為什麼端到端加密很重要。" class="headerlink" title="透过 wireshark 查看封包，可以了解到為什麼端到端加密很重要。"></a>透过 wireshark 查看封包，可以了解到為什麼端到端加密很重要。</h4><p>假設你正在登入一個不使用 HTTPS 的網站。與你在同一網路上的任何人都可以嗅探封包，並在原始資料中看到使用者名稱和密碼。<br>這就是為什麼現在大多數聊天應用程式使用端到端加密，而大多數網站使用 https (而不是 http)</p>
-<h4 id="2-Traceroute- 工作原理"><a href="#2-Traceroute- 工作原理" class="headerlink" title="2. Traceroute 工作原理"></a>2. Traceroute 工作原理</h4><p><img src="/2021/03/20/computerNetwork-lab1/photo6.png" alt><br>Traceroute 最简单的基本用法是：traceroute hostname<br>    Traceroute 程序的设计是利用 ICMP 及 IP header 的 TTL (Time To Live) 栏位 (field)。首先，traceroute 送出一个 TTL 是 1 的 IP datagram（其实，每次送出的为 3 个 40 字节的包括源地址，目的地址和包发出的时间标签）到目的地，当路径上的第一个路由器 (router) 收到这个 datagram 时，它将 TTL 减 1。此时，TTL 变为 0 了，所以路由器会将此 datagram 丢掉，并送回一个「ICMP time exceeded」消息（包括发 IP 包的源地址，IP 包的所有内容及路由器的 IP 地址），traceroute 收到这个消息后，便知道这个路由器存在于这个路径上，接着 traceroute 再送出另一个 TTL 是 2 的 datagram，发现第 2 个路由器…… traceroute 每次将送出的 datagram 的 TTL 加 1 来发现另一个路由器，这个重复的动作一直持续到某个 datagram 目的地。当 datagram 到达目的地后，该主机并不会送回 ICMP time exceed 消息，因为它已经是目的地了，那么 traceroute 如何得知目的地到达了呢？</p>
-<p>Traceroute 在送出 UDP datagrams 到目的地时，它所选择送达的 port number 是一个一般应用程序都不会用的号码（30000 以上），所以当此 UDP datagram 到达目的地后该主机会送回一个「ICMP port unreachable」的消息，而当 traceroute 收到这个消息时，便知道目的地已经到达了。所以 traceroute 在 Server 也是没有所谓的 Daemon 程式。<br>Traceroute 提取发 ICMP TTL 到期消息设备的 IP 地址并作域名解析。每次，Traceroute 都打印出一系列数据，包括所经过的路由设备的域名及 IP 地址，三个包每次来回所花时间。其中 CDN (内容分发网络) 就是为了降低与用户路由的个数而设计的。</p>
-<h4 id="3-Ping- 工作原理"><a href="#3-Ping- 工作原理" class="headerlink" title="3. Ping 工作原理"></a>3. Ping 工作原理 </h4><p> 運作原理：向目標主機傳出一個要求封包，並等待接收回應封包。程式會按時間和成功回應的次數估算封包遺失率（丟包率）和封包來回的時間（即 RTT）</p>
-<h3 id="操作补充"><a href="# 操作补充" class="headerlink" title="操作补充"></a>操作补充</h3><h4 id="1- 查看主机 -ip- 地址方式："><a href="#1- 查看主机 -ip- 地址方式：" class="headerlink" title="1. 查看主机 ip 地址方式："></a>1. 查看主机 ip 地址方式：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ifconfig</span><br><span class="line">&#x2F;&#x2F;windows cmd 是使用 $ ipconfig</span><br></pre></td></tr></table></figure>
-<h4 id="2-Linux- 从一般用户切换到 -root- 用户"><a href="#2-Linux- 从一般用户切换到 -root- 用户" class="headerlink" title="2.Linux 从一般用户切换到 root 用户"></a>2.Linux 从一般用户切换到 root 用户</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo su</span><br><span class="line">$ exit &#x2F;&#x2F; 从 root 切换回一般用户</span><br></pre></td></tr></table></figure>
-<h4 id="3-vim- 常用指令"><a href="#3-vim- 常用指令" class="headerlink" title="3.vim 常用指令"></a>3.vim 常用指令</h4><p><img src="/2021/03/20/computerNetwork-lab1/photo9.png" alt><br><img src="/2021/03/20/computerNetwork-lab1/photo10.png" alt></p>
-<h3 id="详细名词解释"><a href="# 详细名词解释" class="headerlink" title="详细名词解释"></a>详细名词解释</h3><p><a href="https://sls.weco.net/node/28883">https://sls.weco.net/node/28883</a></p>
-<h3 id="讨论：安装 -VirtualBox-VMWare-or-Parallels- 哪个比较好？"><a href="# 讨论：安装 -VirtualBox-VMWare-or-Parallels- 哪个比较好？" class="headerlink" title="讨论：安装 VirtualBox, VMWare, or Parallels 哪个比较好？"></a>讨论：安装 VirtualBox, VMWare, or Parallels 哪个比较好？</h3>]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算机网络 lab2 使用 Mininet 创建网络拓扑</title>
     <url>/2021/03/30/computerNetwork-lab2-Mininet/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑</a></p>
@@ -656,6 +620,42 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="六、lab2"><a href="# 六、lab2" class="headerlink" title="六、lab2"></a>六、lab2</h3><h4 id="问题 -1"><a href="# 问题 -1" class="headerlink" title="问题 1"></a>问题 1</h4><p>Simulate the following topology in Mininet. Set the link bandwidth for (s1,s2) and (s1,s3) as 10Mbps. Use iperf3 to test the TCP throughput between h1 to h2, h3, h4.(30 points)<br>知识点：带宽设置<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#10 Mbps, 5ms 延迟，0% 丢包，1000 字节的大小  </span><br><span class="line">self.addLink (host, switch, bw&#x3D;10, delay&#x3D;&#39;5ms&#39;, loss&#x3D;0, max_queue_size&#x3D;1000, use_htb&#x3D;True)</span><br></pre></td></tr></table></figure><br><a href="https://blog.csdn.net/weixin_34283445/article/details/93944421?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=mininet%20%">https://blog.csdn.net/weixin_34283445/article/details/93944421?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=mininet%20%</a> E7% B3% BB% E5%88%97% E5% AE%9E% E9% AA%8C% E4% BA%94&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-93944421.pc_search_result_hbase_insert</p>
 <p>报错：mininet 中运行网络拓扑时 <br>Exception:Error creating interface pair (s1-eth1,s2-eth1): RTNETLINK answers: File exists<br> 这是因为重复构建了相同的拓扑，没有清除，所以若在.py 中构建相同的拓扑图时需要先清除掉先前的拓扑结构：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo mn -c</span><br></pre></td></tr></table></figure><br><a href="https://blog.csdn.net/weixin_46490821/article/details/109065097">https://blog.csdn.net/weixin_46490821/article/details/109065097</a></p>
 ]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算机网络 lab1</title>
+    <url>/2021/03/20/computerNetwork-lab1/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑</a></p>
+<h3 id="Lab-1-Set-Up-Environment-and-Test-Basic-Softwares"><a href="#Lab-1-Set-Up-Environment-and-Test-Basic-Softwares" class="headerlink" title="Lab 1: Set Up Environment and Test Basic Softwares"></a>Lab 1: Set Up Environment and Test Basic Softwares</h3><p>准备工作：</p>
+<h5 id="1- 安装 -Virtualbox"><a href="#1- 安装 -Virtualbox" class="headerlink" title="(1) 安装 Virtualbox"></a>(1) 安装 Virtualbox</h5><h5 id="2- 在 -Virtualbox- 中建立安装 -ubuntu- 作业系统的虚拟机"><a href="#2- 在 -Virtualbox- 中建立安装 -ubuntu- 作业系统的虚拟机" class="headerlink" title="(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机"></a>(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机 </h5><p> 在 Windows 下安裝 VirtualBox 及 Ubuntu 18.04：<br>(Ubuntu18.04 可以在官网下载，或是下载阿里镜像)<br><span id="more"></span><br><a href="https://hth322.pixnet.net/blog/post/183391361-%">https://hth322.pixnet.net/blog/post/183391361-%</a> E5% AE%89% E8% A3%9Dubuntu% E5%9C% A8oracle-vm-virtualbox% E7% B4% AE% E8% A8%98<br><a href="https://murphymind.blogspot.com/2020/01/windows-virtualbox-ubuntu-1804.html">https://murphymind.blogspot.com/2020/01/windows-virtualbox-ubuntu-1804.html</a></p>
+<h5 id="3- 设置虚拟机网卡（net-hostonly）"><a href="#3- 设置虚拟机网卡（net-hostonly）" class="headerlink" title="(3) 设置虚拟机网卡（net + hostonly）"></a>(3) 设置虚拟机网卡（net + hostonly）</h5><p><img src="/2021/03/20/computerNetwork-lab1/photo4.png" alt></p>
+<h5 id="4- 在 -linux- 上安装 -wireshark"><a href="#4- 在 -linux- 上安装 -wireshark" class="headerlink" title="(4) 在 linux 上安装 wireshark"></a>(4) 在 linux 上安装 wireshark</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ dpkg -l |grep wrieshark&#x2F;&#x2F; 查看系统是否有这个包</span><br><span class="line">&#x2F;&#x2F; 如果没有，在网络原配置好的情况下</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install wireshark &#x2F;&#x2F; 等待安装完成</span><br></pre></td></tr></table></figure>
+<p>若出现 “Should non-superusers be able to capture packages?” ，选择 yes<br>若没有，则手动设置 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ dpkg-reconfigure wireshark-common</span><br></pre></td></tr></table></figure><br> 把当前用户加入到 wireshark 组当中:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo vim &#x2F;etc&#x2F;group</span><br></pre></td></tr></table></figure></p>
+<h5 id="5- 运行 -wireshark，选择要检测的端口"><a href="#5- 运行 -wireshark，选择要检测的端口" class="headerlink" title="(5) 运行 wireshark，选择要检测的端口"></a>(5) 运行 wireshark，选择要检测的端口</h5><p><img src="/2021/03/20/computerNetwork-lab1/photo5.png" alt></p>
+<h4 id="1-What-protocol-does-“ping”-and-“traceroute”-use-10-points"><a href="#1-What-protocol-does-“ping”-and-“traceroute”-use-10-points" class="headerlink" title="1. What protocol does “ping” and “traceroute” use? (10 points)"></a>1. What protocol does “ping” and “traceroute” use? (10 points)</h4><p>打开 wireshark 开始监测<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ping google.com&#x2F;&#x2F; 可以看到使用的协议是 ICMP</span><br><span class="line">$ traceroute google.com&#x2F;&#x2F; 可以看到使用的协议是 UDP</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-What-is-the-IP-address-of-www-sjtu-edu-cn-10-points"><a href="#2-What-is-the-IP-address-of-www-sjtu-edu-cn-10-points" class="headerlink" title="2. What is the IP address of www.sjtu.edu.cn? (10 points)"></a>2. What is the IP address of www.sjtu.edu.cn? (10 points)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ping www.sjtu.edu.cn&#x2F;&#x2F; 可以看到 IP</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/20/computerNetwork-lab1/photo7.png" alt></p>
+<h4 id="3-What-is-the-average-round-trip-time-RTT-from-your-VM-to-www-sjtu-edu-cn-and-mit-edu"><a href="#3-What-is-the-average-round-trip-time-RTT-from-your-VM-to-www-sjtu-edu-cn-and-mit-edu" class="headerlink" title="3. What is the average round trip time (RTT) from your VM to www.sjtu.edu.cn and mit.edu."></a>3. What is the average round trip time (RTT) from your VM to www.sjtu.edu.cn and mit.edu.</h4><p>Analyze the reason for the difference of their RTTs. (25 points)<br>(1) ping to send 10 packets and get the average RTT<br><img src="/2021/03/20/computerNetwork-lab1/photo8.png" alt><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ping www.sjtu.edu.cn -c 10 &#x2F;&#x2F; 可以看到 rtt</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-What-is-the-TCP-bandwidth-between-your-two-VMs-25-points"><a href="#4-What-is-the-TCP-bandwidth-between-your-two-VMs-25-points" class="headerlink" title="4. What is the TCP bandwidth between your two VMs? (25 points)"></a>4. What is the TCP bandwidth between your two VMs? (25 points)</h4><p>(1) 安裝 iPerf3<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install iperf3</span><br></pre></td></tr></table></figure><br>(2) 测试网络频宽 <br>Server 端:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ iperf3 -s</span><br></pre></td></tr></table></figure><br>Client 端<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ iperf3 -c SERVER_IP</span><br></pre></td></tr></table></figure><br>(3) connection timeout 问题解决<br><a href="https://www.mdeditor.tw/pl/2NjU/zh-tw">https://www.mdeditor.tw/pl/2NjU/zh-tw</a><br> 如何诊断：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 檢查 ipv4 forwarding 是否開啟 </span><br><span class="line">$ sysctl net.ipv4.ip_forward</span><br><span class="line">&#x2F;&#x2F;net.ipv4.ip_forward &#x3D; 0，意味著未開啟</span><br></pre></td></tr></table></figure><br> 如何修復：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;this will turn things back on a live server</span><br><span class="line">$ sysctl -w net.ipv4.ip_forward&#x3D;1</span><br><span class="line">&#x2F;&#x2F;on Centos this will make the setting apply after reboot</span><br><span class="line">$ echo net.ipv4.ip_forward&#x3D;1 &gt;&gt; &#x2F;etc&#x2F;sysconf.d&#x2F;10-ipv4-forwarding-on.conf</span><br><span class="line">&#x2F;&#x2F; 驗證並生效</span><br><span class="line">$ sysctl -p</span><br></pre></td></tr></table></figure></p>
+<p>如何診斷：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 檢查 bridge netfilter 是否開啟 </span><br><span class="line">$ sysctl net.bridge.bridge-nf-call-iptables</span><br><span class="line">net.bridge.bridge-nf-call-iptables &#x3D; 0，表示未開啟</span><br></pre></td></tr></table></figure><br> 如何修復：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Note some distributions may have this compiled with kernel,</span><br><span class="line">check with cat &#x2F;lib&#x2F;modules&#x2F;$ (uname -r)&#x2F;modules.builtin | grep netfilter</span><br><span class="line">$ modprobe br_netfilter</span><br><span class="line">開啟這個 iptables 設定</span><br><span class="line">$ sysctl -w net.bridge.bridge-nf-call-iptables&#x3D;1</span><br><span class="line">$ echo net.bridge.bridge-nf-call-iptables&#x3D;1 &gt;&gt; &#x2F;etc&#x2F;sysconf.d&#x2F;10-bridge-nf-call-iptables.conf</span><br><span class="line">$ sysctl -p</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://gist.github.com/iamcryptoki/ed6925ce95f047673e7709f23e0b9939">https://gist.github.com/iamcryptoki/ed6925ce95f047673e7709f23e0b9939</a><br>Fix sysctl: cannot stat /proc/sys/net/bridge/bridge-nf-call-iptables.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$  modprobe bridge</span><br><span class="line">$  echo &quot;net.bridge.bridge-nf-call-iptables &#x3D; 1&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf</span><br><span class="line">$  sysctl -p &#x2F;etc&#x2F;sysctl.conf</span><br><span class="line"></span><br><span class="line">sysctl: cannot stat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-iptables: No such file or directory sysctl: cannot stat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-ip6tables: No such file or directory</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; SOLUTION</span><br><span class="line">$  modprobe br_netfilter</span><br><span class="line">$  sysctl -p &#x2F;etc&#x2F;sysctl.conf</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-Select-a-VM-as-your-host-machine-and-another-VM-as-your-server-machine-then-use-ssh-on-your-host-to-connect-to-the-server-15-points"><a href="#5-Select-a-VM-as-your-host-machine-and-another-VM-as-your-server-machine-then-use-ssh-on-your-host-to-connect-to-the-server-15-points" class="headerlink" title="5. Select a VM as your host machine, and another VM as your server machine, then use ssh on your host to connect to the server. (15 points)"></a>5. Select a VM as your host machine, and another VM as your server machine, then use ssh on your host to connect to the server. (15 points)</h4><h5 id="1- 在 -UBuntu- 安装 -ssh"><a href="#1- 在 -UBuntu- 安装 -ssh" class="headerlink" title="(1) 在 UBuntu 安装 ssh"></a>(1) 在 UBuntu 安装 ssh</h5><p>(a) 开启 terminal<br>(b) 更新套件清单<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure><br>(c) 安装 OpenSSH Server<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install -y openssh-server</span><br></pre></td></tr></table></figure><br>(d) 确认 SSH 服务<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo service ssh status</span><br></pre></td></tr></table></figure><br>(e) 查询 Ubuntu 的 IP<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ifconfig &#x2F;&#x2F;server 的 IP</span><br></pre></td></tr></table></figure><br>(f) 在 host mechine 上，ssh 到 server<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh chris@192.158.xx.xxx</span><br></pre></td></tr></table></figure></p>
+<h4 id="6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points"><a href="#6-Use-scp-to-copy-a-file-from-your-host-to-the-server-15-points" class="headerlink" title="6. Use scp to copy a file from your host to the server. (15 points)"></a>6. Use scp to copy a file from your host to the server. (15 points)</h4><h5 id="1- 本地端 -Host- 需安装 -openssh-client- 套件"><a href="#1- 本地端 -Host- 需安装 -openssh-client- 套件" class="headerlink" title="(1) 本地端 Host 需安装 openssh-client 套件"></a>(1) 本地端 Host 需安装 openssh-client 套件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openssh-client</span><br></pre></td></tr></table></figure>
+<h5 id="2- 远端 -Server- 需安装 -openssh-server- 套件"><a href="#2- 远端 -Server- 需安装 -openssh-server- 套件" class="headerlink" title="(2) 远端 Server 需安装 openssh-server 套件"></a>(2) 远端 Server 需安装 openssh-server 套件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openssh-server</span><br></pre></td></tr></table></figure>
+<h5 id="3- 将文件从本机 -Host- 复制到远端主机 -Server"><a href="#3- 将文件从本机 -Host- 复制到远端主机 -Server" class="headerlink" title="(3) 将文件从本机 Host 复制到远端主机 Server"></a>(3) 将文件从本机 Host 复制到远端主机 Server</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo chmod 777 &#x2F;home&#x2F;test&#x2F;&#x2F; 改变权限</span><br><span class="line">$ scp a.txt chris@192.168.xx.xxx</span><br></pre></td></tr></table></figure>
+<h4 id="问题解决"><a href="# 问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><h5 id="E- 无法获取 -dpkg- 前端锁 -var-lib-dpkg-lock-frontend-，是否有其他进程正占用它？"><a href="#E- 无法获取 -dpkg- 前端锁 -var-lib-dpkg-lock-frontend-，是否有其他进程正占用它？" class="headerlink" title="E: 无法获取 dpkg 前端锁 (/var/lib/dpkg/lock-frontend)，是否有其他进程正占用它？"></a>E: 无法获取 dpkg 前端锁 (/var/lib/dpkg/lock-frontend)，是否有其他进程正占用它？</h5><p>(1) 杀死进程<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ps -e|grep apt-get</span><br><span class="line">sudo kill [进程]</span><br></pre></td></tr></table></figure><br>(2) 重新启动</p>
+<h4 id="知识补充"><a href="# 知识补充" class="headerlink" title="知识补充"></a>知识补充 </h4><h5 id="1- 本地接口列表包含一个 -Random-packet-generator，这是什么"><a href="#1- 本地接口列表包含一个 -Random-packet-generator，这是什么" class="headerlink" title="1. 本地接口列表包含一个 Random packet generator，这是什么"></a>1. 本地接口列表包含一个 Random packet generator，这是什么</h5><p> 这是 wireshark 提供的一个模拟；每次随机生成某种协议的 1000 个包；供研究学习使用。</p>
+<h5 id="透过 -wireshark- 查看封包，可以了解到為什麼端到端加密很重要。"><a href="# 透过 -wireshark- 查看封包，可以了解到為什麼端到端加密很重要。" class="headerlink" title="透过 wireshark 查看封包，可以了解到為什麼端到端加密很重要。"></a>透过 wireshark 查看封包，可以了解到為什麼端到端加密很重要。</h5><p>假設你正在登入一個不使用 HTTPS 的網站。與你在同一網路上的任何人都可以嗅探封包，並在原始資料中看到使用者名稱和密碼。<br>這就是為什麼現在大多數聊天應用程式使用端到端加密，而大多數網站使用 https (而不是 http)</p>
+<h5 id="2-Traceroute- 工作原理"><a href="#2-Traceroute- 工作原理" class="headerlink" title="2. Traceroute 工作原理"></a>2. Traceroute 工作原理</h5><p><img src="/2021/03/20/computerNetwork-lab1/photo6.png" alt><br>Traceroute 最简单的基本用法是：traceroute hostname<br>    Traceroute 程序的设计是利用 ICMP 及 IP header 的 TTL (Time To Live) 栏位 (field)。首先，traceroute 送出一个 TTL 是 1 的 IP datagram（其实，每次送出的为 3 个 40 字节的包括源地址，目的地址和包发出的时间标签）到目的地，当路径上的第一个路由器 (router) 收到这个 datagram 时，它将 TTL 减 1。此时，TTL 变为 0 了，所以路由器会将此 datagram 丢掉，并送回一个「ICMP time exceeded」消息（包括发 IP 包的源地址，IP 包的所有内容及路由器的 IP 地址），traceroute 收到这个消息后，便知道这个路由器存在于这个路径上，接着 traceroute 再送出另一个 TTL 是 2 的 datagram，发现第 2 个路由器…… traceroute 每次将送出的 datagram 的 TTL 加 1 来发现另一个路由器，这个重复的动作一直持续到某个 datagram 目的地。当 datagram 到达目的地后，该主机并不会送回 ICMP time exceed 消息，因为它已经是目的地了，那么 traceroute 如何得知目的地到达了呢？</p>
+<p>Traceroute 在送出 UDP datagrams 到目的地时，它所选择送达的 port number 是一个一般应用程序都不会用的号码（30000 以上），所以当此 UDP datagram 到达目的地后该主机会送回一个「ICMP port unreachable」的消息，而当 traceroute 收到这个消息时，便知道目的地已经到达了。所以 traceroute 在 Server 也是没有所谓的 Daemon 程式。<br>Traceroute 提取发 ICMP TTL 到期消息设备的 IP 地址并作域名解析。每次，Traceroute 都打印出一系列数据，包括所经过的路由设备的域名及 IP 地址，三个包每次来回所花时间。其中 CDN (内容分发网络) 就是为了降低与用户路由的个数而设计的。</p>
+<h5 id="3-Ping- 工作原理"><a href="#3-Ping- 工作原理" class="headerlink" title="3. Ping 工作原理"></a>3. Ping 工作原理 </h5><p> 運作原理：向目標主機傳出一個要求封包，並等待接收回應封包。程式會按時間和成功回應的次數估算封包遺失率（丟包率）和封包來回的時間（即 RTT）</p>
+<h4 id="操作补充"><a href="# 操作补充" class="headerlink" title="操作补充"></a>操作补充</h4><h5 id="1- 查看主机 -ip- 地址方式："><a href="#1- 查看主机 -ip- 地址方式：" class="headerlink" title="1. 查看主机 ip 地址方式："></a>1. 查看主机 ip 地址方式：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ifconfig</span><br><span class="line">&#x2F;&#x2F;windows cmd 是使用 $ ipconfig</span><br></pre></td></tr></table></figure>
+<h5 id="2-Linux- 从一般用户切换到 -root- 用户"><a href="#2-Linux- 从一般用户切换到 -root- 用户" class="headerlink" title="2.Linux 从一般用户切换到 root 用户"></a>2.Linux 从一般用户切换到 root 用户</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo su</span><br><span class="line">$ exit &#x2F;&#x2F; 从 root 切换回一般用户</span><br></pre></td></tr></table></figure>
+<h5 id="3-vim- 常用指令"><a href="#3-vim- 常用指令" class="headerlink" title="3.vim 常用指令"></a>3.vim 常用指令</h5><p><img src="/2021/03/20/computerNetwork-lab1/photo9.png" alt><br><img src="/2021/03/20/computerNetwork-lab1/photo10.png" alt></p>
+<h4 id="详细名词解释"><a href="# 详细名词解释" class="headerlink" title="详细名词解释"></a>详细名词解释</h4><p><a href="https://sls.weco.net/node/28883">https://sls.weco.net/node/28883</a></p>
+<h4 id="讨论：安装 -VirtualBox-VMWare-or-Parallels- 哪个比较好？"><a href="# 讨论：安装 -VirtualBox-VMWare-or-Parallels- 哪个比较好？" class="headerlink" title="讨论：安装 VirtualBox, VMWare, or Parallels 哪个比较好？"></a>讨论：安装 VirtualBox, VMWare, or Parallels 哪个比较好？</h4>]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
@@ -805,6 +805,35 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>如何实现 hexo 文章中文和英文之间自动空格</title>
+    <url>/2018/09/22/hexo%20space-between-chinese-and-english/</url>
+    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
+<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>撰写文章基本操作</title>
+    <url>/2018/09/13/hexo%20write-an-article/</url>
+    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a>加入链结</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
+<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a>加入引用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>引用 1</p>
+</blockquote>
+<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a>改变文字颜色和大小</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;2&quot;&gt; 颜色 &lt;&#x2F;font&gt;</span><br><span class="line">&lt;code&gt;&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;3&quot;&gt; 大小 &lt;&#x2F;font&gt;&lt;&#x2F;code&gt;</span><br></pre></td></tr></table></figure>
+<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
+<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a>加入代码</h4><h4 id="hexo-fluid- 添加 -utterances- 评论功能"><a href="#hexo-fluid- 添加 -utterances- 评论功能" class="headerlink" title="hexo-fluid 添加 utterances 评论功能"></a>hexo-fluid 添加 utterances 评论功能</h4><p><a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a><br><a href="http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/">http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/</a></p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>历史 -- （1）欧洲简史</title>
     <url>/2019/07/06/history-europe/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
@@ -832,35 +861,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>历史</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>如何实现 hexo 文章中文和英文之间自动空格</title>
-    <url>/2018/09/22/hexo%20space-between-chinese-and-english/</url>
-    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
-<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>撰写文章基本操作</title>
-    <url>/2018/09/13/hexo%20write-an-article/</url>
-    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a>加入链结</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
-<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a>加入引用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>引用 1</p>
-</blockquote>
-<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a>改变文字颜色和大小</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;2&quot;&gt; 颜色 &lt;&#x2F;font&gt;</span><br><span class="line">&lt;code&gt;&lt;font color&#x3D;&quot;Crimson&quot; size&#x3D;&quot;3&quot;&gt; 大小 &lt;&#x2F;font&gt;&lt;&#x2F;code&gt;</span><br></pre></td></tr></table></figure>
-<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
-<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a>加入代码</h4><h4 id="hexo-fluid- 添加 -utterances- 评论功能"><a href="#hexo-fluid- 添加 -utterances- 评论功能" class="headerlink" title="hexo-fluid 添加 utterances 评论功能"></a>hexo-fluid 添加 utterances 评论功能</h4><p><a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a><br><a href="http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/">http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/</a></p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
       </categories>
   </entry>
   <entry>
@@ -1006,22 +1006,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
-    <url>/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/</url>
-    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
-<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
-<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
-<h3 id="linux- 文章总览"><a href="#linux- 文章总览" class="headerlink" title="linux 文章总览"></a>linux 文章总览</h3><p><a href="https://wangxchun.github.io/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/">vbox 安装 Ubuntu 清理整个磁盘会怎样</a></p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>三連擊（洛谷 P1008）</title>
     <url>/2019/04/01/luogu-P1008%20triple-hit/</url>
     <content><![CDATA[<h4 id="題目描述"><a href="# 題目描述" class="headerlink" title="題目描述"></a>題目描述 </h4><pre><code> 將 1，2,...,9 共 9 個數分成三組，分別組成三個三位數，且使這三個三位數構成 1：2：3 的比例，試求出所有滿足條件的三個三位數。 
@@ -1043,25 +1027,20 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>机器学习算法 --（2）逻辑回归</title>
-    <url>/2020/11/11/machineLearning-logistic/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
-<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-logistic/photo1.jpg" alt></p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数</h3><span id="more"></span>
-<p>线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$</p>
-<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
-<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
-<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
-<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
-<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
-<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
-<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
+    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
+    <url>/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/</url>
+    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
+<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
+<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
+<h3 id="linux- 文章总览"><a href="#linux- 文章总览" class="headerlink" title="linux 文章总览"></a>linux 文章总览</h3><p><a href="https://wangxchun.github.io/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/">vbox 安装 Ubuntu 清理整个磁盘会怎样</a></p>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>linux</category>
       </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
   </entry>
   <entry>
     <title>刷题检讨</title>
@@ -1072,17 +1051,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>C++刷題</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（4）KNN</title>
-    <url>/2020/11/18/machineLearning-KNN/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
-<h3 id="一、KNN- 概念"><a href="# 一、KNN- 概念" class="headerlink" title="一、KNN 概念"></a>一、KNN 概念 </h3><h3 id="二、KNN- 的算法实践"><a href="# 二、KNN- 的算法实践" class="headerlink" title="二、KNN 的算法实践"></a> 二、KNN 的算法实践</h3><span id="more"></span>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">knn</span> (<span class="params">x_test, x_data, y_data, k</span>):</span></span><br><span class="line">    <span class="comment"># 计算样本数量</span></span><br><span class="line">    x_data_size = x_data.shape [<span class="number">0</span>]</span><br><span class="line">    <span class="comment"># 复制 x_test</span></span><br><span class="line">    np.tile (x_test, (x_data_size,<span class="number">1</span>))</span><br><span class="line">    <span class="comment"># 计算 x_test 与每一个样本的差值</span></span><br><span class="line">    diffMat = np.tile (x_test, (x_data_size,<span class="number">1</span>)) - x_data</span><br><span class="line">    <span class="comment"># 计算差值的平方</span></span><br><span class="line">    sqDiffMat = diffMat**<span class="number">2</span></span><br><span class="line">    <span class="comment"># 求和</span></span><br><span class="line">    sqDistances = sqDiffMat.<span class="built_in">sum</span> (axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 开方</span></span><br><span class="line">    distances = sqDistances**<span class="number">0.5</span></span><br><span class="line">    <span class="comment"># 从小到大排序</span></span><br><span class="line">    sortedDistances = distances.argsort ()</span><br><span class="line">    classCount = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (k):</span><br><span class="line">        <span class="comment"># 获取标签</span></span><br><span class="line">        votelabel = y_data [sortedDistances [i]]</span><br><span class="line">        <span class="comment"># 统计标签数量</span></span><br><span class="line">        classCount [votelabel] = classCount.get (votelabel,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    <span class="comment"># 根据 operator.itemgetter (1)- 第 1 个值对 classCount 排序，然后再取倒序</span></span><br><span class="line">    sortedClassCount = <span class="built_in">sorted</span> (classCount.items (),key=operator.itemgetter (<span class="number">1</span>), reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 获取数量最多的标签</span></span><br><span class="line">    <span class="keyword">return</span> sortedClassCount [<span class="number">0</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="三、sklearn- 实现 -KNN"><a href="# 三、sklearn- 实现 -KNN" class="headerlink" title="三、sklearn 实现 KNN"></a>三、sklearn 实现 KNN</h3>]]></content>
-      <categories>
-        <category>机器学习</category>
       </categories>
   </entry>
   <entry>
@@ -1114,6 +1082,17 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <tags>
         <tag>深度学习</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>机器学习算法 --（4）KNN</title>
+    <url>/2020/11/18/machineLearning-KNN/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
+<h3 id="一、KNN- 概念"><a href="# 一、KNN- 概念" class="headerlink" title="一、KNN 概念"></a>一、KNN 概念 </h3><h3 id="二、KNN- 的算法实践"><a href="# 二、KNN- 的算法实践" class="headerlink" title="二、KNN 的算法实践"></a> 二、KNN 的算法实践</h3><span id="more"></span>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">knn</span> (<span class="params">x_test, x_data, y_data, k</span>):</span></span><br><span class="line">    <span class="comment"># 计算样本数量</span></span><br><span class="line">    x_data_size = x_data.shape [<span class="number">0</span>]</span><br><span class="line">    <span class="comment"># 复制 x_test</span></span><br><span class="line">    np.tile (x_test, (x_data_size,<span class="number">1</span>))</span><br><span class="line">    <span class="comment"># 计算 x_test 与每一个样本的差值</span></span><br><span class="line">    diffMat = np.tile (x_test, (x_data_size,<span class="number">1</span>)) - x_data</span><br><span class="line">    <span class="comment"># 计算差值的平方</span></span><br><span class="line">    sqDiffMat = diffMat**<span class="number">2</span></span><br><span class="line">    <span class="comment"># 求和</span></span><br><span class="line">    sqDistances = sqDiffMat.<span class="built_in">sum</span> (axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 开方</span></span><br><span class="line">    distances = sqDistances**<span class="number">0.5</span></span><br><span class="line">    <span class="comment"># 从小到大排序</span></span><br><span class="line">    sortedDistances = distances.argsort ()</span><br><span class="line">    classCount = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (k):</span><br><span class="line">        <span class="comment"># 获取标签</span></span><br><span class="line">        votelabel = y_data [sortedDistances [i]]</span><br><span class="line">        <span class="comment"># 统计标签数量</span></span><br><span class="line">        classCount [votelabel] = classCount.get (votelabel,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    <span class="comment"># 根据 operator.itemgetter (1)- 第 1 个值对 classCount 排序，然后再取倒序</span></span><br><span class="line">    sortedClassCount = <span class="built_in">sorted</span> (classCount.items (),key=operator.itemgetter (<span class="number">1</span>), reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 获取数量最多的标签</span></span><br><span class="line">    <span class="keyword">return</span> sortedClassCount [<span class="number">0</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="三、sklearn- 实现 -KNN"><a href="# 三、sklearn- 实现 -KNN" class="headerlink" title="三、sklearn 实现 KNN"></a>三、sklearn 实现 KNN</h3>]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
   </entry>
   <entry>
     <title>机器学习算法 --（1）线性回归和非线性回归</title>
@@ -1207,6 +1186,27 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>机器学习算法 --（2）逻辑回归</title>
+    <url>/2020/11/11/machineLearning-logistic/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
+<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-logistic/photo1.jpg" alt></p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数</h3><span id="more"></span>
+<p>线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$</p>
+<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
+<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
+<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
+<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
+<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
+<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
+<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>机器学习</category>
       </categories>
   </entry>
   <entry>
