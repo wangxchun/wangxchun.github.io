@@ -1098,64 +1098,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>slam 小車：(一) 前期準備 --1. 機器人架構設計流程</title>
-    <url>/2019/05/20/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A1/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
-<h3 id="一、了解機器人架構"><a href="# 一、了解機器人架構" class="headerlink" title="一、了解機器人架構"></a>一、了解機器人架構 </h3><p> 機器人包含四大部分：機械結構、驅動裝置、感測裝置、控制與算法。<br>機器人的研發涉及機械工程、電機工程、資訊工程、醫學工程等領域，次技術領域包括能量學、驅動技術、感知技術和決策技術等。</p>
-<h3 id="二、機器人概念設計（選擇機器人平台）"><a href="# 二、機器人概念設計（選擇機器人平台）" class="headerlink" title="二、機器人概念設計（選擇機器人平台）"></a>二、機器人概念設計（選擇機器人平台）</h3><span id="more"></span>
-<h4 id="1- 定義機器人的功能："><a href="#1- 定義機器人的功能：" class="headerlink" title="1. 定義機器人的功能："></a>1. 定義機器人的功能：</h4><h4 id="2- 決定機器人的載具和移動方式："><a href="#2- 決定機器人的載具和移動方式：" class="headerlink" title="2. 決定機器人的載具和移動方式："></a>2. 決定機器人的載具和移動方式：</h4><p>機械手臂、雙腳、四肢、八腳蜘蛛、輪車等。</p>
-<h4 id="3- 確認機器人的控制方式："><a href="#3- 確認機器人的控制方式：" class="headerlink" title="3. 確認機器人的控制方式："></a>3. 確認機器人的控制方式：</h4><h5 id="1- 有線控制（電線、網路線）"><a href="#1- 有線控制（電線、網路線）" class="headerlink" title="(1) 有線控制（電線、網路線）"></a>(1) 有線控制（電線、網路線）</h5><h5 id="2- 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）"><a href="#2- 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）" class="headerlink" title="(2) 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）"></a>(2) 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）</h5><h5 id="3- 自主控制"><a href="#3- 自主控制" class="headerlink" title="(3) 自主控制"></a>(3) 自主控制 </h5><h3 id="三、零件選用"><a href="# 三、零件選用" class="headerlink" title="三、零件選用"></a> 三、零件選用 </h3><h4 id="1- 動力源與驅動器"><a href="#1- 動力源與驅動器" class="headerlink" title="1. 動力源與驅動器"></a>1. 動力源與驅動器</h4><p> 考量因素：功率和比能量，還有位置控制、雙向運動、可靠度、力量控制。</p>
-<h5 id="1- 液壓驅動：多用於特大功率的機器人系統"><a href="#1- 液壓驅動：多用於特大功率的機器人系統" class="headerlink" title="(1) 液壓驅動：多用於特大功率的機器人系統"></a>(1) 液壓驅動：多用於特大功率的機器人系統 </h5><h5 id="2- 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統"><a href="#2- 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統" class="headerlink" title="(2) 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統"></a>(2) 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統</h5><h5 id="3- 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）"><a href="#3- 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）" class="headerlink" title="(3) 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）"></a>(3) 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）</h5><p> 線性驅動器：將電動馬達的旋轉運動轉換為線性運動</p>
-<h5 id="4- 壓電驅動：電陶瓷材料可以達到較大的比功率、SMA- 形狀記憶合金具有輕量化結構"><a href="#4- 壓電驅動：電陶瓷材料可以達到較大的比功率、SMA- 形狀記憶合金具有輕量化結構" class="headerlink" title="(4) 壓電驅動：電陶瓷材料可以達到較大的比功率、SMA 形狀記憶合金具有輕量化結構"></a>(4) 壓電驅動：電陶瓷材料可以達到較大的比功率、SMA 形狀記憶合金具有輕量化結構 </h5><p> 可以產生較大的比能量（希望達到與人類肌肉相同的比功率和比能量），適合小尺度。</p>
-<h4 id="2- 感測器"><a href="#2- 感測器" class="headerlink" title="2. 感測器"></a>2. 感測器 </h4><p> 能量轉換裝置，能將被測量的物理量（例如加速的）轉換成電能或其他需要形式的信號。</p>
-<h5 id="1- 機身本身的測量"><a href="#1- 機身本身的測量" class="headerlink" title="(1) 機身本身的測量"></a>(1) 機身本身的測量 </h5><p> 方向（指南針、陀螺儀、傾斜儀）<br>位置（輪子編碼器、信標、GPS）<br>運動（慣性測量單元：量測線性和角位移、速度和加速度）</p>
-<h5 id="2- 環境的測量"><a href="#2- 環境的測量" class="headerlink" title="(2) 環境的測量"></a>(2) 環境的測量 </h5><p> 距離（聲納、雷射測距儀、超聲波測距儀紅、外線感測器）<br>化學成分（光譜儀）<br>視覺（相機）</p>
-<h4 id="3- 控制器（機器人的大腦）"><a href="#3- 控制器（機器人的大腦）" class="headerlink" title="3. 控制器（機器人的大腦）"></a>3. 控制器（機器人的大腦）</h4><h5 id="1- 微控制器（MCU- 單片機）：Arduino，STM32，BasicATOM，BasicX，POB- 技術，-Pololu，Parallax- 等等"><a href="#1- 微控制器（MCU- 單片機）：Arduino，STM32，BasicATOM，BasicX，POB- 技術，-Pololu，Parallax- 等等" class="headerlink" title="(1) 微控制器（MCU 單片機）：Arduino，STM32，BasicATOM，BasicX，POB 技術， Pololu，Parallax 等等"></a>(1) 微控制器（MCU 單片機）：Arduino，STM32，BasicATOM，BasicX，POB 技術， Pololu，Parallax 等等 </h5><pre><code> 因為 Arduino 開發了簡單的函數，還有許多應用庫，這樣就不用直接去操作暫存器了，適合沒有單片機基礎的
-</code></pre><p>製作小車使用的是微控制器，選擇時需要考慮以下三點：<br>(a) 哪個微控制器在我應用領域上是最常用的？<br>(b) 它有機器人需要的所有特殊功能嗎？<br>有些功能所有微控制器都有支持（例如：數位輸入和輸出，執行簡單的數學運算，比較值和做決定），而有些功能則需要特定的硬體做搭配才能完成（例如 ADC，PWM 和通訊協議的支援）。另外，還需要考慮記憶體和速度的要求，還有接腳數。<br>(c) 是否找得到所選定微控制器可以搭配的相關零件？</p>
-<h5 id="2- 微處理器（MPU）：树莓派，S3C2440，CubieBoard-CC80，Jetson-TK1- 等等"><a href="#2- 微處理器（MPU）：树莓派，S3C2440，CubieBoard-CC80，Jetson-TK1- 等等" class="headerlink" title="(2) 微處理器（MPU）：树莓派，S3C2440，CubieBoard CC80，Jetson TK1 等等"></a>(2) 微處理器（MPU）：树莓派，S3C2440，CubieBoard CC80，Jetson TK1 等等 </h5><p> 嵌入式微處理器 MPU 和一般的電腦 CPU 還有區別，嵌入式微處理器大多工作在特定設計的系統中，其中主流的体系有 ARM、MIPS、PowerPC、X86 和 SH 等，与全球 PC 市场不同的是，没有一种嵌入式微处理器可以主导市场。</p>
-<h5 id="3- 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA"><a href="#3- 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA" class="headerlink" title="(3) 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA"></a>(3) 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA</h5><pre><code>補充：選擇馬達控制器（控制器 - 馬達控制器 - 馬達）
-雖然微控制器決定馬達的速度和方向，它卻不能直接驅動它們，因為它的功率（電流和電壓）輸出非常有限。
-另一方面，馬達控制器可以提供所需電壓的電流，但不能決定馬達應該轉動多快。
-</code></pre><h3 id="四、機器人組裝"><a href="# 四、機器人組裝" class="headerlink" title="四、機器人組裝"></a>四、機器人組裝 </h3><p> 瓦楞紙、木材、金屬薄板、3D 列印等等。</p>
-<h3 id="五、控制與算法"><a href="# 五、控制與算法" class="headerlink" title="五、控制與算法"></a>五、控制與算法 </h3><p> 這是我們激光 slam 小車專題的重點，後面文章會詳細闡述。</p>
-]]></content>
-      <categories>
-        <category>激光slam小車</category>
-      </categories>
-      <tags>
-        <tag>slam</tag>
-        <tag>智能車</tag>
-        <tag>機器人</tag>
-        <tag>設計流程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
-    <url>/2019/05/21/%E6%BF%80%E5%85%89slam%E5%B0%8F%E8%BB%8A2/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
-<h3 id="一、Linux- 目錄結構"><a href="# 一、Linux- 目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構 </h3><h3 id="二、Linux- 常用指令"><a href="# 二、Linux- 常用指令" class="headerlink" title="二、Linux 常用指令"></a> 二、Linux 常用指令</h3><h4 id="1- 打开 -terminal"><a href="#1- 打开 -terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4><span id="more"></span>
-<p>(1) 右鍵 -&gt; 打開終端<br>(2) Ctrl+Alt+t 或者 Ctrl+Shift+t</p>
-<h4 id="2- 常用快速鍵"><a href="#2- 常用快速鍵" class="headerlink" title="2. 常用快速鍵"></a>2. 常用快速鍵 </h4><p>(1) tab<br> 一次 tab：命令補齊 <br> 兩次 tab：提示內容 <br>(2) Ctrl+c<br>Ctrl+c 中斷，強行打斷進程<br>(3) Ctrl+d<br>Ctrl+d 退出，相當於 exit 和 quit<br> 比如用 python 命令進入 python 交互環境後，就可以用 Ctrl+d 退出 python 交互環境 <br>(4) Ctrl+Shift+c 和 Ctrl+Shift+v<br> 先用滑鼠選中需要複製的內容，然後用 Ctrl+Shift+c 進行複製，再用 Ctrl+Shift+v 進行貼上<br>(5) 圖形介面與純文字互動模式切換<br>Ctrl+Alt+F1-F6：純文字交互模式登入 tty1-tty6 終端機<br>Ctrl+Alt+F7：切回圖形介面</p>
-<h3 id="3- 關機與重啟命令"><a href="#3- 關機與重啟命令" class="headerlink" title="3. 關機與重啟命令"></a>3. 關機與重啟命令</h3><p>(1) 關機<br>$ sudo poweroff<br>(2) 重新啟動<br>$ sudo reboot</p>
-<h3 id="4- 終端命令列中一些常用符號瞭解"><a href="#4- 終端命令列中一些常用符號瞭解" class="headerlink" title="4. 終端命令列中一些常用符號瞭解"></a>4. 終端命令列中一些常用符號瞭解</h3><p>(1) 使用者家目錄：~<br>(2) 系統根目錄：/<br>(3) 一般使用者提示符：$<br>(4) root 使用者提示符：#</p>
-<h3 id="5- 目錄與文件相關命令"><a href="#5- 目錄與文件相關命令" class="headerlink" title="5. 目錄與文件相關命令"></a>5. 目錄與文件相關命令</h3><p>(1) 顯示檔案與目錄清單<br>$ ls<br>(2) 切換目錄（ 2）<br>$ cd &lt; 目標目錄 &gt;<br>(3) 顯示目前所在工作目錄<br>$ pwd<br>(4) 建立檔案<br>$ touch &lt; 檔名 &gt;<br>(5) 複製檔案<br>$ cp &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(6) 移動檔案<br>$ mv &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(7) 刪除檔案<br>$ rm &lt; 檔名 &gt;<br>(8) 顯示檔案內容<br>$ cat &lt; 檔名 &gt;<br>(9) 建立資料夾<br>$ mkdir &lt; 資料夾名 &gt;<br>(10) 刪除資料夾<br>$ rmdir &lt; 資料夾名 &gt;</p>
-<h3 id="6- 文件許可權"><a href="#6- 文件許可權" class="headerlink" title="6. 文件許可權"></a>6. 文件許可權</h3><p>(1) 修改檔案讀寫可執行權限，該權限由遮罩， 如 777 權限全開<br>$ sudo chmod 777 &lt; 檔名 &gt;<br>(2) 修改檔案擁有者<br>$ sudo chown &lt; 使用者名 &gt;：&lt; 組名 &gt; &lt; 檔名 &gt;</p>
-<h3 id="7- 檔案查找"><a href="#7- 檔案查找" class="headerlink" title="7. 檔案查找"></a>7. 檔案查找</h3><p>(1) locate<br>$ sudo updatedb<br>$ locate &lt; 待查找檔名 &gt;<br>(2) find<br>$ find -name &lt; 待查找檔名 &gt;</p>
-<h3 id="8- 網路相關命令"><a href="#8- 網路相關命令" class="headerlink" title="8. 網路相關命令"></a>8. 網路相關命令</h3><p>(1) 網路連線與否測試<br>$ ping &lt; 待測目標主機 IP 或域名 &gt;<br>(2) 本地 IP 位址檢視<br>$ ifconfig<br>(3) 遠端登入目標主機<br>$ ssh &lt; 目標主機使用者名 &gt;@&lt; 目標主機 IP 位址 &gt;</p>
-<h3 id="9- 系統軟體安裝與軟體運行方法"><a href="#9- 系統軟體安裝與軟體運行方法" class="headerlink" title="9. 系統軟體安裝與軟體運行方法"></a>9. 系統軟體安裝與軟體運行方法</h3><p>(1) 系統預設的套件安裝方法 apt-get<br>$ sudo apt-get update<br>$ sudo apt-get install &lt; 軟體套件名稱 &gt;<br>(2) source 方法執行系統文稿，例如執行使用者預設配置文件.bashrc<br>$ source ~/.bashrc<br>(3) ./ 方法執行一般可執行檔<br>$ ./&lt; 可执行文件 &gt;</p>
-<h3 id="10- 文字編輯器 -vim- 使用"><a href="#10- 文字編輯器 -vim- 使用" class="headerlink" title="10. 文字編輯器 vim 使用"></a>10. 文字編輯器 vim 使用 </h3><p>(1) vim 檢視檔案內容<br>$ vim &lt; 檔名 &gt;<br>(2) vim 進入編輯模式<br> 在 vim 查看檔案內容的介面中，按 i 鍵進入編輯模式，然後就可以編輯檔案的內容了 <br>(3) vim 退出編輯模式<br> 在 vim 編輯檔案內容的介面中，按 Esc 鍵退出編輯模式，然後就又回到查看檔案內容的介面了<br>(4) vim 編輯內容儲存<br>vim 在編輯完檔內容，退出到查看檔內容的介面後，可以輸入 “：w” 對編輯內容進行保存，也可以輸入 “：wq” 對編輯內容進行保存並退出 vim</p>
-]]></content>
-      <categories>
-        <category>激光slam小車</category>
-      </categories>
-      <tags>
-        <tag>slam</tag>
-        <tag>智能車</tag>
-        <tag>Linux</tag>
-        <tag>命令列指令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>算法</title>
     <url>/2019/04/05/%E7%AE%97%E6%B3%953/</url>
     <content><![CDATA[<span id="more"></span>
@@ -1264,6 +1206,64 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
       <tags>
         <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>slam 小車：(一) 前期準備 --1. 機器人架構設計流程</title>
+    <url>/2019/05/20/slam1/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/05/20/slam1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/05/21/slam2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
+<h3 id="一、了解機器人架構"><a href="# 一、了解機器人架構" class="headerlink" title="一、了解機器人架構"></a>一、了解機器人架構 </h3><p> 機器人包含四大部分：機械結構、驅動裝置、感測裝置、控制與算法。<br>機器人的研發涉及機械工程、電機工程、資訊工程、醫學工程等領域，次技術領域包括能量學、驅動技術、感知技術和決策技術等。</p>
+<h3 id="二、機器人概念設計（選擇機器人平台）"><a href="# 二、機器人概念設計（選擇機器人平台）" class="headerlink" title="二、機器人概念設計（選擇機器人平台）"></a>二、機器人概念設計（選擇機器人平台）</h3><span id="more"></span>
+<h4 id="1- 定義機器人的功能："><a href="#1- 定義機器人的功能：" class="headerlink" title="1. 定義機器人的功能："></a>1. 定義機器人的功能：</h4><h4 id="2- 決定機器人的載具和移動方式："><a href="#2- 決定機器人的載具和移動方式：" class="headerlink" title="2. 決定機器人的載具和移動方式："></a>2. 決定機器人的載具和移動方式：</h4><p>機械手臂、雙腳、四肢、八腳蜘蛛、輪車等。</p>
+<h4 id="3- 確認機器人的控制方式："><a href="#3- 確認機器人的控制方式：" class="headerlink" title="3. 確認機器人的控制方式："></a>3. 確認機器人的控制方式：</h4><h5 id="1- 有線控制（電線、網路線）"><a href="#1- 有線控制（電線、網路線）" class="headerlink" title="(1) 有線控制（電線、網路線）"></a>(1) 有線控制（電線、網路線）</h5><h5 id="2- 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）"><a href="#2- 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）" class="headerlink" title="(2) 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）"></a>(2) 無線控制（紅外線、藍芽、WIFI、GPRS、無線射頻）</h5><h5 id="3- 自主控制"><a href="#3- 自主控制" class="headerlink" title="(3) 自主控制"></a>(3) 自主控制 </h5><h3 id="三、零件選用"><a href="# 三、零件選用" class="headerlink" title="三、零件選用"></a> 三、零件選用 </h3><h4 id="1- 動力源與驅動器"><a href="#1- 動力源與驅動器" class="headerlink" title="1. 動力源與驅動器"></a>1. 動力源與驅動器</h4><p> 考量因素：功率和比能量，還有位置控制、雙向運動、可靠度、力量控制。</p>
+<h5 id="1- 液壓驅動：多用於特大功率的機器人系統"><a href="#1- 液壓驅動：多用於特大功率的機器人系統" class="headerlink" title="(1) 液壓驅動：多用於特大功率的機器人系統"></a>(1) 液壓驅動：多用於特大功率的機器人系統 </h5><h5 id="2- 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統"><a href="#2- 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統" class="headerlink" title="(2) 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統"></a>(2) 氣壓驅動：功率較小，而且速度不易控制，所以多用於精度不高的點位控制系統</h5><h5 id="3- 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）"><a href="#3- 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）" class="headerlink" title="(3) 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）"></a>(3) 電器驅動：轉動輪子或齒輪（馬達轉子、減速齒輪、力感測器和負載）</h5><p> 線性驅動器：將電動馬達的旋轉運動轉換為線性運動</p>
+<h5 id="4- 壓電驅動：電陶瓷材料可以達到較大的比功率、SMA- 形狀記憶合金具有輕量化結構"><a href="#4- 壓電驅動：電陶瓷材料可以達到較大的比功率、SMA- 形狀記憶合金具有輕量化結構" class="headerlink" title="(4) 壓電驅動：電陶瓷材料可以達到較大的比功率、SMA 形狀記憶合金具有輕量化結構"></a>(4) 壓電驅動：電陶瓷材料可以達到較大的比功率、SMA 形狀記憶合金具有輕量化結構 </h5><p> 可以產生較大的比能量（希望達到與人類肌肉相同的比功率和比能量），適合小尺度。</p>
+<h4 id="2- 感測器"><a href="#2- 感測器" class="headerlink" title="2. 感測器"></a>2. 感測器 </h4><p> 能量轉換裝置，能將被測量的物理量（例如加速的）轉換成電能或其他需要形式的信號。</p>
+<h5 id="1- 機身本身的測量"><a href="#1- 機身本身的測量" class="headerlink" title="(1) 機身本身的測量"></a>(1) 機身本身的測量 </h5><p> 方向（指南針、陀螺儀、傾斜儀）<br>位置（輪子編碼器、信標、GPS）<br>運動（慣性測量單元：量測線性和角位移、速度和加速度）</p>
+<h5 id="2- 環境的測量"><a href="#2- 環境的測量" class="headerlink" title="(2) 環境的測量"></a>(2) 環境的測量 </h5><p> 距離（聲納、雷射測距儀、超聲波測距儀紅、外線感測器）<br>化學成分（光譜儀）<br>視覺（相機）</p>
+<h4 id="3- 控制器（機器人的大腦）"><a href="#3- 控制器（機器人的大腦）" class="headerlink" title="3. 控制器（機器人的大腦）"></a>3. 控制器（機器人的大腦）</h4><h5 id="1- 微控制器（MCU- 單片機）：Arduino，STM32，BasicATOM，BasicX，POB- 技術，-Pololu，Parallax- 等等"><a href="#1- 微控制器（MCU- 單片機）：Arduino，STM32，BasicATOM，BasicX，POB- 技術，-Pololu，Parallax- 等等" class="headerlink" title="(1) 微控制器（MCU 單片機）：Arduino，STM32，BasicATOM，BasicX，POB 技術， Pololu，Parallax 等等"></a>(1) 微控制器（MCU 單片機）：Arduino，STM32，BasicATOM，BasicX，POB 技術， Pololu，Parallax 等等 </h5><pre><code> 因為 Arduino 開發了簡單的函數，還有許多應用庫，這樣就不用直接去操作暫存器了，適合沒有單片機基礎的
+</code></pre><p>製作小車使用的是微控制器，選擇時需要考慮以下三點：<br>(a) 哪個微控制器在我應用領域上是最常用的？<br>(b) 它有機器人需要的所有特殊功能嗎？<br>有些功能所有微控制器都有支持（例如：數位輸入和輸出，執行簡單的數學運算，比較值和做決定），而有些功能則需要特定的硬體做搭配才能完成（例如 ADC，PWM 和通訊協議的支援）。另外，還需要考慮記憶體和速度的要求，還有接腳數。<br>(c) 是否找得到所選定微控制器可以搭配的相關零件？</p>
+<h5 id="2- 微處理器（MPU）：树莓派，S3C2440，CubieBoard-CC80，Jetson-TK1- 等等"><a href="#2- 微處理器（MPU）：树莓派，S3C2440，CubieBoard-CC80，Jetson-TK1- 等等" class="headerlink" title="(2) 微處理器（MPU）：树莓派，S3C2440，CubieBoard CC80，Jetson TK1 等等"></a>(2) 微處理器（MPU）：树莓派，S3C2440，CubieBoard CC80，Jetson TK1 等等 </h5><p> 嵌入式微處理器 MPU 和一般的電腦 CPU 還有區別，嵌入式微處理器大多工作在特定設計的系統中，其中主流的体系有 ARM、MIPS、PowerPC、X86 和 SH 等，与全球 PC 市场不同的是，没有一种嵌入式微处理器可以主导市场。</p>
+<h5 id="3- 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA"><a href="#3- 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA" class="headerlink" title="(3) 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA"></a>(3) 工業用控制板：機器人大廠多自行研發控制器，例如：Fanuc、ABB、Yaskawa、KUKA、EPSON、DENSO、TOSHIBA</h5><pre><code>補充：選擇馬達控制器（控制器 - 馬達控制器 - 馬達）
+雖然微控制器決定馬達的速度和方向，它卻不能直接驅動它們，因為它的功率（電流和電壓）輸出非常有限。
+另一方面，馬達控制器可以提供所需電壓的電流，但不能決定馬達應該轉動多快。
+</code></pre><h3 id="四、機器人組裝"><a href="# 四、機器人組裝" class="headerlink" title="四、機器人組裝"></a>四、機器人組裝 </h3><p> 瓦楞紙、木材、金屬薄板、3D 列印等等。</p>
+<h3 id="五、控制與算法"><a href="# 五、控制與算法" class="headerlink" title="五、控制與算法"></a>五、控制與算法 </h3><p> 這是我們激光 slam 小車專題的重點，後面文章會詳細闡述。</p>
+]]></content>
+      <categories>
+        <category>激光slam小車</category>
+      </categories>
+      <tags>
+        <tag>slam</tag>
+        <tag>智能車</tag>
+        <tag>機器人</tag>
+        <tag>設計流程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
+    <url>/2019/05/21/slam2/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/20/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/03/21/% E6% BF%80% E5%85%89slam% E5% B0%8F% E8% BB%8A2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
+<h3 id="一、Linux- 目錄結構"><a href="# 一、Linux- 目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構 </h3><h3 id="二、Linux- 常用指令"><a href="# 二、Linux- 常用指令" class="headerlink" title="二、Linux 常用指令"></a> 二、Linux 常用指令</h3><h4 id="1- 打开 -terminal"><a href="#1- 打开 -terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4><span id="more"></span>
+<p>(1) 右鍵 -&gt; 打開終端<br>(2) Ctrl+Alt+t 或者 Ctrl+Shift+t</p>
+<h4 id="2- 常用快速鍵"><a href="#2- 常用快速鍵" class="headerlink" title="2. 常用快速鍵"></a>2. 常用快速鍵 </h4><p>(1) tab<br> 一次 tab：命令補齊 <br> 兩次 tab：提示內容 <br>(2) Ctrl+c<br>Ctrl+c 中斷，強行打斷進程<br>(3) Ctrl+d<br>Ctrl+d 退出，相當於 exit 和 quit<br> 比如用 python 命令進入 python 交互環境後，就可以用 Ctrl+d 退出 python 交互環境 <br>(4) Ctrl+Shift+c 和 Ctrl+Shift+v<br> 先用滑鼠選中需要複製的內容，然後用 Ctrl+Shift+c 進行複製，再用 Ctrl+Shift+v 進行貼上<br>(5) 圖形介面與純文字互動模式切換<br>Ctrl+Alt+F1-F6：純文字交互模式登入 tty1-tty6 終端機<br>Ctrl+Alt+F7：切回圖形介面</p>
+<h3 id="3- 關機與重啟命令"><a href="#3- 關機與重啟命令" class="headerlink" title="3. 關機與重啟命令"></a>3. 關機與重啟命令</h3><p>(1) 關機<br>$ sudo poweroff<br>(2) 重新啟動<br>$ sudo reboot</p>
+<h3 id="4- 終端命令列中一些常用符號瞭解"><a href="#4- 終端命令列中一些常用符號瞭解" class="headerlink" title="4. 終端命令列中一些常用符號瞭解"></a>4. 終端命令列中一些常用符號瞭解</h3><p>(1) 使用者家目錄：~<br>(2) 系統根目錄：/<br>(3) 一般使用者提示符：$<br>(4) root 使用者提示符：#</p>
+<h3 id="5- 目錄與文件相關命令"><a href="#5- 目錄與文件相關命令" class="headerlink" title="5. 目錄與文件相關命令"></a>5. 目錄與文件相關命令</h3><p>(1) 顯示檔案與目錄清單<br>$ ls<br>(2) 切換目錄（ 2）<br>$ cd &lt; 目標目錄 &gt;<br>(3) 顯示目前所在工作目錄<br>$ pwd<br>(4) 建立檔案<br>$ touch &lt; 檔名 &gt;<br>(5) 複製檔案<br>$ cp &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(6) 移動檔案<br>$ mv &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(7) 刪除檔案<br>$ rm &lt; 檔名 &gt;<br>(8) 顯示檔案內容<br>$ cat &lt; 檔名 &gt;<br>(9) 建立資料夾<br>$ mkdir &lt; 資料夾名 &gt;<br>(10) 刪除資料夾<br>$ rmdir &lt; 資料夾名 &gt;</p>
+<h3 id="6- 文件許可權"><a href="#6- 文件許可權" class="headerlink" title="6. 文件許可權"></a>6. 文件許可權</h3><p>(1) 修改檔案讀寫可執行權限，該權限由遮罩， 如 777 權限全開<br>$ sudo chmod 777 &lt; 檔名 &gt;<br>(2) 修改檔案擁有者<br>$ sudo chown &lt; 使用者名 &gt;：&lt; 組名 &gt; &lt; 檔名 &gt;</p>
+<h3 id="7- 檔案查找"><a href="#7- 檔案查找" class="headerlink" title="7. 檔案查找"></a>7. 檔案查找</h3><p>(1) locate<br>$ sudo updatedb<br>$ locate &lt; 待查找檔名 &gt;<br>(2) find<br>$ find -name &lt; 待查找檔名 &gt;</p>
+<h3 id="8- 網路相關命令"><a href="#8- 網路相關命令" class="headerlink" title="8. 網路相關命令"></a>8. 網路相關命令</h3><p>(1) 網路連線與否測試<br>$ ping &lt; 待測目標主機 IP 或域名 &gt;<br>(2) 本地 IP 位址檢視<br>$ ifconfig<br>(3) 遠端登入目標主機<br>$ ssh &lt; 目標主機使用者名 &gt;@&lt; 目標主機 IP 位址 &gt;</p>
+<h3 id="9- 系統軟體安裝與軟體運行方法"><a href="#9- 系統軟體安裝與軟體運行方法" class="headerlink" title="9. 系統軟體安裝與軟體運行方法"></a>9. 系統軟體安裝與軟體運行方法</h3><p>(1) 系統預設的套件安裝方法 apt-get<br>$ sudo apt-get update<br>$ sudo apt-get install &lt; 軟體套件名稱 &gt;<br>(2) source 方法執行系統文稿，例如執行使用者預設配置文件.bashrc<br>$ source ~/.bashrc<br>(3) ./ 方法執行一般可執行檔<br>$ ./&lt; 可执行文件 &gt;</p>
+<h3 id="10- 文字編輯器 -vim- 使用"><a href="#10- 文字編輯器 -vim- 使用" class="headerlink" title="10. 文字編輯器 vim 使用"></a>10. 文字編輯器 vim 使用 </h3><p>(1) vim 檢視檔案內容<br>$ vim &lt; 檔名 &gt;<br>(2) vim 進入編輯模式<br> 在 vim 查看檔案內容的介面中，按 i 鍵進入編輯模式，然後就可以編輯檔案的內容了 <br>(3) vim 退出編輯模式<br> 在 vim 編輯檔案內容的介面中，按 Esc 鍵退出編輯模式，然後就又回到查看檔案內容的介面了<br>(4) vim 編輯內容儲存<br>vim 在編輯完檔內容，退出到查看檔內容的介面後，可以輸入 “：w” 對編輯內容進行保存，也可以輸入 “：wq” 對編輯內容進行保存並退出 vim</p>
+]]></content>
+      <categories>
+        <category>激光slam小車</category>
+      </categories>
+      <tags>
+        <tag>slam</tag>
+        <tag>智能車</tag>
+        <tag>Linux</tag>
+        <tag>命令列指令</tag>
       </tags>
   </entry>
 </search>
