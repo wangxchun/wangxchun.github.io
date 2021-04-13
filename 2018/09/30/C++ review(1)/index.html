@@ -24,17 +24,17 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="C++ 復習 —1.C++ 基礎入門C++ 復習 —2.C++ 入門之後C++ 復習 —3.C++ 進階 一、認識 C++二、數據類型1. 基本數據類型2. 變量(1) 變量的聲明和定義聲明一個變量只是將變量名稱標識符的有關信息告訴編譯器，使編譯器 “認識” 該標識符，不一定分配記憶體空間。">
+<meta name="description" content="C++ review (1)C++ review (2)C++ review (3) 一、認識 C++二、數據類型1. 基本數據類型2. 變量(1) 變量的聲明和定義聲明一個變量只是將變量名稱標識符的有關信息告訴編譯器，使編譯器 “認識” 該標識符，不一定分配記憶體空間。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++ 復習 --1.C++ 基礎入門">
-<meta property="og:url" content="https://wangxchun.github.io/2018/09/30/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/index.html">
+<meta property="og:url" content="https://wangxchun.github.io/2018/09/30/C++%20review(1)/index.html">
 <meta property="og:site_name" content="Chris自强不息">
-<meta property="og:description" content="C++ 復習 —1.C++ 基礎入門C++ 復習 —2.C++ 入門之後C++ 復習 —3.C++ 進階 一、認識 C++二、數據類型1. 基本數據類型2. 變量(1) 變量的聲明和定義聲明一個變量只是將變量名稱標識符的有關信息告訴編譯器，使編譯器 “認識” 該標識符，不一定分配記憶體空間。">
+<meta property="og:description" content="C++ review (1)C++ review (2)C++ review (3) 一、認識 C++二、數據類型1. 基本數據類型2. 變量(1) 變量的聲明和定義聲明一個變量只是將變量名稱標識符的有關信息告訴編譯器，使編譯器 “認識” 該標識符，不一定分配記憶體空間。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://wangxchun.github.io/2018/09/30/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/test1.png">
-<meta property="og:image" content="https://wangxchun.github.io/2018/09/30/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/test2.png">
+<meta property="og:image" content="https://wangxchun.github.io/2018/09/30/C++%20review(1)/test1.png">
+<meta property="og:image" content="https://wangxchun.github.io/2018/09/30/C++%20review(1)/test2.png">
 <meta property="article:published_time" content="2018-09-30T10:17:47.000Z">
-<meta property="article:modified_time" content="2021-04-13T02:18:08.737Z">
+<meta property="article:modified_time" content="2021-04-13T07:42:45.855Z">
 <meta property="article:author" content="Chris Wang">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="環境配置">
@@ -44,10 +44,10 @@
 <meta property="article:tag" content="指針">
 <meta property="article:tag" content="結構體">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wangxchun.github.io/2018/09/30/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/test1.png">
+<meta name="twitter:image" content="https://wangxchun.github.io/2018/09/30/C++%20review(1)/test1.png">
 
 
-<link rel="canonical" href="https://wangxchun.github.io/2018/09/30/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/">
+<link rel="canonical" href="https://wangxchun.github.io/2018/09/30/C++%20review(1)/">
 
 
 <script class="page-configurations">
@@ -247,7 +247,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/30/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/30/C++%20review(1)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -278,7 +278,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 10:18:08" itemprop="dateModified" datetime="2021-04-13T10:18:08+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 15:42:45" itemprop="dateModified" datetime="2021-04-13T15:42:45+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -300,14 +300,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a href="https://wangxchun.github.io/2018/09/13/C++% E5%9F% BA% E7% A4%8E% E5%85% A5% E9%96%80/">C++ 復習 —1.C++ 基礎入門</a><br><a href="https://wangxchun.github.io/2018/10/14/C++% E5%85% A5% E9%96%80% E4% B9%8B% E5% BE%8C/">C++ 復習 —2.C++ 入門之後</a><br><a href="https://wangxchun.github.io/2019/03/14/C++% E9%80% B2% E9%9A%8E/">C++ 復習 —3.C++ 進階</a></p>
+        <p><a href="https://wangxchun.github.io/2018/09/13/C++% E5%9F% BA% E7% A4%8E% E5%85% A5% E9%96%80/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++% E5%85% A5% E9%96%80% E4% B9%8B% E5% BE%8C/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2019/03/14/C++% E9%80% B2% E9%9A%8E/">C++ review (3)</a></p>
 <h3 id="一、認識 -C"><a href="# 一、認識 -C" class="headerlink" title="一、認識 C++"></a>一、認識 C++</h3><h3 id="二、數據類型"><a href="# 二、數據類型" class="headerlink" title="二、數據類型"></a>二、數據類型 </h3><h4 id="1- 基本數據類型"><a href="#1- 基本數據類型" class="headerlink" title="1. 基本數據類型"></a>1. 基本數據類型</h4><h4 id="2- 變量"><a href="#2- 變量" class="headerlink" title="2. 變量"></a>2. 變量</h4><h5 id="1- 變量的聲明和定義"><a href="#1- 變量的聲明和定義" class="headerlink" title="(1) 變量的聲明和定義"></a>(1) 變量的聲明和定義</h5><p> 聲明一個變量只是將變量名稱標識符的有關信息告訴編譯器，使編譯器 “認識” 該標識符，不一定分配記憶體空間。<br><span id="more"></span><br>定義一個變量意味著給變量分配内存空間，變量名就是對相應記憶體單元的命名。<br>在 C++ 程式中，大多數情況下，聲明變量的同時也就完成了變量的定義，只有聲明外部變量時例外。</p>
 <h5 id="2- 外部變量"><a href="#2- 外部變量" class="headerlink" title="(2) 外部變量"></a>(2) 外部變量 </h5><p> 外部變量：一個變量除了在定義它的原始檔案中可以使用，還能被其他檔案使用。<br>命名空間作用域中定義的變量，默認情況下都是外部變量，若其他檔案要使用，則要加上 extern 關鍵字聲明。<br>定義性聲明（1. 命名空間中不加 extern 關鍵字的聲明 2.extern 聲明同時指定了初值）<br>引用性聲明（只有使用 extern 關鍵字，extern int i;）</p>
 <h5 id="3- 變量的存儲類型"><a href="#3- 變量的存儲類型" class="headerlink" title="(3) 變量的存儲類型"></a>(3) 變量的存儲類型 </h5><p>auto：采用堆棧方式分配記憶體空間，屬於暫時性存儲。<br>register：存放在通用寄存器中。(register 存取速度優於 RAM)<br>extern：在所有函數和程式段中都可以引用。<br>static：在記憶體中是以固定地址存放的，在整個程式運行期間都有效。<br>(a) 靜態局部變量<br> 靜態局部變量的生存期為整個源程式，但是其作用域仍與自動變量相同，只能在定義該變量的函數内使用該變量。雖然離開定義它的函數後不能使用，但如再次調用定義它的函數，它又可繼續使用，且保存了前次被調用後留下的值。<br>因此，當多次調用一個函數且要求在調用之間保留某些變量的值時，可考慮采用靜態局部變量。雖然用全局變量也可以達到上述目的，但全局變量有時會造成意外的副作用（全局變量在離開函數之後，依舊可以操作）。<br>(b) 靜態全局變量（與 static 函數類似，内部函數和外部函數，内部函數又稱爲靜態函數）<br>非靜態全局變量的作用域是整個源程式，當一個源程式由多個原始檔案組成時，非靜態的全局變量在各個原始檔案中都是有效的（只要加上 extern 聲明）。<br>而靜態全局變量則只在定義該變量的原始檔案内有效，在同一個源程式中的其他原始檔案不能使用它，因此可以避免在其他原始檔案中引起錯誤。<br>    把局部變量改變成靜態變量後是改變了它的存儲方式，即改變了它的生存期。<br>    把全局變量改變成靜態變量，則是改變了它的作用域，限制了它的使用範圍。</p>
 <h4 id="3- 常量"><a href="#3- 常量" class="headerlink" title="3. 常量"></a>3. 常量</h4><h5 id="1- 宏常量"><a href="#1- 宏常量" class="headerlink" title="(1) 宏常量"></a>(1) 宏常量</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> day 7</span></span><br></pre></td></tr></table></figure>
 <h5 id="2-const- 修飾的變量"><a href="#2-const- 修飾的變量" class="headerlink" title="(2) const 修飾的變量"></a>(2) const 修飾的變量</h5><p>const int month = 12;</p>
 <h5 id="3- 符號常量"><a href="#3- 符號常量" class="headerlink" title="(3) 符號常量"></a>(3) 符號常量</h5><p>const float PI = 3.1415926;</p>
-<h4 id="4- 關鍵字"><a href="#4- 關鍵字" class="headerlink" title="4. 關鍵字"></a>4. 關鍵字 </h4><h4 id="5- 標識符命名規則"><a href="#5- 標識符命名規則" class="headerlink" title="5. 標識符命名規則"></a>5. 標識符命名規則</h4><h3 id="三、運算符、表達式、語句"><a href="# 三、運算符、表達式、語句" class="headerlink" title="三、運算符、表達式、語句"></a> 三、運算符、表達式、語句 </h3><h3 id="四、程式流程控制"><a href="# 四、程式流程控制" class="headerlink" title="四、程式流程控制"></a> 四、程式流程控制 </h3><h3 id="五、陣列"><a href="# 五、陣列" class="headerlink" title="五、陣列"></a> 五、陣列 </h3><h4 id="1- 一維陣列"><a href="#1- 一維陣列" class="headerlink" title="1. 一維陣列"></a>1. 一維陣列</h4><h5 id="1- 陣列名"><a href="#1- 陣列名" class="headerlink" title="(1) 陣列名"></a>(1) 陣列名</h5><p> 在大多數用到陣列的表達式中，陣列會自動轉換成指向陣列首元素的指針，例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> ia [<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> *p = ia;</span><br></pre></td></tr></table></figure><br>但在以下情形，上述轉換不會發生<br>(a) 當陣列被用作 decltype 關鍵字的參數時<br>(b) 作爲取地址符 (&amp;)、sizeof、typeid 等運算符的運算對象時<br><img src="/2018/09/30/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/test1.png" alt></p>
+<h4 id="4- 關鍵字"><a href="#4- 關鍵字" class="headerlink" title="4. 關鍵字"></a>4. 關鍵字 </h4><h4 id="5- 標識符命名規則"><a href="#5- 標識符命名規則" class="headerlink" title="5. 標識符命名規則"></a>5. 標識符命名規則</h4><h3 id="三、運算符、表達式、語句"><a href="# 三、運算符、表達式、語句" class="headerlink" title="三、運算符、表達式、語句"></a> 三、運算符、表達式、語句 </h3><h3 id="四、程式流程控制"><a href="# 四、程式流程控制" class="headerlink" title="四、程式流程控制"></a> 四、程式流程控制 </h3><h3 id="五、陣列"><a href="# 五、陣列" class="headerlink" title="五、陣列"></a> 五、陣列 </h3><h4 id="1- 一維陣列"><a href="#1- 一維陣列" class="headerlink" title="1. 一維陣列"></a>1. 一維陣列</h4><h5 id="1- 陣列名"><a href="#1- 陣列名" class="headerlink" title="(1) 陣列名"></a>(1) 陣列名</h5><p> 在大多數用到陣列的表達式中，陣列會自動轉換成指向陣列首元素的指針，例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> ia [<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> *p = ia;</span><br></pre></td></tr></table></figure><br>但在以下情形，上述轉換不會發生<br>(a) 當陣列被用作 decltype 關鍵字的參數時<br>(b) 作爲取地址符 (&amp;)、sizeof、typeid 等運算符的運算對象時<br><img src="/2018/09/30/C++%20review(1)/test1.png" alt></p>
 <pre><code>補充：類型轉換
 (1) 舊有 C 風格的强制轉換是不推薦的，因爲不顯眼，容易被忽略
     (int) x;
@@ -338,7 +338,7 @@
 </code></pre><p>將需要分配記憶體空間的定義放在原始檔案中，例如：函數的定義，命名空間作用域中變量的定義；<br>而將不需要分配空間的聲明放在頭檔案中，例如：類聲明、外部函數的原型聲明、外部變量的聲明、基本數據類型常量的聲明。<br>内聯函數由於需要嵌入到每個調用它的函數之中，應該被編譯單元可見，定義應該出現在頭檔案當中。</p>
 <h4 id="2- 外部函數"><a href="#2- 外部函數" class="headerlink" title="2. 外部函數"></a>2. 外部函數 </h4><p> 非成員函數，都是命名空間作用域的，如果沒有特殊説明，可以在不同的編譯單元中被調用，只要在調用之前聲明即可。</p>
 <h4 id="3-static- 修飾命名空間作用域的變量或函數"><a href="#3-static- 修飾命名空間作用域的變量或函數" class="headerlink" title="3.static 修飾命名空間作用域的變量或函數"></a>3.static 修飾命名空間作用域的變量或函數 </h4><p> 命名空間作用域中聲明的變量或函數，在默認情況下都可以被其他編譯單元訪問，但有時並不希望被其他原始檔案引用，可以使用 static。<br>然而，ISO C++ 2.0 標準中，不鼓勵使用這種方式隱藏，而是使用匿名空間：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">f</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		n++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="七、指針"><a href="# 七、指針" class="headerlink" title="七、指針"></a>七、指針</h3><h4 id="1- 指針的概念與使用"><a href="#1- 指針的概念與使用" class="headerlink" title="1. 指針的概念與使用"></a>1. 指針的概念與使用</h4><p>(1) 可以通過 &amp; 符號獲取變量的地址<br>(2) 利用指針可以記錄地址<br>(3) 對指針變量解引用，可以操作指針指向的記憶體存放的數據<br><img src="/2018/09/30/C++%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80/test2.png" alt></p>
+<h3 id="七、指針"><a href="# 七、指針" class="headerlink" title="七、指針"></a>七、指針</h3><h4 id="1- 指針的概念與使用"><a href="#1- 指針的概念與使用" class="headerlink" title="1. 指針的概念與使用"></a>1. 指針的概念與使用</h4><p>(1) 可以通過 &amp; 符號獲取變量的地址<br>(2) 利用指針可以記錄地址<br>(3) 對指針變量解引用，可以操作指針指向的記憶體存放的數據<br><img src="/2018/09/30/C++%20review(1)/test2.png" alt></p>
 <h4 id="2- 指針所佔的記憶體空間"><a href="#2- 指針所佔的記憶體空間" class="headerlink" title="2. 指針所佔的記憶體空間"></a>2. 指針所佔的記憶體空間 </h4><p> 所有指針類型在 32 位作業系統下是 4 字節；在 64 位作業系統是 8 字節</p>
 <h4 id="3- 空指針和野指針"><a href="#3- 空指針和野指針" class="headerlink" title="3. 空指針和野指針"></a>3. 空指針和野指針 </h4><p> 空指針指向記憶體中編號為 0 的空間，是用來初始化指針變量的 <br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p = <span class="literal">NULL</span>;</span><br><span class="line">cout &lt;&lt; *p &lt;&lt; endl; <span class="comment">// 訪問空指針報錯</span></span><br></pre></td></tr></table></figure><br> 空指針指向的記憶體是不可以訪問的（記憶體編號 0-255 為系統占用記憶體，不允許用戶訪問）<br>野指針指向非法的記憶體空間，也是不可以訪問的</p>
 <h4 id="4-const- 和指針"><a href="#4-const- 和指針" class="headerlink" title="4.const 和指針"></a>4.const 和指針 </h4><h5 id="1- 指向常量的指針，稱爲常量指針"><a href="#1- 指向常量的指針，稱爲常量指針" class="headerlink" title="(1) 指向常量的指針，稱爲常量指針"></a>(1) 指向常量的指針，稱爲常量指針</h5><p> 只能防止通過指針修改記憶體中的數據，並不能保護指針所指向的對象。<br>可以將一個常量的地址賦值給常量指針。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>; <span class="comment">//const 在星號 * 前</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p1 = &amp;a;</span><br><span class="line">p1 = &amp;b; <span class="comment">// 正確</span></span><br><span class="line">*p1 = <span class="number">100</span>; <span class="comment">// 報錯</span></span><br></pre></td></tr></table></figure></p>
