@@ -24,22 +24,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content=".├── node_modules  &#x2F;&#x2F; 套件暫存處，基本上你所有安裝的套件也都會在這裡├── public        &#x2F;&#x2F; 執行 hexo generate 後，輸出的靜態網頁├── scaffolds     &#x2F;&#x2F; 模板。Hexo 會根據 scaffold 來建立新文章 &#x2F; 新頁面├── scripts       &#x2F;&#x2F; 存放自定義 js 文件├── source|   ├── _dra">
+<meta name="description" content="修改主题配置文件_config.yml 那里的 number 为 false">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo 目錄結構">
-<meta property="og:url" content="https://wangxchun.github.io/2018/09/19/hexo%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/index.html">
+<meta property="og:title" content="怎么取消文章目录中对标题的自动编号">
+<meta property="og:url" content="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/index.html">
 <meta property="og:site_name" content="Chris自强不息">
-<meta property="og:description" content=".├── node_modules  &#x2F;&#x2F; 套件暫存處，基本上你所有安裝的套件也都會在這裡├── public        &#x2F;&#x2F; 執行 hexo generate 後，輸出的靜態網頁├── scaffolds     &#x2F;&#x2F; 模板。Hexo 會根據 scaffold 來建立新文章 &#x2F; 新頁面├── scripts       &#x2F;&#x2F; 存放自定義 js 文件├── source|   ├── _dra">
+<meta property="og:description" content="修改主题配置文件_config.yml 那里的 number 为 false">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2018-09-19T10:10:05.000Z">
-<meta property="article:modified_time" content="2021-04-13T02:18:08.802Z">
+<meta property="article:published_time" content="2018-09-05T11:01:43.000Z">
+<meta property="article:modified_time" content="2021-04-13T02:18:08.987Z">
 <meta property="article:author" content="Chris Wang">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="目錄結構">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://wangxchun.github.io/2018/09/19/hexo%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/">
+<link rel="canonical" href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/">
 
 
 <script class="page-configurations">
@@ -51,7 +49,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>hexo 目錄結構 | Chris自强不息</title>
+<title>怎么取消文章目录中对标题的自动编号 | Chris自强不息</title>
   
 
 
@@ -238,7 +236,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/19/hexo%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -251,7 +249,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo 目錄結構
+          怎么取消文章目录中对标题的自动编号
         </h1>
 
         <div class="post-meta-container">
@@ -262,7 +260,7 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2018-09-19 18:10:05" itemprop="dateCreated datePublished" datetime="2018-09-19T18:10:05+08:00">2018-09-19</time>
+      <time title="創建時間：2018-09-05 19:01:43" itemprop="dateCreated datePublished" datetime="2018-09-05T19:01:43+08:00">2018-09-05</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
@@ -291,9 +289,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>.<br>├── node_modules  // 套件暫存處，基本上你所有安裝的套件也都會在這裡 <br>├── public        // 執行 hexo generate 後，輸出的靜態網頁 <br>├── scaffolds     // 模板。Hexo 會根據 scaffold 來建立新文章 / 新頁面 <br>├── scripts       // 存放自定義 js 文件 <br>├── source<br>|   ├── _drafts   // 草稿文章 <br>|   └── _posts    // 發佈文章 <br>├── themes        // Hexo 主题文件，Next 主題的樹狀結構請看下面 <br>├── _config.yml   // 整個 Blog 的配置 <br>├── .gitignore    // 舉凡只要你不想被加入版本控制甚至是上傳到 GitHub 的資料夾或檔案，都可寫在這 <br>├── package-lock.json// 主要是記錄當前狀態安裝的每一個套件版本，他會自己調整，不需要動它 <br>└── package.json  // 主要是放置並管理透過 npm 下載的檔案，其中部分指令也是直接寫在這裡面 <br><span id="more"></span><br>.<br>└──themes<br>   └── next<br>          ├── doc<br>       ├── languages    // 主題語言字眼 <br>       ├── layout       //pug 文件，後會渲染成 html<br>       ├── scripts      //js 文件 <br>       ├── source<br>       |   ├── css      //styl 文件，後會渲染成 css<br>       |   ├── img      // 主題配置用到的圖片 <br>       |   └── js       //js 文件 <br>       ├── test<br>       └── _config.yml  // Butterfly 主題配置 </p>
-<p> 試著學 Hexo 系列 <br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20119486/ironman/2944">https://ithelp.ithome.com.tw/users/20119486/ironman/2944</a></p>
-<p> 參考：<br><a target="_blank" rel="noopener" href="https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%">https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%</a> E5%89%8D% E8% A8%80</p>
+        <p> 修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
 
     </div>
 
@@ -302,22 +298,18 @@
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/tags/%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/" rel="tag"># 目錄結構</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2018/09/16/%E5%9C%A8hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" rel="prev" title="在 hexo 文章中插入图片">
-                  <i class="fa fa-chevron-left"></i> 在 hexo 文章中插入图片
+                <a href="/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/" rel="prev" title="參考：架設網站的第一步">
+                  <i class="fa fa-chevron-left"></i> 參考：架設網站的第一步
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/" rel="next" title="hexo 中 Mathjax 的用法">
-                  hexo 中 Mathjax 的用法 <i class="fa fa-chevron-right"></i>
+                <a href="/2018/09/10/hexo%20set-Github-SSH-key/" rel="next" title="設定 Github SSH 金鑰">
+                  設定 Github SSH 金鑰 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

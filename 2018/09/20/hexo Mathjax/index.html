@@ -27,21 +27,21 @@
 <meta name="description" content="Mathjax 的安装在 hexo 中，你会发现我们不能用 Latex 语法来书写数学公式，这对于书写学术博客来说是很大的不便，因为我们会经常碰到很多的数学公式推导，但是我们可以通过安装第三方库来解决这一问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo 中 Mathjax 的用法">
-<meta property="og:url" content="https://wangxchun.github.io/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/index.html">
+<meta property="og:url" content="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/index.html">
 <meta property="og:site_name" content="Chris自强不息">
 <meta property="og:description" content="Mathjax 的安装在 hexo 中，你会发现我们不能用 Latex 语法来书写数学公式，这对于书写学术博客来说是很大的不便，因为我们会经常碰到很多的数学公式推导，但是我们可以通过安装第三方库来解决这一问题。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://wangxchun.github.io/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/photo1.png">
-<meta property="og:image" content="https://wangxchun.github.io/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/photo2.png">
-<meta property="og:image" content="https://wangxchun.github.io/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/photo3.png">
+<meta property="og:image" content="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/photo1.png">
+<meta property="og:image" content="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/photo2.png">
+<meta property="og:image" content="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/photo3.png">
 <meta property="article:published_time" content="2018-09-20T13:24:55.000Z">
-<meta property="article:modified_time" content="2021-04-13T07:41:14.789Z">
+<meta property="article:modified_time" content="2021-04-13T08:55:39.253Z">
 <meta property="article:author" content="Chris Wang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wangxchun.github.io/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/photo1.png">
+<meta name="twitter:image" content="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/photo1.png">
 
 
-<link rel="canonical" href="https://wangxchun.github.io/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/">
+<link rel="canonical" href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">
 
 
 <script class="page-configurations">
@@ -241,7 +241,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -272,7 +272,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 15:41:14" itemprop="dateModified" datetime="2021-04-13T15:41:14+08:00">2021-04-13</time>
+        <time title="修改時間：2021-04-13 16:55:39" itemprop="dateModified" datetime="2021-04-13T16:55:39+08:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -310,17 +310,17 @@
 <p>第五步：开启 mathjax<br>在主题 _config.yml 中开启 Mathjax， 找到 mathjax 字段添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure></p>
 <p>到博客根目录下，找到 themes/next/_config.yml，把 math 默认的 flase 修改为 true，具体如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Math Equations Render Support</span><br><span class="line">math:</span><br><span class="line">  enable: true</span><br><span class="line">  per_page: true</span><br><span class="line">  engine: mathjax</span><br></pre></td></tr></table></figure></p>
 <p>通过以上步骤，我们就可以在 hexo 中使用 Mathjax 来书写数学公式。</p>
-<h3 id="语法使用"><a href="# 语法使用" class="headerlink" title="语法使用"></a>语法使用 </h3><h4 id="空格表示"><a href="# 空格表示" class="headerlink" title="空格表示"></a> 空格表示</h4><p><img src="/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/photo1.png" alt></p>
+<h3 id="语法使用"><a href="# 语法使用" class="headerlink" title="语法使用"></a>语法使用 </h3><h4 id="空格表示"><a href="# 空格表示" class="headerlink" title="空格表示"></a> 空格表示</h4><p><img src="/2018/09/20/hexo%20Mathjax/photo1.png" alt></p>
 <h4 id="点乘、叉乘、除以"><a href="# 点乘、叉乘、除以" class="headerlink" title="点乘、叉乘、除以"></a>点乘、叉乘、除以 </h4><p> 点乘：a \cdot b<br>叉乘：a \times b<br>除以：a \div b</p>
 <h4 id="对数"><a href="# 对数" class="headerlink" title="对数"></a>对数</h4><p>log 以 a 为底，以 x 为真数：\log_ax<br>log 以 e 为底，以 x 为真数：\ln x<br>log 以 10 为底，以 x 为真数：\lg x</p>
 <h4 id="向下取整，向上取整"><a href="# 向下取整，向上取整" class="headerlink" title="向下取整，向上取整"></a>向下取整，向上取整 </h4><p> 向下取整：\lfloor x \rfloor<br>向上取整：\lceil x \rceil</p>
 <h4 id="字母上有一横"><a href="# 字母上有一横" class="headerlink" title="字母上有一横"></a>字母上有一横</h4><p>\overline 能覆盖所有括号中的文本，\bar 长度只能覆盖一个字母。</p>
 <h4 id="字母上一个帽子符号"><a href="# 字母上一个帽子符号" class="headerlink" title="字母上一个帽子符号"></a>字母上一个帽子符号</h4><p>\hat {Z}</p>
-<h4 id="微积分常用符号"><a href="# 微积分常用符号" class="headerlink" title="微积分常用符号"></a>微积分常用符号</h4><p><img src="/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/photo2.png" alt></p>
+<h4 id="微积分常用符号"><a href="# 微积分常用符号" class="headerlink" title="微积分常用符号"></a>微积分常用符号</h4><p><img src="/2018/09/20/hexo%20Mathjax/photo2.png" alt></p>
 <h4 id="大于等于号和小于等于号"><a href="# 大于等于号和小于等于号" class="headerlink" title="大于等于号和小于等于号"></a>大于等于号和小于等于号 </h4><p> 大于等于号：\geq<br>小于等于号：\leq</p>
 <h4 id="矩阵"><a href="# 矩阵" class="headerlink" title="矩阵"></a>矩阵</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Mage_EE/article/details/75317083">https://blog.csdn.net/Mage_EE/article/details/75317083</a><br>\begin {matrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {matrix}</p>
 <h4 id="通过强制改变字体大小使得分子分母字体大小一致"><a href="# 通过强制改变字体大小使得分子分母字体大小一致" class="headerlink" title="通过强制改变字体大小使得分子分母字体大小一致"></a>通过强制改变字体大小使得分子分母字体大小一致</h4><p>\displaystyle<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_36670529/article/details/85256017">https://blog.csdn.net/weixin_36670529/article/details/85256017</a></p>
-<h4 id="插入表格"><a href="# 插入表格" class="headerlink" title="插入表格"></a>插入表格 </h4><p><img src="/2018/09/20/hexo%E4%B8%ADMathjax%E7%9A%84%E7%94%A8%E6%B3%95/photo3.png" alt><br>| 姓名 | 爱好 |<br>—|—|<br> 张三 | 足球 &lt; br &gt; 篮球 <br> 李四 | 羽毛球 &lt; br &gt; 乒乓球<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/microcosmv/article/details/51868178">https://blog.csdn.net/microcosmv/article/details/51868178</a></p>
+<h4 id="插入表格"><a href="# 插入表格" class="headerlink" title="插入表格"></a>插入表格 </h4><p><img src="/2018/09/20/hexo%20Mathjax/photo3.png" alt><br>| 姓名 | 爱好 |<br>—|—|<br> 张三 | 足球 &lt; br &gt; 篮球 <br> 李四 | 羽毛球 &lt; br &gt; 乒乓球<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/microcosmv/article/details/51868178">https://blog.csdn.net/microcosmv/article/details/51868178</a></p>
 <h4 id="公式语法"><a href="# 公式语法" class="headerlink" title="公式语法"></a>公式语法</h4><p><a target="_blank" rel="noopener" href="http://stevenshi.me/2017/06/26/hexo-insert-formula/">http://stevenshi.me/2017/06/26/hexo-insert-formula/</a><br><a target="_blank" rel="noopener" href="https://www.szdev.com/blog/Hexo/mathjax-config-and-tutorial/">https://www.szdev.com/blog/Hexo/mathjax-config-and-tutorial/</a></p>
 <h4 id="分段函数"><a href="# 分段函数" class="headerlink" title="分段函数"></a>分段函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$f (n) &#x3D;</span><br><span class="line">\begin &#123;cases&#125;</span><br><span class="line">n&#x2F;2,  &amp; \text &#123;if $n$ is even&#125; \\</span><br><span class="line">3n+1, &amp; \text &#123;if $n$ is odd&#125;</span><br><span class="line">\end &#123;cases&#125;$</span><br></pre></td></tr></table></figure>
 <p>$f (n) =<br>\begin {cases}<br>n/2,  &amp; \text {if $n$ is even} \\<br>3n+1, &amp; \text {if $n$ is odd}<br>\end {cases}$<br>详细数学运算语法 <a target="_blank" rel="noopener" href="https://blog.csdn.net/u010945683/article/details/46757757">https://blog.csdn.net/u010945683/article/details/46757757</a><br>详细罗马符号语法 <a target="_blank" rel="noopener" href="https://blog.csdn.net/liyuanbhu/article/details/50636416">https://blog.csdn.net/liyuanbhu/article/details/50636416</a><br>详细语法 <a target="_blank" rel="noopener" href="https://www.szdev.com/blog/Hexo/mathjax-config-and-tutorial/">https://www.szdev.com/blog/Hexo/mathjax-config-and-tutorial/</a><br>Markdown 学习笔记 <a target="_blank" rel="noopener" href="http://pepcy.cf/Markdown-%">http://pepcy.cf/Markdown-%</a> E5% AD% A6% E4% B9% A0% E7% AC%94% E8% AE% B0/<br>Latex/MathJax/Katex 数学公式手册 <a target="_blank" rel="noopener" href="https://fivecakes.com/math">https://fivecakes.com/math</a></p>
@@ -337,13 +337,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2018/09/19/hexo%E7%9B%AE%E9%8C%84%E7%B5%90%E6%A7%8B/" rel="prev" title="hexo 目錄結構">
+                <a href="/2018/09/19/hexo%20directory-structure/" rel="prev" title="hexo 目錄結構">
                   <i class="fa fa-chevron-left"></i> hexo 目錄結構
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2018/09/22/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/" rel="next" title="如何是实现 hexo 文章中文和英文之间自动空格">
-                  如何是实现 hexo 文章中文和英文之间自动空格 <i class="fa fa-chevron-right"></i>
+                <a href="/2018/09/22/hexo%20space-between-chinese-and-english/" rel="next" title="如何实现 hexo 文章中文和英文之间自动空格">
+                  如何实现 hexo 文章中文和英文之间自动空格 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
