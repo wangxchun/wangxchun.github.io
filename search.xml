@@ -33,16 +33,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ error:invalid types for array subscript</title>
-    <url>/2018/10/29/C++%20error%20invalid-types-for-array-subscript/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br><a href="https://wangxchun.github.io/2018/10/29/C++%20error%20invalid-types-for-array-subscript/">C++ error: invalid types for array subscript</a></p>
-<p>當全域性變數與區域性變數為同名，格式卻不同的時候會報此錯 <br> 如全域性中 int a [10]; 主函式中 int a=1；<br><span id="more"></span><br>再次使用 a [] 時會報錯</p>
-]]></content>
-      <categories>
-        <category>C++ error</category>
-      </categories>
-  </entry>
-  <entry>
     <title>C++ error:no matching function for call to transform</title>
     <url>/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br><a href="https://wangxchun.github.io/2018/10/29/C++%20error%20invalid-types-for-array-subscript/">C++ error: invalid types for array subscript</a></p>
@@ -56,6 +46,29 @@
       <categories>
         <category>C++ error</category>
       </categories>
+  </entry>
+  <entry>
+    <title>C++ error:invalid types for array subscript</title>
+    <url>/2018/10/29/C++%20error%20invalid-types-for-array-subscript/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br><a href="https://wangxchun.github.io/2018/10/29/C++%20error%20invalid-types-for-array-subscript/">C++ error: invalid types for array subscript</a></p>
+<p>當全域性變數與區域性變數為同名，格式卻不同的時候會報此錯 <br> 如全域性中 int a [10]; 主函式中 int a=1；<br><span id="more"></span><br>再次使用 a [] 時會報錯</p>
+]]></content>
+      <categories>
+        <category>C++ error</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C++ 取出一個數的每一位</title>
+    <url>/2019/03/16/C++%20get-out-each-digit-of-the-number/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr [<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr [i] = t /<span class="built_in"><span class="keyword">int</span></span> (<span class="built_in">pow</span> (<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr [i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
   </entry>
   <entry>
     <title>C++ 解釋一個語句</title>
@@ -73,9 +86,11 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 取出一個數的每一位</title>
-    <url>/2019/03/16/C++%20get-out-each-digit-of-the-number/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr [<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr [i] = t /<span class="built_in"><span class="keyword">int</span></span> (<span class="built_in">pow</span> (<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr [i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>C++ 运算符</title>
+    <url>/2018/09/23/C++%20operator/</url>
+    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
+<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
+<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
 <h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
 ]]></content>
       <categories>
@@ -92,21 +107,6 @@
 <h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
 <h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
 <p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
-<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 运算符</title>
-    <url>/2018/09/23/C++%20operator/</url>
-    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
-<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
-<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
 <h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
 ]]></content>
       <categories>
@@ -346,21 +346,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>讓 Dev C++ 支持 C++11</title>
-    <url>/2018/09/27/Dev%20C++11/</url>
-    <content><![CDATA[<p>在 DevC++ 中 <br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a &#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br> 會出現如下錯誤<br><img src="/2018/09/27/Dev%20C++11/wrong1.png" alt><br><span id="more"></span></p>
-<h3 id="解決方法"><a href="# 解決方法" class="headerlink" title="解決方法"></a>解決方法</h3><p>(1) 先在 dev 的 [工具] 里找到 [編譯選項]<br>(2) 勾選 [編譯時加入以下命令] 欄位並填入 - std=c++11</p>
-<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>Dev C++</tag>
-        <tag>C++ 11</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构与算法 --4. 查找</title>
     <url>/2019/03/31/algorithm-find/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
@@ -389,6 +374,71 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h5 id="2- 删除的节点不是最底层分支"><a href="#2- 删除的节点不是最底层分支" class="headerlink" title="(2) 删除的节点不是最底层分支"></a>(2) 删除的节点不是最底层分支</h5>]]></content>
       <categories>
         <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>数据结构与算法 --1. 线性表</title>
+    <url>/2019/03/21/algorithm-linearTable/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序 </a><br> 存储结构：顺序，链接，索引，哈希</p>
+<h3 id="一、顺序表"><a href="# 一、顺序表" class="headerlink" title="一、顺序表"></a>一、顺序表 </h3><p> 线性表的寻顺序存储又称为顺序表</p>
+<h4 id="1- 随机存储"><a href="#1- 随机存储" class="headerlink" title="1. 随机存储"></a>1. 随机存储 </h4><p> 相同数据类型，所以可以用公式 LOC (A) + (i-1) xsize (ElemType)<br><span id="more"></span></p>
+<h4 id="2- 类型描述"><a href="#2- 类型描述" class="headerlink" title="2. 类型描述"></a>2. 类型描述</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> InitSize 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType *data;</span><br><span class="line">	<span class="keyword">int</span> MaxSize, length;</span><br><span class="line">&#125; SeqList;</span><br><span class="line"></span><br><span class="line">SeqList L;</span><br><span class="line">L.data = <span class="keyword">new</span> ElemType [InitSize];</span><br></pre></td></tr></table></figure>
+<h4 id="3- 操作与实现"><a href="#3- 操作与实现" class="headerlink" title="3. 操作与实现"></a>3. 操作与实现 </h4><p> 删除，插入，按值查找</p>
+<h4 id="4- 例题"><a href="#4- 例题" class="headerlink" title="4. 例题"></a>4. 例题 </h4><p> 若长度为 n 的非空线性表釆用顺序存储结构，在表的第 i 个位置插入一个数据元素，i 的合法值应该是（ ）<br>A. 1&lt;=i&lt;=n     B. 1&lt;=i&lt;=n+l     C. 0&lt;=i&lt;=n-1     D. 0&lt;=i&lt;=n<br>答案：B 表元素序号从 1 开始，而在第 n+1 个位置插入相当于在表尾追加</p>
+<p>求两个升序序列 A 和 B 的合并序列 C：<br>分别用游标 i 和 j 指向序列 A 和 B 的序列头，<br>依次比较 A [i] 和 B [j]，比较小的就放入序列 C</p>
+<p>方法 1：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search_median</span> <span class="params">(<span class="keyword">int</span> A [], <span class="keyword">int</span> B [], <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>, cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cnt++;</span><br><span class="line">		<span class="keyword">if</span> (cnt == n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> A [i]&lt;B [j]?A [i]:B [j];</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (A [i] &lt; B [j]) i++;</span><br><span class="line">		<span class="keyword">else</span> j++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>方法 2：分治<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h3 id="二、单链表"><a href="# 二、单链表" class="headerlink" title="二、单链表"></a>二、单链表 </h3><h4 id="1- 实现"><a href="#1- 实现" class="headerlink" title="1. 实现"></a>1. 实现</h4><p> 线性表的链式存储又称为单链表<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125; LNode, *LinkList;</span><br><span class="line"><span class="comment">// 指向节点的指针就是链表</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 操作"><a href="#2- 操作" class="headerlink" title="2. 操作"></a>2. 操作 </h4><h5 id="1- 建立表"><a href="#1- 建立表" class="headerlink" title="(1) 建立表"></a>(1) 建立表</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">(a) 采用头插法建立单链表（插入 S）</span><br><span class="line">s-&gt;next = L-&gt;next;</span><br><span class="line">L-&gt;next = s;</span><br><span class="line">(b) 采用头插法建立单链表（插入 S）</span><br><span class="line"> 需要有一个尾指针 r</span><br><span class="line">r-&gt;next = s;</span><br><span class="line">r = s;</span><br></pre></td></tr></table></figure>
+<h5 id="2- 按序号查找节点值（遍历 - 计数器）"><a href="#2- 按序号查找节点值（遍历 - 计数器）" class="headerlink" title="(2) 按序号查找节点值（遍历 + 计数器）"></a>(2) 按序号查找节点值（遍历 + 计数器）</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> cnt = <span class="number">0</span>, LNode* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (p = L-&gt;next; p != <span class="literal">NULL</span>; p = p-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">	cnt++;</span><br><span class="line">	<span class="keyword">if</span> (cnt == i)</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h5 id="3- 按值查找表节点"><a href="#3- 按值查找表节点" class="headerlink" title="(3) 按值查找表节点"></a>(3) 按值查找表节点</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">LNode* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (p=L-&gt;next; p!=<span class="literal">NULL</span>; p=p-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (p-&gt;data == e)</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+<h5 id="4- 插入节点"><a href="#4- 插入节点" class="headerlink" title="(4) 插入节点"></a>(4) 插入节点 </h5><p> 先检查插入位置的合法性，找到待插入位置的前驱节点 p，再在其后插入新节点（i 前插）<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next;</span><br><span class="line">p-&gt;next = s;</span><br><span class="line"><span class="comment">//p-&gt;next 一定是在最后一步修改</span></span><br><span class="line">i 前插 = (i<span class="number">-1</span>) 后插 = i 后插，交换 i 和 i+<span class="number">1</span> 的 data</span><br><span class="line">(在有了指向 i 节点的指针，且是单链表的情况下，可以用这个技巧降低时间复杂度)</span><br></pre></td></tr></table></figure></p>
+<h5 id="5- 删除节点"><a href="#5- 删除节点" class="headerlink" title="(5) 删除节点"></a>(5) 删除节点 </h5><p> 先检查删除位置 q 的合法性，找到待删除位置的前驱节点<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">p-&gt;next = q-&gt;next;</span><br><span class="line"><span class="built_in">free</span> (q);<span class="comment">// 没有释放会导致内存泄漏</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="6- 求表长（遍历 - 计数器）"><a href="#6- 求表长（遍历 - 计数器）" class="headerlink" title="(6) 求表长（遍历 + 计数器）"></a>(6) 求表长（遍历 + 计数器）</h5><p>int cnt=0, LNode* p;<br>for (p=L-&gt;next; p!=NULL; p=p-&gt;next)<br>{<br>    cnt++;<br>}<br>return cnt;</p>
+<h3 id="三、双链表"><a href="# 三、双链表" class="headerlink" title="三、双链表"></a>三、双链表</h3><p>ex：单链表的插入算法，要先找到欲插入位置的前驱，就要花费 O (n) 的时间</p>
+<h4 id="1- 实现 -1"><a href="#1- 实现 -1" class="headerlink" title="1. 实现"></a>1. 实现</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">DNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">DNode</span> *<span class="title">prior</span>, *<span class="title">next</span>;</span></span><br><span class="line">&#125; DNode, *DLinklist;</span><br></pre></td></tr></table></figure>
+<h4 id="2- 操作 -1"><a href="#2- 操作 -1" class="headerlink" title="2. 操作"></a>2. 操作</h4><h5 id="1- 插入节点"><a href="#1- 插入节点" class="headerlink" title="(1) 插入节点"></a>(1) 插入节点</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next;</span><br><span class="line">p-&gt;next-&gt;prior = s;</span><br><span class="line">s-&gt;prior = p;</span><br><span class="line">p-&gt;next = s;</span><br></pre></td></tr></table></figure>
+<h6 id="2- 删除节点"><a href="#2- 删除节点" class="headerlink" title="(2) 删除节点"></a>(2) 删除节点 </h6><p> 删除双链表中节点 <em> p 和后继节点 </em> q<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">p-&gt;next = q-&gt;next;</span><br><span class="line">q-&gt;next-&gt;prior = p;</span><br><span class="line"><span class="built_in">free</span> (q);</span><br></pre></td></tr></table></figure></p>
+<h3 id="四、循环链表（分为循环单链表和循环双链表）"><a href="# 四、循环链表（分为循环单链表和循环双链表）" class="headerlink" title="四、循环链表（分为循环单链表和循环双链表）"></a>四、循环链表（分为循环单链表和循环双链表）</h3><h4 id="1- 循环单链表"><a href="#1- 循环单链表" class="headerlink" title="1. 循环单链表"></a>1. 循环单链表 </h4><p>L 是头指针，r 是尾指针<br>r-&gt;next = L-&gt;next;<br> 判空条件：L-&gt;next == L;</p>
+<h4 id="2- 循环双链表"><a href="#2- 循环双链表" class="headerlink" title="2. 循环双链表"></a>2. 循环双链表 </h4><p> 判空条件：L-&gt;next==L &amp;&amp; L-&gt;prior==L;</p>
+<h3 id="五、静态链表"><a href="# 五、静态链表" class="headerlink" title="五、静态链表"></a>五、静态链表 </h3><p> 移动 -&gt; 使用链表 <br> 查找 -&gt; 使用顺序表 <br> 移动又查找 -&gt; 使用静态链表 <br> 既有前向操作又有后向操作 -&gt; 选择双向链表</p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>讓 Dev C++ 支持 C++11</title>
+    <url>/2018/09/27/Dev%20C++11/</url>
+    <content><![CDATA[<p>在 DevC++ 中 <br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a &#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br> 會出現如下錯誤<br><img src="/2018/09/27/Dev%20C++11/wrong1.png" alt><br><span id="more"></span></p>
+<h3 id="解決方法"><a href="# 解決方法" class="headerlink" title="解決方法"></a>解決方法</h3><p>(1) 先在 dev 的 [工具] 里找到 [編譯選項]<br>(2) 勾選 [編譯時加入以下命令] 欄位並填入 - std=c++11</p>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
+      </categories>
+      <tags>
+        <tag>Dev C++</tag>
+        <tag>C++ 11</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法 --5. 排序</title>
+    <url>/2019/04/03/algorithm-sort/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>通信原理 --（7）最佳接收</title>
+    <url>/2020/10/15/communicationSystem-BestAccepted/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
+<h3 id="一、不同类型数字信号的最佳接收及其误码性能"><a href="# 一、不同类型数字信号的最佳接收及其误码性能" class="headerlink" title="一、不同类型数字信号的最佳接收及其误码性能"></a>一、不同类型数字信号的最佳接收及其误码性能</h3><span id="more"></span>
+<h3 id="二、数字信号的匹配滤波接收"><a href="# 二、数字信号的匹配滤波接收" class="headerlink" title="二、数字信号的匹配滤波接收"></a>二、数字信号的匹配滤波接收 </h3><h3 id="三、最佳基带传输系统"><a href="# 三、最佳基带传输系统" class="headerlink" title="三、最佳基带传输系统"></a> 三、最佳基带传输系统</h3>]]></content>
+      <categories>
+        <category>通信原理</category>
       </categories>
   </entry>
   <entry>
@@ -438,37 +488,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构与算法 --1. 线性表</title>
-    <url>/2019/03/21/algorithm-linearTable/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序 </a><br> 存储结构：顺序，链接，索引，哈希</p>
-<h3 id="一、顺序表"><a href="# 一、顺序表" class="headerlink" title="一、顺序表"></a>一、顺序表 </h3><p> 线性表的寻顺序存储又称为顺序表</p>
-<h4 id="1- 随机存储"><a href="#1- 随机存储" class="headerlink" title="1. 随机存储"></a>1. 随机存储 </h4><p> 相同数据类型，所以可以用公式 LOC (A) + (i-1) xsize (ElemType)<br><span id="more"></span></p>
-<h4 id="2- 类型描述"><a href="#2- 类型描述" class="headerlink" title="2. 类型描述"></a>2. 类型描述</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> InitSize 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType *data;</span><br><span class="line">	<span class="keyword">int</span> MaxSize, length;</span><br><span class="line">&#125; SeqList;</span><br><span class="line"></span><br><span class="line">SeqList L;</span><br><span class="line">L.data = <span class="keyword">new</span> ElemType [InitSize];</span><br></pre></td></tr></table></figure>
-<h4 id="3- 操作与实现"><a href="#3- 操作与实现" class="headerlink" title="3. 操作与实现"></a>3. 操作与实现 </h4><p> 删除，插入，按值查找</p>
-<h4 id="4- 例题"><a href="#4- 例题" class="headerlink" title="4. 例题"></a>4. 例题 </h4><p> 若长度为 n 的非空线性表釆用顺序存储结构，在表的第 i 个位置插入一个数据元素，i 的合法值应该是（ ）<br>A. 1&lt;=i&lt;=n     B. 1&lt;=i&lt;=n+l     C. 0&lt;=i&lt;=n-1     D. 0&lt;=i&lt;=n<br>答案：B 表元素序号从 1 开始，而在第 n+1 个位置插入相当于在表尾追加</p>
-<p>求两个升序序列 A 和 B 的合并序列 C：<br>分别用游标 i 和 j 指向序列 A 和 B 的序列头，<br>依次比较 A [i] 和 B [j]，比较小的就放入序列 C</p>
-<p>方法 1：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search_median</span> <span class="params">(<span class="keyword">int</span> A [], <span class="keyword">int</span> B [], <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>, cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cnt++;</span><br><span class="line">		<span class="keyword">if</span> (cnt == n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> A [i]&lt;B [j]?A [i]:B [j];</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (A [i] &lt; B [j]) i++;</span><br><span class="line">		<span class="keyword">else</span> j++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>方法 2：分治<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h3 id="二、单链表"><a href="# 二、单链表" class="headerlink" title="二、单链表"></a>二、单链表 </h3><h4 id="1- 实现"><a href="#1- 实现" class="headerlink" title="1. 实现"></a>1. 实现</h4><p> 线性表的链式存储又称为单链表<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125; LNode, *LinkList;</span><br><span class="line"><span class="comment">// 指向节点的指针就是链表</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="2- 操作"><a href="#2- 操作" class="headerlink" title="2. 操作"></a>2. 操作 </h4><h5 id="1- 建立表"><a href="#1- 建立表" class="headerlink" title="(1) 建立表"></a>(1) 建立表</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">(a) 采用头插法建立单链表（插入 S）</span><br><span class="line">s-&gt;next = L-&gt;next;</span><br><span class="line">L-&gt;next = s;</span><br><span class="line">(b) 采用头插法建立单链表（插入 S）</span><br><span class="line"> 需要有一个尾指针 r</span><br><span class="line">r-&gt;next = s;</span><br><span class="line">r = s;</span><br></pre></td></tr></table></figure>
-<h5 id="2- 按序号查找节点值（遍历 - 计数器）"><a href="#2- 按序号查找节点值（遍历 - 计数器）" class="headerlink" title="(2) 按序号查找节点值（遍历 + 计数器）"></a>(2) 按序号查找节点值（遍历 + 计数器）</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> cnt = <span class="number">0</span>, LNode* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (p = L-&gt;next; p != <span class="literal">NULL</span>; p = p-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">	cnt++;</span><br><span class="line">	<span class="keyword">if</span> (cnt == i)</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<h5 id="3- 按值查找表节点"><a href="#3- 按值查找表节点" class="headerlink" title="(3) 按值查找表节点"></a>(3) 按值查找表节点</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">LNode* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (p=L-&gt;next; p!=<span class="literal">NULL</span>; p=p-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (p-&gt;data == e)</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
-<h5 id="4- 插入节点"><a href="#4- 插入节点" class="headerlink" title="(4) 插入节点"></a>(4) 插入节点 </h5><p> 先检查插入位置的合法性，找到待插入位置的前驱节点 p，再在其后插入新节点（i 前插）<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next;</span><br><span class="line">p-&gt;next = s;</span><br><span class="line"><span class="comment">//p-&gt;next 一定是在最后一步修改</span></span><br><span class="line">i 前插 = (i<span class="number">-1</span>) 后插 = i 后插，交换 i 和 i+<span class="number">1</span> 的 data</span><br><span class="line">(在有了指向 i 节点的指针，且是单链表的情况下，可以用这个技巧降低时间复杂度)</span><br></pre></td></tr></table></figure></p>
-<h5 id="5- 删除节点"><a href="#5- 删除节点" class="headerlink" title="(5) 删除节点"></a>(5) 删除节点 </h5><p> 先检查删除位置 q 的合法性，找到待删除位置的前驱节点<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">p-&gt;next = q-&gt;next;</span><br><span class="line"><span class="built_in">free</span> (q);<span class="comment">// 没有释放会导致内存泄漏</span></span><br></pre></td></tr></table></figure></p>
-<h5 id="6- 求表长（遍历 - 计数器）"><a href="#6- 求表长（遍历 - 计数器）" class="headerlink" title="(6) 求表长（遍历 + 计数器）"></a>(6) 求表长（遍历 + 计数器）</h5><p>int cnt=0, LNode* p;<br>for (p=L-&gt;next; p!=NULL; p=p-&gt;next)<br>{<br>    cnt++;<br>}<br>return cnt;</p>
-<h3 id="三、双链表"><a href="# 三、双链表" class="headerlink" title="三、双链表"></a>三、双链表</h3><p>ex：单链表的插入算法，要先找到欲插入位置的前驱，就要花费 O (n) 的时间</p>
-<h4 id="1- 实现 -1"><a href="#1- 实现 -1" class="headerlink" title="1. 实现"></a>1. 实现</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">DNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">DNode</span> *<span class="title">prior</span>, *<span class="title">next</span>;</span></span><br><span class="line">&#125; DNode, *DLinklist;</span><br></pre></td></tr></table></figure>
-<h4 id="2- 操作 -1"><a href="#2- 操作 -1" class="headerlink" title="2. 操作"></a>2. 操作</h4><h5 id="1- 插入节点"><a href="#1- 插入节点" class="headerlink" title="(1) 插入节点"></a>(1) 插入节点</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next;</span><br><span class="line">p-&gt;next-&gt;prior = s;</span><br><span class="line">s-&gt;prior = p;</span><br><span class="line">p-&gt;next = s;</span><br></pre></td></tr></table></figure>
-<h6 id="2- 删除节点"><a href="#2- 删除节点" class="headerlink" title="(2) 删除节点"></a>(2) 删除节点 </h6><p> 删除双链表中节点 <em> p 和后继节点 </em> q<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">p-&gt;next = q-&gt;next;</span><br><span class="line">q-&gt;next-&gt;prior = p;</span><br><span class="line"><span class="built_in">free</span> (q);</span><br></pre></td></tr></table></figure></p>
-<h3 id="四、循环链表（分为循环单链表和循环双链表）"><a href="# 四、循环链表（分为循环单链表和循环双链表）" class="headerlink" title="四、循环链表（分为循环单链表和循环双链表）"></a>四、循环链表（分为循环单链表和循环双链表）</h3><h4 id="1- 循环单链表"><a href="#1- 循环单链表" class="headerlink" title="1. 循环单链表"></a>1. 循环单链表 </h4><p>L 是头指针，r 是尾指针<br>r-&gt;next = L-&gt;next;<br> 判空条件：L-&gt;next == L;</p>
-<h4 id="2- 循环双链表"><a href="#2- 循环双链表" class="headerlink" title="2. 循环双链表"></a>2. 循环双链表 </h4><p> 判空条件：L-&gt;next==L &amp;&amp; L-&gt;prior==L;</p>
-<h3 id="五、静态链表"><a href="# 五、静态链表" class="headerlink" title="五、静态链表"></a>五、静态链表 </h3><p> 移动 -&gt; 使用链表 <br> 查找 -&gt; 使用顺序表 <br> 移动又查找 -&gt; 使用静态链表 <br> 既有前向操作又有后向操作 -&gt; 选择双向链表</p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
     <title>数据结构与算法 --2. 树</title>
     <url>/2019/03/23/algorithm-tree/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
@@ -492,20 +511,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>数据结构与算法 --5. 排序</title>
-    <url>/2019/04/03/algorithm-sort/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>通信原理 --（7）最佳接收</title>
-    <url>/2020/10/15/communicationSystem-BestAccepted/</url>
+    <title>通信原理 --（2）信道</title>
+    <url>/2020/09/14/communicationSystem-channel/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、不同类型数字信号的最佳接收及其误码性能"><a href="# 一、不同类型数字信号的最佳接收及其误码性能" class="headerlink" title="一、不同类型数字信号的最佳接收及其误码性能"></a>一、不同类型数字信号的最佳接收及其误码性能</h3><span id="more"></span>
-<h3 id="二、数字信号的匹配滤波接收"><a href="# 二、数字信号的匹配滤波接收" class="headerlink" title="二、数字信号的匹配滤波接收"></a>二、数字信号的匹配滤波接收 </h3><h3 id="三、最佳基带传输系统"><a href="# 三、最佳基带传输系统" class="headerlink" title="三、最佳基带传输系统"></a> 三、最佳基带传输系统</h3>]]></content>
+<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道</h3><span id="more"></span>
+<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -526,16 +536,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
 <h3 id="一、数字基带信号及其频谱特性"><a href="# 一、数字基带信号及其频谱特性" class="headerlink" title="一、数字基带信号及其频谱特性"></a>一、数字基带信号及其频谱特性</h3><span id="more"></span>
 <h3 id="二、基带传输的常用码型和码间串扰"><a href="# 二、基带传输的常用码型和码间串扰" class="headerlink" title="二、基带传输的常用码型和码间串扰"></a>二、基带传输的常用码型和码间串扰 </h3><h3 id="三、无码间串扰的基带传输特性"><a href="# 三、无码间串扰的基带传输特性" class="headerlink" title="三、无码间串扰的基带传输特性"></a> 三、无码间串扰的基带传输特性 </h3><h3 id="四、基带传输系统的抗噪声性能与眼图"><a href="# 四、基带传输系统的抗噪声性能与眼图" class="headerlink" title="四、基带传输系统的抗噪声性能与眼图"></a> 四、基带传输系统的抗噪声性能与眼图 </h3><h3 id="五、部分响应系统"><a href="# 五、部分响应系统" class="headerlink" title="五、部分响应系统"></a> 五、部分响应系统 </h3><h3 id="六、均衡原理"><a href="# 六、均衡原理" class="headerlink" title="六、均衡原理"></a> 六、均衡原理</h3>]]></content>
-      <categories>
-        <category>通信原理</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>通信原理 --（2）信道</title>
-    <url>/2020/09/14/communicationSystem-channel/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道</h3><span id="more"></span>
-<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -580,51 +580,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>计算机体系结构：(一) 硬件 --3. 通信概述</title>
-    <url>/2020/09/03/computer-architecture-1.3-communication-overview/</url>
-    <content><![CDATA[<h3 id="一、电子设备的通信过程"><a href="# 一、电子设备的通信过程" class="headerlink" title="一、电子设备的通信过程"></a>一、电子设备的通信过程</h3><p><img src="/2020/09/03/computer-architecture-1.3-communication-overview/photo1.jpg" alt></p>
-<h4 id="1- 协议：通信规则"><a href="#1- 协议：通信规则" class="headerlink" title="1. 协议：通信规则"></a>1. 协议：通信规则</h4><p><img src="/2020/09/03/computer-architecture-1.3-communication-overview/photo2.jpg" alt></p>
-<h5 id="简单通信协议：只有底层协议"><a href="# 简单通信协议：只有底层协议" class="headerlink" title="简单通信协议：只有底层协议"></a>简单通信协议：只有底层协议 </h5><p>Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信<br> 编写程序需参考硬件的 “时序图”<br><span id="more"></span></p>
-<h5 id="复杂通信协议：底层和高层协议组合而成"><a href="# 复杂通信协议：底层和高层协议组合而成" class="headerlink" title="复杂通信协议：底层和高层协议组合而成"></a>复杂通信协议：底层和高层协议组合而成 </h5><p> 编程者要做的是学会调用 “协议程序” 的函数接口</p>
-<h4 id="2- 数据编码不一定要 -ex：单片机的串口的 -SPI，I2C- 通信"><a href="#2- 数据编码不一定要 -ex：单片机的串口的 -SPI，I2C- 通信" class="headerlink" title="2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信"></a>2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信 </h4><h4 id="3- 调制"><a href="#3- 调制" class="headerlink" title="3. 调制"></a>3. 调制</h4><h5 id="为什么需要调制？"><a href="# 为什么需要调制？" class="headerlink" title="为什么需要调制？"></a> 为什么需要调制？</h5><p>(1) 便于制作小尺寸天线 <br> 无线通信中，无线的尺寸与电磁波波长成正比，如果基波信号很低，用频率高的载波信后，就可以用尺寸小的天线接收 <br>(2) 便于对信道进行频分复用<br>(3) 能够提高信号的抗噪能力<br> 当我们说某个天线通信为 XXXX Hz 时，指的都是载波信号，而不是基带信号的频率</p>
-<h5 id="调制种类"><a href="# 调制种类" class="headerlink" title="调制种类"></a>调制种类 </h5><p>(1) 数字调制技术：<br>ASK、FSK、PSK<br>(2) 模拟调制技术：<br> 幅度调制：DSB，AM，SSB，VSB<br>角度调制：FM，PM</p>
-<h3 id="二、通信的分类"><a href="# 二、通信的分类" class="headerlink" title="二、通信的分类"></a>二、通信的分类 </h3><h4 id="1- 串行和并行"><a href="#1- 串行和并行" class="headerlink" title="1. 串行和并行"></a>1. 串行和并行</h4><h4 id="2- 同步和异步，阻塞和非阻塞"><a href="#2- 同步和异步，阻塞和非阻塞" class="headerlink" title="2. 同步和异步，阻塞和非阻塞"></a>2. 同步和异步，阻塞和非阻塞</h4><p> 串行通信中分为同步通信和异步通信</p>
-<h5 id="同步通信：事先通过 -“应答机制 -“来约定碰头时间点，双方都会对这个时间点做好准备"><a href="# 同步通信：事先通过 -“应答机制 -“来约定碰头时间点，双方都会对这个时间点做好准备" class="headerlink" title="同步通信：事先通过 “应答机制 “来约定碰头时间点，双方都会对这个时间点做好准备"></a>同步通信：事先通过 “应答机制 “来约定碰头时间点，双方都会对这个时间点做好准备</h5><p>Ex：单片机的 I2C 和 SPI 通信<br>(1) 阻塞等：什么都不做，等约定时间点到<br>(2) 非阻塞等：继续做自己的事，等约定时间点到</p>
-<h5 id="异步通信：碰头时间点是随机的"><a href="# 异步通信：碰头时间点是随机的" class="headerlink" title="异步通信：碰头时间点是随机的"></a>异步通信：碰头时间点是随机的 </h5><p>Ex：单片机的串口 (UART) 通信<br>(1) 阻塞等：什么都不做，等随机时间到<br>(2) 非阻塞等：继续做自己的事，等随机时间到<br> 对异步通信来说，非阻塞等比较靠谱</p>
-<h4 id="3- 单工，半双工，全双工"><a href="#3- 单工，半双工，全双工" class="headerlink" title="3. 单工，半双工，全双工"></a>3. 单工，半双工，全双工 </h4><h3 id="三、噪声"><a href="# 三、噪声" class="headerlink" title="三、噪声"></a> 三、噪声 </h3><h4 id="不同的传输距离"><a href="# 不同的传输距离" class="headerlink" title="不同的传输距离"></a> 不同的传输距离 </h4><p> 短距离通信：主要考虑内部噪声的影响，外部噪声的影响可以忽略 <br>Ex：I2C，SPI，RS232 (串口)，usb<br> 中长距离通信：除了考虑内部噪声，还要考虑外部噪声<br>Ex：中距离通信：RS485<br>Ex：长距离通信：网络通信，电话通信，广播通信</p>
-<h4 id="如何降低噪声影响？"><a href="# 如何降低噪声影响？" class="headerlink" title="如何降低噪声影响？"></a>如何降低噪声影响？</h4><h4 id="1- 内部噪声：通过各种滤波电路过滤噪声"><a href="#1- 内部噪声：通过各种滤波电路过滤噪声" class="headerlink" title="1. 内部噪声：通过各种滤波电路过滤噪声"></a>1. 内部噪声：通过各种滤波电路过滤噪声 </h4><h4 id="2- 外部噪声"><a href="#2- 外部噪声" class="headerlink" title="2. 外部噪声"></a>2. 外部噪声</h4><p>(1) 提高信号能量，提高信号的抗干扰能力（无线传输可用）<br>(2) 屏蔽网 (屏蔽网) (有线传输)<br>(3) 传输差分信号（有线传输）<br>Ex：USB (距离近，使用是为了提高质量)，RS485 (无中继器传输距离不超过 1200 米)，网络<br> 芯片外部 90% 通信都是串行通信，传输距离较长时需使用差分信号传输<br>(例外，ex：CPU 芯片和内存芯片的通信时并行的)</p>
-<h3 id="四、通信例子"><a href="# 四、通信例子" class="headerlink" title="四、通信例子"></a>四、通信例子 </h3><h4 id="1- 有线通信"><a href="#1- 有线通信" class="headerlink" title="1. 有线通信"></a>1. 有线通信</h4><h4 id="2- 无线远距离"><a href="#2- 无线远距离" class="headerlink" title="2. 无线远距离"></a>2. 无线远距离</h4><h4 id="3- 无线近距离"><a href="#3- 无线近距离" class="headerlink" title="3. 无线近距离"></a>3. 无线近距离</h4><h3 id="计算机体系结构文章总览"><a href="# 计算机体系结构文章总览" class="headerlink" title="计算机体系结构文章总览"></a> 计算机体系结构文章总览 </h3><p><a href="https://wangxchun.github.io/2020/09/03/computer-architecture-1.3-communication-overview/"> 计算机体系结构：(一) 硬件 —3. 通信概述</a></p>
-]]></content>
-      <categories>
-        <category>计算机体系结构</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>计算机网络 lab2 使用 Mininet 创建网络拓扑</title>
-    <url>/2021/03/30/computerNetwork-lab2-Mininet/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑</a></p>
-<h3 id="一、Miniset- 简介"><a href="# 一、Miniset- 简介" class="headerlink" title="一、Miniset 简介"></a>一、Miniset 简介</h3><p>Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。<br>Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。<br>Mininet 提供 python API，简单易用</p>
-<h3 id="二、环境搭建"><a href="# 二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建 </h3><h4 id="安装 -mininet"><a href="# 安装 -mininet" class="headerlink" title="安装 mininet"></a> 安装 mininet</h4><span id="more"></span>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ su root</span><br><span class="line">$ apt-get install git</span><br><span class="line">$ git clone http:&#x2F;&#x2F;github.com&#x2F;mininet&#x2F;mininet.git</span><br><span class="line">$ cd mininet&#x2F;util</span><br><span class="line">#.&#x2F;install.sh n3v</span><br><span class="line">&#x2F;&#x2F;n：安装 mininet 的依赖和核心文件</span><br><span class="line">&#x2F;&#x2F;3：安装 Openflow 1.3 版本</span><br><span class="line">&#x2F;&#x2F;v：安装 Open Switch</span><br><span class="line">$ mn &#x2F;&#x2F; 创建默认最小的网络拓扑，测试 mininet 是否安装成功</span><br><span class="line">miniset&gt; pingall &#x2F;&#x2F; 查看连通性</span><br><span class="line">miniset&gt; exit &#x2F;&#x2F; 退出 miniset</span><br><span class="line">#### 安装 ryu</span><br><span class="line">$ wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py&#x2F;&#x2F;pip 是一个通用的 python 包管理工具</span><br><span class="line">&#x2F;&#x2F;wget 是从指定的 url 下载文件</span><br><span class="line">$ python get-pip.py</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;osrg&#x2F;ryu.git</span><br><span class="line">$ cd ryu</span><br><span class="line">$ pip install -r tools&#x2F;pip-requires&#x2F;&#x2F; 安装 ryu 之前先安装 ryu 的依赖</span><br><span class="line">&#x2F;&#x2F; 这一步要按照的依赖比较多，可能因为下载不全而出现报错，这时就重新执行一遍</span><br><span class="line">&#x2F;&#x2F; 报错 2</span><br><span class="line">$ python setup.py install </span><br><span class="line">$ cd ryu&#x2F;app&#x2F;&#x2F; 验证 ryu 是否按照成功</span><br><span class="line">$ ryu-manager example_switch_13.py&#x2F;&#x2F; 先不要点击 enter，先打开另一个终端运行</span><br><span class="line">&#x2F;&#x2F;su root</span><br><span class="line">&#x2F;&#x2F;mn --controller&#x3D;remote</span><br><span class="line">&#x2F;&#x2F; 创建完网络拓扑之后，可以执行 ryu-manager</span><br></pre></td></tr></table></figure>
-<p><a href="https://joechang0113.github.io/2020/02/18/mininet-ryu-install.html">https://joechang0113.github.io/2020/02/18/mininet-ryu-install.html</a><br>尝试打开可视化界面:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;mininet&#x2F;mininet&#x2F;examples</span><br><span class="line">$ .&#x2F;miniedit.py</span><br></pre></td></tr></table></figure><br>报错 1：运行 miniedit.py 时报错 ImportError: No module named mininet.log<br>是 python 版本的问题 <br><a href="http://shangdixinxi.com/detail-1528015.html">http://shangdixinxi.com/detail-1528015.html</a><br> 报错 2：pip install，Error：Cannot uninstall ‘PyYAML’.<br>原因：从 pip 10 开始就不支持卸载 distutils 的包了 <br> 解决方法：pip install —ignore-installed PyYAML<br><a href="https://www.twblogs.net/a/5e50e655bd9eee2117bff2c9">https://www.twblogs.net/a/5e50e655bd9eee2117bff2c9</a><br>报错 3：<br>有些错误是因为 ubuntu 的 python 默认版本是 2.7 导致的 <br> 所以按照以下方式改变 python 的默认版本 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ update-alternatives --list python &#x2F;&#x2F; 列出所有可用的 python 替代版本信息</span><br><span class="line">$ update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;python python &#x2F;usr&#x2F;bin&#x2F;python2.7 1</span><br><span class="line">$ update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;python python &#x2F;usr&#x2F;bin&#x2F;python3.6 2</span><br><span class="line">$ update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;python python &#x2F;usr&#x2F;bin&#x2F;python3.7 3</span><br><span class="line">$ update-alternatives --config python</span><br><span class="line"># 第一个参数: --install 表示向 update-alternatives 注册服务名。</span><br><span class="line"># 第二个参数：注册最终地址，成功后将会把命令在这个固定的目的地址做真实命令的软链，以后管理就是管理这个软链；</span><br><span class="line"># 第三个参数：服务名，以后管理时以它为关联依据。</span><br><span class="line"># 第四个参数：被管理的命令绝对路径。</span><br><span class="line"># 第五个参数：优先级，数字越大优先级越高。</span><br><span class="line">https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;3d8304f4fb4a</span><br></pre></td></tr></table></figure><br> 报错 4：terminal 打不开 <br><a href="https://blog.csdn.net/u011622434/article/details/103121262">https://blog.csdn.net/u011622434/article/details/103121262</a><br> 首先，按 ctrl+alt+F1（我是 ctrl+alt+F5）进入命令行模式，也就是无图形界面，这时候会让你输入用户名和密码 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ gnome-terminal</span><br></pre></td></tr></table></figure><br> 该指令是查看出现的终端错误，我有两处错误 <br> 错误一：No module named “apt_pkg”，解决方法如下 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get remove --purge python-apt</span><br><span class="line">$ sudo apt-get install python-apt -f</span><br><span class="line">$ cd &#x2F;usr&#x2F;lib&#x2F;python3&#x2F;dist-packages&#x2F;</span><br><span class="line">$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86_64-linux-gnu.so</span><br></pre></td></tr></table></figure><br> 错误二：cannot import name ‘_gi’，解决方法如下<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;lib&#x2F;python3&#x2F;dist-packages&#x2F;gi&#x2F;</span><br><span class="line">sudo cp _gi.cpython-35m-x86_64-linux-gnu.so _gi.cpython-36m-x86_64-linux-gnu.so</span><br><span class="line">sudo cp _gi_cairo.cpython-35m-x86_64-linux-gnu.so _gi_cairo.cpython-36m-x86_64-linux-gnu.so</span><br></pre></td></tr></table></figure></p>
-<h3 id="三、Mininet- 常用指令"><a href="# 三、Mininet- 常用指令" class="headerlink" title="三、Mininet 常用指令"></a>三、Mininet 常用指令 </h3><h3 id="四、熟悉常用指令"><a href="# 四、熟悉常用指令" class="headerlink" title="四、熟悉常用指令"></a> 四、熟悉常用指令</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ su root</span><br><span class="line">$ cd mininet/mininet</span><br><span class="line">$ cd examples</span><br><span class="line">// 里面有很多 python 脚本，可以随便选择一个执行，熟悉</span><br><span class="line">// 在执行之前，要在另一个终端将 ryu 控制器打开</span><br><span class="line">//$ su root</span><br><span class="line">//$ cd</span><br><span class="line">//$ cd ryu/app</span><br><span class="line">//$ ryumanager simple_switch.py</span><br><span class="line">$ python <span class="number">427.</span>py</span><br><span class="line">miniset&gt; nodes // 显示节点列表</span><br><span class="line">miniset&gt; pingall // 查看连通性</span><br><span class="line">miniset&gt; net // 查看网络拓扑</span><br><span class="line">miniset&gt; links // 查看网阔健壮性</span><br><span class="line">miniset&gt; dump // 节点的接口设置和进程 PID</span><br><span class="line">miniset&gt; iperf h1 h2 // 网络带宽设置</span><br><span class="line">miniset&gt; <span class="built_in">help</span> // 帮助</span><br><span class="line">miniset&gt; exit // 退出 miniset</span><br></pre></td></tr></table></figure>
-<h3 id="五、Mini- 搭建网络拓扑的三种方式"><a href="# 五、Mini- 搭建网络拓扑的三种方式" class="headerlink" title="五、Mini 搭建网络拓扑的三种方式"></a>五、Mini 搭建网络拓扑的三种方式 </h3><h4 id="1- 通过命令行 -terminal"><a href="#1- 通过命令行 -terminal" class="headerlink" title="1. 通过命令行 terminal"></a>1. 通过命令行 terminal</h4><h5 id="单一拓扑 -Single"><a href="# 单一拓扑 -Single" class="headerlink" title="单一拓扑 (Single)"></a> 单一拓扑 (Single)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo&#x3D;single,3</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo1.png" alt></p>
-<h5 id="线性拓扑"><a href="# 线性拓扑" class="headerlink" title="线性拓扑"></a>线性拓扑</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo&#x3D;linear,3</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo2.png" alt></p>
-<h5 id="树形拓扑"><a href="# 树形拓扑" class="headerlink" title="树形拓扑"></a>树形拓扑</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo&#x3D;tree,depth&#x3D;2,fanout&#x3D;3</span><br><span class="line">&#x2F;&#x2F;depth&#x3D;2 表示交换机有两层，fanout&#x3D;3 表示每台交换机均下挂 3 台设备</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo3.png" alt></p>
-<h5 id="自定义拓扑"><a href="# 自定义拓扑" class="headerlink" title="自定义拓扑"></a>自定义拓扑 </h5><h4 id="通过 -python- 文件"><a href="# 通过 -python- 文件" class="headerlink" title="通过 python 文件"></a> 通过 python 文件</h4><p>py net.addSwitch (‘s3’) // 添加交换机 23<br>py net.addHost (‘h3’) // 添加主机 h3<br>py net.addLink (s1, net.get (‘h3’)) // 添加 s1 和 h3 之间的链接<br>py s1.attach (‘s1-eth3’) //s1 上添加 eth3 接口 (端口)<br>py net.get (‘h3’).cmd (‘ifconfig h3-eth0 10.3’) // 给 h3 配置 ip 地址为 10.0.0.3</p>
-<h4 id="通过可视化界面"><a href="# 通过可视化界面" class="headerlink" title="通过可视化界面"></a>通过可视化界面</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;mininet&#x2F;mininet&#x2F;examples</span><br><span class="line">$ .&#x2F;miniedit.py</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo4.png" alt><br><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo4.png" alt><br>Edit 设置网段，host 的 IP 地址要和网段对应 <br> 右键设置控制器、交换机、主机的 property<br>设置好之后，开启另一个终端，开启 ryu，然后再回到可视化界面点选 run<br>可以将这个拓扑存成 python 文件：点击 stop，点选 File-Export Level 2 Script</p>
-<h3 id="六、lab2"><a href="# 六、lab2" class="headerlink" title="六、lab2"></a>六、lab2</h3><h4 id="问题 -1"><a href="# 问题 -1" class="headerlink" title="问题 1"></a>问题 1</h4><p>Simulate the following topology in Mininet. Set the link bandwidth for (s1,s2) and (s1,s3) as 10Mbps. Use iperf3 to test the TCP throughput between h1 to h2, h3, h4.(30 points)<br>知识点：带宽设置<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#10 Mbps, 5ms 延迟，0% 丢包，1000 字节的大小  </span><br><span class="line">self.addLink (host, switch, bw&#x3D;10, delay&#x3D;&#39;5ms&#39;, loss&#x3D;0, max_queue_size&#x3D;1000, use_htb&#x3D;True)</span><br></pre></td></tr></table></figure><br><a href="https://blog.csdn.net/weixin_34283445/article/details/93944421?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=mininet%20%">https://blog.csdn.net/weixin_34283445/article/details/93944421?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=mininet%20%</a> E7% B3% BB% E5%88%97% E5% AE%9E% E9% AA%8C% E4% BA%94&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-93944421.pc_search_result_hbase_insert</p>
-<p>报错：mininet 中运行网络拓扑时 <br>Exception:Error creating interface pair (s1-eth1,s2-eth1): RTNETLINK answers: File exists<br> 这是因为重复构建了相同的拓扑，没有清除，所以若在.py 中构建相同的拓扑图时需要先清除掉先前的拓扑结构：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo mn -c</span><br></pre></td></tr></table></figure><br><a href="https://blog.csdn.net/weixin_46490821/article/details/109065097">https://blog.csdn.net/weixin_46490821/article/details/109065097</a></p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算机网络 lab1</title>
     <url>/2021/03/20/computerNetwork-lab1/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑</a></p>
@@ -661,14 +616,48 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>dos 使用</title>
-    <url>/2018/10/27/dos-command/</url>
-    <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a>显示目录下的文件</h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录<br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br><span id="more"></span><br>dir/ah 只显示当前路径下隐藏文件和目录<br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
-<h3 id="Linux- 与 -Windows- 命令对比"><a href="#Linux- 与 -Windows- 命令对比" class="headerlink" title="Linux 与 Windows 命令对比"></a>Linux 与 Windows 命令对比</h3><p><a href="https://blog.csdn.net/xzwspy/article/details/80183849">https://blog.csdn.net/xzwspy/article/details/80183849</a></p>
-<h3 id="未分类文章总览"><a href="# 未分类文章总览" class="headerlink" title="未分类文章总览"></a>未分类文章总览 </h3><p><a href="https://wangxchun.github.io/2018/10/27/dos-command/">dos 使用</a><br><a href="https://wangxchun.github.io/2021/04/13/position-in-english/"> 職位中英文對照表 </a><br><a href="https://wangxchun.github.io/2020/02/25/summer-intern"> 暑期實習經驗參考</a></p>
+    <title>计算机体系结构：(一) 硬件 --3. 通信概述</title>
+    <url>/2020/09/03/computer-architecture-1.3-communication-overview/</url>
+    <content><![CDATA[<h3 id="一、电子设备的通信过程"><a href="# 一、电子设备的通信过程" class="headerlink" title="一、电子设备的通信过程"></a>一、电子设备的通信过程</h3><p><img src="/2020/09/03/computer-architecture-1.3-communication-overview/photo1.jpg" alt></p>
+<h4 id="1- 协议：通信规则"><a href="#1- 协议：通信规则" class="headerlink" title="1. 协议：通信规则"></a>1. 协议：通信规则</h4><p><img src="/2020/09/03/computer-architecture-1.3-communication-overview/photo2.jpg" alt></p>
+<h5 id="简单通信协议：只有底层协议"><a href="# 简单通信协议：只有底层协议" class="headerlink" title="简单通信协议：只有底层协议"></a>简单通信协议：只有底层协议 </h5><p>Ex：单片机中的 SPI，I2C，UART (串口通信) 等短距离通信<br> 编写程序需参考硬件的 “时序图”<br><span id="more"></span></p>
+<h5 id="复杂通信协议：底层和高层协议组合而成"><a href="# 复杂通信协议：底层和高层协议组合而成" class="headerlink" title="复杂通信协议：底层和高层协议组合而成"></a>复杂通信协议：底层和高层协议组合而成 </h5><p> 编程者要做的是学会调用 “协议程序” 的函数接口</p>
+<h4 id="2- 数据编码不一定要 -ex：单片机的串口的 -SPI，I2C- 通信"><a href="#2- 数据编码不一定要 -ex：单片机的串口的 -SPI，I2C- 通信" class="headerlink" title="2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信"></a>2. 数据编码不一定要 ex：单片机的串口的 SPI，I2C 通信 </h4><h4 id="3- 调制"><a href="#3- 调制" class="headerlink" title="3. 调制"></a>3. 调制</h4><h5 id="为什么需要调制？"><a href="# 为什么需要调制？" class="headerlink" title="为什么需要调制？"></a> 为什么需要调制？</h5><p>(1) 便于制作小尺寸天线 <br> 无线通信中，无线的尺寸与电磁波波长成正比，如果基波信号很低，用频率高的载波信后，就可以用尺寸小的天线接收 <br>(2) 便于对信道进行频分复用<br>(3) 能够提高信号的抗噪能力<br> 当我们说某个天线通信为 XXXX Hz 时，指的都是载波信号，而不是基带信号的频率</p>
+<h5 id="调制种类"><a href="# 调制种类" class="headerlink" title="调制种类"></a>调制种类 </h5><p>(1) 数字调制技术：<br>ASK、FSK、PSK<br>(2) 模拟调制技术：<br> 幅度调制：DSB，AM，SSB，VSB<br>角度调制：FM，PM</p>
+<h3 id="二、通信的分类"><a href="# 二、通信的分类" class="headerlink" title="二、通信的分类"></a>二、通信的分类 </h3><h4 id="1- 串行和并行"><a href="#1- 串行和并行" class="headerlink" title="1. 串行和并行"></a>1. 串行和并行</h4><h4 id="2- 同步和异步，阻塞和非阻塞"><a href="#2- 同步和异步，阻塞和非阻塞" class="headerlink" title="2. 同步和异步，阻塞和非阻塞"></a>2. 同步和异步，阻塞和非阻塞</h4><p> 串行通信中分为同步通信和异步通信</p>
+<h5 id="同步通信：事先通过 -“应答机制 -“来约定碰头时间点，双方都会对这个时间点做好准备"><a href="# 同步通信：事先通过 -“应答机制 -“来约定碰头时间点，双方都会对这个时间点做好准备" class="headerlink" title="同步通信：事先通过 “应答机制 “来约定碰头时间点，双方都会对这个时间点做好准备"></a>同步通信：事先通过 “应答机制 “来约定碰头时间点，双方都会对这个时间点做好准备</h5><p>Ex：单片机的 I2C 和 SPI 通信<br>(1) 阻塞等：什么都不做，等约定时间点到<br>(2) 非阻塞等：继续做自己的事，等约定时间点到</p>
+<h5 id="异步通信：碰头时间点是随机的"><a href="# 异步通信：碰头时间点是随机的" class="headerlink" title="异步通信：碰头时间点是随机的"></a>异步通信：碰头时间点是随机的 </h5><p>Ex：单片机的串口 (UART) 通信<br>(1) 阻塞等：什么都不做，等随机时间到<br>(2) 非阻塞等：继续做自己的事，等随机时间到<br> 对异步通信来说，非阻塞等比较靠谱</p>
+<h4 id="3- 单工，半双工，全双工"><a href="#3- 单工，半双工，全双工" class="headerlink" title="3. 单工，半双工，全双工"></a>3. 单工，半双工，全双工 </h4><h3 id="三、噪声"><a href="# 三、噪声" class="headerlink" title="三、噪声"></a> 三、噪声 </h3><h4 id="不同的传输距离"><a href="# 不同的传输距离" class="headerlink" title="不同的传输距离"></a> 不同的传输距离 </h4><p> 短距离通信：主要考虑内部噪声的影响，外部噪声的影响可以忽略 <br>Ex：I2C，SPI，RS232 (串口)，usb<br> 中长距离通信：除了考虑内部噪声，还要考虑外部噪声<br>Ex：中距离通信：RS485<br>Ex：长距离通信：网络通信，电话通信，广播通信</p>
+<h4 id="如何降低噪声影响？"><a href="# 如何降低噪声影响？" class="headerlink" title="如何降低噪声影响？"></a>如何降低噪声影响？</h4><h4 id="1- 内部噪声：通过各种滤波电路过滤噪声"><a href="#1- 内部噪声：通过各种滤波电路过滤噪声" class="headerlink" title="1. 内部噪声：通过各种滤波电路过滤噪声"></a>1. 内部噪声：通过各种滤波电路过滤噪声 </h4><h4 id="2- 外部噪声"><a href="#2- 外部噪声" class="headerlink" title="2. 外部噪声"></a>2. 外部噪声</h4><p>(1) 提高信号能量，提高信号的抗干扰能力（无线传输可用）<br>(2) 屏蔽网 (屏蔽网) (有线传输)<br>(3) 传输差分信号（有线传输）<br>Ex：USB (距离近，使用是为了提高质量)，RS485 (无中继器传输距离不超过 1200 米)，网络<br> 芯片外部 90% 通信都是串行通信，传输距离较长时需使用差分信号传输<br>(例外，ex：CPU 芯片和内存芯片的通信时并行的)</p>
+<h3 id="四、通信例子"><a href="# 四、通信例子" class="headerlink" title="四、通信例子"></a>四、通信例子 </h3><h4 id="1- 有线通信"><a href="#1- 有线通信" class="headerlink" title="1. 有线通信"></a>1. 有线通信</h4><h4 id="2- 无线远距离"><a href="#2- 无线远距离" class="headerlink" title="2. 无线远距离"></a>2. 无线远距离</h4><h4 id="3- 无线近距离"><a href="#3- 无线近距离" class="headerlink" title="3. 无线近距离"></a>3. 无线近距离</h4><h3 id="计算机体系结构文章总览"><a href="# 计算机体系结构文章总览" class="headerlink" title="计算机体系结构文章总览"></a> 计算机体系结构文章总览 </h3><p><a href="https://wangxchun.github.io/2020/09/03/computer-architecture-1.3-communication-overview/"> 计算机体系结构：(一) 硬件 —3. 通信概述</a></p>
 ]]></content>
       <categories>
-        <category>未分类</category>
+        <category>计算机体系结构</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算机网络 lab2 使用 Mininet 创建网络拓扑</title>
+    <url>/2021/03/30/computerNetwork-lab2-Mininet/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑</a></p>
+<h3 id="一、Miniset- 简介"><a href="# 一、Miniset- 简介" class="headerlink" title="一、Miniset 简介"></a>一、Miniset 简介</h3><p>Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。<br>Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。<br>Mininet 提供 python API，简单易用</p>
+<h3 id="二、环境搭建"><a href="# 二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建 </h3><h4 id="安装 -mininet"><a href="# 安装 -mininet" class="headerlink" title="安装 mininet"></a> 安装 mininet</h4><span id="more"></span>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ su root</span><br><span class="line">$ apt-get install git</span><br><span class="line">$ git clone http:&#x2F;&#x2F;github.com&#x2F;mininet&#x2F;mininet.git</span><br><span class="line">$ cd mininet&#x2F;util</span><br><span class="line">#.&#x2F;install.sh n3v</span><br><span class="line">&#x2F;&#x2F;n：安装 mininet 的依赖和核心文件</span><br><span class="line">&#x2F;&#x2F;3：安装 Openflow 1.3 版本</span><br><span class="line">&#x2F;&#x2F;v：安装 Open Switch</span><br><span class="line">$ mn &#x2F;&#x2F; 创建默认最小的网络拓扑，测试 mininet 是否安装成功</span><br><span class="line">miniset&gt; pingall &#x2F;&#x2F; 查看连通性</span><br><span class="line">miniset&gt; exit &#x2F;&#x2F; 退出 miniset</span><br><span class="line">#### 安装 ryu</span><br><span class="line">$ wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py&#x2F;&#x2F;pip 是一个通用的 python 包管理工具</span><br><span class="line">&#x2F;&#x2F;wget 是从指定的 url 下载文件</span><br><span class="line">$ python get-pip.py</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;osrg&#x2F;ryu.git</span><br><span class="line">$ cd ryu</span><br><span class="line">$ pip install -r tools&#x2F;pip-requires&#x2F;&#x2F; 安装 ryu 之前先安装 ryu 的依赖</span><br><span class="line">&#x2F;&#x2F; 这一步要按照的依赖比较多，可能因为下载不全而出现报错，这时就重新执行一遍</span><br><span class="line">&#x2F;&#x2F; 报错 2</span><br><span class="line">$ python setup.py install </span><br><span class="line">$ cd ryu&#x2F;app&#x2F;&#x2F; 验证 ryu 是否按照成功</span><br><span class="line">$ ryu-manager example_switch_13.py&#x2F;&#x2F; 先不要点击 enter，先打开另一个终端运行</span><br><span class="line">&#x2F;&#x2F;su root</span><br><span class="line">&#x2F;&#x2F;mn --controller&#x3D;remote</span><br><span class="line">&#x2F;&#x2F; 创建完网络拓扑之后，可以执行 ryu-manager</span><br></pre></td></tr></table></figure>
+<p><a href="https://joechang0113.github.io/2020/02/18/mininet-ryu-install.html">https://joechang0113.github.io/2020/02/18/mininet-ryu-install.html</a><br>尝试打开可视化界面:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;mininet&#x2F;mininet&#x2F;examples</span><br><span class="line">$ .&#x2F;miniedit.py</span><br></pre></td></tr></table></figure><br>报错 1：运行 miniedit.py 时报错 ImportError: No module named mininet.log<br>是 python 版本的问题 <br><a href="http://shangdixinxi.com/detail-1528015.html">http://shangdixinxi.com/detail-1528015.html</a><br> 报错 2：pip install，Error：Cannot uninstall ‘PyYAML’.<br>原因：从 pip 10 开始就不支持卸载 distutils 的包了 <br> 解决方法：pip install —ignore-installed PyYAML<br><a href="https://www.twblogs.net/a/5e50e655bd9eee2117bff2c9">https://www.twblogs.net/a/5e50e655bd9eee2117bff2c9</a><br>报错 3：<br>有些错误是因为 ubuntu 的 python 默认版本是 2.7 导致的 <br> 所以按照以下方式改变 python 的默认版本 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ update-alternatives --list python &#x2F;&#x2F; 列出所有可用的 python 替代版本信息</span><br><span class="line">$ update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;python python &#x2F;usr&#x2F;bin&#x2F;python2.7 1</span><br><span class="line">$ update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;python python &#x2F;usr&#x2F;bin&#x2F;python3.6 2</span><br><span class="line">$ update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;python python &#x2F;usr&#x2F;bin&#x2F;python3.7 3</span><br><span class="line">$ update-alternatives --config python</span><br><span class="line"># 第一个参数: --install 表示向 update-alternatives 注册服务名。</span><br><span class="line"># 第二个参数：注册最终地址，成功后将会把命令在这个固定的目的地址做真实命令的软链，以后管理就是管理这个软链；</span><br><span class="line"># 第三个参数：服务名，以后管理时以它为关联依据。</span><br><span class="line"># 第四个参数：被管理的命令绝对路径。</span><br><span class="line"># 第五个参数：优先级，数字越大优先级越高。</span><br><span class="line">https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;3d8304f4fb4a</span><br></pre></td></tr></table></figure><br> 报错 4：terminal 打不开 <br><a href="https://blog.csdn.net/u011622434/article/details/103121262">https://blog.csdn.net/u011622434/article/details/103121262</a><br> 首先，按 ctrl+alt+F1（我是 ctrl+alt+F5）进入命令行模式，也就是无图形界面，这时候会让你输入用户名和密码 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ gnome-terminal</span><br></pre></td></tr></table></figure><br> 该指令是查看出现的终端错误，我有两处错误 <br> 错误一：No module named “apt_pkg”，解决方法如下 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get remove --purge python-apt</span><br><span class="line">$ sudo apt-get install python-apt -f</span><br><span class="line">$ cd &#x2F;usr&#x2F;lib&#x2F;python3&#x2F;dist-packages&#x2F;</span><br><span class="line">$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86_64-linux-gnu.so</span><br></pre></td></tr></table></figure><br> 错误二：cannot import name ‘_gi’，解决方法如下<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;lib&#x2F;python3&#x2F;dist-packages&#x2F;gi&#x2F;</span><br><span class="line">sudo cp _gi.cpython-35m-x86_64-linux-gnu.so _gi.cpython-36m-x86_64-linux-gnu.so</span><br><span class="line">sudo cp _gi_cairo.cpython-35m-x86_64-linux-gnu.so _gi_cairo.cpython-36m-x86_64-linux-gnu.so</span><br></pre></td></tr></table></figure></p>
+<h3 id="三、Mininet- 常用指令"><a href="# 三、Mininet- 常用指令" class="headerlink" title="三、Mininet 常用指令"></a>三、Mininet 常用指令 </h3><h3 id="四、熟悉常用指令"><a href="# 四、熟悉常用指令" class="headerlink" title="四、熟悉常用指令"></a> 四、熟悉常用指令</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ su root</span><br><span class="line">$ cd mininet/mininet</span><br><span class="line">$ cd examples</span><br><span class="line">// 里面有很多 python 脚本，可以随便选择一个执行，熟悉</span><br><span class="line">// 在执行之前，要在另一个终端将 ryu 控制器打开</span><br><span class="line">//$ su root</span><br><span class="line">//$ cd</span><br><span class="line">//$ cd ryu/app</span><br><span class="line">//$ ryumanager simple_switch.py</span><br><span class="line">$ python <span class="number">427.</span>py</span><br><span class="line">miniset&gt; nodes // 显示节点列表</span><br><span class="line">miniset&gt; pingall // 查看连通性</span><br><span class="line">miniset&gt; net // 查看网络拓扑</span><br><span class="line">miniset&gt; links // 查看网阔健壮性</span><br><span class="line">miniset&gt; dump // 节点的接口设置和进程 PID</span><br><span class="line">miniset&gt; iperf h1 h2 // 网络带宽设置</span><br><span class="line">miniset&gt; <span class="built_in">help</span> // 帮助</span><br><span class="line">miniset&gt; exit // 退出 miniset</span><br></pre></td></tr></table></figure>
+<h3 id="五、Mini- 搭建网络拓扑的三种方式"><a href="# 五、Mini- 搭建网络拓扑的三种方式" class="headerlink" title="五、Mini 搭建网络拓扑的三种方式"></a>五、Mini 搭建网络拓扑的三种方式 </h3><h4 id="1- 通过命令行 -terminal"><a href="#1- 通过命令行 -terminal" class="headerlink" title="1. 通过命令行 terminal"></a>1. 通过命令行 terminal</h4><h5 id="单一拓扑 -Single"><a href="# 单一拓扑 -Single" class="headerlink" title="单一拓扑 (Single)"></a> 单一拓扑 (Single)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo&#x3D;single,3</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo1.png" alt></p>
+<h5 id="线性拓扑"><a href="# 线性拓扑" class="headerlink" title="线性拓扑"></a>线性拓扑</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo&#x3D;linear,3</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo2.png" alt></p>
+<h5 id="树形拓扑"><a href="# 树形拓扑" class="headerlink" title="树形拓扑"></a>树形拓扑</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo&#x3D;tree,depth&#x3D;2,fanout&#x3D;3</span><br><span class="line">&#x2F;&#x2F;depth&#x3D;2 表示交换机有两层，fanout&#x3D;3 表示每台交换机均下挂 3 台设备</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo3.png" alt></p>
+<h5 id="自定义拓扑"><a href="# 自定义拓扑" class="headerlink" title="自定义拓扑"></a>自定义拓扑 </h5><h4 id="通过 -python- 文件"><a href="# 通过 -python- 文件" class="headerlink" title="通过 python 文件"></a> 通过 python 文件</h4><p>py net.addSwitch (‘s3’) // 添加交换机 23<br>py net.addHost (‘h3’) // 添加主机 h3<br>py net.addLink (s1, net.get (‘h3’)) // 添加 s1 和 h3 之间的链接<br>py s1.attach (‘s1-eth3’) //s1 上添加 eth3 接口 (端口)<br>py net.get (‘h3’).cmd (‘ifconfig h3-eth0 10.3’) // 给 h3 配置 ip 地址为 10.0.0.3</p>
+<h4 id="通过可视化界面"><a href="# 通过可视化界面" class="headerlink" title="通过可视化界面"></a>通过可视化界面</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;mininet&#x2F;mininet&#x2F;examples</span><br><span class="line">$ .&#x2F;miniedit.py</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/30/computerNetwork-lab2-Mininet/photo4.png" alt><br>Edit 设置网段，host 的 IP 地址要和网段对应 <br> 右键设置控制器、交换机、主机的 property<br>设置好之后，开启另一个终端，开启 ryu，然后再回到可视化界面点选 run<br>可以将这个拓扑存成 python 文件：点击 stop，点选 File-Export Level 2 Script</p>
+<h3 id="六、lab2"><a href="# 六、lab2" class="headerlink" title="六、lab2"></a>六、lab2</h3><h4 id="问题 -1"><a href="# 问题 -1" class="headerlink" title="问题 1"></a>问题 1</h4><p>Simulate the following topology in Mininet. Set the link bandwidth for (s1,s2) and (s1,s3) as 10Mbps. Use iperf3 to test the TCP throughput between h1 to h2, h3, h4.(30 points)<br>知识点：带宽设置<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#10 Mbps, 5ms 延迟，0% 丢包，1000 字节的大小  </span><br><span class="line">self.addLink (host, switch, bw&#x3D;10, delay&#x3D;&#39;5ms&#39;, loss&#x3D;0, max_queue_size&#x3D;1000, use_htb&#x3D;True)</span><br></pre></td></tr></table></figure><br><a href="https://blog.csdn.net/weixin_34283445/article/details/93944421?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=mininet%20%">https://blog.csdn.net/weixin_34283445/article/details/93944421?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=mininet%20%</a> E7% B3% BB% E5%88%97% E5% AE%9E% E9% AA%8C% E4% BA%94&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-93944421.pc_search_result_hbase_insert</p>
+<p>报错：mininet 中运行网络拓扑时 <br>Exception:Error creating interface pair (s1-eth1,s2-eth1): RTNETLINK answers: File exists<br> 这是因为重复构建了相同的拓扑，没有清除，所以若在.py 中构建相同的拓扑图时需要先清除掉先前的拓扑结构：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo mn -c</span><br></pre></td></tr></table></figure><br><a href="https://blog.csdn.net/weixin_46490821/article/details/109065097">https://blog.csdn.net/weixin_46490821/article/details/109065097</a></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
       </categories>
   </entry>
   <entry>
@@ -679,6 +668,17 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>git</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>dos 使用</title>
+    <url>/2018/10/27/dos-command/</url>
+    <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a>显示目录下的文件</h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录<br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br><span id="more"></span><br>dir/ah 只显示当前路径下隐藏文件和目录<br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
+<h3 id="Linux- 与 -Windows- 命令对比"><a href="#Linux- 与 -Windows- 命令对比" class="headerlink" title="Linux 与 Windows 命令对比"></a>Linux 与 Windows 命令对比</h3><p><a href="https://blog.csdn.net/xzwspy/article/details/80183849">https://blog.csdn.net/xzwspy/article/details/80183849</a></p>
+<h3 id="未分类文章总览"><a href="# 未分类文章总览" class="headerlink" title="未分类文章总览"></a>未分类文章总览 </h3><p><a href="https://wangxchun.github.io/2018/10/27/dos-command/">dos 使用</a><br><a href="https://wangxchun.github.io/2021/04/13/position-in-english/"> 職位中英文對照表 </a><br><a href="https://wangxchun.github.io/2020/02/25/summer-intern"> 暑期實習經驗參考</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -722,6 +722,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>怎么取消文章目录中对标题的自动编号</title>
+    <url>/2018/09/05/hexo%20cancel-auto-numbering-in-directory/</url>
+    <content><![CDATA[<p>修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>hexo 目錄結構</title>
     <url>/2018/09/19/hexo%20directory-structure/</url>
     <content><![CDATA[<p>.<br>├── node_modules  // 套件暫存處，基本上你所有安裝的套件也都會在這裡<br>├── public        // 執行 hexo generate 後，輸出的靜態網頁<br>├── scaffolds     // 模板。Hexo 會根據 scaffold 來建立新文章 / 新頁面<br>├── scripts       // 存放自定義 js 文件<br>├── source<br>|   ├── _drafts   // 草稿文章<br>|   └── _posts    // 發佈文章<br>├── themes        // Hexo 主题文件，Next 主題的樹狀結構請看下面<br>├── _config.yml   // 整個 Blog 的配置<br>├── .gitignore    // 舉凡只要你不想被加入版本控制甚至是上傳到 GitHub 的資料夾或檔案，都可寫在這<br>├── package-lock.json// 主要是記錄當前狀態安裝的每一個套件版本，他會自己調整，不需要動它<br>└── package.json  // 主要是放置並管理透過 npm 下載的檔案，其中部分指令也是直接寫在這裡面<br><span id="more"></span><br>.<br>└──themes<br>   └── next<br>          ├── doc<br>       ├── languages    // 主題語言字眼<br>       ├── layout       //pug 文件，後會渲染成 html<br>       ├── scripts      //js 文件<br>       ├── source<br>       |   ├── css      //styl 文件，後會渲染成 css<br>       |   ├── img      // 主題配置用到的圖片<br>       |   └── js       //js 文件<br>       ├── test<br>       └── _config.yml  // Butterfly 主題配置</p>
@@ -736,16 +746,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>hexo</tag>
         <tag>目錄結構</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>怎么取消文章目录中对标题的自动编号</title>
-    <url>/2018/09/05/hexo%20cancel-auto-numbering-in-directory/</url>
-    <content><![CDATA[<p>修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
   </entry>
   <entry>
     <title>在 hexo 文章中插入图片</title>
@@ -834,6 +834,66 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>历史 -- （3）德国简史</title>
+    <url>/2019/07/10/history-germany/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
+<h3 id="神圣罗马帝国"><a href="# 神圣罗马帝国" class="headerlink" title="神圣罗马帝国"></a>神圣罗马帝国 </h3><p> 西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
+<p>东法兰克王国在 919 年更名为德意志王国</p>
+<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国</p>
+<p>位于欧洲东部的国家成为欧洲列强的跑马场 <br><span id="more"></span><br> 亨利一世的儿子奥托一世过分强调意大利方向的扩张</p>
+<p>知道霍亨陶芬王朝的佛里德里希一世时期，红胡子巴巴罗萨，神圣罗马帝国巅峰，但是忽略了德意志内部德中央集权。为了赢得诸侯支持向意大利扩展，提高了封建主的独立性，最终导致帝国名存实亡。</p>
+<p>从奥托一世开始，向教皇取得罗马皇帝的称号。直到在 1073 年，教皇格里高利七世不经皇帝统一登上教皇宝座。</p>
+<p>引起神圣罗马帝国皇帝亨利四世的不满，命教皇退位，教皇开除亨利四世教籍，废除其帝位，国内封建主趁机相应号召。</p>
+<p>奥托一世 -&gt; 亨利四世 -&gt; 红胡子巴巴罗萨</p>
+<p>德意志王国四分五裂</p>
+<p>13 世纪，霍亨斯陶芬王朝垮台后，德意志王权彻底衰弱</p>
+<p>被教皇压迫，充当周围列强代理人自相残杀了两百多年后，马丁路德的宗教改革</p>
+<p>-&gt;1618 年三十年战争，德国失去大量领土，法国获得阿尔萨斯和洛林，整个德国四分五裂</p>
+<p>德国人为了生存，把自己卖给外国人，成为雇佣兵，在德国的领域为列强而战</p>
+<p>1806 年，在法国皇帝拿破仑的逼迫下，奥地利皇帝佛朗兹而是放弃神圣罗马帝国皇帝的称号，神圣罗马帝国灭亡</p>
+<p>席勒，歌德</p>
+<p>率先走出这一步的是一个被视为蛮荒和弱小的东方小邦：普鲁士</p>
+<h3 id="普鲁士"><a href="# 普鲁士" class="headerlink" title="普鲁士"></a>普鲁士 </h3><p> 普鲁士的国家核心是勃兰登堡和普鲁士</p>
+<p>1618 年，霍亨索伦家族的勃兰登堡选帝侯继承了普鲁士的王位，这两个平行发展的邦国终于产生了交汇</p>
+<p>(1417 年，德意志帝国正式把勃兰登堡和选侯爵位，赐予霍亨索伦家族的腓特烈一世，开始了霍亨索伦家族对勃兰登堡的统治)</p>
+<p>1640 年，腓特烈。威廉 (大选帝侯) 继位成为选帝侯 <br> 面临经过三世年战争的断壁残垣，国内的贵族、容克、分离主义和国外的强权让新国王的声音衰弱 <br>(1) 必须拥有一支独立且听命于自己的强悍常备军<br>(2) 利用帝国分裂，建立在本邦国内中央集权的君主专制，并在帝国范围内扩大影响<br> 在大选帝侯的儿子执政时期，</p>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>历史 -- （4）威尼斯和第四次十字军东征</title>
+    <url>/2019/07/15/history-venice/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
+<p>这种贫瘠的靠海之地有两种选择，一是当海盗，二是做生意</p>
+<p>最初，威尼斯人靠经营海盐贸易起家</p>
+<p>威尼斯是从西罗马来的，信奉的是天主教。但是拜占庭帝国信奉的是东正教</p>
+<p>帮拜占庭防御亚德亚里海，有合理的理由发展强大的海军</p>
+<p>在君士坦丁堡和亚历山卓之间做贸易</p>
+<ol>
+<li>香料贸易</li>
+<li>奴隶，购买年轻的斯拉夫人，卖给当时埃及或叙利亚的伊斯兰土豪</li>
+<li>木材 (造船)，铁 (造武器) 与铜的贸易</li>
+</ol>
+<p>穆斯林拿来对抗十字军的船只和武器都是天主教的威尼斯商人所提供的</p>
+<p>与异教徒贸易的行为，遭到罗马教廷和拜占庭皇帝的反对</p>
+<p>热那亚人</p>
+<p>威尼斯帝国准备进攻拜占庭帝国</p>
+<h2 id="1175- 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯"><a href="#1175- 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯" class="headerlink" title="1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯"></a>1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯</h2><p>1192 年，罗马教皇发起十字军东征</p>
+<p>法兰西骑士和封建诸侯</p>
+<p>运输公司外包给威尼斯</p>
+<p>运输的承包商也成了股东之一</p>
+<p>1202 年，抵达威尼斯的王公贵族人数远比预期少</p>
+<p>拜占庭帝国的流亡王子，希望借由十字军的力量，帮助它夺回王位</p>
+<p>希腊正教归顺罗马公教</p>
+<p>现在的拜占庭皇帝想借由比萨商人来取代威尼斯商人</p>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+  </entry>
+  <entry>
     <title>历史 -- （1）欧洲简史</title>
     <url>/2019/07/06/history-europe/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
@@ -858,35 +918,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <p>意大利统一</p>
 <p>奥匈帝国成立</p>
 <p>铁血宰相俾斯麦统一德国</p>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>历史 -- （3）德国简史</title>
-    <url>/2019/07/10/history-germany/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
-<h3 id="神圣罗马帝国"><a href="# 神圣罗马帝国" class="headerlink" title="神圣罗马帝国"></a>神圣罗马帝国 </h3><p> 西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
-<p>东法兰克王国在 919 年更名为德意志王国</p>
-<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国</p>
-<p>位于欧洲东部的国家成为欧洲列强的跑马场 <br><span id="more"></span><br> 亨利一世的儿子奥托一世过分强调意大利方向的扩张</p>
-<p>知道霍亨陶芬王朝的佛里德里希一世时期，红胡子巴巴罗萨，神圣罗马帝国巅峰，但是忽略了德意志内部德中央集权。为了赢得诸侯支持向意大利扩展，提高了封建主的独立性，最终导致帝国名存实亡。</p>
-<p>从奥托一世开始，向教皇取得罗马皇帝的称号。直到在 1073 年，教皇格里高利七世不经皇帝统一登上教皇宝座。</p>
-<p>引起神圣罗马帝国皇帝亨利四世的不满，命教皇退位，教皇开除亨利四世教籍，废除其帝位，国内封建主趁机相应号召。</p>
-<p>奥托一世 -&gt; 亨利四世 -&gt; 红胡子巴巴罗萨</p>
-<p>德意志王国四分五裂</p>
-<p>13 世纪，霍亨斯陶芬王朝垮台后，德意志王权彻底衰弱</p>
-<p>被教皇压迫，充当周围列强代理人自相残杀了两百多年后，马丁路德的宗教改革</p>
-<p>-&gt;1618 年三十年战争，德国失去大量领土，法国获得阿尔萨斯和洛林，整个德国四分五裂</p>
-<p>德国人为了生存，把自己卖给外国人，成为雇佣兵，在德国的领域为列强而战</p>
-<p>1806 年，在法国皇帝拿破仑的逼迫下，奥地利皇帝佛朗兹而是放弃神圣罗马帝国皇帝的称号，神圣罗马帝国灭亡</p>
-<p>席勒，歌德</p>
-<p>率先走出这一步的是一个被视为蛮荒和弱小的东方小邦：普鲁士</p>
-<h3 id="普鲁士"><a href="# 普鲁士" class="headerlink" title="普鲁士"></a>普鲁士 </h3><p> 普鲁士的国家核心是勃兰登堡和普鲁士</p>
-<p>1618 年，霍亨索伦家族的勃兰登堡选帝侯继承了普鲁士的王位，这两个平行发展的邦国终于产生了交汇</p>
-<p>(1417 年，德意志帝国正式把勃兰登堡和选侯爵位，赐予霍亨索伦家族的腓特烈一世，开始了霍亨索伦家族对勃兰登堡的统治)</p>
-<p>1640 年，腓特烈。威廉 (大选帝侯) 继位成为选帝侯 <br> 面临经过三世年战争的断壁残垣，国内的贵族、容克、分离主义和国外的强权让新国王的声音衰弱 <br>(1) 必须拥有一支独立且听命于自己的强悍常备军<br>(2) 利用帝国分裂，建立在本邦国内中央集权的君主专制，并在帝国范围内扩大影响<br> 在大选帝侯的儿子执政时期，</p>
 ]]></content>
       <categories>
         <category>历史</category>
@@ -975,35 +1006,20 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>历史 -- （4）威尼斯和第四次十字军东征</title>
-    <url>/2019/07/15/history-venice/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
-<p>这种贫瘠的靠海之地有两种选择，一是当海盗，二是做生意</p>
-<p>最初，威尼斯人靠经营海盐贸易起家</p>
-<p>威尼斯是从西罗马来的，信奉的是天主教。但是拜占庭帝国信奉的是东正教</p>
-<p>帮拜占庭防御亚德亚里海，有合理的理由发展强大的海军</p>
-<p>在君士坦丁堡和亚历山卓之间做贸易</p>
-<ol>
-<li>香料贸易</li>
-<li>奴隶，购买年轻的斯拉夫人，卖给当时埃及或叙利亚的伊斯兰土豪</li>
-<li>木材 (造船)，铁 (造武器) 与铜的贸易</li>
-</ol>
-<p>穆斯林拿来对抗十字军的船只和武器都是天主教的威尼斯商人所提供的</p>
-<p>与异教徒贸易的行为，遭到罗马教廷和拜占庭皇帝的反对</p>
-<p>热那亚人</p>
-<p>威尼斯帝国准备进攻拜占庭帝国</p>
-<h2 id="1175- 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯"><a href="#1175- 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯" class="headerlink" title="1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯"></a>1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯</h2><p>1192 年，罗马教皇发起十字军东征</p>
-<p>法兰西骑士和封建诸侯</p>
-<p>运输公司外包给威尼斯</p>
-<p>运输的承包商也成了股东之一</p>
-<p>1202 年，抵达威尼斯的王公贵族人数远比预期少</p>
-<p>拜占庭帝国的流亡王子，希望借由十字军的力量，帮助它夺回王位</p>
-<p>希腊正教归顺罗马公教</p>
-<p>现在的拜占庭皇帝想借由比萨商人来取代威尼斯商人</p>
+    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
+    <url>/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/</url>
+    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
+<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
+<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
+<h3 id="linux- 文章总览"><a href="#linux- 文章总览" class="headerlink" title="linux 文章总览"></a>linux 文章总览</h3><p><a href="https://wangxchun.github.io/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/">vbox 安装 Ubuntu 清理整个磁盘会怎样</a></p>
 ]]></content>
       <categories>
-        <category>历史</category>
+        <category>linux</category>
       </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
   </entry>
   <entry>
     <title>三連擊（洛谷 P1008）</title>
@@ -1027,22 +1043,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
-    <url>/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/</url>
-    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
-<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
-<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
-<h3 id="linux- 文章总览"><a href="#linux- 文章总览" class="headerlink" title="linux 文章总览"></a>linux 文章总览</h3><p><a href="https://wangxchun.github.io/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/">vbox 安装 Ubuntu 清理整个磁盘会怎样</a></p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>刷题检讨</title>
     <url>/2021/04/08/luogu-exercise-review/</url>
     <content><![CDATA[<h3 id="P1047"><a href="#P1047" class="headerlink" title="P1047"></a>P1047</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>* buffer = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">512</span>]&#123;<span class="number">5</span>&#125;; <span class="comment">// 第一个 int 初始化为 5，其余初始化为 0</span></span><br></pre></td></tr></table></figure>
@@ -1051,6 +1051,38 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>C++刷題</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>机器学习算法 --（4）KNN</title>
+    <url>/2020/11/18/machineLearning-KNN/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
+<h3 id="一、KNN- 概念"><a href="# 一、KNN- 概念" class="headerlink" title="一、KNN 概念"></a>一、KNN 概念 </h3><h3 id="二、KNN- 的算法实践"><a href="# 二、KNN- 的算法实践" class="headerlink" title="二、KNN 的算法实践"></a> 二、KNN 的算法实践</h3><span id="more"></span>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">knn</span> (<span class="params">x_test, x_data, y_data, k</span>):</span></span><br><span class="line">    <span class="comment"># 计算样本数量</span></span><br><span class="line">    x_data_size = x_data.shape [<span class="number">0</span>]</span><br><span class="line">    <span class="comment"># 复制 x_test</span></span><br><span class="line">    np.tile (x_test, (x_data_size,<span class="number">1</span>))</span><br><span class="line">    <span class="comment"># 计算 x_test 与每一个样本的差值</span></span><br><span class="line">    diffMat = np.tile (x_test, (x_data_size,<span class="number">1</span>)) - x_data</span><br><span class="line">    <span class="comment"># 计算差值的平方</span></span><br><span class="line">    sqDiffMat = diffMat**<span class="number">2</span></span><br><span class="line">    <span class="comment"># 求和</span></span><br><span class="line">    sqDistances = sqDiffMat.<span class="built_in">sum</span> (axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 开方</span></span><br><span class="line">    distances = sqDistances**<span class="number">0.5</span></span><br><span class="line">    <span class="comment"># 从小到大排序</span></span><br><span class="line">    sortedDistances = distances.argsort ()</span><br><span class="line">    classCount = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (k):</span><br><span class="line">        <span class="comment"># 获取标签</span></span><br><span class="line">        votelabel = y_data [sortedDistances [i]]</span><br><span class="line">        <span class="comment"># 统计标签数量</span></span><br><span class="line">        classCount [votelabel] = classCount.get (votelabel,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    <span class="comment"># 根据 operator.itemgetter (1)- 第 1 个值对 classCount 排序，然后再取倒序</span></span><br><span class="line">    sortedClassCount = <span class="built_in">sorted</span> (classCount.items (),key=operator.itemgetter (<span class="number">1</span>), reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 获取数量最多的标签</span></span><br><span class="line">    <span class="keyword">return</span> sortedClassCount [<span class="number">0</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="三、sklearn- 实现 -KNN"><a href="# 三、sklearn- 实现 -KNN" class="headerlink" title="三、sklearn 实现 KNN"></a>三、sklearn 实现 KNN</h3>]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>机器学习算法 --（2）逻辑回归</title>
+    <url>/2020/11/11/machineLearning-logistic/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
+<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-logistic/photo1.jpg" alt></p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数</h3><span id="more"></span>
+<p>线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$</p>
+<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
+<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
+<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
+<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
+<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
+<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
+<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>机器学习</category>
       </categories>
   </entry>
   <entry>
@@ -1082,17 +1114,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <tags>
         <tag>深度学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（4）KNN</title>
-    <url>/2020/11/18/machineLearning-KNN/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
-<h3 id="一、KNN- 概念"><a href="# 一、KNN- 概念" class="headerlink" title="一、KNN 概念"></a>一、KNN 概念 </h3><h3 id="二、KNN- 的算法实践"><a href="# 二、KNN- 的算法实践" class="headerlink" title="二、KNN 的算法实践"></a> 二、KNN 的算法实践</h3><span id="more"></span>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">knn</span> (<span class="params">x_test, x_data, y_data, k</span>):</span></span><br><span class="line">    <span class="comment"># 计算样本数量</span></span><br><span class="line">    x_data_size = x_data.shape [<span class="number">0</span>]</span><br><span class="line">    <span class="comment"># 复制 x_test</span></span><br><span class="line">    np.tile (x_test, (x_data_size,<span class="number">1</span>))</span><br><span class="line">    <span class="comment"># 计算 x_test 与每一个样本的差值</span></span><br><span class="line">    diffMat = np.tile (x_test, (x_data_size,<span class="number">1</span>)) - x_data</span><br><span class="line">    <span class="comment"># 计算差值的平方</span></span><br><span class="line">    sqDiffMat = diffMat**<span class="number">2</span></span><br><span class="line">    <span class="comment"># 求和</span></span><br><span class="line">    sqDistances = sqDiffMat.<span class="built_in">sum</span> (axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 开方</span></span><br><span class="line">    distances = sqDistances**<span class="number">0.5</span></span><br><span class="line">    <span class="comment"># 从小到大排序</span></span><br><span class="line">    sortedDistances = distances.argsort ()</span><br><span class="line">    classCount = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (k):</span><br><span class="line">        <span class="comment"># 获取标签</span></span><br><span class="line">        votelabel = y_data [sortedDistances [i]]</span><br><span class="line">        <span class="comment"># 统计标签数量</span></span><br><span class="line">        classCount [votelabel] = classCount.get (votelabel,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    <span class="comment"># 根据 operator.itemgetter (1)- 第 1 个值对 classCount 排序，然后再取倒序</span></span><br><span class="line">    sortedClassCount = <span class="built_in">sorted</span> (classCount.items (),key=operator.itemgetter (<span class="number">1</span>), reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 获取数量最多的标签</span></span><br><span class="line">    <span class="keyword">return</span> sortedClassCount [<span class="number">0</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="三、sklearn- 实现 -KNN"><a href="# 三、sklearn- 实现 -KNN" class="headerlink" title="三、sklearn 实现 KNN"></a>三、sklearn 实现 KNN</h3>]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
   </entry>
   <entry>
     <title>机器学习算法 --（1）线性回归和非线性回归</title>
@@ -1149,7 +1170,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <p>$\displaystyle {\partial J (\theta) \over \partial \theta}=0$</p>
 <p>$X^TX\theta - X^TY + \lambda \theta=0$<br>$\theta=(X^TX+\lambda I)^{-1} X^TY$</p>
 <h4 id="用处"><a href="# 用处" class="headerlink" title="用处"></a>用处 </h4><p> 岭回归最早是用来处理特征数多于样本的情况，现在也用于在估计中加入偏差，从而得到更好的估计。<br>同时也可以解决多重共线性的问题。<br>岭回归是一种有偏估计。</p>
-<h4 id="lambda- 的选择"><a href="#lambda- 的选择" class="headerlink" title="\lambda 的选择"></a>\lambda 的选择 </h4><p> 选择 \lambda 值，使得 <br>(1) 各个回归系数的岭估计基本稳定<br>(2) 残差平方和增大不太多<br><img src="/2020/11/06/machineLearning-regression/photo4.jpg" alt><br> 横轴是 \lambda 值，纵轴是参数 \theta 的取值范围</p>
+<h4 id="lambda- 的选择"><a href="#lambda- 的选择" class="headerlink" title="$\lambda$ 的选择"></a>$\lambda$ 的选择 </h4><p> 选择 $\lambda$ 值，使得 <br>(1) 各个回归系数的岭估计基本稳定<br>(2) 残差平方和增大不太多<br><img src="/2020/11/06/machineLearning-regression/photo4.jpg" alt><br> 横轴是 $\lambda$ 值，纵轴是参数 $\theta$ 的取值范围</p>
 <h3 id><a href="#" class="headerlink" title="#"></a>#</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建模型</span></span><br><span class="line"><span class="comment"># 生成 50 个值（默认是 50 个值）</span></span><br><span class="line">alphas_to_test = np.linspace (<span class="number">0.001</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment"># 创建模型，保存误差值</span></span><br><span class="line">model = linear_model.RidgeCV (alphas=alphas_to_test, store_cv_values=<span class="literal">True</span>)</span><br><span class="line">//CV 是交叉验证法的意思，可是设置 alphas</span><br><span class="line">model.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 岭系数</span></span><br><span class="line"><span class="built_in">print</span> (model.alpha_)</span><br><span class="line"><span class="comment"># loss 值</span></span><br><span class="line"><span class="built_in">print</span> (model.cv_values_.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line"><span class="comment"># 岭系数跟 loss 值的关系</span></span><br><span class="line">plt.plot (alphas_to_test, model.cv_values_.mean (axis=<span class="number">0</span>))</span><br><span class="line"><span class="comment"># 选取的岭系数值的位置</span></span><br><span class="line">plt.plot (model.alpha_, <span class="built_in">min</span> (model.cv_values_.mean (axis=<span class="number">0</span>)),<span class="string">&#x27;ro&#x27;</span>)</span><br><span class="line">plt.show ()</span><br></pre></td></tr></table></figure>
 <h3 id="十三、LASSO- 算法"><a href="# 十三、LASSO- 算法" class="headerlink" title="十三、LASSO 算法"></a>十三、LASSO 算法 </h3><h4 id="概念 -3"><a href="# 概念 -3" class="headerlink" title="概念"></a> 概念 </h4><p> 通过构造一个一阶惩罚函数获得一个精炼的模型；通过最终确定一些指标（变量）的系数为零（岭回归估计系数等于 0 的机会微乎其微，造成筛选变量困难），解释力很强。<br>擅长处理具有多重共线性的数据，与岭回归一样是有偏估计 。</p>
 <h4 id="LASSO- 的代价函数"><a href="#LASSO- 的代价函数" class="headerlink" title="LASSO 的代价函数"></a>LASSO 的代价函数 </h4><p>$\displaystyle J (\theta)={1 \over m} \sum_{i=0}^m (h_\theta (x_i)-y_i)^2 + \lambda\sum_{i=0}^n |\theta_j|$<br>$\lambda$ 的值可以用于限制 $\sum_{i=0}^n |\theta_j| \leq t$<br><img src="/2020/11/06/machineLearning-regression/photo5.jpg" alt><br> 一圈圈椭圆是 loss 函数的等高线，最中间的 $\beta$ 值使得 loss 函数最小 <br> 有图中可以观察出，lasso 算法容易使得某些 $\beta$ 取值为零<br><img src="/2020/11/06/machineLearning-regression/photo6.jpg" alt></p>
@@ -1189,40 +1210,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>机器学习算法 --（2）逻辑回归</title>
-    <url>/2020/11/11/machineLearning-logistic/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
-<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-logistic/photo1.jpg" alt></p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数</h3><span id="more"></span>
-<p>线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$</p>
-<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
-<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
-<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
-<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
-<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
-<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
-<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>jupyter notebook 闪退</title>
-    <url>/2021/04/04/python%20jupyter-notebook%20crash/</url>
-    <content><![CDATA[<h3 id="起始位置"><a href="# 起始位置" class="headerlink" title="起始位置"></a>起始位置 </h3><p> 查看 jupyter 快捷文件的属性里的快捷方式，修改 “目标” 里的目录或文件，看看有没有 % HOME%，有的话去掉再运行试试。可能是找不到目标目录或文件了。</p>
-<h3 id="jupyter-notebook-config"><a href="#jupyter-notebook-config" class="headerlink" title="jupyter_notebook_config"></a>jupyter_notebook_config</h3><p>打开 C:\Users 用户名 .jupyter 中的 jupyter_notebook_config<br>更改 #c.NotebookApp.notebook_dir = ‘’<br><a href="https://blog.csdn.net/LawenceRay/article/details/88622610">https://blog.csdn.net/LawenceRay/article/details/88622610</a></p>
-<p>如果没有设置文件，则在 Anaconda Prompt 终端输入：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ jupyter notebook --generate-config</span><br></pre></td></tr></table></figure></p>
-<p>更改默认浏览器 <a href="https://hackmd.io/@lido2370/SkfHHh6er">https://hackmd.io/@lido2370/SkfHHh6er</a></p>
-<h3 id="python- 文章总览"><a href="#python- 文章总览" class="headerlink" title="python 文章总览"></a>python 文章总览</h3><p><a href="https://wangxchun.github.io/2021/04/04/python%20jupyter-notebook%20crash/">jupyter notebook 闪退</a></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-  </entry>
-  <entry>
     <title>slam 小車：(一) 前期準備 --1. 機器人架構設計流程</title>
     <url>/2019/05/20/slam1/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/05/20/slam1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/05/21/slam2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
@@ -1253,6 +1240,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>機器人</tag>
         <tag>設計流程</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>jupyter notebook 闪退</title>
+    <url>/2021/04/04/python%20jupyter-notebook%20crash/</url>
+    <content><![CDATA[<h3 id="起始位置"><a href="# 起始位置" class="headerlink" title="起始位置"></a>起始位置 </h3><p> 查看 jupyter 快捷文件的属性里的快捷方式，修改 “目标” 里的目录或文件，看看有没有 % HOME%，有的话去掉再运行试试。可能是找不到目标目录或文件了。</p>
+<h3 id="jupyter-notebook-config"><a href="#jupyter-notebook-config" class="headerlink" title="jupyter_notebook_config"></a>jupyter_notebook_config</h3><p>打开 C:\Users 用户名 .jupyter 中的 jupyter_notebook_config<br>更改 #c.NotebookApp.notebook_dir = ‘’<br><a href="https://blog.csdn.net/LawenceRay/article/details/88622610">https://blog.csdn.net/LawenceRay/article/details/88622610</a></p>
+<p>如果没有设置文件，则在 Anaconda Prompt 终端输入：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ jupyter notebook --generate-config</span><br></pre></td></tr></table></figure></p>
+<p>更改默认浏览器 <a href="https://hackmd.io/@lido2370/SkfHHh6er">https://hackmd.io/@lido2370/SkfHHh6er</a></p>
+<h3 id="python- 文章总览"><a href="#python- 文章总览" class="headerlink" title="python 文章总览"></a>python 文章总览</h3><p><a href="https://wangxchun.github.io/2021/04/04/python%20jupyter-notebook%20crash/">jupyter notebook 闪退</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
   </entry>
   <entry>
     <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
