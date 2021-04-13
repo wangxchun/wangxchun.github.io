@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C++ 復習 --1.C++ 基礎入門</title>
+    <title>C++ review(1)</title>
     <url>/2018/09/30/C++%20review1/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/09/30/C++%20review1/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review2/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review3/">C++ review (3)</a></p>
 <h3 id="一、認識 -C"><a href="# 一、認識 -C" class="headerlink" title="一、認識 C++"></a>一、認識 C++</h3><h3 id="二、數據類型"><a href="# 二、數據類型" class="headerlink" title="二、數據類型"></a>二、數據類型 </h3><h4 id="1- 基本數據類型"><a href="#1- 基本數據類型" class="headerlink" title="1. 基本數據類型"></a>1. 基本數據類型</h4><h4 id="2- 變量"><a href="#2- 變量" class="headerlink" title="2. 變量"></a>2. 變量</h4><h5 id="1- 變量的聲明和定義"><a href="#1- 變量的聲明和定義" class="headerlink" title="(1) 變量的聲明和定義"></a>(1) 變量的聲明和定義</h5><p> 聲明一個變量只是將變量名稱標識符的有關信息告訴編譯器，使編譯器 “認識” 該標識符，不一定分配記憶體空間。<br><span id="more"></span><br>定義一個變量意味著給變量分配内存空間，變量名就是對相應記憶體單元的命名。<br>在 C++ 程式中，大多數情況下，聲明變量的同時也就完成了變量的定義，只有聲明外部變量時例外。</p>
@@ -60,7 +60,7 @@
 <h4 id="6- 結構體中 -const- 使用場景"><a href="#6- 結構體中 -const- 使用場景" class="headerlink" title="6. 結構體中 const 使用場景"></a>6. 結構體中 const 使用場景 </h4><p> 若結構體數據量太大，用值傳遞會占用太多記憶體，用址傳遞，指針只占用 8 個字節 (64 位作業系統)<br>加入 const 修飾，若在函數中不小心修改實參，編譯器會檢測出問題，讓 programmer 修改<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printStudent</span> <span class="params">(<span class="keyword">const</span> Student *stu)</span></span>;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
-        <category>C++復習</category>
+        <category>C++ review</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -73,13 +73,26 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 復習 --3.C++ 進階</title>
+    <title>C++ review(3)</title>
     <url>/2018/10/14/C++%20review3/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/09/30/C++%20review1/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review2/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review3/">C++ review (3)</a></p>
 <h3 id="一、模板"><a href="# 一、模板" class="headerlink" title="一、模板"></a>一、模板</h3><span id="more"></span>
 <h4 id="1- 模板的概念"><a href="#1- 模板的概念" class="headerlink" title="1. 模板的概念"></a>1. 模板的概念 </h4><h4 id="2- 函數模板"><a href="#2- 函數模板" class="headerlink" title="2. 函數模板"></a>2. 函數模板</h4><h4 id="3- 類模板"><a href="#3- 類模板" class="headerlink" title="3. 類模板"></a>3. 類模板</h4><h3 id="二、STL- 初識"><a href="# 二、STL- 初識" class="headerlink" title="二、STL 初識"></a> 二、STL 初識 </h3><h3 id="三、STL- 常用容器"><a href="# 三、STL- 常用容器" class="headerlink" title="三、STL 常用容器"></a> 三、STL 常用容器 </h3><h3 id="四、STL- 函數對象"><a href="# 四、STL- 函數對象" class="headerlink" title="四、STL 函數對象"></a> 四、STL 函數對象 </h3><h3 id="五、STL- 常用算法"><a href="# 五、STL- 常用算法" class="headerlink" title="五、STL 常用算法"></a> 五、STL 常用算法</h3>]]></content>
       <categories>
-        <category>C++復習</category>
+        <category>C++ review</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用 rand () 產生隨機數</title>
+    <url>/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/</url>
+    <content><![CDATA[<h4 id="1-rand- 函數介紹"><a href="#1-rand- 函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹 </h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br><span id="more"></span><br> 在模擬亂數時，需要設定一個亂數種子，所以如果要讓每次執行程式的結果都不一樣的話，必須要設定不同的亂數種子，設定亂數種子的函數為 srand (int)。<br>一般來說，會在程式加上 srand (time (NULL)); 這一行，讓亂數種子以現在的時間做設定，這樣每次執行程式的結果就不同了。</p>
+<h4 id="2- 任意浮點數範圍或是任意整數範圍的隨機數"><a href="#2- 任意浮點數範圍或是任意整數範圍的隨機數" class="headerlink" title="2. 任意浮點數範圍或是任意整數範圍的隨機數"></a>2. 任意浮點數範圍或是任意整數範圍的隨機數</h4><p>0~1 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (<span class="keyword">double</span>) <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (b - a) * <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>) + a;</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機整數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="built_in">rand</span> () % (b - a + <span class="number">1</span>) + a;</span><br></pre></td></tr></table></figure></p>
+<h4 id="3- 不公平的骰子"><a href="#3- 不公平的骰子" class="headerlink" title="3. 不公平的骰子"></a>3. 不公平的骰子</h4>]]></content>
+      <categories>
+        <category>C++學習</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -131,19 +144,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
     <url>/2019/03/16/C++%E5%8F%96%E5%87%BA%E4%B8%80%E5%80%8B%E6%95%B8%E7%9A%84%E6%AF%8F%E4%B8%80%E4%BD%8D/</url>
     <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] = t / <span class="built_in"><span class="keyword">int</span></span>(<span class="built_in">pow</span>(<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>利用 rand () 產生隨機數</title>
-    <url>/2019/03/14/C++%E5%88%A9%E7%94%A8rand-%E7%94%A2%E7%94%9F%E9%9A%A8%E6%A9%9F%E6%95%B8/</url>
-    <content><![CDATA[<h4 id="1-rand- 函數介紹"><a href="#1-rand- 函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹 </h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br><span id="more"></span><br> 在模擬亂數時，需要設定一個亂數種子，所以如果要讓每次執行程式的結果都不一樣的話，必須要設定不同的亂數種子，設定亂數種子的函數為 srand (int)。<br>一般來說，會在程式加上 srand (time (NULL)); 這一行，讓亂數種子以現在的時間做設定，這樣每次執行程式的結果就不同了。</p>
-<h4 id="2- 任意浮點數範圍或是任意整數範圍的隨機數"><a href="#2- 任意浮點數範圍或是任意整數範圍的隨機數" class="headerlink" title="2. 任意浮點數範圍或是任意整數範圍的隨機數"></a>2. 任意浮點數範圍或是任意整數範圍的隨機數</h4><p>0~1 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (<span class="keyword">double</span>) <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機浮點數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> x = (b - a) * <span class="built_in">rand</span> () / (RAND_MAX + <span class="number">1.0</span>) + a;</span><br></pre></td></tr></table></figure><br>a~b 之間的隨機整數<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="built_in">rand</span> () % (b - a + <span class="number">1</span>) + a;</span><br></pre></td></tr></table></figure></p>
-<h4 id="3- 不公平的骰子"><a href="#3- 不公平的骰子" class="headerlink" title="3. 不公平的骰子"></a>3. 不公平的骰子</h4>]]></content>
       <categories>
         <category>C++學習</category>
       </categories>
@@ -204,26 +204,24 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>C++ 報錯 no matching function for call to transform</title>
-    <url>/2018/10/24/C++%E5%A0%B1%E9%8C%AF%20no-matching-function-for-call-to-transform/</url>
-    <content><![CDATA[<h3 id="報錯"><a href="# 報錯" class="headerlink" title="報錯"></a> 報錯 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<p> 報錯：no matching function for call to transform</p>
-<h3 id="有三種解決方法："><a href="# 有三種解決方法：" class="headerlink" title="有三種解決方法："></a> 有三種解決方法：</h3><h4 id="1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題："><a href="#1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題：" class="headerlink" title="1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題："></a>1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br></pre></td></tr></table></figure>
-<h4 id="2- 自己寫一個函數出來 -—wraper"><a href="#2- 自己寫一個函數出來 -—wraper" class="headerlink" title="2. 自己寫一個函數出來 —wraper"></a>2. 自己寫一個函數出來 —wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span> <span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span> (c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。"><a href="#3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。" class="headerlink" title="3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。"></a>3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>)) toupper);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++報錯</category>
-      </categories>
-  </entry>
-  <entry>
     <title>C++ 的 #include</title>
     <url>/2018/10/27/C++%E7%9A%84#include/</url>
     <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
 <h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
 <h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
 <p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
+]]></content>
+      <categories>
+        <category>C++學習</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 萬能標題檔案</title>
+    <url>/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/</url>
+    <content><![CDATA[<p> 萬能標頭檔案 </p>
 ]]></content>
       <categories>
         <category>C++學習</category>
@@ -248,9 +246,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>C++ 萬能標題檔案</title>
-    <url>/2018/09/27/C++%E8%90%AC%E8%83%BD%E6%A8%99%E9%A0%AD%E6%AA%94%E6%A1%88/</url>
-    <content><![CDATA[<p> 萬能標頭檔案 </p>
+    <title>解釋一個語句</title>
+    <url>/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p> 在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>C++學習</category>
@@ -260,11 +260,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>解釋一個語句</title>
-    <url>/2018/10/28/C++%E8%A7%A3%E9%87%8B%E4%B8%80%E5%80%8B%E8%AA%9E%E5%8F%A5/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">A += B == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<p> 在邏輯上等於：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = B == <span class="number">1</span>;</span><br><span class="line">A += b;</span><br></pre></td></tr></table></figure></p>
+    <title>C++ 运算符</title>
+    <url>/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
+<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
+<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
 ]]></content>
       <categories>
         <category>C++學習</category>
@@ -283,20 +283,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="二、棧（Stack）"><a href="# 二、棧（Stack）" class="headerlink" title="二、棧（Stack）"></a> 二、棧（Stack）</h3><h3 id="三、隊列（Queue）"><a href="# 三、隊列（Queue）" class="headerlink" title="三、隊列（Queue）"></a> 三、隊列（Queue）</h3><h3 id="四、串（String）"><a href="# 四、串（String）" class="headerlink" title="四、串（String）"></a> 四、串（String）</h3><h3 id="五、陣列（Array）"><a href="# 五、陣列（Array）" class="headerlink" title="五、陣列（Array）"></a> 五、陣列（Array）</h3><h3 id="六、廣義表（Generalize-List）"><a href="# 六、廣義表（Generalize-List）" class="headerlink" title="六、廣義表（Generalize List）"></a> 六、廣義表（Generalize List）</h3>]]></content>
       <categories>
         <category>C++資料結構</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 运算符</title>
-    <url>/2018/09/23/C++%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
-<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
-<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
-]]></content>
-      <categories>
-        <category>C++學習</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -329,15 +315,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="3-B- 树插入"><a href="#3-B- 树插入" class="headerlink" title="3.B 树插入"></a>3.B 树插入 </h4><h5 id="1- 定位：某个非叶节点"><a href="#1- 定位：某个非叶节点" class="headerlink" title="(1) 定位：某个非叶节点"></a>(1) 定位：某个非叶节点</h5><h5 id="2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点"><a href="#2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点" class="headerlink" title="(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点"></a>(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点</h5><h4 id="4-B- 树删除"><a href="#4-B- 树删除" class="headerlink" title="4.B 树删除"></a>4.B 树删除</h4><p> 分层两大类情形：</p>
 <h5 id="1- 删除的节点是最底层分支"><a href="#1- 删除的节点是最底层分支" class="headerlink" title="(1) 删除的节点是最底层分支"></a>(1) 删除的节点是最底层分支 </h5><p>$\quad$(a) 欲删除节点的父节点关键字 $&gt; \lceil \frac {m}{2} \rceil -1$，直接删除<br>$\quad$(b) 欲删除节点的父节点关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad$ (i) 兄弟节点够借：关键字 $\leq \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 父子易位，再平衡<br><img src="/2019/03/31/algorithm-find/photo3.jpg" alt><br><img src="/2019/03/31/algorithm-find/photo4.jpg" alt><br>$\quad \quad$ (ii) 兄弟节点不够借：关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 合并 (左 / 右 + 父亲 + 自己)<br><img src="/2019/03/31/algorithm-find/photo5.jpg" alt><br>Q：为什么能合并，不会超过关键字数量的上界吗？<br> 合并：$(\lceil \frac {m}{2} \rceil -1) + 1 + (\lceil \frac {m}{2} \rceil -2)=$</p>
 <h5 id="2- 删除的节点不是最底层分支"><a href="#2- 删除的节点不是最底层分支" class="headerlink" title="(2) 删除的节点不是最底层分支"></a>(2) 删除的节点不是最底层分支</h5>]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>数据结构与算法 --5. 排序</title>
-    <url>/2019/04/03/algorithm-sort/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
-]]></content>
       <categories>
         <category>数据结构与算法</category>
       </categories>
@@ -389,6 +366,25 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>数据结构与算法 --5. 排序</title>
+    <url>/2019/04/03/algorithm-sort/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>通信原理 --（7）最佳接收</title>
+    <url>/2020/10/15/communicationSystem-BestAccepted/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
+<h3 id="一、不同类型数字信号的最佳接收及其误码性能"><a href="# 一、不同类型数字信号的最佳接收及其误码性能" class="headerlink" title="一、不同类型数字信号的最佳接收及其误码性能"></a>一、不同类型数字信号的最佳接收及其误码性能</h3><span id="more"></span>
+<h3 id="二、数字信号的匹配滤波接收"><a href="# 二、数字信号的匹配滤波接收" class="headerlink" title="二、数字信号的匹配滤波接收"></a>二、数字信号的匹配滤波接收 </h3><h3 id="三、最佳基带传输系统"><a href="# 三、最佳基带传输系统" class="headerlink" title="三、最佳基带传输系统"></a> 三、最佳基带传输系统</h3>]]></content>
+      <categories>
+        <category>通信原理</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数据结构与算法 --1. 线性表</title>
     <url>/2019/03/21/algorithm-linearTable/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序 </a><br> 存储结构：顺序，链接，索引，哈希</p>
@@ -420,6 +416,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>通信原理 --（2）信道</title>
+    <url>/2020/09/14/communicationSystem-channel/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
+<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道</h3><span id="more"></span>
+<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
+      <categories>
+        <category>通信原理</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数据结构与算法 --2. 树</title>
     <url>/2019/03/23/algorithm-tree/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
@@ -443,16 +449,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（7）最佳接收</title>
-    <url>/2020/10/15/communicationSystem-BestAccepted/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、不同类型数字信号的最佳接收及其误码性能"><a href="# 一、不同类型数字信号的最佳接收及其误码性能" class="headerlink" title="一、不同类型数字信号的最佳接收及其误码性能"></a>一、不同类型数字信号的最佳接收及其误码性能</h3><span id="more"></span>
-<h3 id="二、数字信号的匹配滤波接收"><a href="# 二、数字信号的匹配滤波接收" class="headerlink" title="二、数字信号的匹配滤波接收"></a>二、数字信号的匹配滤波接收 </h3><h3 id="三、最佳基带传输系统"><a href="# 三、最佳基带传输系统" class="headerlink" title="三、最佳基带传输系统"></a> 三、最佳基带传输系统</h3>]]></content>
-      <categories>
-        <category>通信原理</category>
-      </categories>
-  </entry>
-  <entry>
     <title>通信原理 --（3）模拟调制技术</title>
     <url>/2020/09/17/communicationSystem-analogModulation/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
@@ -463,11 +459,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（2）信道</title>
-    <url>/2020/09/14/communicationSystem-channel/</url>
+    <title>通信原理 --（5）数字基带传输</title>
+    <url>/2020/09/29/communicationSystem-digitalBasebandTransmission/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道</h3><span id="more"></span>
-<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
+<h3 id="一、数字基带信号及其频谱特性"><a href="# 一、数字基带信号及其频谱特性" class="headerlink" title="一、数字基带信号及其频谱特性"></a>一、数字基带信号及其频谱特性</h3><span id="more"></span>
+<h3 id="二、基带传输的常用码型和码间串扰"><a href="# 二、基带传输的常用码型和码间串扰" class="headerlink" title="二、基带传输的常用码型和码间串扰"></a>二、基带传输的常用码型和码间串扰 </h3><h3 id="三、无码间串扰的基带传输特性"><a href="# 三、无码间串扰的基带传输特性" class="headerlink" title="三、无码间串扰的基带传输特性"></a> 三、无码间串扰的基带传输特性 </h3><h3 id="四、基带传输系统的抗噪声性能与眼图"><a href="# 四、基带传输系统的抗噪声性能与眼图" class="headerlink" title="四、基带传输系统的抗噪声性能与眼图"></a> 四、基带传输系统的抗噪声性能与眼图 </h3><h3 id="五、部分响应系统"><a href="# 五、部分响应系统" class="headerlink" title="五、部分响应系统"></a> 五、部分响应系统 </h3><h3 id="六、均衡原理"><a href="# 六、均衡原理" class="headerlink" title="六、均衡原理"></a> 六、均衡原理</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -477,16 +473,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
     <url>/2020/09/23/communicationSystem-digitization/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
 <h3 id="一、模拟信号的抽样"><a href="# 一、模拟信号的抽样" class="headerlink" title="一、模拟信号的抽样"></a>一、模拟信号的抽样 </h3><h3 id="二、抽样信号的量化"><a href="# 二、抽样信号的量化" class="headerlink" title="二、抽样信号的量化"></a> 二、抽样信号的量化 </h3><h3 id="三、脉冲编码调制"><a href="# 三、脉冲编码调制" class="headerlink" title="三、脉冲编码调制"></a> 三、脉冲编码调制 </h3><h3 id="四、差分脉码调制与增量调制"><a href="# 四、差分脉码调制与增量调制" class="headerlink" title="四、差分脉码调制与增量调制"></a> 四、差分脉码调制与增量调制 </h3><h3 id="五、时分复用"><a href="# 五、时分复用" class="headerlink" title="五、时分复用"></a> 五、时分复用</h3>]]></content>
-      <categories>
-        <category>通信原理</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>通信原理 --（5）数字基带传输</title>
-    <url>/2020/09/29/communicationSystem-digitalBasebandTransmission/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、数字基带信号及其频谱特性"><a href="# 一、数字基带信号及其频谱特性" class="headerlink" title="一、数字基带信号及其频谱特性"></a>一、数字基带信号及其频谱特性</h3><span id="more"></span>
-<h3 id="二、基带传输的常用码型和码间串扰"><a href="# 二、基带传输的常用码型和码间串扰" class="headerlink" title="二、基带传输的常用码型和码间串扰"></a>二、基带传输的常用码型和码间串扰 </h3><h3 id="三、无码间串扰的基带传输特性"><a href="# 三、无码间串扰的基带传输特性" class="headerlink" title="三、无码间串扰的基带传输特性"></a> 三、无码间串扰的基带传输特性 </h3><h3 id="四、基带传输系统的抗噪声性能与眼图"><a href="# 四、基带传输系统的抗噪声性能与眼图" class="headerlink" title="四、基带传输系统的抗噪声性能与眼图"></a> 四、基带传输系统的抗噪声性能与眼图 </h3><h3 id="五、部分响应系统"><a href="# 五、部分响应系统" class="headerlink" title="五、部分响应系统"></a> 五、部分响应系统 </h3><h3 id="六、均衡原理"><a href="# 六、均衡原理" class="headerlink" title="六、均衡原理"></a> 六、均衡原理</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -571,22 +557,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <categories>
         <category>计算机网络</category>
       </categories>
-  </entry>
-  <entry>
-    <title>dev C++ 出现错误 Id returned 1 exit status</title>
-    <url>/2018/10/03/dev-C-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF-Id-returned-1-exit-status/</url>
-    <content><![CDATA[<p> 可能有如下原因：</p>
-<p>1、库函数拼写错误。如：printf，scanf, 等 </p>
-<p>2、定义的函数名在调用时，函数名拼写错误 </p>
-<p>3、在执行函数时可能函数体本身的问题 </p>
-<p>4、关于其他人说的有程序在运行 </p>
-]]></content>
-      <categories>
-        <category>C++學習</category>
-      </categories>
-      <tags>
-        <tag>Dev C++</tag>
-      </tags>
   </entry>
   <entry>
     <title>通信原理 --（8）同步</title>
@@ -730,6 +700,37 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>历史 -- （4）威尼斯和第四次十字军东征</title>
+    <url>/2019/07/15/history-venice/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
+<p>这种贫瘠的靠海之地有两种选择，一是当海盗，二是做生意</p>
+<p>最初，威尼斯人靠经营海盐贸易起家</p>
+<p>威尼斯是从西罗马来的，信奉的是天主教。但是拜占庭帝国信奉的是东正教</p>
+<p>帮拜占庭防御亚德亚里海，有合理的理由发展强大的海军</p>
+<p>在君士坦丁堡和亚历山卓之间做贸易</p>
+<ol>
+<li>香料贸易</li>
+<li>奴隶，购买年轻的斯拉夫人，卖给当时埃及或叙利亚的伊斯兰土豪</li>
+<li>木材 (造船)，铁 (造武器) 与铜的贸易</li>
+</ol>
+<p>穆斯林拿来对抗十字军的船只和武器都是天主教的威尼斯商人所提供的</p>
+<p>与异教徒贸易的行为，遭到罗马教廷和拜占庭皇帝的反对</p>
+<p>热那亚人</p>
+<p>威尼斯帝国准备进攻拜占庭帝国</p>
+<h2 id="1175- 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯"><a href="#1175- 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯" class="headerlink" title="1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯"></a>1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯</h2><p>1192 年，罗马教皇发起十字军东征</p>
+<p>法兰西骑士和封建诸侯</p>
+<p>运输公司外包给威尼斯</p>
+<p>运输的承包商也成了股东之一</p>
+<p>1202 年，抵达威尼斯的王公贵族人数远比预期少</p>
+<p>拜占庭帝国的流亡王子，希望借由十字军的力量，帮助它夺回王位</p>
+<p>希腊正教归顺罗马公教</p>
+<p>现在的拜占庭皇帝想借由比萨商人来取代威尼斯商人</p>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+  </entry>
+  <entry>
     <title>历史 -- （2）俄国简史</title>
     <url>/2019/07/08/history-russia/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
@@ -812,37 +813,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>历史 -- （4）威尼斯和第四次十字军东征</title>
-    <url>/2019/07/15/history-venice/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
-<p>这种贫瘠的靠海之地有两种选择，一是当海盗，二是做生意</p>
-<p>最初，威尼斯人靠经营海盐贸易起家</p>
-<p>威尼斯是从西罗马来的，信奉的是天主教。但是拜占庭帝国信奉的是东正教</p>
-<p>帮拜占庭防御亚德亚里海，有合理的理由发展强大的海军</p>
-<p>在君士坦丁堡和亚历山卓之间做贸易</p>
-<ol>
-<li>香料贸易</li>
-<li>奴隶，购买年轻的斯拉夫人，卖给当时埃及或叙利亚的伊斯兰土豪</li>
-<li>木材 (造船)，铁 (造武器) 与铜的贸易</li>
-</ol>
-<p>穆斯林拿来对抗十字军的船只和武器都是天主教的威尼斯商人所提供的</p>
-<p>与异教徒贸易的行为，遭到罗马教廷和拜占庭皇帝的反对</p>
-<p>热那亚人</p>
-<p>威尼斯帝国准备进攻拜占庭帝国</p>
-<h2 id="1175- 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯"><a href="#1175- 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯" class="headerlink" title="1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯"></a>1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯</h2><p>1192 年，罗马教皇发起十字军东征</p>
-<p>法兰西骑士和封建诸侯</p>
-<p>运输公司外包给威尼斯</p>
-<p>运输的承包商也成了股东之一</p>
-<p>1202 年，抵达威尼斯的王公贵族人数远比预期少</p>
-<p>拜占庭帝国的流亡王子，希望借由十字军的力量，帮助它夺回王位</p>
-<p>希腊正教归顺罗马公教</p>
-<p>现在的拜占庭皇帝想借由比萨商人来取代威尼斯商人</p>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-  </entry>
-  <entry>
     <title>jupyter notebook 闪退</title>
     <url>/2021/04/04/jupyter-notebook%E9%97%AA%E9%80%80/</url>
     <content><![CDATA[<h3 id="起始位置"><a href="# 起始位置" class="headerlink" title="起始位置"></a>起始位置 </h3><p> 查看 jupyter 快捷文件的属性里的快捷方式，修改 “目标” 里的目录或文件，看看有没有 % HOME%，有的话去掉再运行试试。可能是找不到目标目录或文件了。</p>
@@ -861,6 +831,26 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="一、KNN- 概念"><a href="# 一、KNN- 概念" class="headerlink" title="一、KNN 概念"></a>一、KNN 概念 </h3><h3 id="二、KNN- 的算法实践"><a href="# 二、KNN- 的算法实践" class="headerlink" title="二、KNN 的算法实践"></a> 二、KNN 的算法实践</h3><span id="more"></span>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">knn</span> (<span class="params">x_test, x_data, y_data, k</span>):</span></span><br><span class="line">    <span class="comment"># 计算样本数量</span></span><br><span class="line">    x_data_size = x_data.shape [<span class="number">0</span>]</span><br><span class="line">    <span class="comment"># 复制 x_test</span></span><br><span class="line">    np.tile (x_test, (x_data_size,<span class="number">1</span>))</span><br><span class="line">    <span class="comment"># 计算 x_test 与每一个样本的差值</span></span><br><span class="line">    diffMat = np.tile (x_test, (x_data_size,<span class="number">1</span>)) - x_data</span><br><span class="line">    <span class="comment"># 计算差值的平方</span></span><br><span class="line">    sqDiffMat = diffMat**<span class="number">2</span></span><br><span class="line">    <span class="comment"># 求和</span></span><br><span class="line">    sqDistances = sqDiffMat.<span class="built_in">sum</span> (axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 开方</span></span><br><span class="line">    distances = sqDistances**<span class="number">0.5</span></span><br><span class="line">    <span class="comment"># 从小到大排序</span></span><br><span class="line">    sortedDistances = distances.argsort ()</span><br><span class="line">    classCount = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (k):</span><br><span class="line">        <span class="comment"># 获取标签</span></span><br><span class="line">        votelabel = y_data [sortedDistances [i]]</span><br><span class="line">        <span class="comment"># 统计标签数量</span></span><br><span class="line">        classCount [votelabel] = classCount.get (votelabel,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    <span class="comment"># 根据 operator.itemgetter (1)- 第 1 个值对 classCount 排序，然后再取倒序</span></span><br><span class="line">    sortedClassCount = <span class="built_in">sorted</span> (classCount.items (),key=operator.itemgetter (<span class="number">1</span>), reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 获取数量最多的标签</span></span><br><span class="line">    <span class="keyword">return</span> sortedClassCount [<span class="number">0</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
 <h3 id="三、sklearn- 实现 -KNN"><a href="# 三、sklearn- 实现 -KNN" class="headerlink" title="三、sklearn 实现 KNN"></a>三、sklearn 实现 KNN</h3>]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>机器学习算法 --（2）逻辑回归</title>
+    <url>/2020/11/11/machineLearning-logistic/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
+<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-logistic/photo1.jpg" alt></p>
+<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p> 线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$<br><span id="more"></span></p>
+<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
+<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
+<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
+<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
+<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
+<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
+<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
+<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
@@ -894,26 +884,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <tags>
         <tag>深度学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（2）逻辑回归</title>
-    <url>/2020/11/11/machineLearning-logistic/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/"> 机器学习算法 —（4）KNN</a></p>
-<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-logistic/photo1.jpg" alt></p>
-<h3 id="二、代价函数"><a href="# 二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数 </h3><p> 线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$<br>$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))]$<br><span id="more"></span></p>
-<h4 id="梯度下降法"><a href="# 梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>$Repeat$<br>$\lbrace$<br>    $\quad \theta_j := \theta_j - \alpha {\partial \over \partial \theta_j} J (\theta)$<br>$\rbrace$</p>
-<p>$cost (h_\theta (x), y)=-y \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))$</p>
-<p>$\displaystyle {\partial cost (h_\theta (x), y) \over \partial \theta}$<br>$\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) {\partial h_\theta (x) \over \partial \theta}$<br>$=\displaystyle =-{1 \over m} \sum_{i=0}^m ({y \over h_\theta (x)} - {(1-y) \over 1-h_\theta (x)}) h_\theta’(x) x$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m {h_\theta’(x) x \over h_\theta (x)(1-h_\theta (x))}(h_\theta (x) - y)$<br>$=\displaystyle {1 \over m} \sum_{i=0}^m x (h_\theta (x)-y)$</p>
-<h3 id="三、多分类"><a href="# 三、多分类" class="headerlink" title="三、多分类"></a>三、多分类 </h3><p> 可以分别做若干次二分类</p>
-<h3 id="四、逻辑回归正则化"><a href="# 四、逻辑回归正则化" class="headerlink" title="四、逻辑回归正则化"></a>四、逻辑回归正则化 </h3><p> 代价函数：$\displaystyle J (\theta)=-{1 \over m}[\sum_{i=0}^my \, log (h_\theta (x))-(1-y) log (1-h_\theta (x))] + {\lambda \over 2m} \sum_{i=0}^m \theta_j^2$</p>
-<h3 id="五、正确率 - 召回率 -F1- 指标"><a href="# 五、正确率 - 召回率 -F1- 指标" class="headerlink" title="五、正确率 / 召回率 / F1 指标"></a>五、正确率 / 召回率 / F1 指标 </h3><p> 正确率 Precision：检索出来的条目有多少是正确的 <br> 召回率 Recall：正确的条目有多少被检索出来了 <br>$\displaystyle F_1 值 ={2 \times {正确率 + 召回率 \over 正确率 \times 召回率}}$<br> 正确率和召回率有时候是矛盾的，所以在不同场合需要自己判断正确率或是召回率的重要性<br>$\displaystyle F_\beta={(1+\beta^2) \times {正确率 + 召回率 \over (\beta^2 \times 正确率) \times 召回率}}$</p>
-<h3 id="六、sklearn- 实战逻辑回归"><a href="# 六、sklearn- 实战逻辑回归" class="headerlink" title="六、sklearn 实战逻辑回归"></a>六、sklearn 实战逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> scale == <span class="literal">False</span>:</span><br><span class="line">    <span class="comment"># 画图决策边界</span></span><br><span class="line">    plot ()</span><br><span class="line">    x_test = np.array ([[-<span class="number">4</span>],[<span class="number">3</span>]])</span><br><span class="line">    y_test = (-logistic.intercept_ - x_test*logistic.coef_[<span class="number">0</span>][<span class="number">0</span>])/logistic.coef_[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">    plt.plot (x_test, y_test, <span class="string">&#x27;k&#x27;</span>)</span><br><span class="line">    plt.show ()</span><br><span class="line"></span><br><span class="line">predictions = logistic.predict (x_data)</span><br><span class="line"><span class="built_in">print</span> (classification_report (y_data, predictions))</span><br></pre></td></tr></table></figure>
-<h3 id="七、sklearn- 实战非线性逻辑回归"><a href="# 七、sklearn- 实战非线性逻辑回归" class="headerlink" title="七、sklearn 实战非线性逻辑回归"></a>七、sklearn 实战非线性逻辑回归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">logistic = linear_model.LogisticRegression ()</span><br><span class="line">logistic.fit (x_data, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取数据值所在的范围</span></span><br><span class="line">x_min, x_max = x_data [:, <span class="number">0</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">0</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line">y_min, y_max = x_data [:, <span class="number">1</span>].<span class="built_in">min</span> () - <span class="number">1</span>, x_data [:, <span class="number">1</span>].<span class="built_in">max</span> () + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成网格矩阵</span></span><br><span class="line">xx, yy = np.meshgrid (np.arange (x_min, x_max, <span class="number">0.02</span>),</span><br><span class="line">                     np.arange (y_min, y_max, <span class="number">0.02</span>))</span><br><span class="line"><span class="comment"># ravel 与 flatten 类似，多维数据转一维。flatten 不会改变原始数据，ravel 会改变原始数据</span></span><br><span class="line">z = logistic.predict (np.c_[xx.ravel (), yy.ravel ()])</span><br><span class="line">z = z.reshape (xx.shape)</span><br><span class="line"><span class="comment"># 等高线图</span></span><br><span class="line">cs = plt.contourf (xx, yy, z)</span><br><span class="line"><span class="comment"># 样本散点图</span></span><br><span class="line">plt.scatter (x_data [:, <span class="number">0</span>], x_data [:, <span class="number">1</span>], c=y_data)</span><br><span class="line">plt.show ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;score:&#x27;</span>,logistic.score (x_data,y_data))</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
   </entry>
   <entry>
     <title>机器学习算法 --（1）线性回归和非线性回归</title>
@@ -1042,6 +1012,21 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
+    <url>/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/</url>
+    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
+<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
+<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三連擊（洛谷 P1008）</title>
     <url>/2019/04/01/%E4%B8%89%E9%80%A3%E6%93%8A%EF%BC%88%E6%B4%9B%E8%B0%B7P1008%EF%BC%89/</url>
     <content><![CDATA[<h4 id="題目描述"><a href="# 題目描述" class="headerlink" title="題目描述"></a>題目描述 </h4><pre><code> 將 1，2,...,9 共 9 個數分成三組，分別組成三個三位數，且使這三個三位數構成 1：2：3 的比例，試求出所有滿足條件的三個三位數。 
@@ -1060,21 +1045,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>OJ</tag>
         <tag>set</tag>
         <tag>洛谷刷題</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
-    <url>/2021/03/23/vbox%E5%AE%89%E8%A3%85Ubuntu%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E7%A3%81%E7%9B%98%E4%BC%9A%E6%80%8E%E6%A0%B7/</url>
-    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
-<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
-<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -1111,6 +1081,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
+    <url>/2018/09/22/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
+    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
+<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何在 hexo blog 中發表一篇文章</title>
     <url>/2018/09/16/%E5%A6%82%E4%BD%95%E5%9C%A8hexo-blog%E4%B8%AD%E7%99%BC%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h3 id="新建一篇文章"><a href="# 新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h3><p>(1) 在 hexo blog 目錄下，進入 cmd，輸入以下命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot; 文章名稱 &quot;</span><br></pre></td></tr></table></figure><br><span id="more"></span></p>
@@ -1137,13 +1117,12 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>如何是实现 hexo 文章中文和英文之间自动空格</title>
-    <url>/2018/09/22/%E5%A6%82%E4%BD%95%E6%98%AF%E5%AE%9E%E7%8E%B0hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%96%87%E5%92%8C%E8%8B%B1%E6%96%87%E4%B9%8B%E9%97%B4%E8%87%AA%E5%8A%A8%E7%A9%BA%E6%A0%BC/</url>
-    <content><![CDATA[<p>安装插件 <br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-auto-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
-<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
+    <title>算法</title>
+    <url>/2019/04/05/%E7%AE%97%E6%B3%953/</url>
+    <content><![CDATA[<span id="more"></span>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
@@ -1160,15 +1139,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a> 加入代码 </h4>]]></content>
       <categories>
         <category>hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>算法</title>
-    <url>/2019/04/05/%E7%AE%97%E6%B3%953/</url>
-    <content><![CDATA[<span id="more"></span>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
@@ -1215,7 +1185,7 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>C++ 復習 --2.C++ 入門之後</title>
+    <title>C++ review(2)</title>
     <url>/2018/10/14/C++%20review2/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/09/30/C++%20review1/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review2/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review3/">C++ review (3)</a></p>
 <h3 id="一、記憶體分區模型"><a href="# 一、記憶體分區模型" class="headerlink" title="一、記憶體分區模型"></a>一、記憶體分區模型</h3><p><img src="/2018/10/14/C++%20review2/photo1.png" alt></p>
@@ -1267,10 +1237,40 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h5 id="8- 菱形繼承"><a href="#8- 菱形繼承" class="headerlink" title="(8) 菱形繼承"></a>(8) 菱形繼承 </h5><p>(a) 菱形繼承的概念<br> 兩個派生類繼承同一個基類 <br> 又有個類同時繼承這兩個派生類 <br> 這種繼承被稱爲菱形繼承，或者鑽石繼承 <br>(b) 舉例<br> 羊繼承了動物的數據，駝也繼承了動物的數據，草泥馬多繼承了羊和駝的數據 <br>(c) 問題<br> 草泥馬繼承自動物的數據就有了兩份，當草泥馬使用數據的時候就會產生歧義 <br> 子類繼承了兩份相同的數據，導致資源浪費以及毫無意義 <br>(d) 解決<br> 利用虛繼承可以解決菱形繼承的問題，相當於共享數據<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="keyword">int</span> m_Age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sheep</span> :</span> <span class="keyword">virtual</span> <span class="keyword">public</span> Animal &#123;&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tuo</span> :</span> <span class="keyword">virtual</span> <span class="keyword">public</span> Animal &#123;&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SheepTuo</span> :</span> <span class="keyword">public</span> Sheep, <span class="keyword">public</span> Tuo &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SheepTuo st;</span><br><span class="line">	st.Sheep::m_Age = </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h4 id="7- 多態"><a href="#7- 多態" class="headerlink" title="7. 多態"></a>7. 多態 </h4><h3 id="五、檔案操作"><a href="# 五、檔案操作" class="headerlink" title="五、檔案操作"></a> 五、檔案操作</h3>]]></content>
       <categories>
-        <category>C++復習</category>
+        <category>C++ review</category>
       </categories>
       <tags>
         <tag>C++</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>dev C++ error:Id returned 1 exit status</title>
+    <url>/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/</url>
+    <content><![CDATA[<p> 可能有如下原因：</p>
+<p>1、库函数拼写错误。如：printf，scanf, 等 </p>
+<p>2、定义的函数名在调用时，函数名拼写错误 </p>
+<p>3、在执行函数时可能函数体本身的问题 </p>
+<p>4、关于其他人说的有程序在运行 </p>
+]]></content>
+      <categories>
+        <category>C++ error</category>
+      </categories>
+      <tags>
+        <tag>Dev C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ error:no matching function for call to transform</title>
+    <url>/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/</url>
+    <content><![CDATA[<h3 id="報錯"><a href="# 報錯" class="headerlink" title="報錯"></a> 報錯 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br><span class="line">	cout &lt;&lt; str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p> 報錯：no matching function for call to transform</p>
+<h3 id="有三種解決方法："><a href="# 有三種解決方法：" class="headerlink" title="有三種解決方法："></a> 有三種解決方法：</h3><h4 id="1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題："><a href="#1- 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 -g- 環境中沒有問題：" class="headerlink" title="1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題："></a>1. 因為在全域性名稱空間中有實現的函式（而不是巨集），所以我們明確名稱空間，這並不是總奏效，但是在我的 g++ 環境中沒有問題：</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), ::toupper);</span><br></pre></td></tr></table></figure>
+<h4 id="2- 自己寫一個函數出來 -—wraper"><a href="#2- 自己寫一個函數出來 -—wraper" class="headerlink" title="2. 自己寫一個函數出來 —wraper"></a>2. 自己寫一個函數出來 —wraper</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">charToUpper</span> <span class="params">(<span class="keyword">char</span> c)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">toupper</span> (c); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。"><a href="#3- 強制轉化：將 -toupper- 轉換為一個返回值為 -int，引數只有一個 -int- 的函數指標。" class="headerlink" title="3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。"></a>3. 強制轉化：將 toupper 轉換為一個返回值為 int，引數只有一個 int 的函數指標。</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">transform</span> (str.<span class="built_in">begin</span> (), str.<span class="built_in">end</span> (), str.<span class="built_in">begin</span> (), (<span class="built_in"><span class="keyword">int</span></span> (*)(<span class="keyword">int</span>)) toupper);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++ error</category>
+      </categories>
   </entry>
 </search>
