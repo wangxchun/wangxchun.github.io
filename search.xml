@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C++ 的 #include</title>
-    <url>/2018/10/27/C++%20#include/</url>
-    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
-<h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
-<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
-<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>dev C++ error:Id returned 1 exit status</title>
     <url>/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a></p>
@@ -243,7 +228,7 @@
     <url>/2019/03/17/C++%20rounding/</url>
     <content><![CDATA[<p>round (a)：回傳 a 之小數經四捨五入後之值。<br>floor (a)：回傳 a 之小數無條件捨去後之值。<br>ceil (a)：回傳 a 之小數無條件進位後之值。<br><span id="more"></span><br>setprecision () 是輸入 / 輸出操縱器庫 <iomanip> 的一個操作符，可以用來修改浮點數的預設精度。<br> 使用 setprecision (n) 可控制輸出流顯示浮點數的數字個數。C++ 預設的流輸出數值有效位是 6。<br> 如果 setprecision (n) 與 setiosflags (ios::fixed) 合用，可以控制小數點右邊的數字個數。<br>setiosflags (ios::fixed) 是用定點方式表示實數 </iomanip></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span> <span class="comment">// 輸出流控制，setiosflags (ios::fixed)，setprecision (n) 的標頭檔案 </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> n = <span class="number">50.26548</span>;</span><br><span class="line">	<span class="built_in">printf</span> (<span class="string">&quot;%.4f&quot;</span>, n); cout &lt;&lt; endl; <span class="comment">// 列印輸出小數點後 4 位，會四捨五入 </span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 輸出 4 位有效數字，包括整數和小數部分，會四捨五入 </span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span> (ios::fixed) &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 輸出小數點後 4 位，會四捨五入，會影響後面的 setprecision () 輸出 </span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 只輸出小數點後 4 位，而不再是包括整數部分的 7 位，會四捨五入（但是此處受到前面影響，所以會輸出包含整數）</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span> (ios::fixed) &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>)&lt;&lt; <span class="built_in">floor</span> (n * <span class="number">10000</span>)/<span class="number">10000</span>&lt;&lt; endl;<span class="comment">// 不會四捨五入，保留幾位小數就乘和除 10 的幾次方 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href>C++ rounding</a><br><a href>C++ get-out-each-digit-of-the-number</a><br><a href>C++ rand ()</a><br><a href>C++ small-summary</a><br><a href>C++ explain-a-sentence</a><br><a href>C++ #include</a><br><a href>C++ RALL</a><br><a href>C++ operator</a><br><a href>C++ universal-header-files</a><br><a href>Dev C++11</a></p>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ rounding</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ get-out-each-digit-of-the-number</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand (">C++ rand ()</a>/)<br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ small-summary</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ explain-a-sentence</a><br><a href>C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ operator</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ universal-header-files</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/">Dev C++11</a></p>
 ]]></content>
       <categories>
         <category>C++ learn</category>
@@ -1272,6 +1257,21 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="7- 多態"><a href="#7- 多態" class="headerlink" title="7. 多態"></a>7. 多態 </h4><h3 id="五、檔案操作"><a href="# 五、檔案操作" class="headerlink" title="五、檔案操作"></a> 五、檔案操作</h3>]]></content>
       <categories>
         <category>C++ review</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 的 #include</title>
+    <url>/2018/10/27/C++%20include/</url>
+    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
+<h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
+<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
+<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
       </categories>
       <tags>
         <tag>C++</tag>
