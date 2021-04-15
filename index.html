@@ -174,14 +174,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">61</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -224,6 +224,113 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chris自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/14/C++%20advance4.1/" class="post-title-link" itemprop="url">C++ advance（四）linux 服务器编程 --1.Linux 操作系统技术</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-04-14 09:08:02" itemprop="dateCreated datePublished" datetime="2021-04-14T09:08:02+08:00">2021-04-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-15 14:08:46" itemprop="dateModified" datetime="2021-04-15T14:08:46+08:00">2021-04-15</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-advance/" itemprop="url" rel="index"><span itemprop="name">C++ advance</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览</h3><p><a href>C++ advance（四）linux 服务器编程 —1.Linux 操作系统技术</a></p>
+<p>包括 linux 基本命令，用户管理，vi 使用，安装卸载软件，网络配置管理</p>
+<h3 id="一、Linux- 介绍和 -Linux- 目录结构"><a href="# 一、Linux- 介绍和 -Linux- 目录结构" class="headerlink" title="一、Linux 介绍和 Linux 目录结构"></a>一、Linux 介绍和 Linux 目录结构 </h3><h4 id="1-UNIX"><a href="#1-UNIX" class="headerlink" title="1.UNIX"></a>1.UNIX</h4><p> 创始人：Ken Thompson 和 Dennis Ritchie<br>主要分支和发展方向：IBM-AIX、HP-UX、solaris、BSD、linux</p>
+<h4 id="2-GNU- 组织（GNU’s-Not-Unix）"><a href="#2-GNU- 组织（GNU’s-Not-Unix）" class="headerlink" title="2.GNU 组织（GNU’s Not Unix）"></a>2.GNU 组织（GNU’s Not Unix）</h4><p>创始人：Richard Matthew Stallman<br>主旨：倡导自由软件 <br> 协议：GPL（General Public License）<br>主要产品：GCC、Emacs、Bash Shell、GLIBC、linux<br>标准：POSIX<br>UNIX 用的是 Steve Bourne 在 1977 年发明的 Bourne Shell<br>linux 用的默认是它的扩展：Bourne Again Shell（bash）</p>
+<h4 id="3-linux"><a href="#3-linux" class="headerlink" title="3.linux"></a>3.linux</h4><h5 id="创始人：Linus-Torvalds"><a href="# 创始人：Linus-Torvalds" class="headerlink" title="创始人：Linus Torvalds"></a>创始人：Linus Torvalds</h5><h5 id="发行版本：Ubuntu、Redhat、CentOS"><a href="# 发行版本：Ubuntu、Redhat、CentOS" class="headerlink" title="发行版本：Ubuntu、Redhat、CentOS"></a>发行版本：Ubuntu、Redhat、CentOS</h5><h4 id="学习内容"><a href="# 学习内容" class="headerlink" title="学习内容"></a>学习内容 </h4><p>shell<br> 编辑器 vim<br>编译器 GCC<br>gdb 调试 <br> 制作静态库和共享库 <br> 项目工程管理 <br> 系统编程（API）：文件 IO、文件目录、进程、信号、网络、线程</p>
+<h4 id="4-shell"><a href="#4-shell" class="headerlink" title="4.shell"></a>4.shell</h4><h5 id="shell- 是什么"><a href="#shell- 是什么" class="headerlink" title="shell 是什么"></a>shell 是什么 </h5><p> 打开终端，就获得一个 shell，可以输入各种命令</p>
+<h5 id="shell- 家族"><a href="#shell- 家族" class="headerlink" title="shell 家族"></a>shell 家族 </h5><p>/bin/sh（已经被 /bin/bash 取代）<br>/bin/bash（就是 Linux 默认的 shell）<br>/bin/ksh（Korshell 由 AT&amp;T Bell lab 发展出来的）<br>/bin/tcsh（整合 C shell，提供更多功能）<br>/bin/csh（已经被 /bin/tcsh 所取代）<br>/bin/zsh（基于 ksh 发展出来的，功能更强大的 shell）<br> 查看系统配置 shell<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;shells</span><br><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure></p>
+<h4 id="5- 目录结构"><a href="#5- 目录结构" class="headerlink" title="5. 目录结构"></a>5. 目录结构</h4><p>/ 根目录<br>/bin 可执行文件所在的目录<br>/media 挂载设备媒体、U 盘、光驱等<br>/mnt 让用户挂载别的文件系统<br>/usr unix system resources 庞大复杂的目录，很多应用会安装到此目录<br>/usr/local 用户自己安装软件的目录<br>/sbin 超级管理员 root 的可执行文件目录<br>/proc 这个目录是系统内存的映射，会保留进程运行的一些消息<br>/etc 系统软件的启动和配置目录<br>/etc/passwd 用户存放文件（man 5 passwd 查看）<br>/dev 设备文件所在目录<br>/home/user 用户家目录</p>
+<h4 id="6- 常用命令"><a href="#6- 常用命令" class="headerlink" title="6. 常用命令"></a>6. 常用命令 </h4><p>ls 查看文件夹内容<br>history 查看历史记录<br> 可以方向键上下查看之前的命令</p>
+<h3 id="二、Linux- 下的绝对路径和相对路径"><a href="# 二、Linux- 下的绝对路径和相对路径" class="headerlink" title="二、Linux 下的绝对路径和相对路径"></a>二、Linux 下的绝对路径和相对路径 </h3><p> 绝对路径：以 “/“ 开头 <br> 相对路径：以 “.” 或者 “..” 开头的路径，”.” 代表当前路径，”..” 代表上一级路径</p>
+<h3 id="三、文件和目录操作相关命令"><a href="# 三、文件和目录操作相关命令" class="headerlink" title="三、文件和目录操作相关命令"></a>三、文件和目录操作相关命令</h3><h4 id="1- 代表意思"><a href="#1- 代表意思" class="headerlink" title="1. 代表意思"></a>1. 代表意思</h4><p>bob@ubuntu:~/linux$<br>bob 代表用户<br>ubuntu 代表机器名<br>~ 代表家目录<br>/linux 代表当前所在目录<br>$ 代表是普通用户（sudo su 切换到管理员，输入当前用户的密码）</p>
+<h1 id="代表管理员用户"><a href="# 代表管理员用户" class="headerlink" title="代表管理员用户"></a>代表管理员用户 </h1><h4 id="2- 目录相关"><a href="#2- 目录相关" class="headerlink" title="2. 目录相关"></a>2. 目录相关</h4><h5 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h5><p>-a 查看全部文件，包含文件名前带 “.” 的隐藏文件<br>-l 查看文件的详细信息<br>-R 递归查看子目录的文件信息<br>-lrt 文件按照修改时间排序<br> 通配符 <br> 任意多字符：*<br>任意一个字符：？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls *.c</span><br></pre></td></tr></table></figure></p>
+<h5 id="cd（change-dir- 更改目录）"><a href="#cd（change-dir- 更改目录）" class="headerlink" title="cd（change dir 更改目录）"></a>cd（change dir 更改目录）</h5><p>回到家目录的方式：<br>cd /home/user<br>cd ~<br>cd<br>cd $HOME（$HOME 是环境变量）<br>回到上一次所在的目录：cd -</p>
+<h5 id="pwd- 打印当前工作目录"><a href="#pwd- 打印当前工作目录" class="headerlink" title="pwd 打印当前工作目录"></a>pwd 打印当前工作目录</h5><h5 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h5><p>mkdir dir1 [dir2]<br>mkdir -p dir1/dir2 递归创建目录</p>
+<h5 id="tree-dir- 树状显示目录"><a href="#tree-dir- 树状显示目录" class="headerlink" title="tree [dir] 树状显示目录"></a>tree [dir] 树状显示目录</h5><p>sudo apt-get install tree</p>
+<h5 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h5><p>删除的目录必须为空目录 <br>rm dir<br> 空目录定义：只包含 “.” 和 “..” 的目录<br>rmdir -rf dir 如果 dir2 删除后，dir1 为空，那么会递归删除<br>-r 向下递归，一并删除<br>-f 强行删除，不做提示</p>
+<h5 id="which- 查看命令所在的目录"><a href="#which- 查看命令所在的目录" class="headerlink" title="which 查看命令所在的目录"></a>which 查看命令所在的目录</h5><p>which ls 查看 ls 命令所在的目录<br>（cd 命令是 bash 自身带的命令，所以不在任何一个目录下）</p>
+<h4 id="3- 文件相关"><a href="#3- 文件相关" class="headerlink" title="3. 文件相关"></a>3. 文件相关 </h4><h5 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h5><p>touch file 创建文件，如果文件存在则更新文件最后访问时间<br> 可以用 ls -lrt 看文件的访问时间</p>
+<h5 id="rm-1"><a href="#rm-1" class="headerlink" title="rm"></a>rm</h5><p>rm filename<br>rm -r dir 递归删除子目录<br>rm -rf * 删除当前目录的全部文件和目录</p>
+<h5 id="cp- 拷贝文件或是目录"><a href="#cp- 拷贝文件或是目录" class="headerlink" title="cp 拷贝文件或是目录"></a>cp 拷贝文件或是目录 </h5><p>cp src des<br> 如果 des 最后一级的内容是目录，那么则将 src 拷贝到该目录下 <br> 如果 des 最后一级的内容不是目录…/aa/xxx，在 des 上级目录 /aa 下创建一个文件 xxx，并将 src 的内容拷贝过来<br>cp -r src des 将 src 这个目录拷贝到 des 目录下</p>
+<h5 id="mv- 移动文件或是目录"><a href="#mv- 移动文件或是目录" class="headerlink" title="mv 移动文件或是目录"></a>mv 移动文件或是目录</h5><p>mv src des 重命名文件或者目录<br>mv src des 移动文件或目录到其他目录（des 是一个路径）<br>mv src des 移动并改名（des 是其他路径下的文件名）</p>
+<h4 id="4- 文件内容"><a href="#4- 文件内容" class="headerlink" title="4. 文件内容"></a>4. 文件内容 </h4><h5 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h5><p>cat file 将文件内容显示到终端<br> 如果无文件，则读入标准输入，遇到回车显示</p>
+<h5 id="more"><a href="#more" class="headerlink" title="more"></a>more</h5><p>more file 分屏查看文件，空格显示下一屏，回车显示下一行内容</p>
+<h5 id="less"><a href="#less" class="headerlink" title="less"></a>less</h5><p>less file 分屏显示，可以用方向键控制上下翻</p>
+<h5 id="head"><a href="#head" class="headerlink" title="head"></a>head</h5><p>head -n file 显示文件前 n 行，如果不加 - n 则默认显示前 10 行</p>
+<h5 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h5><p>tail -n file 显示文件末尾 n 行，如果不加 - n 则默认显示末尾 10 行<br>tail -f file 查看文件尾部内容，不退出，用于追踪日志</p>
+<h4 id="5- 统计信息"><a href="#5- 统计信息" class="headerlink" title="5. 统计信息"></a>5. 统计信息</h4><h5 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h5><p>tree file 树形显示目录结构</p>
+<h5 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h5><p>wc * 统计整个目录<br>wc -l 显示行数<br>wc -w 显示单词数<br>wc -c 显示字节数</p>
+<h5 id="du"><a href="#du" class="headerlink" title="du"></a>du</h5><h5 id="df"><a href="#df" class="headerlink" title="df"></a>df</h5><h3 id="四、修改用户权限、用户与用户组相关命令"><a href="# 四、修改用户权限、用户与用户组相关命令" class="headerlink" title="四、修改用户权限、用户与用户组相关命令"></a>四、修改用户权限、用户与用户组相关命令 </h3><h3 id="五、find- 命令参数进行文件查找"><a href="# 五、find- 命令参数进行文件查找" class="headerlink" title="五、find 命令参数进行文件查找"></a> 五、find 命令参数进行文件查找 </h3><h3 id="六、grep- 命令根据文件内容进行查找"><a href="# 六、grep- 命令根据文件内容进行查找" class="headerlink" title="六、grep 命令根据文件内容进行查找"></a> 六、grep 命令根据文件内容进行查找 </h3><h3 id="七、压缩工具完成文件目录的压缩和解压缩"><a href="# 七、压缩工具完成文件目录的压缩和解压缩" class="headerlink" title="七、压缩工具完成文件目录的压缩和解压缩"></a> 七、压缩工具完成文件目录的压缩和解压缩 </h3><h3 id="八、Ubuntu- 下的软件安装和卸载"><a href="# 八、Ubuntu- 下的软件安装和卸载" class="headerlink" title="八、Ubuntu 下的软件安装和卸载"></a> 八、Ubuntu 下的软件安装和卸载</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -979,95 +1086,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/11/13/machineLearning-neuralNetworks/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
-      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chris自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/11/11/machineLearning-logistic/" class="post-title-link" itemprop="url">机器学习算法 --（2）逻辑回归</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2020-11-11 16:59:25" itemprop="dateCreated datePublished" datetime="2020-11-11T16:59:25+08:00">2020-11-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 20:50:28" itemprop="dateModified" datetime="2021-04-13T20:50:28+08:00">2021-04-13</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-regression/">机器学习算法 —（1）线性回归和非线性回归</a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-logistic/">机器学习算法 —（2）逻辑回归</a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-neuralNetworks/">机器学习算法 —（3）神经网络</a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-KNN/">机器学习算法 —（4）KNN</a></p>
-<h3 id="一、预测函数"><a href="#一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数</h3><p>预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-logistic/photo1.jpg" alt></p>
-<h3 id="二、代价函数"><a href="#二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/11/machineLearning-logistic/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
