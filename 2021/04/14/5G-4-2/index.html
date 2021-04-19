@@ -24,17 +24,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="5G 系列文章 5G（一）5G 发展历程 5G（二）5G 应用场景 5G（三）5G 性能指标 5G（四）5G 网络架构 — 1. 核心网架构 5G（四）5G 网络架构 — 2. 接入网及网络部署 5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 5G（五）5G 关键技术 — 2.SDN 软件定义网络 5G（五）5G 关键技术 — 3.MEC 移动边缘计算 5G（五）5G 关键技术 — 4">
+<meta name="description" content="一、5G 接入网架构4G 网络的站点都是独立的，没有像 3G 中 RNC (Radio Network Controller) 的角色来进行控制。在 5G 中，基站的密度更大，干扰更大，更需要站点间的协调合作。5G 网络需要灵活部署，以配合不同的场景需求。自动化网络优化管理，通用硬件。4G 中的 BBU 变成了 CU 和 DU，RRU 变成了 AAUCU 可以采用通用硬件来实现，在上面采用 NFV">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5G（四）5G 网络架构 -- 2. 接入网及网络部署">
 <meta property="og:url" content="https://wangxchun.github.io/2021/04/14/5G-4-2/index.html">
-<meta property="og:site_name" content="Chris自强不息">
-<meta property="og:description" content="5G 系列文章 5G（一）5G 发展历程 5G（二）5G 应用场景 5G（三）5G 性能指标 5G（四）5G 网络架构 — 1. 核心网架构 5G（四）5G 网络架构 — 2. 接入网及网络部署 5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 5G（五）5G 关键技术 — 2.SDN 软件定义网络 5G（五）5G 关键技术 — 3.MEC 移动边缘计算 5G（五）5G 关键技术 — 4">
+<meta property="og:site_name" content="Oakley自强不息">
+<meta property="og:description" content="一、5G 接入网架构4G 网络的站点都是独立的，没有像 3G 中 RNC (Radio Network Controller) 的角色来进行控制。在 5G 中，基站的密度更大，干扰更大，更需要站点间的协调合作。5G 网络需要灵活部署，以配合不同的场景需求。自动化网络优化管理，通用硬件。4G 中的 BBU 变成了 CU 和 DU，RRU 变成了 AAUCU 可以采用通用硬件来实现，在上面采用 NFV">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/14/5G-4-2/photo1.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/14/5G-4-2/photo3.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/14/5G-4-2/photo2.jpg">
 <meta property="article:published_time" content="2021-04-14T06:49:23.000Z">
-<meta property="article:modified_time" content="2021-04-16T06:55:49.776Z">
-<meta property="article:author" content="Chris Wang">
+<meta property="article:modified_time" content="2021-04-18T01:26:55.474Z">
+<meta property="article:author" content="Oakley Wang">
+<meta property="article:tag" content="5G">
+<meta property="article:tag" content="接入网">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2021/04/14/5G-4-2/photo1.jpg">
 
 
 <link rel="canonical" href="https://wangxchun.github.io/2021/04/14/5G-4-2/">
@@ -49,7 +55,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>5G（四）5G 网络架构 -- 2. 接入网及网络部署 | Chris自强不息</title>
+<title>5G（四）5G 网络架构 -- 2. 接入网及网络部署 | Oakley自强不息</title>
   
 
 
@@ -110,7 +116,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Chris自强不息</h1>
+      <h1 class="site-title">Oakley自强不息</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
@@ -161,15 +167,15 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#5G-%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0"><span class="nav-text">5G 系列文章 </span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%815G-%20%E6%8E%A5%E5%85%A5%E7%BD%91%E6%9E%B6%E6%9E%84"><span class="nav-text">一、5G 接入网架构 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81"><span class="nav-text">二、</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5G-%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0"><span class="nav-text">5G 系列文章</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Chris Wang"
+    <img class="site-author-image" itemprop="image" alt="Oakley Wang"
       src="/img/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Chris Wang</p>
+  <p class="site-author-name" itemprop="name">Oakley Wang</p>
   <div class="site-description" itemprop="description">機器視覺 / 機器學習 / C++</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
@@ -177,7 +183,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">97</span>
+          <span class="site-state-item-count">96</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -190,7 +196,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">197</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -241,12 +247,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Chris Wang">
+      <meta itemprop="name" content="Oakley Wang">
       <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chris自强不息">
+      <meta itemprop="name" content="Oakley自强不息">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -268,7 +274,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-16 14:55:49" itemprop="dateModified" datetime="2021-04-16T14:55:49+08:00">2021-04-16</time>
+        <time title="修改時間：2021-04-18 09:26:55" itemprop="dateModified" datetime="2021-04-18T09:26:55+08:00">2021-04-18</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,8 +296,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <span id="more"></span>
-<h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章 </h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a></p>
+        <h3 id="一、5G- 接入网架构"><a href="# 一、5G- 接入网架构" class="headerlink" title="一、5G 接入网架构"></a>一、5G 接入网架构 </h3><p><img src="/2021/04/14/5G-4-2/photo1.jpg" alt><br>4G 网络的站点都是独立的，没有像 3G 中 RNC (Radio Network Controller) 的角色来进行控制。<br> 在 5G 中，基站的密度更大，干扰更大，更需要站点间的协调合作。<br>5G 网络需要灵活部署，以配合不同的场景需求。<br>自动化网络优化管理，通用硬件。<br><img src="/2021/04/14/5G-4-2/photo3.jpg" alt><br><img src="/2021/04/14/5G-4-2/photo2.jpg" alt><br>4G 中的 BBU 变成了 CU 和 DU，RRU 变成了 AAU<br>CU 可以采用通用硬件来实现，在上面采用 NFV 技术</p>
+<h3 id="二、"><a href="# 二、" class="headerlink" title="二、"></a>二、</h3><span id="more"></span>
+<h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章</h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充</a></p>
 
     </div>
 
@@ -300,6 +307,10 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/5G/" rel="tag"># 5G</a>
+              <a href="/tags/%E6%8E%A5%E5%85%A5%E7%BD%91/" rel="tag"># 接入网</a>
+          </div>
 
         
 
@@ -359,7 +370,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Chris Wang</span>
+  <span class="author" itemprop="copyrightHolder">Oakley Wang</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
   </div>
