@@ -426,7 +426,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-23 09:40:57" itemprop="dateModified" datetime="2021-04-23T09:40:57+08:00">2021-04-23</time>
+        <time title="修改時間：2021-04-23 15:23:25" itemprop="dateModified" datetime="2021-04-23T15:23:25+08:00">2021-04-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -448,7 +448,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="一、TCP-客户端编程"><a href="#一、TCP-客户端编程" class="headerlink" title="一、TCP 客户端编程"></a>一、TCP 客户端编程</h3>
+          <h3 id="回顾：socket-tcp-server-实现"><a href="#回顾：socket-tcp-server-实现" class="headerlink" title="回顾：socket tcp server 实现"></a>回顾：socket tcp server 实现</h3><h4 id="1-创建套接字"><a href="#1-创建套接字" class="headerlink" title="1. 创建套接字"></a>1. 创建套接字</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> lfd = <span class="built_in">socket</span> ();</span><br></pre></td></tr></table></figure>
+<h4 id="2-绑定本地-IP-和端口"><a href="#2-绑定本地-IP-和端口" class="headerlink" title="2. 绑定本地 IP 和端口"></a>2. 绑定本地 IP 和端口</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv</span>;</span></span><br><span class="line">serv.port = <span class="built_in">htons</span> (port);</span><br><span class="line">serv.IP = <span class="built_in">htonl</span> (INADDR_ANY);</span><br><span class="line"><span class="built_in">bind</span> (lfd. &amp;serv, <span class="built_in"><span class="keyword">sizeof</span></span> (serv));</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/16/C++%20advance6.2/#more" rel="contents">
