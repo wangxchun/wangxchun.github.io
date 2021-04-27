@@ -24,21 +24,27 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="通信原理 —（1）绪论通信原理 —（2）信道通信原理 —（3）模拟调制技术通信原理 —（4）模拟信号数字化通信原理 —（5）数字基带传输通信原理 —（6）数字频带传输通信原理 —（7）最佳接收通信原理 —（8）同步 一、调制的概念和幅度调制">
+<meta name="description" content="通信原理 —（1）绪论通信原理 —（2）信道通信原理 —（3）模拟调制技术通信原理 —（4）模拟信号数字化通信原理 —（5）数字基带传输通信原理 —（6）数字频带传输通信原理 —（7）最佳接收通信原理 —（8）同步 一、调制的概念和幅度调制1. 调制的概念Q：为什么调制之后，扩展信号带宽，可以提高系统抗干扰能力、抗衰弱能力思路 1：根据香浓公式，传输带宽和信噪比之间可以互换。 2. 幅度调制基本原">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通信原理 --（3）模拟调制技术">
 <meta property="og:url" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/index.html">
-<meta property="og:site_name" content="Oakley自强不息">
-<meta property="og:description" content="通信原理 —（1）绪论通信原理 —（2）信道通信原理 —（3）模拟调制技术通信原理 —（4）模拟信号数字化通信原理 —（5）数字基带传输通信原理 —（6）数字频带传输通信原理 —（7）最佳接收通信原理 —（8）同步 一、调制的概念和幅度调制">
+<meta property="og:site_name" content="Oilver自强不息">
+<meta property="og:description" content="通信原理 —（1）绪论通信原理 —（2）信道通信原理 —（3）模拟调制技术通信原理 —（4）模拟信号数字化通信原理 —（5）数字基带传输通信原理 —（6）数字频带传输通信原理 —（7）最佳接收通信原理 —（8）同步 一、调制的概念和幅度调制1. 调制的概念Q：为什么调制之后，扩展信号带宽，可以提高系统抗干扰能力、抗衰弱能力思路 1：根据香浓公式，传输带宽和信噪比之间可以互换。 2. 幅度调制基本原">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/photo1.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/photo2.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/photo3.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/photo4.png">
+<meta property="og:image" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/photo5.png">
 <meta property="article:published_time" content="2020-09-17T01:05:38.000Z">
-<meta property="article:modified_time" content="2021-04-17T01:29:36.271Z">
-<meta property="article:author" content="Oakley Wang">
+<meta property="article:modified_time" content="2021-04-27T09:50:57.251Z">
+<meta property="article:author" content="Oilver Wang">
 <meta property="article:tag" content="通信原理">
 <meta property="article:tag" content="模拟调制技术">
 <meta property="article:tag" content="抗噪声性能">
 <meta property="article:tag" content="频分复用">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/photo1.jpg">
 
 
 <link rel="canonical" href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/">
@@ -53,7 +59,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>通信原理 --（3）模拟调制技术 | Oakley自强不息</title>
+<title>通信原理 --（3）模拟调制技术 | Oilver自强不息</title>
   
 
 
@@ -114,7 +120,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Oakley自强不息</h1>
+      <h1 class="site-title">Oilver自强不息</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
@@ -165,15 +171,15 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%B0%83%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="nav-text">一、调制的概念和幅度调制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text">二、幅度调制系统的抗噪声性能 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%A8%A1%E6%8B%9F%E8%A7%92%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="nav-text"> 三、模拟角度调制 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%B0%83%E9%A2%91%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text"> 四、调频系统的抗噪声性能 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%A2%91%E5%88%86%E5%A4%8D%E7%94%A8%E5%92%8C%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text"> 五、频分复用和模拟调制技术的应用</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%B0%83%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="nav-text">一、调制的概念和幅度调制 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E8%B0%83%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">1. 调制的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-text">2. 幅度调制基本原理 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%9A%84%E6%97%B6%E5%9F%9F%E5%92%8C%E9%A2%91%E5%9F%9F"><span class="nav-text">(1) 幅度调制的时域和频域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%9A%84%E4%B8%80%E8%88%AC%E6%A8%A1%E5%9E%8B"><span class="nav-text">(2) 幅度调制的一般模型 </span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%20-AM"><span class="nav-text">3. 幅度调制 AM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E5%8F%8C%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-DSB"><span class="nav-text">4. 双边带调制 DSB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E5%8D%95%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-SSB"><span class="nav-text">5. 单边带调制 SSB</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E6%BB%A4%E6%B3%A2%E6%B3%95%E4%BA%A7%E7%94%9F%20-SSB-%20%E4%BF%A1%E5%8F%B7"><span class="nav-text">(1) 滤波法产生 SSB 信号 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E7%9B%B8%E7%A7%BB%E6%B3%95%E4%BA%A7%E7%94%9F%20-SSB-%20%E4%BF%A1%E5%8F%B7"><span class="nav-text">(2) 相移法产生 SSB 信号</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%20%E6%AE%8B%E7%95%99%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-VSB"><span class="nav-text">6. 残留边带调制 VSB</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text">二、幅度调制系统的抗噪声性能 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%A8%A1%E6%8B%9F%E8%A7%92%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="nav-text"> 三、模拟角度调制 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%B0%83%E9%A2%91%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text"> 四、调频系统的抗噪声性能 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%A2%91%E5%88%86%E5%A4%8D%E7%94%A8%E5%92%8C%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text"> 五、频分复用和模拟调制技术的应用</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Oakley Wang"
+    <img class="site-author-image" itemprop="image" alt="Oilver Wang"
       src="/img/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Oakley Wang</p>
+  <p class="site-author-name" itemprop="name">Oilver Wang</p>
   <div class="site-description" itemprop="description">機器視覺 / 機器學習 / C++</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
@@ -181,7 +187,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-count">103</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -245,12 +251,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Oakley Wang">
+      <meta itemprop="name" content="Oilver Wang">
       <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Oakley自强不息">
+      <meta itemprop="name" content="Oilver自强不息">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -272,7 +278,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-17 09:29:36" itemprop="dateModified" datetime="2021-04-17T09:29:36+08:00">2021-04-17</time>
+        <time title="修改時間：2021-04-27 17:50:57" itemprop="dateModified" datetime="2021-04-27T17:50:57+08:00">2021-04-27</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -295,7 +301,15 @@
     
     <div class="post-body" itemprop="articleBody">
         <p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、调制的概念和幅度调制"><a href="# 一、调制的概念和幅度调制" class="headerlink" title="一、调制的概念和幅度调制"></a>一、调制的概念和幅度调制</h3><span id="more"></span>
+<h3 id="一、调制的概念和幅度调制"><a href="# 一、调制的概念和幅度调制" class="headerlink" title="一、调制的概念和幅度调制"></a>一、调制的概念和幅度调制 </h3><h4 id="1- 调制的概念"><a href="#1- 调制的概念" class="headerlink" title="1. 调制的概念"></a>1. 调制的概念</h4><p>Q：为什么调制之后，扩展信号带宽，可以提高系统抗干扰能力、抗衰弱能力<br> 思路 1：根据香浓公式，传输带宽和信噪比之间可以互换。</p>
+<h4 id="2- 幅度调制基本原理"><a href="#2- 幅度调制基本原理" class="headerlink" title="2. 幅度调制基本原理"></a>2. 幅度调制基本原理 </h4><h5 id="1- 幅度调制的时域和频域"><a href="#1- 幅度调制的时域和频域" class="headerlink" title="(1) 幅度调制的时域和频域"></a>(1) 幅度调制的时域和频域</h5><p> 时域：$s_m (t) = Am (t) cos (\omega_c t + \varphi_0)$<br>频域：$\displaystyle S_m (\omega) = {A \over 2}[M (\omega+\omega_c) + M (\omega-\omega_c)]$<span id="more"></span></p>
+<h5 id="2- 幅度调制的一般模型"><a href="#2- 幅度调制的一般模型" class="headerlink" title="(2) 幅度调制的一般模型"></a>(2) 幅度调制的一般模型 </h5><p>(a) 滤波法<br><img src="/2020/09/17/communicationSystem-analogModulation/photo1.jpg" alt="滤波法"><br> 不同滤波器的设计，完成不同形式的幅度调制 (AM、DSB…)<br>(b) 相移法 <br><img src="/2020/09/17/communicationSystem-analogModulation/photo2.jpg" alt="相移法"><br> 已调信号的频谱完全是基带信号频谱在频域内的简单搬移，由于这种搬移是线性的，因此幅度调制又称为线性调制。这里的 “线性” 并不意味着已调信号和调制信号之间符合线性变换关系。</p>
+<h4 id="3- 幅度调制 -AM"><a href="#3- 幅度调制 -AM" class="headerlink" title="3. 幅度调制 AM"></a>3. 幅度调制 AM</h4><p>时域：$s_{AM}(t) = [A_0 + m (t)] cos \omega_c t + m (t) cos \omega_c t$<br>频谱：$S_{AM}(\omega) = \pi A_0 [\delta (\omega + \omega_c) + \delta (\omega - \omega_c)] + {1 \over 2}[M (\omega + \omega_c) + M (\omega - \omega_c)]$<br>功率 $\displaystyle P_{AM} = {A_0^2 \over 2} + {\overline {m^2 (t)} \over 2} = P_c + P_s = $ 载波功率 $+$ 边带功率 <br> 调制效率 $\displaystyle \eta_{AM} = {P_s \over P_{AM}} = \frac {\frac {\overline {m^2 (t)}}{2}} {A_0^2 + \overline {m^2 (t)}} $</p>
+<h4 id="4- 双边带调制 -DSB"><a href="#4- 双边带调制 -DSB" class="headerlink" title="4. 双边带调制 DSB"></a>4. 双边带调制 DSB</h4><p>优点：调制效率 100%，节省了载波功率 <br> 缺点：不能用包络检波，需采用相干解调，较复杂</p>
+<h4 id="5- 单边带调制 -SSB"><a href="#5- 单边带调制 -SSB" class="headerlink" title="5. 单边带调制 SSB"></a>5. 单边带调制 SSB</h4><h5 id="1- 滤波法产生 -SSB- 信号"><a href="#1- 滤波法产生 -SSB- 信号" class="headerlink" title="(1) 滤波法产生 SSB 信号"></a>(1) 滤波法产生 SSB 信号 </h5><p> 滤波特性很难做到具有陡峭的截止特性 <br> 可以采用多级 (一般采用两级) DSB 调制及边带滤波</p>
+<h5 id="2- 相移法产生 -SSB- 信号"><a href="#2- 相移法产生 -SSB- 信号" class="headerlink" title="(2) 相移法产生 SSB 信号"></a>(2) 相移法产生 SSB 信号</h5><p><img src="/2020/09/17/communicationSystem-analogModulation/photo3.jpg" alt="SSB 相移法"></p>
+<p>优点：不需要滤波器具有陡峭的截止特性 <br> 缺点：宽带相移网络难用硬件实现</p>
+<h4 id="6- 残留边带调制 -VSB"><a href="#6- 残留边带调制 -VSB" class="headerlink" title="6. 残留边带调制 VSB"></a>6. 残留边带调制 VSB</h4><p><img src="/2020/09/17/communicationSystem-analogModulation/photo4.png" alt><br><img src="/2020/09/17/communicationSystem-analogModulation/photo5.png" alt><br>$S_d (\omega) = \displaystyle {1 \over 4} M (\omega)[H_{VSB}(\omega + \omega_c) + H_{VSB}(\omega - \omega_c)]$<br>为保证相干解调的输出无失真的恢复调制信号 $m (t)$，要求：<br>$[H_{VSB}(\omega + \omega_c) + H_{VSB}(\omega - \omega_c) = constant$，$|\omega| \leq \omega_H$</p>
 <h3 id="二、幅度调制系统的抗噪声性能"><a href="# 二、幅度调制系统的抗噪声性能" class="headerlink" title="二、幅度调制系统的抗噪声性能"></a>二、幅度调制系统的抗噪声性能 </h3><h3 id="三、模拟角度调制"><a href="# 三、模拟角度调制" class="headerlink" title="三、模拟角度调制"></a> 三、模拟角度调制 </h3><h3 id="四、调频系统的抗噪声性能"><a href="# 四、调频系统的抗噪声性能" class="headerlink" title="四、调频系统的抗噪声性能"></a> 四、调频系统的抗噪声性能 </h3><h3 id="五、频分复用和模拟调制技术的应用"><a href="# 五、频分复用和模拟调制技术的应用" class="headerlink" title="五、频分复用和模拟调制技术的应用"></a> 五、频分复用和模拟调制技术的应用</h3>
     </div>
 
@@ -369,7 +383,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Oakley Wang</span>
+  <span class="author" itemprop="copyrightHolder">Oilver Wang</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
   </div>

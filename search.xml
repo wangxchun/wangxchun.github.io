@@ -137,31 +137,6 @@
       </tags>
   </entry>
   <entry>
-    <title>5G（五）5G 关键技术 -- 3.MEC 移动边缘计算</title>
-    <url>/2021/04/16/5G-5-3/</url>
-    <content><![CDATA[<h3 id="一、从京东物流说起"><a href="# 一、从京东物流说起" class="headerlink" title="一、从京东物流说起"></a>一、从京东物流说起 </h3><p><img src="/2021/04/16/5G-5-3/photo1.jpg" alt><br><span id="more"></span><br> 在离用户比较近的地方设置分服务器 <br> 那和代理服务器 proxy 的区别是？</p>
-<h3 id="二、MEC- 概念"><a href="# 二、MEC- 概念" class="headerlink" title="二、MEC 概念"></a>二、MEC 概念 </h3><p><img src="/2021/04/16/5G-5-3/photo.jpg" alt><br>Mobile Edge Computing 移动边缘计算 / Multi-access Edge Computing 多点边缘计算<br> 在 5G 时代，数据吞吐量、用户密度、时延等指标要求非常高，云计算方式无法满足这些需求，需要引入边缘计算 <br> 网络边缘 = 靠近用户的位置<br><img src="/2021/04/16/5G-5-3/photo2.jpg" alt="MEC 实现方式"></p>
-<p><center>MEC 实现方式 </center><br>5G 核心网用户面和控制面是分离的，所以 UPF 才可以提取出来放在边缘</p>
-<h3 id="三、MEC- 架构"><a href="# 三、MEC- 架构" class="headerlink" title="三、MEC 架构"></a>三、MEC 架构 </h3><p><img src="/2021/04/16/5G-5-3/photo3.jpg" alt="MEC 架构"><br> 左边是 5G 核心网，右边是 MEC 架构（位于核心网和接入网之间，基于 NFV）<br>提供本地就近路由的分流，支持第三方应用的边缘应用环境<br>MEC 应用可以通过 MEP (MEC Platform) 发现服务成为消费者，自身也可以注册 MEC 服务的提供者<br>MEC System：提供业务编排，MEC 节点主机调用</p>
-<h3 id="四、MEC- 部署方式"><a href="# 四、MEC- 部署方式" class="headerlink" title="四、MEC 部署方式"></a>四、MEC 部署方式 </h3><p><img src="/2021/04/16/5G-5-3/photo4.jpg" alt="MEC 部署方式"><br>5G 透过 UPF 在网络边缘灵活部署达成分流，UPF 是由核心网的控制面统一管理<br> 不同行业对边缘计算部署的位置要求不一样 <br> 区县级的：类似边缘云，可以给第三方提供边缘计算的服务 <br> 现场级的：一般是部署在运营商网络的接入点，和用户非常靠近</p>
-<h3 id="五、MEC- 应用场景"><a href="# 五、MEC- 应用场景" class="headerlink" title="五、MEC 应用场景"></a>五、MEC 应用场景 </h3><h4 id="1- 本地分流（最普遍的应用场景）"><a href="#1- 本地分流（最普遍的应用场景）" class="headerlink" title="1. 本地分流（最普遍的应用场景）"></a>1. 本地分流（最普遍的应用场景）</h4><h5 id="（1）企业园区：本地产生，本地终结，低时延高带宽，专用 -LTE- 无线网络"><a href="#（1）企业园区：本地产生，本地终结，低时延高带宽，专用 -LTE- 无线网络" class="headerlink" title="（1）企业园区：本地产生，本地终结，低时延高带宽，专用 LTE 无线网络"></a>（1）企业园区：本地产生，本地终结，低时延高带宽，专用 LTE 无线网络</h5><h5 id="（2）校园：访问的内同相似性大，可以和第三方合作，例如行业咨询方案"><a href="#（2）校园：访问的内同相似性大，可以和第三方合作，例如行业咨询方案" class="headerlink" title="（2）校园：访问的内同相似性大，可以和第三方合作，例如行业咨询方案"></a>（2）校园：访问的内同相似性大，可以和第三方合作，例如行业咨询方案</h5><h5 id="（3）本地视频监控：会产生大量本地的回传流量，大部分的画面都是没有价值的"><a href="#（3）本地视频监控：会产生大量本地的回传流量，大部分的画面都是没有价值的" class="headerlink" title="（3）本地视频监控：会产生大量本地的回传流量，大部分的画面都是没有价值的"></a>（3）本地视频监控：会产生大量本地的回传流量，大部分的画面都是没有价值的</h5><p> 没有价值的画面保存在本地 MEC，有价值的才回传到服务器</p>
-<h5 id="（4）VR-AR：博物馆、体育赛事，视频的流量大"><a href="#（4）VR-AR：博物馆、体育赛事，视频的流量大" class="headerlink" title="（4）VR/AR：博物馆、体育赛事，视频的流量大"></a>（4）VR/AR：博物馆、体育赛事，视频的流量大 </h5><h5 id="（5）本地视频直播：运营商可以提供一个 -MEC- 开放平台，提供视频直播应用，进行收入共享"><a href="#（5）本地视频直播：运营商可以提供一个 -MEC- 开放平台，提供视频直播应用，进行收入共享" class="headerlink" title="（5）本地视频直播：运营商可以提供一个 MEC 开放平台，提供视频直播应用，进行收入共享"></a>（5）本地视频直播：运营商可以提供一个 MEC 开放平台，提供视频直播应用，进行收入共享</h5><h5 id="（6）边缘 -CDN：针对移动用户"><a href="#（6）边缘 -CDN：针对移动用户" class="headerlink" title="（6）边缘 CDN：针对移动用户"></a>（6）边缘 CDN：针对移动用户</h5><h4 id="2- 数据服务（基于 -MEC- 开放接口，第三方可以利用底层信息，提供精准的营销服务）"><a href="#2- 数据服务（基于 -MEC- 开放接口，第三方可以利用底层信息，提供精准的营销服务）" class="headerlink" title="2. 数据服务（基于 MEC 开放接口，第三方可以利用底层信息，提供精准的营销服务）"></a>2. 数据服务（基于 MEC 开放接口，第三方可以利用底层信息，提供精准的营销服务）</h4><h5 id="（1）室内定位：根据用户实时的位置，提供定制化的广告，或是互动式的服务"><a href="#（1）室内定位：根据用户实时的位置，提供定制化的广告，或是互动式的服务" class="headerlink" title="（1）室内定位：根据用户实时的位置，提供定制化的广告，或是互动式的服务"></a>（1）室内定位：根据用户实时的位置，提供定制化的广告，或是互动式的服务</h5><h5 id="（2）车联网：实现自动驾驶，网络处理节点要离车辆很近"><a href="#（2）车联网：实现自动驾驶，网络处理节点要离车辆很近" class="headerlink" title="（2）车联网：实现自动驾驶，网络处理节点要离车辆很近"></a>（2）车联网：实现自动驾驶，网络处理节点要离车辆很近</h5><h4 id="3- 业务优化"><a href="#3- 业务优化" class="headerlink" title="3. 业务优化"></a>3. 业务优化</h4><h5 id="（1）视频 -QoS- 优化：不同用户需要的质量可能不一样"><a href="#（1）视频 -QoS- 优化：不同用户需要的质量可能不一样" class="headerlink" title="（1）视频 QoS 优化：不同用户需要的质量可能不一样"></a>（1）视频 QoS 优化：不同用户需要的质量可能不一样</h5><h5 id="（2）视频直播和游戏加速"><a href="#（2）视频直播和游戏加速" class="headerlink" title="（2）视频直播和游戏加速"></a>（2）视频直播和游戏加速</h5><h3 id="四、MEC- 实例"><a href="# 四、MEC- 实例" class="headerlink" title="四、MEC 实例"></a> 四、MEC 实例 </h3><h4 id="VR- 直播"><a href="#VR- 直播" class="headerlink" title="VR 直播"></a>VR 直播</h4><p><img src="/2021/04/16/5G-5-3/photo5.jpg" alt="VR 直播"><br> 透过本地 MEC 直接处理，不需要发给 Internet 处理</p>
-<h4 id="港口视频键控"><a href="# 港口视频键控" class="headerlink" title="港口视频键控"></a>港口视频键控</h4><p><img src="/2021/04/16/5G-5-3/photo6.jpg" alt="港口视频键控"></p>
-<h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章</h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充</a></p>
-]]></content>
-      <categories>
-        <category>5G</category>
-      </categories>
-      <tags>
-        <tag>5G</tag>
-        <tag>MEC</tag>
-        <tag>边缘计算</tag>
-        <tag>室内定位</tag>
-        <tag>车联网</tag>
-        <tag>VR/AR</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5G（五）5G 关键技术 -- 2.SDN 软件定义网络</title>
     <url>/2021/04/15/5G-5-2/</url>
     <content><![CDATA[<h3 id="一、从真人足球比赛和足球电子游戏说起"><a href="# 一、从真人足球比赛和足球电子游戏说起" class="headerlink" title="一、从真人足球比赛和足球电子游戏说起"></a>一、从真人足球比赛和足球电子游戏说起 </h3><h4 id="真人足球比赛"><a href="# 真人足球比赛" class="headerlink" title="真人足球比赛"></a> 真人足球比赛 </h4><p> 赛前教练布置战术 <br> 赛中球员自行发挥 <br> 教练需改变战术策略只能依靠中场休息时间 <br><span id="more"></span><br> 替补球员上场前需进行热身</p>
@@ -195,17 +170,28 @@
       </tags>
   </entry>
   <entry>
-    <title>5G（五）5G 关键技术 -- 5.mmWave 毫米波</title>
-    <url>/2021/04/16/5G-5-5/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章 </h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充 </a></p>
+    <title>5G（五）5G 关键技术 -- 3.MEC 移动边缘计算</title>
+    <url>/2021/04/16/5G-5-3/</url>
+    <content><![CDATA[<h3 id="一、从京东物流说起"><a href="# 一、从京东物流说起" class="headerlink" title="一、从京东物流说起"></a>一、从京东物流说起 </h3><p><img src="/2021/04/16/5G-5-3/photo1.jpg" alt><br><span id="more"></span><br> 在离用户比较近的地方设置分服务器 <br> 那和代理服务器 proxy 的区别是？</p>
+<h3 id="二、MEC- 概念"><a href="# 二、MEC- 概念" class="headerlink" title="二、MEC 概念"></a>二、MEC 概念 </h3><p><img src="/2021/04/16/5G-5-3/photo.jpg" alt><br>Mobile Edge Computing 移动边缘计算 / Multi-access Edge Computing 多点边缘计算<br> 在 5G 时代，数据吞吐量、用户密度、时延等指标要求非常高，云计算方式无法满足这些需求，需要引入边缘计算 <br> 网络边缘 = 靠近用户的位置<br><img src="/2021/04/16/5G-5-3/photo2.jpg" alt="MEC 实现方式"></p>
+<p><center>MEC 实现方式 </center><br>5G 核心网用户面和控制面是分离的，所以 UPF 才可以提取出来放在边缘</p>
+<h3 id="三、MEC- 架构"><a href="# 三、MEC- 架构" class="headerlink" title="三、MEC 架构"></a>三、MEC 架构 </h3><p><img src="/2021/04/16/5G-5-3/photo3.jpg" alt="MEC 架构"><br> 左边是 5G 核心网，右边是 MEC 架构（位于核心网和接入网之间，基于 NFV）<br>提供本地就近路由的分流，支持第三方应用的边缘应用环境<br>MEC 应用可以通过 MEP (MEC Platform) 发现服务成为消费者，自身也可以注册 MEC 服务的提供者<br>MEC System：提供业务编排，MEC 节点主机调用</p>
+<h3 id="四、MEC- 部署方式"><a href="# 四、MEC- 部署方式" class="headerlink" title="四、MEC 部署方式"></a>四、MEC 部署方式 </h3><p><img src="/2021/04/16/5G-5-3/photo4.jpg" alt="MEC 部署方式"><br>5G 透过 UPF 在网络边缘灵活部署达成分流，UPF 是由核心网的控制面统一管理<br> 不同行业对边缘计算部署的位置要求不一样 <br> 区县级的：类似边缘云，可以给第三方提供边缘计算的服务 <br> 现场级的：一般是部署在运营商网络的接入点，和用户非常靠近</p>
+<h3 id="五、MEC- 应用场景"><a href="# 五、MEC- 应用场景" class="headerlink" title="五、MEC 应用场景"></a>五、MEC 应用场景 </h3><h4 id="1- 本地分流（最普遍的应用场景）"><a href="#1- 本地分流（最普遍的应用场景）" class="headerlink" title="1. 本地分流（最普遍的应用场景）"></a>1. 本地分流（最普遍的应用场景）</h4><h5 id="（1）企业园区：本地产生，本地终结，低时延高带宽，专用 -LTE- 无线网络"><a href="#（1）企业园区：本地产生，本地终结，低时延高带宽，专用 -LTE- 无线网络" class="headerlink" title="（1）企业园区：本地产生，本地终结，低时延高带宽，专用 LTE 无线网络"></a>（1）企业园区：本地产生，本地终结，低时延高带宽，专用 LTE 无线网络</h5><h5 id="（2）校园：访问的内同相似性大，可以和第三方合作，例如行业咨询方案"><a href="#（2）校园：访问的内同相似性大，可以和第三方合作，例如行业咨询方案" class="headerlink" title="（2）校园：访问的内同相似性大，可以和第三方合作，例如行业咨询方案"></a>（2）校园：访问的内同相似性大，可以和第三方合作，例如行业咨询方案</h5><h5 id="（3）本地视频监控：会产生大量本地的回传流量，大部分的画面都是没有价值的"><a href="#（3）本地视频监控：会产生大量本地的回传流量，大部分的画面都是没有价值的" class="headerlink" title="（3）本地视频监控：会产生大量本地的回传流量，大部分的画面都是没有价值的"></a>（3）本地视频监控：会产生大量本地的回传流量，大部分的画面都是没有价值的</h5><p> 没有价值的画面保存在本地 MEC，有价值的才回传到服务器</p>
+<h5 id="（4）VR-AR：博物馆、体育赛事，视频的流量大"><a href="#（4）VR-AR：博物馆、体育赛事，视频的流量大" class="headerlink" title="（4）VR/AR：博物馆、体育赛事，视频的流量大"></a>（4）VR/AR：博物馆、体育赛事，视频的流量大 </h5><h5 id="（5）本地视频直播：运营商可以提供一个 -MEC- 开放平台，提供视频直播应用，进行收入共享"><a href="#（5）本地视频直播：运营商可以提供一个 -MEC- 开放平台，提供视频直播应用，进行收入共享" class="headerlink" title="（5）本地视频直播：运营商可以提供一个 MEC 开放平台，提供视频直播应用，进行收入共享"></a>（5）本地视频直播：运营商可以提供一个 MEC 开放平台，提供视频直播应用，进行收入共享</h5><h5 id="（6）边缘 -CDN：针对移动用户"><a href="#（6）边缘 -CDN：针对移动用户" class="headerlink" title="（6）边缘 CDN：针对移动用户"></a>（6）边缘 CDN：针对移动用户</h5><h4 id="2- 数据服务（基于 -MEC- 开放接口，第三方可以利用底层信息，提供精准的营销服务）"><a href="#2- 数据服务（基于 -MEC- 开放接口，第三方可以利用底层信息，提供精准的营销服务）" class="headerlink" title="2. 数据服务（基于 MEC 开放接口，第三方可以利用底层信息，提供精准的营销服务）"></a>2. 数据服务（基于 MEC 开放接口，第三方可以利用底层信息，提供精准的营销服务）</h4><h5 id="（1）室内定位：根据用户实时的位置，提供定制化的广告，或是互动式的服务"><a href="#（1）室内定位：根据用户实时的位置，提供定制化的广告，或是互动式的服务" class="headerlink" title="（1）室内定位：根据用户实时的位置，提供定制化的广告，或是互动式的服务"></a>（1）室内定位：根据用户实时的位置，提供定制化的广告，或是互动式的服务</h5><h5 id="（2）车联网：实现自动驾驶，网络处理节点要离车辆很近"><a href="#（2）车联网：实现自动驾驶，网络处理节点要离车辆很近" class="headerlink" title="（2）车联网：实现自动驾驶，网络处理节点要离车辆很近"></a>（2）车联网：实现自动驾驶，网络处理节点要离车辆很近</h5><h4 id="3- 业务优化"><a href="#3- 业务优化" class="headerlink" title="3. 业务优化"></a>3. 业务优化</h4><h5 id="（1）视频 -QoS- 优化：不同用户需要的质量可能不一样"><a href="#（1）视频 -QoS- 优化：不同用户需要的质量可能不一样" class="headerlink" title="（1）视频 QoS 优化：不同用户需要的质量可能不一样"></a>（1）视频 QoS 优化：不同用户需要的质量可能不一样</h5><h5 id="（2）视频直播和游戏加速"><a href="#（2）视频直播和游戏加速" class="headerlink" title="（2）视频直播和游戏加速"></a>（2）视频直播和游戏加速</h5><h3 id="四、MEC- 实例"><a href="# 四、MEC- 实例" class="headerlink" title="四、MEC 实例"></a> 四、MEC 实例 </h3><h4 id="VR- 直播"><a href="#VR- 直播" class="headerlink" title="VR 直播"></a>VR 直播</h4><p><img src="/2021/04/16/5G-5-3/photo5.jpg" alt="VR 直播"><br> 透过本地 MEC 直接处理，不需要发给 Internet 处理</p>
+<h4 id="港口视频键控"><a href="# 港口视频键控" class="headerlink" title="港口视频键控"></a>港口视频键控</h4><p><img src="/2021/04/16/5G-5-3/photo6.jpg" alt="港口视频键控"></p>
+<h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章</h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充</a></p>
 ]]></content>
       <categories>
         <category>5G</category>
       </categories>
       <tags>
         <tag>5G</tag>
-        <tag>毫米波</tag>
+        <tag>MEC</tag>
+        <tag>边缘计算</tag>
+        <tag>室内定位</tag>
+        <tag>车联网</tag>
+        <tag>VR/AR</tag>
       </tags>
   </entry>
   <entry>
@@ -222,6 +208,20 @@
         <tag>5G</tag>
         <tag>Network Slicing</tag>
         <tag>网络切片</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5G（五）5G 关键技术 -- 5.mmWave 毫米波</title>
+    <url>/2021/04/16/5G-5-5/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章 </h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充 </a></p>
+]]></content>
+      <categories>
+        <category>5G</category>
+      </categories>
+      <tags>
+        <tag>5G</tag>
+        <tag>毫米波</tag>
       </tags>
   </entry>
   <entry>
@@ -355,6 +355,23 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ advance（四）Linux 命令基础 --3.makefile 和 gdb 和 IO</title>
+    <url>/2021/04/16/C++%20advance4.3/</url>
+    <content><![CDATA[<h3 id="一、makefile"><a href="# 一、makefile" class="headerlink" title="一、makefile"></a>一、makefile</h3><h4 id="1-makefile- 的基本规则"><a href="#1-makefile- 的基本规则" class="headerlink" title="1.makefile 的基本规则"></a>1.makefile 的基本规则</h4><h4 id="2-makefile- 的工作原理"><a href="#2-makefile- 的工作原理" class="headerlink" title="2.makefile 的工作原理"></a>2.makefile 的工作原理</h4><h4 id="3-makefile- 中的变量"><a href="#3-makefile- 中的变量" class="headerlink" title="3.makefile 中的变量"></a>3.makefile 中的变量</h4><h4 id="4-makefile- 函数"><a href="#4-makefile- 函数" class="headerlink" title="4.makefile 函数"></a>4.makefile 函数</h4><h4 id="5-makefile- 的清理操作"><a href="#5-makefile- 的清理操作" class="headerlink" title="5.makefile 的清理操作"></a>5.makefile 的清理操作</h4><span id="more"></span>
+<h3 id="二、gdb- 调试"><a href="# 二、gdb- 调试" class="headerlink" title="二、gdb 调试"></a>二、gdb 调试 </h3><h4 id="1-gdb- 调试"><a href="#1-gdb- 调试" class="headerlink" title="1.gdb 调试"></a>1.gdb 调试</h4><h4 id="2- 生成调试信息"><a href="#2- 生成调试信息" class="headerlink" title="2. 生成调试信息"></a>2. 生成调试信息</h4><h4 id="3- 启动 -gdb"><a href="#3- 启动 -gdb" class="headerlink" title="3. 启动 gdb"></a>3. 启动 gdb</h4><h4 id="4- 显示源代码"><a href="#4- 显示源代码" class="headerlink" title="4. 显示源代码"></a>4. 显示源代码</h4><h4 id="5- 设置断点"><a href="#5- 设置断点" class="headerlink" title="5. 设置断点"></a>5. 设置断点</h4><h4 id="6- 调试代码"><a href="#6- 调试代码" class="headerlink" title="6. 调试代码"></a>6. 调试代码</h4><h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a> 三、</h3><p>操作文件操作符就相当于操作这个文件，就像 C++ 中的 fopen 返回一个 FILE 指针，操作这个指针就相当于操作这个</p>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览</h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>makefile</tag>
+        <tag>gdb</tag>
+        <tag>IO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ advance（四）Linux 命令基础 --4.stat 和 readdir 和 dup2</title>
     <url>/2021/04/16/C++%20advance4.4/</url>
     <content><![CDATA[<span id="more"></span>
@@ -414,23 +431,6 @@
       <tags>
         <tag>Linux</tag>
         <tag>进程控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ advance（四）Linux 命令基础 --3.makefile 和 gdb 和 IO</title>
-    <url>/2021/04/16/C++%20advance4.3/</url>
-    <content><![CDATA[<h3 id="一、makefile"><a href="# 一、makefile" class="headerlink" title="一、makefile"></a>一、makefile</h3><h4 id="1-makefile- 的基本规则"><a href="#1-makefile- 的基本规则" class="headerlink" title="1.makefile 的基本规则"></a>1.makefile 的基本规则</h4><h4 id="2-makefile- 的工作原理"><a href="#2-makefile- 的工作原理" class="headerlink" title="2.makefile 的工作原理"></a>2.makefile 的工作原理</h4><h4 id="3-makefile- 中的变量"><a href="#3-makefile- 中的变量" class="headerlink" title="3.makefile 中的变量"></a>3.makefile 中的变量</h4><h4 id="4-makefile- 函数"><a href="#4-makefile- 函数" class="headerlink" title="4.makefile 函数"></a>4.makefile 函数</h4><h4 id="5-makefile- 的清理操作"><a href="#5-makefile- 的清理操作" class="headerlink" title="5.makefile 的清理操作"></a>5.makefile 的清理操作</h4><span id="more"></span>
-<h3 id="二、gdb- 调试"><a href="# 二、gdb- 调试" class="headerlink" title="二、gdb 调试"></a>二、gdb 调试 </h3><h4 id="1-gdb- 调试"><a href="#1-gdb- 调试" class="headerlink" title="1.gdb 调试"></a>1.gdb 调试</h4><h4 id="2- 生成调试信息"><a href="#2- 生成调试信息" class="headerlink" title="2. 生成调试信息"></a>2. 生成调试信息</h4><h4 id="3- 启动 -gdb"><a href="#3- 启动 -gdb" class="headerlink" title="3. 启动 gdb"></a>3. 启动 gdb</h4><h4 id="4- 显示源代码"><a href="#4- 显示源代码" class="headerlink" title="4. 显示源代码"></a>4. 显示源代码</h4><h4 id="5- 设置断点"><a href="#5- 设置断点" class="headerlink" title="5. 设置断点"></a>5. 设置断点</h4><h4 id="6- 调试代码"><a href="#6- 调试代码" class="headerlink" title="6. 调试代码"></a>6. 调试代码</h4><h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a> 三、</h3><p>操作文件操作符就相当于操作这个文件，就像 C++ 中的 fopen 返回一个 FILE 指针，操作这个指针就相当于操作这个</p>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览</h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>makefile</tag>
-        <tag>gdb</tag>
-        <tag>IO</tag>
       </tags>
   </entry>
   <entry>
@@ -595,36 +595,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --6.libevent</title>
-    <url>/2021/04/16/C++%20advance6.6/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>libevent</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --4.epoll-udp</title>
-    <url>/2021/04/16/C++%20advance6.4/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>epoll udp</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ advance（六）Linux 高并发网络编程开发 --3.tcp 状态转换 - selcet-poll</title>
     <url>/2021/04/16/C++%20advance6.3/</url>
     <content><![CDATA[<span id="more"></span>
@@ -643,6 +613,21 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --4.epoll-udp</title>
+    <url>/2021/04/16/C++%20advance6.4/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>epoll udp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ advance（六）Linux 高并发网络编程开发 --5. 广播 - 组播 - 本地套接字</title>
     <url>/2021/04/16/C++%20advance6.5/</url>
     <content><![CDATA[<span id="more"></span>
@@ -658,6 +643,47 @@
         <tag>组播</tag>
         <tag>本地套接字</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --6.libevent</title>
+    <url>/2021/04/16/C++%20advance6.6/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>libevent</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --7.xml json</title>
+    <url>/2021/04/16/C++%20advance6.7/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>xml</tag>
+        <tag>json</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ advance7.1</title>
+    <url>/2021/04/16/C++%20advance7.1/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
   </entry>
   <entry>
     <title>C++ advance7.2</title>
@@ -680,32 +706,6 @@
       </categories>
   </entry>
   <entry>
-    <title>C++ advance7.1</title>
-    <url>/2021/04/16/C++%20advance7.1/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --7.xml json</title>
-    <url>/2021/04/16/C++%20advance6.7/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>xml</tag>
-        <tag>json</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>dev C++ error:Id returned 1 exit status</title>
     <url>/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/10/03/C++%20error%20Id%20returned%201%20exit%20status/">dev C++ error:Id returned 1 exit status</a><br><a href="https://wangxchun.github.io/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/">C++ error:no matching function for call to transform</a><br><a href="https://wangxchun.github.io/2018/10/29/C++%20error%20invalid-types-for-array-subscript/">C++ error: invalid types for array subscript</a></p>
@@ -721,6 +721,21 @@
         <tag>C++</tag>
         <tag>Dev C++</tag>
         <tag>Id returned 1 exit status</tag>
+        <tag>error</tag>
+        <tag>错误</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ error crosses initialization of...</title>
+    <url>/2021/04/27/C++%20error%20crosses-initialization-of/</url>
+    <content><![CDATA[<p>原因</p>
+<h4 id="1-switch- 的 -case- 中有定义变量"><a href="#1-switch- 的 -case- 中有定义变量" class="headerlink" title="1.switch 的 case 中有定义变量"></a>1.switch 的 case 中有定义变量 </h4><h4 id="2-goto- 跳过了变量的定义"><a href="#2-goto- 跳过了变量的定义" class="headerlink" title="2.goto 跳过了变量的定义"></a>2.goto 跳过了变量的定义</h4><p> 但后来我没有解决，因为 goto 是不被推荐使用的函数，所以我换了个方式写</p>
+]]></content>
+      <categories>
+        <category>C++ error</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
         <tag>error</tag>
         <tag>错误</tag>
       </tags>
@@ -791,6 +806,24 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ include</title>
+    <url>/2018/10/27/C++%20include/</url>
+    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
+<h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
+<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
+<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>include</tag>
+        <tag>预处理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ 运算符</title>
     <url>/2018/09/23/C++%20operator/</url>
     <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
@@ -820,24 +853,6 @@
         <tag>C++</tag>
         <tag>rand</tag>
         <tag>产生随机数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ include</title>
-    <url>/2018/10/27/C++%20include/</url>
-    <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
-<h5 id="3- 包含別的標頭檔案"><a href="#3- 包含別的標頭檔案" class="headerlink" title="(3) 包含別的標頭檔案"></a>(3) 包含別的標頭檔案 </h5><h5 id="4-inline- 函式定義"><a href="#4-inline- 函式定義" class="headerlink" title="(4) inline 函式定義"></a>(4) inline 函式定義</h5><h5 id="5- 函式宣告"><a href="#5- 函式宣告" class="headerlink" title="(5) 函式宣告"></a>(5) 函式宣告</h5><h5 id="6-struct-union-enum- 型別定義"><a href="#6-struct-union-enum- 型別定義" class="headerlink" title="(6) struct,union,enum 型別定義"></a>(6) struct,union,enum 型別定義</h5><h3 id="如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？"><a href="# 如何防止重複 -include？（更確切的表述為 -“重複 -include- 時如何防止重複定義 - 宣告？”）需要說出 -2- 種方案，並說明各自的優缺點？" class="headerlink" title="如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？"></a> 如何防止重複 #include？（更確切的表述為 “重複 #include 時如何防止重複定義 / 宣告？”）需要說出 2 種方案，並說明各自的優缺點？</h3><h4 id="1-pragma-once"><a href="#1-pragma-once" class="headerlink" title="(1) #pragma once"></a>(1) #pragma once</h4><p>優點：不會出現巨集名重複   缺點：某些老的編譯器不支援</p>
-<h4 id="2-ifndef-XXX"><a href="#2-ifndef-XXX" class="headerlink" title="(2) ifndef XXX"></a>(2) ifndef XXX</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> XXX</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>     優點：所以的編譯器都支援   缺點：出現巨集名重複</span></span><br></pre></td></tr></table></figure>
-<p>一般我們看到大多都是選擇方案二，我們只要避免巨集名重複就行了</p>
-<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>include</tag>
-        <tag>预处理</tag>
       </tags>
   </entry>
   <entry>
@@ -1000,21 +1015,6 @@
       </tags>
   </entry>
   <entry>
-    <title>讓 Dev C++ 支持 C++11</title>
-    <url>/2018/09/27/Dev%20C++11/</url>
-    <content><![CDATA[<p>在 DevC++ 中 <br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a &#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br> 會出現如下錯誤<br><img src="/2018/09/27/Dev%20C++11/wrong1.png" alt><br><span id="more"></span></p>
-<h3 id="解決方法"><a href="# 解決方法" class="headerlink" title="解決方法"></a>解決方法</h3><p>(1) 先在 dev 的 [工具] 里找到 [編譯選項]<br>(2) 勾選 [編譯時加入以下命令] 欄位並填入 - std=c++11</p>
-<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>Dev C++</tag>
-        <tag>C++ 11</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ 資料結構與算法 -- 一。線性表 --1. 線性表的存儲結構</title>
     <url>/2019/06/02/C++%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E7%AE%97%E6%B3%95-%E7%B7%9A%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AD%98%E5%84%B2%E7%B5%90%E6%A7%8B/</url>
     <content><![CDATA[<h3 id="一、順序表"><a href="# 一、順序表" class="headerlink" title="一、順序表"></a> 一、順序表 </h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1027,6 +1027,21 @@
       </categories>
       <tags>
         <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>讓 Dev C++ 支持 C++11</title>
+    <url>/2018/09/27/Dev%20C++11/</url>
+    <content><![CDATA[<p>在 DevC++ 中 <br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; a &#123;i/<span class="number">100</span>, i/<span class="number">10</span>%<span class="number">10</span>, i%<span class="number">10</span>&#125;;</span><br></pre></td></tr></table></figure><br> 會出現如下錯誤<br><img src="/2018/09/27/Dev%20C++11/wrong1.png" alt><br><span id="more"></span></p>
+<h3 id="解決方法"><a href="# 解決方法" class="headerlink" title="解決方法"></a>解決方法</h3><p>(1) 先在 dev 的 [工具] 里找到 [編譯選項]<br>(2) 勾選 [編譯時加入以下命令] 欄位並填入 - std=c++11</p>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
+      </categories>
+      <tags>
+        <tag>Dev C++</tag>
+        <tag>C++ 11</tag>
       </tags>
   </entry>
   <entry>
@@ -1148,6 +1163,20 @@
       </categories>
   </entry>
   <entry>
+    <title>数据结构与算法 --5. 排序</title>
+    <url>/2019/04/03/algorithm-sort/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>算法</tag>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构与算法 --2. 树</title>
     <url>/2019/03/23/algorithm-tree/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
@@ -1176,20 +1205,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法 --5. 排序</title>
-    <url>/2019/04/03/algorithm-sort/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-        <tag>算法</tag>
-        <tag>排序</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>通信原理 --（7）最佳接收</title>
     <url>/2020/10/15/communicationSystem-BestAccepted/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
@@ -1208,7 +1223,15 @@
     <title>通信原理 --（3）模拟调制技术</title>
     <url>/2020/09/17/communicationSystem-analogModulation/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、调制的概念和幅度调制"><a href="# 一、调制的概念和幅度调制" class="headerlink" title="一、调制的概念和幅度调制"></a>一、调制的概念和幅度调制</h3><span id="more"></span>
+<h3 id="一、调制的概念和幅度调制"><a href="# 一、调制的概念和幅度调制" class="headerlink" title="一、调制的概念和幅度调制"></a>一、调制的概念和幅度调制 </h3><h4 id="1- 调制的概念"><a href="#1- 调制的概念" class="headerlink" title="1. 调制的概念"></a>1. 调制的概念</h4><p>Q：为什么调制之后，扩展信号带宽，可以提高系统抗干扰能力、抗衰弱能力<br> 思路 1：根据香浓公式，传输带宽和信噪比之间可以互换。</p>
+<h4 id="2- 幅度调制基本原理"><a href="#2- 幅度调制基本原理" class="headerlink" title="2. 幅度调制基本原理"></a>2. 幅度调制基本原理 </h4><h5 id="1- 幅度调制的时域和频域"><a href="#1- 幅度调制的时域和频域" class="headerlink" title="(1) 幅度调制的时域和频域"></a>(1) 幅度调制的时域和频域</h5><p> 时域：$s_m (t) = Am (t) cos (\omega_c t + \varphi_0)$<br>频域：$\displaystyle S_m (\omega) = {A \over 2}[M (\omega+\omega_c) + M (\omega-\omega_c)]$<span id="more"></span></p>
+<h5 id="2- 幅度调制的一般模型"><a href="#2- 幅度调制的一般模型" class="headerlink" title="(2) 幅度调制的一般模型"></a>(2) 幅度调制的一般模型 </h5><p>(a) 滤波法<br><img src="/2020/09/17/communicationSystem-analogModulation/photo1.jpg" alt="滤波法"><br> 不同滤波器的设计，完成不同形式的幅度调制 (AM、DSB…)<br>(b) 相移法 <br><img src="/2020/09/17/communicationSystem-analogModulation/photo2.jpg" alt="相移法"><br> 已调信号的频谱完全是基带信号频谱在频域内的简单搬移，由于这种搬移是线性的，因此幅度调制又称为线性调制。这里的 “线性” 并不意味着已调信号和调制信号之间符合线性变换关系。</p>
+<h4 id="3- 幅度调制 -AM"><a href="#3- 幅度调制 -AM" class="headerlink" title="3. 幅度调制 AM"></a>3. 幅度调制 AM</h4><p>时域：$s_{AM}(t) = [A_0 + m (t)] cos \omega_c t + m (t) cos \omega_c t$<br>频谱：$S_{AM}(\omega) = \pi A_0 [\delta (\omega + \omega_c) + \delta (\omega - \omega_c)] + {1 \over 2}[M (\omega + \omega_c) + M (\omega - \omega_c)]$<br>功率 $\displaystyle P_{AM} = {A_0^2 \over 2} + {\overline {m^2 (t)} \over 2} = P_c + P_s = $ 载波功率 $+$ 边带功率 <br> 调制效率 $\displaystyle \eta_{AM} = {P_s \over P_{AM}} = \frac {\frac {\overline {m^2 (t)}}{2}} {A_0^2 + \overline {m^2 (t)}} $</p>
+<h4 id="4- 双边带调制 -DSB"><a href="#4- 双边带调制 -DSB" class="headerlink" title="4. 双边带调制 DSB"></a>4. 双边带调制 DSB</h4><p>优点：调制效率 100%，节省了载波功率 <br> 缺点：不能用包络检波，需采用相干解调，较复杂</p>
+<h4 id="5- 单边带调制 -SSB"><a href="#5- 单边带调制 -SSB" class="headerlink" title="5. 单边带调制 SSB"></a>5. 单边带调制 SSB</h4><h5 id="1- 滤波法产生 -SSB- 信号"><a href="#1- 滤波法产生 -SSB- 信号" class="headerlink" title="(1) 滤波法产生 SSB 信号"></a>(1) 滤波法产生 SSB 信号 </h5><p> 滤波特性很难做到具有陡峭的截止特性 <br> 可以采用多级 (一般采用两级) DSB 调制及边带滤波</p>
+<h5 id="2- 相移法产生 -SSB- 信号"><a href="#2- 相移法产生 -SSB- 信号" class="headerlink" title="(2) 相移法产生 SSB 信号"></a>(2) 相移法产生 SSB 信号</h5><p><img src="/2020/09/17/communicationSystem-analogModulation/photo3.jpg" alt="SSB 相移法"></p>
+<p>优点：不需要滤波器具有陡峭的截止特性 <br> 缺点：宽带相移网络难用硬件实现</p>
+<h4 id="6- 残留边带调制 -VSB"><a href="#6- 残留边带调制 -VSB" class="headerlink" title="6. 残留边带调制 VSB"></a>6. 残留边带调制 VSB</h4><p><img src="/2020/09/17/communicationSystem-analogModulation/photo4.png" alt><br><img src="/2020/09/17/communicationSystem-analogModulation/photo5.png" alt><br>$S_d (\omega) = \displaystyle {1 \over 4} M (\omega)[H_{VSB}(\omega + \omega_c) + H_{VSB}(\omega - \omega_c)]$<br>为保证相干解调的输出无失真的恢复调制信号 $m (t)$，要求：<br>$[H_{VSB}(\omega + \omega_c) + H_{VSB}(\omega - \omega_c) = constant$，$|\omega| \leq \omega_H$</p>
 <h3 id="二、幅度调制系统的抗噪声性能"><a href="# 二、幅度调制系统的抗噪声性能" class="headerlink" title="二、幅度调制系统的抗噪声性能"></a>二、幅度调制系统的抗噪声性能 </h3><h3 id="三、模拟角度调制"><a href="# 三、模拟角度调制" class="headerlink" title="三、模拟角度调制"></a> 三、模拟角度调制 </h3><h3 id="四、调频系统的抗噪声性能"><a href="# 四、调频系统的抗噪声性能" class="headerlink" title="四、调频系统的抗噪声性能"></a> 四、调频系统的抗噪声性能 </h3><h3 id="五、频分复用和模拟调制技术的应用"><a href="# 五、频分复用和模拟调制技术的应用" class="headerlink" title="五、频分复用和模拟调制技术的应用"></a> 五、频分复用和模拟调制技术的应用</h3>]]></content>
       <categories>
         <category>通信原理</category>
@@ -1224,8 +1247,37 @@
     <title>通信原理 --（2）信道</title>
     <url>/2020/09/14/communicationSystem-channel/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道</h3><span id="more"></span>
-<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性 </h3><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量</h3>]]></content>
+<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道 </h3><h4 id="1- 信道的概念"><a href="#1- 信道的概念" class="headerlink" title="1. 信道的概念"></a>1. 信道的概念</h4><p> 为什么要研究信道？因为信道会导致信号的变化 <br> 如何研究信道？建立数学模型 <br><img src="/2020/09/14/communicationSystem-channel/photo1.jpg" alt><br>$r (t) = s (t) \oplus h (t) + n (t)$<br> 从信号处理角度看，信道就是一个滤波器，$h (t)$ 是滤波器的冲激响应。<br>从信号与系统的角度看，信道就是一个系统，$h (t)$ 是系统的冲激响应。<br>对于信道来说，$h (t)$ 就是信道的冲激响应，也称信道的特性。<br><span id="more"></span></p>
+<h4 id="2- 实际无线信道"><a href="#2- 实际无线信道" class="headerlink" title="2. 实际无线信道"></a>2. 实际无线信道</h4><h5 id="1- 电磁波频谱划分"><a href="#1- 电磁波频谱划分" class="headerlink" title="(1) 电磁波频谱划分"></a>(1) 电磁波频谱划分</h5><p><img src="/2020/09/14/communicationSystem-channel/photo2.jpg" alt></p>
+<h5 id="2- 电磁波的特性"><a href="#2- 电磁波的特性" class="headerlink" title="(2) 电磁波的特性"></a>(2) 电磁波的特性 </h5><p> 电磁波频率越高，通信波束越窄 (功率利用越充分)，天线发射效率越高 (天线口径可越小)，<br>穿透能力越强，绕射能力越弱</p>
+<h5 id="3- 电磁波主要传播方式"><a href="#3- 电磁波主要传播方式" class="headerlink" title="(3) 电磁波主要传播方式"></a>(3) 电磁波主要传播方式</h5><p>(a) 天波传播：短波 (3M-30MHz)、电离层的反射 (频率低易反射)<br>(b) 地波传播：长波、绕射<br>(c) 散射传播：微波、对流程的散射、大容量战略通信<br>(d) 视距传播：超短波、微波（地面的远距传播必须设置中继站）</p>
+<h4 id="3- 实际有线信道"><a href="#3- 实际有线信道" class="headerlink" title="3. 实际有线信道"></a>3. 实际有线信道</h4><p><img src="/2020/09/14/communicationSystem-channel/photo3.jpg" alt></p>
+<h5 id="1- 双绞线"><a href="#1- 双绞线" class="headerlink" title="(1) 双绞线"></a>(1) 双绞线</h5><p>Q：为什么要进行扭绞？<br>A：为了提高抗干扰性能，绞度越大，抗干扰能力越好，同时成本也越高<br>Q：为什么纽绞可以提高抗干扰特性？<br>A：从理论上讲，电路形成的环路围绕的面积越大，就月容易被干扰信号影响。双绞线将环路面积减到最小，所以抗干扰能力强。两根非常接近的铜线都在传导电信号时，就会出现一定的电磁干扰，这种干扰称作串扰。如果把电极相反的一根铜线相互绞在一起，可以减少串扰以及信号放射程度，每一根缠绕着的导线在导电时，发出的电磁幅射被绞合的另一根线上发出的电磁辐射所抵消，随着单位长度电缆中所缠绕的线的对数的增加，防止串饶的能力也增加。</p>
+<h5 id="2- 同轴电缆"><a href="#2- 同轴电缆" class="headerlink" title="(2) 同轴电缆"></a>(2) 同轴电缆 </h5><h5 id="3- 光纤"><a href="#3- 光纤" class="headerlink" title="(3) 光纤"></a>(3) 光纤</h5><p> 光纤的色散限制了光纤的无中继传输距离 <br> 延申阅读：如何利用光子的轨道角动量 (OAM) 进一步提高光通信的传输速率和频带利用率？关于 OAM 的光通信要解决的关键问题有哪些？如何解决？</p>
+<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性</h3><h4 id="1- 信道特性及其数学模型"><a href="#1- 信道特性及其数学模型" class="headerlink" title="1. 信道特性及其数学模型"></a>1. 信道特性及其数学模型</h4><h5 id="1- 调制信道和编码信道"><a href="#1- 调制信道和编码信道" class="headerlink" title="(1) 调制信道和编码信道"></a>(1) 调制信道和编码信道</h5><p><img src="/2020/09/14/communicationSystem-channel/photo4.jpg" alt></p>
+<h5 id="2- 二对端的调制信道模型"><a href="#2- 二对端的调制信道模型" class="headerlink" title="(2) 二对端的调制信道模型"></a>(2) 二对端的调制信道模型 </h5><p>$e_o (t) = k (t) \cdot e_i (t) + n (t)$<br> 加性干扰 $n (t)$：即使没有信号输入，接收端仍有信号输出 <br> 乘性干扰 $k (t)$：恒参信道、随参信道<br>(a) 加性噪声恒参信道<br><img src="/2020/09/14/communicationSystem-channel/photo5.jpg" alt><br>(b) 具有加性噪声的线性滤波信<br><img src="/2020/09/14/communicationSystem-channel/photo6.jpg" alt><br>(c) 具有加性噪声的时变线性滤波信道<br><img src="/2020/09/14/communicationSystem-channel/photo7.jpg" alt></p>
+<h5 id="3- 编码信道模型：采用数字信号的转移概率来描述"><a href="#3- 编码信道模型：采用数字信号的转移概率来描述" class="headerlink" title="(3) 编码信道模型：采用数字信号的转移概率来描述"></a>(3) 编码信道模型：采用数字信号的转移概率来描述</h5><p><img src="/2020/09/14/communicationSystem-channel/photo8.jpg" alt></p>
+<h4 id="2- 信道特性对信号传输的影响"><a href="#2- 信道特性对信号传输的影响" class="headerlink" title="2. 信道特性对信号传输的影响"></a>2. 信道特性对信号传输的影响 </h4><p> 信道的传输特性可以用其幅频特性和相频特性来描述 (适用于恒参信道)。<br>信道引起的失真：</p>
+<h5 id="1- 码间串扰"><a href="#1- 码间串扰" class="headerlink" title="(1) 码间串扰"></a>(1) 码间串扰</h5><p>(a) 传输特性不理想，导致前后码元波形畸变并使前面波形出现拖尾，从而对当前码元的判决造成干扰。<br>(b) 多径延迟使得基带码元重叠，也会造成码间串扰。</p>
+<h5 id="2- 频率偏移：多普勒效应"><a href="#2- 频率偏移：多普勒效应" class="headerlink" title="(2) 频率偏移：多普勒效应"></a>(2) 频率偏移：多普勒效应 </h5><h5 id="3- 信号衰落"><a href="#3- 信号衰落" class="headerlink" title="(3) 信号衰落"></a>(3) 信号衰落</h5><pre><code> 移动通信中信号随接受机与发射机之间的距离不断变化即产生了衰落。其中，信号强度曲线的中直呈现慢速变化
+，称为慢衰落；曲线的瞬时值呈快速变化，称快衰落。可见快衰落与慢衰落并不是两个独立的衰落（虽然他们的
+产生原因不同），快衰落反映的是瞬时值，慢衰落反映的是瞬时值加权平均后的中值。
+</code></pre><p>(a) 快衰落：主要原因是多径传输。<br>快衰一般服从瑞利（Rayleigh）分布、莱斯（Rice）分布或纳卡迦米（Nakagami）分布。</p>
+<ul>
+<li>时间选择性衰落：主要原因是多普勒效应，交织编码可以克服时间选择性衰落。</li>
+<li>频率选择性衰落：原因多是时延扩展</li>
+<li>空间选择性衰落：在无线通信系统中天线的点波束产生了扩散而引起了空间选择性衰落。<br>(b) 慢衰落：主要原因是传输媒质结构发生变化。<br>对流层散射传播中，慢衰落通常服从对数正态分布。 </li>
+</ul>
+<p># 时延扩展：<br>多径效应（同一信号的不同分量到达的时间不同）引起的接受信号脉冲宽度扩展的现象称为时延扩展。<br>时延扩展（多径信号最快和最慢的时间差）小于码元周期可以避免码间串扰，超过一个码元周期（WCDMA 中一个码片）需要用分集接收，均衡算法来接收。<br># 相关带宽：<br>相关带宽内各频率分量的衰落时一致的也叫相关的，不会失真。<br>载波宽度大于相关带宽就会引起频率选择性衰了使接收信号失真。</p>
+<h4 id="3- 信道中的噪声和干扰"><a href="#3- 信道中的噪声和干扰" class="headerlink" title="3. 信道中的噪声和干扰"></a>3. 信道中的噪声和干扰 </h4><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量 </h3><h4 id="1- 信道容量的概念"><a href="#1- 信道容量的概念" class="headerlink" title="1. 信道容量的概念"></a>1. 信道容量的概念</h4><p> 信道中信息能够无差错传输的最大平均信息速率。</p>
+<h4 id="2- 连续信道的信道容量"><a href="#2- 连续信道的信道容量" class="headerlink" title="2. 连续信道的信道容量"></a>2. 连续信道的信道容量 </h4><h5 id="1- 香浓公式"><a href="#1- 香浓公式" class="headerlink" title="(1) 香浓公式"></a>(1) 香浓公式</h5><p> 对于带宽有限、平均功率有限的高斯白噪声连续信道，设信道带宽为 $B (Hz)$，信道输出信号功率为 $S (W)$，输出加性高斯白噪声功率为 $N (W)$，则可以证明该信道的信道容量为 $\displaystyle C = B \log_2 (1 + {S \over N}) (b/s)$<br>令加性高斯白噪声的单边功率谱密度为 $n_0$，则 $N=n_0 B$</p>
+<h5 id="2- 信道容量极限：即使带宽无穷大，信道容量也是有限值"><a href="#2- 信道容量极限：即使带宽无穷大，信道容量也是有限值" class="headerlink" title="(2) 信道容量极限：即使带宽无穷大，信道容量也是有限值"></a>(2) 信道容量极限：即使带宽无穷大，信道容量也是有限值</h5><p>$\displaystyle \lim \limits_{B \to \infty} C = \lim \limits_{B \to \infty} [{B n_0 \over S} \log_2 (1+ {S \over Bn_0})] \cdot {S \over n_0} = 1.44 {S \over n_0}$</p>
+<p>使用到极限：$\displaystyle \lim \limits_{x \to 0} \log {1+x \over x} = 1$<br>证明：<br>$\displaystyle \lim \limits_{x \to 0} \log {1+x \over x}$<br>$= \displaystyle \lim \limits_{x \to 0} {1 \over x} \cdot \log (1+x) $<br>$= \displaystyle \lim \limits_{x \to 0} \log (1+x)^{1 \over x}$<br>$= \log e$<br>$= 1$<br>若底数为 $2$，利用换底公式：$\displaystyle \log_a N = {log_m N \over log_m a}$</p>
+<h5 id="3- 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 -1-6dB"><a href="#3- 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 -1-6dB" class="headerlink" title="(3) 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 $-1.6dB$"></a>(3) 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 $-1.6dB$</h5><p>该值通常称为 $AWGN$ 信道的极限信噪比，或是香浓极限。<br>推导：<br>令信息传输速率 $R=C$，比特平均能量为 $E_b$，信道容量极限可以表示为：<br>$\displaystyle \lim \limits_{B \to \infty} = 1.44 {S \over n_0} = 1.44 {E_b C \over n_0}$<br>$=&gt; \displaystyle {E_b \over n_0} = {1 \over 1.44} = -1.6dB$</p>
+<h4 id="3- 离散信道的信道容量"><a href="#3- 离散信道的信道容量" class="headerlink" title="3. 离散信道的信道容量"></a>3. 离散信道的信道容量 </h4><h3 id="习题"><a href="# 习题" class="headerlink" title="习题"></a> 习题</h3><ol>
+<li>恒参信道等效模型如图，试分析信号通过该信道传输时会产生哪些失真？<img src="/2020/09/14/communicationSystem-channel/photo10.png" alt><br>由《信号与系统》课程可知，<br>网络的传输特性 $H (w)$ 通常可用幅频特性 $|H (w)|$ 和相频特性 $\phi (w)$ 来表征 $H (w) = |H (w)| e^{\phi (w)}$。<br><img src="/2020/09/14/communicationSystem-channel/photo11.png" alt></li>
+</ol>
+]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -1267,7 +1319,9 @@
     <title>通信原理 --（4）模拟信号数字化</title>
     <url>/2020/09/23/communicationSystem-digitization/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、模拟信号的抽样"><a href="# 一、模拟信号的抽样" class="headerlink" title="一、模拟信号的抽样"></a>一、模拟信号的抽样 </h3><h3 id="二、抽样信号的量化"><a href="# 二、抽样信号的量化" class="headerlink" title="二、抽样信号的量化"></a> 二、抽样信号的量化 </h3><h3 id="三、脉冲编码调制"><a href="# 三、脉冲编码调制" class="headerlink" title="三、脉冲编码调制"></a> 三、脉冲编码调制 </h3><h3 id="四、差分脉码调制与增量调制"><a href="# 四、差分脉码调制与增量调制" class="headerlink" title="四、差分脉码调制与增量调制"></a> 四、差分脉码调制与增量调制 </h3><h3 id="五、时分复用"><a href="# 五、时分复用" class="headerlink" title="五、时分复用"></a> 五、时分复用</h3>]]></content>
+<p>问题 1：如何实现数字通信系统传输模拟信号？<br><img src="/2020/09/23/communicationSystem-digitization/photo1.jpg" alt><br>问题 2：如何实现模拟信号的数字化？<br><img src="/2020/09/23/communicationSystem-digitization/photo2.jpg" alt></p>
+<h3 id="一、模拟信号的抽样"><a href="# 一、模拟信号的抽样" class="headerlink" title="一、模拟信号的抽样"></a>一、模拟信号的抽样 </h3><h4 id="1- 低通模拟信号的抽样定理"><a href="#1- 低通模拟信号的抽样定理" class="headerlink" title="1. 低通模拟信号的抽样定理"></a>1. 低通模拟信号的抽样定理</h4><p> 时域：$m_s (t) = m (t) \delta_{T_s}(t)$<br>频域：$M_s (f) = M (f) * \Delta_\Omega (f) = {1 \over T_s} \sum_{n= -\infty}^\infty M (f - nf_s)$<br>$\Delta_\Omega (f)$ 是周期性单位冲激脉冲的频谱 $\Delta_\Omega (f) = {1 \over T_s} \sum_{n= -\infty}^\infty \delta (f - nf_s)$<br>恢复信号的条件：$f_s \geq 2f_H$ 奈奎斯特抽样频率</p>
+<h4 id="2- 带通模拟信号的抽样定理"><a href="#2- 带通模拟信号的抽样定理" class="headerlink" title="2. 带通模拟信号的抽样定理"></a>2. 带通模拟信号的抽样定理 </h4><h4 id="3- 实际抽样"><a href="#3- 实际抽样" class="headerlink" title="3. 实际抽样"></a>3. 实际抽样</h4><h3 id="二、抽样信号的量化"><a href="# 二、抽样信号的量化" class="headerlink" title="二、抽样信号的量化"></a> 二、抽样信号的量化 </h3><h3 id="三、脉冲编码调制"><a href="# 三、脉冲编码调制" class="headerlink" title="三、脉冲编码调制"></a> 三、脉冲编码调制 </h3><h3 id="四、差分脉码调制与增量调制"><a href="# 四、差分脉码调制与增量调制" class="headerlink" title="四、差分脉码调制与增量调制"></a> 四、差分脉码调制与增量调制 </h3><h3 id="五、时分复用"><a href="# 五、时分复用" class="headerlink" title="五、时分复用"></a> 五、时分复用</h3>]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -1285,8 +1339,23 @@
     <title>通信原理 --（1）绪论</title>
     <url>/2020/09/10/communicationSystem-introduction/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、通信的基本概念和通信系统的组成"><a href="# 一、通信的基本概念和通信系统的组成" class="headerlink" title="一、通信的基本概念和通信系统的组成"></a>一、通信的基本概念和通信系统的组成</h3><span id="more"></span>
-<h3 id="二、信息的度量和通信系统的性能指标"><a href="# 二、信息的度量和通信系统的性能指标" class="headerlink" title="二、信息的度量和通信系统的性能指标"></a>二、信息的度量和通信系统的性能指标</h3>]]></content>
+<h3 id="一、通信的基本概念和通信系统的组成"><a href="# 一、通信的基本概念和通信系统的组成" class="headerlink" title="一、通信的基本概念和通信系统的组成"></a>一、通信的基本概念和通信系统的组成</h3><h4 id="1- 通信的基本概念和技术发展"><a href="#1- 通信的基本概念和技术发展" class="headerlink" title="1. 通信的基本概念和技术发展"></a>1. 通信的基本概念和技术发展</h4><p>1837 年，莫尔斯电码<br>1876 年，贝尔发明电话<br>1864 年，麦克斯从理论上预言了电磁波的存在<br>1887 年，赫兹实验证实了电磁波的存在 <span id="more"></span><br>1896 年，马可尼发明无线电<br>1962 年，美国发射第一颗通信人造卫星<br>1969 年，ARPANET 问世<br>1977 年，第一个光纤通信系统投入使用</p>
+<h4 id="2- 通信系统的组成"><a href="#2- 通信系统的组成" class="headerlink" title="2. 通信系统的组成"></a>2. 通信系统的组成 </h4><p><img src="/2020/09/10/communicationSystem-introduction/photo1.jpg" alt="数字信号系统"><br><img src="/2020/09/10/communicationSystem-introduction/photo2.jpg" alt="模拟信号系统"><br> 数字通信面临的主要挑战：<br>(1) 数据速率快，占用频带宽<br>(2) 同步要求高<br>(3) 实验复杂度高</p>
+<h4 id="3- 通信系统的分类"><a href="#3- 通信系统的分类" class="headerlink" title="3. 通信系统的分类"></a>3. 通信系统的分类 </h4><h5 id="传输信号的特征"><a href="# 传输信号的特征" class="headerlink" title="传输信号的特征"></a> 传输信号的特征 </h5><p> 数字通信、模拟通信</p>
+<h5 id="传输媒介"><a href="# 传输媒介" class="headerlink" title="传输媒介"></a>传输媒介 </h5><p> 有线通信、模拟通信</p>
+<h5 id="是否调制"><a href="# 是否调制" class="headerlink" title="是否调制"></a>是否调制 </h5><p> 基带传输、调制传输</p>
+<h5 id="调制方式"><a href="# 调制方式" class="headerlink" title="调制方式"></a>调制方式 </h5><p> 连续波模拟调制：AM、DSB-SC、SSB、VSB、FM、PM<br>连续波数字调制：ASK、FSK、(PSK、QPSK、DPSK)、(QAM、MSK)<br>脉冲模拟调制：PAM、PDM (PWM)、PPM<br>脉冲数字调制：PCM、DM、DPCM、(ADPCM、LPC)</p>
+<h5 id="传送信号的复用方式"><a href="# 传送信号的复用方式" class="headerlink" title="传送信号的复用方式"></a>传送信号的复用方式</h5><p>FDM、TDM、CDM、WDM</p>
+<h5 id="传送信号的多址方式"><a href="# 传送信号的多址方式" class="headerlink" title="传送信号的多址方式"></a>传送信号的多址方式</h5><p>FDMA、TDMA、CDMA</p>
+<h5 id="工作波段"><a href="# 工作波段" class="headerlink" title="工作波段"></a>工作波段 </h5><h5 id="无线通信的频带利用方式"><a href="# 无线通信的频带利用方式" class="headerlink" title="无线通信的频带利用方式"></a> 无线通信的频带利用方式 </h5><p> 定频窄带通信、跳频通信、扩频通信</p>
+<h5 id="消息传送的方向和时间"><a href="# 消息传送的方向和时间" class="headerlink" title="消息传送的方向和时间"></a>消息传送的方向和时间 </h5><p> 单工通信、半双工通信、双工通信</p>
+<h5 id="数据代码排列方式"><a href="# 数据代码排列方式" class="headerlink" title="数据代码排列方式"></a>数据代码排列方式 </h5><p> 并行（可用于频带传输系统：MCM，例如 OFDM）、串行</p>
+<h3 id="二、信息的度量和通信系统的性能指标"><a href="# 二、信息的度量和通信系统的性能指标" class="headerlink" title="二、信息的度量和通信系统的性能指标"></a>二、信息的度量和通信系统的性能指标 </h3><h4 id="1- 信息及其度量"><a href="#1- 信息及其度量" class="headerlink" title="1. 信息及其度量"></a>1. 信息及其度量</h4><h5 id="信息、消息、信号"><a href="# 信息、消息、信号" class="headerlink" title="信息、消息、信号"></a> 信息、消息、信号</h5><p><img src="/2020/09/10/communicationSystem-introduction/photo3.jpg" alt></p>
+<h4 id="2- 信息的度量"><a href="#2- 信息的度量" class="headerlink" title="2. 信息的度量"></a>2. 信息的度量 </h4><p><img src="/2020/09/10/communicationSystem-introduction/photo4.jpg" alt><br> 信源的平均信息量 = 信源中每个符号所包含的信息量的统计平均值 <br>$ \bar I$ 与热力学中的熵形式相似，故通常称为信源的熵，记为 $H (x)$，单位为 bit / 符号<br> 对于离散信源，当各信源符号等概率分布时，信源的熵最大</p>
+<h4 id="3- 通信系统的主要性能指标"><a href="#3- 通信系统的主要性能指标" class="headerlink" title="3. 通信系统的主要性能指标"></a>3. 通信系统的主要性能指标 </h4><h5 id="1- 有效性指标"><a href="#1- 有效性指标" class="headerlink" title="(1) 有效性指标"></a>(1) 有效性指标</h5><p> 模拟通信系统：频带利用率 <br> 数字通信系统：传输速率、频带利用率</p>
+<h5 id="2- 可靠性指标"><a href="#2- 可靠性指标" class="headerlink" title="(2) 可靠性指标"></a>(2) 可靠性指标 </h5><p> 模拟通信系统：接收端最终输出的信噪比 <br> 数字通信系统：误码率、误信率</p>
+<p>延申阅读：机器学习如何应用在通信系统中？</p>
+]]></content>
       <categories>
         <category>通信原理</category>
       </categories>
@@ -1431,6 +1500,46 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 原理</title>
+    <url>/2021/04/24/computerNetwork-lab3-1/</url>
+    <content><![CDATA[<h3 id="一、服务器和客户端的功能"><a href="# 一、服务器和客户端的功能" class="headerlink" title="一、服务器和客户端的功能"></a>一、服务器和客户端的功能</h3><h4 id="1- 客户端需要支持下面几个功能"><a href="#1- 客户端需要支持下面几个功能" class="headerlink" title="1. 客户端需要支持下面几个功能"></a>1. 客户端需要支持下面几个功能</h4><h5 id="1- 连接服务器"><a href="#1- 连接服务器" class="headerlink" title="(1) 连接服务器"></a>(1) 连接服务器</h5><h5 id="2- 支持用户输入聊天消息，发送消息给服务器"><a href="#2- 支持用户输入聊天消息，发送消息给服务器" class="headerlink" title="(2) 支持用户输入聊天消息，发送消息给服务器"></a>(2) 支持用户输入聊天消息，发送消息给服务器</h5><h5 id="3- 接收并显示服务器的消息"><a href="#3- 接收并显示服务器的消息" class="headerlink" title="(3) 接收并显示服务器的消息"></a>(3) 接收并显示服务器的消息</h5><h5 id="4- 退出连接"><a href="#4- 退出连接" class="headerlink" title="(4) 退出连接"></a>(4) 退出连接</h5><span id="more"></span>
+<p>针对上述需求，客户端的实现需要两个进程分别支持下面的功能：<br>(1) 子进程的功能：<br>等待用户输入聊天信息 <br> 将聊天信息写到管道（pipe），并发送给父进程 <br>(2) 父进程的功能：<br> 使用 epoll 机制接受服务端发来的信息，并显示给用户，使用户看到其他用户的聊天信息 <br> 将子进程发给的聊天信息从管道（pipe）中读取，并发送给服务端</p>
+<h4 id="2- 服务器端需要支持下面几个功能"><a href="#2- 服务器端需要支持下面几个功能" class="headerlink" title="2. 服务器端需要支持下面几个功能"></a>2. 服务器端需要支持下面几个功能</h4><h5 id="1- 支持多个客户端接入，实现聊天室基本功能"><a href="#1- 支持多个客户端接入，实现聊天室基本功能" class="headerlink" title="(1) 支持多个客户端接入，实现聊天室基本功能"></a>(1) 支持多个客户端接入，实现聊天室基本功能</h5><h5 id="2- 启动服务建立监听端口等待客户端连接"><a href="#2- 启动服务建立监听端口等待客户端连接" class="headerlink" title="(2) 启动服务建立监听端口等待客户端连接"></a>(2) 启动服务建立监听端口等待客户端连接</h5><h5 id="3- 使用 -epoll- 机制实现并发，增加效率"><a href="#3- 使用 -epoll- 机制实现并发，增加效率" class="headerlink" title="(3) 使用 epoll 机制实现并发，增加效率"></a>(3) 使用 epoll 机制实现并发，增加效率</h5><h5 id="4- 客户端连接时发送欢迎消息并存储连接记录"><a href="#4- 客户端连接时发送欢迎消息并存储连接记录" class="headerlink" title="(4) 客户端连接时发送欢迎消息并存储连接记录"></a>(4) 客户端连接时发送欢迎消息并存储连接记录</h5><h5 id="5- 客户端发送消息时广播给其他所有客户端"><a href="#5- 客户端发送消息时广播给其他所有客户端" class="headerlink" title="(5) 客户端发送消息时广播给其他所有客户端"></a>(5) 客户端发送消息时广播给其他所有客户端</h5><h5 id="6- 客户端请求退出时对连接信息进行清理"><a href="#6- 客户端请求退出时对连接信息进行清理" class="headerlink" title="(6) 客户端请求退出时对连接信息进行清理"></a>(6) 客户端请求退出时对连接信息进行清理</h5><h4 id="3- 模型"><a href="#3- 模型" class="headerlink" title="3. 模型"></a>3. 模型</h4><p><img src="/2021/04/24/computerNetwork-lab3-1/photo1.png" alt></p>
+<h3 id="二、概念介绍"><a href="# 二、概念介绍" class="headerlink" title="二、概念介绍"></a>二、概念介绍 </h3><h4 id="1- 阻塞与非阻塞 -socket"><a href="#1- 阻塞与非阻塞 -socket" class="headerlink" title="1. 阻塞与非阻塞 socket"></a>1. 阻塞与非阻塞 socket</h4><p> 非阻塞设置方式示例代码：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 将文件描述符设置为非阻塞方式（利用 fcntl 函数）</span></span><br><span class="line"><span class="built_in">fcntl</span> (sockfd, F_SETFL, <span class="built_in">fcntl</span> (sockfd, F_GETFD, <span class="number">0</span>)| O_NONBLOCK);</span><br></pre></td></tr></table></figure><br>这个函数接受三个参数，第一个参数是文件描述符（linux 认为所有东西都是文件，socket 也是文件），第二个是要对第一个文件做什么动作（设置参数、读取参数之类的），第三个参数设置具体的行为（设置某种参数）。</p>
+<p>F_SETFL 从字面意思就是 设置文件的标志 ，F_GETFD 从字面意思就是 读取文件的标志 。</p>
+<p>先用 fcntl (sockfd, F_GETFD, 0) 读取套接字信息，读取的是一个整数。任何一个整数都可以用二进制表示，二进制的每一位为 0 或者 1 都可以表示文件的某个属性的状态。</p>
+<p>再用 fcntl (sockfd, F_SETFL, fcntl (sockfd, F_GETFD, 0)| O_NONBLOCK); 设置文件的非阻塞属性。| 是 C++ 中的按位或，fcntl (sockfd, F_GETFD, 0)| O_NONBLOCK 的意思就是把表示 sockfd 属性的整数中关于阻塞与非阻塞的位置为有效。最后写入 sockfd 。</p>
+<h5 id="1-STDIN-FILENO- 与 -STDIN- 的区别："><a href="#1-STDIN-FILENO- 与 -STDIN- 的区别：" class="headerlink" title="(1) STDIN_FILENO 与 STDIN 的区别："></a>(1) STDIN_FILENO 与 STDIN 的区别：</h5><p>STDIN_FILENO:<br>(a) 数据类型：int<br>(b) 层次：系统级的 API，是一个文件句柄，定义在 &lt; unistd.h &gt; 中。<br>(c) 相应的函数：open ()，close ()，read ()，write ()，lseek () 等系统级别的函数。<br>SDTIN：<br>(a) 数据类型：FILE *<br>(b) 层次：c 语言的提供的标准输入流。c 语言标准库封装系统函数实现。高级的输入输出函数。可在 &lt; stdio.h &gt; 中找到外部声明。<br>(c) 相应的函数：fopen ()，fclose ()，fread ()，fwrite ()，fseek () 等 c 语言标准函数。</p>
+<h5 id="2- 文件描述符"><a href="#2- 文件描述符" class="headerlink" title="(2) 文件描述符"></a>(2) 文件描述符 </h5><p> 文件必须先开启后才能进行读写操作，开启文件后会回传一个 File Descriptor (文件描述器、简称 fd)，之后的所有操作都会需要 fd 作为参数。除非每个行程明确将其关闭，否则行程至少会开启 3 个 fd，分别是 stdin (0), stdout (1) 及 stderr (2)，实际使用这三个 fd 时不需直接用 0 ~ 2 整数值，unistd.h 有预先定义好的 STDIN_FILENO, STDOUT_FILENO 及 STDERR_FILENO。</p>
+<p>　　核心内部会替每个行程 (task) 维护一份 file table，放在 current-&gt;files，用来记录行程开启的 fd，可以在 linux/sched.h 的 task_struct 中找到他。开档的系统呼叫会调用 fs/open.c 内的 do_sys_open ()，里面就会注册 fd 到行程的文件表。</p>
+<h5 id="3-open- 函数 - 打开文件"><a href="#3-open- 函数 - 打开文件" class="headerlink" title="(3) open 函数 - 打开文件"></a>(3) open 函数 - 打开文件 </h5><p>open 函数用来打开一个文件，建立一个文件描述符到文件路径的映射，为后续的各种文件操作建立一个文件标识。<br>open 函数原型如下：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">open</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">int</span> oflag,...)</span></span>;</span><br></pre></td></tr></table></figure><br> 返回值：如果成功则返回文件描述符，如果出错则返回 - 1。<br>参数：<br>(a) pathname 是要打开或创建的文件的路径或者名字。可以是绝对路径，也可以是相对路径。<br>(b) oflag 是操作选项。是一个整数，每个位代表一个操作选项。通过一些常量的或运算构成综合性的操作参数。<br>三个常量决定文件的读写模式，可以选择其中一个，不能同时选。这三个是 O_RDONLY、O_WRONLY、O_RDWR。定义在头文件 &lt; fcntl.h &gt; 或者 &lt; bits/fcntl.h &gt; 中。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> O_RDONLY             00     <span class="comment">/* 只读方式打开 */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> O_WRONLY             01     <span class="comment">/* 只写方式打开 */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> O_RDWR               02     <span class="comment">/* 读写方式打开 */</span></span></span><br></pre></td></tr></table></figure><br>也就是说， oflag 参数的低 2 位 (bit0 和 bit1) 表示文件读写模式， bit0 为 1 表示文件只能用于写操作， bit1 为 1 表示可读也可写， bit0 和 bit1 都为 0 表示只读。</p>
+<p>(c) … 说明该参数是可选参数，该参数 mode_t 类型数据。称为文件创建模式字，它决定要的文件的一些权限。参考 umask 函数，这里暂且不管这个参数。</p>
+<h5 id="4-fcntl- 函数 -cmd- 值的 -F-GETFL- 和 -F-SETFL"><a href="#4-fcntl- 函数 -cmd- 值的 -F-GETFL- 和 -F-SETFL" class="headerlink" title="(4)  fcntl 函数 cmd 值的 F_GETFL 和 F_SETFL"></a>(4)  fcntl 函数 cmd 值的 F_GETFL 和 F_SETFL</h5><p>(a) 获取文件打开方式的标志 (fd 的文件状态标志)，标志值含义与 open 调用一致。<br>三个存取方式标志 (O_RDONLY , O_WRONLY , 以及 O_RDWR) 并不各占 1 位。(这三种标志的值各是 0 , 1 和 2，由于历史原因，这三种值互斥 — 一个文件只能有这三种值之一。) 因此首先必须用屏蔽字 O_ACCMODE 相与取得存取方式位，然后将结果与这三种值相比较。<br>(b) 将文件描述符 close-on-exec 标志设置为第三个参数 arg 的最后一位<br> 设置给 arg 描述符状态标志，可以更改的几个标志是：O_APPEND，O_NONBLOCK，O_SYNC 和 O_ASYNC。而 fcntl 的文件状态标志总共有 7 个：O_RDONLY , O_WRONLY , O_RDWR , O_APPEND , O_NONBLOCK , O_SYNC 和 O_ASYNC</p>
+<p>可更改的几个标志如下面的描述：<br>    O_NONBLOCK   非阻塞 I/O，如果 read (2) 调用没有可读取的数据，或者如果 write (2) 操作将阻塞，则 read 或 write 调用将返回 - 1 和 EAGAIN 错误<br>    O_APPEND     强制每次写 (write) 操作都添加在文件大的末尾，相当于 open (2) 的 O_APPEND 标志<br>    O_DIRECT     最小化或去掉 reading 和 writing 的缓存影响。系统将企图避免缓存你的读或写的数据。如果不能够避免缓存，那么它将最小化已经被缓存了的数据造成的影响。如果这个标志用的不够好，将大大的降低性能<br>    O_ASYNC      当 I/O 可用的时候，允许 SIGIO 信号发送到进程组，例如：当有数据可以读的时候</p>
+<h4 id="2-epoll"><a href="#2-epoll" class="headerlink" title="2.epoll"></a>2.epoll</h4><p>epoll 是 Linux 内核为处理大批句柄而作改进的 poll，是 Linux 特有的 I/O 函数。<br>epoll 之所以高效，是因为 epoll 将用户关心的文件描述符放到内核里的一个事件表中，而不是像 select/poll 每次调用都需要重复传入文件描述符集或事件集。比如当一个事件发生（比如说读事件），epoll 无须遍历整个被侦听的描述符集，只要遍历那些被内核 IO 事件异步唤醒而加入就绪队列的描述符集合就行了。</p>
+<h3 id="三、错误"><a href="# 三、错误" class="headerlink" title="三、错误"></a>三、错误 </h3><h4 id="ryu-manager- 报错 -SyntaxError-invalid-syntax"><a href="#ryu-manager- 报错 -SyntaxError-invalid-syntax" class="headerlink" title="ryu-manager 报错 SyntaxError: invalid syntax"></a>ryu-manager 报错 SyntaxError: invalid syntax</h4><p><a href="https://blog.csdn.net/jiao424525707/article/details/103045159">https://blog.csdn.net/jiao424525707/article/details/103045159</a><br><a href="https://blog.csdn.net/cyz14/article/details/79994548">https://blog.csdn.net/cyz14/article/details/79994548</a><br> 但是后来没有解决，因为可以不用到 ryu</p>
+<h4 id="Exception-Please-shut-down-the-controller-which-is-running-on-port-6653"><a href="#Exception-Please-shut-down-the-controller-which-is-running-on-port-6653" class="headerlink" title="Exception: Please shut down the controller which is running on port 6653:"></a>Exception: Please shut down the controller which is running on port 6653:</h4><h3 id="四、参考"><a href="# 四、参考" class="headerlink" title="四、参考"></a>四、参考</h3><p><a href="https://zhenkunhe.github.io/Gitbook/Linux/md/2-Mininet/3-mininet%20% E5% AF% A6% E6%88% B0.html">mininet 實戰</a><br><a href="https://www.jianshu.com/p/b264b313580b">【Mininet 从入门到精通】第 2 讲 Mininet 网络从创建到部署</a><br><a href="https://www.jianshu.com/p/bf17c3b23654">SDN 为 host 赋予服务器、客户端的作用</a><br><a href="https://www.cnblogs.com/cing/p/8025239.html">mininet 命令</a><br><a href="https://blog.csdn.net/fanshuquan/article/details/51323266">mininet 常见用法</a></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+        <tag>lab</tag>
+        <tag>Socket</tag>
+        <tag>TCP</tag>
+        <tag>UDP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 实作</title>
+    <url>/2021/04/27/computerNetwork-lab3-2/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+  </entry>
+  <entry>
     <title>dos 使用</title>
     <url>/2018/10/27/dos-command/</url>
     <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a>显示目录下的文件</h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录<br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br><span id="more"></span><br>dir/ah 只显示当前路径下隐藏文件和目录<br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
@@ -1443,6 +1552,19 @@
       <tags>
         <tag>dos使用</tag>
         <tag>Linux与Windows命令对比</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git 安装</title>
+    <url>/2018/10/27/git%20install-git/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/ScottePerk/article/details/81571251">https://blog.csdn.net/ScottePerk/article/details/81571251</a></p>
+<h3 id="git- 文章总览"><a href="#git- 文章总览" class="headerlink" title="git 文章总览"></a>git 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/10/27/git%20install-git/">git 安装 </a></p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git安装</tag>
       </tags>
   </entry>
   <entry>
@@ -1488,19 +1610,6 @@
         <tag>hexo</tag>
         <tag>文章</tag>
         <tag>Mathjax</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git 安装</title>
-    <url>/2018/10/27/git%20install-git/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/ScottePerk/article/details/81571251">https://blog.csdn.net/ScottePerk/article/details/81571251</a></p>
-<h3 id="git- 文章总览"><a href="#git- 文章总览" class="headerlink" title="git 文章总览"></a>git 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/10/27/git%20install-git/">git 安装 </a></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git安装</tag>
       </tags>
   </entry>
   <entry>
@@ -1887,17 +1996,6 @@
       </tags>
   </entry>
   <entry>
-    <title>刷题检讨</title>
-    <url>/2021/04/08/luogu-exercise-review/</url>
-    <content><![CDATA[<h3 id="P1047"><a href="#P1047" class="headerlink" title="P1047"></a>P1047</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>* buffer = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">512</span>]&#123;<span class="number">5</span>&#125;; <span class="comment">// 第一个 int 初始化为 5，其余初始化为 0</span></span><br></pre></td></tr></table></figure>
-<p>上面是合法的，但是其结果与我们设想的不一样，它并不是将分配的 512 个 int 都初始化为 5，而仅仅是将第一个 int 初始化为 5，其余的 511 个仍然初始化为 0！<br>无法将分配的所有元素同时初始化为非 0 值。</p>
-<h3 id="C- 刷題总览"><a href="#C- 刷題总览" class="headerlink" title="C++ 刷題总览"></a>C++ 刷題总览 </h3><p><a href="https://wangxchun.github.io/2019/04/01/luogu-P1008%20triple-hit/"> 三連擊（洛谷 P1008）</a><br><a href="https://wangxchun.github.io/2021/03/21/luogu-exercise-review-1-lineartable/">刷题检讨 —(1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/04/08/luogu-exercise-review/"> 刷题检讨</a></p>
-]]></content>
-      <categories>
-        <category>C++刷題</category>
-      </categories>
-  </entry>
-  <entry>
     <title>刷题检讨 --(1) 线性表</title>
     <url>/2021/03/21/luogu-exercise-review-1-lineartable/</url>
     <content><![CDATA[<h3 id="线性表"><a href="# 线性表" class="headerlink" title="线性表"></a>线性表 </h3><h5 id="1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator"><a href="#1- 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 -vector- 数组 -iterator" class="headerlink" title="(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator"></a>(1) 如果你需要高效的隨即存取，而不在乎插入和刪除的效率，使用 vector (数组) //iterator</h5><p> 除了用迭代器获取 vector 容器中的元素，[] 和 at 也可以<br>vector<int>(v).swap (v); // 收缩内存<br><span id="more"></span><br>//vector<int> 利用 v 调用拷贝构造函数，创建匿名对象，它会用 v 目前使用的元素个数来初始化这个匿名对象<br>//swap () 互换函数的本质类似于指针的交换<br>// 调换后 v 指向了创建的匿名对象，而本来匿名对象的指针 x 指向原本的 v，并且在该语句过后由系统自动回收</int></int></p>
@@ -1938,6 +2036,17 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>刷题</tag>
         <tag>线性表</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>刷题检讨</title>
+    <url>/2021/04/08/luogu-exercise-review/</url>
+    <content><![CDATA[<h3 id="P1047"><a href="#P1047" class="headerlink" title="P1047"></a>P1047</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>* buffer = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">512</span>]&#123;<span class="number">5</span>&#125;; <span class="comment">// 第一个 int 初始化为 5，其余初始化为 0</span></span><br></pre></td></tr></table></figure>
+<p>上面是合法的，但是其结果与我们设想的不一样，它并不是将分配的 512 个 int 都初始化为 5，而仅仅是将第一个 int 初始化为 5，其余的 511 个仍然初始化为 0！<br>无法将分配的所有元素同时初始化为非 0 值。</p>
+<h3 id="C- 刷題总览"><a href="#C- 刷題总览" class="headerlink" title="C++ 刷題总览"></a>C++ 刷題总览 </h3><p><a href="https://wangxchun.github.io/2019/04/01/luogu-P1008%20triple-hit/"> 三連擊（洛谷 P1008）</a><br><a href="https://wangxchun.github.io/2021/03/21/luogu-exercise-review-1-lineartable/">刷题检讨 —(1) 线性表 </a><br><a href="https://wangxchun.github.io/2021/04/08/luogu-exercise-review/"> 刷题检讨</a></p>
+]]></content>
+      <categories>
+        <category>C++刷題</category>
+      </categories>
   </entry>
   <entry>
     <title>机器学习算法 --（1）线性回归和非线性回归</title>
@@ -2010,6 +2119,22 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>机器学习算法 --（10）支持向量机 SVM</title>
+    <url>/2020/11/19/machineLearning-10/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>machineLearning</tag>
+        <tag>sklearn</tag>
+        <tag>支持向量机</tag>
+        <tag>SVM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习算法 --（2）逻辑回归</title>
     <url>/2020/11/11/machineLearning-2/</url>
     <content><![CDATA[<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-2/photo1.jpg" alt></p>
@@ -2035,22 +2160,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>逻辑回归</tag>
         <tag>预测函数</tag>
         <tag>代价函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（10）支持向量机 SVM</title>
-    <url>/2020/11/19/machineLearning-10/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>machineLearning</tag>
-        <tag>sklearn</tag>
-        <tag>支持向量机</tag>
-        <tag>SVM</tag>
       </tags>
   </entry>
   <entry>
@@ -2416,39 +2525,5 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <tags>
         <tag>C++</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 群聊</title>
-    <url>/2021/04/24/computerNetwork-lab3-1/</url>
-    <content><![CDATA[<h3 id="一、服务器和客户端的功能"><a href="# 一、服务器和客户端的功能" class="headerlink" title="一、服务器和客户端的功能"></a>一、服务器和客户端的功能</h3><h4 id="1- 客户端需要支持下面几个功能"><a href="#1- 客户端需要支持下面几个功能" class="headerlink" title="1. 客户端需要支持下面几个功能"></a>1. 客户端需要支持下面几个功能</h4><h5 id="1- 连接服务器"><a href="#1- 连接服务器" class="headerlink" title="(1) 连接服务器"></a>(1) 连接服务器</h5><h5 id="2- 支持用户输入聊天消息，发送消息给服务器"><a href="#2- 支持用户输入聊天消息，发送消息给服务器" class="headerlink" title="(2) 支持用户输入聊天消息，发送消息给服务器"></a>(2) 支持用户输入聊天消息，发送消息给服务器</h5><h5 id="3- 接收并显示服务器的消息"><a href="#3- 接收并显示服务器的消息" class="headerlink" title="(3) 接收并显示服务器的消息"></a>(3) 接收并显示服务器的消息</h5><h5 id="4- 退出连接"><a href="#4- 退出连接" class="headerlink" title="(4) 退出连接"></a>(4) 退出连接</h5><span id="more"></span>
-<p>针对上述需求，客户端的实现需要两个进程分别支持下面的功能：<br>(1) 子进程的功能：<br>等待用户输入聊天信息 <br> 将聊天信息写到管道（pipe），并发送给父进程 <br>(2) 父进程的功能：<br> 使用 epoll 机制接受服务端发来的信息，并显示给用户，使用户看到其他用户的聊天信息 <br> 将子进程发给的聊天信息从管道（pipe）中读取，并发送给服务端</p>
-<h4 id="2- 服务器端需要支持下面几个功能"><a href="#2- 服务器端需要支持下面几个功能" class="headerlink" title="2. 服务器端需要支持下面几个功能"></a>2. 服务器端需要支持下面几个功能</h4><h5 id="1- 支持多个客户端接入，实现聊天室基本功能"><a href="#1- 支持多个客户端接入，实现聊天室基本功能" class="headerlink" title="(1) 支持多个客户端接入，实现聊天室基本功能"></a>(1) 支持多个客户端接入，实现聊天室基本功能</h5><h5 id="2- 启动服务建立监听端口等待客户端连接"><a href="#2- 启动服务建立监听端口等待客户端连接" class="headerlink" title="(2) 启动服务建立监听端口等待客户端连接"></a>(2) 启动服务建立监听端口等待客户端连接</h5><h5 id="3- 使用 -epoll- 机制实现并发，增加效率"><a href="#3- 使用 -epoll- 机制实现并发，增加效率" class="headerlink" title="(3) 使用 epoll 机制实现并发，增加效率"></a>(3) 使用 epoll 机制实现并发，增加效率</h5><h5 id="4- 客户端连接时发送欢迎消息并存储连接记录"><a href="#4- 客户端连接时发送欢迎消息并存储连接记录" class="headerlink" title="(4) 客户端连接时发送欢迎消息并存储连接记录"></a>(4) 客户端连接时发送欢迎消息并存储连接记录</h5><h5 id="5- 客户端发送消息时广播给其他所有客户端"><a href="#5- 客户端发送消息时广播给其他所有客户端" class="headerlink" title="(5) 客户端发送消息时广播给其他所有客户端"></a>(5) 客户端发送消息时广播给其他所有客户端</h5><h5 id="6- 客户端请求退出时对连接信息进行清理"><a href="#6- 客户端请求退出时对连接信息进行清理" class="headerlink" title="(6) 客户端请求退出时对连接信息进行清理"></a>(6) 客户端请求退出时对连接信息进行清理</h5><h4 id="3- 模型"><a href="#3- 模型" class="headerlink" title="3. 模型"></a>3. 模型</h4><p><img src="/2021/04/24/computerNetwork-lab3-1/photo1.png" alt></p>
-<h3 id="二、概念介绍"><a href="# 二、概念介绍" class="headerlink" title="二、概念介绍"></a>二、概念介绍 </h3><h4 id="1- 阻塞与非阻塞 -socket"><a href="#1- 阻塞与非阻塞 -socket" class="headerlink" title="1. 阻塞与非阻塞 socket"></a>1. 阻塞与非阻塞 socket</h4><p> 非阻塞设置方式示例代码：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 将文件描述符设置为非阻塞方式（利用 fcntl 函数）</span></span><br><span class="line"><span class="built_in">fcntl</span> (sockfd, F_SETFL, <span class="built_in">fcntl</span> (sockfd, F_GETFD, <span class="number">0</span>)| O_NONBLOCK);</span><br></pre></td></tr></table></figure><br>这个函数接受三个参数，第一个参数是文件描述符（linux 认为所有东西都是文件，socket 也是文件），第二个是要对第一个文件做什么动作（设置参数、读取参数之类的），第三个参数设置具体的行为（设置某种参数）。</p>
-<p>F_SETFL 从字面意思就是 设置文件的标志 ，F_GETFD 从字面意思就是 读取文件的标志 。</p>
-<p>先用 fcntl (sockfd, F_GETFD, 0) 读取套接字信息，读取的是一个整数。任何一个整数都可以用二进制表示，二进制的每一位为 0 或者 1 都可以表示文件的某个属性的状态。</p>
-<p>再用 fcntl (sockfd, F_SETFL, fcntl (sockfd, F_GETFD, 0)| O_NONBLOCK); 设置文件的非阻塞属性。| 是 C++ 中的按位或，fcntl (sockfd, F_GETFD, 0)| O_NONBLOCK 的意思就是把表示 sockfd 属性的整数中关于阻塞与非阻塞的位置为有效。最后写入 sockfd 。</p>
-<h5 id="1-STDIN-FILENO- 与 -STDIN- 的区别："><a href="#1-STDIN-FILENO- 与 -STDIN- 的区别：" class="headerlink" title="(1) STDIN_FILENO 与 STDIN 的区别："></a>(1) STDIN_FILENO 与 STDIN 的区别：</h5><p>STDIN_FILENO:<br>(a) 数据类型：int<br>(b) 层次：系统级的 API，是一个文件句柄，定义在 &lt; unistd.h &gt; 中。<br>(c) 相应的函数：open ()，close ()，read ()，write ()，lseek () 等系统级别的函数。<br>SDTIN：<br>(a) 数据类型：FILE *<br>(b) 层次：c 语言的提供的标准输入流。c 语言标准库封装系统函数实现。高级的输入输出函数。可在 &lt; stdio.h &gt; 中找到外部声明。<br>(c) 相应的函数：fopen ()，fclose ()，fread ()，fwrite ()，fseek () 等 c 语言标准函数。</p>
-<h5 id="2- 文件描述符"><a href="#2- 文件描述符" class="headerlink" title="(2) 文件描述符"></a>(2) 文件描述符 </h5><p> 文件必须先开启后才能进行读写操作，开启文件后会回传一个 File Descriptor (文件描述器、简称 fd)，之后的所有操作都会需要 fd 作为参数。除非每个行程明确将其关闭，否则行程至少会开启 3 个 fd，分别是 stdin (0), stdout (1) 及 stderr (2)，实际使用这三个 fd 时不需直接用 0 ~ 2 整数值，unistd.h 有预先定义好的 STDIN_FILENO, STDOUT_FILENO 及 STDERR_FILENO。</p>
-<p>　　核心内部会替每个行程 (task) 维护一份 file table，放在 current-&gt;files，用来记录行程开启的 fd，可以在 linux/sched.h 的 task_struct 中找到他。开档的系统呼叫会调用 fs/open.c 内的 do_sys_open ()，里面就会注册 fd 到行程的文件表。</p>
-<h5 id="3-open- 函数 - 打开文件"><a href="#3-open- 函数 - 打开文件" class="headerlink" title="(3) open 函数 - 打开文件"></a>(3) open 函数 - 打开文件 </h5><p>open 函数用来打开一个文件，建立一个文件描述符到文件路径的映射，为后续的各种文件操作建立一个文件标识。<br>open 函数原型如下：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">open</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">int</span> oflag,...)</span></span>;</span><br></pre></td></tr></table></figure><br> 返回值：如果成功则返回文件描述符，如果出错则返回 - 1。<br>参数：<br>(a) pathname 是要打开或创建的文件的路径或者名字。可以是绝对路径，也可以是相对路径。<br>(b) oflag 是操作选项。是一个整数，每个位代表一个操作选项。通过一些常量的或运算构成综合性的操作参数。<br>三个常量决定文件的读写模式，可以选择其中一个，不能同时选。这三个是 O_RDONLY、O_WRONLY、O_RDWR。定义在头文件 &lt; fcntl.h &gt; 或者 &lt; bits/fcntl.h &gt; 中。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> O_RDONLY             00     <span class="comment">/* 只读方式打开 */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> O_WRONLY             01     <span class="comment">/* 只写方式打开 */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> O_RDWR               02     <span class="comment">/* 读写方式打开 */</span></span></span><br></pre></td></tr></table></figure><br>也就是说， oflag 参数的低 2 位 (bit0 和 bit1) 表示文件读写模式， bit0 为 1 表示文件只能用于写操作， bit1 为 1 表示可读也可写， bit0 和 bit1 都为 0 表示只读。</p>
-<p>(c) … 说明该参数是可选参数，该参数 mode_t 类型数据。称为文件创建模式字，它决定要的文件的一些权限。参考 umask 函数，这里暂且不管这个参数。</p>
-<h5 id="4-fcntl- 函数 -cmd- 值的 -F-GETFL- 和 -F-SETFL"><a href="#4-fcntl- 函数 -cmd- 值的 -F-GETFL- 和 -F-SETFL" class="headerlink" title="(4)  fcntl 函数 cmd 值的 F_GETFL 和 F_SETFL"></a>(4)  fcntl 函数 cmd 值的 F_GETFL 和 F_SETFL</h5><p>(a) 获取文件打开方式的标志 (fd 的文件状态标志)，标志值含义与 open 调用一致。<br>三个存取方式标志 (O_RDONLY , O_WRONLY , 以及 O_RDWR) 并不各占 1 位。(这三种标志的值各是 0 , 1 和 2，由于历史原因，这三种值互斥 — 一个文件只能有这三种值之一。) 因此首先必须用屏蔽字 O_ACCMODE 相与取得存取方式位，然后将结果与这三种值相比较。<br>(b) 将文件描述符 close-on-exec 标志设置为第三个参数 arg 的最后一位<br> 设置给 arg 描述符状态标志，可以更改的几个标志是：O_APPEND，O_NONBLOCK，O_SYNC 和 O_ASYNC。而 fcntl 的文件状态标志总共有 7 个：O_RDONLY , O_WRONLY , O_RDWR , O_APPEND , O_NONBLOCK , O_SYNC 和 O_ASYNC</p>
-<p>可更改的几个标志如下面的描述：<br>    O_NONBLOCK   非阻塞 I/O，如果 read (2) 调用没有可读取的数据，或者如果 write (2) 操作将阻塞，则 read 或 write 调用将返回 - 1 和 EAGAIN 错误<br>    O_APPEND     强制每次写 (write) 操作都添加在文件大的末尾，相当于 open (2) 的 O_APPEND 标志<br>    O_DIRECT     最小化或去掉 reading 和 writing 的缓存影响。系统将企图避免缓存你的读或写的数据。如果不能够避免缓存，那么它将最小化已经被缓存了的数据造成的影响。如果这个标志用的不够好，将大大的降低性能<br>    O_ASYNC      当 I/O 可用的时候，允许 SIGIO 信号发送到进程组，例如：当有数据可以读的时候</p>
-<h4 id="2-epoll"><a href="#2-epoll" class="headerlink" title="2.epoll"></a>2.epoll</h4>]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>计算机网络</tag>
-        <tag>lab</tag>
-        <tag>Socket</tag>
-        <tag>TCP</tag>
-        <tag>UDP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>clean</title>
-    <url>/2021/04/26/clean/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
