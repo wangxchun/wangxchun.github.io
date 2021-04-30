@@ -14,8 +14,8 @@
       </tags>
   </entry>
   <entry>
-    <title>5G（三）5G 性能指标</title>
-    <url>/2021/04/14/5G-3/</url>
+    <title>5G（二）5G 应用场景</title>
+    <url>/2021/04/14/5G-2/</url>
     <content><![CDATA[<span id="more"></span>
 <h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章 </h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充 </a></p>
 ]]></content>
@@ -27,8 +27,8 @@
       </tags>
   </entry>
   <entry>
-    <title>5G（二）5G 应用场景</title>
-    <url>/2021/04/14/5G-2/</url>
+    <title>5G（三）5G 性能指标</title>
+    <url>/2021/04/14/5G-3/</url>
     <content><![CDATA[<span id="more"></span>
 <h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章 </h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充 </a></p>
 ]]></content>
@@ -76,7 +76,7 @@
 <h3 id="四、5G- 核心网网络功能服务框架"><a href="# 四、5G- 核心网网络功能服务框架" class="headerlink" title="四、5G 核心网网络功能服务框架"></a>四、5G 核心网网络功能服务框架 </h3><p><img src="/2021/04/14/5G-4-1/photo5.jpg" alt="5G 核心网网络功能服务框架"><br> 类似用户看视频，可以点击视频观看，也可以订阅 up 主之后会收到通知</p>
 <h4 id="网络功能服务 -NF- 的注册、发现、授权机制"><a href="# 网络功能服务 -NF- 的注册、发现、授权机制" class="headerlink" title="网络功能服务 (NF) 的注册、发现、授权机制"></a>网络功能服务 (NF) 的注册、发现、授权机制 </h4><p><img src="/2021/04/14/5G-4-1/photo6.jpg" alt="网络功能服务 (NF) 的注册、发现、授权机制"><br> 服务 NF 上下之后，向 NRF 发送注册消息，NEF 会存储 NF 的服务状态信息</p>
 <h4 id="SBI- 接口协议"><a href="#SBI- 接口协议" class="headerlink" title="SBI 接口协议"></a>SBI 接口协议</h4><p>3G 和 4G 网络核心网的不同网元使用的协议是不一样的<br><img src="/2021/04/14/5G-4-1/photo7.jpg" alt="SBI 接口协议"></p>
-<h3 id><a href="#" class="headerlink" title="#"></a>#</h3><p><img src="/2021/04/14/5G-4-1/photo8.jpg" alt="网络服务功能举例：AMF"></p>
+<h3 id><a href="#" class="headerlink" title="#"></a>#</h3><p><img src="/2021/04/14/5G-4-1/photo8.jpg" alt=" 网络服务功能举例：AMF"></p>
 <center> 网络服务功能举例：AMF</center>
 
 <h3 id="5G- 核心网与 -EPC- 交互"><a href="#5G- 核心网与 -EPC- 交互" class="headerlink" title="5G 核心网与 EPC 交互"></a>5G 核心网与 EPC 交互</h3><p><img src="/2021/04/14/5G-4-1/photo9.jpg" alt="5G 核心网与 EPC 交互"><br>4G 网中的网元与 5G 中的 NF 若功能相似，可以联合部署</p>
@@ -170,10 +170,26 @@
       </tags>
   </entry>
   <entry>
+    <title>5G（五）5G 关键技术 -- 4.Network Slicing 网络切片</title>
+    <url>/2021/04/16/5G-5-4/</url>
+    <content><![CDATA[<h3 id="一、因为不同场景有不同需求"><a href="# 一、因为不同场景有不同需求" class="headerlink" title="一、因为不同场景有不同需求"></a> 一、因为不同场景有不同需求 </h3><p><img src="/2021/04/16/5G-5-4/photo2.jpg" alt> </p>
+<span id="more"></span>
+<h3 id="二、"><a href="# 二、" class="headerlink" title="二、"></a> 二、</h3><h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章 </h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充 </a></p>
+]]></content>
+      <categories>
+        <category>5G</category>
+      </categories>
+      <tags>
+        <tag>5G</tag>
+        <tag>Network Slicing</tag>
+        <tag>网络切片</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5G（五）5G 关键技术 -- 3.MEC 移动边缘计算</title>
     <url>/2021/04/16/5G-5-3/</url>
     <content><![CDATA[<h3 id="一、从京东物流说起"><a href="# 一、从京东物流说起" class="headerlink" title="一、从京东物流说起"></a>一、从京东物流说起 </h3><p><img src="/2021/04/16/5G-5-3/photo1.jpg" alt><br><span id="more"></span><br> 在离用户比较近的地方设置分服务器 <br> 那和代理服务器 proxy 的区别是？</p>
-<h3 id="二、MEC- 概念"><a href="# 二、MEC- 概念" class="headerlink" title="二、MEC 概念"></a>二、MEC 概念 </h3><p><img src="/2021/04/16/5G-5-3/photo.jpg" alt><br>Mobile Edge Computing 移动边缘计算 / Multi-access Edge Computing 多点边缘计算<br> 在 5G 时代，数据吞吐量、用户密度、时延等指标要求非常高，云计算方式无法满足这些需求，需要引入边缘计算 <br> 网络边缘 = 靠近用户的位置<br><img src="/2021/04/16/5G-5-3/photo2.jpg" alt="MEC 实现方式"></p>
+<h3 id="二、MEC- 概念"><a href="# 二、MEC- 概念" class="headerlink" title="二、MEC 概念"></a>二、MEC 概念 </h3><p><img src="/2021/04/16/5G-5-3/photo.jpg" alt><br>Mobile Edge Computing 移动边缘计算 / Multi-access Edge Computing 多点边缘计算<br> 在 5G 时代，数据吞吐量、用户密度、时延等指标要求非常高，云计算方式无法满足这些需求，需要引入边缘计算 <br> 网络边缘 = 靠近用户的位置<br><img src="/2021/04/16/5G-5-3/photo2.jpg" alt="MEC 实现方式 "></p>
 <p><center>MEC 实现方式 </center><br>5G 核心网用户面和控制面是分离的，所以 UPF 才可以提取出来放在边缘</p>
 <h3 id="三、MEC- 架构"><a href="# 三、MEC- 架构" class="headerlink" title="三、MEC 架构"></a>三、MEC 架构 </h3><p><img src="/2021/04/16/5G-5-3/photo3.jpg" alt="MEC 架构"><br> 左边是 5G 核心网，右边是 MEC 架构（位于核心网和接入网之间，基于 NFV）<br>提供本地就近路由的分流，支持第三方应用的边缘应用环境<br>MEC 应用可以通过 MEP (MEC Platform) 发现服务成为消费者，自身也可以注册 MEC 服务的提供者<br>MEC System：提供业务编排，MEC 节点主机调用</p>
 <h3 id="四、MEC- 部署方式"><a href="# 四、MEC- 部署方式" class="headerlink" title="四、MEC 部署方式"></a>四、MEC 部署方式 </h3><p><img src="/2021/04/16/5G-5-3/photo4.jpg" alt="MEC 部署方式"><br>5G 透过 UPF 在网络边缘灵活部署达成分流，UPF 是由核心网的控制面统一管理<br> 不同行业对边缘计算部署的位置要求不一样 <br> 区县级的：类似边缘云，可以给第三方提供边缘计算的服务 <br> 现场级的：一般是部署在运营商网络的接入点，和用户非常靠近</p>
@@ -192,22 +208,6 @@
         <tag>室内定位</tag>
         <tag>车联网</tag>
         <tag>VR/AR</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5G（五）5G 关键技术 -- 4.Network Slicing 网络切片</title>
-    <url>/2021/04/16/5G-5-4/</url>
-    <content><![CDATA[<h3 id="一、因为不同场景有不同需求"><a href="# 一、因为不同场景有不同需求" class="headerlink" title="一、因为不同场景有不同需求"></a> 一、因为不同场景有不同需求 </h3><p><img src="/2021/04/16/5G-5-4/photo2.jpg" alt> </p>
-<span id="more"></span>
-<h3 id="二、"><a href="# 二、" class="headerlink" title="二、"></a> 二、</h3><h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章 </h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构 </a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化 </a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波 </a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充 </a></p>
-]]></content>
-      <categories>
-        <category>5G</category>
-      </categories>
-      <tags>
-        <tag>5G</tag>
-        <tag>Network Slicing</tag>
-        <tag>网络切片</tag>
       </tags>
   </entry>
   <entry>
@@ -491,51 +491,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --2.tcp 三次握手 - 并发</title>
-    <url>/2021/04/16/C++%20advance6.2/</url>
-    <content><![CDATA[<h3 id="回顾：socket-tcp-server- 实现"><a href="# 回顾：socket-tcp-server- 实现" class="headerlink" title="回顾：socket tcp server 实现"></a>回顾：socket tcp server 实现</h3><h4 id="1- 创建套接字"><a href="#1- 创建套接字" class="headerlink" title="1. 创建套接字"></a>1. 创建套接字</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> lfd = <span class="built_in">socket</span> ();</span><br></pre></td></tr></table></figure>
-<h4 id="2- 绑定本地 -IP- 和端口"><a href="#2- 绑定本地 -IP- 和端口" class="headerlink" title="2. 绑定本地 IP 和端口"></a>2. 绑定本地 IP 和端口</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv</span>;</span></span><br><span class="line">serv.port = <span class="built_in">htons</span> (port);</span><br><span class="line">serv.IP = <span class="built_in">htonl</span> (INADDR_ANY);</span><br><span class="line"><span class="built_in">bind</span> (lfd. &amp;serv, <span class="built_in"><span class="keyword">sizeof</span></span> (serv));</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<h4 id="3- 监听"><a href="#3- 监听" class="headerlink" title="3. 监听"></a>3. 监听</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">listen</span> (lfd, <span class="number">128</span>);</span><br></pre></td></tr></table></figure>
-<h4 id="4- 等待并接收连接请求"><a href="#4- 等待并接收连接请求" class="headerlink" title="4. 等待并接收连接请求"></a>4. 等待并接收连接请求</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">client</span>;</span></span><br><span class="line"><span class="keyword">int</span> len = <span class="built_in"><span class="keyword">sizeof</span></span> (client);</span><br><span class="line"><span class="keyword">int</span> cfd = <span class="built_in">accept</span> (lfd, &amp;client, &amp;len);</span><br><span class="line"><span class="comment">//lfd 监听有没有人连接到 Server，如果有就执行 accept</span></span><br><span class="line"><span class="comment">//cfd 是连接之后，用于通信的</span></span><br></pre></td></tr></table></figure>
-<h4 id="5- 通信"><a href="#5- 通信" class="headerlink" title="5. 通信"></a>5. 通信 </h4><p> 接收数据：read/recv<br>发送数据：write/send</p>
-<h4 id="6- 关闭"><a href="#6- 关闭" class="headerlink" title="6. 关闭"></a>6. 关闭</h4><p>close (lfd);<br>close (cfd);</p>
-<h3 id="回顾：socket-tcp-client- 实现"><a href="# 回顾：socket-tcp-client- 实现" class="headerlink" title="回顾：socket tcp client 实现"></a>回顾：socket tcp client 实现</h3><h4 id="1- 创建套接字 -1"><a href="#1- 创建套接字 -1" class="headerlink" title="1. 创建套接字"></a>1. 创建套接字</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> fd = socket;</span><br></pre></td></tr></table></figure>
-<h4 id="2- 连接服务器"><a href="#2- 连接服务器" class="headerlink" title="2. 连接服务器"></a>2. 连接服务器</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 客户端的端口可以不用固定，直接占用一个空闲端口就可以了（随机分配）</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">server</span>;</span></span><br><span class="line">server.port = ...;</span><br><span class="line">server.ip = ...;</span><br><span class="line">server.family = ...;</span><br><span class="line"><span class="built_in">connect</span> (fd, &amp;server, <span class="built_in"><span class="keyword">sizeof</span></span> (server));</span><br></pre></td></tr></table></figure>
-<h4 id="3- 通信"><a href="#3- 通信" class="headerlink" title="3. 通信"></a>3. 通信 </h4><p> 接收数据：read/recv<br>发送数据：write/send</p>
-<h4 id="4- 断开连接"><a href="#4- 断开连接" class="headerlink" title="4. 断开连接"></a>4. 断开连接</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">close</span> (fd);</span><br></pre></td></tr></table></figure>
-<h3 id="一、TCP- 客户端编程"><a href="# 一、TCP- 客户端编程" class="headerlink" title="一、TCP 客户端编程"></a>一、TCP 客户端编程</h3><h4 id="1-socket- 函数"><a href="#1-socket- 函数" class="headerlink" title="1.socket () 函数"></a>1.socket () 函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">socket</span> <span class="params">(<span class="keyword">int</span> domain, <span class="keyword">int</span> type, <span class="keyword">int</span> protocol)</span></span>;</span><br></pre></td></tr></table></figure>
-<h5 id="1-domain：即协议域，又称为协议族（family）- 地址族。"><a href="#1-domain：即协议域，又称为协议族（family）- 地址族。" class="headerlink" title="(1) domain：即协议域，又称为协议族（family）, 地址族。"></a>(1) domain：即协议域，又称为协议族（family）, 地址族。</h5><p>常用的协议族有，AF_INET、AF_INET6、AF_LOCAL（或称 AF_UNIX，Unix 域 socket）、AF_ROUTE 等等。协议族决定了 socket 的地址类型，在通信中必须采用对应的地址，如 AF_INET 决定了要用 ipv4 地址（32 位的）与端口号（16 位的）的组合、AF_UNIX 决定了要用一个绝对路径名作为地址。</p>
-<h5 id="2-type：指定 -socket- 类型。"><a href="#2-type：指定 -socket- 类型。" class="headerlink" title="(2) type：指定 socket 类型。"></a>(2) type：指定 socket 类型。</h5><p>常用的 socket 类型有，SOCK_STREAM、SOCK_DGRAM、SOCK_RAW、SOCK_PACKET、SOCK_SEQPACKET 等等（socket 的类型有哪些？）。这个参数指定一个套接口的类型，套接口可能的类型有：SOCK_STREAM、SOCK_DGRAM、SOCK_SEQPACKET、SOCK_RAW 等等，它们分别表明字节流、数据报、有序分组、原始套接口。这实际上是指定内核为我们提供的服务抽象，比如我们要一个字节流。需要注意的，并不是每一种协议簇都支持这里的所有的类型，所以类型与协议簇要匹配。</p>
-<h5 id="3-protocol：故名思意，就是指定协议。"><a href="#3-protocol：故名思意，就是指定协议。" class="headerlink" title="(3) protocol：故名思意，就是指定协议。"></a>(3) protocol：故名思意，就是指定协议。</h5><p>常用的协议有，IPPROTO_TCP、IPPTOTO_UDP、IPPROTO_SCTP、IPPROTO_TIPC 等，它们分别对应 TCP 传输协议、UDP 传输协议、STCP 传输协议、TIPC 传输协议。详见 usr/include/linux/in.h。<br>当 protocol 为 0 时，会自动选择 type 类型对应的默认协议。</p>
-<h5 id="4- 返回值"><a href="#4- 返回值" class="headerlink" title="(4) 返回值"></a>(4) 返回值 </h5><p> 当我们调用 socket 创建一个 socket 时，返回的 socket 描述字它存在于协议族（address family，AF_XXX）空间中，但没有一个具体的地址。如果想要给它赋值一个地址，就必须调用 bind () 函数，否则就当调用 connect ()、listen () 时系统会自动随机分配一个端口。</p>
-<h4 id="2-memset- 函数"><a href="#2-memset- 函数" class="headerlink" title="2.memset () 函数"></a>2.memset () 函数</h4><p>string.h 的函数 memset () 将某一内存块的前 n 个字元全部设定为某一资字元。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s [];</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">&quot;% s\n&quot;</span>, <span class="built_in">memset</span> (s, <span class="string">&#x27;n&#x27;</span>, <span class="number">13</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="3-htons- 函数"><a href="#3-htons- 函数" class="headerlink" title="3.htons () 函数"></a>3.htons () 函数</h4><h4 id="4-inet-pton- 函数"><a href="#4-inet-pton- 函数" class="headerlink" title="4.inet_pton () 函数"></a>4.inet_pton () 函数</h4><h4 id="5-bind- 函数"><a href="#5-bind- 函数" class="headerlink" title="5.bind () 函数"></a>5.bind () 函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bind</span> <span class="params">(<span class="keyword">int</span> sockfd, struct sockaddr *my_addr, <span class="keyword">socklen_t</span> addrlen)</span></span>;</span><br></pre></td></tr></table></figure>
-<p>当一个套接字被创建后，存在一个名字空间（地址族），但它没有被命名。bind () 将套接字地址（包括本地主机地址和本地端口地址）与所创建的套接字号联系起来，即将名字赋予套接字，以对 socket 定位。</p>
-<p>bind () 用来设置给参数 sockfd 的 socket 一个名称。此名称由参数 my_addr 指向一 sockaddr 结构，对于不同的 socket domain 定义了一个通用的数据结构。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr</span> &#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="keyword">int</span> sa_family;</span><br><span class="line">    <span class="keyword">char</span> sa_data [<span class="number">14</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> sa_family 为调用 socket () 时的 domain 参数，即 AF_xxxx 值。<br>sa_data 最多使用 14 个字符长度。</p>
-<p>此 sockaddr 结构会因使用不同的 socket domain 而有不同结构定义，例如使用 AF_INET domain，其 socketaddr 结构定义便为：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">socketaddr_in</span> &#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="keyword">int</span> sin_family;</span><br><span class="line">    <span class="keyword">uint16_t</span> sin_port;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> <span class="title">sin_addr</span>;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> sin_zero [<span class="number">8</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint32_t</span> s_addr;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> sin_family 即为 sa_family<br>sin_port 为使用的 port 编号<br>sin_addr.s_addr 为 IP 地址<br>sin_zero 未使用，是为了让 sockaddr 与 sockaddr_in 两个数据结构保持大小相同而保留的空字节。</p>
-<h5 id="6-connect- 函数"><a href="#6-connect- 函数" class="headerlink" title="6.connect () 函数"></a>6.connect () 函数</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>  <span class="title">connect</span> <span class="params">(<span class="keyword">int</span>  sockfd,  <span class="keyword">const</span> struct sockaddr *serv_addr, <span class="keyword">socklen_t</span> addrlen)</span></span>;</span><br></pre></td></tr></table></figure>
-<p>connect () 用来将参数 sockfd 的 socket 连至参数 serv_addr 指定的网络地址。参数 addrlen 为 sockaddr 的结构长度。<br>返回值：成功则返回 0，失败返回 - 1，错误原因存于 errno 中。</p>
-<h5 id="7-fgets- 函数"><a href="#7-fgets- 函数" class="headerlink" title="7.fgets () 函数"></a>7.fgets () 函数 </h5><p> 虽然用 gets () 时有空格也可以直接输入，但是 gets () 有一个非常大的缺陷，即它不检查预留存储区是否能够容纳实际输入的数据，换句话说，如果输入的字符数目大于数组的长度，gets 无法检测到这个问题，就会发生内存越界，所以编程时建议使用 fgets ()。<br>fgets () 的原型为：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">fgets</span> <span class="params">(<span class="keyword">char</span> *s, <span class="keyword">int</span> size, FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure><br>fgets () 虽然比 gets () 安全，但安全是要付出代价的，代价就是它的使用比 gets () 要麻烦一点，有三个参数。它的功能是从 stream 流中读取 size 个字符存储到字符指针变量 s 所指向的内存空间。它的返回值是一个指针，指向字符串中第一个字符的地址。</p>
-<h5 id="8-write- 函数"><a href="#8-write- 函数" class="headerlink" title="8.write () 函数"></a>8.write () 函数</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">ssize_t</span> <span class="title">write</span> <span class="params">(<span class="keyword">int</span> filedes, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> nbytes)</span></span>;</span><br><span class="line"><span class="comment">// 返回：若成功则返回写入的字节数，若出错则返回 - 1</span></span><br><span class="line"><span class="comment">//filedes：文件描述符</span></span><br><span class="line"><span class="comment">//buf: 待写入数据缓存区</span></span><br><span class="line"><span class="comment">//nbytes: 要写入的字节数</span></span><br></pre></td></tr></table></figure>
-<h5 id="9-read- 函数"><a href="#9-read- 函数" class="headerlink" title="9.read () 函数"></a>9.read () 函数 </h5><h4 id="实现"><a href="# 实现" class="headerlink" title="实现"></a> 实现</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span>* argv [])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">// 让用户输入端口</span></span><br><span class="line">	<span class="keyword">if</span> (argc &lt; <span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">&quot;eg: ./a.out port\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> port = <span class="built_in">atoi</span> (argv [<span class="number">1</span>]);</span><br><span class="line">	<span class="comment">// 创建套接字</span></span><br><span class="line">	<span class="keyword">int</span> fd = <span class="built_in">socket</span> (AF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 连接服务器</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv</span>;</span></span><br><span class="line">	serv.sin_family = AF_INET;</span><br><span class="line">	serv.sin_port = <span class="built_in">htons</span> (port);</span><br><span class="line">	<span class="comment">//serv.sin_addr.s_addr = htonl ();</span></span><br><span class="line">	<span class="built_in">inet_pton</span> (AF_INET, <span class="string">&quot;127.0.0.1&quot;</span>, &amp;serv.sin_addr.s_addr);</span><br><span class="line">	<span class="built_in">connect</span> (fd, (struct sockaddr*)&amp;serv, <span class="built_in"><span class="keyword">sizeof</span></span> (serv));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通信</span></span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">        <span class="comment">// 发送数据</span></span><br><span class="line">        <span class="keyword">char</span> buf [<span class="number">1024</span>];</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">&quot; 请输入要发送方的字符串：\n&quot;</span>)</span><br><span class="line">        <span class="built_in">fgets</span> (buf, <span class="built_in"><span class="keyword">sizeof</span></span> (buf), stdin);</span><br><span class="line">        <span class="built_in">write</span> (fd, buf, <span class="built_in">strlen</span> (buf));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 等待接收数据</span></span><br><span class="line">        <span class="keyword">int</span> len = <span class="built_in">read</span> (fd, buf, <span class="built_in"><span class="keyword">sizeof</span></span> (buf));</span><br><span class="line">        <span class="keyword">if</span> (len == <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="built_in">perror</span> (<span class="string">&quot;read error&quot;</span>);</span><br><span class="line">        	<span class="built_in">exit</span> (<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (len == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="comment">// 服务器关闭连接，read () 函数就不会阻塞</span></span><br><span class="line">        	<span class="built_in">printf</span> (<span class="string">&quot; 服务器关闭了连接 \n&quot;</span>);</span><br><span class="line">        	<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="built_in">printf</span> (<span class="string">&quot;recv buf: % s\n&quot;</span>, buf);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">close</span> (fd);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="二、TCP- 服务器端编程"><a href="# 二、TCP- 服务器端编程" class="headerlink" title="二、TCP 服务器端编程"></a>二、TCP 服务器端编程 </h3><h3 id="三、TCP- 三次握手"><a href="# 三、TCP- 三次握手" class="headerlink" title="三、TCP 三次握手"></a> 三、TCP 三次握手 </h3><p> 开启 socket 的时候，操作系统会自动握手；关闭 socket 的时候，操作系统会自动挥手。所以这两个概念只要了解就行了。</p>
-<h3 id="三、TCP- 四次挥手"><a href="# 三、TCP- 四次挥手" class="headerlink" title="三、TCP 四次挥手"></a>三、TCP 四次挥手 </h3><h3 id="四、滑动窗口"><a href="# 四、滑动窗口" class="headerlink" title="四、滑动窗口"></a> 四、滑动窗口 </h3><h3 id="五、错误处理函数封装"><a href="# 五、错误处理函数封装" class="headerlink" title="五、错误处理函数封装"></a> 五、错误处理函数封装 </h3><p> 如果一个函数有部分不符合你的需求，可以自己封装，例如：淘宝封装 nginx</p>
-<h3 id="六、TCP- 多进程并发服务器"><a href="# 六、TCP- 多进程并发服务器" class="headerlink" title="六、TCP 多进程并发服务器"></a>六、TCP 多进程并发服务器 </h3><p> 进程和线程的数据共享模式不一样。</p>
-<h3 id="七、TCP- 多线程并发服务器"><a href="# 七、TCP- 多线程并发服务器" class="headerlink" title="七、TCP 多线程并发服务器"></a>七、TCP 多线程并发服务器</h3><h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览</h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>tcp</tag>
-        <tag>三次握手</tag>
-        <tag>并发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ advance（六）Linux 高并发网络编程开发 --1. 网络编程基础 socket</title>
     <url>/2021/04/16/C++%20advance6.1/</url>
     <content><![CDATA[<h3 id="一、网络基础"><a href="# 一、网络基础" class="headerlink" title="一、网络基础"></a>一、网络基础 </h3><h4 id="1- 网络"><a href="#1- 网络" class="headerlink" title="1. 网络"></a>1. 网络</h4><h5 id="1-C-S-client-server"><a href="#1-C-S-client-server" class="headerlink" title="(1) C/S-client/server"></a>(1) C/S-client/server</h5><p> 优点: (a) 协议选用灵活 (b) 可以缓存数据 <br> 缺点: (a) 对用户安全构成威胁 (b) 开发工作量大，调试困难 (多线程实时数据同步、实时数据同步)<span id="more"></span></p>
@@ -596,6 +551,51 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --2.tcp 三次握手 - 并发</title>
+    <url>/2021/04/16/C++%20advance6.2/</url>
+    <content><![CDATA[<h3 id="回顾：socket-tcp-server- 实现"><a href="# 回顾：socket-tcp-server- 实现" class="headerlink" title="回顾：socket tcp server 实现"></a>回顾：socket tcp server 实现</h3><h4 id="1- 创建套接字"><a href="#1- 创建套接字" class="headerlink" title="1. 创建套接字"></a>1. 创建套接字</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> lfd = <span class="built_in">socket</span> ();</span><br></pre></td></tr></table></figure>
+<h4 id="2- 绑定本地 -IP- 和端口"><a href="#2- 绑定本地 -IP- 和端口" class="headerlink" title="2. 绑定本地 IP 和端口"></a>2. 绑定本地 IP 和端口</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv</span>;</span></span><br><span class="line">serv.port = <span class="built_in">htons</span> (port);</span><br><span class="line">serv.IP = <span class="built_in">htonl</span> (INADDR_ANY);</span><br><span class="line"><span class="built_in">bind</span> (lfd. &amp;serv, <span class="built_in"><span class="keyword">sizeof</span></span> (serv));</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h4 id="3- 监听"><a href="#3- 监听" class="headerlink" title="3. 监听"></a>3. 监听</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">listen</span> (lfd, <span class="number">128</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="4- 等待并接收连接请求"><a href="#4- 等待并接收连接请求" class="headerlink" title="4. 等待并接收连接请求"></a>4. 等待并接收连接请求</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">client</span>;</span></span><br><span class="line"><span class="keyword">int</span> len = <span class="built_in"><span class="keyword">sizeof</span></span> (client);</span><br><span class="line"><span class="keyword">int</span> cfd = <span class="built_in">accept</span> (lfd, &amp;client, &amp;len);</span><br><span class="line"><span class="comment">//lfd 监听有没有人连接到 Server，如果有就执行 accept</span></span><br><span class="line"><span class="comment">//cfd 是连接之后，用于通信的</span></span><br></pre></td></tr></table></figure>
+<h4 id="5- 通信"><a href="#5- 通信" class="headerlink" title="5. 通信"></a>5. 通信 </h4><p> 接收数据：read/recv<br>发送数据：write/send</p>
+<h4 id="6- 关闭"><a href="#6- 关闭" class="headerlink" title="6. 关闭"></a>6. 关闭</h4><p>close (lfd);<br>close (cfd);</p>
+<h3 id="回顾：socket-tcp-client- 实现"><a href="# 回顾：socket-tcp-client- 实现" class="headerlink" title="回顾：socket tcp client 实现"></a>回顾：socket tcp client 实现</h3><h4 id="1- 创建套接字 -1"><a href="#1- 创建套接字 -1" class="headerlink" title="1. 创建套接字"></a>1. 创建套接字</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> fd = socket;</span><br></pre></td></tr></table></figure>
+<h4 id="2- 连接服务器"><a href="#2- 连接服务器" class="headerlink" title="2. 连接服务器"></a>2. 连接服务器</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 客户端的端口可以不用固定，直接占用一个空闲端口就可以了（随机分配）</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">server</span>;</span></span><br><span class="line">server.port = ...;</span><br><span class="line">server.ip = ...;</span><br><span class="line">server.family = ...;</span><br><span class="line"><span class="built_in">connect</span> (fd, &amp;server, <span class="built_in"><span class="keyword">sizeof</span></span> (server));</span><br></pre></td></tr></table></figure>
+<h4 id="3- 通信"><a href="#3- 通信" class="headerlink" title="3. 通信"></a>3. 通信 </h4><p> 接收数据：read/recv<br>发送数据：write/send</p>
+<h4 id="4- 断开连接"><a href="#4- 断开连接" class="headerlink" title="4. 断开连接"></a>4. 断开连接</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">close</span> (fd);</span><br></pre></td></tr></table></figure>
+<h3 id="一、TCP- 客户端编程"><a href="# 一、TCP- 客户端编程" class="headerlink" title="一、TCP 客户端编程"></a>一、TCP 客户端编程</h3><h4 id="1-socket- 函数"><a href="#1-socket- 函数" class="headerlink" title="1.socket () 函数"></a>1.socket () 函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">socket</span> <span class="params">(<span class="keyword">int</span> domain, <span class="keyword">int</span> type, <span class="keyword">int</span> protocol)</span></span>;</span><br></pre></td></tr></table></figure>
+<h5 id="1-domain：即协议域，又称为协议族（family）- 地址族。"><a href="#1-domain：即协议域，又称为协议族（family）- 地址族。" class="headerlink" title="(1) domain：即协议域，又称为协议族（family）, 地址族。"></a>(1) domain：即协议域，又称为协议族（family）, 地址族。</h5><p>常用的协议族有，AF_INET、AF_INET6、AF_LOCAL（或称 AF_UNIX，Unix 域 socket）、AF_ROUTE 等等。协议族决定了 socket 的地址类型，在通信中必须采用对应的地址，如 AF_INET 决定了要用 ipv4 地址（32 位的）与端口号（16 位的）的组合、AF_UNIX 决定了要用一个绝对路径名作为地址。</p>
+<h5 id="2-type：指定 -socket- 类型。"><a href="#2-type：指定 -socket- 类型。" class="headerlink" title="(2) type：指定 socket 类型。"></a>(2) type：指定 socket 类型。</h5><p>常用的 socket 类型有，SOCK_STREAM、SOCK_DGRAM、SOCK_RAW、SOCK_PACKET、SOCK_SEQPACKET 等等（socket 的类型有哪些？）。这个参数指定一个套接口的类型，套接口可能的类型有：SOCK_STREAM、SOCK_DGRAM、SOCK_SEQPACKET、SOCK_RAW 等等，它们分别表明字节流、数据报、有序分组、原始套接口。这实际上是指定内核为我们提供的服务抽象，比如我们要一个字节流。需要注意的，并不是每一种协议簇都支持这里的所有的类型，所以类型与协议簇要匹配。</p>
+<h5 id="3-protocol：故名思意，就是指定协议。"><a href="#3-protocol：故名思意，就是指定协议。" class="headerlink" title="(3) protocol：故名思意，就是指定协议。"></a>(3) protocol：故名思意，就是指定协议。</h5><p>常用的协议有，IPPROTO_TCP、IPPTOTO_UDP、IPPROTO_SCTP、IPPROTO_TIPC 等，它们分别对应 TCP 传输协议、UDP 传输协议、STCP 传输协议、TIPC 传输协议。详见 usr/include/linux/in.h。<br>当 protocol 为 0 时，会自动选择 type 类型对应的默认协议。</p>
+<h5 id="4- 返回值"><a href="#4- 返回值" class="headerlink" title="(4) 返回值"></a>(4) 返回值 </h5><p> 当我们调用 socket 创建一个 socket 时，返回的 socket 描述字它存在于协议族（address family，AF_XXX）空间中，但没有一个具体的地址。如果想要给它赋值一个地址，就必须调用 bind () 函数，否则就当调用 connect ()、listen () 时系统会自动随机分配一个端口。</p>
+<h4 id="2-memset- 函数"><a href="#2-memset- 函数" class="headerlink" title="2.memset () 函数"></a>2.memset () 函数</h4><p>string.h 的函数 memset () 将某一内存块的前 n 个字元全部设定为某一资字元。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s [];</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">&quot;% s\n&quot;</span>, <span class="built_in">memset</span> (s, <span class="string">&#x27;n&#x27;</span>, <span class="number">13</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-htons- 函数"><a href="#3-htons- 函数" class="headerlink" title="3.htons () 函数"></a>3.htons () 函数</h4><h4 id="4-inet-pton- 函数"><a href="#4-inet-pton- 函数" class="headerlink" title="4.inet_pton () 函数"></a>4.inet_pton () 函数</h4><h4 id="5-bind- 函数"><a href="#5-bind- 函数" class="headerlink" title="5.bind () 函数"></a>5.bind () 函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bind</span> <span class="params">(<span class="keyword">int</span> sockfd, struct sockaddr *my_addr, <span class="keyword">socklen_t</span> addrlen)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>当一个套接字被创建后，存在一个名字空间（地址族），但它没有被命名。bind () 将套接字地址（包括本地主机地址和本地端口地址）与所创建的套接字号联系起来，即将名字赋予套接字，以对 socket 定位。</p>
+<p>bind () 用来设置给参数 sockfd 的 socket 一个名称。此名称由参数 my_addr 指向一 sockaddr 结构，对于不同的 socket domain 定义了一个通用的数据结构。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr</span> &#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="keyword">int</span> sa_family;</span><br><span class="line">    <span class="keyword">char</span> sa_data [<span class="number">14</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> sa_family 为调用 socket () 时的 domain 参数，即 AF_xxxx 值。<br>sa_data 最多使用 14 个字符长度。</p>
+<p>此 sockaddr 结构会因使用不同的 socket domain 而有不同结构定义，例如使用 AF_INET domain，其 socketaddr 结构定义便为：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">socketaddr_in</span> &#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="keyword">int</span> sin_family;</span><br><span class="line">    <span class="keyword">uint16_t</span> sin_port;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> <span class="title">sin_addr</span>;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> sin_zero [<span class="number">8</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint32_t</span> s_addr;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> sin_family 即为 sa_family<br>sin_port 为使用的 port 编号<br>sin_addr.s_addr 为 IP 地址<br>sin_zero 未使用，是为了让 sockaddr 与 sockaddr_in 两个数据结构保持大小相同而保留的空字节。</p>
+<h5 id="6-connect- 函数"><a href="#6-connect- 函数" class="headerlink" title="6.connect () 函数"></a>6.connect () 函数</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>  <span class="title">connect</span> <span class="params">(<span class="keyword">int</span>  sockfd,  <span class="keyword">const</span> struct sockaddr *serv_addr, <span class="keyword">socklen_t</span> addrlen)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>connect () 用来将参数 sockfd 的 socket 连至参数 serv_addr 指定的网络地址。参数 addrlen 为 sockaddr 的结构长度。<br>返回值：成功则返回 0，失败返回 - 1，错误原因存于 errno 中。</p>
+<h5 id="7-fgets- 函数"><a href="#7-fgets- 函数" class="headerlink" title="7.fgets () 函数"></a>7.fgets () 函数 </h5><p> 虽然用 gets () 时有空格也可以直接输入，但是 gets () 有一个非常大的缺陷，即它不检查预留存储区是否能够容纳实际输入的数据，换句话说，如果输入的字符数目大于数组的长度，gets 无法检测到这个问题，就会发生内存越界，所以编程时建议使用 fgets ()。<br>fgets () 的原型为：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">fgets</span> <span class="params">(<span class="keyword">char</span> *s, <span class="keyword">int</span> size, FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure><br>fgets () 虽然比 gets () 安全，但安全是要付出代价的，代价就是它的使用比 gets () 要麻烦一点，有三个参数。它的功能是从 stream 流中读取 size 个字符存储到字符指针变量 s 所指向的内存空间。它的返回值是一个指针，指向字符串中第一个字符的地址。</p>
+<h5 id="8-write- 函数"><a href="#8-write- 函数" class="headerlink" title="8.write () 函数"></a>8.write () 函数</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">ssize_t</span> <span class="title">write</span> <span class="params">(<span class="keyword">int</span> filedes, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> nbytes)</span></span>;</span><br><span class="line"><span class="comment">// 返回：若成功则返回写入的字节数，若出错则返回 - 1</span></span><br><span class="line"><span class="comment">//filedes：文件描述符</span></span><br><span class="line"><span class="comment">//buf: 待写入数据缓存区</span></span><br><span class="line"><span class="comment">//nbytes: 要写入的字节数</span></span><br></pre></td></tr></table></figure>
+<h5 id="9-read- 函数"><a href="#9-read- 函数" class="headerlink" title="9.read () 函数"></a>9.read () 函数 </h5><h4 id="实现"><a href="# 实现" class="headerlink" title="实现"></a> 实现</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span>* argv [])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">// 让用户输入端口</span></span><br><span class="line">	<span class="keyword">if</span> (argc &lt; <span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">&quot;eg: ./a.out port\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> port = <span class="built_in">atoi</span> (argv [<span class="number">1</span>]);</span><br><span class="line">	<span class="comment">// 创建套接字</span></span><br><span class="line">	<span class="keyword">int</span> fd = <span class="built_in">socket</span> (AF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 连接服务器</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv</span>;</span></span><br><span class="line">	serv.sin_family = AF_INET;</span><br><span class="line">	serv.sin_port = <span class="built_in">htons</span> (port);</span><br><span class="line">	<span class="comment">//serv.sin_addr.s_addr = htonl ();</span></span><br><span class="line">	<span class="built_in">inet_pton</span> (AF_INET, <span class="string">&quot;127.0.0.1&quot;</span>, &amp;serv.sin_addr.s_addr);</span><br><span class="line">	<span class="built_in">connect</span> (fd, (struct sockaddr*)&amp;serv, <span class="built_in"><span class="keyword">sizeof</span></span> (serv));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通信</span></span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">        <span class="comment">// 发送数据</span></span><br><span class="line">        <span class="keyword">char</span> buf [<span class="number">1024</span>];</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">&quot; 请输入要发送方的字符串：\n&quot;</span>)</span><br><span class="line">        <span class="built_in">fgets</span> (buf, <span class="built_in"><span class="keyword">sizeof</span></span> (buf), stdin);</span><br><span class="line">        <span class="built_in">write</span> (fd, buf, <span class="built_in">strlen</span> (buf));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 等待接收数据</span></span><br><span class="line">        <span class="keyword">int</span> len = <span class="built_in">read</span> (fd, buf, <span class="built_in"><span class="keyword">sizeof</span></span> (buf));</span><br><span class="line">        <span class="keyword">if</span> (len == <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="built_in">perror</span> (<span class="string">&quot;read error&quot;</span>);</span><br><span class="line">        	<span class="built_in">exit</span> (<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (len == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="comment">// 服务器关闭连接，read () 函数就不会阻塞</span></span><br><span class="line">        	<span class="built_in">printf</span> (<span class="string">&quot; 服务器关闭了连接 \n&quot;</span>);</span><br><span class="line">        	<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="built_in">printf</span> (<span class="string">&quot;recv buf: % s\n&quot;</span>, buf);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">close</span> (fd);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二、TCP- 服务器端编程"><a href="# 二、TCP- 服务器端编程" class="headerlink" title="二、TCP 服务器端编程"></a>二、TCP 服务器端编程 </h3><h3 id="三、TCP- 三次握手"><a href="# 三、TCP- 三次握手" class="headerlink" title="三、TCP 三次握手"></a> 三、TCP 三次握手 </h3><p> 开启 socket 的时候，操作系统会自动握手；关闭 socket 的时候，操作系统会自动挥手。所以这两个概念只要了解就行了。</p>
+<h3 id="三、TCP- 四次挥手"><a href="# 三、TCP- 四次挥手" class="headerlink" title="三、TCP 四次挥手"></a>三、TCP 四次挥手 </h3><h3 id="四、滑动窗口"><a href="# 四、滑动窗口" class="headerlink" title="四、滑动窗口"></a> 四、滑动窗口 </h3><h3 id="五、错误处理函数封装"><a href="# 五、错误处理函数封装" class="headerlink" title="五、错误处理函数封装"></a> 五、错误处理函数封装 </h3><p> 如果一个函数有部分不符合你的需求，可以自己封装，例如：淘宝封装 nginx</p>
+<h3 id="六、TCP- 多进程并发服务器"><a href="# 六、TCP- 多进程并发服务器" class="headerlink" title="六、TCP 多进程并发服务器"></a>六、TCP 多进程并发服务器 </h3><p> 进程和线程的数据共享模式不一样。</p>
+<h3 id="七、TCP- 多线程并发服务器"><a href="# 七、TCP- 多线程并发服务器" class="headerlink" title="七、TCP 多线程并发服务器"></a>七、TCP 多线程并发服务器</h3><h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览</h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>tcp</tag>
+        <tag>三次握手</tag>
+        <tag>并发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ advance（六）Linux 高并发网络编程开发 --3.tcp 状态转换 - selcet-poll</title>
     <url>/2021/04/16/C++%20advance6.3/</url>
     <content><![CDATA[<span id="more"></span>
@@ -629,6 +629,21 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --6.libevent</title>
+    <url>/2021/04/16/C++%20advance6.6/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>libevent</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ advance（六）Linux 高并发网络编程开发 --5. 广播 - 组播 - 本地套接字</title>
     <url>/2021/04/16/C++%20advance6.5/</url>
     <content><![CDATA[<span id="more"></span>
@@ -643,21 +658,6 @@
         <tag>广播</tag>
         <tag>组播</tag>
         <tag>本地套接字</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --6.libevent</title>
-    <url>/2021/04/16/C++%20advance6.6/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>libevent</tag>
       </tags>
   </entry>
   <entry>
@@ -807,22 +807,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 运算符</title>
-    <url>/2018/09/23/C++%20operator/</url>
-    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
-<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
-<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
-<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>运算符</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ include</title>
     <url>/2018/10/27/C++%20include/</url>
     <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
@@ -838,6 +822,22 @@
         <tag>C++</tag>
         <tag>include</tag>
         <tag>预处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 运算符</title>
+    <url>/2018/09/23/C++%20operator/</url>
+    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
+<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
+<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>运算符</tag>
       </tags>
   </entry>
   <entry>
@@ -1050,24 +1050,30 @@
     <url>/2021/04/28/Engineering-Practice-2A-1/</url>
     <content><![CDATA[<h3 id="一、编程开发环境安装与配置"><a href="# 一、编程开发环境安装与配置" class="headerlink" title="一、编程开发环境安装与配置"></a>一、编程开发环境安装与配置 </h3><p> 基于 TM4C1294NCPDT 微控制器，编程开发环境安装与配置（Keil5 + TivaWare）<br>TM4C1294 属于 TI 公司基于 ARM Cortex M4 内核的 Tiva C 系列的 MCU<br>TivaWare 是 TI 公司提供的针对 Tiva C 系列 MCU 的一套软件开发包</p>
 <h4 id="1- 开发板介绍"><a href="#1- 开发板介绍" class="headerlink" title="1. 开发板介绍"></a>1. 开发板介绍</h4><p><img src="/2021/04/28/Engineering-Practice-2A-1/photo1.jpg" alt></p>
-<h5 id="1-MCU"><a href="#1-MCU" class="headerlink" title="(1) MCU"></a>(1) MCU</h5><h5 id="2- 仿真器电路：将在电脑上写的程式下载到 -MCU- 中"><a href="#2- 仿真器电路：将在电脑上写的程式下载到 -MCU- 中" class="headerlink" title="(2) 仿真器电路：将在电脑上写的程式下载到 MCU 中"></a>(2) 仿真器电路：将在电脑上写的程式下载到 MCU 中</h5><h5 id="3- 引脚"><a href="#3- 引脚" class="headerlink" title="(3) 引脚"></a>(3) 引脚</h5><p><img src="/2021/04/28/Engineering-Practice-2A-1/photo2.jpg" alt="软件包安装"></p>
+<h5 id="1-MCU"><a href="#1-MCU" class="headerlink" title="(1) MCU"></a>(1) MCU</h5><h5 id="2- 仿真器电路：将在电脑上写的程式下载到 -MCU- 中"><a href="#2- 仿真器电路：将在电脑上写的程式下载到 -MCU- 中" class="headerlink" title="(2) 仿真器电路：将在电脑上写的程式下载到 MCU 中"></a>(2) 仿真器电路：将在电脑上写的程式下载到 MCU 中</h5><h5 id="3- 引脚"><a href="#3- 引脚" class="headerlink" title="(3) 引脚"></a>(3) 引脚</h5><p><img src="/2021/04/28/Engineering-Practice-2A-1/photo2.png" alt="软件包安装"></p>
 <h4 id="2-Keil5- 集成开发环境安装"><a href="#2-Keil5- 集成开发环境安装" class="headerlink" title="2.Keil5 集成开发环境安装"></a>2.Keil5 集成开发环境安装 </h4><h4 id="3-TM4C- 系列芯片及板卡的 -DFP- 安装"><a href="#3-TM4C- 系列芯片及板卡的 -DFP- 安装" class="headerlink" title="3.TM4C 系列芯片及板卡的 DFP 安装"></a>3.TM4C 系列芯片及板卡的 DFP 安装</h4><p> 完成 Keil.TM4C_DFP.1.1.0.pack 安装后，<br>可以在 Keil 集成开发环境中选择 TI 公司的 TM4C 系列芯片</p>
 <h4 id="4-TM4C1294XL- 的驱动库及样例程序安装"><a href="#4-TM4C1294XL- 的驱动库及样例程序安装" class="headerlink" title="4.TM4C1294XL 的驱动库及样例程序安装"></a>4.TM4C1294XL 的驱动库及样例程序安装 </h4><p> 运行 SW-EK-TM4C1294XL-2.1.4.178.exe</p>
-<h4 id="5-Stellaris-ICDI- 调试驱动安装"><a href="#5-Stellaris-ICDI- 调试驱动安装" class="headerlink" title="5.Stellaris ICDI 调试驱动安装"></a>5.Stellaris ICDI 调试驱动安装 </h4><p> 将 TM4C1294XL LaunchPad 开发板通过 USB 线与电脑相连 <br> 打开电脑的设备管理器（如果没有安装 Stellaris ICDI 设备驱动，会显示无法识别该设备）</p>
-<h3 id="二、在 -Keil5- 中建立 -TM4C1294- 项目"><a href="# 二、在 -Keil5- 中建立 -TM4C1294- 项目" class="headerlink" title="二、在 Keil5 中建立 TM4C1294 项目"></a>二、在 Keil5 中建立 TM4C1294 项目 </h3><h3 id="三、TivaWare- 库"><a href="# 三、TivaWare- 库" class="headerlink" title="三、TivaWare 库"></a> 三、TivaWare 库 </h3><h3 id="四、时钟信号与 -GPIO- 工作原理"><a href="# 四、时钟信号与 -GPIO- 工作原理" class="headerlink" title="四、时钟信号与 GPIO 工作原理"></a> 四、时钟信号与 GPIO 工作原理 </h3><h3 id="五、常用调试方法"><a href="# 五、常用调试方法" class="headerlink" title="五、常用调试方法"></a> 五、常用调试方法</h3>]]></content>
-      <categories>
-        <category>工程实践与科技创新2A</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>工程实践与科技创新 2A-- 实验前准备</title>
-    <url>/2021/04/28/Engineering-Practice-2A-prepare/</url>
-    <content><![CDATA[<ol>
-<li> 新建一个 WorkSpace 文件夹，将三个 lab 的文件夹放进去 </li>
-<li> 打开 Keil，Open project 打开 lab 文件夹中的 exp1.uvprojx</li>
-<li> 编译 build 之后，就可以 load 下载到实验板上 </li>
-</ol>
-]]></content>
+<h4 id="5-Stellaris-ICDI- 调试驱动安装"><a href="#5-Stellaris-ICDI- 调试驱动安装" class="headerlink" title="5.Stellaris ICDI 调试驱动安装"></a>5.Stellaris ICDI 调试驱动安装 </h4><p> 将 TM4C1294XL LaunchPad 开发板通过 USB 线与电脑相连 <br> 打开电脑的设备管理器（如果没有安装 Stellaris ICDI 设备驱动，会显示无法识别该设备）<br>更新驱动程式，从电脑中选择驱动软件，老师给的软件安装包中有<br><img src="/2021/04/28/Engineering-Practice-2A-1/photo8.png" alt="安装驱动成功之后"></p>
+<h3 id="二、在 -Keil5- 中建立基于 -TivaWare- 库的 -TM4C1294- 项目"><a href="# 二、在 -Keil5- 中建立基于 -TivaWare- 库的 -TM4C1294- 项目" class="headerlink" title="二、在 Keil5 中建立基于 TivaWare 库的 TM4C1294 项目"></a>二、在 Keil5 中建立基于 TivaWare 库的 TM4C1294 项目 </h3><h4 id="1- 介绍安装的文件夹"><a href="#1- 介绍安装的文件夹" class="headerlink" title="1. 介绍安装的文件夹"></a>1. 介绍安装的文件夹</h4><p> 安装默认路径：C:\ti\TivaWare_C_Series-2.1.4.178<br>(1) 目录 \inc 中包含针对 TM4C1294XL 系列芯片开发的.h 文件 <br>(2) 目录 \drivelib 中包含针对 TM4C1294XL 系列芯片开发的各种功能.c 源文件以及对应的.h 文件<br> 这些文件被编译在一个.lib 文件中 (drivelib)<br>不同开发软件所编译的库文件格式有所不同<br>Keil 所生成的库文件 drivelib.lib 位于目录 \driverlib\rvmdk</p>
+<h4 id="2- 建立项目"><a href="#2- 建立项目" class="headerlink" title="2. 建立项目"></a>2. 建立项目 </h4><p> 新建用户目录设为 C:\A2000TM4\EXP0<br>从 C:\ti\TivaWare_C_Series-2.1.4.178 中，将 \inc 和 \driverlib 两个子目录拷贝到用户目录中</p>
+<h3 id="三、TivaWare- 库"><a href="# 三、TivaWare- 库" class="headerlink" title="三、TivaWare 库"></a>三、TivaWare 库 </h3><h3 id="四、时钟信号与 -GPIO- 工作原理"><a href="# 四、时钟信号与 -GPIO- 工作原理" class="headerlink" title="四、时钟信号与 GPIO 工作原理"></a> 四、时钟信号与 GPIO 工作原理</h3><p><img src="/2021/04/28/Engineering-Practice-2A-1/photo3.png" alt="时钟树"></p>
+<h4 id="1-TM4C1294NCPDT- 微控制器有 -4- 种时钟源"><a href="#1-TM4C1294NCPDT- 微控制器有 -4- 种时钟源" class="headerlink" title="1.TM4C1294NCPDT 微控制器有 4 种时钟源"></a>1.TM4C1294NCPDT 微控制器有 4 种时钟源</h4><h5 id="1-PIOSC-Precision-Internal-Oscillator- 内部精密时钟"><a href="#1-PIOSC-Precision-Internal-Oscillator- 内部精密时钟" class="headerlink" title="(1) PIOSC (Precision Internal Oscillator) 内部精密时钟"></a>(1) PIOSC (Precision Internal Oscillator) 内部精密时钟</h5><p>16Hz，未校正时精度有限，容易受温度与供电电压影响</p>
+<h5 id="2-MOSC-Main-Oscillator- 主时钟"><a href="#2-MOSC-Main-Oscillator- 主时钟" class="headerlink" title="(2) MOSC (Main Oscillator) 主时钟"></a>(2) MOSC (Main Oscillator) 主时钟 </h5><p> 实验板上焊接了一个 25Hz 的石英晶体振荡器，可作为高精度时钟源使用</p>
+<h5 id="3-LFIOSC-Low-Frequency-Internal-Osc- 内部低频率时钟"><a href="#3-LFIOSC-Low-Frequency-Internal-Osc- 内部低频率时钟" class="headerlink" title="(3) LFIOSC (Low Frequency Internal Osc) 内部低频率时钟"></a>(3) LFIOSC (Low Frequency Internal Osc) 内部低频率时钟 </h5><p> 通常接入 33KHz 振荡源，用于节能模式</p>
+<h5 id="4-RTCOSC-Hibernation-Module-RTC-Osc- 冬眠模式实时时钟"><a href="#4-RTCOSC-Hibernation-Module-RTC-Osc- 冬眠模式实时时钟" class="headerlink" title="(4) RTCOSC (Hibernation Module RTC Osc) 冬眠模式实时时钟"></a>(4) RTCOSC (Hibernation Module RTC Osc) 冬眠模式实时时钟 </h5><p> 接入 32.768kHz 振荡器</p>
+<p>SYSCLK，系统时钟，可以来源于上述 4 种时钟源之一。<br>微控制器内部有一个 PLL 模块，主要作用是对时钟进行倍频，然后把时钟输入到各个功能部件。<br>PIOSC (16MHz) 和 MOSC (25MHz) 可以通过 PLL 模块将 PLL 频率配置成 320MHz 或是 480MHz，然后从此 PLL 频率经过分频 (1-1024) 到想要的时钟频率。</p>
+<h4 id="2- 系统时钟在不同的工作模式下使用不同的时钟源"><a href="#2- 系统时钟在不同的工作模式下使用不同的时钟源" class="headerlink" title="2. 系统时钟在不同的工作模式下使用不同的时钟源"></a>2. 系统时钟在不同的工作模式下使用不同的时钟源 </h4><p> 微控制器可以工作在 RUN，SLEEP，DEEP SLEEP 模式下，<br>默认情况下，微控制器工作在 RUN 模式下，PIOSC (16MHz) 作为 SYSCLK 的时钟源</p>
+<h4 id="3- 系统时钟配置"><a href="#3- 系统时钟配置" class="headerlink" title="3. 系统时钟配置"></a>3. 系统时钟配置</h4><p>SysClockFreqSet 函数完成系统时钟的设置，详细使用方法可以阅读 driverlib/sysctl.c<br><img src="/2021/04/28/Engineering-Practice-2A-1/photo4.png" alt="SysClockFreqSet 函数"></p>
+<h4 id="4- 通用输入输出端口 -GPIO"><a href="#4- 通用输入输出端口 -GPIO" class="headerlink" title="4. 通用输入输出端口 (GPIO)"></a>4. 通用输入输出端口 (GPIO)</h4><h5 id="1-15- 个物理 -GPIO- 模块，每一个模块对应一个端口，Port-A-H、J-N、P、Q"><a href="#1-15- 个物理 -GPIO- 模块，每一个模块对应一个端口，Port-A-H、J-N、P、Q" class="headerlink" title="(1) 15 个物理 GPIO 模块，每一个模块对应一个端口，Port A~H、J~N、P、Q"></a>(1) 15 个物理 GPIO 模块，每一个模块对应一个端口，Port A~H、J~N、P、Q</h5><p>共 90 个输入 / 输出引脚</p>
+<h5 id="2-GPIO- 模块具有如下特性"><a href="#2-GPIO- 模块具有如下特性" class="headerlink" title="(2) GPIO 模块具有如下特性"></a>(2) GPIO 模块具有如下特性</h5><p>(a) 可编程控制的 GPIO 引脚配置</p>
+<ul>
+<li>设置上拉电阻或下拉电阻 <br> 功能：抗干扰 (因为引脚悬空加上电磁干扰产生的) 或是预设默认电平值 <br> 在电路断开的时候，下拉电阻会得到 low，上拉电阻会得到 High<br><img src="/2021/04/28/Engineering-Practice-2A-1/photo5.png" alt="上拉电阻和下拉电阻"></li>
+<li>推免输出 / 开漏输出 <br> 推挽输出：可以输出高，低电平，连接数字器件；<br>推挽结构一般是指两个三极管分别受两互补信号的控制，总是在一个三极管导通的时候另一个截止</li>
+<li>输出时可配置为 2/4/6/8/10/12mA 驱动电流 <br> 对于需要大电流的应用最多有四个引脚可以配置为 18mA<br>8/10/12mA 驱动的斜率控制</li>
+<li>数字输入 / 模拟输入<br>(b) 配置为输入模式可承受 0~3.3V 电压<br>(c) 高灵活度的复用引脚，可以用作 GPIO，或是一种或多种的外设功能</li>
+</ul>
+<h4 id="5-GPIO- 函数"><a href="#5-GPIO- 函数" class="headerlink" title="5.GPIO 函数"></a>5.GPIO 函数</h4><p><img src="/2021/04/28/Engineering-Practice-2A-1/photo6.png" alt="GPIO 函数"><br><img src="/2021/04/28/Engineering-Practice-2A-1/photo7.png" alt="GPIO 函数"></p>
+<h3 id="五、常用调试方法"><a href="# 五、常用调试方法" class="headerlink" title="五、常用调试方法"></a>五、常用调试方法</h3>]]></content>
       <categories>
         <category>工程实践与科技创新2A</category>
       </categories>
@@ -1188,6 +1194,19 @@
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>工程实践与科技创新 2A-- 实验前准备</title>
+    <url>/2021/04/28/Engineering-Practice-2A-prepare/</url>
+    <content><![CDATA[<ol>
+<li> 新建一个 WorkSpace 文件夹，将三个 lab 的文件夹放进去 </li>
+<li> 打开 Keil，Open project 打开 lab 文件夹中的 exp1.uvprojx</li>
+<li> 编译 build 之后，就可以 load 下载到实验板上 </li>
+</ol>
+]]></content>
+      <categories>
+        <category>工程实践与科技创新2A</category>
       </categories>
   </entry>
   <entry>
@@ -1344,25 +1363,6 @@
       </categories>
   </entry>
   <entry>
-    <title>通信原理 --（8）同步</title>
-    <url>/2020/10/21/communicationSystem-synchronize/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、同步的概念和载波同步"><a href="# 一、同步的概念和载波同步" class="headerlink" title="一、同步的概念和载波同步"></a>一、同步的概念和载波同步</h3><span id="more"></span>
-<h3 id="二、码元同步"><a href="# 二、码元同步" class="headerlink" title="二、码元同步"></a>二、码元同步 </h3><h3 id="三、帧同步、网同步和数字复接"><a href="# 三、帧同步、网同步和数字复接" class="headerlink" title="三、帧同步、网同步和数字复接"></a> 三、帧同步、网同步和数字复接</h3>]]></content>
-      <categories>
-        <category>通信原理</category>
-      </categories>
-      <tags>
-        <tag>通信原理</tag>
-        <tag>同步</tag>
-        <tag>载波同步</tag>
-        <tag>码元同步</tag>
-        <tag>帧同步</tag>
-        <tag>网同步</tag>
-        <tag>数字复接</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>通信原理 --（4）模拟信号数字化</title>
     <url>/2020/09/23/communicationSystem-digitization/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
@@ -1411,6 +1411,25 @@
         <tag>基本概念</tag>
         <tag>组成</tag>
         <tag>性能指标</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通信原理 --（8）同步</title>
+    <url>/2020/10/21/communicationSystem-synchronize/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
+<h3 id="一、同步的概念和载波同步"><a href="# 一、同步的概念和载波同步" class="headerlink" title="一、同步的概念和载波同步"></a>一、同步的概念和载波同步</h3><span id="more"></span>
+<h3 id="二、码元同步"><a href="# 二、码元同步" class="headerlink" title="二、码元同步"></a>二、码元同步 </h3><h3 id="三、帧同步、网同步和数字复接"><a href="# 三、帧同步、网同步和数字复接" class="headerlink" title="三、帧同步、网同步和数字复接"></a> 三、帧同步、网同步和数字复接</h3>]]></content>
+      <categories>
+        <category>通信原理</category>
+      </categories>
+      <tags>
+        <tag>通信原理</tag>
+        <tag>同步</tag>
+        <tag>载波同步</tag>
+        <tag>码元同步</tag>
+        <tag>帧同步</tag>
+        <tag>网同步</tag>
+        <tag>数字复接</tag>
       </tags>
   </entry>
   <entry>
@@ -1528,6 +1547,14 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 实作</title>
+    <url>/2021/04/27/computerNetwork-lab3-2/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+  </entry>
+  <entry>
     <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 原理</title>
     <url>/2021/04/24/computerNetwork-lab3-1/</url>
     <content><![CDATA[<h3 id="一、服务器和客户端的功能"><a href="# 一、服务器和客户端的功能" class="headerlink" title="一、服务器和客户端的功能"></a>一、服务器和客户端的功能</h3><h4 id="1- 客户端需要支持下面几个功能"><a href="#1- 客户端需要支持下面几个功能" class="headerlink" title="1. 客户端需要支持下面几个功能"></a>1. 客户端需要支持下面几个功能</h4><h5 id="1- 连接服务器"><a href="#1- 连接服务器" class="headerlink" title="(1) 连接服务器"></a>(1) 连接服务器</h5><h5 id="2- 支持用户输入聊天消息，发送消息给服务器"><a href="#2- 支持用户输入聊天消息，发送消息给服务器" class="headerlink" title="(2) 支持用户输入聊天消息，发送消息给服务器"></a>(2) 支持用户输入聊天消息，发送消息给服务器</h5><h5 id="3- 接收并显示服务器的消息"><a href="#3- 接收并显示服务器的消息" class="headerlink" title="(3) 接收并显示服务器的消息"></a>(3) 接收并显示服务器的消息</h5><h5 id="4- 退出连接"><a href="#4- 退出连接" class="headerlink" title="(4) 退出连接"></a>(4) 退出连接</h5><span id="more"></span>
@@ -1572,14 +1599,6 @@
       </tags>
   </entry>
   <entry>
-    <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 实作</title>
-    <url>/2021/04/27/computerNetwork-lab3-2/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-  </entry>
-  <entry>
     <title>dos 使用</title>
     <url>/2018/10/27/dos-command/</url>
     <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a>显示目录下的文件</h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录<br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br><span id="more"></span><br>dir/ah 只显示当前路径下隐藏文件和目录<br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
@@ -1605,20 +1624,6 @@
       </categories>
       <tags>
         <tag>git安装</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>怎么取消文章目录中对标题的自动编号</title>
-    <url>/2018/09/05/hexo%20cancel-auto-numbering-in-directory/</url>
-    <content><![CDATA[<p>修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>文章目录</tag>
       </tags>
   </entry>
   <entry>
@@ -1670,6 +1675,20 @@
       </tags>
   </entry>
   <entry>
+    <title>怎么取消文章目录中对标题的自动编号</title>
+    <url>/2018/09/05/hexo%20cancel-auto-numbering-in-directory/</url>
+    <content><![CDATA[<p>修改主题配置文件_config.yml 那里的 number 为 false<br><span id="more"></span></p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>文章目录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo 目錄結構</title>
     <url>/2018/09/19/hexo%20directory-structure/</url>
     <content><![CDATA[<p>.<br>├── node_modules  // 套件暫存處，基本上你所有安裝的套件也都會在這裡<br>├── public        // 執行 hexo generate 後，輸出的靜態網頁<br>├── scaffolds     // 模板。Hexo 會根據 scaffold 來建立新文章 / 新頁面<br>├── scripts       // 存放自定義 js 文件<br>├── source<br>|   ├── _drafts   // 草稿文章<br>|   └── _posts    // 發佈文章<br>├── themes        // Hexo 主题文件，Next 主題的樹狀結構請看下面<br>├── _config.yml   // 整個 Blog 的配置<br>├── .gitignore    // 舉凡只要你不想被加入版本控制甚至是上傳到 GitHub 的資料夾或檔案，都可寫在這<br>├── package-lock.json// 主要是記錄當前狀態安裝的每一個套件版本，他會自己調整，不需要動它<br>└── package.json  // 主要是放置並管理透過 npm 下載的檔案，其中部分指令也是直接寫在這裡面<br><span id="more"></span><br>.<br>└──themes<br>   └── next<br>          ├── doc<br>       ├── languages    // 主題語言字眼<br>       ├── layout       //pug 文件，後會渲染成 html<br>       ├── scripts      //js 文件<br>       ├── source<br>       |   ├── css      //styl 文件，後會渲染成 css<br>       |   ├── img      // 主題配置用到的圖片<br>       |   └── js       //js 文件<br>       ├── test<br>       └── _config.yml  // Butterfly 主題配置</p>
@@ -1701,6 +1720,33 @@
         <tag>文章</tag>
         <tag>插入图片</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>hexo pdf_file</title>
+    <url>/2021/04/29/hexo%20pdf-file/</url>
+    <content><![CDATA[<h3 id="利用 -html- 语法"><a href="# 利用 -html- 语法" class="headerlink" title="利用 html 语法"></a>利用 html 语法 </h3><p> 首先修改_config.yml 文件</p>
+<p>将_config.yml 中的 post_asset_folder 选项置为 true</p>
+<p>post_asset_folder: true</p>
+<p>关于这个选项的功能说明如下:</p>
+<p>当您设置 post_asset_folder 为 true 参数后，在建立文件时，Hexo 会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹，如此一来，您便可以更方便的使用资源。</p>
+<p>然后新建一篇文章</p>
+<p>$ hexo new</p>
+<p>由于上一步已经将 post_asset_folder 选项设为了 true 所以这一步新建文章时会创建一个 md 文件和一个同名的文件夹 为了方便叙述，我用 test 作为文件和文件夹名</p>
+<p>编辑 test.md</p>
+<p>用 vim 或者别的编辑器打开 test.md</p>
+<p>test.md 文件中加入如下代码</p>
+<object data="./test/test.pdf" type="application/pdf" width="100%" height="100%">
+
+<p>关于这句代码简单的解释 data 表示你要上传的 pdf 的路径，使用相对路径，将你要上传的 pdf 放入第二步生成的 test 文件夹。</p>
+<p>这里注意 height 不能设成 100%，不然太矮了，显示效果不好 可以用浏览器预览，通过 F12 预估一下高度。</p>
+<p>例如：</p>
+<object data="./test/test.pdf" type="application/pdf" width="100%" height="877px">
+
+<p>这里不一定非用 object 标签，embed、iframe 标签也一样</p>
+</object></object>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
   </entry>
   <entry>
     <title>參考：架設網站的第一步</title>
@@ -1736,29 +1782,6 @@
       </tags>
   </entry>
   <entry>
-    <title>撰写文章基本操作</title>
-    <url>/2018/09/13/hexo%20write-an-article/</url>
-    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a>加入链结</h4><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
-<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a>加入引用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>引用 1</p>
-</blockquote>
-<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a>改变文字颜色和大小</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;2&quot;</span>&gt;</span> 颜色 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;3&quot;</span>&gt;</span> 大小 <span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
-<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a>加入代码</h4><h4 id="hexo-fluid- 添加 -utterances- 评论功能"><a href="#hexo-fluid- 添加 -utterances- 评论功能" class="headerlink" title="hexo-fluid 添加 utterances 评论功能"></a>hexo-fluid 添加 utterances 评论功能</h4><p><a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a><br><a href="http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/">http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/</a></p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>文章</tag>
-        <tag>基本操作</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>設定 Github SSH 金鑰</title>
     <url>/2018/09/10/hexo%20set-Github-SSH-key/</url>
     <content><![CDATA[<p>設定 Github SSH 金鑰<br><a href="https://ithelp.ithome.com.tw/articles/10205988">https://ithelp.ithome.com.tw/articles/10205988</a><br><span id="more"></span></p>
@@ -1791,44 +1814,26 @@
       </tags>
   </entry>
   <entry>
-    <title>历史 -- （3）德国简史</title>
-    <url>/2019/07/10/history-germany/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
-<h3 id="神圣罗马帝国"><a href="# 神圣罗马帝国" class="headerlink" title="神圣罗马帝国"></a>神圣罗马帝国 </h3><p> 西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
-<p>东法兰克王国在 919 年更名为德意志王国</p>
-<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国</p>
-<p>位于欧洲东部的国家成为欧洲列强的跑马场 <br><span id="more"></span><br> 亨利一世的儿子奥托一世过分强调意大利方向的扩张</p>
-<p>知道霍亨陶芬王朝的佛里德里希一世时期，红胡子巴巴罗萨，神圣罗马帝国巅峰，但是忽略了德意志内部德中央集权。为了赢得诸侯支持向意大利扩展，提高了封建主的独立性，最终导致帝国名存实亡。</p>
-<p>从奥托一世开始，向教皇取得罗马皇帝的称号。直到在 1073 年，教皇格里高利七世不经皇帝统一登上教皇宝座。</p>
-<p>引起神圣罗马帝国皇帝亨利四世的不满，命教皇退位，教皇开除亨利四世教籍，废除其帝位，国内封建主趁机相应号召。</p>
-<p>奥托一世 -&gt; 亨利四世 -&gt; 红胡子巴巴罗萨</p>
-<p>德意志王国四分五裂</p>
-<p>13 世纪，霍亨斯陶芬王朝垮台后，德意志王权彻底衰弱</p>
-<p>被教皇压迫，充当周围列强代理人自相残杀了两百多年后，马丁路德的宗教改革</p>
-<p>-&gt;1618 年三十年战争，德国失去大量领土，法国获得阿尔萨斯和洛林，整个德国四分五裂</p>
-<p>德国人为了生存，把自己卖给外国人，成为雇佣兵，在德国的领域为列强而战</p>
-<p>1806 年，在法国皇帝拿破仑的逼迫下，奥地利皇帝佛朗兹而是放弃神圣罗马帝国皇帝的称号，神圣罗马帝国灭亡</p>
-<p>席勒，歌德</p>
-<p>率先走出这一步的是一个被视为蛮荒和弱小的东方小邦：普鲁士</p>
-<h3 id="普鲁士"><a href="# 普鲁士" class="headerlink" title="普鲁士"></a>普鲁士 </h3><p> 普鲁士的国家核心是勃兰登堡和普鲁士</p>
-<p>1618 年，霍亨索伦家族的勃兰登堡选帝侯继承了普鲁士的王位，这两个平行发展的邦国终于产生了交汇</p>
-<p>(1417 年，德意志帝国正式把勃兰登堡和选侯爵位，赐予霍亨索伦家族的腓特烈一世，开始了霍亨索伦家族对勃兰登堡的统治)</p>
-<p>1640 年，腓特烈。威廉 (大选帝侯) 继位成为选帝侯 <br> 面临经过三世年战争的断壁残垣，国内的贵族、容克、分离主义和国外的强权让新国王的声音衰弱 <br>(1) 必须拥有一支独立且听命于自己的强悍常备军<br>(2) 利用帝国分裂，建立在本邦国内中央集权的君主专制，并在帝国范围内扩大影响<br> 在大选帝侯的儿子执政时期，</p>
+    <title>撰写文章基本操作</title>
+    <url>/2018/09/13/hexo%20write-an-article/</url>
+    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a>加入链结</h4><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
+<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a>加入引用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>引用 1</p>
+</blockquote>
+<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a>改变文字颜色和大小</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;2&quot;</span>&gt;</span> 颜色 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;3&quot;</span>&gt;</span> 大小 <span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
+<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a>加入代码</h4><h4 id="hexo-fluid- 添加 -utterances- 评论功能"><a href="#hexo-fluid- 添加 -utterances- 评论功能" class="headerlink" title="hexo-fluid 添加 utterances 评论功能"></a>hexo-fluid 添加 utterances 评论功能</h4><p><a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a><br><a href="http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/">http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/</a></p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
 ]]></content>
       <categories>
-        <category>历史</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>历史</tag>
-        <tag>德国简史</tag>
-        <tag>德国</tag>
-        <tag>神圣罗马帝国</tag>
-        <tag>三十年战争</tag>
-        <tag>普鲁士</tag>
-        <tag>霍亨索伦家族</tag>
-        <tag>勃兰登堡</tag>
-        <tag>红胡子</tag>
-        <tag>巴巴罗萨</tag>
+        <tag>hexo</tag>
+        <tag>文章</tag>
+        <tag>基本操作</tag>
       </tags>
   </entry>
   <entry>
@@ -1862,14 +1867,55 @@
       </categories>
       <tags>
         <tag>历史</tag>
-        <tag>三十年战争</tag>
         <tag>欧洲简史</tag>
         <tag>日尔曼</tag>
         <tag>十字军东征</tag>
         <tag>奥斯曼帝国</tag>
         <tag>君士坦丁堡</tag>
         <tag>英法百年战争</tag>
+        <tag>三十年战争</tag>
         <tag>腓特烈二世</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>历史 -- （3）德国简史</title>
+    <url>/2019/07/10/history-germany/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/07/06/history-europe/">历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
+<h3 id="神圣罗马帝国"><a href="# 神圣罗马帝国" class="headerlink" title="神圣罗马帝国"></a>神圣罗马帝国 </h3><p> 西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
+<p>东法兰克王国在 919 年更名为德意志王国</p>
+<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国</p>
+<p>位于欧洲东部的国家成为欧洲列强的跑马场 <br><span id="more"></span><br> 亨利一世的儿子奥托一世过分强调意大利方向的扩张</p>
+<p>知道霍亨陶芬王朝的佛里德里希一世时期，红胡子巴巴罗萨，神圣罗马帝国巅峰，但是忽略了德意志内部德中央集权。为了赢得诸侯支持向意大利扩展，提高了封建主的独立性，最终导致帝国名存实亡。</p>
+<p>从奥托一世开始，向教皇取得罗马皇帝的称号。直到在 1073 年，教皇格里高利七世不经皇帝统一登上教皇宝座。</p>
+<p>引起神圣罗马帝国皇帝亨利四世的不满，命教皇退位，教皇开除亨利四世教籍，废除其帝位，国内封建主趁机相应号召。</p>
+<p>奥托一世 -&gt; 亨利四世 -&gt; 红胡子巴巴罗萨</p>
+<p>德意志王国四分五裂</p>
+<p>13 世纪，霍亨斯陶芬王朝垮台后，德意志王权彻底衰弱</p>
+<p>被教皇压迫，充当周围列强代理人自相残杀了两百多年后，马丁路德的宗教改革</p>
+<p>-&gt;1618 年三十年战争，德国失去大量领土，法国获得阿尔萨斯和洛林，整个德国四分五裂</p>
+<p>德国人为了生存，把自己卖给外国人，成为雇佣兵，在德国的领域为列强而战</p>
+<p>1806 年，在法国皇帝拿破仑的逼迫下，奥地利皇帝佛朗兹而是放弃神圣罗马帝国皇帝的称号，神圣罗马帝国灭亡</p>
+<p>席勒，歌德</p>
+<p>率先走出这一步的是一个被视为蛮荒和弱小的东方小邦：普鲁士</p>
+<h3 id="普鲁士"><a href="# 普鲁士" class="headerlink" title="普鲁士"></a>普鲁士 </h3><p> 普鲁士的国家核心是勃兰登堡和普鲁士</p>
+<p>1618 年，霍亨索伦家族的勃兰登堡选帝侯继承了普鲁士的王位，这两个平行发展的邦国终于产生了交汇</p>
+<p>(1417 年，德意志帝国正式把勃兰登堡和选侯爵位，赐予霍亨索伦家族的腓特烈一世，开始了霍亨索伦家族对勃兰登堡的统治)</p>
+<p>1640 年，腓特烈。威廉 (大选帝侯) 继位成为选帝侯 <br> 面临经过三世年战争的断壁残垣，国内的贵族、容克、分离主义和国外的强权让新国王的声音衰弱 <br>(1) 必须拥有一支独立且听命于自己的强悍常备军<br>(2) 利用帝国分裂，建立在本邦国内中央集权的君主专制，并在帝国范围内扩大影响<br> 在大选帝侯的儿子执政时期，</p>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>历史</tag>
+        <tag>三十年战争</tag>
+        <tag>德国简史</tag>
+        <tag>德国</tag>
+        <tag>神圣罗马帝国</tag>
+        <tag>普鲁士</tag>
+        <tag>霍亨索伦家族</tag>
+        <tag>勃兰登堡</tag>
+        <tag>红胡子</tag>
+        <tag>巴巴罗萨</tag>
       </tags>
   </entry>
   <entry>
@@ -2162,6 +2208,22 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>机器学习算法 --（10）支持向量机 SVM</title>
+    <url>/2020/11/19/machineLearning-10/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>machineLearning</tag>
+        <tag>sklearn</tag>
+        <tag>支持向量机</tag>
+        <tag>SVM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习算法 --（2）逻辑回归</title>
     <url>/2020/11/11/machineLearning-2/</url>
     <content><![CDATA[<h3 id="一、预测函数"><a href="# 一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数 </h3><p> 预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-2/photo1.jpg" alt></p>
@@ -2187,22 +2249,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>逻辑回归</tag>
         <tag>预测函数</tag>
         <tag>代价函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（10）支持向量机 SVM</title>
-    <url>/2020/11/19/machineLearning-10/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>machineLearning</tag>
-        <tag>sklearn</tag>
-        <tag>支持向量机</tag>
-        <tag>SVM</tag>
       </tags>
   </entry>
   <entry>
@@ -2272,6 +2318,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>机器学习算法 --（7）贝叶斯算法</title>
+    <url>/2020/11/19/machineLearning-7/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>机器学习算法 --（6）集成学习</title>
     <url>/2020/11/19/machineLearning-6/</url>
     <content><![CDATA[<span id="more"></span>
@@ -2300,16 +2356,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>sklearn</tag>
         <tag>聚类</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（7）贝叶斯算法</title>
-    <url>/2020/11/19/machineLearning-7/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
   </entry>
   <entry>
     <title>机器学习算法 --（9）主成分分析 PCA</title>
@@ -2375,8 +2421,8 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>python 应用 --2.Linux 按照软件、python 开发环境</title>
-    <url>/2021/04/20/python-advance-2/</url>
+    <title>python 应用 --1.Linux 命令</title>
+    <url>/2021/04/20/python-advance-1/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>python应用</category>
@@ -2386,8 +2432,8 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>python 应用 --1.Linux 命令</title>
-    <url>/2021/04/20/python-advance-1/</url>
+    <title>python 应用 --2.Linux 按照软件、python 开发环境</title>
+    <url>/2021/04/20/python-advance-2/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>python应用</category>
