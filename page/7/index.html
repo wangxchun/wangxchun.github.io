@@ -346,7 +346,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-27 17:50:57" itemprop="dateModified" datetime="2021-04-27T17:50:57+08:00">2021-04-27</time>
+        <time title="修改時間：2021-04-30 14:54:09" itemprop="dateModified" datetime="2021-04-30T14:54:09+08:00">2021-04-30</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1173,6 +1173,25 @@
 
 
 
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
 
 
 

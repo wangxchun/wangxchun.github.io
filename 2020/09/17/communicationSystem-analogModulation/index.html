@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/photo4.png">
 <meta property="og:image" content="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/photo5.png">
 <meta property="article:published_time" content="2020-09-17T01:05:38.000Z">
-<meta property="article:modified_time" content="2021-04-27T09:50:57.251Z">
+<meta property="article:modified_time" content="2021-04-30T06:54:09.937Z">
 <meta property="article:author" content="Stephen Wang">
 <meta property="article:tag" content="通信原理">
 <meta property="article:tag" content="模拟调制技术">
@@ -171,7 +171,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%B0%83%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="nav-text">一、调制的概念和幅度调制 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E8%B0%83%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">1. 调制的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-text">2. 幅度调制基本原理 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%9A%84%E6%97%B6%E5%9F%9F%E5%92%8C%E9%A2%91%E5%9F%9F"><span class="nav-text">(1) 幅度调制的时域和频域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%9A%84%E4%B8%80%E8%88%AC%E6%A8%A1%E5%9E%8B"><span class="nav-text">(2) 幅度调制的一般模型 </span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%20-AM"><span class="nav-text">3. 幅度调制 AM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E5%8F%8C%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-DSB"><span class="nav-text">4. 双边带调制 DSB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E5%8D%95%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-SSB"><span class="nav-text">5. 单边带调制 SSB</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E6%BB%A4%E6%B3%A2%E6%B3%95%E4%BA%A7%E7%94%9F%20-SSB-%20%E4%BF%A1%E5%8F%B7"><span class="nav-text">(1) 滤波法产生 SSB 信号 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E7%9B%B8%E7%A7%BB%E6%B3%95%E4%BA%A7%E7%94%9F%20-SSB-%20%E4%BF%A1%E5%8F%B7"><span class="nav-text">(2) 相移法产生 SSB 信号</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%20%E6%AE%8B%E7%95%99%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-VSB"><span class="nav-text">6. 残留边带调制 VSB</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text">二、幅度调制系统的抗噪声性能 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%A8%A1%E6%8B%9F%E8%A7%92%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="nav-text"> 三、模拟角度调制 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%B0%83%E9%A2%91%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text"> 四、调频系统的抗噪声性能 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%A2%91%E5%88%86%E5%A4%8D%E7%94%A8%E5%92%8C%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text"> 五、频分复用和模拟调制技术的应用</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%B0%83%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="nav-text">一、调制的概念和幅度调制 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E8%B0%83%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">1. 调制的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-text">2. 幅度调制基本原理 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%9A%84%E6%97%B6%E5%9F%9F%E5%92%8C%E9%A2%91%E5%9F%9F"><span class="nav-text">(1) 幅度调制的时域和频域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%9A%84%E4%B8%80%E8%88%AC%E6%A8%A1%E5%9E%8B"><span class="nav-text">(2) 幅度调制的一般模型 </span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%20-AM"><span class="nav-text">3. 幅度调制 AM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E5%8F%8C%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-DSB"><span class="nav-text">4. 双边带调制 DSB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E5%8D%95%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-SSB"><span class="nav-text">5. 单边带调制 SSB</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E6%BB%A4%E6%B3%A2%E6%B3%95%E4%BA%A7%E7%94%9F%20-SSB-%20%E4%BF%A1%E5%8F%B7"><span class="nav-text">(1) 滤波法产生 SSB 信号 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E7%9B%B8%E7%A7%BB%E6%B3%95%E4%BA%A7%E7%94%9F%20-SSB-%20%E4%BF%A1%E5%8F%B7"><span class="nav-text">(2) 相移法产生 SSB 信号</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%20%E6%AE%8B%E7%95%99%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%20-VSB"><span class="nav-text">6. 残留边带调制 VSB</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text">二、幅度调制系统的抗噪声性能 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B"><span class="nav-text">1. 分析模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%E7%9B%B8%E5%B9%B2%E8%A7%A3%E8%B0%83%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text">2. 幅度调制相干解调的抗噪声性能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-AM-%20%E4%BF%A1%E5%8F%B7%E6%A3%80%E6%B3%A2%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text">3.AM 信号检波的抗噪声性能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%A8%A1%E6%8B%9F%E8%A7%92%E5%BA%A6%E8%B0%83%E5%88%B6"><span class="nav-text"> 三、模拟角度调制 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%B0%83%E9%A2%91%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-text"> 四、调频系统的抗噪声性能 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%A2%91%E5%88%86%E5%A4%8D%E7%94%A8%E5%92%8C%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text"> 五、频分复用和模拟调制技术的应用</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -278,7 +278,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-27 17:50:57" itemprop="dateModified" datetime="2021-04-27T17:50:57+08:00">2021-04-27</time>
+        <time title="修改時間：2021-04-30 14:54:09" itemprop="dateModified" datetime="2021-04-30T14:54:09+08:00">2021-04-30</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -310,7 +310,7 @@
 <h5 id="2- 相移法产生 -SSB- 信号"><a href="#2- 相移法产生 -SSB- 信号" class="headerlink" title="(2) 相移法产生 SSB 信号"></a>(2) 相移法产生 SSB 信号</h5><p><img src="/2020/09/17/communicationSystem-analogModulation/photo3.jpg" alt="SSB 相移法"></p>
 <p>优点：不需要滤波器具有陡峭的截止特性 <br> 缺点：宽带相移网络难用硬件实现</p>
 <h4 id="6- 残留边带调制 -VSB"><a href="#6- 残留边带调制 -VSB" class="headerlink" title="6. 残留边带调制 VSB"></a>6. 残留边带调制 VSB</h4><p><img src="/2020/09/17/communicationSystem-analogModulation/photo4.png" alt><br><img src="/2020/09/17/communicationSystem-analogModulation/photo5.png" alt><br>$S_d (\omega) = \displaystyle {1 \over 4} M (\omega)[H_{VSB}(\omega + \omega_c) + H_{VSB}(\omega - \omega_c)]$<br>为保证相干解调的输出无失真的恢复调制信号 $m (t)$，要求：<br>$[H_{VSB}(\omega + \omega_c) + H_{VSB}(\omega - \omega_c) = constant$，$|\omega| \leq \omega_H$</p>
-<h3 id="二、幅度调制系统的抗噪声性能"><a href="# 二、幅度调制系统的抗噪声性能" class="headerlink" title="二、幅度调制系统的抗噪声性能"></a>二、幅度调制系统的抗噪声性能 </h3><h3 id="三、模拟角度调制"><a href="# 三、模拟角度调制" class="headerlink" title="三、模拟角度调制"></a> 三、模拟角度调制 </h3><h3 id="四、调频系统的抗噪声性能"><a href="# 四、调频系统的抗噪声性能" class="headerlink" title="四、调频系统的抗噪声性能"></a> 四、调频系统的抗噪声性能 </h3><h3 id="五、频分复用和模拟调制技术的应用"><a href="# 五、频分复用和模拟调制技术的应用" class="headerlink" title="五、频分复用和模拟调制技术的应用"></a> 五、频分复用和模拟调制技术的应用</h3>
+<h3 id="二、幅度调制系统的抗噪声性能"><a href="# 二、幅度调制系统的抗噪声性能" class="headerlink" title="二、幅度调制系统的抗噪声性能"></a>二、幅度调制系统的抗噪声性能 </h3><h4 id="1- 分析模型"><a href="#1- 分析模型" class="headerlink" title="1. 分析模型"></a>1. 分析模型</h4><h4 id="2- 幅度调制相干解调的抗噪声性能"><a href="#2- 幅度调制相干解调的抗噪声性能" class="headerlink" title="2. 幅度调制相干解调的抗噪声性能"></a>2. 幅度调制相干解调的抗噪声性能</h4><h4 id="3-AM- 信号检波的抗噪声性能"><a href="#3-AM- 信号检波的抗噪声性能" class="headerlink" title="3.AM 信号检波的抗噪声性能"></a>3.AM 信号检波的抗噪声性能</h4><h3 id="三、模拟角度调制"><a href="# 三、模拟角度调制" class="headerlink" title="三、模拟角度调制"></a> 三、模拟角度调制 </h3><h3 id="四、调频系统的抗噪声性能"><a href="# 四、调频系统的抗噪声性能" class="headerlink" title="四、调频系统的抗噪声性能"></a> 四、调频系统的抗噪声性能 </h3><h3 id="五、频分复用和模拟调制技术的应用"><a href="# 五、频分复用和模拟调制技术的应用" class="headerlink" title="五、频分复用和模拟调制技术的应用"></a> 五、频分复用和模拟调制技术的应用</h3>
     </div>
 
     
@@ -399,6 +399,25 @@
 
 
 
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
 
 
 

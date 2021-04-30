@@ -253,7 +253,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/2021/04/29/hexo%20pdf-file/" itemprop="url">
-            <span itemprop="name">hexo pdf_file</span>
+            <span itemprop="name">如何在 hexo 文章中插入 pdf 文件</span>
           </a>
       </div>
 
@@ -502,6 +502,25 @@
 
 
 
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
 
 
 
