@@ -24,23 +24,25 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="通信原理 —（1）绪论通信原理 —（2）信道通信原理 —（3）模拟调制技术通信原理 —（4）模拟信号数字化通信原理 —（5）数字基带传输通信原理 —（6）数字频带传输通信原理 —（7）最佳接收通信原理 —（8）同步 一、数字基带信号及其频谱特性">
+<meta name="description" content="通信原理 —（1）绪论通信原理 —（2）信道通信原理 —（3）模拟调制技术通信原理 —（4）模拟信号数字化通信原理 —（5）数字基带传输通信原理 —（6）数字频带传输通信原理 —（7）最佳接收通信原理 —（8）同步 一、数字基带信号及其频谱特性1. 引言数字基带信号：未经调制的数字信号，所占据频谱从零频或低频率开始如果传输数字基带信号？(1) 数字基带传输：数字基带信号不经载波调制而直接在信道上传">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通信原理 --（5）数字基带传输">
 <meta property="og:url" content="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/index.html">
 <meta property="og:site_name" content="Stephen自强不息">
-<meta property="og:description" content="通信原理 —（1）绪论通信原理 —（2）信道通信原理 —（3）模拟调制技术通信原理 —（4）模拟信号数字化通信原理 —（5）数字基带传输通信原理 —（6）数字频带传输通信原理 —（7）最佳接收通信原理 —（8）同步 一、数字基带信号及其频谱特性">
+<meta property="og:description" content="通信原理 —（1）绪论通信原理 —（2）信道通信原理 —（3）模拟调制技术通信原理 —（4）模拟信号数字化通信原理 —（5）数字基带传输通信原理 —（6）数字频带传输通信原理 —（7）最佳接收通信原理 —（8）同步 一、数字基带信号及其频谱特性1. 引言数字基带信号：未经调制的数字信号，所占据频谱从零频或低频率开始如果传输数字基带信号？(1) 数字基带传输：数字基带信号不经载波调制而直接在信道上传">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/photo1.jpg">
 <meta property="article:published_time" content="2020-09-29T01:11:45.000Z">
-<meta property="article:modified_time" content="2021-04-17T01:29:02.348Z">
+<meta property="article:modified_time" content="2021-05-06T08:05:35.676Z">
 <meta property="article:author" content="Stephen Wang">
 <meta property="article:tag" content="通信原理">
+<meta property="article:tag" content="抗噪声性能">
 <meta property="article:tag" content="数字基带传输">
 <meta property="article:tag" content="无码间串扰">
-<meta property="article:tag" content="抗噪声性能">
 <meta property="article:tag" content="眼图">
 <meta property="article:tag" content="部分响应系统">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/photo1.jpg">
 
 
 <link rel="canonical" href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/">
@@ -167,7 +169,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E5%8F%8A%E5%85%B6%E9%A2%91%E8%B0%B1%E7%89%B9%E6%80%A7"><span class="nav-text">一、数字基带信号及其频谱特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%B8%B8%E7%94%A8%E7%A0%81%E5%9E%8B%E5%92%8C%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0"><span class="nav-text">二、基带传输的常用码型和码间串扰 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%97%A0%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0%E7%9A%84%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%89%B9%E6%80%A7"><span class="nav-text"> 三、无码间串扰的基带传输特性 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD%E4%B8%8E%E7%9C%BC%E5%9B%BE"><span class="nav-text"> 四、基带传输系统的抗噪声性能与眼图 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%83%A8%E5%88%86%E5%93%8D%E5%BA%94%E7%B3%BB%E7%BB%9F"><span class="nav-text"> 五、部分响应系统 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%9D%87%E8%A1%A1%E5%8E%9F%E7%90%86"><span class="nav-text"> 六、均衡原理</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E5%8F%8A%E5%85%B6%E9%A2%91%E8%B0%B1%E7%89%B9%E6%80%A7"><span class="nav-text">一、数字基带信号及其频谱特性 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E5%BC%95%E8%A8%80"><span class="nav-text">1. 引言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%87%A0%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7"><span class="nav-text">2. 几种基本的数字基带信号 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%20%E5%8D%95%E6%9E%81%E6%80%A7%20-%20%E4%B8%8D%E5%BD%92%E9%9B%B6%20-%20%E6%B3%A2%E5%BD%A2"><span class="nav-text">(1) 单极性 (不归零) 波形</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E5%8F%8C%E6%9E%81%E6%80%A7%20-%20%E4%B8%8D%E5%BD%92%E9%9B%B6%20-%20%E6%B3%A2%E5%BD%A2"><span class="nav-text">(2) 双极性 (不归零) 波形 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%20%E5%8D%95%E6%9E%81%E6%80%A7%E5%BD%92%E9%9B%B6%E6%B3%A2%E5%BD%A2"><span class="nav-text">(3) 单极性归零波形 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%20%E5%8F%8C%E6%9E%81%E6%80%A7%E5%BD%92%E9%9B%B6%E6%B3%A2%E5%BD%A2"><span class="nav-text">(4) 双极性归零波形 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%20%E5%B7%AE%E5%88%86%E6%B3%A2%E5%BD%A2"><span class="nav-text">(5) 差分波形 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-%20%E5%A4%9A%E8%BF%9B%E5%88%B6%E6%B3%A2%E5%BD%A2"><span class="nav-text">(6) 多进制波形</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%20%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E5%88%86%E6%9E%90"><span class="nav-text">3. 数字基带信号的频谱分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%B8%B8%E7%94%A8%E7%A0%81%E5%9E%8B%E5%92%8C%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0"><span class="nav-text">二、基带传输的常用码型和码间串扰 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%97%A0%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0%E7%9A%84%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%89%B9%E6%80%A7"><span class="nav-text"> 三、无码间串扰的基带传输特性 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD%E4%B8%8E%E7%9C%BC%E5%9B%BE"><span class="nav-text"> 四、基带传输系统的抗噪声性能与眼图 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%83%A8%E5%88%86%E5%93%8D%E5%BA%94%E7%B3%BB%E7%BB%9F"><span class="nav-text"> 五、部分响应系统 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%9D%87%E8%A1%A1%E5%8E%9F%E7%90%86"><span class="nav-text"> 六、均衡原理</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -274,7 +276,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-17 09:29:02" itemprop="dateModified" datetime="2021-04-17T09:29:02+08:00">2021-04-17</time>
+        <time title="修改時間：2021-05-06 16:05:35" itemprop="dateModified" datetime="2021-05-06T16:05:35+08:00">2021-05-06</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -297,7 +299,15 @@
     
     <div class="post-body" itemprop="articleBody">
         <p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、数字基带信号及其频谱特性"><a href="# 一、数字基带信号及其频谱特性" class="headerlink" title="一、数字基带信号及其频谱特性"></a>一、数字基带信号及其频谱特性</h3><span id="more"></span>
+<h3 id="一、数字基带信号及其频谱特性"><a href="# 一、数字基带信号及其频谱特性" class="headerlink" title="一、数字基带信号及其频谱特性"></a>一、数字基带信号及其频谱特性 </h3><h4 id="1- 引言"><a href="#1- 引言" class="headerlink" title="1. 引言"></a>1. 引言</h4><p> 数字基带信号：未经调制的数字信号，所占据频谱从零频或低频率开始 <br> 如果传输数字基带信号？<br>(1) 数字基带传输：数字基带信号不经载波调制而直接在信道上传输<br>(2) 数字频带传输：数字基带信号经载波调制后在信道上传输<br><span id="more"></span><br><img src="/2020/09/29/communicationSystem-digitalBasebandTransmission/photo1.jpg" alt="数字基带传输系统模型"></p>
+<center> 数字基带传输系统模型 </center>
+
+<h4 id="2- 几种基本的数字基带信号"><a href="#2- 几种基本的数字基带信号" class="headerlink" title="2. 几种基本的数字基带信号"></a>2. 几种基本的数字基带信号 </h4><h5 id="1- 单极性 - 不归零 - 波形"><a href="#1- 单极性 - 不归零 - 波形" class="headerlink" title="(1) 单极性 (不归零) 波形"></a>(1) 单极性 (不归零) 波形</h5><p> 有直流成分 <br> 不能直接提取同步信号</p>
+<h5 id="2- 双极性 - 不归零 - 波形"><a href="#2- 双极性 - 不归零 - 波形" class="headerlink" title="(2) 双极性 (不归零) 波形"></a>(2) 双极性 (不归零) 波形 </h5><p>01 等概时，无直流成分<br> 不能直接提取同步信号</p>
+<h5 id="3- 单极性归零波形"><a href="#3- 单极性归零波形" class="headerlink" title="(3) 单极性归零波形"></a>(3) 单极性归零波形 </h5><p> 可以直接提取定位信息</p>
+<h5 id="4- 双极性归零波形"><a href="#4- 双极性归零波形" class="headerlink" title="(4) 双极性归零波形"></a>(4) 双极性归零波形 </h5><p> 通过全波整流电路之后，可以变换为单极性归零码</p>
+<h5 id="5- 差分波形"><a href="#5- 差分波形" class="headerlink" title="(5) 差分波形"></a>(5) 差分波形 </h5><p> 传号差分：幅值为 1 的时候跳变 <br> 空号差分：幅值为 0 的时候跳变 <br> 可以消除设备初始状态的影响，特别是在相位调制系统中用于解决载波相位模糊的问题</p>
+<h5 id="6- 多进制波形"><a href="#6- 多进制波形" class="headerlink" title="(6) 多进制波形"></a>(6) 多进制波形</h5><h3 id="3- 数字基带信号的频谱分析"><a href="#3- 数字基带信号的频谱分析" class="headerlink" title="3. 数字基带信号的频谱分析"></a>3. 数字基带信号的频谱分析</h3><p>M 进制基带信号的表示式：$s (t) = \sum_{n=-\infty}^\infty a_n g (t - nT_s) $</p>
 <h3 id="二、基带传输的常用码型和码间串扰"><a href="# 二、基带传输的常用码型和码间串扰" class="headerlink" title="二、基带传输的常用码型和码间串扰"></a>二、基带传输的常用码型和码间串扰 </h3><h3 id="三、无码间串扰的基带传输特性"><a href="# 三、无码间串扰的基带传输特性" class="headerlink" title="三、无码间串扰的基带传输特性"></a> 三、无码间串扰的基带传输特性 </h3><h3 id="四、基带传输系统的抗噪声性能与眼图"><a href="# 四、基带传输系统的抗噪声性能与眼图" class="headerlink" title="四、基带传输系统的抗噪声性能与眼图"></a> 四、基带传输系统的抗噪声性能与眼图 </h3><h3 id="五、部分响应系统"><a href="# 五、部分响应系统" class="headerlink" title="五、部分响应系统"></a> 五、部分响应系统 </h3><h3 id="六、均衡原理"><a href="# 六、均衡原理" class="headerlink" title="六、均衡原理"></a> 六、均衡原理</h3>
     </div>
 
@@ -308,9 +318,9 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/" rel="tag"># 通信原理</a>
+              <a href="/tags/%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD/" rel="tag"># 抗噪声性能</a>
               <a href="/tags/%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93/" rel="tag"># 数字基带传输</a>
               <a href="/tags/%E6%97%A0%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0/" rel="tag"># 无码间串扰</a>
-              <a href="/tags/%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD/" rel="tag"># 抗噪声性能</a>
               <a href="/tags/%E7%9C%BC%E5%9B%BE/" rel="tag"># 眼图</a>
               <a href="/tags/%E9%83%A8%E5%88%86%E5%93%8D%E5%BA%94%E7%B3%BB%E7%BB%9F/" rel="tag"># 部分响应系统</a>
           </div>

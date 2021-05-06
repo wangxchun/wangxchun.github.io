@@ -24,19 +24,19 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="计算机网络 lab1计算机网络 lab2 使用 Mininet 创建网络拓扑 一、Miniset 简介Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。Mininet 提供 python API，简单易用 二、环境搭建安装 minine">
+<meta name="description" content="计算机网络 lab1计算机网络 lab2 使用 Mininet 创建网络拓扑计算机网络 lab3 使用 Socket 完成多人聊天室 — 原理计算机网络 lab3 使用 Socket 完成多人聊天室 — 实作 一、Miniset 简介Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。Miniset 上运行的代码可以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络 lab2 使用 Mininet 创建网络拓扑">
 <meta property="og:url" content="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/index.html">
 <meta property="og:site_name" content="Stephen自强不息">
-<meta property="og:description" content="计算机网络 lab1计算机网络 lab2 使用 Mininet 创建网络拓扑 一、Miniset 简介Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。Mininet 提供 python API，简单易用 二、环境搭建安装 minine">
+<meta property="og:description" content="计算机网络 lab1计算机网络 lab2 使用 Mininet 创建网络拓扑计算机网络 lab3 使用 Socket 完成多人聊天室 — 原理计算机网络 lab3 使用 Socket 完成多人聊天室 — 实作 一、Miniset 简介Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。Miniset 上运行的代码可以">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/photo1.png">
 <meta property="og:image" content="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/photo2.png">
 <meta property="og:image" content="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/photo3.png">
 <meta property="og:image" content="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/photo4.png">
 <meta property="article:published_time" content="2021-03-30T14:10:32.000Z">
-<meta property="article:modified_time" content="2021-04-24T07:52:57.304Z">
+<meta property="article:modified_time" content="2021-05-05T13:26:07.026Z">
 <meta property="article:author" content="Stephen Wang">
 <meta property="article:tag" content="计算机网络">
 <meta property="article:tag" content="lab">
@@ -282,7 +282,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-24 15:52:57" itemprop="dateModified" datetime="2021-04-24T15:52:57+08:00">2021-04-24</time>
+        <time title="修改時間：2021-05-05 21:26:07" itemprop="dateModified" datetime="2021-05-05T21:26:07+08:00">2021-05-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,7 +304,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑</a></p>
+        <p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑 </a><br><a href="https://wangxchun.github.io/2021/04/24/computerNetwork-lab3-1/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 原理 </a><br><a href="https://wangxchun.github.io/2021/04/27/computerNetwork-lab3-2/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 实作</a></p>
 <h3 id="一、Miniset- 简介"><a href="# 一、Miniset- 简介" class="headerlink" title="一、Miniset 简介"></a>一、Miniset 简介</h3><p>Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。<br>Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。<br>Mininet 提供 python API，简单易用</p>
 <h3 id="二、环境搭建"><a href="# 二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建 </h3><h4 id="安装 -mininet"><a href="# 安装 -mininet" class="headerlink" title="安装 mininet"></a> 安装 mininet</h4><span id="more"></span>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">$</span> su root</span><br><span class="line"><span class="symbol">$</span> apt-get install git</span><br><span class="line"><span class="symbol">$</span> git clone http:<span class="comment">//github.com/mininet/mininet.git</span></span><br><span class="line"><span class="symbol">$</span> cd mininet/util</span><br><span class="line">#./install.sh n3v</span><br><span class="line"><span class="comment">//n：安装 mininet 的依赖和核心文件</span></span><br><span class="line"><span class="comment">//3：安装 Openflow 1.3 版本</span></span><br><span class="line"><span class="comment">//v：安装 Open Switch</span></span><br><span class="line"><span class="symbol">$</span> mn <span class="comment">// 创建默认最小的网络拓扑，测试 mininet 是否安装成功</span></span><br><span class="line">miniset&gt; pingall <span class="comment">// 查看连通性</span></span><br><span class="line">miniset&gt; exit <span class="comment">// 退出 miniset</span></span><br><span class="line">#### 安装 ryu</span><br><span class="line"><span class="symbol">$</span> wget https:<span class="comment">//bootstrap.pypa.io/get-pip.py//pip 是一个通用的 python 包管理工具</span></span><br><span class="line"><span class="comment">//wget 是从指定的 url 下载文件</span></span><br><span class="line"><span class="symbol">$</span> python get-pip.py</span><br><span class="line"><span class="symbol">$</span> git clone https:<span class="comment">//github.com/osrg/ryu.git</span></span><br><span class="line"><span class="symbol">$</span> cd ryu</span><br><span class="line"><span class="symbol">$</span> pip install -r tools/pip-requires<span class="comment">// 安装 ryu 之前先安装 ryu 的依赖</span></span><br><span class="line"><span class="comment">// 这一步要按照的依赖比较多，可能因为下载不全而出现报错，这时就重新执行一遍</span></span><br><span class="line"><span class="comment">// 报错 2</span></span><br><span class="line"><span class="symbol">$</span> python setup.py install </span><br><span class="line"><span class="symbol">$</span> cd ryu/app<span class="comment">// 验证 ryu 是否按照成功</span></span><br><span class="line"><span class="symbol">$</span> ryu-manager example_switch_13.py<span class="comment">// 先不要点击 enter，先打开另一个终端运行</span></span><br><span class="line"><span class="comment">//su root</span></span><br><span class="line"><span class="comment">//mn --controller=remote</span></span><br><span class="line"><span class="comment">// 创建完网络拓扑之后，可以执行 ryu-manager</span></span><br></pre></td></tr></table></figure>
