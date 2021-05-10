@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="google-site-verification" content="SEuuKcxiY0Z6R9aAPIZyU5Y9rFqpgO9gKES--zhFX24" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="一、什麽是 ETFETF（指數股票型證券投資信托基金）“追蹤指數像股票一樣交易的基金” 二、入門：0050 和 00561.0050 和 0056 比較，考慮因素(1) 0056 高股息指數納入的 30 家公司，並不是完全客觀的排名，而是參雜一部分的模型預測(2) 年周轉率 -&gt; 交易成本(3) 持股分散度，大者越大的風險（台積電對 0050 的影響越來越大） 2. 蟬聯 0056官股金控">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ETF 入門">
+<meta property="og:url" content="https://wangxchun.github.io/2021/05/10/money-management-ETF/index.html">
+<meta property="og:site_name" content="Stephen自强不息">
+<meta property="og:description" content="一、什麽是 ETFETF（指數股票型證券投資信托基金）“追蹤指數像股票一樣交易的基金” 二、入門：0050 和 00561.0050 和 0056 比較，考慮因素(1) 0056 高股息指數納入的 30 家公司，並不是完全客觀的排名，而是參雜一部分的模型預測(2) 年周轉率 -&gt; 交易成本(3) 持股分散度，大者越大的風險（台積電對 0050 的影響越來越大） 2. 蟬聯 0056官股金控">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-05-10T06:21:09.000Z">
+<meta property="article:modified_time" content="2021-05-10T06:37:55.002Z">
+<meta property="article:author" content="Stephen Wang">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>ETF 入門 | Stephen自强不息</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Stephen自强不息</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E9%BA%BD%E6%98%AF%20-ETF"><span class="nav-text">一、什麽是 ETF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%A5%E9%96%80%EF%BC%9A0050-%20%E5%92%8C%20-0056"><span class="nav-text">二、入門：0050 和 0056</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-0050-%20%E5%92%8C%20-0056-%20%E6%AF%94%E8%BC%83%EF%BC%8C%E8%80%83%E6%85%AE%E5%9B%A0%E7%B4%A0"><span class="nav-text">1.0050 和 0056 比較，考慮因素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E8%9F%AC%E8%81%AF%20-0056"><span class="nav-text">2. 蟬聯 0056</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81ETF-%20%E8%82%A1%E5%83%B9%E6%80%8E%E9%BA%BC%E8%BF%BD%E8%B9%A4%E6%8C%87%E6%95%B8%EF%BC%9F%E5%AF%A6%E7%89%A9%20-%20%E7%8F%BE%E9%87%91%E7%94%B3%E8%B4%96%E6%A9%9F%E5%88%B6"><span class="nav-text">三、ETF 股價怎麼追蹤指數？實物 &#x2F; 現金申贖機制 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E4%B8%89%E5%80%8B%E7%89%B9%E8%89%B2"><span class="nav-text">1. 三個特色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E9%81%8B%E4%BD%9C%E6%A9%9F%E5%88%B6"><span class="nav-text">2. 運作機制 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%B2%B7%E5%AE%B6%20-ETF-%20%E4%B9%8B%E5%89%8D%E5%85%88%E7%9C%8B"><span class="nav-text">四、買家 ETF 之前先看 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E8%B3%87%E7%94%A2%E8%A6%8F%E6%A8%A1"><span class="nav-text">1. 資產規模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E6%B5%81%E5%8B%95%E6%80%A7%20-%20%E4%BA%A4%E6%98%93%E9%87%8F"><span class="nav-text">2. 流動性 交易量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E6%88%90%E5%88%86%EF%BC%9A%E6%98%AF%E5%90%A6%E9%85%8D%E6%81%AF%20-%20%E6%98%AF%E5%90%A6%E9%81%A9%E5%90%88%E9%95%B7%E6%9C%9F%E6%8C%81%E6%9C%89"><span class="nav-text">3. 成分：是否配息 是否適合長期持有</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Stephen Wang"
+      src="/img/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Stephen Wang</p>
+  <div class="site-description" itemprop="description">機器視覺 / 機器學習 / C++</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">124</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">207</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chriswang0205@outlook.com" title="E-Mail → mailto:chriswang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器視覺 / 機器學習 / C++">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ETF 入門
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-05-10 14:21:09 / 修改時間：14:37:55" itemprop="dateCreated datePublished" datetime="2021-05-10T14:21:09+08:00">2021-05-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/" itemprop="url" rel="index"><span itemprop="name">投資理財</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="一、什麽是 -ETF"><a href="# 一、什麽是 -ETF" class="headerlink" title="一、什麽是 ETF"></a>一、什麽是 ETF</h3><p>ETF（指數股票型證券投資信托基金）<br>“追蹤指數像股票一樣交易的基金”</p>
+<h3 id="二、入門：0050- 和 -0056"><a href="# 二、入門：0050- 和 -0056" class="headerlink" title="二、入門：0050 和 0056"></a>二、入門：0050 和 0056</h3><h4 id="1-0050- 和 -0056- 比較，考慮因素"><a href="#1-0050- 和 -0056- 比較，考慮因素" class="headerlink" title="1.0050 和 0056 比較，考慮因素"></a>1.0050 和 0056 比較，考慮因素</h4><p>(1) 0056 高股息指數納入的 30 家公司，並不是完全客觀的排名，而是參雜一部分的模型預測<br>(2) 年周轉率 -&gt; 交易成本<br>(3) 持股分散度，大者越大的風險（台積電對 0050 的影響越來越大）</p>
+<h4 id="2- 蟬聯 -0056"><a href="#2- 蟬聯 -0056" class="headerlink" title="2. 蟬聯 0056"></a>2. 蟬聯 0056</h4><p>官股金控 2886 兆豐金 <br> 電腦設備大廠 2301 光寳科 <br> 聯電家族中負責 IC 設計的 3034 聯詠</p>
+<h3 id="三、ETF- 股價怎麼追蹤指數？實物 - 現金申贖機制"><a href="# 三、ETF- 股價怎麼追蹤指數？實物 - 現金申贖機制" class="headerlink" title="三、ETF 股價怎麼追蹤指數？實物 / 現金申贖機制"></a>三、ETF 股價怎麼追蹤指數？實物 / 現金申贖機制 </h3><h4 id="1- 三個特色"><a href="#1- 三個特色" class="headerlink" title="1. 三個特色"></a>1. 三個特色</h4><p> 開放型基金：基金的資產會隨著投資人的申購而增加，贖回而減少<br>(1) 規模不固定<br>(2) 交易對象是基金公司<br>(3) 基金價格直接連動成分股股價</p>
+<h4 id="2- 運作機制"><a href="#2- 運作機制" class="headerlink" title="2. 運作機制"></a>2. 運作機制 </h4><p> 基金公司 (初級市場)，股票市場 (次級市場)<br>當市價低於净值叫折價，市價高於净值叫溢價 <br>ETF，利用合法套利的誘因，加上資金門檻的規定，讓合格的法人在兩個市場之間來回搬運<br> 散戶在股票市場買到的市價，才能在最短時間内跟上投信那裏的净值<br>2007 年主管機關開放 ETF 可以采用現金申贖</p>
+<h3 id="四、買家 -ETF- 之前先看"><a href="# 四、買家 -ETF- 之前先看" class="headerlink" title="四、買家 ETF 之前先看"></a>四、買家 ETF 之前先看 </h3><h4 id="1- 資產規模"><a href="#1- 資產規模" class="headerlink" title="1. 資產規模"></a>1. 資產規模</h4><h4 id="2- 流動性 - 交易量"><a href="#2- 流動性 - 交易量" class="headerlink" title="2. 流動性 交易量"></a>2. 流動性 交易量</h4><p> 若流動性低，市價沒辦法及時反映現價 <br> 張數 *100</p>
+<h4 id="3- 成分：是否配息 - 是否適合長期持有"><a href="#3- 成分：是否配息 - 是否適合長期持有" class="headerlink" title="3. 成分：是否配息 是否適合長期持有"></a>3. 成分：是否配息 是否適合長期持有</h4><pre><code>ETF 種類：原型、杠桿型、反向型
+杠桿型和反向型不是單純的去持有成分公司的股票，而是會拿一部分的資金去投資期貨
+期貨會有 “到期轉艙” 的成本，抱越久損血越多
+且連續持有會因爲複利，而導致報酬與指數偏離
+-&gt; 不適合長期持有，且要證券交易賬戶才可以買賣
+短期避險或加杠桿的工具，時間會侵蝕掉報酬
+</code></pre>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/10/money-management-basic-concept/" rel="prev" title="基本觀念">
+                  <i class="fa fa-chevron-left"></i> 基本觀念
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/10/money-management-stock-entry-level/" rel="next" title="股票入門">
+                  股票入門 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stephen Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+  
+
+
+
+
+  
+
+
+</body>
+</html>
