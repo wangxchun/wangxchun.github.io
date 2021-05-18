@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="google-site-verification" content="SEuuKcxiY0Z6R9aAPIZyU5Y9rFqpgO9gKES--zhFX24" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="包括 linux 基本命令，用户管理，vi 使用，安装卸载软件，网络配置管理 一、Linux 介绍和 Linux 目录结构1.UNIX创始人：Ken Thompson 和 Dennis Ritchie主要分支和发展方向：IBM-AIX、HP-UX、solaris、BSD、linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ advance（四）Linux 命令基础 --1.Linux 常用命令">
+<meta property="og:url" content="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/index.html">
+<meta property="og:site_name" content="Stephen自强不息">
+<meta property="og:description" content="包括 linux 基本命令，用户管理，vi 使用，安装卸载软件，网络配置管理 一、Linux 介绍和 Linux 目录结构1.UNIX创始人：Ken Thompson 和 Dennis Ritchie主要分支和发展方向：IBM-AIX、HP-UX、solaris、BSD、linux">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/photo1.png">
+<meta property="article:published_time" content="2021-04-14T01:08:02.000Z">
+<meta property="article:modified_time" content="2021-04-17T01:19:32.030Z">
+<meta property="article:author" content="Stephen Wang">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="常用命令">
+<meta property="article:tag" content="命令基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/photo1.png">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>C++ advance（四）Linux 命令基础 --1.Linux 常用命令 | Stephen自强不息</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Stephen自强不息</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81Linux-%20%E4%BB%8B%E7%BB%8D%E5%92%8C%20-Linux-%20%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-text">一、Linux 介绍和 Linux 目录结构 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-UNIX"><span class="nav-text">1.UNIX</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-GNU-%20%E7%BB%84%E7%BB%87%EF%BC%88GNU%E2%80%99s-Not-Unix%EF%BC%89"><span class="nav-text">2.GNU 组织（GNU’s Not Unix）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-linux"><span class="nav-text">3.linux</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9B%E5%A7%8B%E4%BA%BA%EF%BC%9ALinus-Torvalds"><span class="nav-text">创始人：Linus Torvalds</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC%EF%BC%9AUbuntu%E3%80%81Redhat%E3%80%81CentOS"><span class="nav-text">发行版本：Ubuntu、Redhat、CentOS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9"><span class="nav-text">学习内容 </span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-shell"><span class="nav-text">4.shell</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#shell-%20%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">shell 是什么 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#shell-%20%E5%AE%B6%E6%97%8F"><span class="nav-text">shell 家族 </span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-text">5. 目录结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">6. 常用命令 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Linux-%20%E4%B8%8B%E7%9A%84%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%92%8C%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-text">二、Linux 下的绝对路径和相对路径 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-text">三、文件和目录操作相关命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E4%BB%A3%E8%A1%A8%E6%84%8F%E6%80%9D"><span class="nav-text">1. 代表意思</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E7%9B%AE%E5%BD%95%E7%9B%B8%E5%85%B3"><span class="nav-text">2. 目录相关 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ls"><span class="nav-text">ls</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cd%EF%BC%88change-dir-%20%E6%9B%B4%E6%94%B9%E7%9B%AE%E5%BD%95%EF%BC%89"><span class="nav-text">cd（change dir 更改目录）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pwd-%20%E6%89%93%E5%8D%B0%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95"><span class="nav-text">pwd 打印当前工作目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mkdir"><span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tree-dir-%20%E6%A0%91%E7%8A%B6%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95"><span class="nav-text">tree [dir] 树状显示目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#rm"><span class="nav-text">rm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#which-%20%E6%9F%A5%E7%9C%8B%E5%91%BD%E4%BB%A4%E6%89%80%E5%9C%A8%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="nav-text">which 查看命令所在的目录</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="nav-text">3. 文件相关 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#touch"><span class="nav-text">touch</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#rm-1"><span class="nav-text">rm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cp-%20%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6%E6%88%96%E6%98%AF%E7%9B%AE%E5%BD%95"><span class="nav-text">cp 拷贝文件或是目录 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mv-%20%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6%E6%88%96%E6%98%AF%E7%9B%AE%E5%BD%95"><span class="nav-text">mv 移动文件或是目录</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-text">4. 文件内容 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#cat"><span class="nav-text">cat</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#more"><span class="nav-text">more</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#less"><span class="nav-text">less</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#head"><span class="nav-text">head</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tail"><span class="nav-text">tail</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E7%BB%9F%E8%AE%A1%E4%BF%A1%E6%81%AF"><span class="nav-text">5. 统计信息</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#tree"><span class="nav-text">tree</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#wc%EF%BC%88words-cout-%20%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%EF%BC%89"><span class="nav-text">wc（words cout 统计文件内容）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#du-%20%E6%89%93%E5%8D%B0%E5%87%BA%E5%AD%90%E7%9B%AE%E5%BD%95%E5%A4%A7%E5%B0%8F"><span class="nav-text">du 打印出子目录大小</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#df"><span class="nav-text">df</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E3%80%81%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E7%BB%84%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-text">四、修改文件权限、用户与用户组相关命令 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E3%80%81%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E7%BB%84%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-text"> 修改文件权限、用户与用户组相关命令 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ls-l-%20%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="nav-text">ls -l 显示文件信息</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ln-%20%E5%BB%BA%E7%AB%8B%E8%BD%AF%E7%A1%AC%E8%BF%9E%E6%8E%A5"><span class="nav-text">ln 建立软硬连接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#chmod"><span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#chown"><span class="nav-text">chown</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#chgrp"><span class="nav-text">chgrp</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#whoami-%20%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7"><span class="nav-text">whoami 显示当前用户 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81find-%20%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E8%BF%9B%E8%A1%8C%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE"><span class="nav-text"> 五、find 命令参数进行文件查找 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E6%8C%89%E6%96%87%E4%BB%B6%E5%90%8D%E6%9F%A5%E8%AF%A2%20-name"><span class="nav-text">1. 按文件名查询 -name</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#find-path-name-file"><span class="nav-text">find path -name file</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9Afind-home-name-a-txt"><span class="nav-text"> 例子：find &#x2F;home -name a.txt</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E6%8C%89%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E6%9F%A5%E8%AF%A2%20-size"><span class="nav-text">2. 按文件大小查询 -size</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#fing-%20%E8%B7%AF%E5%BE%84%20-size-%20%E8%8C%83%E5%9B%B4"><span class="nav-text">fing 路径 -size 范围 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A"><span class="nav-text">例子：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E6%8C%89%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E6%9F%A5%E8%AF%A2%20-type"><span class="nav-text">3. 按文件类型查询 -type</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#find-%20%E8%B7%AF%E5%BE%84%20-type-%20%E7%B1%BB%E5%9E%8B"><span class="nav-text">find 路径 -type 类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A-1"><span class="nav-text">例子：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-find-%20%E5%91%BD%E4%BB%A4%E7%9A%84%E5%A5%BD%E6%90%AD%E6%A1%A3%20-xargs"><span class="nav-text">4.find 命令的好搭档 |xargs</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81grep-%20%E5%91%BD%E4%BB%A4%E6%A0%B9%E6%8D%AE%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E8%BF%9B%E8%A1%8C%E6%9F%A5%E6%89%BE"><span class="nav-text">六、grep 命令根据文件内容进行查找 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E6%89%BE%EF%BC%88%E4%B8%8E%20-find-%20%E7%9A%84%E4%B8%8D%E5%90%8C%E5%A4%84%EF%BC%9A%E4%B8%8D%E7%94%A8%E5%8A%A0%E8%B7%AF%E5%BE%84%EF%BC%89"><span class="nav-text"> 按文件内容查找（与 find 的不同处：不用加路径）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C"><span class="nav-text">过滤输出结果</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A-2"><span class="nav-text">例子：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7%E5%AE%8C%E6%88%90%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="nav-text">七、压缩工具完成文件目录的压缩和解压缩 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#zip-%20%E5%8E%8B%E7%BC%A9%E5%91%BD%E4%BB%A4"><span class="nav-text">zip 压缩命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%20-1"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rar"><span class="nav-text">rar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gzip-%20%E5%92%8C%20-gunzip"><span class="nav-text">gzip 和 gunzip</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#tar-%20%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7%20-tar-gz"><span class="nav-text">tar 最常用的打包工具 .tar.gz</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%AA%E5%8E%8B%E7%BC%A9%E4%B8%8D%E6%89%93%E5%8C%85"><span class="nav-text">只压缩不打包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%8C%85%E5%B9%B6%E5%8E%8B%E7%BC%A9%20-gz-%20%E6%A0%BC%E5%BC%8F"><span class="nav-text">打包并压缩 gz 格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%8C%85%E5%B9%B6%E5%8E%8B%E7%BC%A9%20-bzip2-%20%E6%A0%BC%E5%BC%8F"><span class="nav-text">打包并压缩 bzip2 格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%EF%BC%88VMWare-%20%E8%8C%83%E4%BE%8B%EF%BC%89"><span class="nav-text">七、虚拟机网络配置（VMWare 范例）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5"><span class="nav-text">1. 虚拟机网络连接 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9B%B8%E5%BD%93%E4%BA%8E%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%EF%BC%8C%E5%92%8C%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5%E5%90%8C%E4%B8%80%E7%BA%A7%20-IP-%20%E6%AE%B5"><span class="nav-text"> 桥接模式：虚拟机相当于一台电脑，和本地连接同一级 IP 段</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NAT-%20%E6%A8%A1%E5%BC%8F%EF%BC%9A%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E9%80%9A%E8%BF%87%20-VMNET8-%20%E7%BD%91%E5%8D%A1%E8%BF%9E%E6%8E%A5%E5%88%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%8C%E8%A6%81%E6%B1%82%20-VMNET8-%20%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%8C%E4%B8%80%E4%B8%AA%E7%BD%91%E6%AE%B5"><span class="nav-text">NAT 模式：本地主机通过 VMNET8 网卡连接到虚拟机，要求 VMNET8 和虚拟机同一个网段</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-secureCRT"><span class="nav-text">2.secureCRT</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#secureCRT-%20%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">secureCRT 是什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE"><span class="nav-text">设置 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E3%80%81Ubuntu-%20%E4%B8%8B%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD"><span class="nav-text">八、Ubuntu 下的软件安装和卸载 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#apt-get-%20%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%EF%BC%8C%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E8%BD%AF%E4%BB%B6%E5%90%8D%E7%A7%B0"><span class="nav-text">apt-get 自动安装软件，需要知道软件名称</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dpkg-%20%E6%A0%B9%E6%8D%AE%20-deb-%20%E5%AE%89%E8%A3%85%E5%8C%85%E6%9D%A5%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="nav-text">dpkg 根据 deb 安装包来自动安装软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85"><span class="nav-text">源码安装 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%BA%90%E4%BB%A3%E7%A0%81%E5%8C%85"><span class="nav-text">（1）解压缩源代码包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%882%EF%BC%89cd-dir"><span class="nav-text">（2）cd dir</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%883%EF%BC%89-configure"><span class="nav-text">（3）.&#x2F;configure</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%884%EF%BC%89make"><span class="nav-text">（4）make</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%885%EF%BC%89sudo-make-install"><span class="nav-text">（5）sudo make install</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%886%EF%BC%89sudo-make-distclean"><span class="nav-text">（6）sudo make distclean</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-text">九、磁盘管理（了解）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%EF%BC%88%E5%90%8E%E7%BB%AD%EF%BC%89"><span class="nav-text">十、进程管理（后续）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-text">十一、用户管理（了解）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%20-sudo-useradd"><span class="nav-text">创建用户 sudo useradd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%20-sudo-groupadd"><span class="nav-text">设置用户组 sudo groupadd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81"><span class="nav-text">设置密码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7%20-su"><span class="nav-text">切换用户 su</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#root-%20%E7%94%A8%E6%88%B7"><span class="nav-text">root 用户</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%EF%BC%88%E5%90%8E%E7%BB%AD%EF%BC%89"><span class="nav-text">十二、网络管理（后续）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">十三、其他常用命令 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E5%85%B3%E6%9C%BA%E9%87%8D%E5%90%AF%EF%BC%88%E9%9C%80%E8%A6%81%20-root-%20%E6%9D%83%E9%99%90%EF%BC%89"><span class="nav-text"> 十四、关机重启（需要 root 权限）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E4%BA%94%E3%80%81%E6%8F%90%E9%97%AE"><span class="nav-text">十五、提问 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-advance-%20%E6%96%87%E7%AB%A0%E6%80%BB%E8%A7%88"><span class="nav-text">C++ advance 文章总览</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Stephen Wang"
+      src="/img/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Stephen Wang</p>
+  <div class="site-description" itemprop="description">機器學習 / C++ / 投資 / 台灣景點</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">164</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">216</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stephenwang0205@outlook.com" title="E-Mail → mailto:stephenwang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C++ advance（四）Linux 命令基础 --1.Linux 常用命令
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-04-14 09:08:02" itemprop="dateCreated datePublished" datetime="2021-04-14T09:08:02+08:00">2021-04-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-17 09:19:32" itemprop="dateModified" datetime="2021-04-17T09:19:32+08:00">2021-04-17</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-advance/" itemprop="url" rel="index"><span itemprop="name">C++ advance</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>包括 linux 基本命令，用户管理，vi 使用，安装卸载软件，网络配置管理</p>
+<h3 id="一、Linux- 介绍和 -Linux- 目录结构"><a href="# 一、Linux- 介绍和 -Linux- 目录结构" class="headerlink" title="一、Linux 介绍和 Linux 目录结构"></a>一、Linux 介绍和 Linux 目录结构 </h3><h4 id="1-UNIX"><a href="#1-UNIX" class="headerlink" title="1.UNIX"></a>1.UNIX</h4><p> 创始人：Ken Thompson 和 Dennis Ritchie<br>主要分支和发展方向：IBM-AIX、HP-UX、solaris、BSD、linux<br><span id="more"></span></p>
+<h4 id="2-GNU- 组织（GNU’s-Not-Unix）"><a href="#2-GNU- 组织（GNU’s-Not-Unix）" class="headerlink" title="2.GNU 组织（GNU’s Not Unix）"></a>2.GNU 组织（GNU’s Not Unix）</h4><p>创始人：Richard Matthew Stallman<br>主旨：倡导自由软件 <br> 协议：GPL（General Public License）<br>主要产品：GCC、Emacs、Bash Shell、GLIBC、linux<br>标准：POSIX<br>    UNIX 用的是 Steve Bourne 在 1977 年发明的 Bourne Shell<br>    linux 用的默认是它的扩展：Bourne Again Shell（bash）</p>
+<h4 id="3-linux"><a href="#3-linux" class="headerlink" title="3.linux"></a>3.linux</h4><h5 id="创始人：Linus-Torvalds"><a href="# 创始人：Linus-Torvalds" class="headerlink" title="创始人：Linus Torvalds"></a>创始人：Linus Torvalds</h5><h5 id="发行版本：Ubuntu、Redhat、CentOS"><a href="# 发行版本：Ubuntu、Redhat、CentOS" class="headerlink" title="发行版本：Ubuntu、Redhat、CentOS"></a>发行版本：Ubuntu、Redhat、CentOS</h5><h5 id="学习内容"><a href="# 学习内容" class="headerlink" title="学习内容"></a>学习内容 </h5><p>shell<br> 编辑器 vim<br>编译器 GCC<br>gdb 调试 <br> 制作静态库和共享库 <br> 项目工程管理 <br> 系统编程（API）：文件 IO、文件目录、进程、信号、网络、线程</p>
+<h4 id="4-shell"><a href="#4-shell" class="headerlink" title="4.shell"></a>4.shell</h4><h5 id="shell- 是什么"><a href="#shell- 是什么" class="headerlink" title="shell 是什么"></a>shell 是什么 </h5><p> 打开终端，就获得一个 shell，可以输入各种命令</p>
+<h5 id="shell- 家族"><a href="#shell- 家族" class="headerlink" title="shell 家族"></a>shell 家族 </h5><p>/bin/sh（已经被 /bin/bash 取代）<br>/bin/bash（就是 Linux 默认的 shell）<br>/bin/ksh（Korshell 由 AT&amp;T Bell lab 发展出来的）<br>/bin/tcsh（整合 C shell，提供更多功能）<br>/bin/csh（已经被 /bin/tcsh 所取代）<br>/bin/zsh（基于 ksh 发展出来的，功能更强大的 shell）<br> 查看系统配置 shell<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="regexp">/etc/</span>shells</span><br><span class="line">echo <span class="variable">$SHELL</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="5- 目录结构"><a href="#5- 目录结构" class="headerlink" title="5. 目录结构"></a>5. 目录结构</h4><p>/ 根目录<br>/bin 可执行文件所在的目录<br>/media 挂载设备媒体、U 盘、光驱等<br>/mnt 让用户挂载别的文件系统<br>/usr unix system resources 庞大复杂的目录，很多应用会安装到此目录<br>/usr/local 用户自己安装软件的目录<br>/sbin 超级管理员 root 的可执行文件目录<br>/proc 这个目录是系统内存的映射，会保留进程运行的一些消息<br>/etc 系统软件的启动和配置目录<br>/etc/passwd 用户存放文件（man 5 passwd 查看）<br>/dev 设备文件所在目录<br>/home/user 用户家目录</p>
+<h4 id="6- 常用命令"><a href="#6- 常用命令" class="headerlink" title="6. 常用命令"></a>6. 常用命令 </h4><p>ls 查看文件夹内容<br>history 查看历史记录<br> 可以方向键上下查看之前的命令</p>
+<h3 id="二、Linux- 下的绝对路径和相对路径"><a href="# 二、Linux- 下的绝对路径和相对路径" class="headerlink" title="二、Linux 下的绝对路径和相对路径"></a>二、Linux 下的绝对路径和相对路径 </h3><p> 绝对路径：以 “/“ 开头 <br> 相对路径：以 “.” 或者 “..” 开头的路径，”.” 代表当前路径，”..” 代表上一级路径</p>
+<h3 id="三、文件和目录操作相关命令"><a href="# 三、文件和目录操作相关命令" class="headerlink" title="三、文件和目录操作相关命令"></a>三、文件和目录操作相关命令</h3><h4 id="1- 代表意思"><a href="#1- 代表意思" class="headerlink" title="1. 代表意思"></a>1. 代表意思</h4><p>bob@ubuntu:~/linux$<br>bob 代表用户<br>ubuntu 代表机器名<br>~ 代表家目录<br>/linux 代表当前所在目录<br>$ 代表是普通用户（sudo su 切换到管理员，输入当前用户的密码）<br># 代表管理员用户</p>
+<h4 id="2- 目录相关"><a href="#2- 目录相关" class="headerlink" title="2. 目录相关"></a>2. 目录相关 </h4><h5 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h5><p>-a 查看全部文件，包含文件名前带 “.” 的隐藏文件<br>-l 查看文件的详细信息<br>-R 递归查看子目录的文件信息<br>-lrt 文件按照修改时间排序<br> 通配符 <br> 任意多字符：*<br>任意一个字符：？<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> *<span class="string">.c</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="cd（change-dir- 更改目录）"><a href="#cd（change-dir- 更改目录）" class="headerlink" title="cd（change dir 更改目录）"></a>cd（change dir 更改目录）</h5><p>回到家目录的方式：<br>cd /home/user<br>cd ~<br>cd<br>cd $HOME（$HOME 是环境变量）<br>回到上一次所在的目录：cd -</p>
+<h5 id="pwd- 打印当前工作目录"><a href="#pwd- 打印当前工作目录" class="headerlink" title="pwd 打印当前工作目录"></a>pwd 打印当前工作目录</h5><h5 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h5><p>mkdir dir1 [dir2]<br>mkdir -p dir1/dir2 递归创建目录</p>
+<h5 id="tree-dir- 树状显示目录"><a href="#tree-dir- 树状显示目录" class="headerlink" title="tree [dir] 树状显示目录"></a>tree [dir] 树状显示目录</h5><p>sudo apt-get install tree</p>
+<h5 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h5><p>删除的目录必须为空目录 <br>rm dir<br> 空目录定义：只包含 “.” 和 “..” 的目录<br>rmdir -rf dir 如果 dir2 删除后，dir1 为空，那么会递归删除<br>-r 向下递归，一并删除<br>-f 强行删除，不做提示</p>
+<h5 id="which- 查看命令所在的目录"><a href="#which- 查看命令所在的目录" class="headerlink" title="which 查看命令所在的目录"></a>which 查看命令所在的目录</h5><p>which ls 查看 ls 命令所在的目录<br>（cd 命令是 bash 自身带的命令，所以不在任何一个目录下）</p>
+<h4 id="3- 文件相关"><a href="#3- 文件相关" class="headerlink" title="3. 文件相关"></a>3. 文件相关 </h4><h5 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h5><p>touch file 创建文件，如果文件存在则更新文件最后访问时间<br> 可以用 ls -lrt 看文件的访问时间</p>
+<h5 id="rm-1"><a href="#rm-1" class="headerlink" title="rm"></a>rm</h5><p>rm filename<br>rm -r dir 递归删除子目录<br>rm -rf * 删除当前目录的全部文件和目录</p>
+<h5 id="cp- 拷贝文件或是目录"><a href="#cp- 拷贝文件或是目录" class="headerlink" title="cp 拷贝文件或是目录"></a>cp 拷贝文件或是目录 </h5><p>cp src des<br> 如果 des 最后一级的内容是目录，那么则将 src 拷贝到该目录下 <br> 如果 des 最后一级的内容不是目录…/aa/xxx，在 des 上级目录 /aa 下创建一个文件 xxx，并将 src 的内容拷贝过来<br>cp -r src des 将 src 这个目录拷贝到 des 目录下</p>
+<h5 id="mv- 移动文件或是目录"><a href="#mv- 移动文件或是目录" class="headerlink" title="mv 移动文件或是目录"></a>mv 移动文件或是目录</h5><p>mv src des 重命名文件或者目录<br>mv src des 移动文件或目录到其他目录（des 是一个路径）<br>mv src des 移动并改名（des 是其他路径下的文件名）</p>
+<h4 id="4- 文件内容"><a href="#4- 文件内容" class="headerlink" title="4. 文件内容"></a>4. 文件内容 </h4><h5 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h5><p>cat file 将文件内容显示到终端<br> 如果无文件，则读入标准输入，遇到回车显示</p>
+<h5 id="more"><a href="#more" class="headerlink" title="more"></a>more</h5><p>more file 分屏查看文件，空格显示下一屏，回车显示下一行内容</p>
+<h5 id="less"><a href="#less" class="headerlink" title="less"></a>less</h5><p>less file 分屏显示，可以用方向键控制上下翻</p>
+<h5 id="head"><a href="#head" class="headerlink" title="head"></a>head</h5><p>head -n file 显示文件前 n 行，如果不加 - n 则默认显示前 10 行</p>
+<h5 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h5><p>tail -n file 显示文件末尾 n 行，如果不加 - n 则默认显示末尾 10 行<br>tail -f file 查看文件尾部内容，不退出，用于追踪日志</p>
+<h4 id="5- 统计信息"><a href="#5- 统计信息" class="headerlink" title="5. 统计信息"></a>5. 统计信息</h4><h5 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h5><p>tree file 树形显示目录结构</p>
+<h5 id="wc（words-cout- 统计文件内容）"><a href="#wc（words-cout- 统计文件内容）" class="headerlink" title="wc（words cout 统计文件内容）"></a>wc（words cout 统计文件内容）</h5><p>wc * 统计整个目录<br>wc file 默认显示：行数 单词数 字节数<br>wc -l 显示行数<br>wc -w 显示单词数<br>wc -c 显示字节数</p>
+<h5 id="du- 打印出子目录大小"><a href="#du- 打印出子目录大小" class="headerlink" title="du 打印出子目录大小"></a>du 打印出子目录大小</h5><p>du -h 更适合人类观察<br>du -h —max-depth=1 只一级子目录大小</p>
+<h5 id="df"><a href="#df" class="headerlink" title="df"></a>df</h5><p>df -h 显示磁盘使用情形<br>df -h —block-size=GB 按照 GB 统计显示<br><img src="/2021/04/14/C++%20advance4.1/photo1.png" alt></p>
+<h3 id="四、修改文件权限、用户与用户组相关命令"><a href="# 四、修改文件权限、用户与用户组相关命令" class="headerlink" title="四、修改文件权限、用户与用户组相关命令"></a>四、修改文件权限、用户与用户组相关命令 </h3><h4 id="修改文件权限、用户与用户组相关命令"><a href="# 修改文件权限、用户与用户组相关命令" class="headerlink" title="修改文件权限、用户与用户组相关命令"></a> 修改文件权限、用户与用户组相关命令 </h4><h5 id="ls-l- 显示文件信息"><a href="#ls-l- 显示文件信息" class="headerlink" title="ls -l 显示文件信息"></a>ls -l 显示文件信息</h5><p>drwxr-xr-x 3 bob bob 4096 5 月 14 18：16 MAKE<br>-rw-r—r— 1 bob bob<br>（1）MAKE 是一个目录，目录的大小一般默认是 4096<br>（2）5 月 14 18：16 是时间<br>（3）bob bob 是用户和组<br> 用户比较多的时候可以分组管理，默认情况下一个用户就是一个组 <br>（4）drwxr-xr-x 是文件权限的标志位<br> 总共 10 位，第 1 位是文件类型，后 9 位每三位一组，是文件的权限 <br> 文件类型：- 是普通文件，d 是目录文件 <br> 前 3 位：归属用户的权限 <br> 中 3 位：归属组的权限 <br> 后 3 位：其他用户的权限<br>r 可读，w 可写，x 可执行</p>
+<blockquote>
+<p>权限位数字表示法（8 进制数）：<br>rw- 110 6<br>r— 100 4<br>r— 100 4<br>三个数连起来前面 + 0<br>-&gt; 0644</p>
+</blockquote>
+<p>（5）3 是硬连接计数</p>
+<h5 id="ln- 建立软硬连接"><a href="#ln- 建立软硬连接" class="headerlink" title="ln 建立软硬连接"></a>ln 建立软硬连接</h5><p>ln -s src des 建立软连接（软连接：相当于建立一个快捷方式）<br>ln src des 建立硬连接（硬连接：让两个文件占用同一个磁盘块上的内容）<br>unlink filename 删除引用计数和文件，当引用计数为 0 时，文件删除<br>stat file 可以查看文件的 inode 信息</p>
+<h5 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h5><p>chmod [u|g|o|a] [+|-] [r|w|x] file 可以用 + 或 - 来增加或减少权限 <br>chmod -x file 如果不加用户和组等信息，则默认是 a，代表全部<br>chmod 9644 file 按照数字表示法设置权限位<br> 常用情景：创建一个 shell 文件的时候，默认没有可执行权限，利用 chmod 改变权限 <br> 目录的可执行权限就是用户可以 cd 进入目录</p>
+<h5 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h5><p>sudo chown user:group file 可以修改 file 的所有者和所属组<br>sudo chown user file 只修改所有者</p>
+<h5 id="chgrp"><a href="#chgrp" class="headerlink" title="chgrp"></a>chgrp</h5><p>sudo chgrp groupname file 修改文件所属组</p>
+<h5 id="whoami- 显示当前用户"><a href="#whoami- 显示当前用户" class="headerlink" title="whoami 显示当前用户"></a>whoami 显示当前用户 </h5><h3 id="五、find- 命令参数进行文件查找"><a href="# 五、find- 命令参数进行文件查找" class="headerlink" title="五、find 命令参数进行文件查找"></a> 五、find 命令参数进行文件查找 </h3><h4 id="1- 按文件名查询 -name"><a href="#1- 按文件名查询 -name" class="headerlink" title="1. 按文件名查询 -name"></a>1. 按文件名查询 -name</h4><h5 id="find-path-name-file"><a href="#find-path-name-file" class="headerlink" title="find path -name file"></a>find path -name file</h5><h5 id="例子：find-home-name-a-txt"><a href="# 例子：find-home-name-a-txt" class="headerlink" title="例子：find /home -name a.txt"></a> 例子：find /home -name a.txt</h5><h4 id="2- 按文件大小查询 -size"><a href="#2- 按文件大小查询 -size" class="headerlink" title="2. 按文件大小查询 -size"></a>2. 按文件大小查询 -size</h4><h5 id="fing- 路径 -size- 范围"><a href="#fing- 路径 -size- 范围" class="headerlink" title="fing 路径 -size 范围"></a>fing 路径 -size 范围 </h5><p> 范围：大于 + 表示，小于 - 表示，等于不需要添加符号 <br> 大小：M 必须大写，k 必须小写</p>
+<h5 id="例子："><a href="# 例子：" class="headerlink" title="例子："></a>例子：</h5><p>等于 100k 的文件：find ~/-size 100k<br>大于 100k 的文件：find ~/-size +100k<br>大于 50k，小于 100k 的文件：find ~/-size +50k -size -100k<br>只显示下一层路径的：find ./-maxdepth 1 -size +1M<br>查找的结果传递给后面的参数（显示详细信息）：find ./-maxdepth 1 -size +1M -exec ls -l {} \;<br>查找的结果传递给后面的参数的安全模式：find ./-maxdepth 1 -size +1M -ok ls -l {} \;</p>
+<h4 id="3- 按文件类型查询 -type"><a href="#3- 按文件类型查询 -type" class="headerlink" title="3. 按文件类型查询 -type"></a>3. 按文件类型查询 -type</h4><h5 id="find- 路径 -type- 类型"><a href="#find- 路径 -type- 类型" class="headerlink" title="find 路径 -type 类型"></a>find 路径 -type 类型</h5><p>f 普通文件类型<br>d 目录<br>l 符号链接<br>b 块设备文件<br>c 字符设备文件<br>s socket 文件<br>p 管道</p>
+<h5 id="例子：-1"><a href="# 例子：-1" class="headerlink" title="例子："></a>例子：</h5><p>find /home -type d</p>
+<h4 id="4-find- 命令的好搭档 -xargs"><a href="#4-find- 命令的好搭档 -xargs" class="headerlink" title="4.find 命令的好搭档 |xargs"></a>4.find 命令的好搭档 |xargs</h4><p>-exec 是将 find 查找的结果一下子全部传给后面的指令，若过多容易造成后面的指令溢出<br>|xargs 会将 find 查找的结果分成若干块输出给后面的指令<br>find ./-type l|xargs ls -l</p>
+<h3 id="六、grep- 命令根据文件内容进行查找"><a href="# 六、grep- 命令根据文件内容进行查找" class="headerlink" title="六、grep 命令根据文件内容进行查找"></a>六、grep 命令根据文件内容进行查找 </h3><h4 id="按文件内容查找（与 -find- 的不同处：不用加路径）"><a href="# 按文件内容查找（与 -find- 的不同处：不用加路径）" class="headerlink" title="按文件内容查找（与 find 的不同处：不用加路径）"></a> 按文件内容查找（与 find 的不同处：不用加路径）</h4><p>grep -r 查找内容 [对应文件]（-r 递归查找）</p>
+<h5 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子</h5><p>grep -rn “main” *.c（输出查找结果所在行号）</p>
+<h4 id="过滤输出结果"><a href="# 过滤输出结果" class="headerlink" title="过滤输出结果"></a>过滤输出结果</h4><p>|grep 内容<br>|grep -v 内容（排除的内容）</p>
+<h5 id="例子：-2"><a href="# 例子：-2" class="headerlink" title="例子："></a>例子：</h5><p>find ./-type f|grep txt<br>cat test.c |grep main<br>tail -f tcpsvr.1705 |grep connect</p>
+<h3 id="七、压缩工具完成文件目录的压缩和解压缩"><a href="# 七、压缩工具完成文件目录的压缩和解压缩" class="headerlink" title="七、压缩工具完成文件目录的压缩和解压缩"></a>七、压缩工具完成文件目录的压缩和解压缩 </h3><h4 id="zip- 压缩命令"><a href="#zip- 压缩命令" class="headerlink" title="zip 压缩命令"></a>zip 压缩命令</h4><p> 打包：zip -r dir.zip dir（-r 包含子目录）<br>解包：unzip dir.zip<br>压缩文件的默认权限是 664</p>
+<h5 id="例子 -1"><a href="# 例子 -1" class="headerlink" title="例子"></a>例子</h5><p>zip -r aa.zip aa hello</p>
+<h4 id="rar"><a href="#rar" class="headerlink" title="rar"></a>rar</h4><p>rar a -r newdir dir（a 代表压缩，-r 是递归子目录）（rar 指令自动添加后缀）<br>rar x newdir.rar</p>
+<h4 id="gzip- 和 -gunzip"><a href="#gzip- 和 -gunzip" class="headerlink" title="gzip 和 gunzip"></a>gzip 和 gunzip</h4><h5 id="tar- 最常用的打包工具 -tar-gz"><a href="#tar- 最常用的打包工具 -tar-gz" class="headerlink" title="tar 最常用的打包工具 .tar.gz"></a>tar 最常用的打包工具 .tar.gz</h5><p>-c 压缩文件<br>-v 显示信息<br>-f 指定压缩包名<br>-x 解开压缩文件<br>-z gz 格式压缩</p>
+<h5 id="只压缩不打包"><a href="# 只压缩不打包" class="headerlink" title="只压缩不打包"></a>只压缩不打包</h5><p>tar -cvf dir.tar dir 打包<br>tar xvf dir.tar 解包</p>
+<h5 id="打包并压缩 -gz- 格式"><a href="# 打包并压缩 -gz- 格式" class="headerlink" title="打包并压缩 gz 格式"></a>打包并压缩 gz 格式</h5><p>tar -zcvf dir.tar.gz dir 打包<br>tar zxvf dir.tar.gz 解包</p>
+<h5 id="打包并压缩 -bzip2- 格式"><a href="# 打包并压缩 -bzip2- 格式" class="headerlink" title="打包并压缩 bzip2 格式"></a>打包并压缩 bzip2 格式</h5><p>-j 选项，其余和 tar 一致<br>tar -jcvf dir.tar.bzip2 dir<br>tar -xjvf dir.tar.bzip2</p>
+<h3 id="七、虚拟机网络配置（VMWare- 范例）"><a href="# 七、虚拟机网络配置（VMWare- 范例）" class="headerlink" title="七、虚拟机网络配置（VMWare 范例）"></a>七、虚拟机网络配置（VMWare 范例）</h3><h4 id="1- 虚拟机网络连接"><a href="#1- 虚拟机网络连接" class="headerlink" title="1. 虚拟机网络连接"></a>1. 虚拟机网络连接 </h4><h5 id="桥接模式：虚拟机相当于一台电脑，和本地连接同一级 -IP- 段"><a href="# 桥接模式：虚拟机相当于一台电脑，和本地连接同一级 -IP- 段" class="headerlink" title="桥接模式：虚拟机相当于一台电脑，和本地连接同一级 IP 段"></a> 桥接模式：虚拟机相当于一台电脑，和本地连接同一级 IP 段</h5><h5 id="NAT- 模式：本地主机通过 -VMNET8- 网卡连接到虚拟机，要求 -VMNET8- 和虚拟机同一个网段"><a href="#NAT- 模式：本地主机通过 -VMNET8- 网卡连接到虚拟机，要求 -VMNET8- 和虚拟机同一个网段" class="headerlink" title="NAT 模式：本地主机通过 VMNET8 网卡连接到虚拟机，要求 VMNET8 和虚拟机同一个网段"></a>NAT 模式：本地主机通过 VMNET8 网卡连接到虚拟机，要求 VMNET8 和虚拟机同一个网段</h5><h4 id="2-secureCRT"><a href="#2-secureCRT" class="headerlink" title="2.secureCRT"></a>2.secureCRT</h4><h5 id="secureCRT- 是什么"><a href="#secureCRT- 是什么" class="headerlink" title="secureCRT 是什么"></a>secureCRT 是什么</h5><p>SecureCRT 是一款支持 SSH2、SSH1、Telnet、Telnet/SSH、Relogin、Serial、TAPI、RAW 等协议的终端仿真程序。简单的说是 Windows 下登录 UNIX、Linux 服务器主机的软件。SecureCRT 支持 SSH，同时支持 Telnet 和 rlogin 协议。</p>
+<h5 id="设置"><a href="# 设置" class="headerlink" title="设置"></a>设置 </h5><p>secureCRT 协议，选择 SSH2<br>secureFX 协议，选择 SFTP<br> 并设置一个会话名词 <br> 登入之后可以再做一些设置，一般把字符编码改成 UTF-8<br>会话选项 - 终端 - 仿真 - Linux</p>
+<h3 id="八、Ubuntu- 下的软件安装和卸载"><a href="# 八、Ubuntu- 下的软件安装和卸载" class="headerlink" title="八、Ubuntu 下的软件安装和卸载"></a>八、Ubuntu 下的软件安装和卸载 </h3><h4 id="apt-get- 自动安装软件，需要知道软件名称"><a href="#apt-get- 自动安装软件，需要知道软件名称" class="headerlink" title="apt-get 自动安装软件，需要知道软件名称"></a>apt-get 自动安装软件，需要知道软件名称</h4><p>sudo apt-get update 更新源<br> 更新的是 /etc/apt 下的 source.list<br>sudo apt-get install tree 安装<br>sudo apt-get remove tree 卸载<br>udo apt-get clean 清理包</p>
+<h4 id="dpkg- 根据 -deb- 安装包来自动安装软件"><a href="#dpkg- 根据 -deb- 安装包来自动安装软件" class="headerlink" title="dpkg 根据 deb 安装包来自动安装软件"></a>dpkg 根据 deb 安装包来自动安装软件</h4><p>sudo dpkg -i xxx.deb 安装软件包<br>sudo dpkg -r xxx.deb 删除软件包</p>
+<h4 id="源码安装"><a href="# 源码安装" class="headerlink" title="源码安装"></a>源码安装 </h4><h5 id="（1）解压缩源代码包"><a href="#（1）解压缩源代码包" class="headerlink" title="（1）解压缩源代码包"></a>（1）解压缩源代码包</h5><h5 id="（2）cd-dir"><a href="#（2）cd-dir" class="headerlink" title="（2）cd dir"></a>（2）cd dir</h5><h5 id="（3）-configure"><a href="#（3）-configure" class="headerlink" title="（3）./configure"></a>（3）./configure</h5><p> 检测文件是否缺失，创建 Makefile，检测编译环境</p>
+<h5 id="（4）make"><a href="#（4）make" class="headerlink" title="（4）make"></a>（4）make</h5><p>编译源码，生成库和可执行程序</p>
+<h5 id="（5）sudo-make-install"><a href="#（5）sudo-make-install" class="headerlink" title="（5）sudo make install"></a>（5）sudo make install</h5><p>把库和可执行程序，安装到系统路径 /usr/local/bin 下</p>
+<h5 id="（6）sudo-make-distclean"><a href="#（6）sudo-make-distclean" class="headerlink" title="（6）sudo make distclean"></a>（6）sudo make distclean</h5><p>删除和卸载软件</p>
+<h3 id="九、磁盘管理（了解）"><a href="# 九、磁盘管理（了解）" class="headerlink" title="九、磁盘管理（了解）"></a>九、磁盘管理（了解）</h3><h3 id="十、进程管理（后续）"><a href="# 十、进程管理（后续）" class="headerlink" title="十、进程管理（后续）"></a>十、进程管理（后续）</h3><h3 id="十一、用户管理（了解）"><a href="# 十一、用户管理（了解）" class="headerlink" title="十一、用户管理（了解）"></a>十一、用户管理（了解）</h3><h4 id="创建用户 -sudo-useradd"><a href="# 创建用户 -sudo-useradd" class="headerlink" title="创建用户 sudo useradd"></a>创建用户 sudo useradd</h4><p>-s 指定 shell<br>-g 指定组<br>-d 用户家目录<br>-m 家目录不存在时，自动创建<br>sudo useradd -s /bin/bash -g itcast -d /home/bob -m bob </p>
+<h4 id="设置用户组 -sudo-groupadd"><a href="# 设置用户组 -sudo-groupadd" class="headerlink" title="设置用户组 sudo groupadd"></a>设置用户组 sudo groupadd</h4><p>sudo groupadd bob 增加 bob 用户组</p>
+<h4 id="设置密码"><a href="# 设置密码" class="headerlink" title="设置密码"></a>设置密码</h4><p>sudo passwd bob 设置 bob 用户的密码</p>
+<h4 id="切换用户 -su"><a href="# 切换用户 -su" class="headerlink" title="切换用户 su"></a>切换用户 su</h4><p>su ken 切换到 ken 用户<br>su -ken 切换到 ken 用户，带有环境变量</p>
+<h4 id="root- 用户"><a href="#root- 用户" class="headerlink" title="root 用户"></a>root 用户</h4><p>sudo su</p>
+<h3 id="十二、网络管理（后续）"><a href="# 十二、网络管理（后续）" class="headerlink" title="十二、网络管理（后续）"></a>十二、网络管理（后续）</h3><h3 id="十三、其他常用命令"><a href="# 十三、其他常用命令" class="headerlink" title="十三、其他常用命令"></a>十三、其他常用命令 </h3><h3 id="十四、关机重启（需要 -root- 权限）"><a href="# 十四、关机重启（需要 -root- 权限）" class="headerlink" title="十四、关机重启（需要 root 权限）"></a> 十四、关机重启（需要 root 权限）</h3><p>shotdown -h now 立即关机<br>init () 关机<br>power off 关机<br>reboot 重启</p>
+<h3 id="十五、提问"><a href="# 十五、提问" class="headerlink" title="十五、提问"></a>十五、提问 </h3><p>find ./-size -1M 找不到文件<br>find ./-size -3M 找到文件<br> 为什么？因为可能不足 1M 的文件被按照 1M 计</p>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览</h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="tag"># 常用命令</a>
+              <a href="/tags/%E5%91%BD%E4%BB%A4%E5%9F%BA%E7%A1%80/" rel="tag"># 命令基础</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/13/position-in-english/" rel="prev" title="職位中英文對照表">
+                  <i class="fa fa-chevron-left"></i> 職位中英文對照表
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/14/5G-1/" rel="next" title="5G（一）5G 发展历程">
+                  5G（一）5G 发展历程 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stephen Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+  
+
+
+
+
+  
+
+
+</body>
+</html>
