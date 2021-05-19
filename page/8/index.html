@@ -174,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">164</span>
+          <span class="site-state-item-count">166</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -187,7 +187,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">216</span>
+        <span class="site-state-item-count">221</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -224,6 +224,187 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/29/hexo%20pdf-file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/29/hexo%20pdf-file/" class="post-title-link" itemprop="url">如何在 hexo 文章中插入 pdf 文件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-04-29 17:12:00" itemprop="dateCreated datePublished" datetime="2021-04-29T17:12:00+08:00">2021-04-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-30 15:11:34" itemprop="dateModified" datetime="2021-04-30T15:11:34+08:00">2021-04-30</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="利用 -html- 语法"><a href="# 利用 -html- 语法" class="headerlink" title="利用 html 语法"></a>利用 html 语法 </h3><p> 首先修改_config.yml 文件</p>
+<p>将_config.yml 中的 post_asset_folder 选项置为 true</p>
+<p>post_asset_folder: true</p>
+<p>关于这个选项的功能说明如下:</p>
+<p>当您设置 post_asset_folder 为 true 参数后，在建立文件时，Hexo 会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹，如此一来，您便可以更方便的使用资源。</p>
+<p>然后新建一篇文章</p>
+<p>$ hexo new</p>
+<p>由于上一步已经将 post_asset_folder 选项设为了 true 所以这一步新建文章时会创建一个 md 文件和一个同名的文件夹 为了方便叙述，我用 test 作为文件和文件夹名</p>
+<p>编辑 test.md</p>
+<p>用 vim 或者别的编辑器打开 test.md</p>
+<p>test.md 文件中加入如下代码</p>
+<p><object data="./test/test.pdf" type="application/pdf" width="100%" height="100%"><br>data 表示你要上传的 pdf 的路径，使用相对路径，将你要上传的 pdf 放入第二步生成的 test 文件夹。<br>这里注意 height 不能设成 100%，不然太矮了，显示效果不好 可以用浏览器预览，通过 F12 预估一下高度。</object></p>
+<p>例如：</p>
+<object data="./test/test.pdf" type="application/pdf" width="100%" height="877px">
+
+<p>这里不一定非用 object 标签，embed、iframe 标签也一样</p>
+</object>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/28/Engineering-Practice-2A-prepare/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/28/Engineering-Practice-2A-prepare/" class="post-title-link" itemprop="url">工程实践与科技创新 2A-- 实验前准备</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-04-28 16:17:34" itemprop="dateCreated datePublished" datetime="2021-04-28T16:17:34+08:00">2021-04-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-05-10 15:48:37" itemprop="dateModified" datetime="2021-05-10T15:48:37+08:00">2021-05-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%E4%B8%8E%E7%A7%91%E6%8A%80%E5%88%9B%E6%96%B02A/" itemprop="url" rel="index"><span itemprop="name">大学课程-工程实践与科技创新2A</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <div class="pdf-container" data-target="./S800" data-height="板介绍"></div>
+<p><img src="/2021/04/28/Engineering-Practice-2A-prepare/photo1.png" alt="Keil 目录"></p>
+<ol>
+<li> 新建一个 WorkSpace 文件夹，将三个 lab 的文件夹放进去 </li>
+<li> 打开 Keil，Open project 打开 lab 文件夹中的 exp1.uvprojx</li>
+<li> 编译 build 之后，就可以 load 下载到实验板上 <br><img src="/2021/04/28/Engineering-Practice-2A-prepare/photo2.png" alt="数据手册和用户指南"></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -885,156 +1066,6 @@
     
     <div class="post-body" itemprop="articleBody">
           
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/16/C++%20advance7.3/" class="post-title-link" itemprop="url">C++ advance7.3</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-04-16 15:52:05 / 修改時間：16:39:55" itemprop="dateCreated datePublished" datetime="2021-04-16T15:52:05+08:00">2021-04-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-advance/" itemprop="url" rel="index"><span itemprop="name">C++ advance</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/16/C++%20advance7.2/" class="post-title-link" itemprop="url">C++ advance7.2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-04-16 15:52:00 / 修改時間：16:39:53" itemprop="dateCreated datePublished" datetime="2021-04-16T15:52:00+08:00">2021-04-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-advance/" itemprop="url" rel="index"><span itemprop="name">C++ advance</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-
       
     </div>
 

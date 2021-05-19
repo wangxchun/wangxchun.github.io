@@ -174,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">164</span>
+          <span class="site-state-item-count">166</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -187,7 +187,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">216</span>
+        <span class="site-state-item-count">221</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -224,6 +224,174 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/03/16/C++%20get-out-each-digit-of-the-number/" class="post-title-link" itemprop="url">C++ 取出一個數的每一位</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-03-16 22:31:48" itemprop="dateCreated datePublished" datetime="2019-03-16T22:31:48+08:00">2019-03-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-13 16:30:45" itemprop="dateModified" datetime="2021-04-13T16:30:45+08:00">2021-04-13</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-learn/" itemprop="url" rel="index"><span itemprop="name">C++ learn</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr [<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr [i] = t /<span class="built_in"><span class="keyword">int</span></span> (<span class="built_in">pow</span> (<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr [i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2019/03/14/C++%20rand/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/03/14/C++%20rand/" class="post-title-link" itemprop="url">C++ 利用 rand () 產生隨機數</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-03-14 21:53:50" itemprop="dateCreated datePublished" datetime="2019-03-14T21:53:50+08:00">2019-03-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-17 09:26:53" itemprop="dateModified" datetime="2021-04-17T09:26:53+08:00">2021-04-17</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-learn/" itemprop="url" rel="index"><span itemprop="name">C++ learn</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="1-rand-函數介紹"><a href="#1-rand-函數介紹" class="headerlink" title="1.rand () 函數介紹"></a>1.rand () 函數介紹</h4><p>rand () 的效果可以產生從 0~RAND_MAX (int 的最大值) 之間的隨機整數。<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/03/14/C++%20rand/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -895,183 +1063,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/10/24/C++%20error%20no%20matching%20function%20for%20call%20to%20transform/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/14/C++%20review3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/14/C++%20review3/" class="post-title-link" itemprop="url">C++ review(3)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2018-10-14 20:35:13" itemprop="dateCreated datePublished" datetime="2018-10-14T20:35:13+08:00">2018-10-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 15:47:48" itemprop="dateModified" datetime="2021-04-13T15:47:48+08:00">2021-04-13</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-review/" itemprop="url" rel="index"><span itemprop="name">C++ review</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="https://wangxchun.github.io/2018/09/30/C++%20review1/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review2/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review3/">C++ review (3)</a></p>
-<h3 id="一、模板"><a href="#一、模板" class="headerlink" title="一、模板"></a>一、模板</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2018/10/14/C++%20review3/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2018/10/14/C++%20review2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/14/C++%20review2/" class="post-title-link" itemprop="url">C++ review(2)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2018-10-14 15:05:07" itemprop="dateCreated datePublished" datetime="2018-10-14T15:05:07+08:00">2018-10-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-04-13 15:56:41" itemprop="dateModified" datetime="2021-04-13T15:56:41+08:00">2021-04-13</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-review/" itemprop="url" rel="index"><span itemprop="name">C++ review</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="https://wangxchun.github.io/2018/09/30/C++%20review1/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review2/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review3/">C++ review (3)</a></p>
-<h3 id="一、記憶體分區模型"><a href="#一、記憶體分區模型" class="headerlink" title="一、記憶體分區模型"></a>一、記憶體分區模型</h3><p><img src="/2018/10/14/C++%20review2/photo1.png" alt></p>
-<h4 id="1-程式運行前"><a href="#1-程式運行前" class="headerlink" title="1. 程式運行前"></a>1. 程式運行前</h4><p>在程式編譯後，生成了 exe 可執行程式，未執行該程式前分爲三個區域<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2018/10/14/C++%20review2/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
