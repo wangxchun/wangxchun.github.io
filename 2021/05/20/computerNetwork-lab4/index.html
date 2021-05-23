@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="google-site-verification" content="SEuuKcxiY0Z6R9aAPIZyU5Y9rFqpgO9gKES--zhFX24" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="一、任务要求  用 mininet 创建两个 LAN，然后用 VXLAN 创建 overlay network，让两个局域网可以互相通信。 二、原理 1.Overlay Network 关于这个网络nat：enp0s3：上网host-only：enp0s8：两个 LAN 通信 三、常用指令SDN 学习笔记 1. 网桥 ovs-vsctl 基本命令 2. 流表 四、实作 1. 创建拓扑 在两台虚拟机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络 lab4 Overlay Network 和 VXLAN">
+<meta property="og:url" content="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/index.html">
+<meta property="og:site_name" content="Stephen自强不息">
+<meta property="og:description" content="一、任务要求  用 mininet 创建两个 LAN，然后用 VXLAN 创建 overlay network，让两个局域网可以互相通信。 二、原理 1.Overlay Network 关于这个网络nat：enp0s3：上网host-only：enp0s8：两个 LAN 通信 三、常用指令SDN 学习笔记 1. 网桥 ovs-vsctl 基本命令 2. 流表 四、实作 1. 创建拓扑 在两台虚拟机">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/photo2.png">
+<meta property="og:image" content="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/photo3.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/photo1.png">
+<meta property="article:published_time" content="2021-05-20T06:49:35.000Z">
+<meta property="article:modified_time" content="2021-05-23T09:24:22.459Z">
+<meta property="article:author" content="Stephen Wang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/photo2.png">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>计算机网络 lab4 Overlay Network 和 VXLAN | Stephen自强不息</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Stephen自强不息</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%BB%E5%8A%A1%E8%A6%81%E6%B1%82"><span class="nav-text">一、任务要求 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%8E%9F%E7%90%86"><span class="nav-text">二、原理 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Overlay-Network"><span class="nav-text">1.Overlay Network</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E7%BD%91%E7%BB%9C"><span class="nav-text"> 关于这个网络</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="nav-text">三、常用指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E7%BD%91%E6%A1%A5%20-ovs-vsctl-%20%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-text">1. 网桥 ovs-vsctl 基本命令 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E6%B5%81%E8%A1%A8"><span class="nav-text">2. 流表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%AE%9E%E4%BD%9C"><span class="nav-text"> 四、实作 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E5%88%9B%E5%BB%BA%E6%8B%93%E6%89%91"><span class="nav-text">1. 创建拓扑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E7%BD%91%E6%A1%A5%E9%85%8D%E7%BD%AE"><span class="nav-text">2. 网桥配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E6%90%AD%E5%BB%BA%20-VxLAN-%20%E9%9A%A7%E9%81%93"><span class="nav-text">3. 搭建 VxLAN 隧道</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98"><span class="nav-text">五、遇到问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E6%8B%93%E6%89%91%E6%B2%A1%E6%9C%89%E5%88%A0%E9%99%A4"><span class="nav-text">1. 拓扑没有删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%B1%80%E5%9F%9F%E7%BD%91%20-pingall-%20%E4%B8%8D%E9%80%9A"><span class="nav-text">2. 局域网 pingall 不通</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E4%B8%A4%E5%8F%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%20-ping-%20%E4%B8%8D%E9%80%9A%E5%8E%9F%E5%9B%A0"><span class="nav-text">3. 两台虚拟机 ping 不通原因 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E5%A6%82%E6%9E%9C%E6%83%B3%E8%A6%81%E9%85%8D%E7%BD%AE%E7%9A%84%20-IP-%20%E6%B0%B8%E4%B9%85%E7%94%9F%E6%95%88"><span class="nav-text">4. 如果想要配置的 IP 永久生效 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-ubuntu18-04-%20%E8%87%AA%E5%B8%A6%20-python-%20%E6%8D%A2%E6%88%90%20-python3"><span class="nav-text">5.ubuntu18.04 自带 python, 换成 python3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-wireshark-%20%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98"><span class="nav-text">5.wireshark 权限问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-ryu-%20%E8%BF%90%E8%A1%8C%E5%87%BA%E9%94%99%EF%BC%8C%E6%89%80%E4%BB%A5%E6%83%B3%E9%87%8D%E6%96%B0%E6%8C%89%E7%85%A7%EF%BC%8C%E4%BD%86%E6%9C%80%E5%90%8E%E8%BF%98%E6%98%AF%E9%87%8D%E8%A3%85%E4%BA%86%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-text">6.ryu 运行出错，所以想重新按照，但最后还是重装了虚拟机 </span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Stephen Wang"
+      src="/img/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Stephen Wang</p>
+  <div class="site-description" itemprop="description">機器學習 / C++ / 投資 / 台灣景點</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">167</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">221</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stephenwang0205@outlook.com" title="E-Mail → mailto:stephenwang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机网络 lab4 Overlay Network 和 VXLAN
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-05-20 14:49:35" itemprop="dateCreated datePublished" datetime="2021-05-20T14:49:35+08:00">2021-05-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-05-23 17:24:22" itemprop="dateModified" datetime="2021-05-23T17:24:22+08:00">2021-05-23</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">大学课程-计算机网络</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="一、任务要求"><a href="# 一、任务要求" class="headerlink" title="一、任务要求"></a>一、任务要求 </h3><p> 用 mininet 创建两个 LAN，然后用 VXLAN 创建 overlay network，让两个局域网可以互相通信。</p>
+<h3 id="二、原理"><a href="# 二、原理" class="headerlink" title="二、原理"></a>二、原理 </h3><h4 id="1-Overlay-Network"><a href="#1-Overlay-Network" class="headerlink" title="1.Overlay Network"></a>1.Overlay Network</h4><h4 id="关于这个网络"><a href="# 关于这个网络" class="headerlink" title="关于这个网络"></a> 关于这个网络</h4><p>nat：enp0s3：上网<br>host-only：enp0s8：两个 LAN 通信</p>
+<h3 id="三、常用指令"><a href="# 三、常用指令" class="headerlink" title="三、常用指令"></a>三、常用指令</h3><p><a target="_blank" rel="noopener" href="https://lowbee.fun/2020/06/18/SDN% E5% AD% A6% E4% B9% A0% E7% AC%94% E8% AE% B0/">SDN 学习笔记</a></p>
+<h4 id="1- 网桥 -ovs-vsctl- 基本命令"><a href="#1- 网桥 -ovs-vsctl- 基本命令" class="headerlink" title="1. 网桥 ovs-vsctl 基本命令"></a>1. 网桥 ovs-vsctl 基本命令 </h4><h4 id="2- 流表"><a href="#2- 流表" class="headerlink" title="2. 流表"></a>2. 流表</h4><h3 id="四、实作"><a href="# 四、实作" class="headerlink" title="四、实作"></a> 四、实作 </h3><h4 id="1- 创建拓扑"><a href="#1- 创建拓扑" class="headerlink" title="1. 创建拓扑"></a>1. 创建拓扑</h4><p> 在两台虚拟机上分别设置这样的拓扑<br><img src="/2021/05/20/computerNetwork-lab4/photo2.png" alt><br><img src="/2021/05/20/computerNetwork-lab4/photo3.jpg" alt><br>On VM 1:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; h1 ifconfig h1-eth<span class="number">0 10.0.0</span>.<span class="number">1</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">mininet&gt; h2 ifconfig h2-eth<span class="number">0 10.0.0</span>.<span class="number">2</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">$ sudo ifconfig s<span class="number">1 10.0.0</span>.<span class="number">111</span>/<span class="number">8</span> up</span><br></pre></td></tr></table></figure></p>
+<p>On VM 2:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; h3 ifconfig h3-eth<span class="number">0 10.0.0</span>.<span class="number">3</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">mininet&gt; h4 ifconfig h4-eth<span class="number">0 10.0.0</span>.<span class="number">4</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">$ sudo ifconfig s<span class="number">2 10.0.0</span>.<span class="number">112</span>/<span class="number">8</span> up</span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 网桥配置"><a href="#2- 网桥配置" class="headerlink" title="2. 网桥配置"></a>2. 网桥配置</h4><p>On VM1:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 在 VM1 上添加 br1 网桥</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-br </span>br1</span><br><span class="line">// 在 br1 上添加一个端口，将 enp0s8 挂载到 br1 上</span><br><span class="line">// 将 enp0s8 的 IP 指定给 br1，让虚拟机网络可以通过 br1 继续工作</span><br><span class="line">//24 是掩码位数，up 是网卡启动的意思</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>br1 enp0s8</span><br><span class="line">sudo ifconfig br1 192.168.56.101/24 up</span><br><span class="line">// 根据实际情况配置 br1 的网关（可选）</span><br><span class="line">sudo route<span class="built_in"> add </span>default gw 192.168.56.201</span><br></pre></td></tr></table></figure></p>
+<p>On VM2:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//// 在 VM2 上添加 br1 网桥</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-br </span>br1</span><br><span class="line">// 在 br1 上添加一个端口，将 enp0s8 挂载到 br1 上</span><br><span class="line">// 将 enp0s8 的 IP 指定给 br1，让虚拟机网络可以通过 br1 继续工作</span><br><span class="line">//24 是掩码位数，up 是网卡启动的意思</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>br1 enp0s8</span><br><span class="line">sudo ifconfig br1 192.168.56.102/24 up</span><br><span class="line">// 根据实际情况配置 br1 的网关（可选）</span><br><span class="line">sudo route<span class="built_in"> add </span>default gw 192.168.56.201</span><br></pre></td></tr></table></figure></p>
+<p>这时候查看网络的连通性，会发现 VM2 可以 ping 通 192.168.56.101，却 ping 不通 10.0.0.111</p>
+<h4 id="3- 搭建 -VxLAN- 隧道"><a href="#3- 搭建 -VxLAN- 隧道" class="headerlink" title="3. 搭建 VxLAN 隧道"></a>3. 搭建 VxLAN 隧道</h4><p>On VM1:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>s1 vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=192.168.56.102</span><br></pre></td></tr></table></figure><br>On VM2:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>s2 vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=192.168.56.101</span><br></pre></td></tr></table></figure></p>
+<h3 id="五、遇到问题"><a href="# 五、遇到问题" class="headerlink" title="五、遇到问题"></a>五、遇到问题</h3><h4 id="1- 拓扑没有删除"><a href="#1- 拓扑没有删除" class="headerlink" title="1. 拓扑没有删除"></a>1. 拓扑没有删除</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> mininet/mininet/examples</span><br><span class="line">sudo <span class="keyword">python</span> lab4.<span class="keyword">py</span></span><br></pre></td></tr></table></figure>
+<p>Exception: Error creating interface pair (XX-eth<em>,XX-eth</em>): RTNETLINK answers: File exists error<br>挂号里通常是 Switch 的某个 eth 连到另一台 Switch 的 eth，发生错误的原因是因为当第一次建立拓扑时出错，第二次建立相同拓扑时，第一次的拓扑没有完全消除。<br>解决方法：运行以下指令<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo mn -c</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 局域网 -pingall- 不通"><a href="#2- 局域网 -pingall- 不通" class="headerlink" title="2. 局域网 pingall 不通"></a>2. 局域网 pingall 不通</h4><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; sh ovs-ofctl dump-flows s1 // 查看 s1 的 flow table</span><br><span class="line">mininet&gt; sh ovs-ofctl<span class="built_in"> add-flow </span>s1 <span class="string">&quot;priority=0,action=normal&quot;</span> /// 新增 s1 的 flow table</span><br><span class="line">mininet&gt; pingall // 此時就可以互相 ping 到其他 host</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/05/20/computerNetwork-lab4/photo1.png" alt><br><a target="_blank" rel="noopener" href="https://tingkuan.wordpress.com/2017/12/11/% E3%80%90openvswitch-vs-controller-% E3%80%91/">参考</a></p>
+<p>后来发现是自己用./miniedit 创建的拓扑都 ping 不通，要自己加上流表或是运行 ryu 才会通 <br> 后来就改用 sudo mn 创建拓扑，pingall 就可以直接成功，<br>但是不知道怎么把这种方式创建的拓扑存储成.py 文件，或是修改 host 和 switch 名字</p>
+<h4 id="3- 两台虚拟机 -ping- 不通原因"><a href="#3- 两台虚拟机 -ping- 不通原因" class="headerlink" title="3. 两台虚拟机 ping 不通原因"></a>3. 两台虚拟机 ping 不通原因 </h4><p> 查到了很多原因，但后来发现我的原因是自己用./miniedit 创建的 LAN 有问题 <br>(1) 虚拟机 mac 地址相同导致，复制虚拟的问题<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/dlh_sycamore/article/details/64440134">https://blog.csdn.net/dlh_sycamore/article/details/64440134</a><br>(2) 虚拟机连接方式设置为桥接<br>(3) 防火墙<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yangmolulu/article/details/93902358?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control"> 两台虚拟机互相 ping 通（互相通讯）</a></p>
+<h4 id="4- 如果想要配置的 -IP- 永久生效"><a href="#4- 如果想要配置的 -IP- 永久生效" class="headerlink" title="4. 如果想要配置的 IP 永久生效"></a>4. 如果想要配置的 IP 永久生效 </h4><h4 id="5-ubuntu18-04- 自带 -python- 换成 -python3"><a href="#5-ubuntu18-04- 自带 -python- 换成 -python3" class="headerlink" title="5.ubuntu18.04 自带 python, 换成 python3"></a>5.ubuntu18.04 自带 python, 换成 python3</h4><p> 重装虚拟机，按照 ryu 的时候有一步是：python get-pip.py，出错，因为这个是 python3 的用法<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span> 下载并设置优先级</span><br><span class="line">update-alternatives --install <span class="regexp">/usr/</span>bin<span class="regexp">/python python /u</span>sr<span class="regexp">/bin/</span>python2.<span class="number">7</span> <span class="number">1</span></span><br><span class="line">update-alternatives --install <span class="regexp">/usr/</span>bin<span class="regexp">/python python /u</span>sr<span class="regexp">/bin/</span>python3.<span class="number">6</span> <span class="number">2</span></span><br><span class="line"><span class="regexp">//</span> 查看默认版本</span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-wireshark- 权限问题"><a href="#5-wireshark- 权限问题" class="headerlink" title="5.wireshark 权限问题"></a>5.wireshark 权限问题</h4><p>wireshark 遇到 couldn’t run /usr/bin/dumpcap in child process: Permission Denied<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure wireshark-common <span class="regexp">//</span> 选组 “YES” </span><br><span class="line">sudo adduser <span class="variable">$USER</span> wireshark <span class="regexp">//</span> 添加当前用户到用户组</span><br><span class="line"><span class="regexp">//</span> 重啓，即可正常使用 wireshark</span><br></pre></td></tr></table></figure></p>
+<h4 id="6-ryu- 运行出错，所以想重新按照，但最后还是重装了虚拟机"><a href="#6-ryu- 运行出错，所以想重新按照，但最后还是重装了虚拟机" class="headerlink" title="6.ryu 运行出错，所以想重新按照，但最后还是重装了虚拟机"></a>6.ryu 运行出错，所以想重新按照，但最后还是重装了虚拟机 </h4><p>(1) 运行 ryu 程序出现 ImportError: No module named XX.py<br>(2) 如何在 Ubuntu 中用 apt 命令删除 / 卸载软件包<br>apt-get remove 删除已安装的软件包（保留配置文件），不会删除依赖软件包，保留配置文件。<br>apt-get purge  删除已安装的软件包（不保留配置文件)，删除软件包，同时删除相应依赖软件包。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/LEON1741/article/details/85114318"> 如何在 Ubuntu 中用 apt 命令删除 / 卸载软件包（remove/clean/purge）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/younger_to_older/article/details/109053821">解决 apt-get remove 和 dpkg 删除出现 E: 无法定位软件包 XXXX</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/18/investment-observe-good-article-or-story/" rel="prev" title="investment-observe-good-article-or-story">
+                  <i class="fa fa-chevron-left"></i> investment-observe-good-article-or-story
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stephen Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+  
+
+
+
+
+  
+
+
+</body>
+</html>
