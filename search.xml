@@ -435,20 +435,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ advance（五）Linux 进程和线程 --2. 进程间通信</title>
-    <url>/2021/04/16/C++%20advance5.2/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>进程间通信</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ advance（五）Linux 进程和线程 --3. 信号</title>
     <url>/2021/04/16/C++%20advance5.3/</url>
     <content><![CDATA[<span id="more"></span>
@@ -460,6 +446,20 @@
       <tags>
         <tag>Linux</tag>
         <tag>信号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ advance（五）Linux 进程和线程 --2. 进程间通信</title>
+    <url>/2021/04/16/C++%20advance5.2/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>进程间通信</tag>
       </tags>
   </entry>
   <entry>
@@ -582,21 +582,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --4.epoll-udp</title>
-    <url>/2021/04/16/C++%20advance6.4/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>epoll udp</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ advance（五）Linux 进程和线程 --5. 线程同步</title>
     <url>/2021/04/16/C++%20advance5.5/</url>
     <content><![CDATA[<span id="more"></span>
@@ -626,6 +611,21 @@
         <tag>状态转换</tag>
         <tag>selcet</tag>
         <tag>poll</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --4.epoll-udp</title>
+    <url>/2021/04/16/C++%20advance6.4/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>epoll udp</tag>
       </tags>
   </entry>
   <entry>
@@ -794,19 +794,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 取出一個數的每一位</title>
-    <url>/2019/03/16/C++%20get-out-each-digit-of-the-number/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr [<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr [i] = t /<span class="built_in"><span class="keyword">int</span></span> (<span class="built_in">pow</span> (<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr [i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ include</title>
     <url>/2018/10/27/C++%20include/</url>
     <content><![CDATA[<h3 id="被 -include- 的 -header-file- 中最常見的內容分為哪幾類？"><a href="# 被 -include- 的 -header-file- 中最常見的內容分為哪幾類？" class="headerlink" title="被 #include 的 header file 中最常見的內容分為哪幾類？"></a>被 #include 的 header file 中最常見的內容分為哪幾類？</h3><h5 id="1- 巨集定義"><a href="#1- 巨集定義" class="headerlink" title="(1) 巨集定義"></a>(1) 巨集定義</h5><h5 id="2-typedef"><a href="#2-typedef" class="headerlink" title="(2) typedef"></a>(2) typedef</h5><span id="more"></span>
@@ -825,11 +812,9 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 运算符</title>
-    <url>/2018/09/23/C++%20operator/</url>
-    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
-<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
-<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
+    <title>C++ 取出一個數的每一位</title>
+    <url>/2019/03/16/C++%20get-out-each-digit-of-the-number/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> t = <span class="number">123456789</span>;</span><br><span class="line">	<span class="keyword">int</span> arr [<span class="number">9</span>]; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr [i] = t /<span class="built_in"><span class="keyword">int</span></span> (<span class="built_in">pow</span> (<span class="number">10</span>,i)) % <span class="number">10</span>;</span><br><span class="line">		cout &lt;&lt; arr [i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
 ]]></content>
       <categories>
@@ -837,7 +822,6 @@
       </categories>
       <tags>
         <tag>C++</tag>
-        <tag>运算符</tag>
       </tags>
   </entry>
   <entry>
@@ -854,6 +838,22 @@
         <tag>C++</tag>
         <tag>rand</tag>
         <tag>产生随机数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 运算符</title>
+    <url>/2018/09/23/C++%20operator/</url>
+    <content><![CDATA[<h4 id="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"><a href="# 使用运算符要注意：接受的操作数、优先级、结合性、返回值。" class="headerlink" title="使用运算符要注意：接受的操作数、优先级、结合性、返回值。"></a>使用运算符要注意：接受的操作数、优先级、结合性、返回值。</h4><p>C++ 中的运算符几乎 都可以写成函数调用的形式，因此不难理解表达式通常都有其返回值。赋值运算符的返回值是赋值后左操作数的引用。== 的返回值是一个布尔值，表示两边的操作数是否相等。以表达式 <em>a = 15 </em> 6 / 5 为例，它的返回值就是赋值后的 *a ，即 18。 sizeof 的返回值的意义比较多，篇幅所限，这里不分析它。<br><span id="more"></span></p>
+<h4 id="是右结核性"><a href="# 是右结核性" class="headerlink" title="= 是右结核性"></a>= 是右结核性 </h4><p> 连续使用 = 会怎么样？<br>以 a = b = c 为例。<br>由于赋值运算符是右结合性的，原表达式相当于 a = (b = c)，所以先计算 b = c，然后返回 b；那么表达式就变成了 a = b，a 的值变为 b 的值。最后的结果就是 a 和 b 的值都变成 c 的值了。—— 这是符合人的直观感受的。可以证明，对于超过两个连续使用的赋值运算符，其结果都与上面的类似。这样做是不会引发编译器或者程序员的误解的。</p>
+<h4 id="是左结合性"><a href="# 是左结合性" class="headerlink" title="== 是左结合性"></a>== 是左结合性 </h4><p> 连续使用 == 会怎么样？<br>以 a == b == c 为例。不妨假设其中三个变量都是 int 型，对于其他情况，分析方法类似。<br>左结合性：原表达式相当于 (a == b) == c 先计算 a == b，返回 true 或者 false。由于 c 是 int 型，因此会发生隐式类型转换，true 或者 false 会 <br> 被转换为 int 型的 1 或者 0。最后表达式就变成 1 == c 或者 0 == c。这显然不是在检查 a、b、c 三个变量是否相等，会引起误解。可以证明，对 <br> 于超过两个连续使用的 == 运算符，都会引起类似的误解。</p>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>运算符</tag>
       </tags>
   </entry>
   <entry>
@@ -929,19 +929,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ review(3)</title>
-    <url>/2018/10/14/C++%20review3/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/09/30/C++%20review1/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review2/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review3/">C++ review (3)</a></p>
-<h3 id="一、模板"><a href="# 一、模板" class="headerlink" title="一、模板"></a>一、模板</h3><span id="more"></span>
-<h4 id="1- 模板的概念"><a href="#1- 模板的概念" class="headerlink" title="1. 模板的概念"></a>1. 模板的概念 </h4><h4 id="2- 函數模板"><a href="#2- 函數模板" class="headerlink" title="2. 函數模板"></a>2. 函數模板</h4><h4 id="3- 類模板"><a href="#3- 類模板" class="headerlink" title="3. 類模板"></a>3. 類模板</h4><h3 id="二、STL- 初識"><a href="# 二、STL- 初識" class="headerlink" title="二、STL 初識"></a> 二、STL 初識 </h3><h3 id="三、STL- 常用容器"><a href="# 三、STL- 常用容器" class="headerlink" title="三、STL 常用容器"></a> 三、STL 常用容器 </h3><h3 id="四、STL- 函數對象"><a href="# 四、STL- 函數對象" class="headerlink" title="四、STL 函數對象"></a> 四、STL 函數對象 </h3><h3 id="五、STL- 常用算法"><a href="# 五、STL- 常用算法" class="headerlink" title="五、STL 常用算法"></a> 五、STL 常用算法</h3>]]></content>
-      <categories>
-        <category>C++ review</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ 四捨五入</title>
     <url>/2019/03/17/C++%20rounding/</url>
     <content><![CDATA[<p>round (a)：回傳 a 之小數經四捨五入後之值。<br>floor (a)：回傳 a 之小數無條件捨去後之值。<br>ceil (a)：回傳 a 之小數無條件進位後之值。<br><span id="more"></span><br>setprecision () 是輸入 / 輸出操縱器庫 <iomanip> 的一個操作符，可以用來修改浮點數的預設精度。<br>使用 setprecision (n) 可控制輸出流顯示浮點數的數字個數。C++ 預設的流輸出數值有效位是 6。<br>如果 setprecision (n) 與 setiosflags (ios::fixed) 合用，可以控制小數點右邊的數字個數。<br>setiosflags (ios::fixed) 是用定點方式表示實數</iomanip></p>
@@ -955,6 +942,19 @@
         <tag>C++</tag>
         <tag>刷題</tag>
         <tag>四捨五入</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ review(3)</title>
+    <url>/2018/10/14/C++%20review3/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/09/30/C++%20review1/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review2/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review3/">C++ review (3)</a></p>
+<h3 id="一、模板"><a href="# 一、模板" class="headerlink" title="一、模板"></a>一、模板</h3><span id="more"></span>
+<h4 id="1- 模板的概念"><a href="#1- 模板的概念" class="headerlink" title="1. 模板的概念"></a>1. 模板的概念 </h4><h4 id="2- 函數模板"><a href="#2- 函數模板" class="headerlink" title="2. 函數模板"></a>2. 函數模板</h4><h4 id="3- 類模板"><a href="#3- 類模板" class="headerlink" title="3. 類模板"></a>3. 類模板</h4><h3 id="二、STL- 初識"><a href="# 二、STL- 初識" class="headerlink" title="二、STL 初識"></a> 二、STL 初識 </h3><h3 id="三、STL- 常用容器"><a href="# 三、STL- 常用容器" class="headerlink" title="三、STL 常用容器"></a> 三、STL 常用容器 </h3><h3 id="四、STL- 函數對象"><a href="# 四、STL- 函數對象" class="headerlink" title="四、STL 函數對象"></a> 四、STL 函數對象 </h3><h3 id="五、STL- 常用算法"><a href="# 五、STL- 常用算法" class="headerlink" title="五、STL 常用算法"></a> 五、STL 常用算法</h3>]]></content>
+      <categories>
+        <category>C++ review</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -1135,6 +1135,37 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构与算法 --1. 线性表</title>
+    <url>/2019/03/21/algorithm-linearTable/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序 </a><br> 存储结构：顺序，链接，索引，哈希</p>
+<h3 id="一、顺序表"><a href="# 一、顺序表" class="headerlink" title="一、顺序表"></a>一、顺序表 </h3><p> 线性表的寻顺序存储又称为顺序表</p>
+<h4 id="1- 随机存储"><a href="#1- 随机存储" class="headerlink" title="1. 随机存储"></a>1. 随机存储 </h4><p> 相同数据类型，所以可以用公式 LOC (A) + (i-1) xsize (ElemType)<br><span id="more"></span></p>
+<h4 id="2- 类型描述"><a href="#2- 类型描述" class="headerlink" title="2. 类型描述"></a>2. 类型描述</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> InitSize 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType *data;</span><br><span class="line">	<span class="keyword">int</span> MaxSize, length;</span><br><span class="line">&#125; SeqList;</span><br><span class="line"></span><br><span class="line">SeqList L;</span><br><span class="line">L.data = <span class="keyword">new</span> ElemType [InitSize];</span><br></pre></td></tr></table></figure>
+<h4 id="3- 操作与实现"><a href="#3- 操作与实现" class="headerlink" title="3. 操作与实现"></a>3. 操作与实现 </h4><p> 删除，插入，按值查找</p>
+<h4 id="4- 例题"><a href="#4- 例题" class="headerlink" title="4. 例题"></a>4. 例题 </h4><p> 若长度为 n 的非空线性表釆用顺序存储结构，在表的第 i 个位置插入一个数据元素，i 的合法值应该是？<br>A. 1&lt;=i&lt;=n     B. 1&lt;=i&lt;=n+l     C. 0&lt;=i&lt;=n-1     D. 0&lt;=i&lt;=n<br>答案：B 表元素序号从 1 开始，而在第 n+1 个位置插入相当于在表尾追加</p>
+<p>求两个升序序列 A 和 B 的合并序列 C：<br>分别用游标 i 和 j 指向序列 A 和 B 的序列头，<br>依次比较 A [i] 和 B [j]，比较小的就放入序列 C</p>
+<p>方法 1：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search_median</span> <span class="params">(<span class="keyword">int</span> A [], <span class="keyword">int</span> B [], <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>, cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cnt++;</span><br><span class="line">		<span class="keyword">if</span> (cnt == n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> A [i]&lt;B [j]?A [i]:B [j];</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (A [i] &lt; B [j]) i++;</span><br><span class="line">		<span class="keyword">else</span> j++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>方法 2：分治<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h3 id="二、单链表"><a href="# 二、单链表" class="headerlink" title="二、单链表"></a>二、单链表 </h3><h4 id="1- 实现"><a href="#1- 实现" class="headerlink" title="1. 实现"></a>1. 实现</h4><p> 线性表的链式存储又称为单链表<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125; LNode, *LinkList;</span><br><span class="line"><span class="comment">// 指向节点的指针就是链表</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 操作"><a href="#2- 操作" class="headerlink" title="2. 操作"></a>2. 操作 </h4><h5 id="1- 建立表"><a href="#1- 建立表" class="headerlink" title="(1) 建立表"></a>(1) 建立表</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">(a) 采用头插法建立单链表（插入 S）</span><br><span class="line">s-&gt;next = L-&gt;next;</span><br><span class="line">L-&gt;next = s;</span><br><span class="line">(b) 采用头插法建立单链表（插入 S）</span><br><span class="line"> 需要有一个尾指针 r</span><br><span class="line">r-&gt;next = s;</span><br><span class="line">r = s;</span><br></pre></td></tr></table></figure>
+<h5 id="2- 按序号查找节点值（遍历 - 计数器）"><a href="#2- 按序号查找节点值（遍历 - 计数器）" class="headerlink" title="(2) 按序号查找节点值（遍历 + 计数器）"></a>(2) 按序号查找节点值（遍历 + 计数器）</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> cnt = <span class="number">0</span>, LNode* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (p = L-&gt;next; p != <span class="literal">NULL</span>; p = p-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">	cnt++;</span><br><span class="line">	<span class="keyword">if</span> (cnt == i)</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h5 id="3- 按值查找表节点"><a href="#3- 按值查找表节点" class="headerlink" title="(3) 按值查找表节点"></a>(3) 按值查找表节点</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">LNode* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (p=L-&gt;next; p!=<span class="literal">NULL</span>; p=p-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (p-&gt;data == e)</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+<h5 id="4- 插入节点"><a href="#4- 插入节点" class="headerlink" title="(4) 插入节点"></a>(4) 插入节点 </h5><p> 先检查插入位置的合法性，找到待插入位置的前驱节点 p，再在其后插入新节点（i 前插）<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next;</span><br><span class="line">p-&gt;next = s;</span><br><span class="line"><span class="comment">//p-&gt;next 一定是在最后一步修改</span></span><br><span class="line">i 前插 = (i<span class="number">-1</span>) 后插 = i 后插，交换 i 和 i+<span class="number">1</span> 的 data</span><br><span class="line">(在有了指向 i 节点的指针，且是单链表的情况下，可以用这个技巧降低时间复杂度)</span><br></pre></td></tr></table></figure></p>
+<h5 id="5- 删除节点"><a href="#5- 删除节点" class="headerlink" title="(5) 删除节点"></a>(5) 删除节点 </h5><p> 先检查删除位置 q 的合法性，找到待删除位置的前驱节点<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">p-&gt;next = q-&gt;next;</span><br><span class="line"><span class="built_in">free</span> (q);<span class="comment">// 没有释放会导致内存泄漏</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="6- 求表长（遍历 - 计数器）"><a href="#6- 求表长（遍历 - 计数器）" class="headerlink" title="(6) 求表长（遍历 + 计数器）"></a>(6) 求表长（遍历 + 计数器）</h5><p>int cnt=0, LNode* p;<br>for (p=L-&gt;next; p!=NULL; p=p-&gt;next)<br>{<br>    cnt++;<br>}<br>return cnt;</p>
+<h3 id="三、双链表"><a href="# 三、双链表" class="headerlink" title="三、双链表"></a>三、双链表</h3><p>ex：单链表的插入算法，要先找到欲插入位置的前驱，就要花费 O (n) 的时间</p>
+<h4 id="1- 实现 -1"><a href="#1- 实现 -1" class="headerlink" title="1. 实现"></a>1. 实现</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">DNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">DNode</span> *<span class="title">prior</span>, *<span class="title">next</span>;</span></span><br><span class="line">&#125; DNode, *DLinklist;</span><br></pre></td></tr></table></figure>
+<h4 id="2- 操作 -1"><a href="#2- 操作 -1" class="headerlink" title="2. 操作"></a>2. 操作</h4><h5 id="1- 插入节点"><a href="#1- 插入节点" class="headerlink" title="(1) 插入节点"></a>(1) 插入节点</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next;</span><br><span class="line">p-&gt;next-&gt;prior = s;</span><br><span class="line">s-&gt;prior = p;</span><br><span class="line">p-&gt;next = s;</span><br></pre></td></tr></table></figure>
+<h6 id="2- 删除节点"><a href="#2- 删除节点" class="headerlink" title="(2) 删除节点"></a>(2) 删除节点 </h6><p> 删除双链表中节点 <em> p 和后继节点 </em> q<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">p-&gt;next = q-&gt;next;</span><br><span class="line">q-&gt;next-&gt;prior = p;</span><br><span class="line"><span class="built_in">free</span> (q);</span><br></pre></td></tr></table></figure></p>
+<h3 id="四、循环链表（分为循环单链表和循环双链表）"><a href="# 四、循环链表（分为循环单链表和循环双链表）" class="headerlink" title="四、循环链表（分为循环单链表和循环双链表）"></a>四、循环链表（分为循环单链表和循环双链表）</h3><h4 id="1- 循环单链表"><a href="#1- 循环单链表" class="headerlink" title="1. 循环单链表"></a>1. 循环单链表 </h4><p>L 是头指针，r 是尾指针<br>r-&gt;next = L-&gt;next;<br> 判空条件：L-&gt;next == L;</p>
+<h4 id="2- 循环双链表"><a href="#2- 循环双链表" class="headerlink" title="2. 循环双链表"></a>2. 循环双链表 </h4><p> 判空条件：L-&gt;next==L &amp;&amp; L-&gt;prior==L;</p>
+<h3 id="五、静态链表"><a href="# 五、静态链表" class="headerlink" title="五、静态链表"></a>五、静态链表 </h3><p> 移动 -&gt; 使用链表 <br> 查找 -&gt; 使用顺序表 <br> 移动又查找 -&gt; 使用静态链表 <br> 既有前向操作又有后向操作 -&gt; 选择双向链表</p>
+]]></content>
+      <categories>
+        <category>大学课程-数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数据结构与算法 --3. 图</title>
     <url>/2019/03/27/algorithm-graph/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
@@ -1186,51 +1217,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法 --1. 线性表</title>
-    <url>/2019/03/21/algorithm-linearTable/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序 </a><br> 存储结构：顺序，链接，索引，哈希</p>
-<h3 id="一、顺序表"><a href="# 一、顺序表" class="headerlink" title="一、顺序表"></a>一、顺序表 </h3><p> 线性表的寻顺序存储又称为顺序表</p>
-<h4 id="1- 随机存储"><a href="#1- 随机存储" class="headerlink" title="1. 随机存储"></a>1. 随机存储 </h4><p> 相同数据类型，所以可以用公式 LOC (A) + (i-1) xsize (ElemType)<br><span id="more"></span></p>
-<h4 id="2- 类型描述"><a href="#2- 类型描述" class="headerlink" title="2. 类型描述"></a>2. 类型描述</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> InitSize 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType *data;</span><br><span class="line">	<span class="keyword">int</span> MaxSize, length;</span><br><span class="line">&#125; SeqList;</span><br><span class="line"></span><br><span class="line">SeqList L;</span><br><span class="line">L.data = <span class="keyword">new</span> ElemType [InitSize];</span><br></pre></td></tr></table></figure>
-<h4 id="3- 操作与实现"><a href="#3- 操作与实现" class="headerlink" title="3. 操作与实现"></a>3. 操作与实现 </h4><p> 删除，插入，按值查找</p>
-<h4 id="4- 例题"><a href="#4- 例题" class="headerlink" title="4. 例题"></a>4. 例题 </h4><p> 若长度为 n 的非空线性表釆用顺序存储结构，在表的第 i 个位置插入一个数据元素，i 的合法值应该是？<br>A. 1&lt;=i&lt;=n     B. 1&lt;=i&lt;=n+l     C. 0&lt;=i&lt;=n-1     D. 0&lt;=i&lt;=n<br>答案：B 表元素序号从 1 开始，而在第 n+1 个位置插入相当于在表尾追加</p>
-<p>求两个升序序列 A 和 B 的合并序列 C：<br>分别用游标 i 和 j 指向序列 A 和 B 的序列头，<br>依次比较 A [i] 和 B [j]，比较小的就放入序列 C</p>
-<p>方法 1：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search_median</span> <span class="params">(<span class="keyword">int</span> A [], <span class="keyword">int</span> B [], <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>, cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cnt++;</span><br><span class="line">		<span class="keyword">if</span> (cnt == n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> A [i]&lt;B [j]?A [i]:B [j];</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (A [i] &lt; B [j]) i++;</span><br><span class="line">		<span class="keyword">else</span> j++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>方法 2：分治<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h3 id="二、单链表"><a href="# 二、单链表" class="headerlink" title="二、单链表"></a>二、单链表 </h3><h4 id="1- 实现"><a href="#1- 实现" class="headerlink" title="1. 实现"></a>1. 实现</h4><p> 线性表的链式存储又称为单链表<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125; LNode, *LinkList;</span><br><span class="line"><span class="comment">// 指向节点的指针就是链表</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="2- 操作"><a href="#2- 操作" class="headerlink" title="2. 操作"></a>2. 操作 </h4><h5 id="1- 建立表"><a href="#1- 建立表" class="headerlink" title="(1) 建立表"></a>(1) 建立表</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">(a) 采用头插法建立单链表（插入 S）</span><br><span class="line">s-&gt;next = L-&gt;next;</span><br><span class="line">L-&gt;next = s;</span><br><span class="line">(b) 采用头插法建立单链表（插入 S）</span><br><span class="line"> 需要有一个尾指针 r</span><br><span class="line">r-&gt;next = s;</span><br><span class="line">r = s;</span><br></pre></td></tr></table></figure>
-<h5 id="2- 按序号查找节点值（遍历 - 计数器）"><a href="#2- 按序号查找节点值（遍历 - 计数器）" class="headerlink" title="(2) 按序号查找节点值（遍历 + 计数器）"></a>(2) 按序号查找节点值（遍历 + 计数器）</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> cnt = <span class="number">0</span>, LNode* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (p = L-&gt;next; p != <span class="literal">NULL</span>; p = p-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">	cnt++;</span><br><span class="line">	<span class="keyword">if</span> (cnt == i)</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<h5 id="3- 按值查找表节点"><a href="#3- 按值查找表节点" class="headerlink" title="(3) 按值查找表节点"></a>(3) 按值查找表节点</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">LNode* p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">for</span> (p=L-&gt;next; p!=<span class="literal">NULL</span>; p=p-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (p-&gt;data == e)</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
-<h5 id="4- 插入节点"><a href="#4- 插入节点" class="headerlink" title="(4) 插入节点"></a>(4) 插入节点 </h5><p> 先检查插入位置的合法性，找到待插入位置的前驱节点 p，再在其后插入新节点（i 前插）<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next;</span><br><span class="line">p-&gt;next = s;</span><br><span class="line"><span class="comment">//p-&gt;next 一定是在最后一步修改</span></span><br><span class="line">i 前插 = (i<span class="number">-1</span>) 后插 = i 后插，交换 i 和 i+<span class="number">1</span> 的 data</span><br><span class="line">(在有了指向 i 节点的指针，且是单链表的情况下，可以用这个技巧降低时间复杂度)</span><br></pre></td></tr></table></figure></p>
-<h5 id="5- 删除节点"><a href="#5- 删除节点" class="headerlink" title="(5) 删除节点"></a>(5) 删除节点 </h5><p> 先检查删除位置 q 的合法性，找到待删除位置的前驱节点<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">p-&gt;next = q-&gt;next;</span><br><span class="line"><span class="built_in">free</span> (q);<span class="comment">// 没有释放会导致内存泄漏</span></span><br></pre></td></tr></table></figure></p>
-<h5 id="6- 求表长（遍历 - 计数器）"><a href="#6- 求表长（遍历 - 计数器）" class="headerlink" title="(6) 求表长（遍历 + 计数器）"></a>(6) 求表长（遍历 + 计数器）</h5><p>int cnt=0, LNode* p;<br>for (p=L-&gt;next; p!=NULL; p=p-&gt;next)<br>{<br>    cnt++;<br>}<br>return cnt;</p>
-<h3 id="三、双链表"><a href="# 三、双链表" class="headerlink" title="三、双链表"></a>三、双链表</h3><p>ex：单链表的插入算法，要先找到欲插入位置的前驱，就要花费 O (n) 的时间</p>
-<h4 id="1- 实现 -1"><a href="#1- 实现 -1" class="headerlink" title="1. 实现"></a>1. 实现</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">DNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">DNode</span> *<span class="title">prior</span>, *<span class="title">next</span>;</span></span><br><span class="line">&#125; DNode, *DLinklist;</span><br></pre></td></tr></table></figure>
-<h4 id="2- 操作 -1"><a href="#2- 操作 -1" class="headerlink" title="2. 操作"></a>2. 操作</h4><h5 id="1- 插入节点"><a href="#1- 插入节点" class="headerlink" title="(1) 插入节点"></a>(1) 插入节点</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next;</span><br><span class="line">p-&gt;next-&gt;prior = s;</span><br><span class="line">s-&gt;prior = p;</span><br><span class="line">p-&gt;next = s;</span><br></pre></td></tr></table></figure>
-<h6 id="2- 删除节点"><a href="#2- 删除节点" class="headerlink" title="(2) 删除节点"></a>(2) 删除节点 </h6><p> 删除双链表中节点 <em> p 和后继节点 </em> q<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">p-&gt;next = q-&gt;next;</span><br><span class="line">q-&gt;next-&gt;prior = p;</span><br><span class="line"><span class="built_in">free</span> (q);</span><br></pre></td></tr></table></figure></p>
-<h3 id="四、循环链表（分为循环单链表和循环双链表）"><a href="# 四、循环链表（分为循环单链表和循环双链表）" class="headerlink" title="四、循环链表（分为循环单链表和循环双链表）"></a>四、循环链表（分为循环单链表和循环双链表）</h3><h4 id="1- 循环单链表"><a href="#1- 循环单链表" class="headerlink" title="1. 循环单链表"></a>1. 循环单链表 </h4><p>L 是头指针，r 是尾指针<br>r-&gt;next = L-&gt;next;<br> 判空条件：L-&gt;next == L;</p>
-<h4 id="2- 循环双链表"><a href="#2- 循环双链表" class="headerlink" title="2. 循环双链表"></a>2. 循环双链表 </h4><p> 判空条件：L-&gt;next==L &amp;&amp; L-&gt;prior==L;</p>
-<h3 id="五、静态链表"><a href="# 五、静态链表" class="headerlink" title="五、静态链表"></a>五、静态链表 </h3><p> 移动 -&gt; 使用链表 <br> 查找 -&gt; 使用顺序表 <br> 移动又查找 -&gt; 使用静态链表 <br> 既有前向操作又有后向操作 -&gt; 选择双向链表</p>
-]]></content>
-      <categories>
-        <category>大学课程-数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>数据结构与算法 --5. 排序</title>
-    <url>/2019/04/03/algorithm-sort/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
-]]></content>
-      <categories>
-        <category>大学课程-数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-        <tag>算法</tag>
-        <tag>排序</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构与算法 --2. 树</title>
     <url>/2019/03/23/algorithm-tree/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
@@ -1256,6 +1242,20 @@
         <tag>数据结构</tag>
         <tag>算法</tag>
         <tag>树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法 --5. 排序</title>
+    <url>/2019/04/03/algorithm-sort/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
+]]></content>
+      <categories>
+        <category>大学课程-数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>算法</tag>
+        <tag>排序</tag>
       </tags>
   </entry>
   <entry>
@@ -1670,9 +1670,8 @@
   <entry>
     <title>dos 使用</title>
     <url>/2018/10/27/dos-command/</url>
-    <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a>显示目录下的文件</h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录<br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br><span id="more"></span><br>dir/ah 只显示当前路径下隐藏文件和目录<br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
-<h3 id="Linux- 与 -Windows- 命令对比"><a href="#Linux- 与 -Windows- 命令对比" class="headerlink" title="Linux 与 Windows 命令对比"></a>Linux 与 Windows 命令对比</h3><p><a href="https://blog.csdn.net/xzwspy/article/details/80183849">https://blog.csdn.net/xzwspy/article/details/80183849</a></p>
-<h3 id="未分类文章总览"><a href="# 未分类文章总览" class="headerlink" title="未分类文章总览"></a>未分类文章总览 </h3><p><a href="https://wangxchun.github.io/2018/10/27/dos-command/">dos 使用</a><br><a href="https://wangxchun.github.io/2021/04/13/position-in-english/"> 職位中英文對照表 </a><br><a href="https://wangxchun.github.io/2020/02/25/summer-intern"> 暑期實習經驗參考</a></p>
+    <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a> 显示目录下的文件 </h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录 <br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br><span id="more"></span><br>dir/ah 只显示当前路径下隐藏文件和目录 <br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
+<h3 id="Linux- 与 -Windows- 命令对比"><a href="#Linux- 与 -Windows- 命令对比" class="headerlink" title="Linux 与 Windows 命令对比"></a>Linux 与 Windows 命令对比 </h3><p><a href="https://blog.csdn.net/xzwspy/article/details/80183849">https://blog.csdn.net/xzwspy/article/details/80183849</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -1774,23 +1773,6 @@
       </tags>
   </entry>
   <entry>
-    <title>在 hexo 文章中插入图片</title>
-    <url>/2018/09/16/hexo%20insert-a-photo-into-article/</url>
-    <content><![CDATA[<h3 id="绝对路径"><a href="# 绝对路径" class="headerlink" title="绝对路径"></a>绝对路径 </h3><p> 当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/img 文件夹中<br><figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">![](<span class="regexp">/images/im</span>age.jpg)</span><br></pre></td></tr></table></figure><br><span id="more"></span></p>
-<h3 id="相对路径"><a href="# 相对路径" class="headerlink" title="相对路径"></a>相对路径 </h3><p> 将_config.yml 文件中的配置项 post_asset_folder 设为 true 后，<br>执行命令 $ hexo new post_name，在 source/posts 中会生成文章 post_name.md 和同名文件夹 post_name。<br>将图片资源放在 post_name 中，文章就可以使用相对路径引用图片资源了。<br><figure class="highlight less"><table><tr><td class="code"><pre><span class="line">!<span class="selector-attr">[]</span>(image.jpg)</span><br></pre></td></tr></table></figure></p>
-<h3 id="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"><a href="# 如果希望图片在文章和首页中同时显示，可以使用标签插件语法" class="headerlink" title="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"></a>如果希望图片在文章和首页中同时显示，可以使用标签插件语法</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>文章</tag>
-        <tag>插入图片</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何在 hexo 文章中插入 pdf 文件</title>
     <url>/2021/04/29/hexo%20pdf-file/</url>
     <content><![CDATA[<h3 id="利用 -html- 语法"><a href="# 利用 -html- 语法" class="headerlink" title="利用 html 语法"></a>利用 html 语法 </h3><p> 首先修改_config.yml 文件</p>
@@ -1813,6 +1795,23 @@
       <categories>
         <category>hexo</category>
       </categories>
+  </entry>
+  <entry>
+    <title>在 hexo 文章中插入图片</title>
+    <url>/2018/09/16/hexo%20insert-a-photo-into-article/</url>
+    <content><![CDATA[<h3 id="绝对路径"><a href="# 绝对路径" class="headerlink" title="绝对路径"></a>绝对路径 </h3><p> 当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/img 文件夹中<br><figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">![](<span class="regexp">/images/im</span>age.jpg)</span><br></pre></td></tr></table></figure><br><span id="more"></span></p>
+<h3 id="相对路径"><a href="# 相对路径" class="headerlink" title="相对路径"></a>相对路径 </h3><p> 将_config.yml 文件中的配置项 post_asset_folder 设为 true 后，<br>执行命令 $ hexo new post_name，在 source/posts 中会生成文章 post_name.md 和同名文件夹 post_name。<br>将图片资源放在 post_name 中，文章就可以使用相对路径引用图片资源了。<br><figure class="highlight less"><table><tr><td class="code"><pre><span class="line">!<span class="selector-attr">[]</span>(image.jpg)</span><br></pre></td></tr></table></figure></p>
+<h3 id="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"><a href="# 如果希望图片在文章和首页中同时显示，可以使用标签插件语法" class="headerlink" title="如果希望图片在文章和首页中同时显示，可以使用标签插件语法"></a>如果希望图片在文章和首页中同时显示，可以使用标签插件语法</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>文章</tag>
+        <tag>插入图片</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何在 hexo blog 中發表一篇文章</title>
@@ -1845,6 +1844,61 @@
       <tags>
         <tag>npm</tag>
         <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>設定 Github SSH 金鑰</title>
+    <url>/2018/09/10/hexo%20set-Github-SSH-key/</url>
+    <content><![CDATA[<p>設定 Github SSH 金鑰<br><a href="https://ithelp.ithome.com.tw/articles/10205988">https://ithelp.ithome.com.tw/articles/10205988</a><br><span id="more"></span></p>
+<p>ssh-keygen 常用命令与参数<br><a href="https://p3terx.com/archives/ssh-keygen-common-parameters.html">https://p3terx.com/archives/ssh-keygen-common-parameters.html</a></p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>SSH</tag>
+        <tag>金鑰</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何实现 hexo 文章中文和英文之间自动空格</title>
+    <url>/2018/09/22/hexo%20space-between-chinese-and-english/</url>
+    <content><![CDATA[<p>安装插件 <br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">npm install hexo-<span class="attribute">filter</span>-<span class="attribute">auto</span>-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
+<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>文章</tag>
+        <tag>空格</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>撰写文章基本操作</title>
+    <url>/2018/09/13/hexo%20write-an-article/</url>
+    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a>加入链结</h4><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
+<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a>加入引用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>引用 1</p>
+</blockquote>
+<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a>改变文字颜色和大小</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;2&quot;</span>&gt;</span> 颜色 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;3&quot;</span>&gt;</span> 大小 <span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
+<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a>加入代码</h4><h4 id="hexo-fluid- 添加 -utterances- 评论功能"><a href="#hexo-fluid- 添加 -utterances- 评论功能" class="headerlink" title="hexo-fluid 添加 utterances 评论功能"></a>hexo-fluid 添加 utterances 评论功能</h4><p><a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a><br><a href="http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/">http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/</a></p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>文章</tag>
+        <tag>基本操作</tag>
       </tags>
   </entry>
   <entry>
@@ -1886,140 +1940,6 @@
         <tag>英法百年战争</tag>
         <tag>三十年战争</tag>
         <tag>腓特烈二世</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>撰写文章基本操作</title>
-    <url>/2018/09/13/hexo%20write-an-article/</url>
-    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a>加入链结</h4><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
-<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a>加入引用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>引用 1</p>
-</blockquote>
-<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a>改变文字颜色和大小</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;2&quot;</span>&gt;</span> 颜色 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;3&quot;</span>&gt;</span> 大小 <span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
-<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a>加入代码</h4><h4 id="hexo-fluid- 添加 -utterances- 评论功能"><a href="#hexo-fluid- 添加 -utterances- 评论功能" class="headerlink" title="hexo-fluid 添加 utterances 评论功能"></a>hexo-fluid 添加 utterances 评论功能</h4><p><a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a><br><a href="http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/">http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/</a></p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>文章</tag>
-        <tag>基本操作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>設定 Github SSH 金鑰</title>
-    <url>/2018/09/10/hexo%20set-Github-SSH-key/</url>
-    <content><![CDATA[<p>設定 Github SSH 金鑰<br><a href="https://ithelp.ithome.com.tw/articles/10205988">https://ithelp.ithome.com.tw/articles/10205988</a><br><span id="more"></span></p>
-<p>ssh-keygen 常用命令与参数<br><a href="https://p3terx.com/archives/ssh-keygen-common-parameters.html">https://p3terx.com/archives/ssh-keygen-common-parameters.html</a></p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>SSH</tag>
-        <tag>金鑰</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何实现 hexo 文章中文和英文之间自动空格</title>
-    <url>/2018/09/22/hexo%20space-between-chinese-and-english/</url>
-    <content><![CDATA[<p>安装插件 <br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">npm install hexo-<span class="attribute">filter</span>-<span class="attribute">auto</span>-spacing --save</span><br></pre></td></tr></table></figure><br> 并在_config.yml 文件中设置 auto_spacing，设置 enable: false<br><span id="more"></span></p>
-<p>另外一个插件 hexo-pangu-spacing 是有 BUG 的，比如你引用文章的时候的文章的网址里面有中文和英文，这个时候它也会把它给隔开。<br>所以就用 hexo-filter-auto-spacing 吧。</p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>文章</tag>
-        <tag>空格</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>历史 -- （3）德国简史</title>
-    <url>/2019/07/10/history-germany/</url>
-    <content><![CDATA[<h3 id="神圣罗马帝国"><a href="# 神圣罗马帝国" class="headerlink" title="神圣罗马帝国"></a>神圣罗马帝国 </h3><p> 西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
-<p>东法兰克王国在 919 年更名为德意志王国</p>
-<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国</p>
-<p>位于欧洲东部的国家成为欧洲列强的跑马场 <br><span id="more"></span><br> 亨利一世的儿子奥托一世过分强调意大利方向的扩张</p>
-<p>知道霍亨陶芬王朝的佛里德里希一世时期，红胡子巴巴罗萨，神圣罗马帝国巅峰，但是忽略了德意志内部德中央集权。为了赢得诸侯支持向意大利扩展，提高了封建主的独立性，最终导致帝国名存实亡。</p>
-<p>从奥托一世开始，向教皇取得罗马皇帝的称号。直到在 1073 年，教皇格里高利七世不经皇帝统一登上教皇宝座。</p>
-<p>引起神圣罗马帝国皇帝亨利四世的不满，命教皇退位，教皇开除亨利四世教籍，废除其帝位，国内封建主趁机相应号召。</p>
-<p>奥托一世 -&gt; 亨利四世 -&gt; 红胡子巴巴罗萨</p>
-<p>德意志王国四分五裂</p>
-<p>13 世纪，霍亨斯陶芬王朝垮台后，德意志王权彻底衰弱</p>
-<p>被教皇压迫，充当周围列强代理人自相残杀了两百多年后，马丁路德的宗教改革</p>
-<p>-&gt;1618 年三十年战争，德国失去大量领土，法国获得阿尔萨斯和洛林，整个德国四分五裂</p>
-<p>德国人为了生存，把自己卖给外国人，成为雇佣兵，在德国的领域为列强而战</p>
-<p>1806 年，在法国皇帝拿破仑的逼迫下，奥地利皇帝佛朗兹而是放弃神圣罗马帝国皇帝的称号，神圣罗马帝国灭亡</p>
-<p>席勒，歌德</p>
-<p>率先走出这一步的是一个被视为蛮荒和弱小的东方小邦：普鲁士</p>
-<h3 id="普鲁士"><a href="# 普鲁士" class="headerlink" title="普鲁士"></a>普鲁士 </h3><p> 普鲁士的国家核心是勃兰登堡和普鲁士</p>
-<p>1618 年，霍亨索伦家族的勃兰登堡选帝侯继承了普鲁士的王位，这两个平行发展的邦国终于产生了交汇</p>
-<p>(1417 年，德意志帝国正式把勃兰登堡和选侯爵位，赐予霍亨索伦家族的腓特烈一世，开始了霍亨索伦家族对勃兰登堡的统治)</p>
-<p>1640 年，腓特烈。威廉 (大选帝侯) 继位成为选帝侯 <br> 面临经过三世年战争的断壁残垣，国内的贵族、容克、分离主义和国外的强权让新国王的声音衰弱 <br>(1) 必须拥有一支独立且听命于自己的强悍常备军<br>(2) 利用帝国分裂，建立在本邦国内中央集权的君主专制，并在帝国范围内扩大影响<br> 在大选帝侯的儿子执政时期，</p>
-<h3 id="历史系列文章"><a href="# 历史系列文章" class="headerlink" title="历史系列文章"></a>历史系列文章 </h3><p><a href="https://wangxchun.github.io/2019/07/06/history-europe/"> 历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-      <tags>
-        <tag>历史</tag>
-        <tag>三十年战争</tag>
-        <tag>德国简史</tag>
-        <tag>德国</tag>
-        <tag>神圣罗马帝国</tag>
-        <tag>普鲁士</tag>
-        <tag>霍亨索伦家族</tag>
-        <tag>勃兰登堡</tag>
-        <tag>红胡子</tag>
-        <tag>巴巴罗萨</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>历史 -- （4）威尼斯和第四次十字军东征</title>
-    <url>/2019/07/15/history-venice/</url>
-    <content><![CDATA[<p>这种贫瘠的靠海之地有两种选择，一是当海盗，二是做生意</p>
-<p>最初，威尼斯人靠经营海盐贸易起家</p>
-<p>威尼斯是从西罗马来的，信奉的是天主教。但是拜占庭帝国信奉的是东正教</p>
-<p>帮拜占庭防御亚德亚里海，有合理的理由发展强大的海军</p>
-<p>在君士坦丁堡和亚历山卓之间做贸易</p>
-<ol>
-<li>香料贸易</li>
-<li>奴隶，购买年轻的斯拉夫人，卖给当时埃及或叙利亚的伊斯兰土豪</li>
-<li>木材 (造船)，铁 (造武器) 与铜的贸易</li>
-</ol>
-<p>穆斯林拿来对抗十字军的船只和武器都是天主教的威尼斯商人所提供的</p>
-<p>与异教徒贸易的行为，遭到罗马教廷和拜占庭皇帝的反对</p>
-<p>热那亚人</p>
-<p>威尼斯帝国准备进攻拜占庭帝国</p>
-<p>1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯 -</p>
-<p>1192 年，罗马教皇发起十字军东征</p>
-<p>法兰西骑士和封建诸侯</p>
-<p>运输公司外包给威尼斯</p>
-<p>运输的承包商也成了股东之一</p>
-<p>1202 年，抵达威尼斯的王公贵族人数远比预期少</p>
-<p>拜占庭帝国的流亡王子，希望借由十字军的力量，帮助它夺回王位</p>
-<p>希腊正教归顺罗马公教</p>
-<p>现在的拜占庭皇帝想借由比萨商人来取代威尼斯商人</p>
-<h3 id="历史系列文章"><a href="# 历史系列文章" class="headerlink" title="历史系列文章"></a>历史系列文章 </h3><p><a href="https://wangxchun.github.io/2019/07/06/history-europe/"> 历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
-]]></content>
-      <categories>
-        <category>历史</category>
-      </categories>
-      <tags>
-        <tag>历史</tag>
-        <tag>十字军东征</tag>
-        <tag>威尼斯</tag>
-        <tag>第四次十字军东征</tag>
       </tags>
   </entry>
   <entry>
@@ -2114,6 +2034,94 @@
       </tags>
   </entry>
   <entry>
+    <title>历史 -- （3）德国简史</title>
+    <url>/2019/07/10/history-germany/</url>
+    <content><![CDATA[<h3 id="神圣罗马帝国"><a href="# 神圣罗马帝国" class="headerlink" title="神圣罗马帝国"></a>神圣罗马帝国 </h3><p> 西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
+<p>东法兰克王国在 919 年更名为德意志王国</p>
+<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国</p>
+<p>位于欧洲东部的国家成为欧洲列强的跑马场 <br><span id="more"></span><br> 亨利一世的儿子奥托一世过分强调意大利方向的扩张</p>
+<p>知道霍亨陶芬王朝的佛里德里希一世时期，红胡子巴巴罗萨，神圣罗马帝国巅峰，但是忽略了德意志内部德中央集权。为了赢得诸侯支持向意大利扩展，提高了封建主的独立性，最终导致帝国名存实亡。</p>
+<p>从奥托一世开始，向教皇取得罗马皇帝的称号。直到在 1073 年，教皇格里高利七世不经皇帝统一登上教皇宝座。</p>
+<p>引起神圣罗马帝国皇帝亨利四世的不满，命教皇退位，教皇开除亨利四世教籍，废除其帝位，国内封建主趁机相应号召。</p>
+<p>奥托一世 -&gt; 亨利四世 -&gt; 红胡子巴巴罗萨</p>
+<p>德意志王国四分五裂</p>
+<p>13 世纪，霍亨斯陶芬王朝垮台后，德意志王权彻底衰弱</p>
+<p>被教皇压迫，充当周围列强代理人自相残杀了两百多年后，马丁路德的宗教改革</p>
+<p>-&gt;1618 年三十年战争，德国失去大量领土，法国获得阿尔萨斯和洛林，整个德国四分五裂</p>
+<p>德国人为了生存，把自己卖给外国人，成为雇佣兵，在德国的领域为列强而战</p>
+<p>1806 年，在法国皇帝拿破仑的逼迫下，奥地利皇帝佛朗兹而是放弃神圣罗马帝国皇帝的称号，神圣罗马帝国灭亡</p>
+<p>席勒，歌德</p>
+<p>率先走出这一步的是一个被视为蛮荒和弱小的东方小邦：普鲁士</p>
+<h3 id="普鲁士"><a href="# 普鲁士" class="headerlink" title="普鲁士"></a>普鲁士 </h3><p> 普鲁士的国家核心是勃兰登堡和普鲁士</p>
+<p>1618 年，霍亨索伦家族的勃兰登堡选帝侯继承了普鲁士的王位，这两个平行发展的邦国终于产生了交汇</p>
+<p>(1417 年，德意志帝国正式把勃兰登堡和选侯爵位，赐予霍亨索伦家族的腓特烈一世，开始了霍亨索伦家族对勃兰登堡的统治)</p>
+<p>1640 年，腓特烈。威廉 (大选帝侯) 继位成为选帝侯 <br> 面临经过三世年战争的断壁残垣，国内的贵族、容克、分离主义和国外的强权让新国王的声音衰弱 <br>(1) 必须拥有一支独立且听命于自己的强悍常备军<br>(2) 利用帝国分裂，建立在本邦国内中央集权的君主专制，并在帝国范围内扩大影响<br> 在大选帝侯的儿子执政时期，</p>
+<h3 id="历史系列文章"><a href="# 历史系列文章" class="headerlink" title="历史系列文章"></a>历史系列文章 </h3><p><a href="https://wangxchun.github.io/2019/07/06/history-europe/"> 历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>历史</tag>
+        <tag>三十年战争</tag>
+        <tag>德国简史</tag>
+        <tag>德国</tag>
+        <tag>神圣罗马帝国</tag>
+        <tag>普鲁士</tag>
+        <tag>霍亨索伦家族</tag>
+        <tag>勃兰登堡</tag>
+        <tag>红胡子</tag>
+        <tag>巴巴罗萨</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>历史 -- （4）威尼斯和第四次十字军东征</title>
+    <url>/2019/07/15/history-venice/</url>
+    <content><![CDATA[<p>这种贫瘠的靠海之地有两种选择，一是当海盗，二是做生意</p>
+<p>最初，威尼斯人靠经营海盐贸易起家</p>
+<p>威尼斯是从西罗马来的，信奉的是天主教。但是拜占庭帝国信奉的是东正教</p>
+<p>帮拜占庭防御亚德亚里海，有合理的理由发展强大的海军</p>
+<p>在君士坦丁堡和亚历山卓之间做贸易</p>
+<ol>
+<li>香料贸易</li>
+<li>奴隶，购买年轻的斯拉夫人，卖给当时埃及或叙利亚的伊斯兰土豪</li>
+<li>木材 (造船)，铁 (造武器) 与铜的贸易</li>
+</ol>
+<p>穆斯林拿来对抗十字军的船只和武器都是天主教的威尼斯商人所提供的</p>
+<p>与异教徒贸易的行为，遭到罗马教廷和拜占庭皇帝的反对</p>
+<p>热那亚人</p>
+<p>威尼斯帝国准备进攻拜占庭帝国</p>
+<p>1175 年，拜占庭和威尼斯和好。但是试图维持平衡，不在经济上过度依赖威尼斯 -</p>
+<p>1192 年，罗马教皇发起十字军东征</p>
+<p>法兰西骑士和封建诸侯</p>
+<p>运输公司外包给威尼斯</p>
+<p>运输的承包商也成了股东之一</p>
+<p>1202 年，抵达威尼斯的王公贵族人数远比预期少</p>
+<p>拜占庭帝国的流亡王子，希望借由十字军的力量，帮助它夺回王位</p>
+<p>希腊正教归顺罗马公教</p>
+<p>现在的拜占庭皇帝想借由比萨商人来取代威尼斯商人</p>
+<h3 id="历史系列文章"><a href="# 历史系列文章" class="headerlink" title="历史系列文章"></a>历史系列文章 </h3><p><a href="https://wangxchun.github.io/2019/07/06/history-europe/"> 历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>历史</tag>
+        <tag>十字军东征</tag>
+        <tag>威尼斯</tag>
+        <tag>第四次十字军东征</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2020/02 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2020-02/</url>
+    <content><![CDATA[<h3 id="PayPal- 花 -40- 億美元收購華裔創辦的 -Honey，比 -Google- 買 -YouTube- 更貴"><a href="#PayPal- 花 -40- 億美元收購華裔創辦的 -Honey，比 -Google- 買 -YouTube- 更貴" class="headerlink" title="PayPal 花 40 億美元收購華裔創辦的 Honey，比 Google 買 YouTube 更貴"></a>PayPal 花 40 億美元收購華裔創辦的 Honey，比 Google 買 YouTube 更貴 </h3><p> 新創購物獎勵平台 Honey Science Corporation</p>
+]]></content>
+      <categories>
+        <category>生活-投資市場觀察</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2020/01 投資市場觀察</title>
     <url>/2021/05/12/investment-observe-2020-01/</url>
     <content><![CDATA[]]></content>
@@ -2131,14 +2139,6 @@
       </categories>
   </entry>
   <entry>
-    <title>2020/05 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2020-05/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>生活-投資市場觀察</category>
-      </categories>
-  </entry>
-  <entry>
     <title>2020/04 投資市場觀察</title>
     <url>/2021/05/12/investment-observe-2020-04/</url>
     <content><![CDATA[]]></content>
@@ -2147,18 +2147,10 @@
       </categories>
   </entry>
   <entry>
-    <title>2020/02 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2020-02/</url>
-    <content><![CDATA[<h3 id="PayPal- 花 -40- 億美元收購華裔創辦的 -Honey，比 -Google- 買 -YouTube- 更貴"><a href="#PayPal- 花 -40- 億美元收購華裔創辦的 -Honey，比 -Google- 買 -YouTube- 更貴" class="headerlink" title="PayPal 花 40 億美元收購華裔創辦的 Honey，比 Google 買 YouTube 更貴"></a>PayPal 花 40 億美元收購華裔創辦的 Honey，比 Google 買 YouTube 更貴 </h3><p> 新創購物獎勵平台 Honey Science Corporation</p>
+    <title>2020/05 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2020-05/</url>
+    <content><![CDATA[<h3 id="華南永昌證券避險不及大虧 -47- 億 - 正副董事長請辭"><a href="# 華南永昌證券避險不及大虧 -47- 億 - 正副董事長請辭" class="headerlink" title="華南永昌證券避險不及大虧 47 億 正副董事長請辭"></a>華南永昌證券避險不及大虧 47 億 正副董事長請辭 </h3><p><a href="https://www.cna.com.tw/news/firstnews/202005010197.aspx"> 華南永昌證券避險不及大虧 47 億 正副董事長請辭</a></p>
 ]]></content>
-      <categories>
-        <category>生活-投資市場觀察</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>2020/07 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2020-07/</url>
-    <content><![CDATA[]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
       </categories>
@@ -2166,6 +2158,14 @@
   <entry>
     <title>2020/06 投資市場觀察</title>
     <url>/2021/05/12/investment-observe-2020-06/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活-投資市場觀察</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2020/07 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2020-07/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
@@ -2271,17 +2271,8 @@
 與此同時，對沖基金 Citadel（與做市商 Citadel Securities 是不同的實體）、Griffin 及其合伙人一起向 Melvin Capital 投資了 20 億美元，後者 1 月份因為 GameStop 等股票遭遇逼空而巨虧 53%。Citadel 的對沖基金由於對 Melvin 投資而產生的損失不到 1%，當月總體下跌 3%。
 </code></pre><h4 id="1- 參與的人"><a href="#1- 參與的人" class="headerlink" title="(1) 參與的人"></a>(1) 參與的人</h4><p>Robinhood 執行長 Vladimir Tenev<br>Citadel 的執行長 Kenneth Cordele<br>Interactive Brokers 創始人兼首席執行官，有「高頻交易之父」之稱的 Thomas Peterffy<br>WAB 的散戶英雄 deepfucingvalue</p>
 <h4 id="2- 幾個重點"><a href="#2- 幾個重點" class="headerlink" title="(2) 幾個重點"></a>(2) 幾個重點 </h4><p>(a) deepfucingvalue 說自己不是股東市場去炒作的人，他自己只是散戶，沒有臥底操盤<br>(b) Robinhood 爲什麽限制交易？Robinhood 執行長和馬斯克在 club house 中有討論<br> 因爲 NSCC 要 Robinhood 補保證金，Robinhood 負擔不起 <br>-&gt; 停止交易，保證金就不會再提高<br>-&gt; 可不可以把保證金下降，後來還真的有下降 -&gt; 爲什麽可以降<br> 一個被過度炒作的標的，就一定會有限制。<br>是非不是非黑即白，所有動畫中處理最好的就是宮崎駿，沒有人是真的的好人或是壞人。</p>
-<h3 id="美股 -13F- 報告"><a href="# 美股 -13F- 報告" class="headerlink" title="美股 13F 報告"></a>美股 13F 報告 </h3><h3 id="5- 家頂級機構 -2020- 年 -Q4- 季度「最新持倉」"><a href="#5- 家頂級機構 -2020- 年 -Q4- 季度「最新持倉」" class="headerlink" title="5 家頂級機構 2020 年 Q4 季度「最新持倉」"></a>5 家頂級機構 2020 年 Q4 季度「最新持倉」</h3><h3 id="美國 -10- 年期公債殖利率上升"><a href="# 美國 -10- 年期公債殖利率上升" class="headerlink" title="美國 10 年期公債殖利率上升"></a> 美國 10 年期公債殖利率上升 </h3><p><img src="/2021/05/12/investment-observe-2021-02/photo1.png" alt><br> 此波美國長年期公債殖利率的上揚，並非來自通膨情勢的快速惡化，亦非因美國聯準會的貨幣政策轉向收縮銀根。<br>隨著歐美國家新增確診人數呈現下降趨勢，市場對經濟展望轉為樂觀。</p>
-]]></content>
-      <categories>
-        <category>生活-投資市場觀察</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>2021/03 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2021-03/</url>
-    <content><![CDATA[<h3 id="橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動"><a href="# 橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動" class="headerlink" title="橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動"></a>橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動 </h3><p> 千億級資管公司橡樹資本（Oaktree Capital）創辦人 Howard Marks 公開承認，對比特幣（BTC）改觀了。他 2017 年時認為比特幣毫無內在價值，但理解到背後的供需平衡之後，便保持開放心態。這段期間，比特幣價格也已經自 5,000 美元上漲超過 10 倍，Marks 稱那些買在低點的人們「目前看來是對的」。</p>
-<h3 id="全球前 -10- 大 -IC- 設計公司營收排行"><a href="# 全球前 -10- 大 -IC- 設計公司營收排行" class="headerlink" title="全球前 10 大 IC 設計公司營收排行"></a>全球前 10 大 IC 設計公司營收排行 </h3><p><a href="https://www.bnext.com.tw/article/61960/2020-top-10-ic-company"> 全球前 10 大 IC 設計公司營收排行</a></p>
+<h3 id="美股 -13F- 報告"><a href="# 美股 -13F- 報告" class="headerlink" title="美股 13F 報告"></a>美股 13F 報告</h3><h3 id="5- 家頂級機構 -2020- 年 -Q4- 季度「最新持倉」"><a href="#5- 家頂級機構 -2020- 年 -Q4- 季度「最新持倉」" class="headerlink" title="5 家頂級機構 2020 年 Q4 季度「最新持倉」"></a>5 家頂級機構 2020 年 Q4 季度「最新持倉」</h3><h3 id="Warren-buffett- 買了什麽"><a href="#Warren-buffett- 買了什麽" class="headerlink" title="Warren buffett 買了什麽"></a>Warren buffett 買了什麽</h3><p>《彭博》報導，根據週二發布最新文件，波克夏買的是電信商威訊（Verizon），持股價值來到 86 億美元；企業保險巨頭 Marsh &amp; McLennan（MMC），持股價值 4.99 億美元；石油公司雪佛龍（Chevron），持股價值近 41 億美元。 3 家公司去年第 3 季被歸為機密交易而未公開，在消息傳出後盤後皆上漲。</p>
+<h3 id="美國 -10- 年期公債殖利率上升"><a href="# 美國 -10- 年期公債殖利率上升" class="headerlink" title="美國 10 年期公債殖利率上升"></a>美國 10 年期公債殖利率上升 </h3><p><img src="/2021/05/12/investment-observe-2021-02/photo1.png" alt><br> 此波美國長年期公債殖利率的上揚，並非來自通膨情勢的快速惡化，亦非因美國聯準會的貨幣政策轉向收縮銀根。<br>隨著歐美國家新增確診人數呈現下降趨勢，市場對經濟展望轉為樂觀。</p>
 ]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
@@ -2298,13 +2289,24 @@
   <entry>
     <title>2021/05 投資市場觀察</title>
     <url>/2021/05/12/investment-observe-2021-05/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h3 id="狗狗幣暴漲"><a href="# 狗狗幣暴漲" class="headerlink" title="狗狗幣暴漲"></a>狗狗幣暴漲 </h3><p> 狗狗幣一開始的發行是要諷刺幣圈内發行門檻超低、濫竽充數的現象</p>
+]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
       </categories>
   </entry>
   <entry>
-    <title>investment-observe-good-article-or-story</title>
+    <title>2021/03 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2021-03/</url>
+    <content><![CDATA[<h3 id="橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動"><a href="# 橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動" class="headerlink" title="橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動"></a>橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動 </h3><p> 千億級資管公司橡樹資本（Oaktree Capital）創辦人 Howard Marks 公開承認，對比特幣（BTC）改觀了。他 2017 年時認為比特幣毫無內在價值，但理解到背後的供需平衡之後，便保持開放心態。這段期間，比特幣價格也已經自 5,000 美元上漲超過 10 倍，Marks 稱那些買在低點的人們「目前看來是對的」。</p>
+<h3 id="全球前 -10- 大 -IC- 設計公司營收排行"><a href="# 全球前 -10- 大 -IC- 設計公司營收排行" class="headerlink" title="全球前 10 大 IC 設計公司營收排行"></a>全球前 10 大 IC 設計公司營收排行 </h3><p><a href="https://www.bnext.com.tw/article/61960/2020-top-10-ic-company"> 全球前 10 大 IC 設計公司營收排行</a></p>
+]]></content>
+      <categories>
+        <category>生活-投資市場觀察</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>好的文章或故事</title>
     <url>/2021/05/18/investment-observe-good-article-or-story/</url>
     <content><![CDATA[<p><a href="https://www.businesstoday.com.tw/article/category/80401/post/202003310046/% E4% BB%96% E6%98% AF% E7%84% A1% E8%89% AF% E7% A6% BF% E9% B7% B9% EF% BC%8C% E9%82%84% E6%98% AF% E6%93%8D% E7%9B% A4% E7% A5%9E% E4% BA% BA% EF% BC%9F">他是無良禿鷹，還是操盤神人？</a><br><a href="https://meet.bnext.com.tw/articles/view/44610">一個流量企業的沒落：從市值破千億美元到被收購的命運 </a><br><a href="https://zombit.info/know-the-only-cryptocurrency-financial-products-in-the-current-financial-market/"> 認識目前金融市場唯一的證券型加密貨幣金融商品 </a><br><a href="https://www.blocktempo.com/11-publicly-traded-companies-own-3-btc/"> 這 11 間上市公司「已掌控 3.2%」的比特幣總供應量，這會是隱憂嗎？</a><br><a href="https://blog.usstocks.com.tw/?p=3892">產業研究：5G 射頻產業整理（上）</a><br><a href="https://blog.usstocks.com.tw/?p=3931">產業研究：5G 射頻產業整理（下）</a><br><a href="https://finance.sina.com.cn/stock/hkstock/hkstocknews/2020-05-25/doc-iircuyvi4966214.shtml">抛弃 Facebook (FB.US) 的野孩子：硅谷的短视，我带不动</a><br><a href="https://www.dcard.tw/f/money/p/234259731">dcard 投顧老師表演的觀看心得</a></p>
 ]]></content>
@@ -2618,6 +2620,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>机器学习算法 --（7）贝叶斯算法</title>
+    <url>/2020/11/19/machineLearning-7/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
+]]></content>
+      <categories>
+        <category>大学课程-机器学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>机器学习算法 --（6）集成学习</title>
     <url>/2020/11/19/machineLearning-6/</url>
     <content><![CDATA[<span id="more"></span>
@@ -2633,14 +2645,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>机器学习算法 --（7）贝叶斯算法</title>
-    <url>/2020/11/19/machineLearning-7/</url>
+    <title>机器学习算法 --（8）聚类算法</title>
+    <url>/2020/11/19/machineLearning-8/</url>
     <content><![CDATA[<span id="more"></span>
 <h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
 ]]></content>
       <categories>
         <category>大学课程-机器学习</category>
       </categories>
+      <tags>
+        <tag>machineLearning</tag>
+        <tag>sklearn</tag>
+        <tag>聚类</tag>
+      </tags>
   </entry>
   <entry>
     <title>机器学习算法 --（9）主成分分析 PCA</title>
@@ -2656,21 +2673,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
         <tag>sklearn</tag>
         <tag>主成分分析</tag>
         <tag>PCA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习算法 --（8）聚类算法</title>
-    <url>/2020/11/19/machineLearning-8/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
-]]></content>
-      <categories>
-        <category>大学课程-机器学习</category>
-      </categories>
-      <tags>
-        <tag>machineLearning</tag>
-        <tag>sklearn</tag>
-        <tag>聚类</tag>
       </tags>
   </entry>
   <entry>
@@ -2765,6 +2767,16 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>儲蓄保單</title>
+    <url>/2021/05/10/money-management-deposit-insurance/</url>
+    <content><![CDATA[<p>儲蓄險的本質是儲蓄，而不是保險。<br>儲蓄險：利率高於定存，可以保本（抱越久，領越多）<br>考慮的三個重點：<br>(1) 要繳多少？<br>(2) 解約可以獲得多少？<br>(3) 萬一身故了可以領多少？<br><span id="more"></span></p>
+<h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
+]]></content>
+      <categories>
+        <category>生活-投資理財</category>
+      </categories>
+  </entry>
+  <entry>
     <title>債券</title>
     <url>/2021/05/13/money-management-bond/</url>
     <content><![CDATA[<h3 id="債券是什麽？"><a href="# 債券是什麽？" class="headerlink" title="債券是什麽？"></a>債券是什麽？</h3><p>債券（Bond）其實就是一種「借據」，債券上由發行者承諾，<br>在到期前每期支付固定的利息、到期時則是會一次還清票面面額上的本金。<span id="more"></span><br>因此可債債券視為，一種能「穩定領利息」的投資工具。<br>差別在於定存幾乎不會有危險，而債券則是可能有拿不到利息的風險。<br>整體報酬比股票略低但穩定，波動相對比較小。</p>
@@ -2777,16 +2789,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="買賣時機"><a href="# 買賣時機" class="headerlink" title="買賣時機"></a>買賣時機 </h3><p> 購入高收益債券的最佳時機是當高收益債券的利差高的時候，反之，當利差低時則是相對不佳的時機。</p>
 <p>身為投資人，在利差上升時，我們不知它何時會反轉，<br>因此投資後也要有心理準備短期內會產生更大的虧損。<br>例如 2008 年利差擴大到 10% 時，已經到了 2000 年網路泡沫時的高點，<br>看似是個不錯的投資時機，此時如果投資，後續還有更大的跌幅，因為利差最後到了近 20%，<br>但是長期來看，如果當時跌了也沒賣，二年後仍有正報酬。</p>
 <p>投資高收益債最不明智的就是砍在低點，也就是砍在利差高的時候，<br>應該要在利差高時購入，然後耐心等待。</p>
-]]></content>
-      <categories>
-        <category>生活-投資理財</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>儲蓄保單</title>
-    <url>/2021/05/10/money-management-deposit-insurance/</url>
-    <content><![CDATA[<p>儲蓄險的本質是儲蓄，而不是保險。<br>儲蓄險：利率高於定存，可以保本（抱越久，領越多）<br>考慮的三個重點：<br>(1) 要繳多少？<br>(2) 解約可以獲得多少？<br>(3) 萬一身故了可以領多少？<br><span id="more"></span></p>
-<h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
 ]]></content>
       <categories>
         <category>生活-投資理財</category>
@@ -2820,6 +2822,40 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>金融衍生品：期貨、權證、外匯保證金</title>
+    <url>/2021/05/10/money-management-futures-and-warrant/</url>
+    <content><![CDATA[<h3 id="一、背景知識"><a href="# 一、背景知識" class="headerlink" title="一、背景知識"></a>一、背景知識 </h3><h4 id="1- 期貨"><a href="#1- 期貨" class="headerlink" title="1. 期貨"></a>1. 期貨</h4><p> 買賣雙方簽訂契約，約定于指定時間，按照協議的價格，交易指定標的數量。<br>重點：交易標的物、交易數量、到期日、價格 <br><span id="more"></span><br> 買方不一定要等待到期日履約獲利，也可以選擇將合約轉讓他人來賺取利潤。</p>
+<h4 id="2- 期貨基本用語"><a href="#2- 期貨基本用語" class="headerlink" title="2. 期貨基本用語"></a>2. 期貨基本用語 </h4><h5 id="1- 一口期貨"><a href="#1- 一口期貨" class="headerlink" title="(1) 一口期貨"></a>(1) 一口期貨</h5><h5 id="2- 建倉：購買一口期貨"><a href="#2- 建倉：購買一口期貨" class="headerlink" title="(2) 建倉：購買一口期貨"></a>(2) 建倉：購買一口期貨</h5><h5 id="3- 持倉：購買一口期貨，並持有"><a href="#3- 持倉：購買一口期貨，並持有" class="headerlink" title="(3) 持倉：購買一口期貨，並持有"></a>(3) 持倉：購買一口期貨，並持有</h5><h5 id="4- 交割：買方到期日履約"><a href="#4- 交割：買方到期日履約" class="headerlink" title="(4) 交割：買方到期日履約"></a>(4) 交割：買方到期日履約</h5><h5 id="5- 平倉：將合約賣出"><a href="#5- 平倉：將合約賣出" class="headerlink" title="(5) 平倉：將合約賣出"></a>(5) 平倉：將合約賣出</h5><p> 證券以及期貨市場上，持有空頭部位的投資人，藉由買進等量的契約以離開市場；或是持有多頭部位的投資人，藉由賣出等量的契約以離開市場。 即以等量但相反買賣方向，來沖銷原有的契約。</p>
+<h5 id="6- 爆倉"><a href="#6- 爆倉" class="headerlink" title="(6) 爆倉"></a>(6) 爆倉 </h5><p> 投資者被强制斷頭，保證金為負，超額虧損</p>
+<h5 id="7- 保證金"><a href="#7- 保證金" class="headerlink" title="(7) 保證金"></a>(7) 保證金 </h5><p> 避免損失進一步擴大：追繳保證金或是强制平倉</p>
+<h5 id="8- 當冲"><a href="#8- 當冲" class="headerlink" title="(8) 當冲"></a>(8) 當冲 </h5><p> 當沖會有兩種意思，一種就是字面上解釋，當天就把期貨部位沖銷稱做當沖交易，另一種指的是在交易期貨時，勾選當沖保證金減半。</p>
+<h5 id="9- 先買後賣、先賣後買"><a href="#9- 先買後賣、先賣後買" class="headerlink" title="(9) 先買後賣、先賣後買"></a>(9) 先買後賣、先賣後買 </h5><p> 期貨基本的操作方式，舉例來說：若預期台指期會上漲，那就買進台指期（稱為「建倉」），待上漲後賣出（稱為「平倉」），就可低買高賣賺取價差；假設看空，那就先賣出，低點時再買進平倉。</p>
+<h5 id="10- 長倉"><a href="#10- 長倉" class="headerlink" title="(10) 長倉"></a>(10) 長倉 </h5><p> 長倉與短倉相反，指投資人買入金融產品部位後，持有且當日不出脫的操作方式。持長倉的投資者預期相關資產的價格會上漲後市看好，因此採取「先買後賣」的策略；此為傳統的證券操作方式。股票投資人或期貨及其他金融產品交易人，根據市場行情價格波動而在低位買入在高位賣出，即低吸高拋。廣義上，短線搶短、波段操作、長期持有，均屬之。</p>
+<h5 id="11- 短倉"><a href="#11- 短倉" class="headerlink" title="(11) 短倉"></a>(11) 短倉 </h5><p> 與長倉相反，指投資者在「不持有」金融產品部位（如證券）的情況下，賣出該金融產品。 如果賣方有義務立即交付，他便需要從第三方借入該資產。</p>
+<h4 id="3- 期貨分類"><a href="#3- 期貨分類" class="headerlink" title="3. 期貨分類"></a>3. 期貨分類 </h4><h5 id="1- 商品期貨"><a href="#1- 商品期貨" class="headerlink" title="(1) 商品期貨"></a>(1) 商品期貨</h5><p> 農產品期貨、金屬期貨、能源期貨</p>
+<h5 id="2- 金融期貨"><a href="#2- 金融期貨" class="headerlink" title="(2) 金融期貨"></a>(2) 金融期貨 </h5><p> 外匯期貨、利率期貨 (買賣信用工具)、股票指數期貨</p>
+<h4 id="4- 入門：台指期貨"><a href="#4- 入門：台指期貨" class="headerlink" title="4. 入門：台指期貨"></a>4. 入門：台指期貨 </h4><h4 id="5- 期貨如何開戶、如何選擇期貨商"><a href="#5- 期貨如何開戶、如何選擇期貨商" class="headerlink" title="5. 期貨如何開戶、如何選擇期貨商"></a>5. 期貨如何開戶、如何選擇期貨商</h4><p> 手續費、服務品質、下單軟體 </p>
+<h4 id="5- 外匯保證金"><a href="#5- 外匯保證金" class="headerlink" title="5. 外匯保證金"></a>5. 外匯保證金 </h4><p> 利用杠桿操作賺取匯差，放大了投資報酬率，也加大風險 <br> 合約的單位為一手，一手通常是 10 萬元，例如 EUR/USA 就是操作 10 萬歐元 <br> 想要操作 10 萬元的合約，要拿出多少合約就要看杠桿是多少了（例如 1：100）</p>
+<h5 id="損益計算公式"><a href="# 損益計算公式" class="headerlink" title="損益計算公式"></a>損益計算公式 </h5><p>（1）直接報價法（EUR/USA=1.22985，代表一歐元可以兌換 1.22985 美元）<br> 損益（美元）= 交易金額 $*$（賣出價 - 買入價）<br>（2）間接報價法（USA/JPY=106.955，代表 1 美元可兌換 106.955 日元）<br>損益（美元）= 交易金額 $*$（賣出價 - 買入價）/ 賣出價</p>
+<h5 id="要注意的規則"><a href="# 要注意的規則" class="headerlink" title="要注意的規則"></a>要注意的規則 </h5><p> 因虧損，通知追繳期保證金限内未補繳 / 虧損過大 -&gt; 强制平倉</p>
+<h5 id="優點"><a href="# 優點" class="headerlink" title="優點"></a>優點 </h5><p> 高杠桿、可雙向、24 小時、公平性、易聚焦 <br> 高杠桿：因爲有强制平倉的機制，所以最多就是賠光保證金 <br> 可雙向：預期匯率漲，先買後賣；預期匯率降，先賣後買</p>
+<h5 id="缺點"><a href="# 缺點" class="headerlink" title="缺點"></a>缺點 </h5><p> 杠桿作用、缺乏監管 (滑價或是資訊不對稱)</p>
+<h5 id="手續費"><a href="# 手續費" class="headerlink" title="手續費"></a>手續費 </h5><p> 以點為單位</p>
+<h5 id="利息問題"><a href="# 利息問題" class="headerlink" title="利息問題"></a>利息問題 </h5><h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a> 投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 金融衍生品：期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
+]]></content>
+      <categories>
+        <category>生活-投資理財</category>
+      </categories>
+      <tags>
+        <tag>期貨</tag>
+        <tag>建倉</tag>
+        <tag>持倉</tag>
+        <tag>交割</tag>
+        <tag>平倉</tag>
+        <tag>杠桿效應</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>總體經濟學</title>
     <url>/2021/05/13/money-management-macroconomics/</url>
     <content><![CDATA[<h3 id="一、背景知識"><a href="# 一、背景知識" class="headerlink" title="一、背景知識"></a>一、背景知識 </h3><h4 id="1- 定存利率"><a href="#1- 定存利率" class="headerlink" title="1. 定存利率"></a>1. 定存利率</h4><p> 在比較各種投資理財工具的時候，定存利率就變成一個最直觀的衡量標準。<br>每個國家決定利率升降的單位就是各國的中央銀行 Ex：美國聯准會 FED</p>
@@ -2837,57 +2873,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>金融衍生品：期貨、權證、外匯保證金</title>
-    <url>/2021/05/10/money-management-futures-and-warrant/</url>
-    <content><![CDATA[<h3 id="一、背景知識"><a href="# 一、背景知識" class="headerlink" title="一、背景知識"></a>一、背景知識 </h3><h4 id="1- 期貨"><a href="#1- 期貨" class="headerlink" title="1. 期貨"></a>1. 期貨</h4><p> 買賣雙方簽訂契約，約定于指定時間，按照協議的價格，交易指定標的數量。<br>重點：交易標的物、交易數量、到期日、價格 <br><span id="more"></span><br> 買方不一定要等待到期日履約獲利，也可以選擇將合約轉讓他人來賺取利潤。</p>
-<h4 id="2- 期貨基本用語"><a href="#2- 期貨基本用語" class="headerlink" title="2. 期貨基本用語"></a>2. 期貨基本用語 </h4><h5 id="1- 一口期貨"><a href="#1- 一口期貨" class="headerlink" title="(1) 一口期貨"></a>(1) 一口期貨</h5><h5 id="2- 建倉：購買一口期貨"><a href="#2- 建倉：購買一口期貨" class="headerlink" title="(2) 建倉：購買一口期貨"></a>(2) 建倉：購買一口期貨</h5><h5 id="3- 持倉：購買一口期貨，並持有"><a href="#3- 持倉：購買一口期貨，並持有" class="headerlink" title="(3) 持倉：購買一口期貨，並持有"></a>(3) 持倉：購買一口期貨，並持有</h5><h5 id="4- 交割：買方到期日履約"><a href="#4- 交割：買方到期日履約" class="headerlink" title="(4) 交割：買方到期日履約"></a>(4) 交割：買方到期日履約</h5><h5 id="5- 平倉：將合約賣出"><a href="#5- 平倉：將合約賣出" class="headerlink" title="(5) 平倉：將合約賣出"></a>(5) 平倉：將合約賣出</h5><p> 證券以及期貨市場上，持有空頭部位的投資人，藉由買進等量的契約以離開市場；或是持有多頭部位的投資人，藉由賣出等量的契約以離開市場。 即以等量但相反買賣方向，來沖銷原有的契約。</p>
-<h5 id="6- 爆倉"><a href="#6- 爆倉" class="headerlink" title="(6) 爆倉"></a>(6) 爆倉 </h5><p> 投資者被强制斷頭，保證金為負，超額虧損</p>
-<h5 id="7- 保證金"><a href="#7- 保證金" class="headerlink" title="(7) 保證金"></a>(7) 保證金 </h5><p> 避免損失進一步擴大：追繳保證金或是强制平倉</p>
-<h5 id="8- 當冲"><a href="#8- 當冲" class="headerlink" title="(8) 當冲"></a>(8) 當冲 </h5><p> 當沖會有兩種意思，一種就是字面上解釋，當天就把期貨部位沖銷稱做當沖交易，另一種指的是在交易期貨時，勾選當沖保證金減半。</p>
-<h5 id="9- 先買後賣、先賣後買"><a href="#9- 先買後賣、先賣後買" class="headerlink" title="(9) 先買後賣、先賣後買"></a>(9) 先買後賣、先賣後買 </h5><p> 期貨基本的操作方式，舉例來說：若預期台指期會上漲，那就買進台指期（稱為「建倉」），待上漲後賣出（稱為「平倉」），就可低買高賣賺取價差；假設看空，那就先賣出，低點時再買進平倉。</p>
-<h5 id="10- 長倉"><a href="#10- 長倉" class="headerlink" title="(10) 長倉"></a>(10) 長倉 </h5><p> 長倉與短倉相反，指投資人買入金融產品部位後，持有且當日不出脫的操作方式。持長倉的投資者預期相關資產的價格會上漲後市看好，因此採取「先買後賣」的策略；此為傳統的證券操作方式。股票投資人或期貨及其他金融產品交易人，根據市場行情價格波動而在低位買入在高位賣出，即低吸高拋。廣義上，短線搶短、波段操作、長期持有，均屬之。</p>
-<h5 id="11- 短倉"><a href="#11- 短倉" class="headerlink" title="(11) 短倉"></a>(11) 短倉 </h5><p> 與長倉相反，指投資者在「不持有」金融產品部位（如證券）的情況下，賣出該金融產品。 如果賣方有義務立即交付，他便需要從第三方借入該資產。</p>
-<h4 id="3- 期貨分類"><a href="#3- 期貨分類" class="headerlink" title="3. 期貨分類"></a>3. 期貨分類 </h4><h5 id="1- 商品期貨"><a href="#1- 商品期貨" class="headerlink" title="(1) 商品期貨"></a>(1) 商品期貨</h5><p> 農產品期貨、金屬期貨、能源期貨</p>
-<h5 id="2- 金融期貨"><a href="#2- 金融期貨" class="headerlink" title="(2) 金融期貨"></a>(2) 金融期貨 </h5><p> 外匯期貨、利率期貨 (買賣信用工具)、股票指數期貨</p>
-<h4 id="4- 入門：台指期貨"><a href="#4- 入門：台指期貨" class="headerlink" title="4. 入門：台指期貨"></a>4. 入門：台指期貨 </h4><h4 id="5- 期貨如何開戶、如何選擇期貨商"><a href="#5- 期貨如何開戶、如何選擇期貨商" class="headerlink" title="5. 期貨如何開戶、如何選擇期貨商"></a>5. 期貨如何開戶、如何選擇期貨商</h4><p> 手續費、服務品質、下單軟體 </p>
-<h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 金融衍生品：期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
-]]></content>
-      <categories>
-        <category>生活-投資理財</category>
-      </categories>
-      <tags>
-        <tag>期貨</tag>
-        <tag>建倉</tag>
-        <tag>持倉</tag>
-        <tag>交割</tag>
-        <tag>平倉</tag>
-        <tag>杠桿效應</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>房地產</title>
     <url>/2021/05/10/money-management-real-estate/</url>
     <content><![CDATA[<span id="more"></span>
-<h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
-]]></content>
-      <categories>
-        <category>生活-投資理財</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>股票基本面</title>
-    <url>/2021/05/10/money-management-stock-fundamental/</url>
-    <content><![CDATA[<p><img src="/2021/05/10/money-management-stock-fundamental/photo1.jpg" alt></p>
-<h3 id="一、基本面三大方向，九大指標"><a href="# 一、基本面三大方向，九大指標" class="headerlink" title="一、基本面三大方向，九大指標"></a>一、基本面三大方向，九大指標 </h3><h4 id="1- 做什麽 - 公司狀況 -："><a href="#1- 做什麽 - 公司狀況 -：" class="headerlink" title="1. 做什麽 (公司狀況)："></a>1. 做什麽 (公司狀況)：</h4><p>(1) 資本額 (股本)<br> 股本就是公司設立時的資本額 = 股數 X 股票面額 (10 元)<br>(2) 市值 <br> 市值 = 股票數 X 市價 (面額)(成交價)<br>(3) 產業</p>
-<h4 id="2- 賺什麽 - 經營績效"><a href="#2- 賺什麽 - 經營績效" class="headerlink" title="2. 賺什麽 (經營績效)"></a>2. 賺什麽 (經營績效)</h4><p>(1) EPS = 稅後净利 / 股數 <br> 盈餘分配率<br>(2) ROA 資產報酬率 = 稅後净利 / 資產<br>(3) ROE 股東權益報酬率 = 稅後净利 / 净值</p>
-<h4 id="3- 算什麽 - 市況指標"><a href="#3- 算什麽 - 市況指標" class="headerlink" title="3. 算什麽 (市況指標)"></a>3. 算什麽 (市況指標)</h4><p>遛狗理論<br>(1) 本益比 PER（賺多少）：股價 / EPS，同業比較還要注意經營内容的差異</p>
-<ul>
-<li>跟自己比 - 和同業比 <br>(2) 股價净值比 PBR（值多少）：目前股價 / 每股净值<br> 每股净值 = 净值 / 股數</li>
-<li>净值的代表性 - 沒有評估獲利能力 <br>(3) 殖利率 Yield（配多少）：<br> 利率 / 股價</li>
-</ul>
-<h3 id="二、巴菲特的投資秘訣"><a href="# 二、巴菲特的投資秘訣" class="headerlink" title="二、巴菲特的投資秘訣"></a>二、巴菲特的投資秘訣</h3><h4 id="1- 投資兩個要素："><a href="#1- 投資兩個要素：" class="headerlink" title="1. 投資兩個要素："></a>1. 投資兩個要素：</h4><p>(1) 價值被低估<br>(2) 長期持有</p>
-<h4 id="2- 怎麽看一家公司是否被低估"><a href="#2- 怎麽看一家公司是否被低估" class="headerlink" title="2. 怎麽看一家公司是否被低估"></a>2. 怎麽看一家公司是否被低估</h4><p>(1) 管理層：企業所有者和競爭優勢<br>(2) 經營數據</p>
-<span id="more"></span>
 <h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
 ]]></content>
       <categories>
@@ -2962,6 +2950,26 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>股票基本面</title>
+    <url>/2021/05/10/money-management-stock-fundamental/</url>
+    <content><![CDATA[<p><img src="/2021/05/10/money-management-stock-fundamental/photo1.jpg" alt></p>
+<h3 id="一、基本面三大方向，九大指標"><a href="# 一、基本面三大方向，九大指標" class="headerlink" title="一、基本面三大方向，九大指標"></a>一、基本面三大方向，九大指標 </h3><h4 id="1- 做什麽 - 公司狀況 -："><a href="#1- 做什麽 - 公司狀況 -：" class="headerlink" title="1. 做什麽 (公司狀況)："></a>1. 做什麽 (公司狀況)：</h4><p>(1) 資本額 (股本)<br> 股本就是公司設立時的資本額 = 股數 X 股票面額 (10 元)<br>(2) 市值 <br> 市值 = 股票數 X 市價 (面額)(成交價)<br>(3) 產業</p>
+<h4 id="2- 賺什麽 - 經營績效"><a href="#2- 賺什麽 - 經營績效" class="headerlink" title="2. 賺什麽 (經營績效)"></a>2. 賺什麽 (經營績效)</h4><p>(1) EPS = 稅後净利 / 股數 <br> 盈餘分配率<br>(2) ROA 資產報酬率 = 稅後净利 / 資產<br>(3) ROE 股東權益報酬率 = 稅後净利 / 净值</p>
+<h4 id="3- 算什麽 - 市況指標"><a href="#3- 算什麽 - 市況指標" class="headerlink" title="3. 算什麽 (市況指標)"></a>3. 算什麽 (市況指標)</h4><p>遛狗理論<br>(1) 本益比 PER（賺多少）：股價 / EPS，同業比較還要注意經營内容的差異</p>
+<ul>
+<li>跟自己比 - 和同業比 <br>(2) 股價净值比 PBR（值多少）：目前股價 / 每股净值<br> 每股净值 = 净值 / 股數</li>
+<li>净值的代表性 - 沒有評估獲利能力 <br>(3) 殖利率 Yield（配多少）：<br> 利率 / 股價</li>
+</ul>
+<h3 id="二、巴菲特的投資秘訣"><a href="# 二、巴菲特的投資秘訣" class="headerlink" title="二、巴菲特的投資秘訣"></a>二、巴菲特的投資秘訣</h3><h4 id="1- 投資兩個要素："><a href="#1- 投資兩個要素：" class="headerlink" title="1. 投資兩個要素："></a>1. 投資兩個要素：</h4><p>(1) 價值被低估<br>(2) 長期持有</p>
+<h4 id="2- 怎麽看一家公司是否被低估"><a href="#2- 怎麽看一家公司是否被低估" class="headerlink" title="2. 怎麽看一家公司是否被低估"></a>2. 怎麽看一家公司是否被低估</h4><p>(1) 管理層：企業所有者和競爭優勢<br>(2) 經營數據</p>
+<span id="more"></span>
+<h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
+]]></content>
+      <categories>
+        <category>生活-投資理財</category>
+      </categories>
+  </entry>
+  <entry>
     <title>股票技術面</title>
     <url>/2021/05/10/money-management-stock-technical/</url>
     <content><![CDATA[<span id="more"></span>
@@ -2984,8 +2992,39 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   <entry>
     <title>2020/01 科技新聞</title>
     <url>/2021/05/11/news-2020-01/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞 </a></p>
+    <content><![CDATA[<h3 id="台灣 -5G- 頻譜第一階段競標衝破 -1000- 億元"><a href="# 台灣 -5G- 頻譜第一階段競標衝破 -1000- 億元" class="headerlink" title="台灣 5G 頻譜第一階段競標衝破 1000 億元"></a>台灣 5G 頻譜第一階段競標衝破 1000 億元 </h3><p><a href="https://www.bnext.com.tw/article/56305/taiwan-5g-spectrum-auction-end"> 衝出 1380 億元天價！5G 標金失速列車靠站，電信 5 雄廝殺結果一次看</a></p>
+<h3 id="2020- 年 -CES- 展"><a href="#2020- 年 -CES- 展" class="headerlink" title="2020 年 CES 展"></a>2020 年 CES 展 </h3><h4 id="1- 自動駕駛"><a href="#1- 自動駕駛" class="headerlink" title="1. 自動駕駛"></a>1. 自動駕駛</h4><p> 索尼所發表的 Vision-S，克服了引擎問題，配備雙二百 kW 引擎，時速從零到一百公里的加速，僅需四．八秒，車子內外建置三十三種不同的感測器，屬於自駕車 level 2 等級，這也就意味著車子雖然可以自動駕駛，但也仍需有人在車上監督車體行進方向。</p>
+<p>中國新創團隊拜騰（Byton）的電動車。</p>
+<p>今年 CES 展中，現代汽車首度展示了空中計程車 S-A1，這也將是 Uber 空中計程車的主力車款。雖然名為「空中計程車」，但 S-A1 就是一款飛行器，以傳統直升機基礎進行改良，旋翼旋轉速度比現行直升機慢，起降時較為安靜；而從 S-A1 的設計來看，乘坐空間除了四名乘客之外，可再容納一名飛行員，目前預計二三年之前，可大規模量產。</p>
+<h4 id="2-AI- 機器人"><a href="#2-AI- 機器人" class="headerlink" title="2.AI 機器人"></a>2.AI 機器人 </h4><p> 台灣無人機大廠雷虎科技，也展出自家研發的 Seadragon 海龍號聲納掃描八軸水下機器人，使用者藉由水下掃描聲納，可透過影像，在水下執行高難度及複雜工作，降低潛水人員的生命危險。</p>
+<p>PuduTech 的服務型機器人 BellaBot、三星的生活型機器人 Ballie、寶僑集團（P&amp;G）研發的廁紙機器人，以及汽車大廠福特新推出的搬運型機器人 Digit。</p>
+<h4 id="3- 親民 -8K"><a href="#3- 親民 -8K" class="headerlink" title="3. 親民 8K"></a>3. 親民 8K</h4><p>今年，三星、LG、索尼均在現場大秀 8K 產品，同時強調售價將是消費者可負擔（Affordable）的水準，預估在東京奧運推波助瀾下，可望在高階市場中有一些表現空間。</p>
+<p>另外，Mini LED 背光技術也逐漸受市場歡迎。在今年 CES 中，台灣筆電品牌大廠宏碁、華碩，發表了搭載 Mini LED 的電競螢幕，微星則是將 Mini LED 運用於十七吋筆電。</p>
+<h4 id="4-AI- 語音助理"><a href="#4-AI- 語音助理" class="headerlink" title="4.AI 語音助理"></a>4.AI 語音助理</h4><p>AI 發展以來，最為世人所熟知的產品，莫過於語音助理。Siri、Google Assistant、Alexa、Bixby，可說是目前市場最常使用的四種語音助理。</p>
+<p>不滿足於 Bixby 的成功，三星在今年 CES 中，展示全新人工智慧應用 NEON，並將之稱為「人工智人」（Artificial Human），三星人工智人 NEON 沒有實體，而是以真人尺寸活在螢幕裡。</p>
+<h4 id="5- 總共 -13- 家台灣新創獲大獎"><a href="#5- 總共 -13- 家台灣新創獲大獎" class="headerlink" title="5. 總共 13 家台灣新創獲大獎"></a>5. 總共 13 家台灣新創獲大獎 </h4><h3 id="平行世界"><a href="# 平行世界" class="headerlink" title="平行世界"></a> 平行世界 </h3><p> 失衡的原因之一，可以用「鮑莫爾成本病」（Baumol’s cost disease）解釋。這是 1967 年美國經濟學家威廉・鮑莫爾（William Baumol）所提出的現象。他把經濟分成兩大部門（sector），並發現商品（goods）部門的價格持續降低，而服務（service）部門的價格持續走高。</p>
+<p>在「商品」產業中，人的生產力（productivity）提高，薪資也隨之提高。這符合古典經濟理論。過去一個軟體頂多賣 1 千萬份，現在 Google 卻有超過 10 億人使用。每一位軟體工程師帶來更高生產力，報酬就更高。鮑莫爾指出，商品產業的報酬提高，因此若弦樂師的報酬沒有隨之提高，弦樂師就會改去當軟體工程師，那就沒有人要表演弦樂了。換言之，「商品」產業的生產力提高，提高了「服務」業人員的機會成本；因此服務業的報酬必須提高，才能留住人。</p>
+<p>同時，由於政府的主要活動也多半是人力密集形式，如提供醫療、教育、行政、產業管理、國防、科技研究等，因此政府的支出也會持續增長。「大政府」不可免 — 不是因為政府管很多，而是因為政府都是用人在管。</p>
+<p>當人分配越多預算在服務上，商品創新所帶來的效益就越來越低。假設我花 70% 的所得在服務，30% 在商品，那麼即便出現一個改良 10% 的新搜尋引擎「新 Google」，對我的效益還不如幼稚園價格降低 10%。</p>
+<p>現在世界可以分成四種人：最大的得利者自然是掌握商品產業的人，也就是擁有機器、工廠或軟體的人（或許可以稱之為「資本家」）。其次的得利者是商品產業的從業人員，直接從生產力提升獲得更高的報酬。第三順位則是服務業的專業服務者，享受水漲船高的薪水。</p>
+<p>最弱勢的是既無法參與商品產業，也無法提供獨特服務的人。他可能不是知識工作者，無法提高產業的生產力；也可能是被自動化所取代的勞工，只能提供一般的、缺乏差異化服務。他兩頭落空。一個兩頭落空的人，仍然享受到更便宜的商品，基本薪資也會提高。只是他會覺得更多高級服務越來越不可攀。他會有嚴重的相對剝奪感。</p>
+<p>科技帶來豐盛，但錢會流到稀缺的地方。人的時間是終極的稀缺，因此科技的發展最終會帶來人力價格的上升 [註]。相對的，「純粹」商品的創新，其效益將越來越小。今天的手機可以照星象，電腦可以連 5G，但對我們的生活幾乎沒有影響。我們真正需要的是服務產業的生產力突破。未來科技的主要課題是如何在服務產業創新，如教育、醫療、政府機構等。誰能降低人力成本，減少從事服務業的人的時間，誰就會非常有價值。</p>
+<h3 id="5G- 與 -WiFi6"><a href="#5G- 與 -WiFi6" class="headerlink" title="5G 與 WiFi6"></a>5G 與 WiFi6</h3><p>而隨著５Ｇ網路建設逐步推進，市場上關於５Ｇ可能取代 WiFi 的消息也層出不窮，難道 WiFi 真的會被淘汰？答案是否定的。傳輸範圍中 WiFi 屬於區域網路，５Ｇ屬於無線網路範圍，兩者服務於不同的使用場景，因此在網路密度需求快速上升之下，WiFi 6 將成為室內網路如體育館、車站、商圈等場所的最佳選擇，與５Ｇ形成相輔相成的關係。</p>
+<h3 id="foodpanda- 外送員罷工抗議砍薪"><a href="#foodpanda- 外送員罷工抗議砍薪" class="headerlink" title="foodpanda 外送員罷工抗議砍薪"></a>foodpanda 外送員罷工抗議砍薪</h3><p><a href="https://www.bnext.com.tw/article/56307/foodpanda-protest-2020">foodpanda 外送員罷工抗議砍薪，熊貓官方、勞動部回應了</a></p>
+<p>食物外送平台 foodpanda 近期修改許多制度，影響外送員權益，有 foodpanda 號召外送員，1/16 發起「拒絕送餐」抗議行動。除了「拒送」，《中央社》報導，foodpanda 外送員還在台北、新北、台中、高雄各地集結抗議。</p>
+<h3 id="Atrium- 大裁員"><a href="#Atrium- 大裁員" class="headerlink" title="Atrium 大裁員"></a>Atrium 大裁員</h3><p>2020 年 1 月 11 日，LawSites 報道 Atrium 開始裁員部分律師，裁員人數在 10~50 人之間。</p>
+<h3 id="美國 -Casper- 申請上市，年銷售近 -4- 億美元（但虧損依然嚴重，成長型）"><a href="# 美國 -Casper- 申請上市，年銷售近 -4- 億美元（但虧損依然嚴重，成長型）" class="headerlink" title="美國 Casper 申請上市，年銷售近 4 億美元（但虧損依然嚴重，成長型）"></a>美國 Casper 申請上市，年銷售近 4 億美元（但虧損依然嚴重，成長型）</h3><p>除了以優惠的價格吸引顧客，過去「多數人在實體店面根本分不出床墊的好壞，總是要『睡過』才知道不適合」的消費困境， Casper 以「試睡 100 天，無條件退費退貨」服務，打破僵局。這項售後服務一方面強調床墊的品質，一方面也讓顧客無後顧之憂的刷卡下單，成功獲得市場歡心</p>
+<p>Casper 在毫無知名度之前，依靠內容行銷來增加自己的可信度與曝光。他們規律產出大量的自製文章，書寫所有關於睡眠、床墊、枕頭等知識內容，企圖成為「睡覺萬事通」。同時，他們也擅長與顧客在社群平台互動，邀請所有消費者寫下使用感想，或在網路上直接直播開箱、錄影試躺他們剛買到的床墊。只要介紹朋友也來買，Casper 就贈送 75 美元的 Amazon 禮券，而朋友也能得到 Casper 9 折折扣。</p>
+<p>透過銷售回饋，與 Casper Labs 定期主持的研究，Casper 很快意識到事業若要成長，必須擴充產品項目，否則以床墊的損耗率及回購契機觀察，只能短暫維持目前的營運現況。<br>Krim 決定在 2018 年推出更多短線產品如床架、床單、枕頭、夜燈，甚至是寵物床墊，他們要讓 Casper 征服所有人寢室的每個角落，連狗狗也不放過。這個策略十分成功，Casper 在 2018 年總營收高達 4 億美元。</p>
+<p>不過，即便 Casper 在網路上如何火紅，線上銷售仍只佔據整個床墊市場的 5 至 7% ，Krim 發現網路仍舊無法觸及某群仰賴實體消費體驗的顧客。Casper 決定在 2017 年將床墊、枕頭進軍至美國連鎖購物中心 Target ；隔年於紐約開設一間實體店面「Dreamery」，以 45 分鐘 20 美元的價格來邀請所有路過的人來體驗「Casper Style」的午覺。<br><a href="https://newtalk.tw/news/view/2019-12-22/339034">創夢專欄》Casper：愛你的顧客 就能征服下個里程碑 (下)</a></p>
+<h3 id="Visa- 收購 -Plaid- 一案正式告吹"><a href="#Visa- 收購 -Plaid- 一案正式告吹" class="headerlink" title="Visa 收購 Plaid 一案正式告吹"></a>Visa 收購 Plaid 一案正式告吹</h3><p>Visa 在 2020 年的 1 月宣布將以 53 億美元買下金融新創 Plaid，但美國司法部同年的 12 月針對該案提出反托拉斯訴訟，使得 Visa 與 Plaid 在 1/12 宣布，將終止此一併購協議。</p>
+<p>2013 年於美國舊金山成立的 Plaid 打造了一個技術平臺，以讓各種應用程式能夠連結使用者的銀行帳號，可協助開發人員建置金融應用，原本 Visa 打算將 Plaid 納入麾下，以拓展業務，然而，司法部卻認為 Plaid 技術對 Visa 造成威脅，Visa 是藉由併購來消弭競爭。</p>
+<p>消息傳出的當天，Visa 股價微幅下滑了 1.89%，以 208.86 美元作收。<br><a href="https://www.ithome.com.tw/news/142191">Visa 收購 Plaid 一案正式告吹 </a><br><a href="https://www.bnext.com.tw/article/58109/visa-plaid-open-banking"> 從 Visa 併購 Plaid 案件談台灣開放銀行的發展</a></p>
+<h3 id="Clearview-AI- 應用程式，一張照片就能查個資，臉部辨識再爆隱私爭議"><a href="#Clearview-AI- 應用程式，一張照片就能查個資，臉部辨識再爆隱私爭議" class="headerlink" title="Clearview AI 應用程式，一張照片就能查個資，臉部辨識再爆隱私爭議"></a>Clearview AI 應用程式，一張照片就能查個資，臉部辨識再爆隱私爭議 </h3><p><a href="https://technews.tw/2020/01/22/face-recognition-has-privacy-controversy-again/">30 億張圖庫，一張照片就能查個資！臉部辨識再爆隱私爭議</a><br> 據《紐約時報》（The New York Times）18 日報導，美國一家 AI 臉部辨識創業公司 Clearview 設計了突破性的臉部辨識應用程式 Clearview AI，用戶上傳照片後，可看到圖片人物的公開照及相關連結。</p>
+<p>Clearview AI 的核心是擁有超過 30 億張圖片的資料庫，Clearview 聲稱這些圖片從 Facebook、YouTube、Venmo 和數百萬其他網站抓取，規模遠超出聯邦調查局（FBI）和矽谷巨頭的資料庫。《紐約時報》分析這款 App 背後的電腦代碼，包括將 Clearview AI 與 AR 眼鏡配對的程式語言，因此用戶拍到的所有人幾乎都能辨識。</p>
+<h3 id="參考"><a href="# 參考" class="headerlink" title="參考"></a>參考</h3><p>《科技島讀》、《科技新報》、《數位時代》、《新頭殼 newtalk》</p>
+<span id="more"></span>
+<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列</h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞</a></p>
 ]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
@@ -2994,7 +3033,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   <entry>
     <title>2020/02 科技新聞</title>
     <url>/2021/05/11/news-2020-02/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<h3 id="LendingClub"><a href="#LendingClub" class="headerlink" title="LendingClub"></a>LendingClub</h3><p> 美國的 P2P 借貸公司 LendingClub 更於 2 月中宣布，將以高達 1.85 億美金（約合 55.5 億新台幣）收購純網路銀行 Radius Bank</p>
+<h3 id="參考"><a href="# 參考" class="headerlink" title="參考"></a> 參考 </h3><p>《科技島讀》、《科技新報》、《數位時代》、《新頭殼 newtalk》</p>
+<span id="more"></span>
 <h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞 </a></p>
 ]]></content>
       <categories>
@@ -3004,8 +3045,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   <entry>
     <title>2020/03 科技新聞</title>
     <url>/2021/05/11/news-2020-03/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞 </a></p>
+    <content><![CDATA[<h3 id="2020- 年 -3- 月 -4- 日，法律新創 -Atrium-LTS- 正式倒閉"><a href="#2020- 年 -3- 月 -4- 日，法律新創 -Atrium-LTS- 正式倒閉" class="headerlink" title="2020 年 3 月 4 日，法律新創 Atrium LTS 正式倒閉"></a>2020 年 3 月 4 日，法律新創 Atrium LTS 正式倒閉 </h3><p><a href="https://news.4k3.org/a/archives/254828/amp"> 融資超 7500 萬美元的法律界特斯拉 Atrium 倒閉，法律科技冬天來臨？</a></p>
+<span id="more"></span>
+<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列</h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞</a></p>
 ]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
@@ -3024,8 +3066,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   <entry>
     <title>2020/05 科技新聞</title>
     <url>/2021/05/11/news-2020-05/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞 </a></p>
+    <content><![CDATA[<h3 id="微軟線上協作框架 -Fluid-Framework- 邁入公開預覽，未來將開源"><a href="# 微軟線上協作框架 -Fluid-Framework- 邁入公開預覽，未來將開源" class="headerlink" title="微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源"></a>微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源 </h3><p><a href="https://www.ithome.com.tw/news/137730"> 微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源</a></p>
+<span id="more"></span>
+<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列</h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞</a></p>
 ]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
@@ -3102,9 +3145,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>2021/02 科技新聞</title>
-    <url>/2021/05/11/news-2021-02/</url>
-    <content><![CDATA[<span id="more"></span>
+    <title>2021/01 科技新聞</title>
+    <url>/2021/05/11/news-2021-01/</url>
+    <content><![CDATA[<h3 id="2021- 年 -CES- 大展於台灣時間 -1- 月 -12- 日開幕，由美國電信商 -Verizon- 擔綱首場官方演講。"><a href="#2021- 年 -CES- 大展於台灣時間 -1- 月 -12- 日開幕，由美國電信商 -Verizon- 擔綱首場官方演講。" class="headerlink" title="2021 年 CES 大展於台灣時間 1 月 12 日開幕，由美國電信商 Verizon 擔綱首場官方演講。"></a>2021 年 CES 大展於台灣時間 1 月 12 日開幕，由美國電信商 Verizon 擔綱首場官方演講。</h3><p><a href="https://www.bnext.com.tw/article/60923/ces-2021-verizon">【CES 2021】Verizon 大秀 5G 應用！結合 NFL、大都會博物館，連拍 MV 都能玩？</a></p>
+<h4 id="Verizon- 合作夥伴"><a href="#Verizon- 合作夥伴" class="headerlink" title="Verizon 合作夥伴"></a>Verizon 合作夥伴 </h4><p>（1）Verizon 在 2020 年與史密森尼美國藝術博物館（Smithsonian American Art Museum）推動 5G 數位典藏，透過 3D 掃描方式，把阿波羅 11 號的艙內模組建立成 3D 模型，提供民眾欣賞。<br>（2）攜手美國國家美式足球聯盟（NFL）：佈署 28 個體育館，透過 Verizon 5G SuperStadium App，觀眾能以 7 個不同視角在場內外欣賞超過 100 多場比賽 <br>（3）Verizon 與無人機隊公司 skyward 合作，共同與物流公司 UPS 在美國佛羅里達州測試 5G 無人機送貨可能性。<br>（4）Black Pumas 是一支美國靈魂樂樂隊，2020 年獲得第 62 屆葛萊美獎最佳新人提名。去年 11 月，Verizon 與 Snap 嘗試用 5G 結合 MV，由 Verizon 旗下的動態捕捉技術工作室負責建造樂團 3D 模型，將 Black Pumas 的暢銷歌曲 colors 拍成 AR 版 MV。民眾需拿著 5G 手機至大都會博物館外，透過 Snapchat 鏡頭才能欣賞整首歌曲。</p>
+<span id="more"></span>
 <h3 id="2021- 科技新聞整理系列"><a href="#2021- 科技新聞整理系列" class="headerlink" title="2021 科技新聞整理系列"></a>2021 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2021-01/">2021/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-02/">2021/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-03/">2021/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-04/">2021/04 科技新聞 </a></p>
 ]]></content>
       <categories>
@@ -3112,10 +3157,12 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>2021/01 科技新聞</title>
-    <url>/2021/05/11/news-2021-01/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="2021- 科技新聞整理系列"><a href="#2021- 科技新聞整理系列" class="headerlink" title="2021 科技新聞整理系列"></a>2021 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2021-01/">2021/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-02/">2021/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-03/">2021/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-04/">2021/04 科技新聞 </a></p>
+    <title>2021/02 科技新聞</title>
+    <url>/2021/05/11/news-2021-02/</url>
+    <content><![CDATA[<h3 id="澳洲和臉書為新聞付費槓上"><a href="# 澳洲和臉書為新聞付費槓上" class="headerlink" title="澳洲和臉書為新聞付費槓上"></a>澳洲和臉書為新聞付費槓上 </h3><p><a href="https://www.cna.com.tw/news/firstnews/202102240002.aspx"> 澳洲和臉書為新聞付費槓上 為何全世界都在看？</a><br>法新社報導，澳洲政府之所以盯上 Google 和臉書，因為澳洲市場競爭監管單位發現，花在網路廣告的費用，每 100 美元有 53 美元被 Google 賺走，有 28 美元被臉書賺走，其餘由其他網路平台瓜分。因此為了讓競爭環境更公平，澳洲當局決定立法要求這些網路平台大咖付費使用新聞內容。</p>
+<p>另一方面，臉書為表達抗議，斷然封殺澳洲平台的新聞內容，造成當地一些緊急應變單位無法透過臉書對大眾發布火災、洪災或其他災害警報。這也引發外界質疑，是否應讓社群媒體能夠單方面移除形同重大基礎設施的危機應變相關服務。</p>
+<span id="more"></span>
+<h3 id="2021- 科技新聞整理系列"><a href="#2021- 科技新聞整理系列" class="headerlink" title="2021 科技新聞整理系列"></a>2021 科技新聞整理系列</h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2021-01/">2021/01 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-02/">2021/02 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-03/">2021/03 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-04/">2021/04 科技新聞</a></p>
 ]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
@@ -3169,20 +3216,43 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>2021/04 科技新聞</title>
+    <title>2021/05 科技新聞</title>
     <url>/2021/05/29/news-2021-05/</url>
-    <content><![CDATA[<h3 id="由台灣政務委員唐鳳協助建置的「1922- 簡訊實聯制」系統（5-19- 推出）"><a href="# 由台灣政務委員唐鳳協助建置的「1922- 簡訊實聯制」系統（5-19- 推出）" class="headerlink" title="由台灣政務委員唐鳳協助建置的「1922 簡訊實聯制」系統（5/19 推出）"></a> 由台灣政務委員唐鳳協助建置的「1922 簡訊實聯制」系統（5/19 推出）</h3><p> 只要掃碼即可傳送簡訊至 1922 的功能，只要商家進行 QR Code 的申請，民眾只需要掃碼、傳送簡訊即可，「簡單來說，顧客端什麼都不用做，就是掃碼、傳簡訊。」</p>
-<p> 彭博記者 Tim Culpan 在推特上錄影盛讚 <br><img src="/2021/05/29/news-2021-05/photo1.png" alt><br><a href="https://g0v.hackmd.io/@au/HkmyoS-Fu?utm_source=daodu.tech.member&amp;utm_campaign=701ee5b286-member+email_COPY_01&amp;utm_medium=email&amp;utm_term=0_8a59991d0b-701ee5b286-215074536">g0v 零時政府的工作紀錄 </a></p>
-<p>5/17 由 1922 中華電信、emask 關貿、疾管家三單位一起開發系統，5/18 完成測試，5/19 開記者會推出。<br> 中華電信應該是負責 SMS 簡訊架構。關貿公司開發了口罩實名制的註冊系統，是店家 QR Code 的基礎。宏達電的 DeepQ 團隊開發了防疫團隊的 LINE 官方帳號「疾管家」。台灣網路認證公司（TWID）應是負責 <a href="https://blocktrend.substack.com/p/-20?utm_source=daodu.tech.member&amp;utm_campaign=701ee5b286-member+email_COPY_01&amp;utm_medium=email&amp;utm_term=0_8a59991d0b-701ee5b286-215074536"> 手機的認證 </a>。</p>
-<h3 id="Google-I-O- 開發者大會（5-18-5-20）"><a href="#Google-I-O- 開發者大會（5-18-5-20）" class="headerlink" title="Google I/O 開發者大會（5/18-5/20）"></a>Google I/O 開發者大會（5/18-5/20）</h3><h4 id="工作軟體 -Google-Workspace"><a href="# 工作軟體 -Google-Workspace" class="headerlink" title="工作軟體 Google Workspace"></a> 工作軟體 Google Workspace</h4><h4 id="人工智慧模型 -MUM- 與 -LaMDA"><a href="# 人工智慧模型 -MUM- 與 -LaMDA" class="headerlink" title="人工智慧模型 MUM 與 LaMDA"></a> 人工智慧模型 MUM 與 LaMDA</h4><h4 id="Google-Shopping"><a href="#Google-Shopping" class="headerlink" title="Google Shopping"></a>Google Shopping</h4><p> 總的來說，Google 的人工智慧持續進展，亮點不斷；但在商業上仍然缺乏切入點。<br> 或許這樣的速度最符合 Google 喜歡埋頭研究的學術風格。</p>
-<pre><code> 在桌機時代，靠著關鍵字廣告與廣告交換網（ad network）等，Google 成為了網路霸主。但在手機時代，人們需要的是 Facebook，以及 Whatsapp、LINE、WeChat 等即時訊息 app。訊息平台逐漸取代作業系統平台。在營收上，Google 今年的廣告收益仍然創新高，遠遠超越了傳統媒體；但竄最快的是 Facebook。
-</code></pre><h3 id="校正回歸與規模化（5-22）"><a href="# 校正回歸與規模化（5-22）" class="headerlink" title="校正回歸與規模化（5/22）"></a> 校正回歸與規模化（5/22）</h3><p> 台灣防疫指揮官陳時中於 5 月 22 日首次表示，每日的確診數需「校正回歸」，引發熱議。</p>
-<p> 中央流行疫情指揮中心發言人莊人祥受訪時解釋，校正回歸病例定義是個案採檢通報後，因檢體運送、實驗室量能、無法及時登打檢驗結果等因素，未於 2 天內完成檢驗結果報告的個案。近日因登打系統造成確診個案資料未成功上傳，延遲收到數據，為真實呈現疫情，才會使用校正回歸。</p>
-<p> 當然校正只是治標。治本是要抒解「塞車」，提高檢驗供應鏈的產量。許多人因此質疑台灣政府為何沒有「超前部署」，在疫情擴大前提高檢驗的產量？</p>
-<p> 當一個系統高度追求效率，就容不下冗餘，無法處理突然飆升的需求。然而在需求尚未出現前投資，看起來就是浪費，犧牲了其他當時看來更急迫的任務，例如遊說採購疫苗、紓困企業、增加病床等等。</p>
-<p> 疫情指揮中心陳時中說，會先朝向 3 大規劃前進：先簡化通報程序，再來徵招生技業者，提供核酸檢驗器材，並且每家採購儀器最高補助 500 萬元。最後最重要的，就是增加醫護志工。這暗示瓶頸在流程、器材跟人才。<br> 引起醫檢師不滿：為何需求突然提高，政府的作法不是提高價格 (醫檢師薪水)，而是破壞執照制度，擴大供給？<br> 但事實是：培養醫檢師緩不濟急，而既有的醫檢師似乎也無法滿足飆升的檢驗需求。</p>
-<p> 所以核心問題就是：如何擴大人力服務的供給？<br> 其實可以參考 Uber 替代計程車司機的過程。就是三個步驟：拆分、替代以及外包。<br> 要快速擴大檢驗鏈的供給，就要將檢驗工作的每一個環節拆開，將可以自動化的部分交給電腦。將可以外包的部分交給「無執照人士」。只保留最專業，通常也最高風險的部分給有執照的醫檢師。</p>
-]]></content>
+    <content><![CDATA[<h3 id="Google：淘汰第三方 -Cookie- 後，不會採用新的追蹤用戶技術"><a href="#Google：淘汰第三方 -Cookie- 後，不會採用新的追蹤用戶技術" class="headerlink" title="Google：淘汰第三方 Cookie 後，不會採用新的追蹤用戶技術"></a>Google：淘汰第三方 Cookie 後，不會採用新的追蹤用戶技術</h3><p><a href="https://technews.tw/2021/03/04/google-says-it-will-not-use-new-ways-of-tracking-you-as-it-phases-out-browser-cookies-for-ads/">Google：淘汰第三方 Cookie 後，不會採用新的追蹤用戶技術</a></p>
+<h3 id="Verizon- 敲定以 -50- 億美元出售 -Yahoo、AOL- 給私募股權公司阿波羅"><a href="#Verizon- 敲定以 -50- 億美元出售 -Yahoo、AOL- 給私募股權公司阿波羅" class="headerlink" title="Verizon 敲定以 50 億美元出售 Yahoo、AOL 給私募股權公司阿波羅"></a>Verizon 敲定以 50 億美元出售 Yahoo、AOL 給私募股權公司阿波羅</h3><p>Verizon 以用戶數計算，是美國最大的行動通訊電信商。2015 年收購 AOL，<br>2017 年再買下 Yahoo，買這兩家公司總計花費 Verizon 逾 90 億美元。<br><a href="https://www.bnext.com.tw/article/62594/verizon-sell-yahoo-aol">Verizon 敲定以 50 億美元出售 Yahoo、AOL 給私募股權公司阿波羅</a></p>
+<p>Verizon 的數位媒體事業部門去年沒有達成 100 億美元的年度目標營收；而在 2018 年，Verizon 已減記大約 45 億美元的該事業部門價值。如果順利賣掉數位媒體資產，獲得的現金將用來支應 Verizon 確保 5G 頻譜執照。針對 5G 頻譜執照，Verizon 計畫今年投入 530 億美元經費。</p>
+<h3 id="《Starbucks-a-Tech-Company》"><a href="#《Starbucks-a-Tech-Company》" class="headerlink" title="《Starbucks, a Tech Company》"></a>《Starbucks, a Tech Company》</h3><p>最近科技分析師 Mario Gabriele 寫了一篇長文《 星巴克，一家科技公司 》（<a href="https://www.readthegeneralist.com/briefing/starbucks?utm_source=daodu.tech.member&amp;utm_campaign=808d4168d9-member+email_COPY_01&amp;utm_medium=email&amp;utm_term=0_8a59991d0b-808d4168d9-215074536">Starbucks, a Tech Company</a>），回顧星巴克從賣咖啡到做行動支付的歷程。</p>
+<p>從 1987 年至 2000 年，星巴克搭上美國經濟快速成長、消費力爆發的風口，不斷擴張。美國人受夠了一成不變的鋁箔包與即溶咖啡，渴望更多元的異國餐飲。而大城市的年輕人需要家與工作之外的休閒場所，又不想去傳統的酒吧或餐廳，正需要星巴克自我定義的「第三空間」（the Third Place）。</p>
+<h3 id="NFT- 世代再寫歷史，Cryptopunk- 頭像在佳士得以 -4-7- 億成交"><a href="#NFT- 世代再寫歷史，Cryptopunk- 頭像在佳士得以 -4-7- 億成交" class="headerlink" title="NFT 世代再寫歷史，Cryptopunk 頭像在佳士得以 4.7 億成交"></a>NFT 世代再寫歷史，Cryptopunk 頭像在佳士得以 4.7 億成交 </h3><p> 佳士得今日拍賣會售出一組 NFT 商品，內容是 9 顆 Cryptopunk 人頭，最終以 1,696 萬美元成交，約新台幣 4.7 億元。</p>
+<p>每一個 NFT 代表一組寫入區塊鏈中的紀錄。NFT 類似比特幣、以太幣等；差別在於比特幣可以彼此等值互換，但每一個 NFT 都是獨一無二的。<br><a href="https://technews.tw/2021/05/12/nft-christie-cryptopunk-set-sale-for-17m-usd/?utm_source=daodu.tech.member&amp;utm_campaign=3f9c20c367-member+email_COPY_01&amp;utm_medium=email&amp;utm_term=0_8a59991d0b-3f9c20c367-215074536">NFT 世代再寫歷史，Cryptopunk 頭像在佳士得以 4.7 億成交</a></p>
+<h3 id="Gojek- 與 -Tokopedia- 合併"><a href="#Gojek- 與 -Tokopedia- 合併" class="headerlink" title="Gojek 與 Tokopedia 合併"></a>Gojek 與 Tokopedia 合併 </h3><p> 印尼的共享與外送平臺 Gojek，以及當地的電子商務龍頭 Tokopedia 在 5/17 宣布，它們已整併成 GoTo Group，這不僅是印尼最大的併購案，GoTo Group 也成為印尼最大的科技集團，估計整併後的 [估] 值為 180 億美元，並將持續擴大其經營規模。</p>
+<p>GoTo 與最大對手 Grab 都將是「外送＋電商＋支付」的三位一體。與新加坡另一巨擘 SEA 鼎足而三。SEA 的三大業務分別是遊戲代理（Garena）、電商（蝦皮）與支付。這三大巨頭都號稱要邁向「超級 app」（Super app），也就是涵蓋消費者生活所有需求的 app。</p>
+<p>事實上合併的真正目標是盡快去美國上市。彭博於二月份報導，Gojek CEO Andre Soelistyo 身負重任，必須在上市時達成 300 - 400 億美金的市值。這也是 Grab 於 4 月份宣布打算在美國上市的市值。兩家獨角獸看著 SEA 於 2017 年在美國成功上市，至今仍是東南亞最大的科技公司，肯定是心嚮往之。</p>
+<h3 id="專門製作虛擬化身（avatar）的新創 -Genies- 最近完成 -6-500- 萬美元 -B- 輪融資"><a href="# 專門製作虛擬化身（avatar）的新創 -Genies- 最近完成 -6-500- 萬美元 -B- 輪融資" class="headerlink" title="專門製作虛擬化身（avatar）的新創 Genies 最近完成 6,500 萬美元 B 輪融資"></a>專門製作虛擬化身（avatar）的新創 Genies 最近完成 6,500 萬美元 B 輪融資 </h3><h3 id="美國廣告授權公司 -Veritone- 宣佈推出聲音平台"><a href="# 美國廣告授權公司 -Veritone- 宣佈推出聲音平台" class="headerlink" title="美國廣告授權公司 Veritone 宣佈推出聲音平台"></a> 美國廣告授權公司 Veritone 宣佈推出聲音平台 </h3><p> 今天該公司推出一新的平台叫 Marvel.ai，讓創作者與媒體人能建立聲音的深偽（deepfake）複製品並開放授權。</p>
+<p>有了 Marvel.ai，任何人都能創造其嗓音的擬真複製品，並且隨其高興授權。當名人 Y 正在睡覺時，其聲音可能正努力的工作，錄製廣播節目、讀有聲書等等。創辦人甚至說平台可以「復活」已死之人的聲音，只要有足夠的聲音紀錄能訓練人工智慧。</p>
+<p>用戶首先要對著電腦說各種語句，讓人工智慧學習。最終建立一個聲音模型，就可以開放授權使用。Veritone 進一步打算將服務做得像 AWS 一樣，任何人都能以及授權自己的聲音模型。Veritone 也將推出聲音模型的交易市場。</p>
+<p>當表情與聲音都能深偽，人們如何確認線上的互動是「真實」還是「複製」？可能還是要靠 NFT。NFT 可以證明一段數位紀錄是獨一無二的。</p>
+<h3 id="華納媒體與 -Discovery- 合併"><a href="# 華納媒體與 -Discovery- 合併" class="headerlink" title="華納媒體與 Discovery 合併"></a>華納媒體與 Discovery 合併</h3><p>AT＆T 宣布與 Discovery 達成協議，未來將由 AT＆T 旗下華納媒體（WarnerMedia）與 Discovery 合併成為全新公司，將鎖定全球串流影音內容市場。</p>
+<p>華納媒體與 Discovery 雙方均認為，合併後可提升在全球規模的串流影音服務發展機會，藉此與 Netflix、迪士尼在串流影音市場競爭。</p>
+<p>合併後的新公司 . . . 包含原本在華納媒體下的 HBO、華納兄弟影業、DC Comics、CNN、卡通頻道，以及透納廣播公司旗下 TNT、TBS 頻道，連同 Discovery 所有 HGTV、Food Network、Eurosport、TLC 節目內容與動物星球頻道內容，都會成為新公司持有資產。</p>
+<pre><code>目前新華納集團包含以下內容：
+故事類：HBO、華納兄弟影業、TNT、TBS、卡通頻道
+非故事類（綜藝、紀錄片、實境秀）：HGTV、Food Network、TLC、動物星球
+即時新聞：CNN
+即時體育：Eurosport
+IP：DC Comics（漫畫部門）
+</code></pre><h3 id="由台灣政務委員唐鳳協助建置的「1922- 簡訊實聯制」系統（5-19- 推出）"><a href="# 由台灣政務委員唐鳳協助建置的「1922- 簡訊實聯制」系統（5-19- 推出）" class="headerlink" title="由台灣政務委員唐鳳協助建置的「1922 簡訊實聯制」系統（5/19 推出）"></a>由台灣政務委員唐鳳協助建置的「1922 簡訊實聯制」系統（5/19 推出）</h3><p>只要掃碼即可傳送簡訊至 1922 的功能，只要商家進行 QR Code 的申請，民眾只需要掃碼、傳送簡訊即可，「簡單來說，顧客端什麼都不用做，就是掃碼、傳簡訊。」</p>
+<p>彭博記者 Tim Culpan 在推特上錄影盛讚<br><img src="/2021/05/29/news-2021-05/photo1.png" alt><br><a href="https://g0v.hackmd.io/@au/HkmyoS-Fu?utm_source=daodu.tech.member&amp;utm_campaign=701ee5b286-member+email_COPY_01&amp;utm_medium=email&amp;utm_term=0_8a59991d0b-701ee5b286-215074536">g0v 零時政府的工作紀錄</a></p>
+<p>5/17 由 1922 中華電信、emask 關貿、疾管家三單位一起開發系統，5/18 完成測試，5/19 開記者會推出。<br>中華電信應該是負責 SMS 簡訊架構。關貿公司開發了口罩實名制的註冊系統，是店家 QR Code 的基礎。宏達電的 DeepQ 團隊開發了防疫團隊的 LINE 官方帳號「疾管家」。台灣網路認證公司（TWID）應是負責 <a href="https://blocktrend.substack.com/p/-20?utm_source=daodu.tech.member&amp;utm_campaign=701ee5b286-member+email_COPY_01&amp;utm_medium=email&amp;utm_term=0_8a59991d0b-701ee5b286-215074536">手機的認證</a>。</p>
+<h3 id="Google-I-O- 開發者大會（5-18-5-20）"><a href="#Google-I-O- 開發者大會（5-18-5-20）" class="headerlink" title="Google I/O 開發者大會（5/18-5/20）"></a>Google I/O 開發者大會（5/18-5/20）</h3><h4 id="工作軟體 -Google-Workspace"><a href="# 工作軟體 -Google-Workspace" class="headerlink" title="工作軟體 Google Workspace"></a>工作軟體 Google Workspace</h4><h4 id="人工智慧模型 -MUM- 與 -LaMDA"><a href="# 人工智慧模型 -MUM- 與 -LaMDA" class="headerlink" title="人工智慧模型 MUM 與 LaMDA"></a>人工智慧模型 MUM 與 LaMDA</h4><h4 id="Google-Shopping"><a href="#Google-Shopping" class="headerlink" title="Google Shopping"></a>Google Shopping</h4><p>總的來說，Google 的人工智慧持續進展，亮點不斷；但在商業上仍然缺乏切入點。<br>或許這樣的速度最符合 Google 喜歡埋頭研究的學術風格。</p>
+<pre><code>在桌機時代，靠著關鍵字廣告與廣告交換網（ad network）等，Google 成為了網路霸主。但在手機時代，人們需要的是 Facebook，以及 Whatsapp、LINE、WeChat 等即時訊息 app。訊息平台逐漸取代作業系統平台。在營收上，Google 今年的廣告收益仍然創新高，遠遠超越了傳統媒體；但竄最快的是 Facebook。
+</code></pre><h3 id="校正回歸與規模化（5-22）"><a href="# 校正回歸與規模化（5-22）" class="headerlink" title="校正回歸與規模化（5/22）"></a>校正回歸與規模化（5/22）</h3><p>台灣防疫指揮官陳時中於 5 月 22 日首次表示，每日的確診數需「校正回歸」，引發熱議。</p>
+<p>中央流行疫情指揮中心發言人莊人祥受訪時解釋，校正回歸病例定義是個案採檢通報後，因檢體運送、實驗室量能、無法及時登打檢驗結果等因素，未於 2 天內完成檢驗結果報告的個案。近日因登打系統造成確診個案資料未成功上傳，延遲收到數據，為真實呈現疫情，才會使用校正回歸。</p>
+<p>當然校正只是治標。治本是要抒解「塞車」，提高檢驗供應鏈的產量。許多人因此質疑台灣政府為何沒有「超前部署」，在疫情擴大前提高檢驗的產量？</p>
+<p>當一個系統高度追求效率，就容不下冗餘，無法處理突然飆升的需求。然而在需求尚未出現前投資，看起來就是浪費，犧牲了其他當時看來更急迫的任務，例如遊說採購疫苗、紓困企業、增加病床等等。</p>
+<p>疫情指揮中心陳時中說，會先朝向 3 大規劃前進：先簡化通報程序，再來徵招生技業者，提供核酸檢驗器材，並且每家採購儀器最高補助 500 萬元。最後最重要的，就是增加醫護志工。這暗示瓶頸在流程、器材跟人才。<br>引起醫檢師不滿：為何需求突然提高，政府的作法不是提高價格 (醫檢師薪水)，而是破壞執照制度，擴大供給？<br>但事實是：培養醫檢師緩不濟急，而既有的醫檢師似乎也無法滿足飆升的檢驗需求。</p>
+<p>所以核心問題就是：如何擴大人力服務的供給？<br>其實可以參考 Uber 替代計程車司機的過程。就是三個步驟：拆分、替代以及外包。<br>要快速擴大檢驗鏈的供給，就要將檢驗工作的每一個環節拆開，將可以自動化的部分交給電腦。將可以外包的部分交給「無執照人士」。只保留最專業，通常也最高風險的部分給有執照的醫檢師。</p>
+<h3 id="參考：科技島讀、科技新報"><a href="# 參考：科技島讀、科技新報" class="headerlink" title="參考：科技島讀、科技新報"></a>參考：科技島讀、科技新報</h3>]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
       </categories>
@@ -3211,24 +3281,23 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   <entry>
     <title>職位中英文對照表</title>
     <url>/2021/04/13/position-in-english/</url>
-    <content><![CDATA[<p>電腦 / 互聯網 / 通訊 Technology/Internet<br>高級硬體工程師 Senior Hardware Engineer<br>硬體工程師 Hardware Engineer<br>IC 設計 / 應用工程師 IC Design/Application Engineer<br><span id="more"></span><br>電子 / 電路工程師 Electronics/Circuit Engineer<br>系統分析員 System Analyst<br>高級軟體工程師 Senior Software Engineer<br>軟體工程師 Software Engineer<br>互聯網軟體發展工程師 Internet/E-Commerce Software Engineer<br>多媒體 / 遊戲開發工程師 Multimedia Software/Game Development Engineer<br>系統工程師 System Engineer<br>ERP 技術 / 應用顧問 ERP Technical/Application Consultant<br>資料庫工程師 / 管理員 Database Engineer/Administrator<br>網站營運經理 / 主管 Web Operations Manager/Supervisor<br>網路工程師 Network Engineer<br>系統管理員 / 網路管理員 System Manager/Webmaster<br>網頁設計 / 製作 Web Designer/Production<br>網站策劃 / 編輯 Web Planner/Editor<br>資訊技術經理 / 主管 IT Manager/Supervisor<br>資訊技術專員 IT Specialist<br>通信技術工程師 Communications Engineer<br>資料安全工程師 Information Security Engineer<br>系統集成 / 支援 System Integration/Support<br>智慧大廈 / 綜合佈線 Intelligent Building/Structure Cabling<br>首席技術執行官 CTO/VP Engineering<br>技術總監 / 經理 Technical Director/Manager<br>專案經理 Project Manager<br>專案主管 Project Supervisor<br>專案執行 / 協調人員 Project Specialist / Coordinator<br>技術支援經理 Technical Support Manager<br>技術支援工程師 Technical Support Engineer<br>品質經理 QA Manager<br>軟體測試工程師 Software QA Engineer<br>硬體測試工程師 Hardware QA Engineer<br>測試員 Test Engineer<br>技術文員 / 助理 Technical Clerk/Assistant<br>其他 Other<br>銷售 Sales<br>銷售總監 Sales Director<br>銷售經理 Sales Manager<br>銷售主管 Sales Supervisor<br>商務經理 Business Manager<br>管道 / 分銷經理 Channel/Distribution Manager<br>管道 / 分銷主管 Channel/Distribution Supervisor<br>客戶經理 Sales Account Manager<br>銷售行政經理 / 主管 Sales Admin. Manager/Supervisor<br>區域銷售經理 Regional Sales Manager<br>店長 / 賣場經理 Store Manager<br>銷售代表 Sales Representative / Executive<br>電話銷售 Telesales<br>經銷商 Distributor<br>醫藥代表 Pharmaceutical Sales Representative<br>銷售工程師 Sales Engineer<br>售前 / 售後技術服務經理 Technical Service Manager<br>售前 / 售後技術服務主管 Technical Service Supervisor<br>售前 / 售後技術服務工程師 Technical Service Engineer<br>售後 / 客服經理（非技術） Customer Service Manager<br>售後 / 客服主管（非技術） Customer Service Supervisor<br>售後 / 客服專員（非技術） Customer Service Executive<br>銷售助理 Sales Assistant / Trainee<br>商務專員 / 助理 Business Executive/Assistant</p>
-<p>市場 / 公關 / 廣告 Marketing/PR/Advertising<br>市場 / 廣告總監 Marketing/Advertising Director/VP<br>市場 / 行銷經理 Marketing Manager<br>市場 / 行銷主管 Marketing Supervisor<br>市場 / 行銷專員 Marketing Executive/Communication<br>市場助理 Marketing Assistant / Trainee<br>產品 / 品牌經理 Product/Brand Manager<br>產品 / 品牌主管 Product/Brand Supervisor<br>產品 / 品牌專員 Product/Brand Executive<br>市場通路經理 / 主管 Trade Marketing Manager/Supervisor<br>促銷經理 Promotion Manager<br>促銷主管 / 督導 Promotion Supervisor<br>促銷員 / 導購 Promotions Specialist<br>市場分析 / 調研人員 Market Analyst/ Research Analyst<br>公關 / 會務經理 Public Relations Manager<br>公關 / 會務主管 Public Relations Supervisor<br>公關 / 會務專員 Public Relations Executive<br>媒介經理 Media Manager<br>媒介人員 Media Specialist<br>廣告客戶經理 Advertising Account Manager<br>廣告客戶主管 / 專員 Advertising Account Supervisor/Executive<br>廣告創意 / 設計經理 Advertising Creative/Design Manager<br>廣告創意 / 設計主管 / 專員 Advertising Creative/Design Supervisor/Executive<br>文案 / 策劃人員 Copy writer/Creative<br>企業 / 業務發展經理 Business Development Manager<br>企業策劃人員 Corporate Planning</p>
-<p>財務 / 審計 / 統計 Finance/Accounting<br>財務總監 CFO/Finance Director/VP<br>財務經理 Finance Manager<br>財務主管 / 總帳主管 Finance Supervisor<br>會計經理 / 會計主管 Accounting Manager/Supervisor<br>會計 Accountant / Accounting Trainee<br>出納員 Cashier<br>財務 / 會計助理 Finance/Accounting Assistant<br>財務分析經理 / 主管 Financial Analysis Manager/Supervisor<br>財務分析員 Financial Analyst<br>成本經理 / 成本主管 Cost Accounting Manager/Supervisor<br>成本管理員 Cost Accounting Specialist<br>審計經理 / 主管 Audit Manager/Supervisor<br>審計專員 / 助理 Audit Executive/Assistant<br>稅務經理 / 稅務主管 Tax Manager/Supervisor<br>稅務專員 Tax Executive</p>
-<p>金融 / 保險 / 銀行 Banking &amp; Financial Services / Insurance<br>證券 / 期貨 / 外匯經紀人 Stock Broker<br>投資 / 理財顧問 Investment Advisor<br>證券分析師 Securities Analyst<br>投資 / 基金專案經理 Investment Manager<br>融資經理 / 融資主管 Treasury Manager/Supervisor<br>融資專員 Treasury Specialist<br>行長 / 副行長 President/Vice-President/Branch Manager<br>資產評估 / 分析 Assets Valuation/Analyst<br>風險控制 Risk Management<br>進出口 / 信用證結算 Trading / LC Officer<br>清算人員 Settlement Officer<br>外匯主管 Foreign Exchange Supervisor<br>高級客戶經理 / 客戶經理 Senior Relationship Manager<br>客戶主管 / 專員 Relationship Supervisor/Executive<br>信貸 / 信用調查 / 分析人員 Loan/Credit Officer<br>銀行櫃檯出納 Bank Teller<br>統計員 Statistician<br>銀行卡、電子銀行業務推廣 Credit Card/E-banking business Develop<br>保險精算師 Actuary<br>保險核保 / 理賠 Adjuster<br>保險代理 / 財務規劃師 / 儲備經理人 Insurance Agent/Financial Planner<br>保險內勤 Insurance Office Staff</p>
-<p>生產 / 製造 / 工程 Manufacturing/Engineering<br>工廠經理 / 廠長 Plant/Factory Manager<br>總工程師 / 副總工程師 Chief Engineer<br>專案經理 / 主管 Project Manager/Supervisor<br>專案工程師 Project Engineer<br>營運經理 Operations Manager<br>營運主管 Operations Supervisor<br>生產經理 / 車間主任 Production Manager/Workshop Supervisor<br>生產計畫協調員 Production Planning Executive/Officer<br>生產主管 / 督導 / 領班 Production Supervisor/Team Leader<br>技術研發經理 / 主管 Technical Design Mgr./Spvr.<br>技術研發工程師 Technical Design Engineer<br>產品 / 工藝工程師 Process Engineer<br>實驗室負責人 / 工程師 Lab Manager/Engineer<br>技術研發工程師 Technical Design Engineer<br>產品 / 工藝工程師 Process Engineer<br>實驗室負責人 / 工程師 Lab Manager/Engineer<br>工程 / 設備經理 Engineering/Facility Manager<br>工程 / 設備主管 Engineering/Facility Supervisor<br>工程 / 設備工程師 Engineering/Facility Engineer<br>電氣 / 電子工程師 Electrical/Electronics Engineer<br>機械工程師 Mechanical Engineer<br>模具工程師 Tooling Engineer<br>機電工程師 Electrical &amp; Mechanical Engineer<br>維修工程師 Maintenance Engineer<br>品質 / 品保 / 測試經理 QA Manager<br>品質 / 品保 / 測試主管 QA Supervisor<br>品質 / 品保 / 測試工程師 QA Engineer<br>品質檢驗員 / 測試員 QA Inspector<br>認證工程師 / 審核員 Certification Engineer/Auditor<br>安全 / 健康 / 環境經理 / 主管 Safety/Health/Environment Manager/Supervisor<br>安全 / 健康 / 環境工程師 Safety/Health/Environment Engineer<br>工程 / 機械繪圖員 Project Drafting Specialist/Mechanical Drawing<br>化驗員 Laboratory Technician<br>服裝打樣 / 製版 Clothing/Apparel Sample Production<br>技工 Technician / Engineer Trainee<br>鉗工 / 機修工 / 鈑金工 Locksmith/Mechanic/Repairer<br>電焊工 / 鉚焊工 Electric Welding Worker<br>車工 / 磨工 / 銑工 / 衝壓工 / 鑼工 Latheman/Grinder/Miller/Puncher/Turner<br>模具工 Mould Worker<br>電工 Electrician<br>叉車工 Forklift Worker<br>空調工 / 電梯工 / 鍋爐工 Air-Condition Worker/Lift Worker/Steam Worker<br>水工 / 木工 / 油漆工 Plumber/Carpenter/Painter<br>普工 General Worker<br>裁剪車縫熨燙 Tailor<br>汽車修理工 Auto Repairing</p>
-<p>人力資源 Human Resources<br>人事總監 Human Resources Director<br>人事經理 Human Resources Manager<br>人事主管 Human Resources Supervisor<br>人事專員 Human Resources Specialist<br>人事助理 Human Resources Assistant<br>招聘經理 / 主管 Recruiting Manager/Supervisor<br>招聘專員 / 助理 Recruiting Specialist/Assistant<br>薪資福利經理 / 主管 Compensation &amp; Benefits Mgr./Supervisor<br>薪資福利專員 / 助理 Compensation &amp; Benefits Specialist/Assistant<br>培訓經理 / 主管 Training Manager/Supervisor<br>培訓專員 / 助理 Training Specialist/Assistant</p>
-<p>行政 / 後勤 Admin./Support Services<br>行政總監 Admin Director<br>行政經理 / 主管 / 辦公室主任 Admin Manager/Supervisor/Office Manager<br>行政專員 / 助理 Admin Staff/Assistant<br>經理助理 / 秘書 Executive Assistant/Secretary<br>前臺接待 / 總機 Receptionist<br>後勤 Office Support<br>圖書管理員 / 資料管理員 Librarian / Information/Data Management Specialist<br>電腦操作員 / 打字員 Computer Operator/Typist</p>
-<p>高級管理 Senior Management<br>首席執行官 / 總經理 / 總裁 CEO/GM/President<br>副總經理 / 副總裁 Deputy GM/Vice President<br>總監 Director<br>合夥人 Partner<br>總裁助理 / 總經理助理 CEO/GM/President Assistant</p>
-<p>物流 / 貿易 / 採購 Logis./Trading/Merchand./Purch.<br>物流經理 Logistics Manager<br>物流主管 Logistics Supervisor<br>物流專員 / 助理 Logistics Specialist/Assistant<br>供應鏈經理 Supply Chain Manager<br>供應鏈主管 / 專員 Supply Chain Supervisor/Specialist<br>物料經理 Materials Manager<br>物料主管 / 專員 Materials Supervisor/Specialist<br>採購經理 Purchasing Manager<br>採購主管 Purchasing Supervisor<br>採購員 Purchasing Specialist/Staff<br>外貿 / 貿易經理 / 主管 Trading Manager/Supervisor<br>外貿 / 貿易專員 / 助理 Trading Specialist/Assistant<br>業務跟單經理 Merchandiser Manager<br>高級業務跟單 Senior Merchandiser<br>業務跟單 Merchandiser<br>助理業務跟單 Assistant Merchandiser<br>倉庫經理 / 主管 Warehouse Manager<br>倉庫管理員 Warehouse Specialist<br>運輸經理 / 主管 Distribution Manager/Supervisor<br>報關員 Customs Specialist<br>單證員 Documentation Specialist<br>船務人員 Shipping Specialist<br>快遞員 Courier<br>理貨員 Warehouse Stock Management</p>
-<p>文字 / 藝術 / 設計 Writer/Editor/Creative Artist/Designer<br>編輯 / 作家 / 撰稿人 Editor/Writer<br>記者 Journalist / Reporter<br>校對 / 錄入 Proofreader/Data Entry Staff<br>排版設計 Layout Designer<br>出版 / 發行 Publishing/Distribution<br>藝術 / 設計總監 Creative/Design Director<br>導演 / 影視策劃 / 製作人員 Director/Entertainment Planning/Production<br>攝影師 Photographer<br>音效師 Recording / Sounds Specialist<br>經紀人 / 星探 Entertainment Agent<br>演員 / 模特 / 主持人 Actor/Actress/Model/MC<br>平面設計 Graphic Artist/Designer<br>動畫 / 遊戲 / 3D 設計 Animation/Game/3D Design<br>陳列設計 / 展覽設計 Display/Exhibition Design<br>紡織 / 服裝設計 Clothing / Apparel Designer<br>工業 / 產品設計 Industrial Designer<br>工藝品 / 珠寶設計鑑定 Artwork/Jewelry Design and Appraisal</p>
-<p>科研人員 Research Specialist Staff<br>科研管理人員 Research Management<br>科研人員 Research Specialist Staff<br>律師 / 法務 Legal<br>律師 / 法律顧問 Lawyer/Counselor<br>法務 / 專利 Legal Personnel<br>律師助理 / 法務助理 Paralegal/Legal Assistant</p>
-<p>教師 Professor/Teacher<br>教師 ProfessorTeacher<br>教學 / 教務管理人員 Education/School Administrator<br>講師 / 助教 Lecturer/Teaching Assistant<br>幼教 Preschool Education<br>家教 Tutor</p>
-<p>醫療 / 護理 Medicine / Nursing<br>醫生（中、西醫） Medical Doctor<br>醫學管理人員 Healthcare / Medical Management<br>醫藥技術人員 Medical Technician<br>藥庫主任 / 藥劑師 Pharmacist<br>藥品註冊 Pharmaceuticals Register Specialist<br>護士 / 護理人員 Nurse / Nursing Personnel<br>臨床協調員 Clinical Coodinator<br>臨床研究員 Clinical Researcher<br>麻醉師 Anesthesiologist<br>心理醫生 Psychologist/Psychiatrist<br>醫藥學檢驗 Clinical Laboratory<br>針灸、推拿 Acupuncture and Moxibustion &amp; Naprapathy<br>營養師 Dietitian<br>獸醫 Veterinarian<br>生物工程 / 生物製藥 Biotechnology/Pharmaceuticals<br>其他 Others<br>諮詢 / 顧問 Consultant<br>專業顧問 Senior Consultant<br>諮詢總監 Consulting Director / Partner<br>諮詢經理 Consulting Manager<br>諮詢員 Consultant</p>
-<p>公務員 Official<br>在校學生 Student<br>應屆畢業生 Graduating Student<br>實習生 Intern/Trainee<br>培訓生 / 儲備幹部 Trainee/Intern<br>培訓生 / 儲備幹部 Trainee</p>
-<p>服務 Service<br>美容 / 健身顧問 Exercise Coach/Fitness Trainer<br>餐飲 / 娛樂管理 Banquet Services Management<br>賓館 / 酒店經理 Reception Manager<br>領班 Supervisor<br>服務員 / 乘務員 Service Staff/Conductor<br>營業員 / 收銀員 / 理貨員 Shop Clerk/Salesperson<br>廚師 Chief/Cook<br>導遊 / 旅行顧問 / 票務 Tour Guide/Travel Agent<br>司機 Chauffeur/Driver<br>保安 Security<br>尋呼員 / 話務員 Paging Operator<br>家政服務 Housekeeping<br>拍賣師 Auction</p>
-<p>建築 / 房地產 Construction/Real Estate<br>建築工程師 Architect<br>結構 / 土建工程師 Structural Engineer<br>電氣工程師 Electrical Engineer<br>給排水 / 暖通工程師 Drainage/HVAC Engineer<br>工程造價師 / 預結算 Budgeting Specialist<br>建築工程管理 Construction Management<br>工程監理 Engineering Project Supervisor<br>室內外裝潢設計 Decorator<br>城市規劃與設計 Urban Design/Planning<br>園藝 / 園林 / 景觀設計 Gardenning Designer<br>建築製圖 CAD Drafter<br>施工員 Construction Crew<br>房地產開發 / 策劃 Real Estate Development/Planning<br>房地產評估 Real Estate Appraisal<br>房地產仲介 / 交易 Real Estate Agent/Broker<br>物業管理 Property Management</p>
-<p>翻譯 Translator<br>英語翻譯 English Translation<br>日語翻譯 Japanese Translator<br>德語翻譯 German Translator<br>法語翻譯 French Translator<br>俄語翻譯 Russian Translator<br>西班牙語翻譯 Spanish Translator<br>朝鮮語翻譯 Korean Translator<br>阿拉伯語翻譯 Arabic Translator<br>其他語種翻譯 Other Language Translator<br>其他 Others<br>兼職 Part Time</p>
-<h3 id="未分类文章总览"><a href="# 未分类文章总览" class="headerlink" title="未分类文章总览"></a>未分类文章总览 </h3><p><a href="https://wangxchun.github.io/2018/10/27/dos-command/">dos 使用</a><br><a href="https://wangxchun.github.io/2021/04/13/position-in-english/"> 職位中英文對照表 </a><br><a href="https://wangxchun.github.io/2020/02/25/summer-intern"> 暑期實習經驗參考</a></p>
+    <content><![CDATA[<p> 電腦 / 互聯網 / 通訊 Technology/Internet<br> 高級硬體工程師 Senior Hardware Engineer<br> 硬體工程師 Hardware Engineer<br>IC 設計 / 應用工程師 IC Design/Application Engineer<br><span id="more"></span><br> 電子 / 電路工程師 Electronics/Circuit Engineer<br> 系統分析員 System Analyst<br> 高級軟體工程師 Senior Software Engineer<br> 軟體工程師 Software Engineer<br> 互聯網軟體發展工程師 Internet/E-Commerce Software Engineer<br> 多媒體 / 遊戲開發工程師 Multimedia Software/Game Development Engineer<br> 系統工程師 System Engineer<br>ERP 技術 / 應用顧問 ERP Technical/Application Consultant<br> 資料庫工程師 / 管理員 Database Engineer/Administrator<br> 網站營運經理 / 主管 Web Operations Manager/Supervisor<br> 網路工程師 Network Engineer<br> 系統管理員 / 網路管理員 System Manager/Webmaster<br> 網頁設計 / 製作 Web Designer/Production<br> 網站策劃 / 編輯 Web Planner/Editor<br> 資訊技術經理 / 主管 IT Manager/Supervisor<br> 資訊技術專員 IT Specialist<br> 通信技術工程師 Communications Engineer<br> 資料安全工程師 Information Security Engineer<br> 系統集成 / 支援 System Integration/Support<br> 智慧大廈 / 綜合佈線 Intelligent Building/Structure Cabling<br> 首席技術執行官 CTO/VP Engineering<br> 技術總監 / 經理 Technical Director/Manager<br> 專案經理 Project Manager<br> 專案主管 Project Supervisor<br> 專案執行 / 協調人員 Project Specialist / Coordinator<br> 技術支援經理 Technical Support Manager<br> 技術支援工程師 Technical Support Engineer<br> 品質經理 QA Manager<br> 軟體測試工程師 Software QA Engineer<br> 硬體測試工程師 Hardware QA Engineer<br> 測試員 Test Engineer<br> 技術文員 / 助理 Technical Clerk/Assistant<br> 其他 Other<br> 銷售 Sales<br> 銷售總監 Sales Director<br> 銷售經理 Sales Manager<br> 銷售主管 Sales Supervisor<br> 商務經理 Business Manager<br> 管道 / 分銷經理 Channel/Distribution Manager<br> 管道 / 分銷主管 Channel/Distribution Supervisor<br> 客戶經理 Sales Account Manager<br> 銷售行政經理 / 主管 Sales Admin. Manager/Supervisor<br> 區域銷售經理 Regional Sales Manager<br> 店長 / 賣場經理 Store Manager<br> 銷售代表 Sales Representative / Executive<br> 電話銷售 Telesales<br> 經銷商 Distributor<br> 醫藥代表 Pharmaceutical Sales Representative<br> 銷售工程師 Sales Engineer<br> 售前 / 售後技術服務經理 Technical Service Manager<br> 售前 / 售後技術服務主管 Technical Service Supervisor<br> 售前 / 售後技術服務工程師 Technical Service Engineer<br> 售後 / 客服經理（非技術） Customer Service Manager<br> 售後 / 客服主管（非技術） Customer Service Supervisor<br> 售後 / 客服專員（非技術） Customer Service Executive<br> 銷售助理 Sales Assistant / Trainee<br> 商務專員 / 助理 Business Executive/Assistant</p>
+<p> 市場 / 公關 / 廣告 Marketing/PR/Advertising<br> 市場 / 廣告總監 Marketing/Advertising Director/VP<br> 市場 / 行銷經理 Marketing Manager<br> 市場 / 行銷主管 Marketing Supervisor<br> 市場 / 行銷專員 Marketing Executive/Communication<br> 市場助理 Marketing Assistant / Trainee<br> 產品 / 品牌經理 Product/Brand Manager<br> 產品 / 品牌主管 Product/Brand Supervisor<br> 產品 / 品牌專員 Product/Brand Executive<br> 市場通路經理 / 主管 Trade Marketing Manager/Supervisor<br> 促銷經理 Promotion Manager<br> 促銷主管 / 督導 Promotion Supervisor<br> 促銷員 / 導購 Promotions Specialist<br> 市場分析 / 調研人員 Market Analyst/ Research Analyst<br> 公關 / 會務經理 Public Relations Manager<br> 公關 / 會務主管 Public Relations Supervisor<br> 公關 / 會務專員 Public Relations Executive<br> 媒介經理 Media Manager<br> 媒介人員 Media Specialist<br> 廣告客戶經理 Advertising Account Manager<br> 廣告客戶主管 / 專員 Advertising Account Supervisor/Executive<br> 廣告創意 / 設計經理 Advertising Creative/Design Manager<br> 廣告創意 / 設計主管 / 專員 Advertising Creative/Design Supervisor/Executive<br> 文案 / 策劃人員 Copy writer/Creative<br> 企業 / 業務發展經理 Business Development Manager<br> 企業策劃人員 Corporate Planning</p>
+<p> 財務 / 審計 / 統計 Finance/Accounting<br> 財務總監 CFO/Finance Director/VP<br> 財務經理 Finance Manager<br> 財務主管 / 總帳主管 Finance Supervisor<br> 會計經理 / 會計主管 Accounting Manager/Supervisor<br> 會計 Accountant / Accounting Trainee<br> 出納員 Cashier<br> 財務 / 會計助理 Finance/Accounting Assistant<br> 財務分析經理 / 主管 Financial Analysis Manager/Supervisor<br> 財務分析員 Financial Analyst<br> 成本經理 / 成本主管 Cost Accounting Manager/Supervisor<br> 成本管理員 Cost Accounting Specialist<br> 審計經理 / 主管 Audit Manager/Supervisor<br> 審計專員 / 助理 Audit Executive/Assistant<br> 稅務經理 / 稅務主管 Tax Manager/Supervisor<br> 稅務專員 Tax Executive</p>
+<p> 金融 / 保險 / 銀行 Banking &amp; Financial Services / Insurance<br> 證券 / 期貨 / 外匯經紀人 Stock Broker<br> 投資 / 理財顧問 Investment Advisor<br> 證券分析師 Securities Analyst<br> 投資 / 基金專案經理 Investment Manager<br> 融資經理 / 融資主管 Treasury Manager/Supervisor<br> 融資專員 Treasury Specialist<br> 行長 / 副行長 President/Vice-President/Branch Manager<br> 資產評估 / 分析 Assets Valuation/Analyst<br> 風險控制 Risk Management<br> 進出口 / 信用證結算 Trading / LC Officer<br> 清算人員 Settlement Officer<br> 外匯主管 Foreign Exchange Supervisor<br> 高級客戶經理 / 客戶經理 Senior Relationship Manager<br> 客戶主管 / 專員 Relationship Supervisor/Executive<br> 信貸 / 信用調查 / 分析人員 Loan/Credit Officer<br> 銀行櫃檯出納 Bank Teller<br> 統計員 Statistician<br> 銀行卡、電子銀行業務推廣 Credit Card/E-banking business Develop<br> 保險精算師 Actuary<br> 保險核保 / 理賠 Adjuster<br> 保險代理 / 財務規劃師 / 儲備經理人 Insurance Agent/Financial Planner<br> 保險內勤 Insurance Office Staff</p>
+<p> 生產 / 製造 / 工程 Manufacturing/Engineering<br> 工廠經理 / 廠長 Plant/Factory Manager<br> 總工程師 / 副總工程師 Chief Engineer<br> 專案經理 / 主管 Project Manager/Supervisor<br> 專案工程師 Project Engineer<br> 營運經理 Operations Manager<br> 營運主管 Operations Supervisor<br> 生產經理 / 車間主任 Production Manager/Workshop Supervisor<br> 生產計畫協調員 Production Planning Executive/Officer<br> 生產主管 / 督導 / 領班 Production Supervisor/Team Leader<br> 技術研發經理 / 主管 Technical Design Mgr./Spvr.<br> 技術研發工程師 Technical Design Engineer<br> 產品 / 工藝工程師 Process Engineer<br> 實驗室負責人 / 工程師 Lab Manager/Engineer<br> 技術研發工程師 Technical Design Engineer<br> 產品 / 工藝工程師 Process Engineer<br> 實驗室負責人 / 工程師 Lab Manager/Engineer<br> 工程 / 設備經理 Engineering/Facility Manager<br> 工程 / 設備主管 Engineering/Facility Supervisor<br> 工程 / 設備工程師 Engineering/Facility Engineer<br> 電氣 / 電子工程師 Electrical/Electronics Engineer<br> 機械工程師 Mechanical Engineer<br> 模具工程師 Tooling Engineer<br> 機電工程師 Electrical &amp; Mechanical Engineer<br> 維修工程師 Maintenance Engineer<br> 品質 / 品保 / 測試經理 QA Manager<br> 品質 / 品保 / 測試主管 QA Supervisor<br> 品質 / 品保 / 測試工程師 QA Engineer<br> 品質檢驗員 / 測試員 QA Inspector<br> 認證工程師 / 審核員 Certification Engineer/Auditor<br> 安全 / 健康 / 環境經理 / 主管 Safety/Health/Environment Manager/Supervisor<br> 安全 / 健康 / 環境工程師 Safety/Health/Environment Engineer<br> 工程 / 機械繪圖員 Project Drafting Specialist/Mechanical Drawing<br> 化驗員 Laboratory Technician<br> 服裝打樣 / 製版 Clothing/Apparel Sample Production<br> 技工 Technician / Engineer Trainee<br> 鉗工 / 機修工 / 鈑金工 Locksmith/Mechanic/Repairer<br> 電焊工 / 鉚焊工 Electric Welding Worker<br> 車工 / 磨工 / 銑工 / 衝壓工 / 鑼工 Latheman/Grinder/Miller/Puncher/Turner<br> 模具工 Mould Worker<br> 電工 Electrician<br> 叉車工 Forklift Worker<br> 空調工 / 電梯工 / 鍋爐工 Air-Condition Worker/Lift Worker/Steam Worker<br> 水工 / 木工 / 油漆工 Plumber/Carpenter/Painter<br> 普工 General Worker<br> 裁剪車縫熨燙 Tailor<br> 汽車修理工 Auto Repairing</p>
+<p> 人力資源 Human Resources<br> 人事總監 Human Resources Director<br> 人事經理 Human Resources Manager<br> 人事主管 Human Resources Supervisor<br> 人事專員 Human Resources Specialist<br> 人事助理 Human Resources Assistant<br> 招聘經理 / 主管 Recruiting Manager/Supervisor<br> 招聘專員 / 助理 Recruiting Specialist/Assistant<br> 薪資福利經理 / 主管 Compensation &amp; Benefits Mgr./Supervisor<br> 薪資福利專員 / 助理 Compensation &amp; Benefits Specialist/Assistant<br> 培訓經理 / 主管 Training Manager/Supervisor<br> 培訓專員 / 助理 Training Specialist/Assistant</p>
+<p> 行政 / 後勤 Admin./Support Services<br> 行政總監 Admin Director<br> 行政經理 / 主管 / 辦公室主任 Admin Manager/Supervisor/Office Manager<br> 行政專員 / 助理 Admin Staff/Assistant<br> 經理助理 / 秘書 Executive Assistant/Secretary<br> 前臺接待 / 總機 Receptionist<br> 後勤 Office Support<br> 圖書管理員 / 資料管理員 Librarian / Information/Data Management Specialist<br> 電腦操作員 / 打字員 Computer Operator/Typist</p>
+<p> 高級管理 Senior Management<br> 首席執行官 / 總經理 / 總裁 CEO/GM/President<br> 副總經理 / 副總裁 Deputy GM/Vice President<br> 總監 Director<br> 合夥人 Partner<br> 總裁助理 / 總經理助理 CEO/GM/President Assistant</p>
+<p> 物流 / 貿易 / 採購 Logis./Trading/Merchand./Purch.<br> 物流經理 Logistics Manager<br> 物流主管 Logistics Supervisor<br> 物流專員 / 助理 Logistics Specialist/Assistant<br> 供應鏈經理 Supply Chain Manager<br> 供應鏈主管 / 專員 Supply Chain Supervisor/Specialist<br> 物料經理 Materials Manager<br> 物料主管 / 專員 Materials Supervisor/Specialist<br> 採購經理 Purchasing Manager<br> 採購主管 Purchasing Supervisor<br> 採購員 Purchasing Specialist/Staff<br> 外貿 / 貿易經理 / 主管 Trading Manager/Supervisor<br> 外貿 / 貿易專員 / 助理 Trading Specialist/Assistant<br> 業務跟單經理 Merchandiser Manager<br> 高級業務跟單 Senior Merchandiser<br> 業務跟單 Merchandiser<br> 助理業務跟單 Assistant Merchandiser<br> 倉庫經理 / 主管 Warehouse Manager<br> 倉庫管理員 Warehouse Specialist<br> 運輸經理 / 主管 Distribution Manager/Supervisor<br> 報關員 Customs Specialist<br> 單證員 Documentation Specialist<br> 船務人員 Shipping Specialist<br> 快遞員 Courier<br> 理貨員 Warehouse Stock Management</p>
+<p> 文字 / 藝術 / 設計 Writer/Editor/Creative Artist/Designer<br> 編輯 / 作家 / 撰稿人 Editor/Writer<br> 記者 Journalist / Reporter<br> 校對 / 錄入 Proofreader/Data Entry Staff<br> 排版設計 Layout Designer<br> 出版 / 發行 Publishing/Distribution<br> 藝術 / 設計總監 Creative/Design Director<br> 導演 / 影視策劃 / 製作人員 Director/Entertainment Planning/Production<br> 攝影師 Photographer<br> 音效師 Recording / Sounds Specialist<br> 經紀人 / 星探 Entertainment Agent<br> 演員 / 模特 / 主持人 Actor/Actress/Model/MC<br> 平面設計 Graphic Artist/Designer<br> 動畫 / 遊戲 / 3D 設計 Animation/Game/3D Design<br> 陳列設計 / 展覽設計 Display/Exhibition Design<br> 紡織 / 服裝設計 Clothing / Apparel Designer<br> 工業 / 產品設計 Industrial Designer<br> 工藝品 / 珠寶設計鑑定 Artwork/Jewelry Design and Appraisal</p>
+<p> 科研人員 Research Specialist Staff<br> 科研管理人員 Research Management<br> 科研人員 Research Specialist Staff<br> 律師 / 法務 Legal<br> 律師 / 法律顧問 Lawyer/Counselor<br> 法務 / 專利 Legal Personnel<br> 律師助理 / 法務助理 Paralegal/Legal Assistant</p>
+<p> 教師 Professor/Teacher<br> 教師 ProfessorTeacher<br> 教學 / 教務管理人員 Education/School Administrator<br> 講師 / 助教 Lecturer/Teaching Assistant<br> 幼教 Preschool Education<br> 家教 Tutor</p>
+<p> 醫療 / 護理 Medicine / Nursing<br> 醫生（中、西醫） Medical Doctor<br> 醫學管理人員 Healthcare / Medical Management<br> 醫藥技術人員 Medical Technician<br> 藥庫主任 / 藥劑師 Pharmacist<br> 藥品註冊 Pharmaceuticals Register Specialist<br> 護士 / 護理人員 Nurse / Nursing Personnel<br> 臨床協調員 Clinical Coodinator<br> 臨床研究員 Clinical Researcher<br> 麻醉師 Anesthesiologist<br> 心理醫生 Psychologist/Psychiatrist<br> 醫藥學檢驗 Clinical Laboratory<br> 針灸、推拿 Acupuncture and Moxibustion &amp; Naprapathy<br> 營養師 Dietitian<br> 獸醫 Veterinarian<br> 生物工程 / 生物製藥 Biotechnology/Pharmaceuticals<br> 其他 Others<br> 諮詢 / 顧問 Consultant<br> 專業顧問 Senior Consultant<br> 諮詢總監 Consulting Director / Partner<br> 諮詢經理 Consulting Manager<br> 諮詢員 Consultant</p>
+<p> 公務員 Official<br> 在校學生 Student<br> 應屆畢業生 Graduating Student<br> 實習生 Intern/Trainee<br> 培訓生 / 儲備幹部 Trainee/Intern<br> 培訓生 / 儲備幹部 Trainee</p>
+<p> 服務 Service<br> 美容 / 健身顧問 Exercise Coach/Fitness Trainer<br> 餐飲 / 娛樂管理 Banquet Services Management<br> 賓館 / 酒店經理 Reception Manager<br> 領班 Supervisor<br> 服務員 / 乘務員 Service Staff/Conductor<br> 營業員 / 收銀員 / 理貨員 Shop Clerk/Salesperson<br> 廚師 Chief/Cook<br> 導遊 / 旅行顧問 / 票務 Tour Guide/Travel Agent<br> 司機 Chauffeur/Driver<br> 保安 Security<br> 尋呼員 / 話務員 Paging Operator<br> 家政服務 Housekeeping<br> 拍賣師 Auction</p>
+<p> 建築 / 房地產 Construction/Real Estate<br> 建築工程師 Architect<br> 結構 / 土建工程師 Structural Engineer<br> 電氣工程師 Electrical Engineer<br> 給排水 / 暖通工程師 Drainage/HVAC Engineer<br> 工程造價師 / 預結算 Budgeting Specialist<br> 建築工程管理 Construction Management<br> 工程監理 Engineering Project Supervisor<br> 室內外裝潢設計 Decorator<br> 城市規劃與設計 Urban Design/Planning<br> 園藝 / 園林 / 景觀設計 Gardenning Designer<br> 建築製圖 CAD Drafter<br> 施工員 Construction Crew<br> 房地產開發 / 策劃 Real Estate Development/Planning<br> 房地產評估 Real Estate Appraisal<br> 房地產仲介 / 交易 Real Estate Agent/Broker<br> 物業管理 Property Management</p>
+<p> 翻譯 Translator<br> 英語翻譯 English Translation<br> 日語翻譯 Japanese Translator<br> 德語翻譯 German Translator<br> 法語翻譯 French Translator<br> 俄語翻譯 Russian Translator<br> 西班牙語翻譯 Spanish Translator<br> 朝鮮語翻譯 Korean Translator<br> 阿拉伯語翻譯 Arabic Translator<br> 其他語種翻譯 Other Language Translator<br> 其他 Others<br> 兼職 Part Time</p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -3236,17 +3305,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <tags>
         <tag>職位</tag>
         <tag>中英文對照表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python 应用 --1.Linux 命令</title>
-    <url>/2021/04/20/python-advance-1/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>python应用</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3264,6 +3322,28 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       <tags>
         <tag>jupyter notebook</tag>
         <tag>闪退</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python 应用 --2.Linux 按照软件、python 开发环境</title>
+    <url>/2021/04/20/python-advance-2/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>python应用</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python 应用 --1.Linux 命令</title>
+    <url>/2021/04/20/python-advance-1/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>python应用</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3305,36 +3385,12 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>python 应用 --2.Linux 按照软件、python 开发环境</title>
-    <url>/2021/04/20/python-advance-2/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>python应用</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python4</title>
     <url>/2021/04/20/python-advance-4/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>python应用</category>
       </categories>
-  </entry>
-  <entry>
-    <title>some-observation-1</title>
-    <url>/2021/05/29/some-observation-1/</url>
-    <content><![CDATA[<h3 id="西方制裁华为"><a href="# 西方制裁华为" class="headerlink" title="西方制裁华为"></a>西方制裁华为 </h3><h4 id="1-5G- 是兵家必争之地"><a href="#1-5G- 是兵家必争之地" class="headerlink" title="1.5G 是兵家必争之地"></a>1.5G 是兵家必争之地</h4><p> 移动通信技术每一代发展都会有新的巨头出来<br>1G：摩托罗拉<br>2G：爱立信、诺基亚<br>3G：高通、苹果<br>4G：高通、苹果、华为</p>
-<h4 id="2- 美国不希望中国崛起"><a href="#2- 美国不希望中国崛起" class="headerlink" title="2. 美国不希望中国崛起"></a>2. 美国不希望中国崛起 </h4><h4 id="3- 华为太安全了，不方便提供数据给政府（猜测）"><a href="#3- 华为太安全了，不方便提供数据给政府（猜测）" class="headerlink" title="3. 华为太安全了，不方便提供数据给政府（猜测）"></a>3. 华为太安全了，不方便提供数据给政府（猜测）</h4><h3 id="美国的硬件封锁"><a href="# 美国的硬件封锁" class="headerlink" title="美国的硬件封锁"></a> 美国的硬件封锁 </h3><h4 id="1- 硬件"><a href="#1- 硬件" class="headerlink" title="1. 硬件"></a>1. 硬件</h4><p>CPU：英特尔的 X86 架构<br> 手机的 ARM 架构 <br> 电子产业的原材料和一些基础工业，中国和美国有着不可忽视的落差，所以要不靠美国是非常难的</p>
-<h4 id="2- 软件"><a href="#2- 软件" class="headerlink" title="2. 软件"></a>2. 软件 </h4><p> 根据开源的安卓系统建一套操作系统是不难的，难的是建设一个软件生态 <br> 但是谷歌的商业套件是闭源的，美国的开发者大多会依赖这个套件（需要授权）</p>
-<h3 id="面对制裁，需要什么"><a href="# 面对制裁，需要什么" class="headerlink" title="面对制裁，需要什么"></a>面对制裁，需要什么 </h3><h4 id="1- 信心"><a href="#1- 信心" class="headerlink" title="1. 信心"></a>1. 信心</h4><h4 id="2- 实力"><a href="#2- 实力" class="headerlink" title="2. 实力"></a>2. 实力</h4><p> 技术、人才、市场、資金</p>
-<h4 id="3- 筹码"><a href="#3- 筹码" class="headerlink" title="3. 筹码"></a>3. 筹码</h4><p>ex：禁止苹果设备在中国销售<br>ex：禁止工程销售苹果的设备<br>Q：不会冲击到中国自己相关的上下游产业？？？</p>
-<h4 id="4- 舆论的胜利"><a href="#4- 舆论的胜利" class="headerlink" title="4. 舆论的胜利"></a>4. 舆论的胜利 </h4><h3 id="创始人有两种"><a href="# 创始人有两种" class="headerlink" title="创始人有两种"></a> 创始人有两种 </h3><h4 id="1- 借风口起来的"><a href="#1- 借风口起来的" class="headerlink" title="1. 借风口起来的"></a>1. 借风口起来的</h4><p> 例如小米是借智能手机的风口起来的，直接他们希望能引领智能硬件的风口</p>
-<h4 id="2- 创造封口"><a href="#2- 创造封口" class="headerlink" title="2. 创造封口"></a>2. 创造封口 </h4><h3 id="币圈和互联网圈"><a href="# 币圈和互联网圈" class="headerlink" title="币圈和互联网圈"></a> 币圈和互联网圈 </h3><p> 互联网是传递信息的，比特币可以传递价值，区块链可以传递信任</p>
-<h3 id="信用卡交易"><a href="# 信用卡交易" class="headerlink" title="信用卡交易"></a>信用卡交易 </h3><p> 参与者：(1) 制订规则 ex：visa (2) 发卡银行，消费者 (3) 卖家银行，卖家，square/paypal<br>假设我现在拿着汇丰银行的 MasterCard 信用卡去买奶茶 <br> 首先，奶茶店老板要在 square 的 pos 机上输入我需要付款的金额 <br> 我刷卡输入密码后，POS 机会读取我的支付信息 <br> 经过 Processer 加密后，Square 会把我的信息传递给 MasterCard 的网络中 <br> 此时在网路中的汇丰银行就会检查我的账户余额 <br> 第三方机构 (？) 会评估这笔交易的风险 (比如会不会是诈骗等)<br>没有问题，汇丰银行会批准交易，发送指令到 Square 的 pos 机上，显示刷卡成功 <br> 这时，我会收到汇丰银行给我的小票 <br> 此后，汇丰银行会通过 MasterCard 的网络把钱转给 Square 背后的摩根大通 <br> 摩根大通再把钱转给 Square，Square 再把钱转给奶茶店老板使用的美国银行</p>
-]]></content>
   </entry>
   <entry>
     <title>slam 小車：(一) 前期準備 --1. 機器人架構設計流程</title>
@@ -3369,6 +3425,15 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
+    <title>暑期實習經驗參考</title>
+    <url>/2020/02/25/summer-intern/</url>
+    <content><![CDATA[<p><a href="https://shannon112.blogspot.com/2018/08/2018-summer-intern_24.html">https://shannon112.blogspot.com/2018/08/2018-summer-intern_24.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
     <url>/2019/05/21/slam2/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/05/20/slam1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/05/21/slam2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
@@ -3395,16 +3460,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>暑期實習經驗參考</title>
-    <url>/2020/02/25/summer-intern/</url>
-    <content><![CDATA[<p><a href="https://shannon112.blogspot.com/2018/08/2018-summer-intern_24.html">https://shannon112.blogspot.com/2018/08/2018-summer-intern_24.html</a></p>
-<h3 id="未分类文章总览"><a href="# 未分类文章总览" class="headerlink" title="未分类文章总览"></a>未分类文章总览 </h3><p><a href="https://wangxchun.github.io/2018/10/27/dos-command/">dos 使用</a><br><a href="https://wangxchun.github.io/2021/04/13/position-in-english/"> 職位中英文對照表 </a><br><a href="https://wangxchun.github.io/2020/02/25/summer-intern"> 暑期實習經驗參考</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>臺北捷運藍線 (板南線)</title>
     <url>/2021/05/06/trip-taipei-blue/</url>
     <content><![CDATA[<span id="more"></span>
@@ -3413,6 +3468,42 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 ]]></content>
       <categories>
         <category>生活-出去玩做功課</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>一些观察</title>
+    <url>/2021/05/29/some-observation-1/</url>
+    <content><![CDATA[<h3 id="西方制裁华为"><a href="# 西方制裁华为" class="headerlink" title="西方制裁华为"></a>西方制裁华为 </h3><h4 id="1-5G- 是兵家必争之地"><a href="#1-5G- 是兵家必争之地" class="headerlink" title="1.5G 是兵家必争之地"></a>1.5G 是兵家必争之地</h4><p> 移动通信技术每一代发展都会有新的巨头出来<br>1G：摩托罗拉<br>2G：爱立信、诺基亚<br>3G：高通、苹果<br>4G：高通、苹果、华为</p>
+<h4 id="2- 美国不希望中国崛起"><a href="#2- 美国不希望中国崛起" class="headerlink" title="2. 美国不希望中国崛起"></a>2. 美国不希望中国崛起 </h4><h4 id="3- 华为太安全了，不方便提供数据给政府（猜测）"><a href="#3- 华为太安全了，不方便提供数据给政府（猜测）" class="headerlink" title="3. 华为太安全了，不方便提供数据给政府（猜测）"></a>3. 华为太安全了，不方便提供数据给政府（猜测）</h4><h3 id="美国的硬件封锁"><a href="# 美国的硬件封锁" class="headerlink" title="美国的硬件封锁"></a> 美国的硬件封锁 </h3><h4 id="1- 硬件"><a href="#1- 硬件" class="headerlink" title="1. 硬件"></a>1. 硬件</h4><p>CPU：英特尔的 X86 架构<br> 手机的 ARM 架构 <br> 电子产业的原材料和一些基础工业，中国和美国有着不可忽视的落差，所以要不靠美国是非常难的</p>
+<h4 id="2- 软件"><a href="#2- 软件" class="headerlink" title="2. 软件"></a>2. 软件 </h4><p> 根据开源的安卓系统建一套操作系统是不难的，难的是建设一个软件生态 <br> 但是谷歌的商业套件是闭源的，美国的开发者大多会依赖这个套件（需要授权）</p>
+<h3 id="面对制裁，需要什么"><a href="# 面对制裁，需要什么" class="headerlink" title="面对制裁，需要什么"></a>面对制裁，需要什么 </h3><h4 id="1- 信心"><a href="#1- 信心" class="headerlink" title="1. 信心"></a>1. 信心</h4><h4 id="2- 实力"><a href="#2- 实力" class="headerlink" title="2. 实力"></a>2. 实力</h4><p> 技术、人才、市场、資金</p>
+<h4 id="3- 筹码"><a href="#3- 筹码" class="headerlink" title="3. 筹码"></a>3. 筹码</h4><p>ex：禁止苹果设备在中国销售<br>ex：禁止工程销售苹果的设备<br>Q：不会冲击到中国自己相关的上下游产业？？？</p>
+<h4 id="4- 舆论的胜利"><a href="#4- 舆论的胜利" class="headerlink" title="4. 舆论的胜利"></a>4. 舆论的胜利 </h4><h3 id="创始人有两种"><a href="# 创始人有两种" class="headerlink" title="创始人有两种"></a> 创始人有两种 </h3><h4 id="1- 借风口起来的"><a href="#1- 借风口起来的" class="headerlink" title="1. 借风口起来的"></a>1. 借风口起来的</h4><p> 例如小米是借智能手机的风口起来的，直接他们希望能引领智能硬件的风口</p>
+<h4 id="2- 创造封口"><a href="#2- 创造封口" class="headerlink" title="2. 创造封口"></a>2. 创造封口 </h4><h3 id="币圈和互联网圈"><a href="# 币圈和互联网圈" class="headerlink" title="币圈和互联网圈"></a> 币圈和互联网圈 </h3><p> 互联网是传递信息的，比特币可以传递价值，区块链可以传递信任</p>
+<h3 id="信用卡交易过程"><a href="# 信用卡交易过程" class="headerlink" title="信用卡交易过程"></a>信用卡交易过程 </h3><p> 参与者：(1) 制订规则 ex：visa (2) 发卡银行，消费者 (3) 卖家银行，卖家，square/paypal<br>ex：MasterCard，Square，摩根大通，汇丰银行，美国银行，提供风险评估的第三方机构</p>
+<p>假设我现在拿着汇丰银行的 MasterCard 信用卡去买奶茶 <br> 首先，奶茶店老板要在 square 的 pos 机上输入我需要付款的金额 <br> 我刷卡输入密码后，POS 机会读取我的支付信息 <br> 经过 Processer 加密后，Square 会把我的信息传递给 MasterCard 的网络中 <br> 此时在网路中的汇丰银行就会检查我的账户余额 <br> 第三方机构 (？) 会评估这笔交易的风险 (比如会不会是诈骗等)<br>没有问题，汇丰银行会批准交易，发送指令到 Square 的 pos 机上，显示刷卡成功 <br> 这时，我会收到汇丰银行给我的小票 <br> 此后，汇丰银行会通过 MasterCard 的网络把钱转给 Square 背后的摩根大通 <br> 摩根大通再把钱转给 Square，Square 再把钱转给奶茶店老板使用的美国银行 <br> 最后，汇丰银行再月底寄给我一张账单，我把我的奶茶钱付掉 <br> 奶茶店老板要付手续费给信用卡发行银行、信用卡商、Payment Processor</p>
+<h3 id="Visa- 角色"><a href="#Visa- 角色" class="headerlink" title="Visa 角色"></a>Visa 角色 </h3><p> 讓我們試著思考以下情境，今天你在某家 3C 產品販賣店發現喜歡的產品，當你拿出信用卡想要消費，卻發現這家特約商店僅與 A 銀行合作，無法使用手中的 B 銀行的信用卡。若 B 銀行想使其信用卡能在該 3C 商店使用，就必須與該商店洽談特約商店簽約，或是考慮與 A 銀行談合作，並互相約定彼此所發行的信用卡都能在彼此間的特約商店使用，再去談價錢、技術或拆帳等議題間的合作細節。</p>
+<p>若只有兩家銀行，那這中間的協商和洽談成本可能還能支應，然若有十家甚而是百家，這中間的成本和協商時間對單一銀行來說就很麻煩，若涉及跨國不同語言，這中間問題就更多。因此，就有如 Visa 或 Master Card 等中介者出現，希望能夠整合不同銀行的資訊，並協助不同銀行的特約商店串接，甚而是 Visa 等業者自己接洽之特約店，讓 A 銀行和 B 銀行所發行的信用卡能透過 Visa 的串接和服務，用於不同的商家節省成本，因此就出現只要你卡上有 Visa 的標誌，那麼你就能在相關的店消費使用。</p>
+<p>所以我們可以發現 Visa 的商業模式，也是透過整理銀行對消費者的信用卡債權債務和特約商店資訊，進行中間的串接或結清算，使銀行把這些繁瑣的合作細節和記帳工作交給 Visa，專心處理它信用卡產品的設計、優惠等商業面向，也能藉由 Visa 的後端協助擴大其信用卡使用範圍，拓展國內外市場。</p>
+<h3 id="當每一個 -Google- 搜尋結果都像廣告"><a href="# 當每一個 -Google- 搜尋結果都像廣告" class="headerlink" title="當每一個 Google 搜尋結果都像廣告"></a>當每一個 Google 搜尋結果都像廣告</h3><p>Google 破壞使用者體驗有兩個根本性原因。</p>
+<p>第一，它是壟斷。Google 搜尋是壟斷，Chrome 瀏覽器也幾乎壟斷。壟斷者不需擔心顧客流失，就不會在乎用戶體驗。</p>
+<p>第二，它規模太大。Google 集團最近市值破兆美金。這對股東是好消息，對於守護信念卻是壞消息。如果一年想成長 5%，代表 Google 每年得增加 500 億美金的市值。這對任何經營者都是巨大的壓力。</p>
+<p>而 Google 至今賺錢只有一招：廣告。其他業務如 YouTube、雲服務、硬體、遊戲、無人車等雖然很熱鬧，但目前都看不出賺錢。只看得出花錢 — 開發手機、建資料庫中心、做無人車都很貴。無法節流，就只能開源，想辦法增加廣告收入了。</p>
+<p>Google 無法搶競爭者的市場 — 因為已經沒有競爭者了。它只能壓迫供應商，也就是用戶 — 是我們供給注意力給 Google 販賣。把廣告跟真實結果混淆，就是在壓榨我們交出更多的注意力。</p>
+<p>眼看 Google 慢慢失去堅持，令人相當傷感。當 Google 變成只是另一家唯利是圖的企業，就失去了用戶的好感。或許在某一個大學研究室裡，有兩位充滿理想的研究生，正在思考如何將它推翻。</p>
+<h3 id="現代國家面對的三重打擊："><a href="# 現代國家面對的三重打擊：" class="headerlink" title="現代國家面對的三重打擊："></a>現代國家面對的三重打擊：</h3><p>（1）自身膨脹導致營運成本提高 <br>（2）稅收基礎縮減使得資金降低<br>（3）實際提供的新價值減少（因為價值在知識）<br> 合在一起，就是國家看起來效率越來越低落。</p>
+<p>工業革命與槍砲推翻了帝國，網路與駭客會不會推翻現代國家？<br>有些科技圈人士提出「個人主權」（sovereign individual），認為個人（相對於政府）應該控制更多資源，來維繫個人的自由。例如，今日你看似自由，實際上土地的記載是國家說了算，存款是銀行說了算，水電瓦斯與網路由國家控制，資料則在網路平台手中。</p>
+<p>但即便在有「個人主權」的時代，實體世界仍然重要，因此國家 / 政府也仍然重要。政府的角色會轉為專注於解決科技無法處理，甚至造成惡化的問題上，如貧富差距、壟斷、環境污染、健康、人權等。</p>
+<h3 id="Google- 的發展"><a href="#Google- 的發展" class="headerlink" title="Google 的發展"></a>Google 的發展 </h3><p> 賣手機不只是賣功能，還包含研發、製造、銷售甚至保固，是一個綜合性的競爭。現在手機市場大勢底定，Google 想靠技術突破非常困難。Google 必須拉出一條新的戰線，那就是此次發表會正式提出的願景：普及運算（ambient computing）。</p>
+<p>例如一開頭提到的星空照，就牽涉到許多價值判斷。Marc Levoy 指出 Pixel 4 用了多種技術。包括：<br>（1）用機器學習調整白平衡。<br>（2）用語義分割（semantic segmentation）辨識照片的內容。<br>（3）用計算攝影（computational photograph）剔除因長時間曝光而過熱的像素。</p>
+<p>換言之，Pixel 4 首先判斷「現在要照一張星空照」。再根據由資料庫所訓練出的模型，設定基本的白平衡參數。接著，Pixel 4 再透過語義分割判斷「上半部是星空，下半部是地面」，因此強化地面與星空的邊界，同時降低星空（上半部）的雜訊。最後，再保留正常的像素所捕捉的資訊，剔除過度曝光的像素。因此這一張照片不僅利用現場的資訊，也融入了其他人（在資料庫中）的照片。甚至還加入 Google 的審美觀！</p>
+<p>未來 Pixel 4 照片中的世界，會比人類實際的體驗更細節、更立體，也更美 — 因為加上了提香的美術指導。我們不用再多次拍照、測試不同的曝光條件 — Google 會推薦最好的結果。這或許不足以帶動 Google 的硬體脫穎而出，但會進一步建立普及運算的基礎，讓人們習慣交給電腦更多權利。等到人們再也不想輸入複雜的指令，就是普及運算起飛的時刻。</p>
+<h3 id="Gartner：2019- 年十大無線通訊技術趨勢"><a href="#Gartner：2019- 年十大無線通訊技術趨勢" class="headerlink" title="Gartner：2019 年十大無線通訊技術趨勢"></a>Gartner：2019 年十大無線通訊技術趨勢</h3><p>（1）Wi-Fi<br>（2）5G 蜂巢式網絡<br>（3）車聯網（V2X）無線技術<br>（4）長距離無線供電<br>（5）低功耗廣域（LPWA）網絡<br>（6）無線感測<br>（7）增强型無線定位追蹤功能<br>（8）毫米波無線技術<br>（9）反向散射網絡（backscatter networking）<br>（10）軟件定義無線電（SDR）</p>
+<h3 id="Gartner-2019- 年新興技術發展週期報告，歸納 -5- 大重點新興科技趨勢"><a href="#Gartner-2019- 年新興技術發展週期報告，歸納 -5- 大重點新興科技趨勢" class="headerlink" title="Gartner 2019 年新興技術發展週期報告，歸納 5 大重點新興科技趨勢"></a>Gartner 2019 年新興技術發展週期報告，歸納 5 大重點新興科技趨勢</h3><p><a href="https://technews.tw/2019/09/02/gartner-2019-top-5-skill/">Gartner 2019 年新興技術發展週期報告，歸納 5 大重點新興科技趨勢</a><br>（1）感測與行動力<br>（2）擴增人類能力<br>（3）後傳統（postclassical）運算及通訊<br>（4）數位生態系<br>（5）先進人工智慧與分析技術</p>
+<h3 id="Gartner- 預測 -2019- 年十大策略科技，智慧空間、量子運算入列"><a href="#Gartner- 預測 -2019- 年十大策略科技，智慧空間、量子運算入列" class="headerlink" title="Gartner 預測 2019 年十大策略科技，智慧空間、量子運算入列"></a>Gartner 預測 2019 年十大策略科技，智慧空間、量子運算入列</h3><p><a href="https://technews.tw/2018/10/18/top-10-strategic-technology-trends-for-2019/">Gartner 預測 2019 年十大策略科技，智慧空間、量子運算入列</a><br>（1）自動化物件<br>（2）增強分析<br>（3）人工智慧驅動開發<br>（4）數位分身<br>（5）更強大的邊緣運算<br>（6）沉浸式體驗<br>（7）區塊鏈<br>（8）智慧空間<br>（9）數位倫理和隱私<br>（10）量子運算</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -3442,6 +3533,40 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h3 id="G12- 西門"><a href="#G12- 西門" class="headerlink" title="G12 西門"></a>G12 西門 </h3><h3 id="G10- 中正紀念堂"><a href="#G10- 中正紀念堂" class="headerlink" title="G10 中正紀念堂"></a>G10 中正紀念堂</h3><h3 id="G07- 公館"><a href="#G07- 公館" class="headerlink" title="G07 公館"></a>G07 公館</h3><h3 id="G01- 新店"><a href="#G01- 新店" class="headerlink" title="G01 新店"></a>G01 新店</h3><p> 碧潭</p>
 <h3 id="臺北捷運景點系列"><a href="# 臺北捷運景點系列" class="headerlink" title="臺北捷運景點系列"></a>臺北捷運景點系列 </h3><p><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-brown/"> 臺北捷運文湖線 </a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-red/"> 臺北捷運紅線 (淡水信義線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-green/">臺北捷運綠線 (松山新店線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-yellow/">臺北捷運黃線 (中和新蘆線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-blue/">臺北捷運藍線 (板南線)</a></p>
 ]]></content>
+      <categories>
+        <category>生活-出去玩做功課</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>臺北捷運黃線 (中和新蘆線)</title>
+    <url>/2021/05/06/trip-taipei-yellow/</url>
+    <content><![CDATA[<span id="more"></span>
+<p><img src="/2021/05/06/trip-taipei-yellow/photo1.jpg" alt="捷運地圖"></p>
+<h3 id="臺北捷運景點系列"><a href="# 臺北捷運景點系列" class="headerlink" title="臺北捷運景點系列"></a>臺北捷運景點系列 </h3><p><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-brown/"> 臺北捷運文湖線 </a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-red/"> 臺北捷運紅線 (淡水信義線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-green/">臺北捷運綠線 (松山新店線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-yellow/">臺北捷運黃線 (中和新蘆線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-blue/">臺北捷運藍線 (板南線)</a></p>
+]]></content>
+      <categories>
+        <category>生活-出去玩做功課</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>台灣賞花地點和季節</title>
+    <url>/2021/05/06/trip-taiwan-flower/</url>
+    <content><![CDATA[<h3 id="櫻花"><a href="# 櫻花" class="headerlink" title="櫻花"></a>櫻花 </h3><h4 id="北部"><a href="# 北部" class="headerlink" title="北部"></a> 北部 </h4><p> 羅莊櫻花步道    2021/2 月 <br> 三峽大熊櫻花林    2021/3/1～2021/4/15<br>樂活夜櫻季    2021/1/30/2/28<br>陽明山櫻花季    2021/2/5～3/21<br>北橫櫻花季 (拉拉山 / 上巴陵)    2021/2/17～3/21<br>翠墨櫻花季    2021/2/1～3/1</p>
+<h4 id="中部"><a href="# 中部" class="headerlink" title="中部"></a>中部 </h4><p> 武陵農場    2021/2/12～3/1<br>奧萬大    2021 / 1～3 月 <br> 草坪頭    2021/1/30～3/14<br>小半天石馬公園    2021/1/30～2/6<br>日月潭九族櫻花季    2021/1/30～3/7</p>
+<h4 id="南部"><a href="# 南部" class="headerlink" title="南部"></a>南部 </h4><p> 桃源綻放河津櫻    2021/1/16～2/21<br>霧台櫻花季    2021/2/1～3/1<br>草嶺櫻花季    2021/2/12～3/7<br>烏山頭水庫櫻花    2021 / 2～3 月 <br> 阿里山櫻花季    2021/3/10～4/10</p>
+]]></content>
+      <categories>
+        <category>生活-出去玩做功課</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>臺北市區</title>
+    <url>/2021/05/06/trip-taipei/</url>
+    <content><![CDATA[<p><img src="/2021/05/06/trip-taipei/photo1.png" alt="臺北市區地圖"></p>
+<h3 id="北投區"><a href="# 北投區" class="headerlink" title="北投區"></a>北投區 </h3><h3 id="士林區"><a href="# 士林區" class="headerlink" title="士林區"></a> 士林區 </h3><h3 id="大同區"><a href="# 大同區" class="headerlink" title="大同區"></a> 大同區 </h3><h3 id="中山區"><a href="# 中山區" class="headerlink" title="中山區"></a> 中山區 </h3><h3 id="内湖區"><a href="# 内湖區" class="headerlink" title="内湖區"></a> 内湖區 </h3><h4 id="文心藝所 -Winsing-Art-Place"><a href="# 文心藝所 -Winsing-Art-Place" class="headerlink" title="文心藝所 Ｗinsing Art Place"></a> 文心藝所 Ｗinsing Art Place</h4><pre><code>捷運板南線昆陽站轉乘「藍 36、284 路」公車至湖興站下車
+</code></pre><p>一樓空間打造成展覽專區，不定期展示藝術品，分享收藏及展覽，並把一樓的開放式空間，右側為展覽、講座場域，二樓規畫成書店，放入國內外建築相關讀物，讓入內的人們能在閒適空間內輕鬆接觸藝術。<br>藝所的藏書種類以建築、美學為主，其次為人文類書籍。</p>
+<h4 id="劍南山蝶園蝴蝶步道"><a href="# 劍南山蝶園蝴蝶步道" class="headerlink" title="劍南山蝶園蝴蝶步道"></a>劍南山蝶園蝴蝶步道 </h4><p> 在捷運劍南站 1 號出口劍潭古寺旁 </p>
+<h4 id="金面山親山步道"><a href="# 金面山親山步道" class="headerlink" title="金面山親山步道"></a>金面山親山步道 </h4><h4 id="白石湖吊橋步道"><a href="# 白石湖吊橋步道" class="headerlink" title="白石湖吊橋步道"></a> 白石湖吊橋步道 </h4><h4 id="樂活公園"><a href="# 樂活公園" class="headerlink" title="樂活公園"></a> 樂活公園 </h4><h3 id="松山區"><a href="# 松山區" class="headerlink" title="松山區"></a> 松山區 </h3><h3 id="信義區"><a href="# 信義區" class="headerlink" title="信義區"></a> 信義區 </h3><h3 id="南港區"><a href="# 南港區" class="headerlink" title="南港區"></a> 南港區 </h3><h3 id="文山區"><a href="# 文山區" class="headerlink" title="文山區"></a> 文山區 </h3><h3 id="中正區"><a href="# 中正區" class="headerlink" title="中正區"></a> 中正區 </h3><h3 id="大安區"><a href="# 大安區" class="headerlink" title="大安區"></a> 大安區 </h3><h3 id="萬華區"><a href="# 萬華區" class="headerlink" title="萬華區"></a> 萬華區</h3>]]></content>
       <categories>
         <category>生活-出去玩做功課</category>
       </categories>
@@ -3485,43 +3610,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>臺北捷運黃線 (中和新蘆線)</title>
-    <url>/2021/05/06/trip-taipei-yellow/</url>
-    <content><![CDATA[<span id="more"></span>
-<p><img src="/2021/05/06/trip-taipei-yellow/photo1.jpg" alt="捷運地圖"></p>
-<h3 id="臺北捷運景點系列"><a href="# 臺北捷運景點系列" class="headerlink" title="臺北捷運景點系列"></a>臺北捷運景點系列 </h3><p><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-brown/"> 臺北捷運文湖線 </a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-red/"> 臺北捷運紅線 (淡水信義線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-green/">臺北捷運綠線 (松山新店線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-yellow/">臺北捷運黃線 (中和新蘆線)</a><br><a href="https://wangxchun.github.io/2021/05/06/trip-taipei-blue/">臺北捷運藍線 (板南線)</a></p>
-]]></content>
-      <categories>
-        <category>生活-出去玩做功課</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>臺北市區</title>
-    <url>/2021/05/06/trip-taipei/</url>
-    <content><![CDATA[<p><img src="/2021/05/06/trip-taipei/photo1.png" alt="臺北市區地圖"></p>
-<h3 id="北投區"><a href="# 北投區" class="headerlink" title="北投區"></a>北投區 </h3><h3 id="士林區"><a href="# 士林區" class="headerlink" title="士林區"></a> 士林區 </h3><h3 id="大同區"><a href="# 大同區" class="headerlink" title="大同區"></a> 大同區 </h3><h3 id="中山區"><a href="# 中山區" class="headerlink" title="中山區"></a> 中山區 </h3><h3 id="内湖區"><a href="# 内湖區" class="headerlink" title="内湖區"></a> 内湖區 </h3><h4 id="文心藝所 -Winsing-Art-Place"><a href="# 文心藝所 -Winsing-Art-Place" class="headerlink" title="文心藝所 Ｗinsing Art Place"></a> 文心藝所 Ｗinsing Art Place</h4><pre><code>捷運板南線昆陽站轉乘「藍 36、284 路」公車至湖興站下車
-</code></pre><p>一樓空間打造成展覽專區，不定期展示藝術品，分享收藏及展覽，並把一樓的開放式空間，右側為展覽、講座場域，二樓規畫成書店，放入國內外建築相關讀物，讓入內的人們能在閒適空間內輕鬆接觸藝術。<br>藝所的藏書種類以建築、美學為主，其次為人文類書籍。</p>
-<h4 id="劍南山蝶園蝴蝶步道"><a href="# 劍南山蝶園蝴蝶步道" class="headerlink" title="劍南山蝶園蝴蝶步道"></a>劍南山蝶園蝴蝶步道 </h4><p> 在捷運劍南站 1 號出口劍潭古寺旁 </p>
-<h4 id="金面山親山步道"><a href="# 金面山親山步道" class="headerlink" title="金面山親山步道"></a>金面山親山步道 </h4><h4 id="白石湖吊橋步道"><a href="# 白石湖吊橋步道" class="headerlink" title="白石湖吊橋步道"></a> 白石湖吊橋步道 </h4><h4 id="樂活公園"><a href="# 樂活公園" class="headerlink" title="樂活公園"></a> 樂活公園 </h4><h3 id="松山區"><a href="# 松山區" class="headerlink" title="松山區"></a> 松山區 </h3><h3 id="信義區"><a href="# 信義區" class="headerlink" title="信義區"></a> 信義區 </h3><h3 id="南港區"><a href="# 南港區" class="headerlink" title="南港區"></a> 南港區 </h3><h3 id="文山區"><a href="# 文山區" class="headerlink" title="文山區"></a> 文山區 </h3><h3 id="中正區"><a href="# 中正區" class="headerlink" title="中正區"></a> 中正區 </h3><h3 id="大安區"><a href="# 大安區" class="headerlink" title="大安區"></a> 大安區 </h3><h3 id="萬華區"><a href="# 萬華區" class="headerlink" title="萬華區"></a> 萬華區</h3>]]></content>
-      <categories>
-        <category>生活-出去玩做功課</category>
-      </categories>
-  </entry>
-  <entry>
     <title>trip-taiwan-36</title>
     <url>/2021/05/11/trip-taiwan-36/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>台灣賞花地點和季節</title>
-    <url>/2021/05/06/trip-taiwan-flower/</url>
-    <content><![CDATA[<h3 id="櫻花"><a href="# 櫻花" class="headerlink" title="櫻花"></a>櫻花 </h3><h4 id="北部"><a href="# 北部" class="headerlink" title="北部"></a> 北部 </h4><p> 羅莊櫻花步道    2021/2 月 <br> 三峽大熊櫻花林    2021/3/1～2021/4/15<br>樂活夜櫻季    2021/1/30/2/28<br>陽明山櫻花季    2021/2/5～3/21<br>北橫櫻花季 (拉拉山 / 上巴陵)    2021/2/17～3/21<br>翠墨櫻花季    2021/2/1～3/1</p>
-<h4 id="中部"><a href="# 中部" class="headerlink" title="中部"></a>中部 </h4><p> 武陵農場    2021/2/12～3/1<br>奧萬大    2021 / 1～3 月 <br> 草坪頭    2021/1/30～3/14<br>小半天石馬公園    2021/1/30～2/6<br>日月潭九族櫻花季    2021/1/30～3/7</p>
-<h4 id="南部"><a href="# 南部" class="headerlink" title="南部"></a>南部 </h4><p> 桃源綻放河津櫻    2021/1/16～2/21<br>霧台櫻花季    2021/2/1～3/1<br>草嶺櫻花季    2021/2/12～3/7<br>烏山頭水庫櫻花    2021 / 2～3 月 <br> 阿里山櫻花季    2021/3/10～4/10</p>
-]]></content>
-      <categories>
-        <category>生活-出去玩做功課</category>
-      </categories>
   </entry>
   <entry>
     <title>新北西部</title>
