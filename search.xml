@@ -40,21 +40,6 @@
       </tags>
   </entry>
   <entry>
-    <title>5G（四）5G 网络架构 -- 2. 接入网及网络部署</title>
-    <url>/2021/04/14/5G-4-2/</url>
-    <content><![CDATA[<h3 id="一、5G- 接入网架构"><a href="# 一、5G- 接入网架构" class="headerlink" title="一、5G 接入网架构"></a>一、5G 接入网架构 </h3><p><img src="/2021/04/14/5G-4-2/photo1.jpg" alt><br>4G 网络的站点都是独立的，没有像 3G 中 RNC (Radio Network Controller) 的角色来进行控制。<br> 在 5G 中，基站的密度更大，干扰更大，更需要站点间的协调合作。<br>5G 网络需要灵活部署，以配合不同的场景需求。<br>自动化网络优化管理，通用硬件。<br><img src="/2021/04/14/5G-4-2/photo3.jpg" alt><br><img src="/2021/04/14/5G-4-2/photo2.jpg" alt><br>4G 中的 BBU 变成了 CU 和 DU，RRU 变成了 AAU<br>CU 可以采用通用硬件来实现，在上面采用 NFV 技术</p>
-<h3 id="二、"><a href="# 二、" class="headerlink" title="二、"></a>二、</h3><span id="more"></span>
-<h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章</h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充</a></p>
-]]></content>
-      <categories>
-        <category>5G</category>
-      </categories>
-      <tags>
-        <tag>5G</tag>
-        <tag>接入网</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5G（四）5G 网络架构 -- 1. 核心网架构</title>
     <url>/2021/04/14/5G-4-1/</url>
     <content><![CDATA[<h3 id="一、5G- 不同应用场景的需求指标差异"><a href="# 一、5G- 不同应用场景的需求指标差异" class="headerlink" title="一、5G 不同应用场景的需求指标差异"></a>一、5G 不同应用场景的需求指标差异 </h3><p><img src="/2021/04/14/5G-4-1/photo1.jpg" alt><br> 有时不同场景所需的性能是不同的，甚至是矛盾的，单一网络没办法满足需要（4G 网络就是单一网络）<br>那 5G 网络是如何解决这个问题？<br>建立三个网络：5G eMBB、5G uRLLC、5G mMTC，但是成本太高，而且网络会非常复杂</p>
@@ -134,6 +119,21 @@
         <tag>5G</tag>
         <tag>NFV</tag>
         <tag>网络功能虚拟化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5G（四）5G 网络架构 -- 2. 接入网及网络部署</title>
+    <url>/2021/04/14/5G-4-2/</url>
+    <content><![CDATA[<h3 id="一、5G- 接入网架构"><a href="# 一、5G- 接入网架构" class="headerlink" title="一、5G 接入网架构"></a>一、5G 接入网架构 </h3><p><img src="/2021/04/14/5G-4-2/photo1.jpg" alt><br>4G 网络的站点都是独立的，没有像 3G 中 RNC (Radio Network Controller) 的角色来进行控制。<br> 在 5G 中，基站的密度更大，干扰更大，更需要站点间的协调合作。<br>5G 网络需要灵活部署，以配合不同的场景需求。<br>自动化网络优化管理，通用硬件。<br><img src="/2021/04/14/5G-4-2/photo3.jpg" alt><br><img src="/2021/04/14/5G-4-2/photo2.jpg" alt><br>4G 中的 BBU 变成了 CU 和 DU，RRU 变成了 AAU<br>CU 可以采用通用硬件来实现，在上面采用 NFV 技术</p>
+<h3 id="二、"><a href="# 二、" class="headerlink" title="二、"></a>二、</h3><span id="more"></span>
+<h3 id="5G- 系列文章"><a href="#5G- 系列文章" class="headerlink" title="5G 系列文章"></a>5G 系列文章</h3><p><a href="https://wangxchun.github.io/2021/04/14/5G-1/">5G（一）5G 发展历程</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-2/">5G（二）5G 应用场景</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-3/">5G（三）5G 性能指标</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-1/">5G（四）5G 网络架构 — 1. 核心网架构</a><br><a href="https://wangxchun.github.io/2021/04/14/5G-4-2/">5G（四）5G 网络架构 — 2. 接入网及网络部署</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-1/">5G（五）5G 关键技术 — 1.NFV 网络功能虚拟化</a><br><a href="https://wangxchun.github.io/2021/04/15/5G-5-2/">5G（五）5G 关键技术 — 2.SDN 软件定义网络</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-3/">5G（五）5G 关键技术 — 3.MEC 移动边缘计算</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-4/">5G（五）5G 关键技术 — 4.Network Slicing 网络切片</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-5/">5G（五）5G 关键技术 — 5.mmWave 毫米波</a><br><a href="https://wangxchun.github.io/2021/04/16/5G-5-6/">5G（五）5G 关键技术 — 6.Massive MIMO</a><br><a href="https://wangxchun.github.io/2021/04/17/5G-5-6-2/">5G（五）5G 关键技术 — 6.Massive MIMO 补充</a></p>
+]]></content>
+      <categories>
+        <category>5G</category>
+      </categories>
+      <tags>
+        <tag>5G</tag>
+        <tag>接入网</tag>
       </tags>
   </entry>
   <entry>
@@ -388,6 +388,20 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ advance（五）Linux 进程和线程 --2. 进程间通信</title>
+    <url>/2021/04/16/C++%20advance5.2/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>进程间通信</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ advance（五）Linux 进程和线程 --1. 进程控制</title>
     <url>/2021/04/16/C++%20advance5.1/</url>
     <content><![CDATA[<h3 id="一、进程的相关概念"><a href="# 一、进程的相关概念" class="headerlink" title="一、进程的相关概念"></a>一、进程的相关概念 </h3><h4 id="1- 程序和进程"><a href="#1- 程序和进程" class="headerlink" title="1. 程序和进程"></a>1. 程序和进程</h4><h5 id="程序"><a href="# 程序" class="headerlink" title="程序"></a> 程序 </h5><p> 编译好的二进制文件</p>
@@ -432,20 +446,6 @@
       <tags>
         <tag>Linux</tag>
         <tag>进程控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ advance（五）Linux 进程和线程 --2. 进程间通信</title>
-    <url>/2021/04/16/C++%20advance5.2/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>进程间通信</tag>
       </tags>
   </entry>
   <entry>
@@ -551,6 +551,56 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --3.tcp 状态转换 - selcet-poll</title>
+    <url>/2021/04/16/C++%20advance6.3/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>tcp</tag>
+        <tag>状态转换</tag>
+        <tag>selcet</tag>
+        <tag>poll</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --5. 广播 - 组播 - 本地套接字</title>
+    <url>/2021/04/16/C++%20advance6.5/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>广播</tag>
+        <tag>组播</tag>
+        <tag>本地套接字</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --4.epoll-udp</title>
+    <url>/2021/04/16/C++%20advance6.4/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
+]]></content>
+      <categories>
+        <category>C++ advance</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>高并发网络编程开发</tag>
+        <tag>epoll udp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ advance（六）Linux 高并发网络编程开发 --2.tcp 三次握手 - 并发</title>
     <url>/2021/04/16/C++%20advance6.2/</url>
     <content><![CDATA[<h3 id="回顾：socket-tcp-server- 实现"><a href="# 回顾：socket-tcp-server- 实现" class="headerlink" title="回顾：socket tcp server 实现"></a>回顾：socket tcp server 实现</h3><h4 id="1- 创建套接字"><a href="#1- 创建套接字" class="headerlink" title="1. 创建套接字"></a>1. 创建套接字</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> lfd = <span class="built_in">socket</span> ();</span><br></pre></td></tr></table></figure>
@@ -596,8 +646,8 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --3.tcp 状态转换 - selcet-poll</title>
-    <url>/2021/04/16/C++%20advance6.3/</url>
+    <title>C++ advance（六）Linux 高并发网络编程开发 --6.libevent</title>
+    <url>/2021/04/16/C++%20advance6.6/</url>
     <content><![CDATA[<span id="more"></span>
 <h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
 ]]></content>
@@ -607,42 +657,7 @@
       <tags>
         <tag>Linux</tag>
         <tag>高并发网络编程开发</tag>
-        <tag>tcp</tag>
-        <tag>状态转换</tag>
-        <tag>selcet</tag>
-        <tag>poll</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --4.epoll-udp</title>
-    <url>/2021/04/16/C++%20advance6.4/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>epoll udp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --5. 广播 - 组播 - 本地套接字</title>
-    <url>/2021/04/16/C++%20advance6.5/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>广播</tag>
-        <tag>组播</tag>
-        <tag>本地套接字</tag>
+        <tag>libevent</tag>
       </tags>
   </entry>
   <entry>
@@ -659,21 +674,6 @@
         <tag>高并发网络编程开发</tag>
         <tag>xml</tag>
         <tag>json</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ advance（六）Linux 高并发网络编程开发 --6.libevent</title>
-    <url>/2021/04/16/C++%20advance6.6/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="C-advance- 文章总览"><a href="#C-advance- 文章总览" class="headerlink" title="C++ advance 文章总览"></a>C++ advance 文章总览 </h3><p><a href="https://wangxchun.github.io/2021/04/14/C++%20advance4.1/">C++ advance（四）Linux 命令基础 —1.Linux 常用命令 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.2/">C++ advance（四）Linux 命令基础 —2.vim 和 gcc 和 library</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.3/">C++ advance（四）Linux 命令基础 —3.makefile 和 gdb 和 IO</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance4.4/">C++ advance（四）Linux 命令基础 —4.stat 和 readdir 和 dup2</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advanc5.1/">C++ advance（五）Linux 进程和线程 —1. 进程控制 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.2/">C++ advance（五）Linux 进程和线程 —2. 进程间通信 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.3/">C++ advance（五）Linux 进程和线程 —3. 信号 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.4/">C++ advance（五）Linux 进程和线程 —4. 进程和线程 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance5.5/">C++ advance（五）Linux 进程和线程 —5. 线程同步 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.1/">C++ advance（六）Linux 高并发网络编程开发 —1. 网络编程基础 socket</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.2/">C++ advance（六）Linux 高并发网络编程开发 —2.tcp 三次握手 - 并发 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.3/">C++ advance（六）Linux 高并发网络编程开发 —3.tcp 状态转换 - selcet poll</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.4/">C++ advance（六）Linux 高并发网络编程开发 —4.epoll udp</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.5/">C++ advance（六）Linux 高并发网络编程开发 —5. 广播 - 组播 - 本地套接字 </a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.6">C++ advance（六）Linux 高并发网络编程开发 —6.libevent</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance6.7">C++ advance（六）Linux 高并发网络编程开发 —7.xml json</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.1">C++ advance（七）Linux 高并发 web 服务器开发 —1.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.2">C++ advance（七）Linux 高并发 web 服务器开发 —2.</a><br><a href="https://wangxchun.github.io/2021/04/16/C++%20advance7.3">C++ advance（七）Linux 高并发 web 服务器开发 —3.</a></p>
-]]></content>
-      <categories>
-        <category>C++ advance</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>高并发网络编程开发</tag>
-        <tag>libevent</tag>
       </tags>
   </entry>
   <entry>
@@ -857,6 +857,22 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ 四捨五入</title>
+    <url>/2019/03/17/C++%20rounding/</url>
+    <content><![CDATA[<p>round (a)：回傳 a 之小數經四捨五入後之值。<br>floor (a)：回傳 a 之小數無條件捨去後之值。<br>ceil (a)：回傳 a 之小數無條件進位後之值。<br><span id="more"></span><br>setprecision () 是輸入 / 輸出操縱器庫 <iomanip> 的一個操作符，可以用來修改浮點數的預設精度。<br>使用 setprecision (n) 可控制輸出流顯示浮點數的數字個數。C++ 預設的流輸出數值有效位是 6。<br>如果 setprecision (n) 與 setiosflags (ios::fixed) 合用，可以控制小數點右邊的數字個數。<br>setiosflags (ios::fixed) 是用定點方式表示實數</iomanip></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span> <span class="comment">// 輸出流控制，setiosflags (ios::fixed)，setprecision (n) 的標頭檔案</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> n = <span class="number">50.26548</span>;</span><br><span class="line">	<span class="built_in">printf</span> (<span class="string">&quot;%.4f&quot;</span>, n); cout &lt;&lt; endl; <span class="comment">// 列印輸出小數點後 4 位，會四捨五入</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 輸出 4 位有效數字，包括整數和小數部分，會四捨五入 </span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span> (ios::fixed) &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 輸出小數點後 4 位，會四捨五入，會影響後面的 setprecision () 輸出</span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 只輸出小數點後 4 位，而不再是包括整數部分的 7 位，會四捨五入（但是此處受到前面影響，所以會輸出包含整數）</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span> (ios::fixed) &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>)&lt;&lt; <span class="built_in">floor</span> (n * <span class="number">10000</span>)/<span class="number">10000</span>&lt;&lt; endl;<span class="comment">// 不會四捨五入，保留幾位小數就乘和除 10 的幾次方</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
+]]></content>
+      <categories>
+        <category>C++ learn</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>刷題</tag>
+        <tag>四捨五入</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ review(1)</title>
     <url>/2018/09/30/C++%20review1/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2018/09/30/C++%20review1/">C++ review (1)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review2/">C++ review (2)</a><br><a href="https://wangxchun.github.io/2018/10/14/C++%20review3/">C++ review (3)</a></p>
@@ -939,22 +955,6 @@
       </categories>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 四捨五入</title>
-    <url>/2019/03/17/C++%20rounding/</url>
-    <content><![CDATA[<p>round (a)：回傳 a 之小數經四捨五入後之值。<br>floor (a)：回傳 a 之小數無條件捨去後之值。<br>ceil (a)：回傳 a 之小數無條件進位後之值。<br><span id="more"></span><br>setprecision () 是輸入 / 輸出操縱器庫 <iomanip> 的一個操作符，可以用來修改浮點數的預設精度。<br>使用 setprecision (n) 可控制輸出流顯示浮點數的數字個數。C++ 預設的流輸出數值有效位是 6。<br>如果 setprecision (n) 與 setiosflags (ios::fixed) 合用，可以控制小數點右邊的數字個數。<br>setiosflags (ios::fixed) 是用定點方式表示實數</iomanip></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span> <span class="comment">// 輸出流控制，setiosflags (ios::fixed)，setprecision (n) 的標頭檔案</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> n = <span class="number">50.26548</span>;</span><br><span class="line">	<span class="built_in">printf</span> (<span class="string">&quot;%.4f&quot;</span>, n); cout &lt;&lt; endl; <span class="comment">// 列印輸出小數點後 4 位，會四捨五入</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 輸出 4 位有效數字，包括整數和小數部分，會四捨五入 </span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span> (ios::fixed) &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 輸出小數點後 4 位，會四捨五入，會影響後面的 setprecision () 輸出</span></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>) &lt;&lt; n &lt;&lt; endl;<span class="comment">// 只輸出小數點後 4 位，而不再是包括整數部分的 7 位，會四捨五入（但是此處受到前面影響，所以會輸出包含整數）</span></span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="built_in">setiosflags</span> (ios::fixed) &lt;&lt; <span class="built_in">setprecision</span> (<span class="number">4</span>)&lt;&lt; <span class="built_in">floor</span> (n * <span class="number">10000</span>)/<span class="number">10000</span>&lt;&lt; endl;<span class="comment">// 不會四捨五入，保留幾位小數就乘和除 10 的幾次方</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="C-learing- 总览"><a href="#C-learing- 总览" class="headerlink" title="C++ learing 总览"></a>C++ learing 总览 </h3><p><a href="https://wangxchun.github.io/2019/03/17/C++%20rounding/">C++ 四舍五入</a><br><a href="https://wangxchun.github.io/2019/03/16/C++%20get-out-each-digit-of-the-number/">C++ 取出一個數的每一位</a><br><a href="https://wangxchun.github.io/2019/03/14/C++%20rand/">C++ 利用 rand () 產生隨機數</a><br><a href="https://wangxchun.github.io/2018/11/05/C++%20small-summary/">C++ 小知识点总结</a><br><a href="https://wangxchun.github.io/2018/10/28/C++%20explain-a-sentence/">C++ 解釋一個語句</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20include/">C++ #include</a><br><a href="https://wangxchun.github.io/2018/10/27/C++%20RALL/">C++ RALL</a><br><a href="https://wangxchun.github.io/2018/09/23/C++%20operator/">C++ 运算符</a><br><a href="https://wangxchun.github.io/2018/09/27/C++%20universal-header-files/">C++ 万能标头档</a><br><a href="https://wangxchun.github.io/2018/09/27/Dev%20C++11/"> 讓 Dev C++ 支持 C++11</a></p>
-]]></content>
-      <categories>
-        <category>C++ learn</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>刷題</tag>
-        <tag>四捨五入</tag>
       </tags>
   </entry>
   <entry>
@@ -1084,40 +1084,19 @@
       </categories>
   </entry>
   <entry>
-    <title>数据结构与算法 --4. 查找</title>
-    <url>/2019/03/31/algorithm-find/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
-<h3 id="一、概念"><a href="# 一、概念" class="headerlink" title="一、概念"></a>一、概念 </h3><h4 id="1- 查找：在数据集合 - 查找表 - 中寻找满足某种条件的数据元素的过程。"><a href="#1- 查找：在数据集合 - 查找表 - 中寻找满足某种条件的数据元素的过程。" class="headerlink" title="1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。"></a>1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。</h4><p> 查找表：$\begin {cases}<br>静态查找表：  &amp; \text {} \\<br>动态查找表：有增删 &amp; \text {}<br>\end {cases}$<br>查找的结果一般分为两种：<br>(1) 查找成功：在数据集合中找到了满足条件的数据元素<br>(2) 查找失败<br><span id="more"></span></p>
-<h4 id="2- 关键字"><a href="#2- 关键字" class="headerlink" title="2. 关键字"></a>2. 关键字 </h4><h4 id="3- 平均查找长度 -ASL-sum-i-0-n-P-iC-i"><a href="#3- 平均查找长度 -ASL-sum-i-0-n-P-iC-i" class="headerlink" title="3. 平均查找长度 $ASL = \sum_{i=0}^n P_iC_i$"></a>3. 平均查找长度 $ASL = \sum_{i=0}^n P_iC_i$</h4><h3 id="二、顺序查找、折半查找、分块查找"><a href="# 二、顺序查找、折半查找、分块查找" class="headerlink" title="二、顺序查找、折半查找、分块查找"></a> 二、顺序查找、折半查找、分块查找</h3><h4 id="1- 顺序查找：依次查找表中元素"><a href="#1- 顺序查找：依次查找表中元素" class="headerlink" title="1. 顺序查找：依次查找表中元素"></a>1. 顺序查找：依次查找表中元素</h4><h5 id="1- 一般线性表 - 无序 - 中的查找"><a href="#1- 一般线性表 - 无序 - 中的查找" class="headerlink" title="(1) 一般线性表 (无序) 中的查找"></a>(1) 一般线性表 (无序) 中的查找</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>, i&lt;n, i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// 对 a [i] 判断</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>$ASL_{成功} = \displaystyle {1 \over n}(1+2+…+n)={n+1 \over 2}$<br>$ASL_{失败} = n$</p>
-<h5 id="2- 有序表的顺序查找：失败时，可提前返回"><a href="#2- 有序表的顺序查找：失败时，可提前返回" class="headerlink" title="(2) 有序表的顺序查找：失败时，可提前返回"></a>(2) 有序表的顺序查找：失败时，可提前返回</h5><p>$ASL_{成功} = \displaystyle {n+1 \over 2}$<br>$ASL_{失败} = \displaystyle {1 \over n+1}(1+2+…+n+n) = {n \over 2} + {n \over n+1}$<br>$n$ 个分支节点是树有 $n+1$ 个叶子</p>
-<h4 id="2- 折半查找：有序的顺序表中"><a href="#2- 折半查找：有序的顺序表中" class="headerlink" title="2. 折半查找：有序的顺序表中"></a>2. 折半查找：有序的顺序表中</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Binary_Search</span> <span class="params">(SeqList L, ElemType key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> low=<span class="number">0</span>, high=L.TableLen<span class="number">-1</span>, mid;</span><br><span class="line">	<span class="keyword">while</span> (low &lt; high)</span><br><span class="line">	&#123;</span><br><span class="line">	    mid = (low + high) / <span class="number">2</span>;</span><br><span class="line">	    <span class="keyword">if</span> (L.elem [mid] == key)</span><br><span class="line">	        <span class="keyword">return</span> mid;</span><br><span class="line">	    <span class="keyword">else</span> <span class="keyword">if</span> (L.elem [mid] &gt; key)</span><br><span class="line">	        high = mid - <span class="number">1</span>;</span><br><span class="line">	    <span class="keyword">else</span></span><br><span class="line">	    	low = mid + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/03/31/algorithm-find/photo1.png" alt><br>判定树是一个平衡二叉树 <br> 判定树的高度：$\lceil log_2 (n+1) \rceil$ 或 $\lfloor log_2 (n) \rfloor + 1$<br>$ASL_{成功} = \displaystyle {1 \over 11}(1 \times 1 + 2 \times 2 + 3 \times 4 + 4 \times 4) = 3$<br>$ASL_{失败} = \displaystyle {1 \over 12}(3 \times 4 + 4 \times 8) = {11 \over 3}$<br>可以构成折半查找的序列：某数字后面的数字都与其有相同的大小关系</p>
-<h4 id="3- 分块查找：块间有序，块内无序"><a href="#3- 分块查找：块间有序，块内无序" class="headerlink" title="3. 分块查找：块间有序，块内无序"></a>3. 分块查找：块间有序，块内无序 </h4><p> 快的索引表是有序的，所以也可以顺序查找或是二分查找 <br> 问题：怎么分块，效率最高？<br>假设有 $n$ 个元素，$s$ 个元素一个块，块数总共有 $\displaystyle \lceil {n \over s} \rceil$<br>$ASL_{成功} = \displaystyle \frac {\frac {n}{s}+1}{2} + {s+1 \over 2}$</p>
-<p>$\quad \quad \quad  \; \displaystyle ={s \over 2} + {n \over 2s} + 1$</p>
-<p>$\quad \quad \quad  \; \geq \displaystyle 2 \sqrt {\frac {s}{2} \times \frac {n}{2s}} + 1 $</p>
-<p>$\quad \quad \quad  \; = \sqrt {n} + 1 $</p>
-<p>等号成立的条件：$\displaystyle {s \over 2} = {n \over 2s} $ =&gt; $s=\sqrt {n}$</p>
-<h3 id="三、B- 树（多路平衡查找树）"><a href="# 三、B- 树（多路平衡查找树）" class="headerlink" title="三、B 树（多路平衡查找树）"></a>三、B 树（多路平衡查找树）</h3><h4 id="1-B- 树及其基本操作"><a href="#1-B- 树及其基本操作" class="headerlink" title="1.B 树及其基本操作"></a>1.B 树及其基本操作</h4><p>B 树中所有节点的孩子节点数的最大值称为 B 树的阶，通常用 $m$ 表示</p>
-<h5 id="1- 树中每个节点至多有 -m- 棵子树"><a href="#1- 树中每个节点至多有 -m- 棵子树" class="headerlink" title="(1) 树中每个节点至多有 $m$ 棵子树"></a>(1) 树中每个节点至多有 $m$ 棵子树</h5><h5 id="2- 若根节点不是终端节点，则至少有两棵子树"><a href="#2- 若根节点不是终端节点，则至少有两棵子树" class="headerlink" title="(2) 若根节点不是终端节点，则至少有两棵子树"></a>(2) 若根节点不是终端节点，则至少有两棵子树</h5><h5 id="3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个"><a href="#3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个" class="headerlink" title="(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个"></a>(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个</h5><h5 id="4- 非叶节点的结构如下"><a href="#4- 非叶节点的结构如下" class="headerlink" title="(4) 非叶节点的结构如下"></a>(4) 非叶节点的结构如下</h5><p><img src="/2019/03/31/algorithm-find/photo2.png" alt><br>$n$：关键字的个数（$\displaystyle \lceil {m \over 2} \rceil -1 \leq n \leq m-1$）</p>
-<h5 id="5- 关键字 -1- 子树数"><a href="#5- 关键字 -1- 子树数" class="headerlink" title="(5) 关键字 $+1=$ 子树数"></a>(5) 关键字 $+1=$ 子树数 </h5><p>$\displaystyle \lceil {m \over 2} \rceil \leq $ 子树数 $ \leq m$<br> 根是特殊情形：$2 \leq $ 子树数 $ \leq m$</p>
-<h5 id="6- 关键字数 -m- 与高度 -h- 的关系"><a href="#6- 关键字数 -m- 与高度 -h- 的关系" class="headerlink" title="(6) 关键字数 $m$ 与高度 $h$ 的关系"></a>(6) 关键字数 $m$ 与高度 $h$ 的关系 </h5><p> 每个节点最多有 $m$ 个子树，第 $m$ 层最多总共有 $m^i$ 个子树，总共有 $(m-1) m^i$ 个关键字</p>
-<p>$1+2 (\lceil {m \over 2} \rceil -1)(1+ \lceil {m \over 2} \rceil + …+{\lceil {m \over 2} \rceil}^{h-2}) \leq n \leq (m-1)[1+m+m^2+…+m^{h-1}]$</p>
-<p>$1+2 \times (\lceil \frac {m}{2} \rceil -1) \times \displaystyle \frac {{\lceil \frac {m}{2} \rceil}^{h-1} - 1}{\lceil \frac {m}{2} \rceil -1} \leq n \leq (m-1) \times {m^h-1 \over m-1}$</p>
-<p>$2 {\lceil \frac {m}{2} \rceil}^{h-1} - 1 \leq n \leq m^h - 1$</p>
-<p>$log_m (n+1) \leq h \leq log_{\lceil \frac {m}{2} \rceil} \displaystyle ({n+1 \over 2}) +1$</p>
-<h4 id="2- 查找"><a href="#2- 查找" class="headerlink" title="2. 查找"></a>2. 查找 </h4><p> 节点上查找 $\begin {cases}<br>成功  &amp; \text {} \\<br>失败：子树查找 &amp; \text {}<br>\end {cases}$</p>
-<h4 id="3-B- 树插入"><a href="#3-B- 树插入" class="headerlink" title="3.B 树插入"></a>3.B 树插入 </h4><h5 id="1- 定位：某个非叶节点"><a href="#1- 定位：某个非叶节点" class="headerlink" title="(1) 定位：某个非叶节点"></a>(1) 定位：某个非叶节点</h5><h5 id="2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点"><a href="#2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点" class="headerlink" title="(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点"></a>(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点</h5><h4 id="4-B- 树删除"><a href="#4-B- 树删除" class="headerlink" title="4.B 树删除"></a>4.B 树删除</h4><p> 分层两大类情形：</p>
-<h5 id="1- 删除的节点是最底层分支"><a href="#1- 删除的节点是最底层分支" class="headerlink" title="(1) 删除的节点是最底层分支"></a>(1) 删除的节点是最底层分支 </h5><p>$\quad$(a) 欲删除节点的父节点关键字 $&gt; \lceil \frac {m}{2} \rceil -1$，直接删除<br>$\quad$(b) 欲删除节点的父节点关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad$ (i) 兄弟节点够借：关键字 $\leq \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 父子易位，再平衡<br><img src="/2019/03/31/algorithm-find/photo3.jpg" alt><br><img src="/2019/03/31/algorithm-find/photo4.jpg" alt><br>$\quad \quad$ (ii) 兄弟节点不够借：关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 合并 (左 / 右 + 父亲 + 自己)<br><img src="/2019/03/31/algorithm-find/photo5.jpg" alt><br>Q：为什么能合并，不会超过关键字数量的上界吗？<br> 合并：$(\lceil \frac {m}{2} \rceil -1) + 1 + (\lceil \frac {m}{2} \rceil -2)=$</p>
-<h5 id="2- 删除的节点不是最底层分支"><a href="#2- 删除的节点不是最底层分支" class="headerlink" title="(2) 删除的节点不是最底层分支"></a>(2) 删除的节点不是最底层分支</h5>]]></content>
+    <title>工程实践与科技创新 2A-- 实验前准备</title>
+    <url>/2021/04/28/Engineering-Practice-2A-prepare/</url>
+    <content><![CDATA[<div class="pdf-container" data-target="./S800" data-height="板介绍"></div>
+<p><img src="/2021/04/28/Engineering-Practice-2A-prepare/photo1.png" alt="Keil 目录"></p>
+<ol>
+<li> 新建一个 WorkSpace 文件夹，将三个 lab 的文件夹放进去 </li>
+<li> 打开 Keil，Open project 打开 lab 文件夹中的 exp1.uvprojx</li>
+<li> 编译 build 之后，就可以 load 下载到实验板上 <br><img src="/2021/04/28/Engineering-Practice-2A-prepare/photo2.png" alt="数据手册和用户指南"></li>
+</ol>
+]]></content>
       <categories>
-        <category>大学课程-数据结构与算法</category>
+        <category>大学课程-工程实践与科技创新2A</category>
       </categories>
-      <tags>
-        <tag>数据结构</tag>
-        <tag>算法</tag>
-        <tag>查找</tag>
-      </tags>
   </entry>
   <entry>
     <title>数据结构与算法 --3. 图</title>
@@ -1171,19 +1150,40 @@
       </tags>
   </entry>
   <entry>
-    <title>工程实践与科技创新 2A-- 实验前准备</title>
-    <url>/2021/04/28/Engineering-Practice-2A-prepare/</url>
-    <content><![CDATA[<div class="pdf-container" data-target="./S800" data-height="板介绍"></div>
-<p><img src="/2021/04/28/Engineering-Practice-2A-prepare/photo1.png" alt="Keil 目录"></p>
-<ol>
-<li> 新建一个 WorkSpace 文件夹，将三个 lab 的文件夹放进去 </li>
-<li> 打开 Keil，Open project 打开 lab 文件夹中的 exp1.uvprojx</li>
-<li> 编译 build 之后，就可以 load 下载到实验板上 <br><img src="/2021/04/28/Engineering-Practice-2A-prepare/photo2.png" alt="数据手册和用户指南"></li>
-</ol>
-]]></content>
+    <title>数据结构与算法 --4. 查找</title>
+    <url>/2019/03/31/algorithm-find/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
+<h3 id="一、概念"><a href="# 一、概念" class="headerlink" title="一、概念"></a>一、概念 </h3><h4 id="1- 查找：在数据集合 - 查找表 - 中寻找满足某种条件的数据元素的过程。"><a href="#1- 查找：在数据集合 - 查找表 - 中寻找满足某种条件的数据元素的过程。" class="headerlink" title="1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。"></a>1. 查找：在数据集合 (查找表) 中寻找满足某种条件的数据元素的过程。</h4><p> 查找表：$\begin {cases}<br>静态查找表：  &amp; \text {} \\<br>动态查找表：有增删 &amp; \text {}<br>\end {cases}$<br>查找的结果一般分为两种：<br>(1) 查找成功：在数据集合中找到了满足条件的数据元素<br>(2) 查找失败<br><span id="more"></span></p>
+<h4 id="2- 关键字"><a href="#2- 关键字" class="headerlink" title="2. 关键字"></a>2. 关键字 </h4><h4 id="3- 平均查找长度 -ASL-sum-i-0-n-P-iC-i"><a href="#3- 平均查找长度 -ASL-sum-i-0-n-P-iC-i" class="headerlink" title="3. 平均查找长度 $ASL = \sum_{i=0}^n P_iC_i$"></a>3. 平均查找长度 $ASL = \sum_{i=0}^n P_iC_i$</h4><h3 id="二、顺序查找、折半查找、分块查找"><a href="# 二、顺序查找、折半查找、分块查找" class="headerlink" title="二、顺序查找、折半查找、分块查找"></a> 二、顺序查找、折半查找、分块查找</h3><h4 id="1- 顺序查找：依次查找表中元素"><a href="#1- 顺序查找：依次查找表中元素" class="headerlink" title="1. 顺序查找：依次查找表中元素"></a>1. 顺序查找：依次查找表中元素</h4><h5 id="1- 一般线性表 - 无序 - 中的查找"><a href="#1- 一般线性表 - 无序 - 中的查找" class="headerlink" title="(1) 一般线性表 (无序) 中的查找"></a>(1) 一般线性表 (无序) 中的查找</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>, i&lt;n, i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// 对 a [i] 判断</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>$ASL_{成功} = \displaystyle {1 \over n}(1+2+…+n)={n+1 \over 2}$<br>$ASL_{失败} = n$</p>
+<h5 id="2- 有序表的顺序查找：失败时，可提前返回"><a href="#2- 有序表的顺序查找：失败时，可提前返回" class="headerlink" title="(2) 有序表的顺序查找：失败时，可提前返回"></a>(2) 有序表的顺序查找：失败时，可提前返回</h5><p>$ASL_{成功} = \displaystyle {n+1 \over 2}$<br>$ASL_{失败} = \displaystyle {1 \over n+1}(1+2+…+n+n) = {n \over 2} + {n \over n+1}$<br>$n$ 个分支节点是树有 $n+1$ 个叶子</p>
+<h4 id="2- 折半查找：有序的顺序表中"><a href="#2- 折半查找：有序的顺序表中" class="headerlink" title="2. 折半查找：有序的顺序表中"></a>2. 折半查找：有序的顺序表中</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Binary_Search</span> <span class="params">(SeqList L, ElemType key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> low=<span class="number">0</span>, high=L.TableLen<span class="number">-1</span>, mid;</span><br><span class="line">	<span class="keyword">while</span> (low &lt; high)</span><br><span class="line">	&#123;</span><br><span class="line">	    mid = (low + high) / <span class="number">2</span>;</span><br><span class="line">	    <span class="keyword">if</span> (L.elem [mid] == key)</span><br><span class="line">	        <span class="keyword">return</span> mid;</span><br><span class="line">	    <span class="keyword">else</span> <span class="keyword">if</span> (L.elem [mid] &gt; key)</span><br><span class="line">	        high = mid - <span class="number">1</span>;</span><br><span class="line">	    <span class="keyword">else</span></span><br><span class="line">	    	low = mid + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/31/algorithm-find/photo1.png" alt><br>判定树是一个平衡二叉树 <br> 判定树的高度：$\lceil log_2 (n+1) \rceil$ 或 $\lfloor log_2 (n) \rfloor + 1$<br>$ASL_{成功} = \displaystyle {1 \over 11}(1 \times 1 + 2 \times 2 + 3 \times 4 + 4 \times 4) = 3$<br>$ASL_{失败} = \displaystyle {1 \over 12}(3 \times 4 + 4 \times 8) = {11 \over 3}$<br>可以构成折半查找的序列：某数字后面的数字都与其有相同的大小关系</p>
+<h4 id="3- 分块查找：块间有序，块内无序"><a href="#3- 分块查找：块间有序，块内无序" class="headerlink" title="3. 分块查找：块间有序，块内无序"></a>3. 分块查找：块间有序，块内无序 </h4><p> 快的索引表是有序的，所以也可以顺序查找或是二分查找 <br> 问题：怎么分块，效率最高？<br>假设有 $n$ 个元素，$s$ 个元素一个块，块数总共有 $\displaystyle \lceil {n \over s} \rceil$<br>$ASL_{成功} = \displaystyle \frac {\frac {n}{s}+1}{2} + {s+1 \over 2}$</p>
+<p>$\quad \quad \quad  \; \displaystyle ={s \over 2} + {n \over 2s} + 1$</p>
+<p>$\quad \quad \quad  \; \geq \displaystyle 2 \sqrt {\frac {s}{2} \times \frac {n}{2s}} + 1 $</p>
+<p>$\quad \quad \quad  \; = \sqrt {n} + 1 $</p>
+<p>等号成立的条件：$\displaystyle {s \over 2} = {n \over 2s} $ =&gt; $s=\sqrt {n}$</p>
+<h3 id="三、B- 树（多路平衡查找树）"><a href="# 三、B- 树（多路平衡查找树）" class="headerlink" title="三、B 树（多路平衡查找树）"></a>三、B 树（多路平衡查找树）</h3><h4 id="1-B- 树及其基本操作"><a href="#1-B- 树及其基本操作" class="headerlink" title="1.B 树及其基本操作"></a>1.B 树及其基本操作</h4><p>B 树中所有节点的孩子节点数的最大值称为 B 树的阶，通常用 $m$ 表示</p>
+<h5 id="1- 树中每个节点至多有 -m- 棵子树"><a href="#1- 树中每个节点至多有 -m- 棵子树" class="headerlink" title="(1) 树中每个节点至多有 $m$ 棵子树"></a>(1) 树中每个节点至多有 $m$ 棵子树</h5><h5 id="2- 若根节点不是终端节点，则至少有两棵子树"><a href="#2- 若根节点不是终端节点，则至少有两棵子树" class="headerlink" title="(2) 若根节点不是终端节点，则至少有两棵子树"></a>(2) 若根节点不是终端节点，则至少有两棵子树</h5><h5 id="3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个"><a href="#3- 除根节点外的所有非叶节点至少有 -displaystyle-lceil-m-over-2-rceil- 个" class="headerlink" title="(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个"></a>(3) 除根节点外的所有非叶节点至少有 $\displaystyle \lceil {m \over 2} \rceil$ 个</h5><h5 id="4- 非叶节点的结构如下"><a href="#4- 非叶节点的结构如下" class="headerlink" title="(4) 非叶节点的结构如下"></a>(4) 非叶节点的结构如下</h5><p><img src="/2019/03/31/algorithm-find/photo2.png" alt><br>$n$：关键字的个数（$\displaystyle \lceil {m \over 2} \rceil -1 \leq n \leq m-1$）</p>
+<h5 id="5- 关键字 -1- 子树数"><a href="#5- 关键字 -1- 子树数" class="headerlink" title="(5) 关键字 $+1=$ 子树数"></a>(5) 关键字 $+1=$ 子树数 </h5><p>$\displaystyle \lceil {m \over 2} \rceil \leq $ 子树数 $ \leq m$<br> 根是特殊情形：$2 \leq $ 子树数 $ \leq m$</p>
+<h5 id="6- 关键字数 -m- 与高度 -h- 的关系"><a href="#6- 关键字数 -m- 与高度 -h- 的关系" class="headerlink" title="(6) 关键字数 $m$ 与高度 $h$ 的关系"></a>(6) 关键字数 $m$ 与高度 $h$ 的关系 </h5><p> 每个节点最多有 $m$ 个子树，第 $m$ 层最多总共有 $m^i$ 个子树，总共有 $(m-1) m^i$ 个关键字</p>
+<p>$1+2 (\lceil {m \over 2} \rceil -1)(1+ \lceil {m \over 2} \rceil + …+{\lceil {m \over 2} \rceil}^{h-2}) \leq n \leq (m-1)[1+m+m^2+…+m^{h-1}]$</p>
+<p>$1+2 \times (\lceil \frac {m}{2} \rceil -1) \times \displaystyle \frac {{\lceil \frac {m}{2} \rceil}^{h-1} - 1}{\lceil \frac {m}{2} \rceil -1} \leq n \leq (m-1) \times {m^h-1 \over m-1}$</p>
+<p>$2 {\lceil \frac {m}{2} \rceil}^{h-1} - 1 \leq n \leq m^h - 1$</p>
+<p>$log_m (n+1) \leq h \leq log_{\lceil \frac {m}{2} \rceil} \displaystyle ({n+1 \over 2}) +1$</p>
+<h4 id="2- 查找"><a href="#2- 查找" class="headerlink" title="2. 查找"></a>2. 查找 </h4><p> 节点上查找 $\begin {cases}<br>成功  &amp; \text {} \\<br>失败：子树查找 &amp; \text {}<br>\end {cases}$</p>
+<h4 id="3-B- 树插入"><a href="#3-B- 树插入" class="headerlink" title="3.B 树插入"></a>3.B 树插入 </h4><h5 id="1- 定位：某个非叶节点"><a href="#1- 定位：某个非叶节点" class="headerlink" title="(1) 定位：某个非叶节点"></a>(1) 定位：某个非叶节点</h5><h5 id="2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点"><a href="#2- 插入：若插入之后，关键字数目 -m-，分裂，将 -displaystyle-lceil-frac-m-2-rceil- 关键字插入父节点" class="headerlink" title="(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点"></a>(2) 插入：若插入之后，关键字数目 $=m$，分裂，将 $\displaystyle \lceil \frac {m}{2} \rceil$ 关键字插入父节点</h5><h4 id="4-B- 树删除"><a href="#4-B- 树删除" class="headerlink" title="4.B 树删除"></a>4.B 树删除</h4><p> 分层两大类情形：</p>
+<h5 id="1- 删除的节点是最底层分支"><a href="#1- 删除的节点是最底层分支" class="headerlink" title="(1) 删除的节点是最底层分支"></a>(1) 删除的节点是最底层分支 </h5><p>$\quad$(a) 欲删除节点的父节点关键字 $&gt; \lceil \frac {m}{2} \rceil -1$，直接删除<br>$\quad$(b) 欲删除节点的父节点关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad$ (i) 兄弟节点够借：关键字 $\leq \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 父子易位，再平衡<br><img src="/2019/03/31/algorithm-find/photo3.jpg" alt><br><img src="/2019/03/31/algorithm-find/photo4.jpg" alt><br>$\quad \quad$ (ii) 兄弟节点不够借：关键字 $= \lceil \frac {m}{2} \rceil -1$<br>$\quad \quad \quad$ 合并 (左 / 右 + 父亲 + 自己)<br><img src="/2019/03/31/algorithm-find/photo5.jpg" alt><br>Q：为什么能合并，不会超过关键字数量的上界吗？<br> 合并：$(\lceil \frac {m}{2} \rceil -1) + 1 + (\lceil \frac {m}{2} \rceil -2)=$</p>
+<h5 id="2- 删除的节点不是最底层分支"><a href="#2- 删除的节点不是最底层分支" class="headerlink" title="(2) 删除的节点不是最底层分支"></a>(2) 删除的节点不是最底层分支</h5>]]></content>
       <categories>
-        <category>大学课程-工程实践与科技创新2A</category>
+        <category>大学课程-数据结构与算法</category>
       </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>算法</tag>
+        <tag>查找</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据结构与算法 --1. 线性表</title>
@@ -1217,6 +1217,34 @@
       </categories>
   </entry>
   <entry>
+    <title>数据结构与算法 --2. 树</title>
+    <url>/2019/03/23/algorithm-tree/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
+<h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br><span id="more"></span><br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
+<h4 id="3- 树的性质"><a href="#3- 树的性质" class="headerlink" title="3. 树的性质"></a>3. 树的性质 </h4><h5 id="1-n-e-1- 树中的节点数等于所有结点的度数加 -1"><a href="#1-n-e-1- 树中的节点数等于所有结点的度数加 -1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1</h5><p> 边数 $d$，度数 $e$，$d=e$<br>可以用归纳法证明</p>
+<h5 id="2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1"><a href="#2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)</h5><h5 id="3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点"><a href="#3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点 </h5><p> 由性质（2）可得：$n \leq 1+m+m^2+…+m^{h-1}$<br>$\displaystyle n \leq {(m^h-1) \over (m-1)}$</p>
+<h5 id="4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil"><a href="#4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil" class="headerlink" title="(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$"></a>(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$</h5><p>由性质（3）可得：$h \geq \log_m {n (m-1)+1}$</p>
+<h5 id="5- 叶节点个数"><a href="#5- 叶节点个数" class="headerlink" title="(5) 叶节点个数"></a>(5) 叶节点个数</h5><p>$n=k_0+k_1+…+k_m -(1)$<br>$n=\sum_{i=0}^n d_i +1 \quad (d_i = 节点 n_i 的度数)$<br>$\quad =\sum_{i=0}^m i \cdot k_i \quad (k_i = 度为 i 的节点的数量)$<br>$\quad =k_1+2k_2+…+mk_m+1 -(2)$<br>$ 由式 (1) 和式 (2) 可得 $<br>$k_0=k_2+k_3+…+(m-1) k_m+1$</p>
+<h3 id="二、二叉树"><a href="# 二、二叉树" class="headerlink" title="二、二叉树"></a>二、二叉树 </h3><h4 id="1- 与 - 度为 -2- 的有序树 - 不同"><a href="#1- 与 - 度为 -2- 的有序树 - 不同" class="headerlink" title="1. 与 {度为 2 的有序树} 不同"></a>1. 与 {度为 2 的有序树} 不同</h4><p> 只有一个根节点不属于 {度为 2 的有序树}</p>
+<h4 id="2- 特殊二叉树种类"><a href="#2- 特殊二叉树种类" class="headerlink" title="2. 特殊二叉树种类"></a>2. 特殊二叉树种类 </h4><p> 满二叉树，完全二叉树</p>
+<h4 id="3- 性质"><a href="#3- 性质" class="headerlink" title="3. 性质"></a>3. 性质</h4><p>$n=k_0+k_1+k_2$<br>$k_0=k_2+1$<br>$ 两式相减得：k_0-n=1-k_0-k_1$<br>$2k_0=n+1-k_1$<br>$\displaystyle 当 k_1=0，n 为奇数，k_0={(n+1) \over 2}$<br>$\displaystyle 当 k_1=0，n 为偶数，k_0={n \over 2}$<br>$\displaystyle 结论：在完成二叉树或满二叉树中，k_0=\lceil {n \over 2} \rceil$</p>
+<h4 id="4- 存储结构"><a href="#4- 存储结构" class="headerlink" title="4. 存储结构"></a>4. 存储结构 </h4><h5 id="1- 顺序存储"><a href="#1- 顺序存储" class="headerlink" title="(1) 顺序存储"></a>(1) 顺序存储</h5><p> 按照完全二叉树的顺序，父节点和子节点之间有简单的关系 <br> 但是可能会造成空间浪费</p>
+<h5 id="2- 链式存储"><a href="#2- 链式存储" class="headerlink" title="(2) 链式存储"></a>(2) 链式存储</h5><figure class="highlight gauss"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">typedef <span class="keyword">struct</span> <span class="type">BiTNode</span></span><br><span class="line">&#123;</span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="keyword">struct</span> <span class="type">BiTNode</span> *ichild, *rchild;</span><br><span class="line">&#125; BiTNode, *BiTree;</span><br></pre></td></tr></table></figure>
+<h4 id="5- 二叉树的遍历"><a href="#5- 二叉树的遍历" class="headerlink" title="5. 二叉树的遍历"></a>5. 二叉树的遍历</h4><h5 id="1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问"><a href="#1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问" class="headerlink" title="(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问"></a>(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问</h5><figure class="highlight gcode"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// 先序遍历</span></span><br><span class="line">void PreOrder <span class="comment">(BiTree T)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="comment">(T!=NULL)</span></span><br><span class="line">	&#123;</span><br><span class="line">		visit <span class="comment">(T)</span>;            <span class="comment">// 访问根节点</span></span><br><span class="line">		PreOrder <span class="comment">(T-&gt;ichild)</span>; <span class="comment">// 递归遍历左子树</span></span><br><span class="line">		PreOrder <span class="comment">(T-&gt;echild)</span>; <span class="comment">// 递归遍历右子树</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2- 非递归算法"><a href="#2- 非递归算法" class="headerlink" title="(2) 非递归算法"></a>(2) 非递归算法</h5><figure class="highlight xl"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// 中序遍历的非递归算法</span></span><br><span class="line">void InOrder2 (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	InitStack (S); BiTree p = T;</span><br><span class="line">	<span class="keyword">while</span> (p || !IsEmpty (S))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (p)</span><br><span class="line">		&#123;</span><br><span class="line">			Push (S,p);</span><br><span class="line">			<span class="function"><span class="title">p</span> = p-&gt;</span>lchild;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			Pop (S,p); visit (p);</span><br><span class="line">			<span class="function"><span class="title">p</span> = p-&gt;</span>rchild;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 入栈序列：先序</span></span><br><span class="line"><span class="comment">// 出栈序列：中序</span></span><br></pre></td></tr></table></figure>
+<h5 id="3- 层次遍历"><a href="#3- 层次遍历" class="headerlink" title="(3) 层次遍历"></a>(3) 层次遍历 </h5><p> 利用队列：<br>将根节点入队 <br> 若队列不为空：队头元素出队，访问队头元素若有子节点，子节点入队</p>
+<h5 id="4- 由遍历序列构造二叉树"><a href="#4- 由遍历序列构造二叉树" class="headerlink" title="(4) 由遍历序列构造二叉树"></a>(4) 由遍历序列构造二叉树 </h5><h6 id="a- 先序 - 中序"><a href="#a- 先序 - 中序" class="headerlink" title="(a) 先序 + 中序"></a>(a) 先序 + 中序</h6><p> 中序遍历最左端元素第一个访问，排序树的插入会用到这个性质 <br> 先序序列第一个元素是根节点</p>
+<h6 id="b- 后序 - 中序"><a href="#b- 后序 - 中序" class="headerlink" title="(b) 后序 + 中序"></a>(b) 后序 + 中序</h6><h6 id="c- 层次 - 中序"><a href="#c- 层次 - 中序" class="headerlink" title="(c) 层次 + 中序"></a>(c) 层次 + 中序</h6>]]></content>
+      <categories>
+        <category>大学课程-数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>算法</tag>
+        <tag>树</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构与算法 --5. 排序</title>
     <url>/2019/04/03/algorithm-sort/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a><br><span id="more"></span></p>
@@ -1246,31 +1274,47 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法 --2. 树</title>
-    <url>/2019/03/23/algorithm-tree/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/03/21/algorithm-linearTable/">数据结构与算法 —1. 线性表 </a><br><a href="https://wangxchun.github.io/2019/03/23/algorithm-tree/"> 数据结构与算法 —2. 树 </a><br><a href="https://wangxchun.github.io/2019/03/27/algorithm-graph/"> 数据结构与算法 —3. 图 </a><br><a href="https://wangxchun.github.io/2019/03/31/algorithm-find/"> 数据结构与算法 —4. 查找 </a><br><a href="https://wangxchun.github.io/2019/04/03/algorithm-sort/"> 数据结构与算法 —5. 排序</a></p>
-<h3 id="一、基本概念"><a href="# 一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念 </h3><h4 id="1- 树的定义：递归定义"><a href="#1- 树的定义：递归定义" class="headerlink" title="1. 树的定义：递归定义"></a>1. 树的定义：递归定义</h4><h4 id="2- 基本术语"><a href="#2- 基本术语" class="headerlink" title="2. 基本术语"></a>2. 基本术语</h4><p> 父节点，子节点，兄弟节点 <br> 根节点，叶节点 <br> 层 (深度)，高度 (树的高度 = 根节点的高度)<br>有序树 (兄弟节点之间是有顺序的)，无序树 <br><span id="more"></span><br> 路径 (树的边是单向的)，路径长度 (一条路径边的个数)，带权路径 <br> 节点的度 (子节点的数量)，树的度 (最大的度)</p>
-<h4 id="3- 树的性质"><a href="#3- 树的性质" class="headerlink" title="3. 树的性质"></a>3. 树的性质 </h4><h5 id="1-n-e-1- 树中的节点数等于所有结点的度数加 -1"><a href="#1-n-e-1- 树中的节点数等于所有结点的度数加 -1" class="headerlink" title="(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1"></a>(1) $n=e+1$ 树中的节点数等于所有结点的度数加 1</h5><p> 边数 $d$，度数 $e$，$d=e$<br>可以用归纳法证明</p>
-<h5 id="2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1"><a href="#2- 度为 -m- 的树中，第 -i- 层上至多有 -m-i-1- 个节点 -i-geq-1" class="headerlink" title="(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)"></a>(2) 度为 $m$ 的树中，第 $i$ 层上至多有 $m^{i-1}$ 个节点 ($i \geq 1$)</h5><h5 id="3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点"><a href="#3- 高度为 -h- 的 -m- 叉树中至多有 -displaystyle-m-h-1-over-m-1- 个节点" class="headerlink" title="(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点"></a>(3) 高度为 $h$ 的 $m$ 叉树中至多有 $\displaystyle {(m^h-1) \over (m-1)}$ 个节点 </h5><p> 由性质（2）可得：$n \leq 1+m+m^2+…+m^{h-1}$<br>$\displaystyle n \leq {(m^h-1) \over (m-1)}$</p>
-<h5 id="4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil"><a href="#4- 具有 -n- 个节点的 -m- 叉树的最小高度为 -lceil-log-m-n-m-1-1-rceil" class="headerlink" title="(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$"></a>(4) 具有 $n$ 个节点的 $m$ 叉树的最小高度为 $\lceil \log_m {(n (m-1)+1)} \rceil$</h5><p>由性质（3）可得：$h \geq \log_m {n (m-1)+1}$</p>
-<h5 id="5- 叶节点个数"><a href="#5- 叶节点个数" class="headerlink" title="(5) 叶节点个数"></a>(5) 叶节点个数</h5><p>$n=k_0+k_1+…+k_m -(1)$<br>$n=\sum_{i=0}^n d_i +1 \quad (d_i = 节点 n_i 的度数)$<br>$\quad =\sum_{i=0}^m i \cdot k_i \quad (k_i = 度为 i 的节点的数量)$<br>$\quad =k_1+2k_2+…+mk_m+1 -(2)$<br>$ 由式 (1) 和式 (2) 可得 $<br>$k_0=k_2+k_3+…+(m-1) k_m+1$</p>
-<h3 id="二、二叉树"><a href="# 二、二叉树" class="headerlink" title="二、二叉树"></a>二、二叉树 </h3><h4 id="1- 与 - 度为 -2- 的有序树 - 不同"><a href="#1- 与 - 度为 -2- 的有序树 - 不同" class="headerlink" title="1. 与 {度为 2 的有序树} 不同"></a>1. 与 {度为 2 的有序树} 不同</h4><p> 只有一个根节点不属于 {度为 2 的有序树}</p>
-<h4 id="2- 特殊二叉树种类"><a href="#2- 特殊二叉树种类" class="headerlink" title="2. 特殊二叉树种类"></a>2. 特殊二叉树种类 </h4><p> 满二叉树，完全二叉树</p>
-<h4 id="3- 性质"><a href="#3- 性质" class="headerlink" title="3. 性质"></a>3. 性质</h4><p>$n=k_0+k_1+k_2$<br>$k_0=k_2+1$<br>$ 两式相减得：k_0-n=1-k_0-k_1$<br>$2k_0=n+1-k_1$<br>$\displaystyle 当 k_1=0，n 为奇数，k_0={(n+1) \over 2}$<br>$\displaystyle 当 k_1=0，n 为偶数，k_0={n \over 2}$<br>$\displaystyle 结论：在完成二叉树或满二叉树中，k_0=\lceil {n \over 2} \rceil$</p>
-<h4 id="4- 存储结构"><a href="#4- 存储结构" class="headerlink" title="4. 存储结构"></a>4. 存储结构 </h4><h5 id="1- 顺序存储"><a href="#1- 顺序存储" class="headerlink" title="(1) 顺序存储"></a>(1) 顺序存储</h5><p> 按照完全二叉树的顺序，父节点和子节点之间有简单的关系 <br> 但是可能会造成空间浪费</p>
-<h5 id="2- 链式存储"><a href="#2- 链式存储" class="headerlink" title="(2) 链式存储"></a>(2) 链式存储</h5><figure class="highlight gauss"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line">typedef <span class="keyword">struct</span> <span class="type">BiTNode</span></span><br><span class="line">&#123;</span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="keyword">struct</span> <span class="type">BiTNode</span> *ichild, *rchild;</span><br><span class="line">&#125; BiTNode, *BiTree;</span><br></pre></td></tr></table></figure>
-<h4 id="5- 二叉树的遍历"><a href="#5- 二叉树的遍历" class="headerlink" title="5. 二叉树的遍历"></a>5. 二叉树的遍历</h4><h5 id="1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问"><a href="#1- 遍历有先序 -NLR-、中序 -LNR-、后序 -LRN- 三种遍历算法，其中 -“序”- 指的是根节点在何时被访问" class="headerlink" title="(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问"></a>(1) 遍历有先序 (NLR)、中序 (LNR)、后序 (LRN) 三种遍历算法，其中 “序” 指的是根节点在何时被访问</h5><figure class="highlight gcode"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// 先序遍历</span></span><br><span class="line">void PreOrder <span class="comment">(BiTree T)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="comment">(T!=NULL)</span></span><br><span class="line">	&#123;</span><br><span class="line">		visit <span class="comment">(T)</span>;            <span class="comment">// 访问根节点</span></span><br><span class="line">		PreOrder <span class="comment">(T-&gt;ichild)</span>; <span class="comment">// 递归遍历左子树</span></span><br><span class="line">		PreOrder <span class="comment">(T-&gt;echild)</span>; <span class="comment">// 递归遍历右子树</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="2- 非递归算法"><a href="#2- 非递归算法" class="headerlink" title="(2) 非递归算法"></a>(2) 非递归算法</h5><figure class="highlight xl"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// 中序遍历的非递归算法</span></span><br><span class="line">void InOrder2 (BiTree T)</span><br><span class="line">&#123;</span><br><span class="line">	InitStack (S); BiTree p = T;</span><br><span class="line">	<span class="keyword">while</span> (p || !IsEmpty (S))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (p)</span><br><span class="line">		&#123;</span><br><span class="line">			Push (S,p);</span><br><span class="line">			<span class="function"><span class="title">p</span> = p-&gt;</span>lchild;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			Pop (S,p); visit (p);</span><br><span class="line">			<span class="function"><span class="title">p</span> = p-&gt;</span>rchild;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 入栈序列：先序</span></span><br><span class="line"><span class="comment">// 出栈序列：中序</span></span><br></pre></td></tr></table></figure>
-<h5 id="3- 层次遍历"><a href="#3- 层次遍历" class="headerlink" title="(3) 层次遍历"></a>(3) 层次遍历 </h5><p> 利用队列：<br>将根节点入队 <br> 若队列不为空：队头元素出队，访问队头元素若有子节点，子节点入队</p>
-<h5 id="4- 由遍历序列构造二叉树"><a href="#4- 由遍历序列构造二叉树" class="headerlink" title="(4) 由遍历序列构造二叉树"></a>(4) 由遍历序列构造二叉树 </h5><h6 id="a- 先序 - 中序"><a href="#a- 先序 - 中序" class="headerlink" title="(a) 先序 + 中序"></a>(a) 先序 + 中序</h6><p> 中序遍历最左端元素第一个访问，排序树的插入会用到这个性质 <br> 先序序列第一个元素是根节点</p>
-<h6 id="b- 后序 - 中序"><a href="#b- 后序 - 中序" class="headerlink" title="(b) 后序 + 中序"></a>(b) 后序 + 中序</h6><h6 id="c- 层次 - 中序"><a href="#c- 层次 - 中序" class="headerlink" title="(c) 层次 + 中序"></a>(c) 层次 + 中序</h6>]]></content>
+    <title>通信原理 --（2）信道</title>
+    <url>/2020/09/14/communicationSystem-channel/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
+<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道 </h3><h4 id="1- 信道的概念"><a href="#1- 信道的概念" class="headerlink" title="1. 信道的概念"></a>1. 信道的概念</h4><p> 为什么要研究信道？因为信道会导致信号的变化 <br> 如何研究信道？建立数学模型 <br><img src="/2020/09/14/communicationSystem-channel/photo1.jpg" alt><br>$r (t) = s (t) \oplus h (t) + n (t)$<br> 从信号处理角度看，信道就是一个滤波器，$h (t)$ 是滤波器的冲激响应。<br>从信号与系统的角度看，信道就是一个系统，$h (t)$ 是系统的冲激响应。<br>对于信道来说，$h (t)$ 就是信道的冲激响应，也称信道的特性。<br><span id="more"></span></p>
+<h4 id="2- 实际无线信道"><a href="#2- 实际无线信道" class="headerlink" title="2. 实际无线信道"></a>2. 实际无线信道</h4><h5 id="1- 电磁波频谱划分"><a href="#1- 电磁波频谱划分" class="headerlink" title="(1) 电磁波频谱划分"></a>(1) 电磁波频谱划分</h5><p><img src="/2020/09/14/communicationSystem-channel/photo2.jpg" alt></p>
+<h5 id="2- 电磁波的特性"><a href="#2- 电磁波的特性" class="headerlink" title="(2) 电磁波的特性"></a>(2) 电磁波的特性 </h5><p> 电磁波频率越高，通信波束越窄 (功率利用越充分)，天线发射效率越高 (天线口径可越小)，<br>穿透能力越强，绕射能力越弱</p>
+<h5 id="3- 电磁波主要传播方式"><a href="#3- 电磁波主要传播方式" class="headerlink" title="(3) 电磁波主要传播方式"></a>(3) 电磁波主要传播方式</h5><p>(a) 天波传播：短波 (3M-30MHz)、电离层的反射 (频率低易反射)<br>(b) 地波传播：长波、绕射<br>(c) 散射传播：微波、对流程的散射、大容量战略通信<br>(d) 视距传播：超短波、微波（地面的远距传播必须设置中继站）</p>
+<h4 id="3- 实际有线信道"><a href="#3- 实际有线信道" class="headerlink" title="3. 实际有线信道"></a>3. 实际有线信道</h4><p><img src="/2020/09/14/communicationSystem-channel/photo3.jpg" alt></p>
+<h5 id="1- 双绞线"><a href="#1- 双绞线" class="headerlink" title="(1) 双绞线"></a>(1) 双绞线</h5><p>Q：为什么要进行扭绞？<br>A：为了提高抗干扰性能，绞度越大，抗干扰能力越好，同时成本也越高<br>Q：为什么纽绞可以提高抗干扰特性？<br>A：从理论上讲，电路形成的环路围绕的面积越大，就月容易被干扰信号影响。双绞线将环路面积减到最小，所以抗干扰能力强。两根非常接近的铜线都在传导电信号时，就会出现一定的电磁干扰，这种干扰称作串扰。如果把电极相反的一根铜线相互绞在一起，可以减少串扰以及信号放射程度，每一根缠绕着的导线在导电时，发出的电磁幅射被绞合的另一根线上发出的电磁辐射所抵消，随着单位长度电缆中所缠绕的线的对数的增加，防止串饶的能力也增加。</p>
+<h5 id="2- 同轴电缆"><a href="#2- 同轴电缆" class="headerlink" title="(2) 同轴电缆"></a>(2) 同轴电缆 </h5><h5 id="3- 光纤"><a href="#3- 光纤" class="headerlink" title="(3) 光纤"></a>(3) 光纤</h5><p> 光纤的色散限制了光纤的无中继传输距离 <br> 延申阅读：如何利用光子的轨道角动量 (OAM) 进一步提高光通信的传输速率和频带利用率？关于 OAM 的光通信要解决的关键问题有哪些？如何解决？</p>
+<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性</h3><h4 id="1- 信道特性及其数学模型"><a href="#1- 信道特性及其数学模型" class="headerlink" title="1. 信道特性及其数学模型"></a>1. 信道特性及其数学模型</h4><h5 id="1- 调制信道和编码信道"><a href="#1- 调制信道和编码信道" class="headerlink" title="(1) 调制信道和编码信道"></a>(1) 调制信道和编码信道</h5><p><img src="/2020/09/14/communicationSystem-channel/photo4.jpg" alt></p>
+<h5 id="2- 二对端的调制信道模型"><a href="#2- 二对端的调制信道模型" class="headerlink" title="(2) 二对端的调制信道模型"></a>(2) 二对端的调制信道模型 </h5><p>$e_o (t) = k (t) \cdot e_i (t) + n (t)$<br> 加性干扰 $n (t)$：即使没有信号输入，接收端仍有信号输出 <br> 乘性干扰 $k (t)$：恒参信道、随参信道<br>(a) 加性噪声恒参信道<br><img src="/2020/09/14/communicationSystem-channel/photo5.jpg" alt><br>(b) 具有加性噪声的线性滤波信<br><img src="/2020/09/14/communicationSystem-channel/photo6.jpg" alt><br>(c) 具有加性噪声的时变线性滤波信道<br><img src="/2020/09/14/communicationSystem-channel/photo7.jpg" alt></p>
+<h5 id="3- 编码信道模型：采用数字信号的转移概率来描述"><a href="#3- 编码信道模型：采用数字信号的转移概率来描述" class="headerlink" title="(3) 编码信道模型：采用数字信号的转移概率来描述"></a>(3) 编码信道模型：采用数字信号的转移概率来描述</h5><p><img src="/2020/09/14/communicationSystem-channel/photo8.jpg" alt></p>
+<h4 id="2- 信道特性对信号传输的影响"><a href="#2- 信道特性对信号传输的影响" class="headerlink" title="2. 信道特性对信号传输的影响"></a>2. 信道特性对信号传输的影响 </h4><p> 信道的传输特性可以用其幅频特性和相频特性来描述 (适用于恒参信道)。<br>信道引起的失真：</p>
+<h5 id="1- 码间串扰"><a href="#1- 码间串扰" class="headerlink" title="(1) 码间串扰"></a>(1) 码间串扰</h5><p>(a) 传输特性不理想，导致前后码元波形畸变并使前面波形出现拖尾，从而对当前码元的判决造成干扰。<br>(b) 多径延迟使得基带码元重叠，也会造成码间串扰。</p>
+<h5 id="2- 频率偏移：多普勒效应"><a href="#2- 频率偏移：多普勒效应" class="headerlink" title="(2) 频率偏移：多普勒效应"></a>(2) 频率偏移：多普勒效应 </h5><h5 id="3- 信号衰落"><a href="#3- 信号衰落" class="headerlink" title="(3) 信号衰落"></a>(3) 信号衰落</h5><pre><code> 移动通信中信号随接受机与发射机之间的距离不断变化即产生了衰落。其中，信号强度曲线的中直呈现慢速变化
+，称为慢衰落；曲线的瞬时值呈快速变化，称快衰落。可见快衰落与慢衰落并不是两个独立的衰落（虽然他们的
+产生原因不同），快衰落反映的是瞬时值，慢衰落反映的是瞬时值加权平均后的中值。
+</code></pre><p>(a) 快衰落：主要原因是多径传输。<br>快衰一般服从瑞利（Rayleigh）分布、莱斯（Rice）分布或纳卡迦米（Nakagami）分布。</p>
+<ul>
+<li>时间选择性衰落：主要原因是多普勒效应，交织编码可以克服时间选择性衰落。</li>
+<li>频率选择性衰落：原因多是时延扩展</li>
+<li>空间选择性衰落：在无线通信系统中天线的点波束产生了扩散而引起了空间选择性衰落。<br>(b) 慢衰落：主要原因是传输媒质结构发生变化。<br>对流层散射传播中，慢衰落通常服从对数正态分布。 </li>
+</ul>
+<p># 时延扩展：<br>多径效应（同一信号的不同分量到达的时间不同）引起的接受信号脉冲宽度扩展的现象称为时延扩展。<br>时延扩展（多径信号最快和最慢的时间差）小于码元周期可以避免码间串扰，超过一个码元周期（WCDMA 中一个码片）需要用分集接收，均衡算法来接收。<br># 相关带宽：<br>相关带宽内各频率分量的衰落时一致的也叫相关的，不会失真。<br>载波宽度大于相关带宽就会引起频率选择性衰了使接收信号失真。</p>
+<h4 id="3- 信道中的噪声和干扰"><a href="#3- 信道中的噪声和干扰" class="headerlink" title="3. 信道中的噪声和干扰"></a>3. 信道中的噪声和干扰 </h4><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量 </h3><h4 id="1- 信道容量的概念"><a href="#1- 信道容量的概念" class="headerlink" title="1. 信道容量的概念"></a>1. 信道容量的概念</h4><p> 信道中信息能够无差错传输的最大平均信息速率。</p>
+<h4 id="2- 连续信道的信道容量"><a href="#2- 连续信道的信道容量" class="headerlink" title="2. 连续信道的信道容量"></a>2. 连续信道的信道容量 </h4><h5 id="1- 香浓公式"><a href="#1- 香浓公式" class="headerlink" title="(1) 香浓公式"></a>(1) 香浓公式</h5><p> 对于带宽有限、平均功率有限的高斯白噪声连续信道，设信道带宽为 $B (Hz)$，信道输出信号功率为 $S (W)$，输出加性高斯白噪声功率为 $N (W)$，则可以证明该信道的信道容量为 $\displaystyle C = B \log_2 (1 + {S \over N}) (b/s)$<br>令加性高斯白噪声的单边功率谱密度为 $n_0$，则 $N=n_0 B$</p>
+<h5 id="2- 信道容量极限：即使带宽无穷大，信道容量也是有限值"><a href="#2- 信道容量极限：即使带宽无穷大，信道容量也是有限值" class="headerlink" title="(2) 信道容量极限：即使带宽无穷大，信道容量也是有限值"></a>(2) 信道容量极限：即使带宽无穷大，信道容量也是有限值</h5><p>$\displaystyle \lim \limits_{B \to \infty} C = \lim \limits_{B \to \infty} [{B n_0 \over S} \log_2 (1+ {S \over Bn_0})] \cdot {S \over n_0} = 1.44 {S \over n_0}$</p>
+<p>使用到极限：$\displaystyle \lim \limits_{x \to 0} \log {1+x \over x} = 1$<br>证明：<br>$\displaystyle \lim \limits_{x \to 0} \log {1+x \over x}$<br>$= \displaystyle \lim \limits_{x \to 0} {1 \over x} \cdot \log (1+x) $<br>$= \displaystyle \lim \limits_{x \to 0} \log (1+x)^{1 \over x}$<br>$= \log e$<br>$= 1$<br>若底数为 $2$，利用换底公式：$\displaystyle \log_a N = {log_m N \over log_m a}$</p>
+<h5 id="3- 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 -1-6dB"><a href="#3- 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 -1-6dB" class="headerlink" title="(3) 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 $-1.6dB$"></a>(3) 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 $-1.6dB$</h5><p>该值通常称为 $AWGN$ 信道的极限信噪比，或是香浓极限。<br>推导：<br>令信息传输速率 $R=C$，比特平均能量为 $E_b$，信道容量极限可以表示为：<br>$\displaystyle \lim \limits_{B \to \infty} = 1.44 {S \over n_0} = 1.44 {E_b C \over n_0}$<br>$=&gt; \displaystyle {E_b \over n_0} = {1 \over 1.44} = -1.6dB$</p>
+<h4 id="3- 离散信道的信道容量"><a href="#3- 离散信道的信道容量" class="headerlink" title="3. 离散信道的信道容量"></a>3. 离散信道的信道容量 </h4><h3 id="习题"><a href="# 习题" class="headerlink" title="习题"></a> 习题</h3><ol>
+<li>恒参信道等效模型如图，试分析信号通过该信道传输时会产生哪些失真？<img src="/2020/09/14/communicationSystem-channel/photo10.png" alt><br>由《信号与系统》课程可知，<br>网络的传输特性 $H (w)$ 通常可用幅频特性 $|H (w)|$ 和相频特性 $\phi (w)$ 来表征 $H (w) = |H (w)| e^{\phi (w)}$。<br><img src="/2020/09/14/communicationSystem-channel/photo11.png" alt></li>
+</ol>
+]]></content>
       <categories>
-        <category>大学课程-数据结构与算法</category>
+        <category>大学课程-通信原理</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
-        <tag>算法</tag>
-        <tag>树</tag>
+        <tag>通信原理</tag>
+        <tag>信道</tag>
+        <tag>信道容量</tag>
       </tags>
   </entry>
   <entry>
@@ -1339,50 +1383,6 @@
       </tags>
   </entry>
   <entry>
-    <title>通信原理 --（2）信道</title>
-    <url>/2020/09/14/communicationSystem-channel/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、信道的概念和实际信道"><a href="# 一、信道的概念和实际信道" class="headerlink" title="一、信道的概念和实际信道"></a>一、信道的概念和实际信道 </h3><h4 id="1- 信道的概念"><a href="#1- 信道的概念" class="headerlink" title="1. 信道的概念"></a>1. 信道的概念</h4><p> 为什么要研究信道？因为信道会导致信号的变化 <br> 如何研究信道？建立数学模型 <br><img src="/2020/09/14/communicationSystem-channel/photo1.jpg" alt><br>$r (t) = s (t) \oplus h (t) + n (t)$<br> 从信号处理角度看，信道就是一个滤波器，$h (t)$ 是滤波器的冲激响应。<br>从信号与系统的角度看，信道就是一个系统，$h (t)$ 是系统的冲激响应。<br>对于信道来说，$h (t)$ 就是信道的冲激响应，也称信道的特性。<br><span id="more"></span></p>
-<h4 id="2- 实际无线信道"><a href="#2- 实际无线信道" class="headerlink" title="2. 实际无线信道"></a>2. 实际无线信道</h4><h5 id="1- 电磁波频谱划分"><a href="#1- 电磁波频谱划分" class="headerlink" title="(1) 电磁波频谱划分"></a>(1) 电磁波频谱划分</h5><p><img src="/2020/09/14/communicationSystem-channel/photo2.jpg" alt></p>
-<h5 id="2- 电磁波的特性"><a href="#2- 电磁波的特性" class="headerlink" title="(2) 电磁波的特性"></a>(2) 电磁波的特性 </h5><p> 电磁波频率越高，通信波束越窄 (功率利用越充分)，天线发射效率越高 (天线口径可越小)，<br>穿透能力越强，绕射能力越弱</p>
-<h5 id="3- 电磁波主要传播方式"><a href="#3- 电磁波主要传播方式" class="headerlink" title="(3) 电磁波主要传播方式"></a>(3) 电磁波主要传播方式</h5><p>(a) 天波传播：短波 (3M-30MHz)、电离层的反射 (频率低易反射)<br>(b) 地波传播：长波、绕射<br>(c) 散射传播：微波、对流程的散射、大容量战略通信<br>(d) 视距传播：超短波、微波（地面的远距传播必须设置中继站）</p>
-<h4 id="3- 实际有线信道"><a href="#3- 实际有线信道" class="headerlink" title="3. 实际有线信道"></a>3. 实际有线信道</h4><p><img src="/2020/09/14/communicationSystem-channel/photo3.jpg" alt></p>
-<h5 id="1- 双绞线"><a href="#1- 双绞线" class="headerlink" title="(1) 双绞线"></a>(1) 双绞线</h5><p>Q：为什么要进行扭绞？<br>A：为了提高抗干扰性能，绞度越大，抗干扰能力越好，同时成本也越高<br>Q：为什么纽绞可以提高抗干扰特性？<br>A：从理论上讲，电路形成的环路围绕的面积越大，就月容易被干扰信号影响。双绞线将环路面积减到最小，所以抗干扰能力强。两根非常接近的铜线都在传导电信号时，就会出现一定的电磁干扰，这种干扰称作串扰。如果把电极相反的一根铜线相互绞在一起，可以减少串扰以及信号放射程度，每一根缠绕着的导线在导电时，发出的电磁幅射被绞合的另一根线上发出的电磁辐射所抵消，随着单位长度电缆中所缠绕的线的对数的增加，防止串饶的能力也增加。</p>
-<h5 id="2- 同轴电缆"><a href="#2- 同轴电缆" class="headerlink" title="(2) 同轴电缆"></a>(2) 同轴电缆 </h5><h5 id="3- 光纤"><a href="#3- 光纤" class="headerlink" title="(3) 光纤"></a>(3) 光纤</h5><p> 光纤的色散限制了光纤的无中继传输距离 <br> 延申阅读：如何利用光子的轨道角动量 (OAM) 进一步提高光通信的传输速率和频带利用率？关于 OAM 的光通信要解决的关键问题有哪些？如何解决？</p>
-<h3 id="二、信道的数字模型和信道特性"><a href="# 二、信道的数字模型和信道特性" class="headerlink" title="二、信道的数字模型和信道特性"></a>二、信道的数字模型和信道特性</h3><h4 id="1- 信道特性及其数学模型"><a href="#1- 信道特性及其数学模型" class="headerlink" title="1. 信道特性及其数学模型"></a>1. 信道特性及其数学模型</h4><h5 id="1- 调制信道和编码信道"><a href="#1- 调制信道和编码信道" class="headerlink" title="(1) 调制信道和编码信道"></a>(1) 调制信道和编码信道</h5><p><img src="/2020/09/14/communicationSystem-channel/photo4.jpg" alt></p>
-<h5 id="2- 二对端的调制信道模型"><a href="#2- 二对端的调制信道模型" class="headerlink" title="(2) 二对端的调制信道模型"></a>(2) 二对端的调制信道模型 </h5><p>$e_o (t) = k (t) \cdot e_i (t) + n (t)$<br> 加性干扰 $n (t)$：即使没有信号输入，接收端仍有信号输出 <br> 乘性干扰 $k (t)$：恒参信道、随参信道<br>(a) 加性噪声恒参信道<br><img src="/2020/09/14/communicationSystem-channel/photo5.jpg" alt><br>(b) 具有加性噪声的线性滤波信<br><img src="/2020/09/14/communicationSystem-channel/photo6.jpg" alt><br>(c) 具有加性噪声的时变线性滤波信道<br><img src="/2020/09/14/communicationSystem-channel/photo7.jpg" alt></p>
-<h5 id="3- 编码信道模型：采用数字信号的转移概率来描述"><a href="#3- 编码信道模型：采用数字信号的转移概率来描述" class="headerlink" title="(3) 编码信道模型：采用数字信号的转移概率来描述"></a>(3) 编码信道模型：采用数字信号的转移概率来描述</h5><p><img src="/2020/09/14/communicationSystem-channel/photo8.jpg" alt></p>
-<h4 id="2- 信道特性对信号传输的影响"><a href="#2- 信道特性对信号传输的影响" class="headerlink" title="2. 信道特性对信号传输的影响"></a>2. 信道特性对信号传输的影响 </h4><p> 信道的传输特性可以用其幅频特性和相频特性来描述 (适用于恒参信道)。<br>信道引起的失真：</p>
-<h5 id="1- 码间串扰"><a href="#1- 码间串扰" class="headerlink" title="(1) 码间串扰"></a>(1) 码间串扰</h5><p>(a) 传输特性不理想，导致前后码元波形畸变并使前面波形出现拖尾，从而对当前码元的判决造成干扰。<br>(b) 多径延迟使得基带码元重叠，也会造成码间串扰。</p>
-<h5 id="2- 频率偏移：多普勒效应"><a href="#2- 频率偏移：多普勒效应" class="headerlink" title="(2) 频率偏移：多普勒效应"></a>(2) 频率偏移：多普勒效应 </h5><h5 id="3- 信号衰落"><a href="#3- 信号衰落" class="headerlink" title="(3) 信号衰落"></a>(3) 信号衰落</h5><pre><code> 移动通信中信号随接受机与发射机之间的距离不断变化即产生了衰落。其中，信号强度曲线的中直呈现慢速变化
-，称为慢衰落；曲线的瞬时值呈快速变化，称快衰落。可见快衰落与慢衰落并不是两个独立的衰落（虽然他们的
-产生原因不同），快衰落反映的是瞬时值，慢衰落反映的是瞬时值加权平均后的中值。
-</code></pre><p>(a) 快衰落：主要原因是多径传输。<br>快衰一般服从瑞利（Rayleigh）分布、莱斯（Rice）分布或纳卡迦米（Nakagami）分布。</p>
-<ul>
-<li>时间选择性衰落：主要原因是多普勒效应，交织编码可以克服时间选择性衰落。</li>
-<li>频率选择性衰落：原因多是时延扩展</li>
-<li>空间选择性衰落：在无线通信系统中天线的点波束产生了扩散而引起了空间选择性衰落。<br>(b) 慢衰落：主要原因是传输媒质结构发生变化。<br>对流层散射传播中，慢衰落通常服从对数正态分布。 </li>
-</ul>
-<p># 时延扩展：<br>多径效应（同一信号的不同分量到达的时间不同）引起的接受信号脉冲宽度扩展的现象称为时延扩展。<br>时延扩展（多径信号最快和最慢的时间差）小于码元周期可以避免码间串扰，超过一个码元周期（WCDMA 中一个码片）需要用分集接收，均衡算法来接收。<br># 相关带宽：<br>相关带宽内各频率分量的衰落时一致的也叫相关的，不会失真。<br>载波宽度大于相关带宽就会引起频率选择性衰了使接收信号失真。</p>
-<h4 id="3- 信道中的噪声和干扰"><a href="#3- 信道中的噪声和干扰" class="headerlink" title="3. 信道中的噪声和干扰"></a>3. 信道中的噪声和干扰 </h4><h3 id="三、信道容量"><a href="# 三、信道容量" class="headerlink" title="三、信道容量"></a> 三、信道容量 </h3><h4 id="1- 信道容量的概念"><a href="#1- 信道容量的概念" class="headerlink" title="1. 信道容量的概念"></a>1. 信道容量的概念</h4><p> 信道中信息能够无差错传输的最大平均信息速率。</p>
-<h4 id="2- 连续信道的信道容量"><a href="#2- 连续信道的信道容量" class="headerlink" title="2. 连续信道的信道容量"></a>2. 连续信道的信道容量 </h4><h5 id="1- 香浓公式"><a href="#1- 香浓公式" class="headerlink" title="(1) 香浓公式"></a>(1) 香浓公式</h5><p> 对于带宽有限、平均功率有限的高斯白噪声连续信道，设信道带宽为 $B (Hz)$，信道输出信号功率为 $S (W)$，输出加性高斯白噪声功率为 $N (W)$，则可以证明该信道的信道容量为 $\displaystyle C = B \log_2 (1 + {S \over N}) (b/s)$<br>令加性高斯白噪声的单边功率谱密度为 $n_0$，则 $N=n_0 B$</p>
-<h5 id="2- 信道容量极限：即使带宽无穷大，信道容量也是有限值"><a href="#2- 信道容量极限：即使带宽无穷大，信道容量也是有限值" class="headerlink" title="(2) 信道容量极限：即使带宽无穷大，信道容量也是有限值"></a>(2) 信道容量极限：即使带宽无穷大，信道容量也是有限值</h5><p>$\displaystyle \lim \limits_{B \to \infty} C = \lim \limits_{B \to \infty} [{B n_0 \over S} \log_2 (1+ {S \over Bn_0})] \cdot {S \over n_0} = 1.44 {S \over n_0}$</p>
-<p>使用到极限：$\displaystyle \lim \limits_{x \to 0} \log {1+x \over x} = 1$<br>证明：<br>$\displaystyle \lim \limits_{x \to 0} \log {1+x \over x}$<br>$= \displaystyle \lim \limits_{x \to 0} {1 \over x} \cdot \log (1+x) $<br>$= \displaystyle \lim \limits_{x \to 0} \log (1+x)^{1 \over x}$<br>$= \log e$<br>$= 1$<br>若底数为 $2$，利用换底公式：$\displaystyle \log_a N = {log_m N \over log_m a}$</p>
-<h5 id="3- 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 -1-6dB"><a href="#3- 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 -1-6dB" class="headerlink" title="(3) 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 $-1.6dB$"></a>(3) 带宽无穷大，保证无差错极限信息传输速率的最小信噪比为 $-1.6dB$</h5><p>该值通常称为 $AWGN$ 信道的极限信噪比，或是香浓极限。<br>推导：<br>令信息传输速率 $R=C$，比特平均能量为 $E_b$，信道容量极限可以表示为：<br>$\displaystyle \lim \limits_{B \to \infty} = 1.44 {S \over n_0} = 1.44 {E_b C \over n_0}$<br>$=&gt; \displaystyle {E_b \over n_0} = {1 \over 1.44} = -1.6dB$</p>
-<h4 id="3- 离散信道的信道容量"><a href="#3- 离散信道的信道容量" class="headerlink" title="3. 离散信道的信道容量"></a>3. 离散信道的信道容量 </h4><h3 id="习题"><a href="# 习题" class="headerlink" title="习题"></a> 习题</h3><ol>
-<li>恒参信道等效模型如图，试分析信号通过该信道传输时会产生哪些失真？<img src="/2020/09/14/communicationSystem-channel/photo10.png" alt><br>由《信号与系统》课程可知，<br>网络的传输特性 $H (w)$ 通常可用幅频特性 $|H (w)|$ 和相频特性 $\phi (w)$ 来表征 $H (w) = |H (w)| e^{\phi (w)}$。<br><img src="/2020/09/14/communicationSystem-channel/photo11.png" alt></li>
-</ol>
-]]></content>
-      <categories>
-        <category>大学课程-通信原理</category>
-      </categories>
-      <tags>
-        <tag>通信原理</tag>
-        <tag>信道</tag>
-        <tag>信道容量</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>通信原理 --（6）数字频带传输</title>
     <url>/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
@@ -1410,6 +1410,25 @@
         <tag>差分脉码调制</tag>
         <tag>增量调制</tag>
         <tag>时分复用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通信原理 --（8）同步</title>
+    <url>/2020/10/21/communicationSystem-synchronize/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
+<h3 id="一、同步的概念和载波同步"><a href="# 一、同步的概念和载波同步" class="headerlink" title="一、同步的概念和载波同步"></a>一、同步的概念和载波同步</h3><span id="more"></span>
+<h3 id="二、码元同步"><a href="# 二、码元同步" class="headerlink" title="二、码元同步"></a>二、码元同步 </h3><h3 id="三、帧同步、网同步和数字复接"><a href="# 三、帧同步、网同步和数字复接" class="headerlink" title="三、帧同步、网同步和数字复接"></a> 三、帧同步、网同步和数字复接</h3>]]></content>
+      <categories>
+        <category>大学课程-通信原理</category>
+      </categories>
+      <tags>
+        <tag>通信原理</tag>
+        <tag>同步</tag>
+        <tag>载波同步</tag>
+        <tag>码元同步</tag>
+        <tag>帧同步</tag>
+        <tag>网同步</tag>
+        <tag>数字复接</tag>
       </tags>
   </entry>
   <entry>
@@ -1441,25 +1460,6 @@
         <tag>基本概念</tag>
         <tag>组成</tag>
         <tag>性能指标</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>通信原理 --（8）同步</title>
-    <url>/2020/10/21/communicationSystem-synchronize/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论 </a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/"> 通信原理 —（2）信道 </a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/"> 通信原理 —（3）模拟调制技术 </a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/"> 通信原理 —（4）模拟信号数字化 </a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/"> 通信原理 —（5）数字基带传输 </a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/"> 通信原理 —（6）数字频带传输 </a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/"> 通信原理 —（7）最佳接收 </a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/"> 通信原理 —（8）同步</a></p>
-<h3 id="一、同步的概念和载波同步"><a href="# 一、同步的概念和载波同步" class="headerlink" title="一、同步的概念和载波同步"></a>一、同步的概念和载波同步</h3><span id="more"></span>
-<h3 id="二、码元同步"><a href="# 二、码元同步" class="headerlink" title="二、码元同步"></a>二、码元同步 </h3><h3 id="三、帧同步、网同步和数字复接"><a href="# 三、帧同步、网同步和数字复接" class="headerlink" title="三、帧同步、网同步和数字复接"></a> 三、帧同步、网同步和数字复接</h3>]]></content>
-      <categories>
-        <category>大学课程-通信原理</category>
-      </categories>
-      <tags>
-        <tag>通信原理</tag>
-        <tag>同步</tag>
-        <tag>载波同步</tag>
-        <tag>码元同步</tag>
-        <tag>帧同步</tag>
-        <tag>网同步</tag>
-        <tag>数字复接</tag>
       </tags>
   </entry>
   <entry>
@@ -1579,6 +1579,15 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 实作</title>
+    <url>/2021/04/27/computerNetwork-lab3-2/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑 </a><br><a href="https://wangxchun.github.io/2021/04/24/computerNetwork-lab3-1/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 原理 </a><br><a href="https://wangxchun.github.io/2021/04/27/computerNetwork-lab3-2/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 实作</a></p>
+]]></content>
+      <categories>
+        <category>大学课程-计算机网络</category>
+      </categories>
+  </entry>
+  <entry>
     <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 原理</title>
     <url>/2021/04/24/computerNetwork-lab3-1/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑 </a><br><a href="https://wangxchun.github.io/2021/04/24/computerNetwork-lab3-1/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 原理 </a><br><a href="https://wangxchun.github.io/2021/04/27/computerNetwork-lab3-2/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 实作</a></p>
@@ -1625,13 +1634,18 @@
       </tags>
   </entry>
   <entry>
-    <title>计算机网络 lab3 使用 Socket 完成多人聊天室 -- 实作</title>
-    <url>/2021/04/27/computerNetwork-lab3-2/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑 </a><br><a href="https://wangxchun.github.io/2021/04/24/computerNetwork-lab3-1/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 原理 </a><br><a href="https://wangxchun.github.io/2021/04/27/computerNetwork-lab3-2/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 实作</a></p>
+    <title>dos 使用</title>
+    <url>/2018/10/27/dos-command/</url>
+    <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a> 显示目录下的文件 </h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录 <br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br><span id="more"></span><br>dir/ah 只显示当前路径下隐藏文件和目录 <br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
+<h3 id="Linux- 与 -Windows- 命令对比"><a href="#Linux- 与 -Windows- 命令对比" class="headerlink" title="Linux 与 Windows 命令对比"></a>Linux 与 Windows 命令对比 </h3><p><a href="https://blog.csdn.net/xzwspy/article/details/80183849">https://blog.csdn.net/xzwspy/article/details/80183849</a></p>
 ]]></content>
       <categories>
-        <category>大学课程-计算机网络</category>
+        <category>未分类</category>
       </categories>
+      <tags>
+        <tag>dos使用</tag>
+        <tag>Linux与Windows命令对比</tag>
+      </tags>
   </entry>
   <entry>
     <title>计算机网络 lab4 Overlay Network 和 VXLAN</title>
@@ -1666,20 +1680,6 @@
       <categories>
         <category>大学课程-计算机网络</category>
       </categories>
-  </entry>
-  <entry>
-    <title>dos 使用</title>
-    <url>/2018/10/27/dos-command/</url>
-    <content><![CDATA[<h3 id="显示目录下的文件"><a href="# 显示目录下的文件" class="headerlink" title="显示目录下的文件"></a> 显示目录下的文件 </h3><p>dir 不带任何参数，等价于命令 dir/a-h-s，即显示除系统和隐藏属性外的文件和目录 <br>dir/a 显示的是当前路径下，所有的文件和目录（含只读，系统，隐藏，归档）<br><span id="more"></span><br>dir/ah 只显示当前路径下隐藏文件和目录 <br>dir/ad 只显示当前路径下的所有目录（含隐藏等其他属性，只要是目录就显示）</p>
-<h3 id="Linux- 与 -Windows- 命令对比"><a href="#Linux- 与 -Windows- 命令对比" class="headerlink" title="Linux 与 Windows 命令对比"></a>Linux 与 Windows 命令对比 </h3><p><a href="https://blog.csdn.net/xzwspy/article/details/80183849">https://blog.csdn.net/xzwspy/article/details/80183849</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-      <tags>
-        <tag>dos使用</tag>
-        <tag>Linux与Windows命令对比</tag>
-      </tags>
   </entry>
   <entry>
     <title>git 安装</title>
@@ -1879,29 +1879,6 @@
       </tags>
   </entry>
   <entry>
-    <title>撰写文章基本操作</title>
-    <url>/2018/09/13/hexo%20write-an-article/</url>
-    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a>加入链结</h4><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
-<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a>加入引用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>引用 1</p>
-</blockquote>
-<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a>改变文字颜色和大小</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;2&quot;</span>&gt;</span> 颜色 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;3&quot;</span>&gt;</span> 大小 <span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
-<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a>加入代码</h4><h4 id="hexo-fluid- 添加 -utterances- 评论功能"><a href="#hexo-fluid- 添加 -utterances- 评论功能" class="headerlink" title="hexo-fluid 添加 utterances 评论功能"></a>hexo-fluid 添加 utterances 评论功能</h4><p><a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a><br><a href="http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/">http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/</a></p>
-<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>文章</tag>
-        <tag>基本操作</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>历史 -- （1）欧洲简史</title>
     <url>/2019/07/06/history-europe/</url>
     <content><![CDATA[<p>395 年，迪奥多西一世将帝国分给两个儿子，分裂成东西罗马帝国</p>
@@ -1943,44 +1920,26 @@
       </tags>
   </entry>
   <entry>
-    <title>历史 -- （3）德国简史</title>
-    <url>/2019/07/10/history-germany/</url>
-    <content><![CDATA[<h3 id="神圣罗马帝国"><a href="# 神圣罗马帝国" class="headerlink" title="神圣罗马帝国"></a>神圣罗马帝国 </h3><p> 西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
-<p>东法兰克王国在 919 年更名为德意志王国</p>
-<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国</p>
-<p>位于欧洲东部的国家成为欧洲列强的跑马场 <br><span id="more"></span><br> 亨利一世的儿子奥托一世过分强调意大利方向的扩张</p>
-<p>知道霍亨陶芬王朝的佛里德里希一世时期，红胡子巴巴罗萨，神圣罗马帝国巅峰，但是忽略了德意志内部德中央集权。为了赢得诸侯支持向意大利扩展，提高了封建主的独立性，最终导致帝国名存实亡。</p>
-<p>从奥托一世开始，向教皇取得罗马皇帝的称号。直到在 1073 年，教皇格里高利七世不经皇帝统一登上教皇宝座。</p>
-<p>引起神圣罗马帝国皇帝亨利四世的不满，命教皇退位，教皇开除亨利四世教籍，废除其帝位，国内封建主趁机相应号召。</p>
-<p>奥托一世 -&gt; 亨利四世 -&gt; 红胡子巴巴罗萨</p>
-<p>德意志王国四分五裂</p>
-<p>13 世纪，霍亨斯陶芬王朝垮台后，德意志王权彻底衰弱</p>
-<p>被教皇压迫，充当周围列强代理人自相残杀了两百多年后，马丁路德的宗教改革</p>
-<p>-&gt;1618 年三十年战争，德国失去大量领土，法国获得阿尔萨斯和洛林，整个德国四分五裂</p>
-<p>德国人为了生存，把自己卖给外国人，成为雇佣兵，在德国的领域为列强而战</p>
-<p>1806 年，在法国皇帝拿破仑的逼迫下，奥地利皇帝佛朗兹而是放弃神圣罗马帝国皇帝的称号，神圣罗马帝国灭亡</p>
-<p>席勒，歌德</p>
-<p>率先走出这一步的是一个被视为蛮荒和弱小的东方小邦：普鲁士</p>
-<h3 id="普鲁士"><a href="# 普鲁士" class="headerlink" title="普鲁士"></a>普鲁士 </h3><p> 普鲁士的国家核心是勃兰登堡和普鲁士</p>
-<p>1618 年，霍亨索伦家族的勃兰登堡选帝侯继承了普鲁士的王位，这两个平行发展的邦国终于产生了交汇</p>
-<p>(1417 年，德意志帝国正式把勃兰登堡和选侯爵位，赐予霍亨索伦家族的腓特烈一世，开始了霍亨索伦家族对勃兰登堡的统治)</p>
-<p>1640 年，腓特烈。威廉 (大选帝侯) 继位成为选帝侯 <br> 面临经过三世年战争的断壁残垣，国内的贵族、容克、分离主义和国外的强权让新国王的声音衰弱 <br>(1) 必须拥有一支独立且听命于自己的强悍常备军<br>(2) 利用帝国分裂，建立在本邦国内中央集权的君主专制，并在帝国范围内扩大影响<br> 在大选帝侯的儿子执政时期，</p>
-<h3 id="历史系列文章"><a href="# 历史系列文章" class="headerlink" title="历史系列文章"></a>历史系列文章 </h3><p><a href="https://wangxchun.github.io/2019/07/06/history-europe/"> 历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
+    <title>撰写文章基本操作</title>
+    <url>/2018/09/13/hexo%20write-an-article/</url>
+    <content><![CDATA[<h4 id="加入链结"><a href="# 加入链结" class="headerlink" title="加入链结"></a>加入链结</h4><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.google.com.tw/">google</a><br><span id="more"></span></p>
+<h4 id="加入引用"><a href="# 加入引用" class="headerlink" title="加入引用"></a>加入引用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>引用 1</p>
+</blockquote>
+<h4 id="改变文字颜色和大小"><a href="# 改变文字颜色和大小" class="headerlink" title="改变文字颜色和大小"></a>改变文字颜色和大小</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;2&quot;</span>&gt;</span> 颜色 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;Crimson&quot;</span> <span class="attr">size</span>=<span class="string">&quot;3&quot;</span>&gt;</span> 大小 <span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><font color="Crimson" size="2"> 颜色 </font><br><code><font color="Crimson" size="3"> 大小 </font></code></p>
+<h4 id="加入代码"><a href="# 加入代码" class="headerlink" title="加入代码"></a>加入代码</h4><h4 id="hexo-fluid- 添加 -utterances- 评论功能"><a href="#hexo-fluid- 添加 -utterances- 评论功能" class="headerlink" title="hexo-fluid 添加 utterances 评论功能"></a>hexo-fluid 添加 utterances 评论功能</h4><p><a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a><br><a href="http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/">http://chaih.com/2021/02/04/utterances-comment-for-Hexo-theme-nexT/</a></p>
+<h3 id="hexo- 文章总览"><a href="#hexo- 文章总览" class="headerlink" title="hexo 文章总览"></a>hexo 文章总览 </h3><p><a href="https://wangxchun.github.io/2018/08/03/hexo%20reference-first-step-to-set-up-a-website/"> 參考：架設網站的第一步 </a><br><a href="https://wangxchun.github.io/2018/09/05/hexo%20cancel-auto-numbering-in-directory/"> 怎么取消文章目录中对标题的自动编号 </a><br><a href="https://wangxchun.github.io/2018/09/10/hexo%20set-Github-SSH-key/"> 設定 - Github-SSH - 金鑰 </a><br><a href="https://wangxchun.github.io/2018/09/13/hexo%20write-an-article/"> 撰写文章基本操作 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20publish-an-article/"> 如何在 hexo blog 中發表一篇文章 </a><br><a href="https://wangxchun.github.io/2018/09/16/hexo%20insert-a-photo-into-article/"> 在 hexo 文章中插入图片 </a><br><a href="https://wangxchun.github.io/2018/09/19/hexo%20directory-structure/">hexo 目錄結構</a><br><a href="https://wangxchun.github.io/2018/09/20/hexo%20Mathjax/">hexo 中 Mathjax 的用法</a><br><a href="https://wangxchun.github.io/2018/09/22/hexo%20space-between-chinese-and-english/"> 如何实现 hexo 文章中文和英文之间自动空格</a></p>
 ]]></content>
       <categories>
-        <category>历史</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>历史</tag>
-        <tag>三十年战争</tag>
-        <tag>德国简史</tag>
-        <tag>德国</tag>
-        <tag>神圣罗马帝国</tag>
-        <tag>普鲁士</tag>
-        <tag>霍亨索伦家族</tag>
-        <tag>勃兰登堡</tag>
-        <tag>红胡子</tag>
-        <tag>巴巴罗萨</tag>
+        <tag>hexo</tag>
+        <tag>文章</tag>
+        <tag>基本操作</tag>
       </tags>
   </entry>
   <entry>
@@ -2075,6 +2034,55 @@
       </tags>
   </entry>
   <entry>
+    <title>历史 -- （3）德国简史</title>
+    <url>/2019/07/10/history-germany/</url>
+    <content><![CDATA[<h3 id="神圣罗马帝国"><a href="# 神圣罗马帝国" class="headerlink" title="神圣罗马帝国"></a>神圣罗马帝国 </h3><p> 西中东法兰克王国，分别奠定了如今法兰西，意大利，德意志的雏形</p>
+<p>东法兰克王国在 919 年更名为德意志王国</p>
+<p>962 年，奥托大帝在东法兰克的基础上进行扩张，建立神圣罗马帝国</p>
+<p>位于欧洲东部的国家成为欧洲列强的跑马场 <br><span id="more"></span><br> 亨利一世的儿子奥托一世过分强调意大利方向的扩张</p>
+<p>知道霍亨陶芬王朝的佛里德里希一世时期，红胡子巴巴罗萨，神圣罗马帝国巅峰，但是忽略了德意志内部德中央集权。为了赢得诸侯支持向意大利扩展，提高了封建主的独立性，最终导致帝国名存实亡。</p>
+<p>从奥托一世开始，向教皇取得罗马皇帝的称号。直到在 1073 年，教皇格里高利七世不经皇帝统一登上教皇宝座。</p>
+<p>引起神圣罗马帝国皇帝亨利四世的不满，命教皇退位，教皇开除亨利四世教籍，废除其帝位，国内封建主趁机相应号召。</p>
+<p>奥托一世 -&gt; 亨利四世 -&gt; 红胡子巴巴罗萨</p>
+<p>德意志王国四分五裂</p>
+<p>13 世纪，霍亨斯陶芬王朝垮台后，德意志王权彻底衰弱</p>
+<p>被教皇压迫，充当周围列强代理人自相残杀了两百多年后，马丁路德的宗教改革</p>
+<p>-&gt;1618 年三十年战争，德国失去大量领土，法国获得阿尔萨斯和洛林，整个德国四分五裂</p>
+<p>德国人为了生存，把自己卖给外国人，成为雇佣兵，在德国的领域为列强而战</p>
+<p>1806 年，在法国皇帝拿破仑的逼迫下，奥地利皇帝佛朗兹而是放弃神圣罗马帝国皇帝的称号，神圣罗马帝国灭亡</p>
+<p>席勒，歌德</p>
+<p>率先走出这一步的是一个被视为蛮荒和弱小的东方小邦：普鲁士</p>
+<h3 id="普鲁士"><a href="# 普鲁士" class="headerlink" title="普鲁士"></a>普鲁士 </h3><p> 普鲁士的国家核心是勃兰登堡和普鲁士</p>
+<p>1618 年，霍亨索伦家族的勃兰登堡选帝侯继承了普鲁士的王位，这两个平行发展的邦国终于产生了交汇</p>
+<p>(1417 年，德意志帝国正式把勃兰登堡和选侯爵位，赐予霍亨索伦家族的腓特烈一世，开始了霍亨索伦家族对勃兰登堡的统治)</p>
+<p>1640 年，腓特烈。威廉 (大选帝侯) 继位成为选帝侯 <br> 面临经过三世年战争的断壁残垣，国内的贵族、容克、分离主义和国外的强权让新国王的声音衰弱 <br>(1) 必须拥有一支独立且听命于自己的强悍常备军<br>(2) 利用帝国分裂，建立在本邦国内中央集权的君主专制，并在帝国范围内扩大影响<br> 在大选帝侯的儿子执政时期，</p>
+<h3 id="历史系列文章"><a href="# 历史系列文章" class="headerlink" title="历史系列文章"></a>历史系列文章 </h3><p><a href="https://wangxchun.github.io/2019/07/06/history-europe/"> 历史 — （1）欧洲简史 </a><br><a href="https://wangxchun.github.io/2019/07/08/history-russia/"> 历史 — （2）俄国简史 </a><br><a href="https://wangxchun.github.io/2019/07/10/history-germany/"> 历史 — （3）德国简史 </a><br><a href="https://wangxchun.github.io/2019/07/15/history-venice/"> 历史 — （4）威尼斯和第四次十字军东征</a></p>
+]]></content>
+      <categories>
+        <category>历史</category>
+      </categories>
+      <tags>
+        <tag>历史</tag>
+        <tag>三十年战争</tag>
+        <tag>德国简史</tag>
+        <tag>德国</tag>
+        <tag>神圣罗马帝国</tag>
+        <tag>普鲁士</tag>
+        <tag>霍亨索伦家族</tag>
+        <tag>勃兰登堡</tag>
+        <tag>红胡子</tag>
+        <tag>巴巴罗萨</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>產業了解（1）5G</title>
+    <url>/2021/06/03/industry-understanding-5g/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活-產業了解</category>
+      </categories>
+  </entry>
+  <entry>
     <title>历史 -- （4）威尼斯和第四次十字军东征</title>
     <url>/2019/07/15/history-venice/</url>
     <content><![CDATA[<p>这种贫瘠的靠海之地有两种选择，一是当海盗，二是做生意</p>
@@ -2113,6 +2121,60 @@
       </tags>
   </entry>
   <entry>
+    <title>產業了解（6）IC</title>
+    <url>/2021/06/03/industry-understanding-IC/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活-產業了解</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>產業了解（3）區塊鏈</title>
+    <url>/2021/06/03/industry-understanding-blockchain/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活-產業了解</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>產業了解（2）人工智慧</title>
+    <url>/2021/06/03/industry-understanding-artificial-intelligence/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活-產業了解</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>產業了解（4）能源</title>
+    <url>/2021/06/03/industry-understanding-energy/</url>
+    <content><![CDATA[<h2 id="背景知識"><a href="# 背景知識" class="headerlink" title="背景知識"></a>背景知識 </h2><h2 id="公司"><a href="# 公司" class="headerlink" title="公司"></a> 公司</h2><h3 id="Duke"><a href="#Duke" class="headerlink" title="Duke"></a>Duke</h3><h3 id="Suncor"><a href="#Suncor" class="headerlink" title="Suncor"></a>Suncor</h3><h3 id="Natural-Resources-CNQ"><a href="#Natural-Resources-CNQ" class="headerlink" title="Natural Resources CNQ"></a>Natural Resources CNQ</h3><h3 id="Cenovus-CVE"><a href="#Cenovus-CVE" class="headerlink" title="Cenovus CVE"></a>Cenovus CVE</h3><h3 id="Energy-Transfer（ET）"><a href="#Energy-Transfer（ET）" class="headerlink" title="Energy Transfer（ET）"></a>Energy Transfer（ET）</h3>]]></content>
+      <categories>
+        <category>生活-產業了解</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>產業了解（5）電動車和自動駕駛</title>
+    <url>/2021/06/03/industry-understanding-ev/</url>
+    <content><![CDATA[<h2 id="背景知識"><a href="# 背景知識" class="headerlink" title="背景知識"></a>背景知識 </h2><h2 id="公司"><a href="# 公司" class="headerlink" title="公司"></a> 公司 </h2><h3 id="特斯拉"><a href="# 特斯拉" class="headerlink" title="特斯拉"></a> 特斯拉</h3><h3 id="Workhorse-WKHS"><a href="#Workhorse-WKHS" class="headerlink" title="Workhorse (WKHS)"></a>Workhorse (WKHS)</h3><p>Workhorse 是唯一的一家美國純電動 OEM 公司，主要開發電動送貨車，目標客戶是 UPS、聯邦快遞 (FedEx)、DHL 等送貨公司。Workhorse 還經營一個製造無人機的航空部門。</p>
+<p>該公司之前開發了一款電動皮卡車，在 2019 年將技術許可給前 CEO，他成立 Lordstown Motors，開發的 Endurance 有望與 Tesla 的 Cyber truck 和 Nikola Motor 的 Badger 等競爭。現在 Workhorse 的命運和 Lordstown Motors 結合在一起</p>
+<h3 id="Hyliion- 計劃與 -Tortoise-Acquisition-SHLL- 併購"><a href="#Hyliion- 計劃與 -Tortoise-Acquisition-SHLL- 併購" class="headerlink" title="Hyliion 計劃與 Tortoise Acquisition (SHLL) 併購"></a>Hyliion 計劃與 Tortoise Acquisition (SHLL) 併購 </h3><h3 id="Nikola"><a href="#Nikola" class="headerlink" title="Nikola"></a>Nikola</h3><h3 id="蔚來 -NIO"><a href="# 蔚來 -NIO" class="headerlink" title="蔚來 NIO"></a> 蔚來 NIO</h3><h4 id="1- 特斯拉在巡航里程方面有絕對優勢，蔚來用車電分離的方式避免和特斯拉短兵交接。"><a href="#1- 特斯拉在巡航里程方面有絕對優勢，蔚來用車電分離的方式避免和特斯拉短兵交接。" class="headerlink" title="1. 特斯拉在巡航里程方面有絕對優勢，蔚來用車電分離的方式避免和特斯拉短兵交接。"></a>1. 特斯拉在巡航里程方面有絕對優勢，蔚來用車電分離的方式避免和特斯拉短兵交接。</h4><p><a href="https://finance.sina.com.cn/stock/relnews/us/2019-10-11/doc-iicezuev1367497.shtml">2019 年 10 月 蔚来最后的疯狂：开始向用户提供无法实现的承诺</a></p>
+<h4 id="2- 投資蔚來的風險"><a href="#2- 投資蔚來的風險" class="headerlink" title="2. 投資蔚來的風險"></a>2. 投資蔚來的風險</h4><p>(1) 流動性和股份被稀釋（2020/04 公司與中國政府簽訂一項融資協議）<br>(2) 電動車市場上還有其他競爭<br>(3) 豪華車<br>(4) 美國存託憑證 ADR 風險（中美之間的緊張局勢）</p>
+<h4 id="3- 下一步"><a href="#3- 下一步" class="headerlink" title="3. 下一步"></a>3. 下一步 </h4><p> 如何借助換電模式培養出的用戶生態開發新的獲利管道，將會是其下一步需要考慮的方向。</p>
+<h4 id="4- 看好"><a href="#4- 看好" class="headerlink" title="4. 看好"></a>4. 看好 </h4><p> 主打產品好、整體市場空間大、用戶忠誠度高、有政府支持、有毛利率增長空間</p>
+<h3 id="小鵬汽車"><a href="# 小鵬汽車" class="headerlink" title="小鵬汽車"></a>小鵬汽車</h3>]]></content>
+      <categories>
+        <category>生活-產業了解</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>產業了解（7）面板</title>
+    <url>/2021/06/03/industry-understanding-panel/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活-產業了解</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2020/01 投資市場觀察</title>
     <url>/2021/05/12/investment-observe-2020-01/</url>
     <content><![CDATA[]]></content>
@@ -2139,17 +2201,18 @@
       </categories>
   </entry>
   <entry>
-    <title>2020/06 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2020-06/</url>
+    <title>2020/04 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2020-04/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
       </categories>
   </entry>
   <entry>
-    <title>2020/04 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2020-04/</url>
-    <content><![CDATA[]]></content>
+    <title>2020/06 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2020-06/</url>
+    <content><![CDATA[<h3 id="Nikola- 公司 -NKLA"><a href="#Nikola- 公司 -NKLA" class="headerlink" title="Nikola 公司 (NKLA)"></a>Nikola 公司 (NKLA)</h3><p>Nikola 尚未交付一輛卡車，也沒有一家製造卡車的工廠 </p>
+]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
       </categories>
@@ -2159,6 +2222,22 @@
     <url>/2021/05/12/investment-observe-2020-05/</url>
     <content><![CDATA[<h3 id="華南永昌證券避險不及大虧 -47- 億 - 正副董事長請辭"><a href="# 華南永昌證券避險不及大虧 -47- 億 - 正副董事長請辭" class="headerlink" title="華南永昌證券避險不及大虧 47 億 正副董事長請辭"></a>華南永昌證券避險不及大虧 47 億 正副董事長請辭 </h3><p><a href="https://www.cna.com.tw/news/firstnews/202005010197.aspx"> 華南永昌證券避險不及大虧 47 億 正副董事長請辭</a></p>
 ]]></content>
+      <categories>
+        <category>生活-投資市場觀察</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2020/07 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2020-07/</url>
+    <content><![CDATA[<h3 id="第一周重要新聞"><a href="# 第一周重要新聞" class="headerlink" title="第一周重要新聞"></a>第一周重要新聞 </h3><p><a href="https://www.sohu.com/a/405920789_682259">Moderna 疫苗三期實驗被傳延期，引發股價大跌</a><br><a href="https://www.captainbi.com/amz_college_info-712.html"> 亞馬遜 Prime Day 再度跳票至十月 </a><br><a href="https://hk.investing.com/news/stock-market-news/article-105739"> 特斯拉（TSLA.US）Q2 交付量預估樂觀，若二季度盈利有望納入標普 500 指數 </a><br><a href="https://www.yicai.com/news/100686619.html"> 特斯拉 Q2 交付數據均遠超預期 </a><br><a href="https://mashable.com/article/facebook-lasso-tiktok-competitor-shut-down/">Facebook 計劃關閉旗下兩款社交應用：對標 Tiktok 的 Lasso 和對標 Pinterest 的 Hobbi</a><br><a href="https://finance.technews.tw/2020/07/06/spotify-stock-price/"> 傳聞進軍視頻流媒體市場 Spotify 大漲</a></p>
+<h3 id="SHLL- 併購熱潮"><a href="#SHLL- 併購熱潮" class="headerlink" title="SHLL 併購熱潮"></a>SHLL 併購熱潮 </h3><p>IPO 費錢耗時，一種替代方法是與已經在公開市場上交易的公司合并。<br>Hyliion 就好像第二個 Nikola，都是柴油動力重型卡車的替代品，都是早期公司。<br>Nikola 在 2020/06 通過與其他公司的合并上市，Hyliion 計劃與 Tortoise Acquisition (SHLL) 併購。<br> 與 Nikola 不同的是，Hyliion 已經在銷售產品，一種將柴油半柴油轉換成混合動力的套件。<br><a href="https://news.cnyes.com/news/id/4502385">特斯拉、蔚來 ADR 瘋漲！ 市場憂電動車股陷泡沫化</a></p>
+<h3 id="Sea"><a href="#Sea" class="headerlink" title="Sea"></a>Sea</h3><p>Sea Ltd (NYSE: SE) 是一間主戰東南亞市場的科技公司，專攻三個業務領域 —— 網上遊戲 (Garena)、電子商貿 (Shopee)，以及數位金融服務 (AirPay)。<br>Sea 是東南亞最大的互聯網公司，也是東南亞唯一一家在美國紐交所上市的互聯網公式。<br><a href="https://www.quamnet.com/post/NYh7c263lhgKUpcxhl4-y">投資者應留意 Sea Ltd 的兩個增長領域</a></p>
+<p>騰訊是 Sea 的第一大股東，英雄聯盟和王者榮耀等游戲在東南亞的代理商就是 Sea。<br>在 2019 年四季度，Sea 推出 SeaMoney 作爲數位金融服務的總品牌，對標的是螞蟻金服，旗下包含 ShopeePay 和 AirPay。</p>
+<p>在東南亞，Sea 有强勁的競爭對手，如 Lazada 和 Grab，但 Sea 輻射的市場非常大。<br>Sea 開拓市場的方式和拼多多相似，發錢補貼燒錢開拓市場。</p>
+<p><a href="https://www.youtube.com/watch?v=xK1pakGofac">电商新贵大比拼 | Shopify vs Sea Limited vs Mercado Libre| SHOP vs SE vs MELI</a><br><a href="https://www.beyondfang.com/2020/08/11/price-drop/">2020.08.11 終於遇到大回調 + 淺談 MELI vs SE</a></p>
+<h3 id="第二周重要新聞"><a href="# 第二周重要新聞" class="headerlink" title="第二周重要新聞"></a>第二周重要新聞 </h3><p><a href="https://news.cnyes.com/news/id/4502908"> 對決亞馬遜 Prime！沃爾瑪付費會員制 Walmart + 傳 7 月推出 股價大漲 7%</a></p>
+<h3 id="電動車廠 -Workhorse-WKHS"><a href="# 電動車廠 -Workhorse-WKHS" class="headerlink" title="電動車廠 Workhorse (WKHS)"></a>電動車廠 Workhorse (WKHS)</h3><p><a href="https://finance.technews.tw/2020/07/07/workhorse-stock-soars-nearly-500percent/">2020/07 Workhorse 年飆近 500%！電動車股泡沫現，憂步大麻股後塵</a><br><a href="https://www.chinatimes.com/realtimenews/20210511002543-260410?chdtv">2021/05 《國際產業》Workhorse 放出黑天鵝 電動車類股重挫</a></p>
+<h3 id="巴菲特百億美金收購案大變局"><a href="# 巴菲特百億美金收購案大變局" class="headerlink" title="巴菲特百億美金收購案大變局"></a>巴菲特百億美金收購案大變局</h3>]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
       </categories>
@@ -2174,27 +2253,10 @@
       </categories>
   </entry>
   <entry>
-    <title>2020/07 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2020-07/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>生活-投資市場觀察</category>
-      </categories>
-  </entry>
-  <entry>
     <title>2020/09 投資市場觀察</title>
     <url>/2021/05/12/investment-observe-2020-09/</url>
     <content><![CDATA[<h3 id="支付公司 -Square- 買入 -5-000- 萬美元比特幣，幣價兩小時漲 -2-6"><a href="# 支付公司 -Square- 買入 -5-000- 萬美元比特幣，幣價兩小時漲 -2-6" class="headerlink" title="支付公司 Square 買入 5,000 萬美元比特幣，幣價兩小時漲 2.6%"></a>支付公司 Square 買入 5,000 萬美元比特幣，幣價兩小時漲 2.6%</h3><h3 id="OPEC- 會議，可以多觀察能源板塊走勢"><a href="#OPEC- 會議，可以多觀察能源板塊走勢" class="headerlink" title="OPEC + 會議，可以多觀察能源板塊走勢"></a>OPEC + 會議，可以多觀察能源板塊走勢 </h3><h4 id="利好"><a href="# 利好" class="headerlink" title="利好"></a> 利好</h4><p>（1）OPEC + 會議上，沙特和俄羅斯將緩解市場對於供過於求的擔憂，也是原油投資者保持樂觀<br>（2）中國較好的經濟數據能夠抵消部分國際能源署 (IEA) 月度報告的負面影響</p>
 <h4 id="利空"><a href="# 利空" class="headerlink" title="利空"></a>利空 </h4><p>（1）全球原油需求在 5 月和 6 月大幅復蘇，但隨著部分國家第二波疫情，需求停滯不前<br>（2）美國汽油需求復蘇在 8 月放緩，需求增速甚至在 8 月最後一周轉爲負值<br>（3）大量卡車閑置和航班被取消，柴油和航空燃料受到的打擊尤其嚴重<br>（4）利比亞軍事强人哈利法。哈弗塔爾承諾結束該國對石油的封鎖，這意味著 100 萬桶 / 日將進入市場<br>（5）颱風莎莉降爲一級颶風，對墨西哥灣原油開采和提煉業務的威脅減弱<br> 總的來説，原油市場目前處於供過於求的狀況。</p>
-]]></content>
-      <categories>
-        <category>生活-投資市場觀察</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>2020/11 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2020-11/</url>
-    <content><![CDATA[<h3 id="「先買後付」借貸平台 -Affirm- 申請 -IPO，預計募資千萬美元"><a href="#「先買後付」借貸平台 -Affirm- 申請 -IPO，預計募資千萬美元" class="headerlink" title="「先買後付」借貸平台 Affirm 申請 IPO，預計募資千萬美元"></a>「先買後付」借貸平台 Affirm 申請 IPO，預計募資千萬美元 </h3><p> 由 PayPal 共同創辦人 Max Levchin 創立的線上分期貸款平台 Affirm ，11 月中，向美國證券交易委員會（The U.S. Securities and Exchange Commission, SEC）申請 IPO，預計以「AFRM」作為代號，在納斯達克交易所掛牌上市。</p>
 ]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
@@ -2217,20 +2279,11 @@
       </categories>
   </entry>
   <entry>
-    <title>2021/01 投資市場觀察</title>
-    <url>/2021/05/12/investment-observe-2021-01/</url>
-    <content><![CDATA[<h3 id="GME- 軋空事件 -1-28"><a href="#GME- 軋空事件 -1-28" class="headerlink" title="GME 軋空事件 1/28"></a>GME 軋空事件 1/28</h3><p>遊戲驛站 GameStop 是一家實體電視遊戲連鎖店，雖然柯恩持續推動轉型，從實體零售商店轉型為電商公司，但是過去經營十分辛苦，於是成為華爾街的熱門放空選項，許多機構投資人（含避險基金）紛紛賣空（short selling）該股。但在今年 1 月份，知名的社群網站 Reddit 中，擁有超過 230 萬名訂閱者的討論板「Wallstreetbets」，有人發起支持 GameStop 的運動。</p>
-<h4 id="軋空 -Short-squeeze"><a href="# 軋空 -Short-squeeze" class="headerlink" title="軋空 (Short squeeze)"></a>軋空 (Short squeeze)</h4><p>做多：買進股票並持有，到高價的時候賣掉 <br> 做空：借股票來賣，低價的時候買回來還 <br> 有些機構或散戶看到市場上某一個股票被大量看壞，就會去拼刀 <br>-&gt; 買入大量股票 (讓市場上現貨減少)，及買入大量 call (逼造勢方買股票就必須避險)<br>-&gt; 股票上漲之後，做空方就必須補保證金 (規定一定的比例)，否則就會被斷頭 (直接買回來)<br> 空方被軋稱爲「軋空」，多方被軋稱爲「多殺多」</p>
-<h4 id="伽瑪擠壓 -Gamma-squeeze"><a href="# 伽瑪擠壓 -Gamma-squeeze" class="headerlink" title="伽瑪擠壓 (Gamma squeeze)"></a>伽瑪擠壓 (Gamma squeeze)</h4><p>很多機構賣出買權卻沒有持有現貨 (沒在避險)，因爲他們覺得股價就低在那裏了，不可能上升。<br>例如 <a href="https://www.cna.com.tw/news/firstnews/202005010197.aspx">新聞稱華南永昌證券避險不及大虧 46 億 正副董事長辭職 </a><br> 沒有什麽來不及避險的，那是代表他平常根本沒有在避險。<br>空方被軋的時候避免被斷頭就要去補貨，造成股價進一步推高</p>
-<h4 id="GME- 的做空比率能有 -140-？"><a href="#GME- 的做空比率能有 -140-？" class="headerlink" title="GME 的做空比率能有 140%？"></a>GME 的做空比率能有 140%？</h4><p><a href="https://zhuanlan.zhihu.com/p/348592784">GME 的做空比率能有 140%？</a></p>
-<h4 id="Robbinhood- 强制散戶平倉？"><a href="#Robbinhood- 强制散戶平倉？" class="headerlink" title="Robbinhood 强制散戶平倉？"></a>Robbinhood 强制散戶平倉？</h4><p>由於 Robinhood1 月 29 日突然出手干預，限制包括 GME 在內的 50 隻較為波動股票的交易，散戶已經對該公司提起了集體訴訟，除了要求 Robinhood 恢復 GME 交易外，並要求公司支付賠償金。</p>
-<p><a href="https://meet.bnext.com.tw/blog/view/17231">零手續費？免費的最貴 </a><br> 原來 Robinhood 並沒有直接將用戶的訂單發送到紐交所 / 納斯達克，而是發送給 Virtu，Citadel 等高頻交易公司，並直接在暗池中成交。邏輯其實很簡單，假設散戶在 Robinhood 上發起一筆 100 股蘋果公司股票的買入訂單，Robinhood 會將這筆訂單提交給量化公司的暗池。訂單如果在暗池中成交，Robinhood 會收到相應的「回饋」；如果沒有成交，暗池則會將這筆訂單發送至公開交易所，像紐交所，納斯達克等。</p>
-<h3 id="AMC- 可轉債 -1-28"><a href="#AMC- 可轉債 -1-28" class="headerlink" title="AMC 可轉債 1/28"></a>AMC 可轉債 1/28</h3><p>逼空大戰為掙扎在生死線上的 AMC 迎來了命運的轉機，WSB 的散戶推動股價一路飆漲。</p>
-<p>根據銀湖向美國 SEC 提交的文件，該公司將其持有的 AMC 2026 年到期的、票面利率為 2.95% 的可轉債全部轉換為 A 類普通股，價格為每股 13.51 美元，總共價值 6 億美元。</p>
-<pre><code>什麽是 AMC？AMC 是美國很大的連鎖影城
-什麽是可轉債？可轉債 = 選擇權 + 債券
-時間到了，如果到了轉換價，可以換成股票；如果沒有到轉換價，就要還錢。
-</code></pre>]]></content>
+    <title>2020/11 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2020-11/</url>
+    <content><![CDATA[<h3 id="「先買後付」借貸平台 -Affirm- 申請 -IPO，預計募資千萬美元"><a href="#「先買後付」借貸平台 -Affirm- 申請 -IPO，預計募資千萬美元" class="headerlink" title="「先買後付」借貸平台 Affirm 申請 IPO，預計募資千萬美元"></a>「先買後付」借貸平台 Affirm 申請 IPO，預計募資千萬美元 </h3><p> 由 PayPal 共同創辦人 Max Levchin 創立的線上分期貸款平台 Affirm ，11 月中，向美國證券交易委員會（The U.S. Securities and Exchange Commission, SEC）申請 IPO，預計以「AFRM」作為代號，在納斯達克交易所掛牌上市。</p>
+<h3 id="PayPal、Cash-App- 狂掃比特幣，帶動幣價挑戰歷史新高"><a href="#PayPal、Cash-App- 狂掃比特幣，帶動幣價挑戰歷史新高" class="headerlink" title="PayPal、Cash App 狂掃比特幣，帶動幣價挑戰歷史新高"></a>PayPal、Cash App 狂掃比特幣，帶動幣價挑戰歷史新高 </h3><p> 近期比特幣價格持續飆升，主要受惠美國第三方支付服務商 PayPal 宣布支援比特幣等主流虛擬貨幣。最新數據顯示，在 PayPal 開放用戶使用比特幣後，PayPal 和 Square 公司旗下行動支付服務「Cash App」購買的比特幣數量已超過新開採量，讓原本就供應緊張的比特幣更顯短缺。<br><a href="https://technews.tw/2020/11/24/paypal-cash-app-bitcoin-price/">PayPal、Cash App 狂掃比特幣，帶動幣價挑戰歷史新高</a></p>
+]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
       </categories>
@@ -2281,10 +2334,30 @@
       </categories>
   </entry>
   <entry>
+    <title>2021/01 投資市場觀察</title>
+    <url>/2021/05/12/investment-observe-2021-01/</url>
+    <content><![CDATA[<h3 id="GME- 軋空事件 -1-28"><a href="#GME- 軋空事件 -1-28" class="headerlink" title="GME 軋空事件 1/28"></a>GME 軋空事件 1/28</h3><p>遊戲驛站 GameStop 是一家實體電視遊戲連鎖店，雖然柯恩持續推動轉型，從實體零售商店轉型為電商公司，但是過去經營十分辛苦，於是成為華爾街的熱門放空選項，許多機構投資人（含避險基金）紛紛賣空（short selling）該股。但在今年 1 月份，知名的社群網站 Reddit 中，擁有超過 230 萬名訂閱者的討論板「Wallstreetbets」，有人發起支持 GameStop 的運動。</p>
+<h4 id="軋空 -Short-squeeze"><a href="# 軋空 -Short-squeeze" class="headerlink" title="軋空 (Short squeeze)"></a>軋空 (Short squeeze)</h4><p>做多：買進股票並持有，到高價的時候賣掉 <br> 做空：借股票來賣，低價的時候買回來還 <br> 有些機構或散戶看到市場上某一個股票被大量看壞，就會去拼刀 <br>-&gt; 買入大量股票 (讓市場上現貨減少)，及買入大量 call (逼造勢方買股票就必須避險)<br>-&gt; 股票上漲之後，做空方就必須補保證金 (規定一定的比例)，否則就會被斷頭 (直接買回來)<br> 空方被軋稱爲「軋空」，多方被軋稱爲「多殺多」</p>
+<h4 id="伽瑪擠壓 -Gamma-squeeze"><a href="# 伽瑪擠壓 -Gamma-squeeze" class="headerlink" title="伽瑪擠壓 (Gamma squeeze)"></a>伽瑪擠壓 (Gamma squeeze)</h4><p>很多機構賣出買權卻沒有持有現貨 (沒在避險)，因爲他們覺得股價就低在那裏了，不可能上升。<br>例如 <a href="https://www.cna.com.tw/news/firstnews/202005010197.aspx">新聞稱華南永昌證券避險不及大虧 46 億 正副董事長辭職 </a><br> 沒有什麽來不及避險的，那是代表他平常根本沒有在避險。<br>空方被軋的時候避免被斷頭就要去補貨，造成股價進一步推高</p>
+<h4 id="GME- 的做空比率能有 -140-？"><a href="#GME- 的做空比率能有 -140-？" class="headerlink" title="GME 的做空比率能有 140%？"></a>GME 的做空比率能有 140%？</h4><p><a href="https://zhuanlan.zhihu.com/p/348592784">GME 的做空比率能有 140%？</a></p>
+<h4 id="Robbinhood- 强制散戶平倉？"><a href="#Robbinhood- 强制散戶平倉？" class="headerlink" title="Robbinhood 强制散戶平倉？"></a>Robbinhood 强制散戶平倉？</h4><p>由於 Robinhood1 月 29 日突然出手干預，限制包括 GME 在內的 50 隻較為波動股票的交易，散戶已經對該公司提起了集體訴訟，除了要求 Robinhood 恢復 GME 交易外，並要求公司支付賠償金。</p>
+<p><a href="https://meet.bnext.com.tw/blog/view/17231">零手續費？免費的最貴 </a><br> 原來 Robinhood 並沒有直接將用戶的訂單發送到紐交所 / 納斯達克，而是發送給 Virtu，Citadel 等高頻交易公司，並直接在暗池中成交。邏輯其實很簡單，假設散戶在 Robinhood 上發起一筆 100 股蘋果公司股票的買入訂單，Robinhood 會將這筆訂單提交給量化公司的暗池。訂單如果在暗池中成交，Robinhood 會收到相應的「回饋」；如果沒有成交，暗池則會將這筆訂單發送至公開交易所，像紐交所，納斯達克等。</p>
+<h3 id="AMC- 可轉債 -1-28"><a href="#AMC- 可轉債 -1-28" class="headerlink" title="AMC 可轉債 1/28"></a>AMC 可轉債 1/28</h3><p>逼空大戰為掙扎在生死線上的 AMC 迎來了命運的轉機，WSB 的散戶推動股價一路飆漲。</p>
+<p>根據銀湖向美國 SEC 提交的文件，該公司將其持有的 AMC 2026 年到期的、票面利率為 2.95% 的可轉債全部轉換為 A 類普通股，價格為每股 13.51 美元，總共價值 6 億美元。</p>
+<pre><code>什麽是 AMC？AMC 是美國很大的連鎖影城
+什麽是可轉債？可轉債 = 選擇權 + 債券
+時間到了，如果到了轉換價，可以換成股票；如果沒有到轉換價，就要還錢。
+</code></pre>]]></content>
+      <categories>
+        <category>生活-投資市場觀察</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2021/03 投資市場觀察</title>
     <url>/2021/05/12/investment-observe-2021-03/</url>
     <content><![CDATA[<h3 id="橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動"><a href="# 橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動" class="headerlink" title="橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動"></a>橡樹資本創辦人：比特幣和鑽石皆無內在價值，靠供需驅動 </h3><p> 千億級資管公司橡樹資本（Oaktree Capital）創辦人 Howard Marks 公開承認，對比特幣（BTC）改觀了。他 2017 年時認為比特幣毫無內在價值，但理解到背後的供需平衡之後，便保持開放心態。這段期間，比特幣價格也已經自 5,000 美元上漲超過 10 倍，Marks 稱那些買在低點的人們「目前看來是對的」。</p>
 <h3 id="全球前 -10- 大 -IC- 設計公司營收排行"><a href="# 全球前 -10- 大 -IC- 設計公司營收排行" class="headerlink" title="全球前 10 大 IC 設計公司營收排行"></a>全球前 10 大 IC 設計公司營收排行 </h3><p><a href="https://www.bnext.com.tw/article/61960/2020-top-10-ic-company"> 全球前 10 大 IC 設計公司營收排行</a></p>
+<h3 id="台灣大 - 傳奪 -Disney- 代理權"><a href="# 台灣大 - 傳奪 -Disney- 代理權" class="headerlink" title="台灣大 傳奪 Disney + 代理權"></a>台灣大 傳奪 Disney + 代理權 </h3><p><a href="https://ctee.com.tw/news/tech/422964.html"> 台灣大 傳奪 Disney + 代理權</a><br><img src="/2021/05/12/investment-observe-2021-03/photo1.jpg" alt></p>
 ]]></content>
       <categories>
         <category>生活-投資市場觀察</category>
@@ -2334,6 +2407,9 @@
 <h4 id="PS- 市销率 -＝市值 -÷- 销售额"><a href="#PS- 市销率 -＝市值 -÷- 销售额" class="headerlink" title="PS (市销率)＝市值 ÷ 销售额"></a>PS (市销率)＝市值 ÷ 销售额</h4><p>PS 估值适用于利润为零或负的电商、软件等未来价值较高的行业。例如京东 2015 年销售额高达 1813 亿元，但净利润亏损 94 亿元。这是一种战略性亏损，是投资性支出带来的亏损，这是对未来的投资，长远看是很值的。</p>
 <h4 id="PE- 市盈率 -＝市值 -÷- 净利润"><a href="#PE- 市盈率 -＝市值 -÷- 净利润" class="headerlink" title="PE (市盈率)＝市值 ÷ 净利润"></a>PE (市盈率)＝市值 ÷ 净利润 </h4><p> 市盈率法是对企业估值最普通、最普遍的方法。一般来说，市盈率估值不适用于利润为零及负的公司。PE 估值法适用于周期性较弱企业，如公共服务业、食品行业、道路运输业等，因其盈利相对稳定。如果融资企业处于初创期，还没有利润，仍然用 PE 对企业估值，就可以考虑把收益期延长 3～5 年，对利润进行加权平均。</p>
 <h4 id="再平衡"><a href="# 再平衡" class="headerlink" title="再平衡"></a>再平衡 </h4><p> 再平衡当中的静平衡就是自动在做买低卖高的动作</p>
+<h4 id="風險評估"><a href="# 風險評估" class="headerlink" title="風險評估"></a>風險評估 </h4><p> 索丁諾比率 Sortino Ratio：報酬除以下行風險 (負報酬的風險)<br>夏普比率 Sharpe Ratio：報酬除以總風險 (含上行與下行、正負報酬都含標準差計算在內)</p>
+<h4 id="IPO"><a href="#IPO" class="headerlink" title="IPO"></a>IPO</h4><p>当一家公司想进行 IPO 时，它通常会雇佣承销商，一般是知名的投行（例如高盛或摩根士丹利），承销商的职责是确保公司拟向公众发售的所有股票都卖出去了，以及确保公司完成融资目标。</p>
+<p>承销商会先购买所有的流通股或普通股，然后将股票转售给市场。承销商可以行使购买额外股票的选择权。</p>
 <h3 id="一些技巧原則"><a href="# 一些技巧原則" class="headerlink" title="一些技巧原則"></a>一些技巧原則 </h3><h4 id="投資建議"><a href="# 投資建議" class="headerlink" title="投資建議"></a> 投資建議 </h4><p> 先從存股開始，等到賺到股利，再拿這筆股利去賺價差，投資才會比較安心。</p>
 <h4 id="舉例什麼是避險"><a href="# 舉例什麼是避險" class="headerlink" title="舉例什麼是避險"></a>舉例什麼是避險 </h4><p> 衍生金融品的市場 (例如期貨和選擇權) 是零和市場，和現貨市場 (股票市場) 不一樣。<br>很多衍生金融品的本質是拿來避險的。<br>例如你買了很多臺積電的股票，你可以在 (1) 期貨做空 (2) 選擇權 buy put (3) 包租公：選擇權 sell call<br>通常不建議當選擇權的賣方，因爲風險無限大，但是持有現股的 sell call 是 cover code，掩護性的買權</p>
 <h4 id="執行分批停利的時間點"><a href="# 執行分批停利的時間點" class="headerlink" title="執行分批停利的時間點"></a>執行分批停利的時間點</h4><p>(1) 公司的基本面改變<br>(2) 有更好的選擇 (機會成本)<br>(3) 我擺明就是來炒短線的</p>
@@ -2349,25 +2425,11 @@
 <h4 id="2- 美股"><a href="#2- 美股" class="headerlink" title="(2) 美股"></a>(2) 美股 </h4><p>(a)    免費的<br>Marketwatch、seeking alpha<br>(b)    要錢的<br>WSJ 華爾街日報<br>FT 金融時報<br> 彭博新聞社（英文：Bloomberg News）是全球最大的財經資訊公司 <br> 基本上他們有寫的新聞，其他新聞也會轉發</p>
 <h3 id="信用卡一定要辦"><a href="# 信用卡一定要辦" class="headerlink" title="信用卡一定要辦"></a>信用卡一定要辦 </h3><p> 信用卡的額度是很好的利用方式（相當於一個月零利率的貸款），重點是自己不要亂花。</p>
 <h3 id="股債配置"><a href="# 股債配置" class="headerlink" title="股債配置"></a>股債配置 </h3><p><a href="https://george-dewi.com/stock-bond-balanced-etf-recommendation/">【美股股債平衡型 ETF 介紹】AOA、AOR、AOM、AOK 大評比</a><br> 要看一個商品的績效，最簡單的就是和大盤比，<br>這種商品和大盤比績效一定比較差，但是危機來的時候會有保護的功能，<br>如果你不需要債保護，你是可以承擔波動性的，就直接丟大盤就好了</p>
-<h3 id="石油股（XOM、CVX、RDS、BP）不要重倉"><a href="# 石油股（XOM、CVX、RDS、BP）不要重倉" class="headerlink" title="石油股（XOM、CVX、RDS、BP）不要重倉"></a>石油股（XOM、CVX、RDS、BP）不要重倉 </h3><p> 石油能提供能源 (是工業的血液)，也是各種化工產品最重要的原材料之一 <br> 石油產業鏈大致分爲三塊：上游、中游、下游 <br> 上游：原油的探勘和開采，主要是傳統的油田、海上鑽井平臺、近十幾年比較火的頁岩油技術 <br> 中游：石油和天然氣和存儲和運輸（海運、鐵路、公路運輸、管道運輸）<br>下游：煉油、石油化工（遍及生活中的食衣住行）、各種石油產品的分發零售</p>
-<p>石油公司的盈利非常依賴原油價格（價格波動受政治局勢影響），周期性很强，靠天吃飯，還有發生事故的風險 <br> 石油公司的股價和石油價格走勢呈現高度相關性，因爲石油就是石油，沒有什麽消費者沒有什麽品牌忠誠度 <br> 石油的消費者：工業企業、石油產業下游的化工企業，選擇原材料的時候不看品牌，價格就是最大考量 <br> 競爭激烈利潤薄，小企業幾乎沒有生存空間 <br> 我不會重倉石油股還有一個原因，就是相對科技和電信產業，石油產業是我不了解的<br>Q：了解政治局勢，可以投資石油期貨？</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
-    <url>/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/</url>
-    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
-<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
-<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
-<h3 id="linux- 文章总览"><a href="#linux- 文章总览" class="headerlink" title="linux 文章总览"></a>linux 文章总览</h3><p><a href="https://wangxchun.github.io/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/">vbox 安装 Ubuntu 清理整个磁盘会怎样</a></p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>linux</tag>
-      </tags>
+<h3 id="石油股（XOM、CVX、RDS、BP）不要重倉"><a href="# 石油股（XOM、CVX、RDS、BP）不要重倉" class="headerlink" title="石油股（XOM、CVX、RDS、BP）不要重倉"></a>石油股（XOM、CVX、RDS、BP）不要重倉 </h3><p> 石油能提供能源 (是工業的血液)，也是各種化工產品最重要的原材料之一。<br>石油產業鏈大致分爲三塊：上游、中游、下游。<br>上游：原油的探勘和開采，主要是傳統的油田、海上鑽井平臺、近十幾年比較火的頁岩油技術 <br> 中游：石油和天然氣和存儲和運輸（海運、鐵路、公路運輸、管道運輸）<br>下游：煉油、石油化工（遍及生活中的食衣住行）、各種石油產品的分發零售</p>
+<p>石油公司的盈利非常依賴原油價格（價格波動受政治局勢影響），周期性很强，靠天吃飯，還有發生事故的風險，<br>石油公司的股價和石油價格走勢呈現高度相關性，因爲石油就是石油，沒有什麽消費者沒有什麽品牌忠誠度，<br>石油的消費者：工業企業、石油產業下游的化工企業，選擇原材料的時候不看品牌，價格就是最大考量，<br>競爭激烈利潤薄，小企業幾乎沒有生存空間。</p>
+<p>石油產業源於十九世紀末石油大亨洛克菲勒創建的標準石油公司，<br>1911 年美國最高法院根據反壟斷法把標準石油拆分爲 34 家公司，<br>這四家石油公司就是其中 4 家。</p>
+<p>我不會重倉石油股還有一個原因，就是相對科技和電信產業，石油產業是我不了解的<br>Q：了解政治局勢，可以投資石油期貨？</p>
+<h4 id="生技股是台股深水區"><a href="# 生技股是台股深水區" class="headerlink" title="生技股是台股深水區"></a>生技股是台股深水區</h4>]]></content>
   </entry>
   <entry>
     <title>三連擊（洛谷 P1008）</title>
@@ -2389,6 +2451,22 @@
         <tag>OJ</tag>
         <tag>set</tag>
         <tag>洛谷刷題</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vbox 安装 Ubuntu 清理整个磁盘会怎样</title>
+    <url>/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/</url>
+    <content><![CDATA[<h4 id="vbox- 安装 -Ubuntu- 清理整个磁盘会怎样"><a href="#vbox- 安装 -Ubuntu- 清理整个磁盘会怎样" class="headerlink" title="vbox 安装 Ubuntu 清理整个磁盘会怎样"></a>vbox 安装 Ubuntu 清理整个磁盘会怎样 </h4><p> 不用担心。它不会影响你的整个系统。因为你是在 VirtualBox 虚拟机里面安装系统的。在虚拟机中，硬盘实际上是一个文件。是在电脑中建立一个文件或文件夹。用这个文件或者是文件夹中的内容来模拟一个虚拟的硬盘。此时的格式化，只会影响到虚拟出来的硬盘。对真正的物理硬盘是没有影响的。<br><span id="more"></span></p>
+<p>这只是在虚拟机中是这样，要是到了真实的电脑上就要小心了。如果要装两套系统就别选是，除非你已经想清楚了，现有的系统已经打定主意不要了。</p>
+<h4 id="请问如何新建一个盘符 -？"><a href="# 请问如何新建一个盘符 -？" class="headerlink" title="请问如何新建一个盘符 ？"></a>请问如何新建一个盘符 ？</h4><p>右键我的电脑，管理，磁盘管理器，<br>此时会看到分区，c： d：等等，<br>若硬盘有剩余空间在 磁盘 0 右边 右键 自由空间 格式化分区就行了。<br>若没有剩余空间，要创建未分配的空间，需要压缩硬盘（右键，压缩卷）。</p>
+<h3 id="linux- 文章总览"><a href="#linux- 文章总览" class="headerlink" title="linux 文章总览"></a>linux 文章总览</h3><p><a href="https://wangxchun.github.io/2021/03/23/linux%20vbox-install-Ubuntu%20clean-up-the-disk/">vbox 安装 Ubuntu 清理整个磁盘会怎样</a></p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2640,14 +2718,19 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>机器学习算法 --（7）贝叶斯算法</title>
-    <url>/2020/11/19/machineLearning-7/</url>
+    <title>机器学习算法 --（8）聚类算法</title>
+    <url>/2020/11/19/machineLearning-8/</url>
     <content><![CDATA[<span id="more"></span>
 <h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
 ]]></content>
       <categories>
         <category>大学课程-机器学习</category>
       </categories>
+      <tags>
+        <tag>machineLearning</tag>
+        <tag>sklearn</tag>
+        <tag>聚类</tag>
+      </tags>
   </entry>
   <entry>
     <title>机器学习算法 --（9）主成分分析 PCA</title>
@@ -2666,19 +2749,14 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </tags>
   </entry>
   <entry>
-    <title>机器学习算法 --（8）聚类算法</title>
-    <url>/2020/11/19/machineLearning-8/</url>
+    <title>机器学习算法 --（7）贝叶斯算法</title>
+    <url>/2020/11/19/machineLearning-7/</url>
     <content><![CDATA[<span id="more"></span>
 <h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
 ]]></content>
       <categories>
         <category>大学课程-机器学习</category>
       </categories>
-      <tags>
-        <tag>machineLearning</tag>
-        <tag>sklearn</tag>
-        <tag>聚类</tag>
-      </tags>
   </entry>
   <entry>
     <title>ETF 入門</title>
@@ -2717,14 +2795,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
 <h4 id="八大官股行庫"><a href="# 八大官股行庫" class="headerlink" title="八大官股行庫"></a>八大官股行庫 </h4><p> 國營經常需要負擔很多政府的財政任務 ex：學貸，青年優惠房貸，外幣兌換，新鈔 / 幣更換。<br>後來將部分官股行庫公司化之後，再逐漸釋出股權轉爲民營化（國有事業民營化）。<br>在市場上可以交易的「四金二銀」就是國有民營行庫。</p>
 <h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
 ]]></content>
-      <categories>
-        <category>生活-投資理財</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>美股</title>
-    <url>/2021/05/13/money-management-US-stock/</url>
-    <content><![CDATA[]]></content>
       <categories>
         <category>生活-投資理財</category>
       </categories>
@@ -2790,6 +2860,11 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>money-management-chip-analysis</title>
+    <url>/2021/06/01/money-management-chip-analysis/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>儲蓄保單</title>
     <url>/2021/05/10/money-management-deposit-insurance/</url>
     <content><![CDATA[<p>儲蓄險的本質是儲蓄，而不是保險。<br>儲蓄險：利率高於定存，可以保本（抱越久，領越多）<br>考慮的三個重點：<br>(1) 要繳多少？<br>(2) 解約可以獲得多少？<br>(3) 萬一身故了可以領多少？<br><span id="more"></span></p>
@@ -2827,6 +2902,45 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>金融衍生品：期貨、權證、選擇權、外匯保證金</title>
+    <url>/2021/05/10/money-management-futures-and-warrant/</url>
+    <content><![CDATA[<h3 id="一、背景知識"><a href="# 一、背景知識" class="headerlink" title="一、背景知識"></a>一、背景知識 </h3><h4 id="1- 期貨"><a href="#1- 期貨" class="headerlink" title="1. 期貨"></a>1. 期貨</h4><p> 買賣雙方簽訂契約，約定于指定時間，按照協議的價格，交易指定標的數量。<br>重點：交易標的物、交易數量、到期日、價格 <br><span id="more"></span><br> 買方不一定要等待到期日履約獲利，也可以選擇將合約轉讓他人來賺取利潤。</p>
+<h4 id="2- 期貨基本用語"><a href="#2- 期貨基本用語" class="headerlink" title="2. 期貨基本用語"></a>2. 期貨基本用語 </h4><h5 id="1- 一口期貨"><a href="#1- 一口期貨" class="headerlink" title="(1) 一口期貨"></a>(1) 一口期貨</h5><h5 id="2- 建倉：購買一口期貨"><a href="#2- 建倉：購買一口期貨" class="headerlink" title="(2) 建倉：購買一口期貨"></a>(2) 建倉：購買一口期貨</h5><h5 id="3- 持倉：購買一口期貨，並持有"><a href="#3- 持倉：購買一口期貨，並持有" class="headerlink" title="(3) 持倉：購買一口期貨，並持有"></a>(3) 持倉：購買一口期貨，並持有</h5><h5 id="4- 交割：買方到期日履約"><a href="#4- 交割：買方到期日履約" class="headerlink" title="(4) 交割：買方到期日履約"></a>(4) 交割：買方到期日履約</h5><h5 id="5- 平倉：將合約賣出"><a href="#5- 平倉：將合約賣出" class="headerlink" title="(5) 平倉：將合約賣出"></a>(5) 平倉：將合約賣出</h5><p> 證券以及期貨市場上，持有空頭部位的投資人，藉由買進等量的契約以離開市場；或是持有多頭部位的投資人，藉由賣出等量的契約以離開市場。 即以等量但相反買賣方向，來沖銷原有的契約。</p>
+<h5 id="6- 爆倉"><a href="#6- 爆倉" class="headerlink" title="(6) 爆倉"></a>(6) 爆倉 </h5><p> 投資者被强制斷頭，保證金為負，超額虧損</p>
+<h5 id="7- 保證金"><a href="#7- 保證金" class="headerlink" title="(7) 保證金"></a>(7) 保證金 </h5><p> 避免損失進一步擴大：追繳保證金或是强制平倉</p>
+<h5 id="8- 當冲"><a href="#8- 當冲" class="headerlink" title="(8) 當冲"></a>(8) 當冲 </h5><p> 當沖會有兩種意思，一種就是字面上解釋，當天就把期貨部位沖銷稱做當沖交易，另一種指的是在交易期貨時，勾選當沖保證金減半。</p>
+<h5 id="9- 先買後賣、先賣後買"><a href="#9- 先買後賣、先賣後買" class="headerlink" title="(9) 先買後賣、先賣後買"></a>(9) 先買後賣、先賣後買 </h5><p> 期貨基本的操作方式，舉例來說：若預期台指期會上漲，那就買進台指期（稱為「建倉」），待上漲後賣出（稱為「平倉」），就可低買高賣賺取價差；假設看空，那就先賣出，低點時再買進平倉。</p>
+<h5 id="10- 長倉"><a href="#10- 長倉" class="headerlink" title="(10) 長倉"></a>(10) 長倉 </h5><p> 長倉與短倉相反，指投資人買入金融產品部位後，持有且當日不出脫的操作方式。持長倉的投資者預期相關資產的價格會上漲後市看好，因此採取「先買後賣」的策略；此為傳統的證券操作方式。股票投資人或期貨及其他金融產品交易人，根據市場行情價格波動而在低位買入在高位賣出，即低吸高拋。廣義上，短線搶短、波段操作、長期持有，均屬之。</p>
+<h5 id="11- 短倉"><a href="#11- 短倉" class="headerlink" title="(11) 短倉"></a>(11) 短倉 </h5><p> 與長倉相反，指投資者在「不持有」金融產品部位（如證券）的情況下，賣出該金融產品。 如果賣方有義務立即交付，他便需要從第三方借入該資產。</p>
+<h4 id="3- 期貨分類"><a href="#3- 期貨分類" class="headerlink" title="3. 期貨分類"></a>3. 期貨分類 </h4><h5 id="1- 商品期貨"><a href="#1- 商品期貨" class="headerlink" title="(1) 商品期貨"></a>(1) 商品期貨</h5><p> 農產品期貨、金屬期貨、能源期貨</p>
+<h5 id="2- 金融期貨"><a href="#2- 金融期貨" class="headerlink" title="(2) 金融期貨"></a>(2) 金融期貨 </h5><p> 外匯期貨、利率期貨 (買賣信用工具)、股票指數期貨</p>
+<h4 id="4- 入門：台指期貨"><a href="#4- 入門：台指期貨" class="headerlink" title="4. 入門：台指期貨"></a>4. 入門：台指期貨 </h4><h4 id="5- 期貨如何開戶 - 如何選擇期貨商"><a href="#5- 期貨如何開戶 - 如何選擇期貨商" class="headerlink" title="5. 期貨如何開戶 ++ 如何選擇期貨商"></a>5. 期貨如何開戶 ++ 如何選擇期貨商</h4><p> 手續費、服務品質、下單軟體 </p>
+<h4 id="5- 外匯保證金"><a href="#5- 外匯保證金" class="headerlink" title="5. 外匯保證金"></a>5. 外匯保證金 </h4><p> 利用杠桿操作賺取匯差，放大了投資報酬率，也加大風險 <br> 合約的單位為一手，一手通常是 10 萬元，例如 EUR/USA 就是操作 10 萬歐元 <br> 想要操作 10 萬元的合約，要拿出多少合約就要看杠桿是多少了（例如 1：100）</p>
+<h5 id="損益計算公式"><a href="# 損益計算公式" class="headerlink" title="損益計算公式"></a>損益計算公式 </h5><p>（1）直接報價法（EUR/USA=1.22985，代表一歐元可以兌換 1.22985 美元）<br> 損益（美元）= 交易金額 $*$（賣出價 - 買入價）<br>（2）間接報價法（USA/JPY=106.955，代表 1 美元可兌換 106.955 日元）<br>損益（美元）= 交易金額 $*$（賣出價 - 買入價）/ 賣出價</p>
+<h5 id="要注意的規則"><a href="# 要注意的規則" class="headerlink" title="要注意的規則"></a>要注意的規則 </h5><p> 因虧損，通知追繳期保證金限内未補繳 / 虧損過大 -&gt; 强制平倉</p>
+<h5 id="優點"><a href="# 優點" class="headerlink" title="優點"></a>優點 </h5><p> 高杠桿、可雙向、24 小時、公平性、易聚焦 <br> 高杠桿：因爲有强制平倉的機制，所以最多就是賠光保證金 <br> 可雙向：預期匯率漲，先買後賣；預期匯率降，先賣後買</p>
+<h5 id="缺點"><a href="# 缺點" class="headerlink" title="缺點"></a>缺點 </h5><p> 杠桿作用、缺乏監管 (滑價或是資訊不對稱)</p>
+<h5 id="手續費"><a href="# 手續費" class="headerlink" title="手續費"></a>手續費 </h5><p> 以點為單位</p>
+<h5 id="利息問題"><a href="# 利息問題" class="headerlink" title="利息問題"></a>利息問題 </h5><h4 id="6- 權證"><a href="#6- 權證" class="headerlink" title="6. 權證"></a>6. 權證</h4><h5 id="小資族想要投資權值股的方式"><a href="# 小資族想要投資權值股的方式" class="headerlink" title="小資族想要投資權值股的方式"></a> 小資族想要投資權值股的方式</h5><p>(1) 零股：缺乏流動性<br>(2) 融資：要每日計息<br>(3) 個股期貨：注意維持率和保證金</p>
+<h5 id="什麽是權證"><a href="# 什麽是權證" class="headerlink" title="什麽是權證"></a>什麽是權證 </h5><p> 一種由券商發行的衍生型金融商品，本質是一種契約，<br>是一種讓投資人付了權利金之後在未來可以以特定的價格買賣特定股票的權力憑證 <br> 分爲認購權證 (看多) 和認售權證 (看空)</p>
+<h5 id="三個關鍵"><a href="# 三個關鍵" class="headerlink" title="三個關鍵"></a>三個關鍵 </h5><p> 時間、履約價、標的 <br> 權證到期之前可以提前買賣，看對方向可以提前獲利出場，看錯方向也可以提早停損 <br> 如果買了放著不管，到期了才發現還在價外，那那張權證就沒什麽價值了 (報酬率 - 100%)</p>
+<h5 id="兩個方法判別自己是否適合做權證"><a href="# 兩個方法判別自己是否適合做權證" class="headerlink" title="兩個方法判別自己是否適合做權證"></a>兩個方法判別自己是否適合做權證</h5><p>(1) 平常做波段賺不賺錢？<br>(2) 搶短線勝率高不高？</p>
+<h4 id="選擇權"><a href="# 選擇權" class="headerlink" title="選擇權"></a>選擇權 </h4><p>buy/sell call/put<br> 美國流行選擇權，台灣流行權證</p>
+<h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 金融衍生品：期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
+]]></content>
+      <categories>
+        <category>生活-投資理財</category>
+      </categories>
+      <tags>
+        <tag>期貨</tag>
+        <tag>建倉</tag>
+        <tag>持倉</tag>
+        <tag>交割</tag>
+        <tag>平倉</tag>
+        <tag>杠桿效應</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>總體經濟學</title>
     <url>/2021/05/13/money-management-macroconomics/</url>
     <content><![CDATA[<h3 id="一、背景知識"><a href="# 一、背景知識" class="headerlink" title="一、背景知識"></a>一、背景知識 </h3><h4 id="1- 定存利率"><a href="#1- 定存利率" class="headerlink" title="1. 定存利率"></a>1. 定存利率</h4><p> 在比較各種投資理財工具的時候，定存利率就變成一個最直觀的衡量標準。<br>每個國家決定利率升降的單位就是各國的中央銀行 Ex：美國聯准會 FED</p>
@@ -2844,40 +2958,6 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>金融衍生品：期貨、權證、外匯保證金</title>
-    <url>/2021/05/10/money-management-futures-and-warrant/</url>
-    <content><![CDATA[<h3 id="一、背景知識"><a href="# 一、背景知識" class="headerlink" title="一、背景知識"></a>一、背景知識 </h3><h4 id="1- 期貨"><a href="#1- 期貨" class="headerlink" title="1. 期貨"></a>1. 期貨</h4><p> 買賣雙方簽訂契約，約定于指定時間，按照協議的價格，交易指定標的數量。<br>重點：交易標的物、交易數量、到期日、價格 <br><span id="more"></span><br> 買方不一定要等待到期日履約獲利，也可以選擇將合約轉讓他人來賺取利潤。</p>
-<h4 id="2- 期貨基本用語"><a href="#2- 期貨基本用語" class="headerlink" title="2. 期貨基本用語"></a>2. 期貨基本用語 </h4><h5 id="1- 一口期貨"><a href="#1- 一口期貨" class="headerlink" title="(1) 一口期貨"></a>(1) 一口期貨</h5><h5 id="2- 建倉：購買一口期貨"><a href="#2- 建倉：購買一口期貨" class="headerlink" title="(2) 建倉：購買一口期貨"></a>(2) 建倉：購買一口期貨</h5><h5 id="3- 持倉：購買一口期貨，並持有"><a href="#3- 持倉：購買一口期貨，並持有" class="headerlink" title="(3) 持倉：購買一口期貨，並持有"></a>(3) 持倉：購買一口期貨，並持有</h5><h5 id="4- 交割：買方到期日履約"><a href="#4- 交割：買方到期日履約" class="headerlink" title="(4) 交割：買方到期日履約"></a>(4) 交割：買方到期日履約</h5><h5 id="5- 平倉：將合約賣出"><a href="#5- 平倉：將合約賣出" class="headerlink" title="(5) 平倉：將合約賣出"></a>(5) 平倉：將合約賣出</h5><p> 證券以及期貨市場上，持有空頭部位的投資人，藉由買進等量的契約以離開市場；或是持有多頭部位的投資人，藉由賣出等量的契約以離開市場。 即以等量但相反買賣方向，來沖銷原有的契約。</p>
-<h5 id="6- 爆倉"><a href="#6- 爆倉" class="headerlink" title="(6) 爆倉"></a>(6) 爆倉 </h5><p> 投資者被强制斷頭，保證金為負，超額虧損</p>
-<h5 id="7- 保證金"><a href="#7- 保證金" class="headerlink" title="(7) 保證金"></a>(7) 保證金 </h5><p> 避免損失進一步擴大：追繳保證金或是强制平倉</p>
-<h5 id="8- 當冲"><a href="#8- 當冲" class="headerlink" title="(8) 當冲"></a>(8) 當冲 </h5><p> 當沖會有兩種意思，一種就是字面上解釋，當天就把期貨部位沖銷稱做當沖交易，另一種指的是在交易期貨時，勾選當沖保證金減半。</p>
-<h5 id="9- 先買後賣、先賣後買"><a href="#9- 先買後賣、先賣後買" class="headerlink" title="(9) 先買後賣、先賣後買"></a>(9) 先買後賣、先賣後買 </h5><p> 期貨基本的操作方式，舉例來說：若預期台指期會上漲，那就買進台指期（稱為「建倉」），待上漲後賣出（稱為「平倉」），就可低買高賣賺取價差；假設看空，那就先賣出，低點時再買進平倉。</p>
-<h5 id="10- 長倉"><a href="#10- 長倉" class="headerlink" title="(10) 長倉"></a>(10) 長倉 </h5><p> 長倉與短倉相反，指投資人買入金融產品部位後，持有且當日不出脫的操作方式。持長倉的投資者預期相關資產的價格會上漲後市看好，因此採取「先買後賣」的策略；此為傳統的證券操作方式。股票投資人或期貨及其他金融產品交易人，根據市場行情價格波動而在低位買入在高位賣出，即低吸高拋。廣義上，短線搶短、波段操作、長期持有，均屬之。</p>
-<h5 id="11- 短倉"><a href="#11- 短倉" class="headerlink" title="(11) 短倉"></a>(11) 短倉 </h5><p> 與長倉相反，指投資者在「不持有」金融產品部位（如證券）的情況下，賣出該金融產品。 如果賣方有義務立即交付，他便需要從第三方借入該資產。</p>
-<h4 id="3- 期貨分類"><a href="#3- 期貨分類" class="headerlink" title="3. 期貨分類"></a>3. 期貨分類 </h4><h5 id="1- 商品期貨"><a href="#1- 商品期貨" class="headerlink" title="(1) 商品期貨"></a>(1) 商品期貨</h5><p> 農產品期貨、金屬期貨、能源期貨</p>
-<h5 id="2- 金融期貨"><a href="#2- 金融期貨" class="headerlink" title="(2) 金融期貨"></a>(2) 金融期貨 </h5><p> 外匯期貨、利率期貨 (買賣信用工具)、股票指數期貨</p>
-<h4 id="4- 入門：台指期貨"><a href="#4- 入門：台指期貨" class="headerlink" title="4. 入門：台指期貨"></a>4. 入門：台指期貨 </h4><h4 id="5- 期貨如何開戶、如何選擇期貨商"><a href="#5- 期貨如何開戶、如何選擇期貨商" class="headerlink" title="5. 期貨如何開戶、如何選擇期貨商"></a>5. 期貨如何開戶、如何選擇期貨商</h4><p> 手續費、服務品質、下單軟體 </p>
-<h4 id="5- 外匯保證金"><a href="#5- 外匯保證金" class="headerlink" title="5. 外匯保證金"></a>5. 外匯保證金 </h4><p> 利用杠桿操作賺取匯差，放大了投資報酬率，也加大風險 <br> 合約的單位為一手，一手通常是 10 萬元，例如 EUR/USA 就是操作 10 萬歐元 <br> 想要操作 10 萬元的合約，要拿出多少合約就要看杠桿是多少了（例如 1：100）</p>
-<h5 id="損益計算公式"><a href="# 損益計算公式" class="headerlink" title="損益計算公式"></a>損益計算公式 </h5><p>（1）直接報價法（EUR/USA=1.22985，代表一歐元可以兌換 1.22985 美元）<br> 損益（美元）= 交易金額 $*$（賣出價 - 買入價）<br>（2）間接報價法（USA/JPY=106.955，代表 1 美元可兌換 106.955 日元）<br>損益（美元）= 交易金額 $*$（賣出價 - 買入價）/ 賣出價</p>
-<h5 id="要注意的規則"><a href="# 要注意的規則" class="headerlink" title="要注意的規則"></a>要注意的規則 </h5><p> 因虧損，通知追繳期保證金限内未補繳 / 虧損過大 -&gt; 强制平倉</p>
-<h5 id="優點"><a href="# 優點" class="headerlink" title="優點"></a>優點 </h5><p> 高杠桿、可雙向、24 小時、公平性、易聚焦 <br> 高杠桿：因爲有强制平倉的機制，所以最多就是賠光保證金 <br> 可雙向：預期匯率漲，先買後賣；預期匯率降，先賣後買</p>
-<h5 id="缺點"><a href="# 缺點" class="headerlink" title="缺點"></a>缺點 </h5><p> 杠桿作用、缺乏監管 (滑價或是資訊不對稱)</p>
-<h5 id="手續費"><a href="# 手續費" class="headerlink" title="手續費"></a>手續費 </h5><p> 以點為單位</p>
-<h5 id="利息問題"><a href="# 利息問題" class="headerlink" title="利息問題"></a>利息問題 </h5><h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a> 投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 金融衍生品：期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
-]]></content>
-      <categories>
-        <category>生活-投資理財</category>
-      </categories>
-      <tags>
-        <tag>期貨</tag>
-        <tag>建倉</tag>
-        <tag>持倉</tag>
-        <tag>交割</tag>
-        <tag>平倉</tag>
-        <tag>杠桿效應</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>房地產</title>
     <url>/2021/05/10/money-management-real-estate/</url>
     <content><![CDATA[<span id="more"></span>
@@ -2888,20 +2968,9 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>股票基本面</title>
-    <url>/2021/05/10/money-management-stock-fundamental/</url>
-    <content><![CDATA[<p><img src="/2021/05/10/money-management-stock-fundamental/photo1.jpg" alt></p>
-<h3 id="一、基本面三大方向，九大指標"><a href="# 一、基本面三大方向，九大指標" class="headerlink" title="一、基本面三大方向，九大指標"></a>一、基本面三大方向，九大指標 </h3><h4 id="1- 做什麽 - 公司狀況 -："><a href="#1- 做什麽 - 公司狀況 -：" class="headerlink" title="1. 做什麽 (公司狀況)："></a>1. 做什麽 (公司狀況)：</h4><p>(1) 資本額 (股本)<br> 股本就是公司設立時的資本額 = 股數 X 股票面額 (10 元)<br>(2) 市值 <br> 市值 = 股票數 X 市價 (面額)(成交價)<br>(3) 產業</p>
-<h4 id="2- 賺什麽 - 經營績效"><a href="#2- 賺什麽 - 經營績效" class="headerlink" title="2. 賺什麽 (經營績效)"></a>2. 賺什麽 (經營績效)</h4><p>(1) EPS = 稅後净利 / 股數 <br> 盈餘分配率<br>(2) ROA 資產報酬率 = 稅後净利 / 資產<br>(3) ROE 股東權益報酬率 = 稅後净利 / 净值</p>
-<h4 id="3- 算什麽 - 市況指標"><a href="#3- 算什麽 - 市況指標" class="headerlink" title="3. 算什麽 (市況指標)"></a>3. 算什麽 (市況指標)</h4><p>遛狗理論<br>(1) 本益比 PER（賺多少）：股價 / EPS，同業比較還要注意經營内容的差異</p>
-<ul>
-<li>跟自己比 - 和同業比 <br>(2) 股價净值比 PBR（值多少）：目前股價 / 每股净值<br> 每股净值 = 净值 / 股數</li>
-<li>净值的代表性 - 沒有評估獲利能力 <br>(3) 殖利率 Yield（配多少）：<br> 利率 / 股價</li>
-</ul>
-<h3 id="二、巴菲特的投資秘訣"><a href="# 二、巴菲特的投資秘訣" class="headerlink" title="二、巴菲特的投資秘訣"></a>二、巴菲特的投資秘訣</h3><h4 id="1- 投資兩個要素："><a href="#1- 投資兩個要素：" class="headerlink" title="1. 投資兩個要素："></a>1. 投資兩個要素：</h4><p>(1) 價值被低估<br>(2) 長期持有</p>
-<h4 id="2- 怎麽看一家公司是否被低估"><a href="#2- 怎麽看一家公司是否被低估" class="headerlink" title="2. 怎麽看一家公司是否被低估"></a>2. 怎麽看一家公司是否被低估</h4><p>(1) 管理層：企業所有者和競爭優勢<br>(2) 經營數據</p>
-<span id="more"></span>
-<h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
+    <title>了解新創公司，看懂成長股</title>
+    <url>/2021/06/02/money-management-startup/</url>
+    <content><![CDATA[<h3 id="估值"><a href="# 估值" class="headerlink" title="估值"></a>估值 </h3><p> 創立十年内的公司，如果估值能達到十億美金，就稱爲獨角獸 <br> 新創市場沒有公開發行的股票，沒辦法計算市值</p>
 ]]></content>
       <categories>
         <category>生活-投資理財</category>
@@ -2975,9 +3044,35 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
+    <title>股票基本面</title>
+    <url>/2021/05/10/money-management-stock-fundamental/</url>
+    <content><![CDATA[<p><img src="/2021/05/10/money-management-stock-fundamental/photo1.jpg" alt></p>
+<h3 id="一、基本面三大方向，九大指標"><a href="# 一、基本面三大方向，九大指標" class="headerlink" title="一、基本面三大方向，九大指標"></a>一、基本面三大方向，九大指標 </h3><h4 id="1- 做什麽 - 公司狀況 -："><a href="#1- 做什麽 - 公司狀況 -：" class="headerlink" title="1. 做什麽 (公司狀況)："></a>1. 做什麽 (公司狀況)：</h4><p>(1) 資本額 (股本)<br> 股本就是公司設立時的資本額 = 股數 X 股票面額 (10 元)<br>(2) 市值 <br> 市值 = 股票數 X 市價 (面額)(成交價)<br>(3) 產業</p>
+<h4 id="2- 賺什麽 - 經營績效"><a href="#2- 賺什麽 - 經營績效" class="headerlink" title="2. 賺什麽 (經營績效)"></a>2. 賺什麽 (經營績效)</h4><p>(1) EPS = 稅後净利 / 股數 <br> 盈餘分配率<br>(2) ROA 資產報酬率 = 稅後净利 / 資產<br>(3) ROE 股東權益報酬率 = 稅後净利 / 净值</p>
+<h4 id="3- 算什麽 - 市況指標"><a href="#3- 算什麽 - 市況指標" class="headerlink" title="3. 算什麽 (市況指標)"></a>3. 算什麽 (市況指標)</h4><p>遛狗理論<br>(1) 本益比 PER（賺多少）：股價 / EPS，同業比較還要注意經營内容的差異</p>
+<ul>
+<li>跟自己比 - 和同業比 <br>(2) 股價净值比 PBR（值多少）：目前股價 / 每股净值<br> 每股净值 = 净值 / 股數</li>
+<li>净值的代表性 - 沒有評估獲利能力 <br>(3) 殖利率 Yield（配多少）：<br> 利率 / 股價</li>
+</ul>
+<h3 id="二、巴菲特的投資秘訣"><a href="# 二、巴菲特的投資秘訣" class="headerlink" title="二、巴菲特的投資秘訣"></a>二、巴菲特的投資秘訣</h3><h4 id="1- 投資兩個要素："><a href="#1- 投資兩個要素：" class="headerlink" title="1. 投資兩個要素："></a>1. 投資兩個要素：</h4><p>(1) 價值被低估<br>(2) 長期持有</p>
+<h4 id="2- 怎麽看一家公司是否被低估"><a href="#2- 怎麽看一家公司是否被低估" class="headerlink" title="2. 怎麽看一家公司是否被低估"></a>2. 怎麽看一家公司是否被低估</h4><p>(1) 管理層：企業所有者和競爭優勢<br>(2) 經營數據</p>
+<span id="more"></span>
+<h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
+]]></content>
+      <categories>
+        <category>生活-投資理財</category>
+      </categories>
+  </entry>
+  <entry>
     <title>股票技術面</title>
     <url>/2021/05/10/money-management-stock-technical/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<h3 id="技術面"><a href="# 技術面" class="headerlink" title="技術面"></a>技術面 </h3><h4 id="1- 價格"><a href="#1- 價格" class="headerlink" title="1. 價格"></a>1. 價格</h4><h4 id="2- 成交量、法人買賣、融資券"><a href="#2- 成交量、法人買賣、融資券" class="headerlink" title="2. 成交量、法人買賣、融資券"></a>2. 成交量、法人買賣、融資券</h4><h4 id="3-KD、MACD"><a href="#3-KD、MACD" class="headerlink" title="3.KD、MACD"></a>3.KD、MACD</h4><h3 id="K- 線"><a href="#K- 線" class="headerlink" title="K 線"></a>K 線</h3><h3 id="均線"><a href="# 均線" class="headerlink" title="均線"></a> 均線 </h3><h3 id="成交量"><a href="# 成交量" class="headerlink" title="成交量"></a> 成交量 </h3><p> 成交量越高，代表買賣雙方對這檔股票的交易意願也越高 <br> 也代表雙方對價格的看法越不一致。</p>
+<h4 id="常見的價量形態"><a href="# 常見的價量形態" class="headerlink" title="常見的價量形態"></a>常見的價量形態 </h4><p> 價漲量增、價跌量縮（價量配合）<br>價漲量縮、價跌量增（價量背離）</p>
+<h3 id="KD- 指標"><a href="#KD- 指標" class="headerlink" title="KD 指標"></a>KD 指標 </h3><p> 技術分析的兩個目的：研判局勢、抓到轉折。<br>均線 (MA) 的計算是以當天的收盤價計，而不是使用當天的均價，不容易表現出短期内股價强弱的細節。</p>
+<h4 id="K- 值和 -D- 值"><a href="#K- 值和 -D- 值" class="headerlink" title="K 值和 D 值"></a>K 值和 D 值 </h4><p> 隨機震蕩指標 (KD 指標)：以每天的收盤價爲基礎，經過一套公式加權之後，換算出一組 K 值和 D 值，<br>再根據 KD 的數字和每天移動的情況，來判斷近期股價强弱走勢。</p>
+<h4 id="公式"><a href="# 公式" class="headerlink" title="公式"></a>公式 </h4><p>(1) RSV<br> 先把每天的收盤價換算成 RSV：<br>$RSV = {今日收盤價 - 最近 9 天最低價} \over {最近 9 天最高價 - 最近 9 天最低價}$<br>RSV 介於 0-100 之間，越接近 100 就越接近過去 9 天内股價波動範圍的高檔，表示買方力道很強 <br>50 就是多空雙方分界值<br> 缺點：因爲采樣範圍的改變，基準不同，導致數字劇烈變動，而對趨勢的變化產生干擾<br>(2) K 值（RSV 的加權移動平均）<br>$ 今天的 K 值 = {2 \over 3} \times 昨天的 K 值 + {1 \over 3} \times 今天的 RSV$<br>(3) D 值（K 值的加權移動平均）<br>$ 今天的 D 值 = {2 \over 3} \times 昨天的 D 值 + {1 \over 3} \times 今天的 K 值 $</p>
+<h4 id="要注意的點"><a href="# 要注意的點" class="headerlink" title="要注意的點"></a>要注意的點 </h4><p>(1) 只看價格，不看成交量和籌碼<br>(2) RSV 對 9 天后的 KD 值已經沒什麽影響了，KD 指標有效的參考指標只有 9 天内<br> 通常 80% 和 20% 成爲高低檔，50% 是多空的分界值 <br>D 值高於 80%-&gt; 上漲的動能很强<br>D 值高於 80% 進入超買區，K 值卻出現下彎穿過 D 值，是上漲動能轉弱的信號，趨勢轉折往下的幾率機會提高，稱爲死亡交叉；反過來稱爲黃金交叉。但是也有可能是假交叉或是假黃金，出現高檔鈍化或是低檔鈍化。<br> 檢查方法：放大周期，例如可以用周 KD 來看。</p>
+<span id="more"></span>
 <h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
 ]]></content>
       <categories>
@@ -3069,21 +3164,21 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>2020/05 科技新聞</title>
-    <url>/2021/05/11/news-2020-05/</url>
-    <content><![CDATA[<h3 id="微軟線上協作框架 -Fluid-Framework- 邁入公開預覽，未來將開源"><a href="# 微軟線上協作框架 -Fluid-Framework- 邁入公開預覽，未來將開源" class="headerlink" title="微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源"></a>微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源 </h3><p><a href="https://www.ithome.com.tw/news/137730"> 微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源</a></p>
-<span id="more"></span>
-<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列</h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞</a></p>
+    <title>2020/06 科技新聞</title>
+    <url>/2021/05/11/news-2020-06/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞 </a></p>
 ]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
       </categories>
   </entry>
   <entry>
-    <title>2020/06 科技新聞</title>
-    <url>/2021/05/11/news-2020-06/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞 </a></p>
+    <title>2020/05 科技新聞</title>
+    <url>/2021/05/11/news-2020-05/</url>
+    <content><![CDATA[<h3 id="微軟線上協作框架 -Fluid-Framework- 邁入公開預覽，未來將開源"><a href="# 微軟線上協作框架 -Fluid-Framework- 邁入公開預覽，未來將開源" class="headerlink" title="微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源"></a>微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源 </h3><p><a href="https://www.ithome.com.tw/news/137730"> 微軟線上協作框架 Fluid Framework 邁入公開預覽，未來將開源</a></p>
+<span id="more"></span>
+<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列</h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞</a></p>
 ]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
@@ -3140,22 +3235,22 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
       </categories>
   </entry>
   <entry>
-    <title>2020/12 科技新聞</title>
-    <url>/2021/05/11/news-2020-12/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞 </a></p>
-]]></content>
-      <categories>
-        <category>生活-科技新聞整理追蹤</category>
-      </categories>
-  </entry>
-  <entry>
     <title>2021/01 科技新聞</title>
     <url>/2021/05/11/news-2021-01/</url>
     <content><![CDATA[<h3 id="2021- 年 -CES- 大展於台灣時間 -1- 月 -12- 日開幕，由美國電信商 -Verizon- 擔綱首場官方演講。"><a href="#2021- 年 -CES- 大展於台灣時間 -1- 月 -12- 日開幕，由美國電信商 -Verizon- 擔綱首場官方演講。" class="headerlink" title="2021 年 CES 大展於台灣時間 1 月 12 日開幕，由美國電信商 Verizon 擔綱首場官方演講。"></a>2021 年 CES 大展於台灣時間 1 月 12 日開幕，由美國電信商 Verizon 擔綱首場官方演講。</h3><p><a href="https://www.bnext.com.tw/article/60923/ces-2021-verizon">【CES 2021】Verizon 大秀 5G 應用！結合 NFL、大都會博物館，連拍 MV 都能玩？</a></p>
 <h4 id="Verizon- 合作夥伴"><a href="#Verizon- 合作夥伴" class="headerlink" title="Verizon 合作夥伴"></a>Verizon 合作夥伴 </h4><p>（1）Verizon 在 2020 年與史密森尼美國藝術博物館（Smithsonian American Art Museum）推動 5G 數位典藏，透過 3D 掃描方式，把阿波羅 11 號的艙內模組建立成 3D 模型，提供民眾欣賞。<br>（2）攜手美國國家美式足球聯盟（NFL）：佈署 28 個體育館，透過 Verizon 5G SuperStadium App，觀眾能以 7 個不同視角在場內外欣賞超過 100 多場比賽 <br>（3）Verizon 與無人機隊公司 skyward 合作，共同與物流公司 UPS 在美國佛羅里達州測試 5G 無人機送貨可能性。<br>（4）Black Pumas 是一支美國靈魂樂樂隊，2020 年獲得第 62 屆葛萊美獎最佳新人提名。去年 11 月，Verizon 與 Snap 嘗試用 5G 結合 MV，由 Verizon 旗下的動態捕捉技術工作室負責建造樂團 3D 模型，將 Black Pumas 的暢銷歌曲 colors 拍成 AR 版 MV。民眾需拿著 5G 手機至大都會博物館外，透過 Snapchat 鏡頭才能欣賞整首歌曲。</p>
 <span id="more"></span>
 <h3 id="2021- 科技新聞整理系列"><a href="#2021- 科技新聞整理系列" class="headerlink" title="2021 科技新聞整理系列"></a>2021 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2021-01/">2021/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-02/">2021/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-03/">2021/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-04/">2021/04 科技新聞 </a></p>
+]]></content>
+      <categories>
+        <category>生活-科技新聞整理追蹤</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2020/12 科技新聞</title>
+    <url>/2021/05/11/news-2020-12/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="2020- 科技新聞整理系列"><a href="#2020- 科技新聞整理系列" class="headerlink" title="2020 科技新聞整理系列"></a>2020 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2020-01/">2020/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-02/">2020/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-03/">2020/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-04/">2020/04 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-05/">2020/05 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-06/">2020/06 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-07/">2020/07 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-08/">2020/08 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-09/">2020/09 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-10/">2020/10 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-11/">2020/11 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2020-12/">2020/12 科技新聞 </a></p>
 ]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
@@ -3176,8 +3271,10 @@ pile a over b : 把 aa 及以上的木块坨到 bb 的上面。
   <entry>
     <title>2021/03 科技新聞</title>
     <url>/2021/05/11/news-2021-03/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="2021- 科技新聞整理系列"><a href="#2021- 科技新聞整理系列" class="headerlink" title="2021 科技新聞整理系列"></a>2021 科技新聞整理系列 </h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2021-01/">2021/01 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-02/">2021/02 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-03/">2021/03 科技新聞 </a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-04/">2021/04 科技新聞 </a></p>
+    <content><![CDATA[<h3 id="Chamath-Palihapitiya- 看空"><a href="#Chamath-Palihapitiya- 看空" class="headerlink" title="Chamath Palihapitiya 看空"></a>Chamath Palihapitiya 看空 </h3><p>Chamath Palihapitiya 說他在空臉書，Jim Cramer 說臉書、蘋果、谷歌便宜。<br>Google 這次淘汰第三方 Cookie 的事情其實稍早前就在講了，但正式發了個官方部落格後，還是把廣告商如 The Trade Desk, Magnite 等嚇癱。但在科技股大逃殺的這陣子行情，老實說也比較難看出到底有多少成份是受到消息刺激，畢竟科技幾乎都一起下去。<br> 長遠來看 Google, Apple 這些隱私拳打下去，對廣告商都會有一定程度的影響。FB 祖克伯這樣說要「讓蘋果痛苦」，雖然很多人把他當笑話看，但廣告上目前霸主終究是臉書。</p>
+<h3 id="史上第一條 -Twitter- 貼文售出，靠 -NFT- 賣到近 -8- 千萬元！還有哪些天價加密藝術？"><a href="# 史上第一條 -Twitter- 貼文售出，靠 -NFT- 賣到近 -8- 千萬元！還有哪些天價加密藝術？" class="headerlink" title="史上第一條 Twitter 貼文售出，靠 NFT 賣到近 8 千萬元！還有哪些天價加密藝術？"></a>史上第一條 Twitter 貼文售出，靠 NFT 賣到近 8 千萬元！還有哪些天價加密藝術？</h3><p><a href="https://www.bnext.com.tw/article/61903/twitter-ceo-jack-dorseys-first-tweet-nft-sells-for-2point9-million">史上第一條 Twitter 貼文售出，靠 NFT 賣到近 8 千萬元！還有哪些天價加密藝術？</a></p>
+<span id="more"></span>
+<h3 id="2021- 科技新聞整理系列"><a href="#2021- 科技新聞整理系列" class="headerlink" title="2021 科技新聞整理系列"></a>2021 科技新聞整理系列</h3><p><a href="https://wangxchun.github.io/2021/05/11/news-2021-01/">2021/01 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-02/">2021/02 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-03/">2021/03 科技新聞</a><br><a href="https://wangxchun.github.io/2021/05/11/news-2021-04/">2021/04 科技新聞</a></p>
 ]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
@@ -3257,7 +3354,7 @@ IP：DC Comics（漫畫部門）
 <p>當一個系統高度追求效率，就容不下冗餘，無法處理突然飆升的需求。然而在需求尚未出現前投資，看起來就是浪費，犧牲了其他當時看來更急迫的任務，例如遊說採購疫苗、紓困企業、增加病床等等。</p>
 <p>疫情指揮中心陳時中說，會先朝向 3 大規劃前進：先簡化通報程序，再來徵招生技業者，提供核酸檢驗器材，並且每家採購儀器最高補助 500 萬元。最後最重要的，就是增加醫護志工。這暗示瓶頸在流程、器材跟人才。<br>引起醫檢師不滿：為何需求突然提高，政府的作法不是提高價格 (醫檢師薪水)，而是破壞執照制度，擴大供給？<br>但事實是：培養醫檢師緩不濟急，而既有的醫檢師似乎也無法滿足飆升的檢驗需求。</p>
 <p>所以核心問題就是：如何擴大人力服務的供給？<br>其實可以參考 Uber 替代計程車司機的過程。就是三個步驟：拆分、替代以及外包。<br>要快速擴大檢驗鏈的供給，就要將檢驗工作的每一個環節拆開，將可以自動化的部分交給電腦。將可以外包的部分交給「無執照人士」。只保留最專業，通常也最高風險的部分給有執照的醫檢師。</p>
-<h3 id="參考：科技島讀、科技新報"><a href="# 參考：科技島讀、科技新報" class="headerlink" title="參考：科技島讀、科技新報"></a>參考：科技島讀、科技新報</h3>]]></content>
+<h3 id="國產疫苗引炒股疑慮？"><a href="# 國產疫苗引炒股疑慮？" class="headerlink" title="國產疫苗引炒股疑慮？"></a>國產疫苗引炒股疑慮？</h3><h3 id="參考：科技島讀、科技新報"><a href="# 參考：科技島讀、科技新報" class="headerlink" title="參考：科技島讀、科技新報"></a>參考：科技島讀、科技新報</h3>]]></content>
       <categories>
         <category>生活-科技新聞整理追蹤</category>
       </categories>
@@ -3352,6 +3449,14 @@ IP：DC Comics（漫畫部門）
       </tags>
   </entry>
   <entry>
+    <title>python4</title>
+    <url>/2021/04/20/python-advance-4/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>python应用</category>
+      </categories>
+  </entry>
+  <entry>
     <title>python 应用 --3. 网络</title>
     <url>/2021/04/20/python-advance-3/</url>
     <content><![CDATA[<h3 id="一、网络介绍"><a href="# 一、网络介绍" class="headerlink" title="一、网络介绍"></a>一、网络介绍 </h3><h4 id="1- 网络通信概述"><a href="#1- 网络通信概述" class="headerlink" title="1. 网络通信概述"></a>1. 网络通信概述</h4><p> 网络通信：就是为了联通多方然后进行通信用的，即把数据从一方传递给另外一方。<br>使用网络能够把多方链接在一起，然后可以进行数据传递。<br>所谓的网络编程就是，让在不同的电脑上的软件能够进行数据传递，即进程之间的通信。</p>
@@ -3390,6 +3495,32 @@ IP：DC Comics（漫畫部門）
       </tags>
   </entry>
   <entry>
+    <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
+    <url>/2019/05/21/slam2/</url>
+    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/05/20/slam1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/05/21/slam2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
+<h3 id="一、Linux- 目錄結構"><a href="# 一、Linux- 目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構 </h3><h3 id="二、Linux- 常用指令"><a href="# 二、Linux- 常用指令" class="headerlink" title="二、Linux 常用指令"></a> 二、Linux 常用指令</h3><h4 id="1- 打开 -terminal"><a href="#1- 打开 -terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4><span id="more"></span>
+<p>(1) 右鍵 -&gt; 打開終端<br>(2) Ctrl+Alt+t 或者 Ctrl+Shift+t</p>
+<h4 id="2- 常用快速鍵"><a href="#2- 常用快速鍵" class="headerlink" title="2. 常用快速鍵"></a>2. 常用快速鍵 </h4><p>(1) tab<br> 一次 tab：命令補齊 <br> 兩次 tab：提示內容 <br>(2) Ctrl+c<br>Ctrl+c 中斷，強行打斷進程<br>(3) Ctrl+d<br>Ctrl+d 退出，相當於 exit 和 quit<br> 比如用 python 命令進入 python 交互環境後，就可以用 Ctrl+d 退出 python 交互環境 <br>(4) Ctrl+Shift+c 和 Ctrl+Shift+v<br> 先用滑鼠選中需要複製的內容，然後用 Ctrl+Shift+c 進行複製，再用 Ctrl+Shift+v 進行貼上<br>(5) 圖形介面與純文字互動模式切換<br>Ctrl+Alt+F1-F6：純文字交互模式登入 tty1-tty6 終端機<br>Ctrl+Alt+F7：切回圖形介面</p>
+<h3 id="3- 關機與重啟命令"><a href="#3- 關機與重啟命令" class="headerlink" title="3. 關機與重啟命令"></a>3. 關機與重啟命令</h3><p>(1) 關機<br>$ sudo poweroff<br>(2) 重新啟動<br>$ sudo reboot</p>
+<h3 id="4- 終端命令列中一些常用符號瞭解"><a href="#4- 終端命令列中一些常用符號瞭解" class="headerlink" title="4. 終端命令列中一些常用符號瞭解"></a>4. 終端命令列中一些常用符號瞭解</h3><p>(1) 使用者家目錄：~<br>(2) 系統根目錄：/<br>(3) 一般使用者提示符：$<br>(4) root 使用者提示符：#</p>
+<h3 id="5- 目錄與文件相關命令"><a href="#5- 目錄與文件相關命令" class="headerlink" title="5. 目錄與文件相關命令"></a>5. 目錄與文件相關命令</h3><p>(1) 顯示檔案與目錄清單<br>$ ls<br>(2) 切換目錄（ 2）<br>$ cd &lt; 目標目錄 &gt;<br>(3) 顯示目前所在工作目錄<br>$ pwd<br>(4) 建立檔案<br>$ touch &lt; 檔名 &gt;<br>(5) 複製檔案<br>$ cp &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(6) 移動檔案<br>$ mv &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(7) 刪除檔案<br>$ rm &lt; 檔名 &gt;<br>(8) 顯示檔案內容<br>$ cat &lt; 檔名 &gt;<br>(9) 建立資料夾<br>$ mkdir &lt; 資料夾名 &gt;<br>(10) 刪除資料夾<br>$ rmdir &lt; 資料夾名 &gt;</p>
+<h3 id="6- 文件許可權"><a href="#6- 文件許可權" class="headerlink" title="6. 文件許可權"></a>6. 文件許可權</h3><p>(1) 修改檔案讀寫可執行權限，該權限由遮罩， 如 777 權限全開<br>$ sudo chmod 777 &lt; 檔名 &gt;<br>(2) 修改檔案擁有者<br>$ sudo chown &lt; 使用者名 &gt;：&lt; 組名 &gt; &lt; 檔名 &gt;</p>
+<h3 id="7- 檔案查找"><a href="#7- 檔案查找" class="headerlink" title="7. 檔案查找"></a>7. 檔案查找</h3><p>(1) locate<br>$ sudo updatedb<br>$ locate &lt; 待查找檔名 &gt;<br>(2) find<br>$ find -name &lt; 待查找檔名 &gt;</p>
+<h3 id="8- 網路相關命令"><a href="#8- 網路相關命令" class="headerlink" title="8. 網路相關命令"></a>8. 網路相關命令</h3><p>(1) 網路連線與否測試<br>$ ping &lt; 待測目標主機 IP 或域名 &gt;<br>(2) 本地 IP 位址檢視<br>$ ifconfig<br>(3) 遠端登入目標主機<br>$ ssh &lt; 目標主機使用者名 &gt;@&lt; 目標主機 IP 位址 &gt;</p>
+<h3 id="9- 系統軟體安裝與軟體運行方法"><a href="#9- 系統軟體安裝與軟體運行方法" class="headerlink" title="9. 系統軟體安裝與軟體運行方法"></a>9. 系統軟體安裝與軟體運行方法</h3><p>(1) 系統預設的套件安裝方法 apt-get<br>$ sudo apt-get update<br>$ sudo apt-get install &lt; 軟體套件名稱 &gt;<br>(2) source 方法執行系統文稿，例如執行使用者預設配置文件.bashrc<br>$ source ~/.bashrc<br>(3) ./ 方法執行一般可執行檔<br>$ ./&lt; 可执行文件 &gt;</p>
+<h3 id="10- 文字編輯器 -vim- 使用"><a href="#10- 文字編輯器 -vim- 使用" class="headerlink" title="10. 文字編輯器 vim 使用"></a>10. 文字編輯器 vim 使用 </h3><p>(1) vim 檢視檔案內容<br>$ vim &lt; 檔名 &gt;<br>(2) vim 進入編輯模式<br> 在 vim 查看檔案內容的介面中，按 i 鍵進入編輯模式，然後就可以編輯檔案的內容了 <br>(3) vim 退出編輯模式<br> 在 vim 編輯檔案內容的介面中，按 Esc 鍵退出編輯模式，然後就又回到查看檔案內容的介面了<br>(4) vim 編輯內容儲存<br>vim 在編輯完檔內容，退出到查看檔內容的介面後，可以輸入 “：w” 對編輯內容進行保存，也可以輸入 “：wq” 對編輯內容進行保存並退出 vim</p>
+]]></content>
+      <categories>
+        <category>大学课程项目-激光slam小車</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>slam</tag>
+        <tag>智能車</tag>
+        <tag>命令列指令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>slam 小車：(一) 前期準備 --1. 機器人架構設計流程</title>
     <url>/2019/05/20/slam1/</url>
     <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/05/20/slam1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/05/21/slam2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
@@ -3419,40 +3550,6 @@ IP：DC Comics（漫畫部門）
         <tag>智能車</tag>
         <tag>機器人</tag>
         <tag>設計流程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python4</title>
-    <url>/2021/04/20/python-advance-4/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>python应用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>slam 小車：(一) 前期準備 --2.Linux 目錄結構與常用指令</title>
-    <url>/2019/05/21/slam2/</url>
-    <content><![CDATA[<p><a href="https://wangxchun.github.io/2019/05/20/slam1/">(一) 前期準備 —1. 機器人架構設計流程</a><br><a href="https://wangxchun.github.io/2019/05/21/slam2/">(一) 前期準備 —2.Linux 目錄結構與常用指令</a></p>
-<h3 id="一、Linux- 目錄結構"><a href="# 一、Linux- 目錄結構" class="headerlink" title="一、Linux 目錄結構"></a>一、Linux 目錄結構 </h3><h3 id="二、Linux- 常用指令"><a href="# 二、Linux- 常用指令" class="headerlink" title="二、Linux 常用指令"></a> 二、Linux 常用指令</h3><h4 id="1- 打开 -terminal"><a href="#1- 打开 -terminal" class="headerlink" title="1. 打开 terminal"></a>1. 打开 terminal</h4><span id="more"></span>
-<p>(1) 右鍵 -&gt; 打開終端<br>(2) Ctrl+Alt+t 或者 Ctrl+Shift+t</p>
-<h4 id="2- 常用快速鍵"><a href="#2- 常用快速鍵" class="headerlink" title="2. 常用快速鍵"></a>2. 常用快速鍵 </h4><p>(1) tab<br> 一次 tab：命令補齊 <br> 兩次 tab：提示內容 <br>(2) Ctrl+c<br>Ctrl+c 中斷，強行打斷進程<br>(3) Ctrl+d<br>Ctrl+d 退出，相當於 exit 和 quit<br> 比如用 python 命令進入 python 交互環境後，就可以用 Ctrl+d 退出 python 交互環境 <br>(4) Ctrl+Shift+c 和 Ctrl+Shift+v<br> 先用滑鼠選中需要複製的內容，然後用 Ctrl+Shift+c 進行複製，再用 Ctrl+Shift+v 進行貼上<br>(5) 圖形介面與純文字互動模式切換<br>Ctrl+Alt+F1-F6：純文字交互模式登入 tty1-tty6 終端機<br>Ctrl+Alt+F7：切回圖形介面</p>
-<h3 id="3- 關機與重啟命令"><a href="#3- 關機與重啟命令" class="headerlink" title="3. 關機與重啟命令"></a>3. 關機與重啟命令</h3><p>(1) 關機<br>$ sudo poweroff<br>(2) 重新啟動<br>$ sudo reboot</p>
-<h3 id="4- 終端命令列中一些常用符號瞭解"><a href="#4- 終端命令列中一些常用符號瞭解" class="headerlink" title="4. 終端命令列中一些常用符號瞭解"></a>4. 終端命令列中一些常用符號瞭解</h3><p>(1) 使用者家目錄：~<br>(2) 系統根目錄：/<br>(3) 一般使用者提示符：$<br>(4) root 使用者提示符：#</p>
-<h3 id="5- 目錄與文件相關命令"><a href="#5- 目錄與文件相關命令" class="headerlink" title="5. 目錄與文件相關命令"></a>5. 目錄與文件相關命令</h3><p>(1) 顯示檔案與目錄清單<br>$ ls<br>(2) 切換目錄（ 2）<br>$ cd &lt; 目標目錄 &gt;<br>(3) 顯示目前所在工作目錄<br>$ pwd<br>(4) 建立檔案<br>$ touch &lt; 檔名 &gt;<br>(5) 複製檔案<br>$ cp &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(6) 移動檔案<br>$ mv &lt; 源檔案路徑 &gt; &lt; 目標檔案路徑 &gt;<br>(7) 刪除檔案<br>$ rm &lt; 檔名 &gt;<br>(8) 顯示檔案內容<br>$ cat &lt; 檔名 &gt;<br>(9) 建立資料夾<br>$ mkdir &lt; 資料夾名 &gt;<br>(10) 刪除資料夾<br>$ rmdir &lt; 資料夾名 &gt;</p>
-<h3 id="6- 文件許可權"><a href="#6- 文件許可權" class="headerlink" title="6. 文件許可權"></a>6. 文件許可權</h3><p>(1) 修改檔案讀寫可執行權限，該權限由遮罩， 如 777 權限全開<br>$ sudo chmod 777 &lt; 檔名 &gt;<br>(2) 修改檔案擁有者<br>$ sudo chown &lt; 使用者名 &gt;：&lt; 組名 &gt; &lt; 檔名 &gt;</p>
-<h3 id="7- 檔案查找"><a href="#7- 檔案查找" class="headerlink" title="7. 檔案查找"></a>7. 檔案查找</h3><p>(1) locate<br>$ sudo updatedb<br>$ locate &lt; 待查找檔名 &gt;<br>(2) find<br>$ find -name &lt; 待查找檔名 &gt;</p>
-<h3 id="8- 網路相關命令"><a href="#8- 網路相關命令" class="headerlink" title="8. 網路相關命令"></a>8. 網路相關命令</h3><p>(1) 網路連線與否測試<br>$ ping &lt; 待測目標主機 IP 或域名 &gt;<br>(2) 本地 IP 位址檢視<br>$ ifconfig<br>(3) 遠端登入目標主機<br>$ ssh &lt; 目標主機使用者名 &gt;@&lt; 目標主機 IP 位址 &gt;</p>
-<h3 id="9- 系統軟體安裝與軟體運行方法"><a href="#9- 系統軟體安裝與軟體運行方法" class="headerlink" title="9. 系統軟體安裝與軟體運行方法"></a>9. 系統軟體安裝與軟體運行方法</h3><p>(1) 系統預設的套件安裝方法 apt-get<br>$ sudo apt-get update<br>$ sudo apt-get install &lt; 軟體套件名稱 &gt;<br>(2) source 方法執行系統文稿，例如執行使用者預設配置文件.bashrc<br>$ source ~/.bashrc<br>(3) ./ 方法執行一般可執行檔<br>$ ./&lt; 可执行文件 &gt;</p>
-<h3 id="10- 文字編輯器 -vim- 使用"><a href="#10- 文字編輯器 -vim- 使用" class="headerlink" title="10. 文字編輯器 vim 使用"></a>10. 文字編輯器 vim 使用 </h3><p>(1) vim 檢視檔案內容<br>$ vim &lt; 檔名 &gt;<br>(2) vim 進入編輯模式<br> 在 vim 查看檔案內容的介面中，按 i 鍵進入編輯模式，然後就可以編輯檔案的內容了 <br>(3) vim 退出編輯模式<br> 在 vim 編輯檔案內容的介面中，按 Esc 鍵退出編輯模式，然後就又回到查看檔案內容的介面了<br>(4) vim 編輯內容儲存<br>vim 在編輯完檔內容，退出到查看檔內容的介面後，可以輸入 “：w” 對編輯內容進行保存，也可以輸入 “：wq” 對編輯內容進行保存並退出 vim</p>
-]]></content>
-      <categories>
-        <category>大学课程项目-激光slam小車</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>slam</tag>
-        <tag>智能車</tag>
-        <tag>命令列指令</tag>
       </tags>
   </entry>
   <entry>
@@ -3487,15 +3584,7 @@ IP：DC Comics（漫畫部門）
 <h3 id="Gartner-2019- 年新興技術發展週期報告，歸納 -5- 大重點新興科技趨勢"><a href="#Gartner-2019- 年新興技術發展週期報告，歸納 -5- 大重點新興科技趨勢" class="headerlink" title="Gartner 2019 年新興技術發展週期報告，歸納 5 大重點新興科技趨勢"></a>Gartner 2019 年新興技術發展週期報告，歸納 5 大重點新興科技趨勢</h3><p><a href="https://technews.tw/2019/09/02/gartner-2019-top-5-skill/">Gartner 2019 年新興技術發展週期報告，歸納 5 大重點新興科技趨勢</a><br>（1）感測與行動力<br>（2）擴增人類能力<br>（3）後傳統（postclassical）運算及通訊<br>（4）數位生態系<br>（5）先進人工智慧與分析技術</p>
 <h3 id="Gartner- 預測 -2019- 年十大策略科技，智慧空間、量子運算入列"><a href="#Gartner- 預測 -2019- 年十大策略科技，智慧空間、量子運算入列" class="headerlink" title="Gartner 預測 2019 年十大策略科技，智慧空間、量子運算入列"></a>Gartner 預測 2019 年十大策略科技，智慧空間、量子運算入列</h3><p><a href="https://technews.tw/2018/10/18/top-10-strategic-technology-trends-for-2019/">Gartner 預測 2019 年十大策略科技，智慧空間、量子運算入列</a><br>（1）自動化物件<br>（2）增強分析<br>（3）人工智慧驅動開發<br>（4）數位分身<br>（5）更強大的邊緣運算<br>（6）沉浸式體驗<br>（7）區塊鏈<br>（8）智慧空間<br>（9）數位倫理和隱私<br>（10）量子運算</p>
 <h3 id="中東和美國"><a href="# 中東和美國" class="headerlink" title="中東和美國"></a>中東和美國 </h3><p> 以色列和巴勒斯坦衝突，衝突無解的原因：動武對雙方政府都有利。<br>沙烏地阿拉伯和以色列是美國在中東唯二的盟友。<br>阿拉伯聯合大公國、巴林、蘇丹等國家，2020 年在川普政府的斡旋下，第一次和以色列建立建交。<br>這些國家在這次的以巴衝突 (2021/05) 中保持沉默，<br>暗示和以色列建交的好處（例如未來可以共同抗衡伊朗、土耳其等等），比義氣相挺更加重要。</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>暑期實習經驗參考</title>
-    <url>/2020/02/25/summer-intern/</url>
-    <content><![CDATA[<p><a href="https://shannon112.blogspot.com/2018/08/2018-summer-intern_24.html">https://shannon112.blogspot.com/2018/08/2018-summer-intern_24.html</a></p>
+<h3 id="財務報表"><a href="# 財務報表" class="headerlink" title="財務報表"></a>財務報表 </h3><p> 財務報表 = 資產負債表 + 損益表</p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -3510,6 +3599,15 @@ IP：DC Comics（漫畫部門）
 ]]></content>
       <categories>
         <category>生活-出去玩做功課</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>暑期實習經驗參考</title>
+    <url>/2020/02/25/summer-intern/</url>
+    <content><![CDATA[<p><a href="https://shannon112.blogspot.com/2018/08/2018-summer-intern_24.html">https://shannon112.blogspot.com/2018/08/2018-summer-intern_24.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>

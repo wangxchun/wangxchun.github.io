@@ -24,15 +24,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="投資理財系列  基本觀念 ETF 入門 股票入門  股票基本面  股票技術面  外匯  儲蓄保單  期貨、權證、外匯保證金  各類虛擬貨幣  房地產">
+<meta name="description" content="技術面1. 價格2. 成交量、法人買賣、融資券3.KD、MACDK 線均線成交量成交量越高，代表買賣雙方對這檔股票的交易意願也越高也代表雙方對價格的看法越不一致。 常見的價量形態價漲量增、價跌量縮（價量配合）價漲量縮、價跌量增（價量背離） KD 指標技術分析的兩個目的：研判局勢、抓到轉折。均線 (MA) 的計算是以當天的收盤價計，而不是使用當天的均價，不容易表現出短期内股價强弱的細節。 K 值和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="股票技術面">
 <meta property="og:url" content="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/index.html">
 <meta property="og:site_name" content="Stephen自强不息">
-<meta property="og:description" content="投資理財系列  基本觀念 ETF 入門 股票入門  股票基本面  股票技術面  外匯  儲蓄保單  期貨、權證、外匯保證金  各類虛擬貨幣  房地產">
+<meta property="og:description" content="技術面1. 價格2. 成交量、法人買賣、融資券3.KD、MACDK 線均線成交量成交量越高，代表買賣雙方對這檔股票的交易意願也越高也代表雙方對價格的看法越不一致。 常見的價量形態價漲量增、價跌量縮（價量配合）價漲量縮、價跌量增（價量背離） KD 指標技術分析的兩個目的：研判局勢、抓到轉折。均線 (MA) 的計算是以當天的收盤價計，而不是使用當天的均價，不容易表現出短期内股價强弱的細節。 K 值和">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-05-10T07:07:02.000Z">
-<meta property="article:modified_time" content="2021-05-11T10:32:17.310Z">
+<meta property="article:modified_time" content="2021-06-03T08:24:30.845Z">
 <meta property="article:author" content="Stephen Wang">
 <meta name="twitter:card" content="summary">
 
@@ -161,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1%E7%B3%BB%E5%88%97"><span class="nav-text">投資理財系列 </span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%80%E8%A1%93%E9%9D%A2"><span class="nav-text">技術面 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E5%83%B9%E6%A0%BC"><span class="nav-text">1. 價格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E6%88%90%E4%BA%A4%E9%87%8F%E3%80%81%E6%B3%95%E4%BA%BA%E8%B2%B7%E8%B3%A3%E3%80%81%E8%9E%8D%E8%B3%87%E5%88%B8"><span class="nav-text">2. 成交量、法人買賣、融資券</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-KD%E3%80%81MACD"><span class="nav-text">3.KD、MACD</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#K-%20%E7%B7%9A"><span class="nav-text">K 線</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E7%B7%9A"><span class="nav-text"> 均線 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E4%BA%A4%E9%87%8F"><span class="nav-text"> 成交量 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A6%8B%E7%9A%84%E5%83%B9%E9%87%8F%E5%BD%A2%E6%85%8B"><span class="nav-text">常見的價量形態 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KD-%20%E6%8C%87%E6%A8%99"><span class="nav-text">KD 指標 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#K-%20%E5%80%BC%E5%92%8C%20-D-%20%E5%80%BC"><span class="nav-text">K 值和 D 值 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F"><span class="nav-text">公式 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%BB%9E"><span class="nav-text">要注意的點 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1%E7%B3%BB%E5%88%97"><span class="nav-text">投資理財系列 </span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,14 +177,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-count">177</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -268,7 +268,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-05-11 18:32:17" itemprop="dateModified" datetime="2021-05-11T18:32:17+08:00">2021-05-11</time>
+        <time title="修改時間：2021-06-03 16:24:30" itemprop="dateModified" datetime="2021-06-03T16:24:30+08:00">2021-06-03</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,7 +290,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <span id="more"></span>
+        <h3 id="技術面"><a href="# 技術面" class="headerlink" title="技術面"></a>技術面 </h3><h4 id="1- 價格"><a href="#1- 價格" class="headerlink" title="1. 價格"></a>1. 價格</h4><h4 id="2- 成交量、法人買賣、融資券"><a href="#2- 成交量、法人買賣、融資券" class="headerlink" title="2. 成交量、法人買賣、融資券"></a>2. 成交量、法人買賣、融資券</h4><h4 id="3-KD、MACD"><a href="#3-KD、MACD" class="headerlink" title="3.KD、MACD"></a>3.KD、MACD</h4><h3 id="K- 線"><a href="#K- 線" class="headerlink" title="K 線"></a>K 線</h3><h3 id="均線"><a href="# 均線" class="headerlink" title="均線"></a> 均線 </h3><h3 id="成交量"><a href="# 成交量" class="headerlink" title="成交量"></a> 成交量 </h3><p> 成交量越高，代表買賣雙方對這檔股票的交易意願也越高 <br> 也代表雙方對價格的看法越不一致。</p>
+<h4 id="常見的價量形態"><a href="# 常見的價量形態" class="headerlink" title="常見的價量形態"></a>常見的價量形態 </h4><p> 價漲量增、價跌量縮（價量配合）<br>價漲量縮、價跌量增（價量背離）</p>
+<h3 id="KD- 指標"><a href="#KD- 指標" class="headerlink" title="KD 指標"></a>KD 指標 </h3><p> 技術分析的兩個目的：研判局勢、抓到轉折。<br>均線 (MA) 的計算是以當天的收盤價計，而不是使用當天的均價，不容易表現出短期内股價强弱的細節。</p>
+<h4 id="K- 值和 -D- 值"><a href="#K- 值和 -D- 值" class="headerlink" title="K 值和 D 值"></a>K 值和 D 值 </h4><p> 隨機震蕩指標 (KD 指標)：以每天的收盤價爲基礎，經過一套公式加權之後，換算出一組 K 值和 D 值，<br>再根據 KD 的數字和每天移動的情況，來判斷近期股價强弱走勢。</p>
+<h4 id="公式"><a href="# 公式" class="headerlink" title="公式"></a>公式 </h4><p>(1) RSV<br> 先把每天的收盤價換算成 RSV：<br>$RSV = {今日收盤價 - 最近 9 天最低價} \over {最近 9 天最高價 - 最近 9 天最低價}$<br>RSV 介於 0-100 之間，越接近 100 就越接近過去 9 天内股價波動範圍的高檔，表示買方力道很強 <br>50 就是多空雙方分界值<br> 缺點：因爲采樣範圍的改變，基準不同，導致數字劇烈變動，而對趨勢的變化產生干擾<br>(2) K 值（RSV 的加權移動平均）<br>$ 今天的 K 值 = {2 \over 3} \times 昨天的 K 值 + {1 \over 3} \times 今天的 RSV$<br>(3) D 值（K 值的加權移動平均）<br>$ 今天的 D 值 = {2 \over 3} \times 昨天的 D 值 + {1 \over 3} \times 今天的 K 值 $</p>
+<h4 id="要注意的點"><a href="# 要注意的點" class="headerlink" title="要注意的點"></a>要注意的點 </h4><p>(1) 只看價格，不看成交量和籌碼<br>(2) RSV 對 9 天后的 KD 值已經沒什麽影響了，KD 指標有效的參考指標只有 9 天内<br> 通常 80% 和 20% 成爲高低檔，50% 是多空的分界值 <br>D 值高於 80%-&gt; 上漲的動能很强<br>D 值高於 80% 進入超買區，K 值卻出現下彎穿過 D 值，是上漲動能轉弱的信號，趨勢轉折往下的幾率機會提高，稱爲死亡交叉；反過來稱爲黃金交叉。但是也有可能是假交叉或是假黃金，出現高檔鈍化或是低檔鈍化。<br> 檢查方法：放大周期，例如可以用周 KD 來看。</p>
+<span id="more"></span>
 <h3 id="投資理財系列"><a href="# 投資理財系列" class="headerlink" title="投資理財系列"></a>投資理財系列 </h3><p><a href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/"> 基本觀念 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-ETF/">ETF 入門</a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/"> 股票入門 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-fundamental/"> 股票基本面 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-stock-technical/"> 股票技術面 </a><br><a href="https://wangxchun.github.io/2021/05/11/money-management-foreign-currency/"> 外匯 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-deposit-insurance/"> 儲蓄保單 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-futures-and-warrant/"> 期貨、權證、外匯保證金 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-virtual-currency/"> 各類虛擬貨幣 </a><br><a href="https://wangxchun.github.io/2021/05/10/money-management-real-estate/"> 房地產</a></p>
 
     </div>
@@ -402,7 +408,38 @@ if (document.querySelectorAll('.pdf-container').length) {
 
 
 
-  
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
 
 
 </body>
