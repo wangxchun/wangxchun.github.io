@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="google-site-verification" content="SEuuKcxiY0Z6R9aAPIZyU5Y9rFqpgO9gKES--zhFX24" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="一、MIMO 的来龙去脉 1.MIMO 的思路 无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5G（三）5G 关键技术 -- 6.Massive MIMO 补充">
+<meta property="og:url" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/index.html">
+<meta property="og:site_name" content="Stephen自强不息">
+<meta property="og:description" content="一、MIMO 的来龙去脉 1.MIMO 的思路 无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo1.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo2.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo3.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo4.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo5.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo6.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo7.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo8.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo9.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo10.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo11.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo14.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo15.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo12.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo13.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo16.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo17.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo18.jpg">
+<meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo20.jpg">
+<meta property="article:published_time" content="2021-04-17T12:39:35.000Z">
+<meta property="article:modified_time" content="2021-06-17T02:20:04.549Z">
+<meta property="article:author" content="Stephen Wang">
+<meta property="article:tag" content="5G">
+<meta property="article:tag" content="Massive MIMO">
+<meta property="article:tag" content="MIMO">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo1.jpg">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/2021/04/17/5G-3-6-2/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>5G（三）5G 关键技术 -- 6.Massive MIMO 补充 | Stephen自强不息</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Stephen自强不息</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81MIMO-%20%E7%9A%84%E6%9D%A5%E9%BE%99%E5%8E%BB%E8%84%89"><span class="nav-text">一、MIMO 的来龙去脉 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-MIMO-%20%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="nav-text">1.MIMO 的思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-MIMO-%20%E5%A4%9A%E5%85%A5%E5%A4%9A%E5%87%BA%20-%EF%BC%9A%E5%A4%9A%E5%A4%A9%E7%BA%BF%E6%8A%80%E6%9C%AF"><span class="nav-text">2.MIMO (多入多出)：多天线技术 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E5%AF%B9%E4%BA%8E%E5%9F%BA%E7%AB%99%E6%9D%A5%E8%AF%B4%EF%BC%8C%E6%98%AF%E6%8C%87%E5%A4%A9%E7%BA%BF%E6%9C%89%E5%A4%9A%E5%A5%97%E6%8C%AF%E5%AD%90%EF%BC%8C%E6%AF%8F%E4%B8%80%E5%A5%97%E6%8C%AF%E5%AD%90%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%9C%8B%E6%88%90%E4%B8%80%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%E5%A4%A9%E7%BA%BF%E3%80%82"><span class="nav-text">3. 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%20%E6%89%8B%E6%9C%BA%E4%B9%9F%E6%98%AF%E5%A4%9A%E5%A4%A9%E7%BA%BF%E7%9A%84"><span class="nav-text">4. 手机也是多天线的</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81MIMO-%20%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-text">二、MIMO 实现效果的分类 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E7%A9%BA%E9%97%B4%E5%88%86%E9%9B%86%EF%BC%9A%E7%9B%AE%E7%9A%84%E6%98%AF%E6%8F%90%E5%8D%87%E6%89%8B%E6%9C%BA%E7%9A%84%E6%8E%A5%E6%94%B6%E8%B4%A8%E9%87%8F"><span class="nav-text">1. 空间分集：目的是提升手机的接收质量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E7%A9%BA%E9%97%B4%E5%A4%8D%E7%94%A8%EF%BC%9A%E7%9B%AE%E7%9A%84%E6%98%AF%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F"><span class="nav-text">2. 空间复用：目的是提升网速 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E6%B3%A2%E6%9D%9F%E8%B5%8B%E5%BD%A2%EF%BC%88%E5%8F%AA%E6%94%AF%E6%8C%81%20-TDD-%20%E6%A8%A1%E5%BC%8F%EF%BC%89%EF%BC%88%E5%8F%AF%E4%BB%A5%E5%8F%91%E9%80%81%E5%AE%9A%E5%90%91%E7%94%B5%E7%A3%81%E6%B3%A2%EF%BC%89"><span class="nav-text">3. 波束赋形（只支持 TDD 模式）（可以发送定向电磁波）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-text">概念 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%A9%E7%BA%BF%E7%9A%84%E8%A6%81%E6%B1%82"><span class="nav-text">天线的要求</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%A2%E7%9A%84%E5%B9%B2%E6%B6%89%E6%98%AF%E6%B3%A2%E6%9D%9F%E8%B5%8B%E5%BD%A2%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8F%91%E6%83%B3"><span class="nav-text">波的干涉是波束赋形的技术发想 </span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E7%A9%BA%E5%88%86%E5%A4%9A%E5%9C%B0%EF%BC%88%E7%9B%AE%E5%89%8D%E5%9C%A8%E7%90%86%E8%AE%BA%E9%98%B6%E6%AE%B5%EF%BC%8C%E5%AE%9E%E9%99%85%E5%AE%9E%E7%8E%B0%E5%87%A0%E4%B9%8E%E6%B2%A1%E6%9C%89%EF%BC%89"><span class="nav-text">4. 空分多地（目前在理论阶段，实际实现几乎没有）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81MIMO-%20%E7%9A%84%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B"><span class="nav-text">三、MIMO 的信息处理流程 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E4%BC%A0%E8%BE%93%E5%9D%97"><span class="nav-text">1. 传输块 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E7%A0%81%E5%AD%97"><span class="nav-text">2. 码字 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E5%B1%82%E6%98%A0%E5%B0%84"><span class="nav-text">3. 层映射 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B1%82"><span class="nav-text"> 层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4G-%20%E6%9C%80%E5%A4%9A%E4%B8%BA%20-4-%20%E5%B1%82%EF%BC%8C%E6%8C%89%E7%85%A7%E5%8D%95%E7%A0%81%E5%AD%97%E5%92%8C%E5%8F%8C%E7%A0%81%E5%AD%97%EF%BC%8C%E5%8F%88%E6%9C%89%E5%A6%82%E4%B8%8B%E5%88%92%E5%88%86%EF%BC%9A"><span class="nav-text">4G 最多为 4 层，按照单码字和双码字，又有如下划分：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E9%A2%84%E7%BC%96%E7%A0%81%EF%BC%9A%E5%B1%82%E5%88%B0%E5%A4%A9%E7%BA%BF%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%98%A0%E5%B0%84"><span class="nav-text">4. 预编码：层到天线端口的映射 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E5%A4%A9%E7%BA%BF%E7%AB%AF%E5%8F%A3"><span class="nav-text">5. 天线端口 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81LTE-%20%E7%9A%84%E4%BC%A0%E8%BE%93%E6%A8%A1%E5%BC%8F%20-TM"><span class="nav-text">四、LTE 的传输模式 TM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A4%E5%86%85%E5%88%86%E5%B8%83%E5%8F%AF%E8%83%BD%E6%98%AF%E5%8D%95%E5%A4%A9%E7%BA%BF%E6%A8%A1%E5%BC%8F%20-%20%E5%B7%A6%E5%9B%BE%20-%EF%BC%8C%E4%B9%9F%E5%8F%AF%E8%83%BD%E6%98%AF%E5%A4%9A%E5%A4%A9%E7%BA%BF%E6%A8%A1%E5%BC%8F%20-%20%E5%8F%B3%E5%9B%BE"><span class="nav-text">室内分布可能是单天线模式 (左图)，也可能是多天线模式 (右图)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TM2%E3%80%81TM3-TM4%E3%80%81TM7-YM8"><span class="nav-text">TM2、TM3&#x2F;TM4、TM7&#x2F;YM8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TM3-%20%E5%92%8C%20-TM4-%20%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">TM3 和 TM4 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TM7-%20%E5%92%8C%20-TM8-%20%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">TM7 和 TM8 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LTE-%20%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%8F%8C%E6%B5%81"><span class="nav-text">LTE 中实现真正的双流 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LTE-%20%E4%B8%AD%20-TM-%20%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8F%98%E5%8C%96"><span class="nav-text">LTE 中 TM 模式的变化 </span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Stephen Wang"
+      src="/img/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Stephen Wang</p>
+  <div class="site-description" itemprop="description">機器學習 / C++ / 投資 / 台灣景點</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">287</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stephenwang0205@outlook.com" title="E-Mail → mailto:stephenwang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/17/5G-3-6-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          5G（三）5G 关键技术 -- 6.Massive MIMO 补充
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-04-17 20:39:35" itemprop="dateCreated datePublished" datetime="2021-04-17T20:39:35+08:00">2021-04-17</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-06-17 10:20:04" itemprop="dateModified" datetime="2021-06-17T10:20:04+08:00">2021-06-17</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/5G/" itemprop="url" rel="index"><span itemprop="name">5G</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="一、MIMO- 的来龙去脉"><a href="# 一、MIMO- 的来龙去脉" class="headerlink" title="一、MIMO 的来龙去脉"></a>一、MIMO 的来龙去脉 </h3><h4 id="1-MIMO- 的思路"><a href="#1-MIMO- 的思路" class="headerlink" title="1.MIMO 的思路"></a>1.MIMO 的思路</h4><p> 无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。<br>提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。<br>载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。<br><img src="/2021/04/17/5G-3-6-2/photo1.jpg" alt><br>增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一个人搬砖的能力增加。<br>MIMO 的思路：找多个人来搬砖。</p>
+<h4 id="2-MIMO- 多入多出 -：多天线技术"><a href="#2-MIMO- 多入多出 -：多天线技术" class="headerlink" title="2.MIMO (多入多出)：多天线技术"></a>2.MIMO (多入多出)：多天线技术 </h4><p><img src="/2021/04/17/5G-3-6-2/photo2.jpg" alt><br>MIMO：发射端和接收端都有多个天线<br> 多天线，并不是指有多个天线板。</p>
+<h4 id="3- 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。"><a href="#3- 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。" class="headerlink" title="3. 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。"></a>3. 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。</h4><p>下左图中，天线板拆开可看到有四列，每一列有 2 套振子，所以总共有 8 套振子 = 有 8 个天线。<br>（每一列的 X 的一撇的方向是一套振子，另一个方向的撇是另一套振子）<br>下右图中，每一个小方块是一套振子，T 和 R 是发射和接收的意思<br><img src="/2021/04/17/5G-3-6-2/photo3.jpg" alt></p>
+<h5 id="4- 手机也是多天线的"><a href="#4- 手机也是多天线的" class="headerlink" title="4. 手机也是多天线的"></a>4. 手机也是多天线的</h5><p>4G 手机是 2 天线的，5G 手机是 4 天线的</p>
+<h3 id="二、MIMO- 实现效果的分类"><a href="# 二、MIMO- 实现效果的分类" class="headerlink" title="二、MIMO 实现效果的分类"></a>二、MIMO 实现效果的分类 </h3><h4 id="1- 空间分集：目的是提升手机的接收质量"><a href="#1- 空间分集：目的是提升手机的接收质量" class="headerlink" title="1. 空间分集：目的是提升手机的接收质量"></a>1. 空间分集：目的是提升手机的接收质量</h4><p> 采用多个天线发射或接收一个数据流，避免单个信道衰弱对整个链路的影响。<br><img src="/2021/04/17/5G-3-6-2/photo4.jpg" alt="空间分集"></p>
+<h4 id="2- 空间复用：目的是提升网速"><a href="#2- 空间复用：目的是提升网速" class="headerlink" title="2. 空间复用：目的是提升网速"></a>2. 空间复用：目的是提升网速 </h4><p> 利用较大间距的天线振元之间或赋形波束之间的不相关性，向一个终端 / 基站并行发射多个数据流，以提高链路容量（数据率）<br><img src="/2021/04/17/5G-3-6-2/photo5.jpg" alt="空间复用"><br>    RANK<br>    RANK 可以理解成手机可以区分的信道数，和传输信道相关性有关。<br>    只有接收端能够区分不相关的两条独立信道，才能够实现空间复用。<br>    RANK=1，就是信道相关性很强，手机无法区分两路信道，只能发挥空间分集的效果。<br>    RANK=2，说明手机可以区分两路信道，可以发挥空间复用的效果，可以接收两路数据流。<br>    对于 4G 来说，RANK=1,2; 对于 5G 来说，RANk=1,2,3,4。</p>
+<h4 id="3- 波束赋形（只支持 -TDD- 模式）（可以发送定向电磁波）"><a href="#3- 波束赋形（只支持 -TDD- 模式）（可以发送定向电磁波）" class="headerlink" title="3. 波束赋形（只支持 TDD 模式）（可以发送定向电磁波）"></a>3. 波束赋形（只支持 TDD 模式）（可以发送定向电磁波）</h4><h5 id="概念"><a href="# 概念" class="headerlink" title="概念"></a>概念 </h5><p> 利用较小间距的天线阵元之间的相关性，通过阵元发射的波之间形成干涉，集中能量于某个 (或某些) 特定的方向上，形成波束，从而实现更大的覆盖和干扰抑制效果。<br>在移动通信中，最早期的应用，是在 3G 技术 TD-SCDMA 系统当中。<br>理论上也支持 FDD 模式，但是实际应用还没有实现。<br><img src="/2021/04/17/5G-3-6-2/photo6.jpg" alt="2D 和 3D MIMO"><br><img src="/2021/04/17/5G-3-6-2/photo7.jpg" alt="5G NR 的波束赋形"><br>2D：用户手机是在水平面上移动的。<br><img src="/2021/04/17/5G-3-6-2/photo8.jpg" alt="传统天线和波束赋形"></p>
+<h5 id="天线的要求"><a href="# 天线的要求" class="headerlink" title="天线的要求"></a>天线的要求</h5><p>(1) 空间分集 2T2R<br>(2) 空间复用 2T2R<br>(3) 波束成形<br>8T8R（最低标准）：TD-SCDMA 和 LTE（4 套振子形成一个波束）<br>16T16R 及以下：只支持 2D MIMO<br>32T32R 天线及以上：支持 3D MIMO</p>
+<h5 id="波的干涉是波束赋形的技术发想"><a href="# 波的干涉是波束赋形的技术发想" class="headerlink" title="波的干涉是波束赋形的技术发想"></a>波的干涉是波束赋形的技术发想 </h5><p> 电磁波的相位是关键因素。<br>相位的改变，可以带来波束的形成，实际应用中，也伴随着幅度的变化。<br><img src="/2021/04/17/5G-3-6-2/photo9.jpg" alt="叠加"><br>    总结<br>    空间分集：发送多个相同数据，避免单个信道衰弱对整个链路的影响。<br>    空间复用：提升网速。<br>    波束赋形：多套振子形成定向的电磁波。<br>    如果单纯从提升信号质量的角度，波束赋形的效果比空间分集还要好。<br>    波束赋形如果发送两个波束，也可以实现空间复用的效果。</p>
+<h4 id="4- 空分多地（目前在理论阶段，实际实现几乎没有）"><a href="#4- 空分多地（目前在理论阶段，实际实现几乎没有）" class="headerlink" title="4. 空分多地（目前在理论阶段，实际实现几乎没有）"></a>4. 空分多地（目前在理论阶段，实际实现几乎没有）</h4><h3 id="三、MIMO- 的信息处理流程"><a href="# 三、MIMO- 的信息处理流程" class="headerlink" title="三、MIMO 的信息处理流程"></a>三、MIMO 的信息处理流程 </h3><p><img src="/2021/04/17/5G-3-6-2/photo10.jpg" alt="MIMO 的信息处理流程"><br> 前述的空间分集、空间复用、波束成形都是在物理天线到手机的部分。</p>
+<h4 id="1- 传输块"><a href="#1- 传输块" class="headerlink" title="1. 传输块"></a>1. 传输块 </h4><p> 传输块 TB：可以简单理解成要给用户发送的原始数据，其实就是一堆 0101000100<br>帧结构：4G 和 5G 一帧是 10ms，一个子帧 = 一个传输块 = 1ms<br>一个传输块 = 基站在 1ms 内要发送的数据。</p>
+<h4 id="2- 码字"><a href="#2- 码字" class="headerlink" title="2. 码字"></a>2. 码字 </h4><p> 传输块 TB 经过信道编码，交织之后变成码字。一个码字就是一股数据流。</p>
+<h4 id="3- 层映射"><a href="#3- 层映射" class="headerlink" title="3. 层映射"></a>3. 层映射 </h4><h5 id="层"><a href="# 层" class="headerlink" title="层"></a> 层</h5><p>以空间分集为例，一个码字的最后需要两条通道发射出去。因此，构造了层的概念，把原始数据与原始数据的另一个版本，分别放入层当中去，最后构造到天线那里发射出去。</p>
+<h5 id="4G- 最多为 -4- 层，按照单码字和双码字，又有如下划分："><a href="#4G- 最多为 -4- 层，按照单码字和双码字，又有如下划分：" class="headerlink" title="4G 最多为 4 层，按照单码字和双码字，又有如下划分："></a>4G 最多为 4 层，按照单码字和双码字，又有如下划分：</h5><p><img src="/2021/04/17/5G-3-6-2/photo11.jpg" alt><br>实际上，LTE 宏站不管单双码字，都是使用双层。<br>一般来说，室内分布才会有单天线这种特殊情况。</p>
+<h4 id="4- 预编码：层到天线端口的映射"><a href="#4- 预编码：层到天线端口的映射" class="headerlink" title="4. 预编码：层到天线端口的映射"></a>4. 预编码：层到天线端口的映射 </h4><p> 使用预编码矩阵将层 (layer) 映射到天线端口 (antenna port) 的过程，通过改变系数调整层数据传送到各个端口的比例。<br><img src="/2021/04/17/5G-3-6-2/photo14.jpg" alt><br>基站可以透过 RS 排布判断接收的信号是来自哪一个端口 <br>$y_1 = m_1X_1 + m_3X_2$<br>$y_2 = m_2X_1 + m_3X_2$<br><img src="/2021/04/17/5G-3-6-2/photo15.jpg" alt="用矩阵来表示"><br> 码本：预编码矩阵的组合。</p>
+<h4 id="5- 天线端口"><a href="#5- 天线端口" class="headerlink" title="5. 天线端口"></a>5. 天线端口 </h4><p><img src="/2021/04/17/5G-3-6-2/photo12.jpg" alt><br><img src="/2021/04/17/5G-3-6-2/photo13.jpg" alt><br> 可以理解成逻辑通道，并不是实际的天线上的物理端口。<br>可以分为 1,2,4 端口，目前只使用单端口和双端口，单端口对应用室内分布，双端口应用于室外宏站。<br>一个逻辑端口可以对应一个物理端口，也可以对应多个物理端口。<br><img src="/2021/04/17/5G-3-6-2/photo16.jpg" alt></p>
+<h3 id="四、LTE- 的传输模式 -TM"><a href="# 四、LTE- 的传输模式 -TM" class="headerlink" title="四、LTE 的传输模式 TM"></a>四、LTE 的传输模式 TM</h3><h4 id="室内分布可能是单天线模式 - 左图 -，也可能是多天线模式 - 右图"><a href="# 室内分布可能是单天线模式 - 左图 -，也可能是多天线模式 - 右图" class="headerlink" title="室内分布可能是单天线模式 (左图)，也可能是多天线模式 (右图)"></a>室内分布可能是单天线模式 (左图)，也可能是多天线模式 (右图)</h4><p><img src="/2021/04/17/5G-3-6-2/photo17.jpg" alt></p>
+<h4 id="TM2、TM3-TM4、TM7-YM8"><a href="#TM2、TM3-TM4、TM7-YM8" class="headerlink" title="TM2、TM3/TM4、TM7/YM8"></a>TM2、TM3/TM4、TM7/YM8</h4><p><img src="/2021/04/17/5G-3-6-2/photo18.jpg" alt></p>
+<h4 id="TM3- 和 -TM4- 的区别"><a href="#TM3- 和 -TM4- 的区别" class="headerlink" title="TM3 和 TM4 的区别"></a>TM3 和 TM4 的区别</h4><p><img src="/2021/04/17/5G-3-6-2/photo20.jpg" alt><br>PMI：预编码矩阵指示<br>TM4：不只一种选择，手机可以建议基站使用某种预编码矩阵来给手机发信息。<br>（反馈就会有延迟，高速移动时延迟会严重影响接收）</p>
+<h4 id="TM7- 和 -TM8- 的区别"><a href="#TM7- 和 -TM8- 的区别" class="headerlink" title="TM7 和 TM8 的区别"></a>TM7 和 TM8 的区别</h4><p>TM7：提高接收质量，但是没有提升网速的效果。</p>
+<h4 id="总结"><a href="# 总结" class="headerlink" title="总结"></a>总结 </h4><p> 可以实现网速翻倍的模式：TM3、TM4、TM8<br>可以提升接收质量：TM2、TM7<br>无任何变化：TM1<br>网速排名 (用户低速)：TM8&gt;TM4&gt;TM3&gt;TM7&gt;TM2&gt;TM1</p>
+<h4 id="LTE- 中实现真正的双流"><a href="#LTE- 中实现真正的双流" class="headerlink" title="LTE 中实现真正的双流"></a>LTE 中实现真正的双流 </h4><p>TM3、TM4、TM8：基站可以发双流<br>Rank2：手机能够区分两路信道<br>Rank2 + TM3/TM4/TM8 = 双流<br> 比如：Rank1 + TM3 = 就是单流</p>
+<h4 id="LTE- 中 -TM- 模式的变化"><a href="#LTE- 中 -TM- 模式的变化" class="headerlink" title="LTE 中 TM 模式的变化"></a>LTE 中 TM 模式的变化 </h4><p> 通过 UE 反馈，基站选择一种 TM 模式，发送信息，反馈可以是 CQI/RANK/PMI<br>CQI 是信道质量指示：表示的是下行信号质量情况，从 SINR 计算而得出。<br>协议没有规定 SINR 和 CQI 之间的关系，由芯片厂家自行算法决定。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/5G/" rel="tag"># 5G</a>
+              <a href="/tags/Massive-MIMO/" rel="tag"># Massive MIMO</a>
+              <a href="/tags/MIMO/" rel="tag"># MIMO</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/16/C++%20advance7.3/" rel="prev" title="C++ advance7.3">
+                  <i class="fa fa-chevron-left"></i> C++ advance7.3
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/20/python-advance-1/" rel="next" title="python 应用 --1.Linux 命令">
+                  python 应用 --1.Linux 命令 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stephen Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+  
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+</body>
+</html>
