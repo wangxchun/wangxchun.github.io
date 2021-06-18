@@ -519,7 +519,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-17 10:19:31" itemprop="dateModified" datetime="2021-06-17T10:19:31+08:00">2021-06-17</time>
+        <time title="修改時間：2021-06-18 09:53:29" itemprop="dateModified" datetime="2021-06-18T09:53:29+08:00">2021-06-18</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -541,7 +541,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="一、5G-接入网架构"><a href="#一、5G-接入网架构" class="headerlink" title="一、5G 接入网架构"></a>一、5G 接入网架构</h3><p><img src="/2021/04/14/5G-2-2/photo1.jpg" alt><br>4G 网络的站点都是独立的，没有像 3G 中 RNC (Radio Network Controller) 的角色来进行控制。<br>在 5G 中，基站的密度更大，干扰更大，更需要站点间的协调合作。<br>5G 网络需要灵活部署，以配合不同的场景需求。<br>自动化网络优化管理，通用硬件。<br><img src="/2021/04/14/5G-2-2/photo3.jpg" alt><br><img src="/2021/04/14/5G-2-2/photo2.jpg" alt><br>4G 中的 BBU 变成了 CU 和 DU，RRU 变成了 AAU<br>CU 可以采用通用硬件来实现，在上面采用 NFV 技术</p>
+          <h3 id="一、5G-接入网架构"><a href="#一、5G-接入网架构" class="headerlink" title="一、5G 接入网架构"></a>一、5G 接入网架构</h3><h4 id="5G-接入网架构"><a href="#5G-接入网架构" class="headerlink" title="5G 接入网架构"></a>5G 接入网架构</h4><p>4G 网络的站点都是独立的，没有像 3G 中 RNC (Radio Network Controller) 的角色来进行控制。<br>在 5G 中，基站的密度更大，干扰更大，更需要站点间的协调合作。<br>5G 网络需要灵活部署，以配合不同的场景需求。<br>自动化网络优化管理，通用硬件。<br><img src="/2021/04/14/5G-2-2/photo1.jpg" alt></p>
+<h4 id="5G-接入网-CU-DU-分离选项"><a href="#5G-接入网-CU-DU-分离选项" class="headerlink" title="5G 接入网 CU/DU 分离选项"></a>5G 接入网 CU/DU 分离选项</h4><p>越左边的划分方式越分布式，分布式实现的设备比较复杂，成本高。<br>3GPP 的第一种方式是：时延要求小的划分在 CU，这样 CU 就可以使用通用硬件。<br><img src="/2021/04/14/5G-2-2/photo2.jpg" alt></p>
+<h4 id="5G-接入网-CU-DU"><a href="#5G-接入网-CU-DU" class="headerlink" title="5G 接入网 CU/DU"></a>5G 接入网 CU/DU</h4><p>DU 只能连接一个 CU-CP，CU-UP 也只能连接一个 CU-CP</p>
+<p><img src="/2021/04/14/5G-2-2/photo3.png" alt><br>4G 中的 BBU 变成了 CU 和 DU，RRU 变成了 AAU<br>CU 可以采用通用硬件来实现，在上面采用 NFV 技术</p>
 <h3 id="二、"><a href="#二、" class="headerlink" title="二、"></a>二、</h3>
           <!--noindex-->
             <div class="post-button">
@@ -607,7 +610,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-17 10:19:32" itemprop="dateModified" datetime="2021-06-17T10:19:32+08:00">2021-06-17</time>
+        <time title="修改時間：2021-06-17 21:05:29" itemprop="dateModified" datetime="2021-06-17T21:05:29+08:00">2021-06-17</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -632,7 +635,7 @@
           <h3 id="一、5G-不同应用场景的需求指标差异"><a href="#一、5G-不同应用场景的需求指标差异" class="headerlink" title="一、5G 不同应用场景的需求指标差异"></a>一、5G 不同应用场景的需求指标差异</h3><p><img src="/2021/04/14/5G-2-1/photo1.jpg" alt><br>有时不同场景所需的性能是不同的，甚至是矛盾的，单一网络没办法满足需要（4G 网络就是单一网络）<br>那 5G 网络是如何解决这个问题？<br>建立三个网络：5G eMBB、5G uRLLC、5G mMTC，但是成本太高，而且网络会非常复杂</p>
 <h3 id="二、5G-时代的网络挑战和改进方向"><a href="#二、5G-时代的网络挑战和改进方向" class="headerlink" title="二、5G 时代的网络挑战和改进方向"></a>二、5G 时代的网络挑战和改进方向</h3><p><img src="/2021/04/14/5G-2-1/photo2.jpg" alt></p>
 <h4 id="发展方向"><a href="#发展方向" class="headerlink" title="发展方向"></a>发展方向</h4><p>解决方法：使用网络切片，分层三种网络，但不是物理层面，而是网络层面</p>
-<h5 id="1-控制面和用户面分离"><a href="#1-控制面和用户面分离" class="headerlink" title="1. 控制面和用户面分离"></a>1. 控制面和用户面分离</h5><p>在 4G 网络核心网中已经完成了一部分的分离，主要控制面在 MME，用户面在 S-GW 和 P-GW，但在 S-GW 和 P-GW 中仍含有会话控制相关的控制功能，例如 IP 地址分配。唯有网络更加灵活，才可能完成网络切片。<br></p>
+<h5 id="1-控制面和用户面分离"><a href="#1-控制面和用户面分离" class="headerlink" title="1. 控制面和用户面分离"></a>1. 控制面和用户面分离</h5><p>ex: 要增加用户数量，升级的是控制面；要提升传输速率，升级的是用户面。<br>在 4G 网络核心网中已经完成了一部分的分离，主要控制面在 MME，用户面在 S-GW 和 P-GW，但在 S-GW 和 P-GW 中仍含有会话控制相关的控制功能（例如 IP 地址分配），分离的不彻底。唯有网络更加灵活，才可能完成网络切片。<br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/14/5G-2-1/#more" rel="contents">
@@ -697,7 +700,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-17 10:15:45" itemprop="dateModified" datetime="2021-06-17T10:15:45+08:00">2021-06-17</time>
+        <time title="修改時間：2021-06-17 21:05:32" itemprop="dateModified" datetime="2021-06-17T21:05:32+08:00">2021-06-17</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
