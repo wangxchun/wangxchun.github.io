@@ -174,14 +174,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-count">180</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -224,6 +224,150 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/06/25/python-basic-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/25/python-basic-2/" class="post-title-link" itemprop="url">python-basic-2</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-06-25 15:48:36 / 修改時間：15:51:25" itemprop="dateCreated datePublished" datetime="2021-06-25T15:48:36+08:00">2021-06-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/06/25/python-basic-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/25/python-basic-1/" class="post-title-link" itemprop="url">python 基础 - 1. 变量和函数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-06-25 15:48:29 / 修改時間：22:21:51" itemprop="dateCreated datePublished" datetime="2021-06-25T15:48:29+08:00">2021-06-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">python基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、变量"><a href="# 一、变量" class="headerlink" title="一、变量"></a>一、变量</h3><h4 id="1- 基本使用"><a href="#1- 基本使用" class="headerlink" title="1. 基本使用"></a>1. 基本使用</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入苹果单价</span></span><br><span class="line">price_str = <span class="built_in">input</span> (<span class="string">&quot; 请输入苹果价格：&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入苹果重量</span></span><br><span class="line">weight_str = <span class="built_in">input</span> (<span class="string">&quot; 请输入苹果重量：&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算金额</span></span><br><span class="line">price = <span class="built_in">float</span> (price_str)  <span class="comment"># 将苹果单价转换成小数</span></span><br><span class="line">weight = <span class="built_in">float</span> (weight_str)  <span class="comment"># 将苹果重量转换成小数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算付款金额</span></span><br><span class="line">money = price * weight</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (money)</span><br></pre></td></tr></table></figure>
+<p>改进后<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入苹果单价</span></span><br><span class="line">price_str = <span class="built_in">float</span> (<span class="built_in">input</span> (<span class="string">&quot; 请输入苹果价格：&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入苹果重量</span></span><br><span class="line">weight_str = <span class="built_in">float</span> (<span class="built_in">input</span> (<span class="string">&quot; 请输入苹果重量：&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算付款金额</span></span><br><span class="line">money = price * weight</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (money)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果输入的不是一个数字，程序执行时会出错，有关数据转换的高级话题，后续会写到</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 变量的格式化输出"><a href="#2- 变量的格式化输出" class="headerlink" title="2. 变量的格式化输出"></a>2. 变量的格式化输出 </h4><p> 如果希望输出文字信息的同时，一起输出数据，就需要使用到格式化操作符 %<br>包含 % 的字符串，被称为格式化字符串 <br>% 和不同的字符连用，不同类型的数据需要使用不同的格式化字符<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"> 在控制台依次提示用户输入：姓名、公司、职位、电话、电子邮箱</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">name = <span class="built_in">input</span> (<span class="string">&quot; 请输入姓名：&quot;</span>)</span><br><span class="line">company = <span class="built_in">input</span> (<span class="string">&quot; 请输入公司：&quot;</span>)</span><br><span class="line">title = <span class="built_in">input</span> (<span class="string">&quot; 请输入职位：&quot;</span>)</span><br><span class="line">phone = <span class="built_in">input</span> (<span class="string">&quot; 请输入电话：&quot;</span>)</span><br><span class="line">email = <span class="built_in">input</span> (<span class="string">&quot; 请输入邮箱：&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;*&quot;</span> * <span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span> (company)</span><br><span class="line"><span class="built_in">print</span> ()</span><br><span class="line"><span class="comment"># 若是有多个变数要替换则使用 tuple 传递需要替代的内容值</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;% s % s&quot;</span> % (name, title)) </span><br><span class="line"><span class="built_in">print</span> ()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot; 电话：% s&quot;</span> % phone)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot; 邮箱：% s&quot;</span> % email)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;*&quot;</span> * <span class="number">50</span>)</span><br></pre></td></tr></table></figure></p>
+<h4 id="3- 变量的命名规则"><a href="#3- 变量的命名规则" class="headerlink" title="3. 变量的命名规则"></a>3. 变量的命名规则</h4><p>（1）每个单词都使用小写字母，单词与单词之间使用_下划线连接<br>（2）小驼峰式命名法：第一个单词以小写字母开始，后续单词的首字母大写<br>（3）大驼峰式命名法：每一个单词的首字母都采用大写字母</p>
+<h3 id="二、标识符和关键字"><a href="# 二、标识符和关键字" class="headerlink" title="二、标识符和关键字"></a>二、标识符和关键字 </h3><h4 id="1- 标识符"><a href="#1- 标识符" class="headerlink" title="1. 标识符"></a>1. 标识符</h4><p> 标示符可以由字母、下划线和数字组成 <br> 不能以数字开头 <br> 不能与关键字重名</p>
+<h4 id="2- 关键字"><a href="#2- 关键字" class="headerlink" title="2. 关键字"></a>2. 关键字 </h4><p> 通过以下命令可以查看 Python 中的关键字<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> keyword</span><br><span class="line"><span class="built_in">print</span> (keyword.kwlist)</span><br></pre></td></tr></table></figure></p>
+<h3 id><a href="#" class="headerlink" title=""></a> </h3><h4 id="1-if- 判断语句 "><a href="#1-if- 判断语句 "class="headerlink"title="1.if 判断语句 "></a>1.if 判断语句 </h4><p> 注意：代码的缩进为一个 tab 键，或者 4 个空格 —— 建议使用空格 <br> 在 Python 开发中，Tab 和空格不要混用<br>if 语句以及缩进部分是一个 完整的代码块<br>if 和 else 语句以及各自的缩进部分共同是一个完整的代码块</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -825,165 +969,6 @@
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E7%94%9F%E6%B4%BB-%E7%94%A2%E6%A5%AD%E4%BA%86%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">生活-產業了解</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/06/02/money-management-startup/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/02/money-management-startup/" class="post-title-link" itemprop="url">了解新創公司，看懂成長股</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-06-02 22:04:01" itemprop="dateCreated datePublished" datetime="2021-06-02T22:04:01+08:00">2021-06-02</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-03 17:07:34" itemprop="dateModified" datetime="2021-06-03T17:07:34+08:00">2021-06-03</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/" itemprop="url" rel="index"><span itemprop="name">生活-投資理財</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="估值"><a href="# 估值" class="headerlink" title="估值"></a>估值 </h3><p> 創立十年内的公司，如果估值能達到十億美金，就稱爲獨角獸 <br> 新創市場沒有公開發行的股票，沒辦法計算市值</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/06/01/money-management-chip-analysis/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/01/money-management-chip-analysis/" class="post-title-link" itemprop="url">股票籌碼面</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-06-01 15:59:38" itemprop="dateCreated datePublished" datetime="2021-06-01T15:59:38+08:00">2021-06-01</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-08 21:49:46" itemprop="dateModified" datetime="2021-06-08T21:49:46+08:00">2021-06-08</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/" itemprop="url" rel="index"><span itemprop="name">生活-投資理財</span></a>
         </span>
     </span>
 
