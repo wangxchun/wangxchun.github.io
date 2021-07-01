@@ -24,15 +24,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="機器學習 &#x2F; C++ &#x2F; 投資 &#x2F; 台灣景點">
+<meta name="description" content="1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python-basic-2">
+<meta property="og:title" content="python 基础 - 2.python 一些进阶操作">
 <meta property="og:url" content="https://wangxchun.github.io/2021/06/25/python-basic-2/index.html">
 <meta property="og:site_name" content="Stephen自强不息">
-<meta property="og:description" content="機器學習 &#x2F; C++ &#x2F; 投資 &#x2F; 台灣景點">
+<meta property="og:description" content="1">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-06-25T07:48:36.000Z">
-<meta property="article:modified_time" content="2021-06-25T07:51:25.537Z">
+<meta property="article:modified_time" content="2021-06-29T14:04:11.189Z">
 <meta property="article:author" content="Stephen Wang">
 <meta name="twitter:card" content="summary">
 
@@ -49,7 +49,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>python-basic-2 | Stephen自强不息</title>
+<title>python 基础 - 2.python 一些进阶操作 | Stephen自强不息</title>
   
 
 
@@ -148,7 +148,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -161,6 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><span class="nav-text"> 读取文件 </span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -176,14 +177,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">180</span>
+          <span class="site-state-item-count">190</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -249,7 +250,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          python-basic-2
+          python 基础 - 2.python 一些进阶操作
         </h1>
 
         <div class="post-meta-container">
@@ -259,9 +260,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-06-25 15:48:36 / 修改時間：15:51:25" itemprop="dateCreated datePublished" datetime="2021-06-25T15:48:36+08:00">2021-06-25</time>
+      <time title="創建時間：2021-06-25 15:48:36" itemprop="dateCreated datePublished" datetime="2021-06-25T15:48:36+08:00">2021-06-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-06-29 22:04:11" itemprop="dateModified" datetime="2021-06-29T22:04:11+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">python基础</span></a>
+        </span>
     </span>
 
   
@@ -274,7 +290,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h3 id="读取文件"><a href="# 读取文件" class="headerlink" title="读取文件"></a> 读取文件 </h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span> (<span class="string">&quot;./pvuv.txt&quot;</span>, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file.readlines ():</span><br><span class="line">    <span class="built_in">print</span> (line)</span><br><span class="line">file.close ()</span><br><span class="line"></span><br><span class="line">file = <span class="built_in">open</span> (<span class="string">&quot;./pvuv.txt&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">    <span class="built_in">print</span> (line)</span><br><span class="line">file.close ()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&quot;./pvuv.txt&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fin:</span><br><span class="line">    <span class="built_in">print</span> (<span class="built_in">type</span> (fin))</span><br><span class="line"><span class="comment"># 输出：&lt;class &#x27;_io.TextIOWrapper&#x27;&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&quot;./pvuv.txt&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fin:</span><br><span class="line">    <span class="built_in">print</span> (fin)</span><br><span class="line"><span class="comment"># 输出：&lt;_io.TextIOWrapper name=&#x27;./pvuv.txt&#x27; mode=&#x27;r&#x27; encoding=&#x27;utf-8&#x27;&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&quot;./pvuv.txt&quot;</span>) <span class="keyword">as</span> fin:</span><br><span class="line">    <span class="built_in">print</span> (fin)</span><br><span class="line"><span class="comment"># 输出：&lt;_io.TextIOWrapper name=&#x27;./pvuv.txt&#x27; mode=&#x27;r&#x27; encoding=&#x27;cp936&#x27;&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&quot;./pvuv.txt&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fin:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> fin:</span><br><span class="line">        <span class="built_in">print</span> (<span class="built_in">type</span> (line))</span><br><span class="line"><span class="comment"># 输出：多行的 &lt;class&#x27;str&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">datas = []</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&quot;./pvuv.txt&quot;</span>) <span class="keyword">as</span> fin:</span><br><span class="line">    is_first_line = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> fin:</span><br><span class="line">        <span class="keyword">if</span> is_first_line:</span><br><span class="line">            is_first_line = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        datas.append (line [:-<span class="number">1</span>].split (<span class="string">&quot;\t&quot;</span>))</span><br><span class="line"><span class="comment"># 这里用 line [:-1] 是因为读取各行的时候会连换行符 &#x27;\n&#x27; 一起读取 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以这样处理 </span></span><br><span class="line">datas = []</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&quot;./pvuv.txt&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fin:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> fin:</span><br><span class="line">        <span class="built_in">print</span> (line [:].replace (<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">txt = <span class="string">&quot;Google#Runoob#Taobao#Facebook&quot;</span></span><br><span class="line"><span class="comment"># 第二个参数为 1，返回两个参数列表 </span></span><br><span class="line">x = txt.split (<span class="string">&quot;#&quot;</span>, <span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span> x</span><br><span class="line"><span class="comment"># 输出：[&#x27;Google&#x27;, &#x27;Runoob#Taobao#Facebook&#x27;]</span></span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -287,11 +309,14 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/06/25/python-basic-1/" rel="prev" title="python 基础 - 1. 变量和函数">
-                  <i class="fa fa-chevron-left"></i> python 基础 - 1. 变量和函数
+                <a href="/2021/06/25/python-basic-1/" rel="prev" title="python 基础 - 1. 变量和程序流程（顺序、分支、循环）">
+                  <i class="fa fa-chevron-left"></i> python 基础 - 1. 变量和程序流程（顺序、分支、循环）
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/06/26/deep-learning-coding-1/" rel="next" title="深度学习实作 --（1）环境配置：Anaconda + Tensorflow">
+                  深度学习实作 --（1）环境配置：Anaconda + Tensorflow <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
