@@ -24,12 +24,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="一、MIMO 的来龙去脉 1.MIMO 的思路 无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一">
+<meta name="description" content="一、MIMO 的来龙去脉1.MIMO 的思路无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一个人">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5G（三）5G 关键技术 -- 6.Massive MIMO 补充">
 <meta property="og:url" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/index.html">
 <meta property="og:site_name" content="Stephen自强不息">
-<meta property="og:description" content="一、MIMO 的来龙去脉 1.MIMO 的思路 无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一">
+<meta property="og:description" content="一、MIMO 的来龙去脉1.MIMO 的思路无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一个人">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo1.jpg">
 <meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo2.jpg">
@@ -51,7 +51,7 @@
 <meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo18.jpg">
 <meta property="og:image" content="https://wangxchun.github.io/2021/04/17/5G-3-6-2/photo20.jpg">
 <meta property="article:published_time" content="2021-04-17T12:39:35.000Z">
-<meta property="article:modified_time" content="2021-06-17T02:20:04.549Z">
+<meta property="article:modified_time" content="2021-07-01T06:42:58.530Z">
 <meta property="article:author" content="Stephen Wang">
 <meta property="article:tag" content="5G">
 <meta property="article:tag" content="Massive MIMO">
@@ -200,7 +200,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">190</span>
+          <span class="site-state-item-count">189</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -213,7 +213,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">287</span>
+        <span class="site-state-item-count">303</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -291,7 +291,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-17 10:20:04" itemprop="dateModified" datetime="2021-06-17T10:20:04+08:00">2021-06-17</time>
+        <time title="修改時間：2021-07-01 14:42:58" itemprop="dateModified" datetime="2021-07-01T14:42:58+08:00">2021-07-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -313,7 +313,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="一、MIMO- 的来龙去脉"><a href="# 一、MIMO- 的来龙去脉" class="headerlink" title="一、MIMO 的来龙去脉"></a>一、MIMO 的来龙去脉 </h3><h4 id="1-MIMO- 的思路"><a href="#1-MIMO- 的思路" class="headerlink" title="1.MIMO 的思路"></a>1.MIMO 的思路</h4><p> 无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。<br>提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。<br>载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。<br><img src="/2021/04/17/5G-3-6-2/photo1.jpg" alt><br>增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一个人搬砖的能力增加。<br>MIMO 的思路：找多个人来搬砖。</p>
+        <h3 id="一、MIMO- 的来龙去脉"><a href="# 一、MIMO- 的来龙去脉" class="headerlink" title="一、MIMO 的来龙去脉"></a>一、MIMO 的来龙去脉 </h3><h4 id="1-MIMO- 的思路"><a href="#1-MIMO- 的思路" class="headerlink" title="1.MIMO 的思路"></a>1.MIMO 的思路</h4><p> 无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。<br>提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。<br>载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。<br><img src="/2021/04/17/5G-3-6-2/photo1.jpg" alt><br>增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一个人搬砖的能力增加。<br>MIMO 的思路：找多个人来搬砖。<span id="more"></span></p>
 <h4 id="2-MIMO- 多入多出 -：多天线技术"><a href="#2-MIMO- 多入多出 -：多天线技术" class="headerlink" title="2.MIMO (多入多出)：多天线技术"></a>2.MIMO (多入多出)：多天线技术 </h4><p><img src="/2021/04/17/5G-3-6-2/photo2.jpg" alt><br>MIMO：发射端和接收端都有多个天线<br> 多天线，并不是指有多个天线板。</p>
 <h4 id="3- 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。"><a href="#3- 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。" class="headerlink" title="3. 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。"></a>3. 对于基站来说，是指天线有多套振子，每一套振子都可以看成一个独立的天线。</h4><p>下左图中，天线板拆开可看到有四列，每一列有 2 套振子，所以总共有 8 套振子 = 有 8 个天线。<br>（每一列的 X 的一撇的方向是一套振子，另一个方向的撇是另一套振子）<br>下右图中，每一个小方块是一套振子，T 和 R 是发射和接收的意思<br><img src="/2021/04/17/5G-3-6-2/photo3.jpg" alt></p>
 <h5 id="4- 手机也是多天线的"><a href="#4- 手机也是多天线的" class="headerlink" title="4. 手机也是多天线的"></a>4. 手机也是多天线的</h5><p>4G 手机是 2 天线的，5G 手机是 4 天线的</p>
