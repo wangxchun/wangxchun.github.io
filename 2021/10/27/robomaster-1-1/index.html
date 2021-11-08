@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://wangxchun.github.io/2021/10/27/robomaster-1-1/photo3.jpg">
 <meta property="og:image" content="https://wangxchun.github.io/2021/10/27/robomaster-1-1/photo4.png">
 <meta property="article:published_time" content="2021-10-27T09:37:06.000Z">
-<meta property="article:modified_time" content="2021-11-04T09:47:13.038Z">
+<meta property="article:modified_time" content="2021-11-06T10:06:43.173Z">
 <meta property="article:author" content="Stephen Wang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wangxchun.github.io/2021/10/27/robomaster-1-1/photo1.jpg">
@@ -182,14 +182,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">197</span>
+          <span class="site-state-item-count">200</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -273,7 +273,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-04 17:47:13" itemprop="dateModified" datetime="2021-11-04T17:47:13+08:00">2021-11-04</time>
+        <time title="修改時間：2021-11-06 18:06:43" itemprop="dateModified" datetime="2021-11-06T18:06:43+08:00">2021-11-06</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -321,8 +321,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/10/27/robomaster-2-1/" rel="next" title="robomaster-2-1">
-                  robomaster-2-1 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/10/27/robomaster-2-1/" rel="next" title="robomaster 电控 (2) 常见模块">
+                  robomaster 电控 (2) 常见模块 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -413,7 +413,38 @@ if (document.querySelectorAll('.pdf-container').length) {
 
 
 
-  
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
 
 
 </body>

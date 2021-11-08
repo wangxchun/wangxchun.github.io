@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="google-site-verification" content="SEuuKcxiY0Z6R9aAPIZyU5Y9rFqpgO9gKES--zhFX24" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="一、图像传感器 1.CMOS 和 CCD(1) CMOS 每个像素里的光电二极管遇到光时，就会因为光电效应累计一定数量的电荷，将光信号转为电信号 CMOS 每个像素均包含放大器和 AD 转换电路，额外的电路使得像素的可感光面积变小，感光度低 每个像素也会因为电路干扰产生固定的噪声信号 (2) CCD在像素上增加电压，透过电荷耦合，将像素点中的电荷逐级转移到相同输出端，最后逐个输出电压信号，通过 A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="slam 基础 --（2）基本图像处理">
+<meta property="og:url" content="https://wangxchun.github.io/2021/11/08/slam-2/index.html">
+<meta property="og:site_name" content="Stephen自强不息">
+<meta property="og:description" content="一、图像传感器 1.CMOS 和 CCD(1) CMOS 每个像素里的光电二极管遇到光时，就会因为光电效应累计一定数量的电荷，将光信号转为电信号 CMOS 每个像素均包含放大器和 AD 转换电路，额外的电路使得像素的可感光面积变小，感光度低 每个像素也会因为电路干扰产生固定的噪声信号 (2) CCD在像素上增加电压，透过电荷耦合，将像素点中的电荷逐级转移到相同输出端，最后逐个输出电压信号，通过 A">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2021/11/08/slam-2/photo1.png">
+<meta property="og:image" content="https://wangxchun.github.io/2021/11/08/slam-2/photo2.png">
+<meta property="og:image" content="https://wangxchun.github.io/2021/11/08/slam-2/photo3.png">
+<meta property="article:published_time" content="2021-11-08T06:59:22.000Z">
+<meta property="article:modified_time" content="2021-11-08T09:56:10.950Z">
+<meta property="article:author" content="Stephen Wang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2021/11/08/slam-2/photo1.png">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/2021/11/08/slam-2/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>slam 基础 --（2）基本图像处理 | Stephen自强不息</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Stephen自强不息</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9B%BE%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-text">一、图像传感器 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-CMOS-%20%E5%92%8C%20-CCD"><span class="nav-text">1.CMOS 和 CCD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-CMOS"><span class="nav-text">(1) CMOS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-CCD"><span class="nav-text">(2) CCD</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E9%A2%9C%E8%89%B2"><span class="nav-text">2. 颜色 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Bayer-Pattern-%20%E6%8B%9C%E5%B0%94%E9%98%B5%E5%88%97"><span class="nav-text">(1) Bayer Pattern (拜尔阵列)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%20%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4"><span class="nav-text">(2) 颜色空间</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-global-shutter-%20%E5%85%A8%E5%B1%80%E5%BF%AB%E9%97%A8%20-%20%E5%92%8C%20-rolling-shutter-%20%E5%8D%B7%E5%B8%98%E5%BF%AB%E9%97%A8%20-%20%E6%9E%9C%E5%86%BB%E6%95%88%E5%BA%94"><span class="nav-text">3.global shutter (全局快门) 和 rolling shutter (卷帘快门 果冻效应)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9B%BE%E5%83%8F%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AA%E9%98%B5%E5%88%97"><span class="nav-text">二、图像在计算机中就是一个阵列 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E5%9B%BE%E5%83%8F%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%87%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E5%87%BD%E6%95%B0"><span class="nav-text">1. 图像可以看出一个二维函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%9B%BE%E5%83%8F%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E9%98%B5%E5%88%97"><span class="nav-text">2. 图像在计算机中是一个二维阵列 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="nav-text"> 三、线性滤波器 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E6%BB%A4%E6%B3%A2%E5%92%8C%E5%8D%B7%E7%A7%AF%EF%BC%88%E5%9F%BA%E4%BA%8E%E7%BA%BF%E6%80%A7%E6%A0%B8%E7%9A%84%E6%BB%A4%E6%B3%A2%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%88%91%E4%BB%AC%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E5%8D%B7%E7%A7%AF%EF%BC%89"><span class="nav-text">1. 滤波和卷积（基于线性核的滤波，就是我们所熟悉的卷积）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%9B%BE%E5%83%8F%E6%A2%AF%E5%BA%A6%E7%AE%97%E5%AD%90"><span class="nav-text">2. 图像梯度算子 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%9B%BE%E5%83%8F%E6%B1%82%E5%AF%BC"><span class="nav-text">四、图像求导 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="nav-text"> 五、非线性滤波器 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E6%A8%A1%E6%9D%BF%E5%8C%B9%E9%85%8D%20-SSD-ZNCC"><span class="nav-text"> 六、模板匹配 - SSD&#x2F;ZNCC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96%20-%20%E7%89%B9%E4%BE%8B%E5%8C%96"><span class="nav-text">七、直方图均衡化 &#x2F; 特例化</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Stephen Wang"
+      src="/img/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Stephen Wang</p>
+  <div class="site-description" itemprop="description">機器學習 / C++ / 投資 / 台灣景點</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">200</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">303</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stephenwang0205@outlook.com" title="E-Mail → mailto:stephenwang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/slam-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          slam 基础 --（2）基本图像处理
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-11-08 14:59:22 / 修改時間：17:56:10" itemprop="dateCreated datePublished" datetime="2021-11-08T14:59:22+08:00">2021-11-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-slam/" itemprop="url" rel="index"><span itemprop="name">大学课程-slam</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="一、图像传感器"><a href="# 一、图像传感器" class="headerlink" title="一、图像传感器"></a>一、图像传感器 </h3><h4 id="1-CMOS- 和 -CCD"><a href="#1-CMOS- 和 -CCD" class="headerlink" title="1.CMOS 和 CCD"></a>1.CMOS 和 CCD</h4><h4 id="1-CMOS"><a href="#1-CMOS" class="headerlink" title="(1) CMOS"></a>(1) CMOS</h4><p> 每个像素里的光电二极管遇到光时，就会因为光电效应累计一定数量的电荷，将光信号转为电信号 <br>CMOS 每个像素均包含放大器和 AD 转换电路，额外的电路使得像素的可感光面积变小，感光度低<br> 每个像素也会因为电路干扰产生固定的噪声信号</p>
+<h5 id="2-CCD"><a href="#2-CCD" class="headerlink" title="(2) CCD"></a>(2) CCD</h5><p>在像素上增加电压，透过电荷耦合，将像素点中的电荷逐级转移到相同输出端，<br>最后逐个输出电压信号，通过 A/D 转换变为数字信号<br>CCD 需要比较高的电压，增加功耗</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1tt4y1Q77z">【回形针化】CMOS 与 CCD 有何不同</a></p>
+<h4 id="2- 颜色"><a href="#2- 颜色" class="headerlink" title="2. 颜色"></a>2. 颜色 </h4><h5 id="1-Bayer-Pattern- 拜尔阵列"><a href="#1-Bayer-Pattern- 拜尔阵列" class="headerlink" title="(1) Bayer Pattern (拜尔阵列)"></a>(1) Bayer Pattern (拜尔阵列)</h5><p> 拜耳阵列指的是 CCD 或者 CMOS 器件作为光传感器的时候，采集数字图像时用到的一种常见的方法。<br>bayer pattern 得到的图像中，实际只有 $1\over3$ 的内容是真实的，其他都是根据先验知识插值得到。这也说明了自然图像中具有大量的冗余信息。<br>Q：具体如何从 bayer pattern 中将高清图片重建出来？<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/edogawachia/article/details/84963652">拜耳阵列（Bayer Pattern）简介</a></p>
+<h5 id="2- 颜色空间"><a href="#2- 颜色空间" class="headerlink" title="(2) 颜色空间"></a>(2) 颜色空间</h5><p>RGB<br>HSV<br>LAB：两个颜色的差异可以用向量距离表示</p>
+<h4 id="3-global-shutter- 全局快门 - 和 -rolling-shutter- 卷帘快门 - 果冻效应"><a href="#3-global-shutter- 全局快门 - 和 -rolling-shutter- 卷帘快门 - 果冻效应" class="headerlink" title="3.global shutter (全局快门) 和 rolling shutter (卷帘快门 果冻效应)"></a>3.global shutter (全局快门) 和 rolling shutter (卷帘快门 果冻效应)</h4><p>CMOS 是由上往下逐行扫描 <br> 避免果冻效应的三种方法：<br>(1) 搭配机械快门（全局曝光的缺点：如果曝光时间长会增加读出噪声）<br>(2) 使用没有果冻效应的传感器（使用全域快门的 CMOS 和 CCD 传感器）<br>(3) 提升 CMOS 的刷新频率<br>(4) 拍摄较为稳定的素材进行后期修正（稳定器 ex：Steadicam、电子三轴稳定器、Trinity） </p>
+<p>后面处理多视角几何的前提是：图像是利用针孔模型取得，rolling shutter 会破坏这个前提。</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bJ41147Zx">什么是果冻效应？它是怎么产生的 ——【菲林番外】</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/lz0499/article/details/102616773">详细图解，一眼就能看懂！卷帘快门（Rolling Shutter）与全局快门（Global Shutter）的区别</a></p>
+<h3 id="二、图像在计算机中就是一个阵列"><a href="# 二、图像在计算机中就是一个阵列" class="headerlink" title="二、图像在计算机中就是一个阵列"></a>二、图像在计算机中就是一个阵列 </h3><h4 id="1- 图像可以看出一个二维函数"><a href="#1- 图像可以看出一个二维函数" class="headerlink" title="1. 图像可以看出一个二维函数"></a>1. 图像可以看出一个二维函数</h4><p> 在一个像素点周围可以看出连续的函数，可以利用高数中的分析方法 <br> 例如：局部进行泰勒展开，梯度进行线性近似</p>
+<h4 id="2- 图像在计算机中是一个二维阵列"><a href="#2- 图像在计算机中是一个二维阵列" class="headerlink" title="2. 图像在计算机中是一个二维阵列"></a>2. 图像在计算机中是一个二维阵列 </h4><h3 id="三、线性滤波器"><a href="# 三、线性滤波器" class="headerlink" title="三、线性滤波器"></a> 三、线性滤波器 </h3><h4 id="1- 滤波和卷积（基于线性核的滤波，就是我们所熟悉的卷积）"><a href="#1- 滤波和卷积（基于线性核的滤波，就是我们所熟悉的卷积）" class="headerlink" title="1. 滤波和卷积（基于线性核的滤波，就是我们所熟悉的卷积）"></a>1. 滤波和卷积（基于线性核的滤波，就是我们所熟悉的卷积）</h4><p> 信号处理称为滤波器，数学称为卷积核 <br> 卷积核大小大部分为奇数，这样才有中心 <br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zouxy09/article/details/49080029"> 图像卷积与滤波的一些知识点</a></p>
+<p>(1) 均值模糊 Box Filter (Averaging)<br>(2) 高斯模糊 Gaussian Filter<br>(3) 卷积后的大小 <br> 假设原始图像为 $M \times M$，卷积核大小为 $N \times N$，边缘填充像素个数为 pad，步长为 stride<br>则卷积后图像的尺寸为 $\displaystyle m={M-N+2 \times pad \over stride} +1$<br>(4) 卷积相当于 4 个嵌套回圈<br>(5) 卷积的快速计算 FFT</p>
+<h4 id="2- 图像梯度算子"><a href="#2- 图像梯度算子" class="headerlink" title="2. 图像梯度算子"></a>2. 图像梯度算子 </h4><p> 图像梯度计算的是图像变化的速度。对于边缘部分，其灰度值变化较大，梯度值也较大；相反，较平滑的部分，灰度值变化较小，相应的梯度值也较小，一般情况时，图像梯度计算的是图像的边缘信息。严格来讲，计算图像梯度需要求导数，但是图像梯度一般通过计算像素值的差来得到梯度的近似值（近似导数值）。<br>边界是指左侧的像素值与右侧的像素值差值不为零。<br>(1) sober 算子 <br><img src="/2021/11/08/slam-2/photo1.png" alt><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">img = cv2.imread (<span class="string">&#x27;dige.jpg&#x27;</span>)</span><br><span class="line">// 不能写成 sobelx = cv2.Sobel (img, -<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>)</span><br><span class="line">// 因为 - <span class="number">1</span> 代表输入和输出的图像深度是一样的 (例如 <span class="number">8</span> 位位图 <span class="number">0</span>-<span class="number">255</span>)</span><br><span class="line">// 如果相减的灰度值是负数会截断成 <span class="number">0</span></span><br><span class="line">// 所以指定的深度较大 cv2.CV_64F，可以包含负数</span><br><span class="line">sobelx = cv2.Sobel (img, cv2.CV_64F,<span class="number">1</span>,<span class="number">0</span>)</span><br><span class="line">sobely = cv2.Sobel (img, cv2.CV_64F, <span class="number">0</span>,<span class="number">1</span>)</span><br><span class="line">// 然后再利用 cv2.convertScaleAbs 转换成正数</span><br><span class="line">sobelx = cv2.convertScaleAbs (sobelx)</span><br><span class="line">sobely = cv2.convertScaleAbs (sobely)</span><br><span class="line">//xy 分开算再相加而不是写成 sobel = cv2.Sobel (img, cv2.CV_64F,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">sobelxy = cv2.addWeighted (sobelx,<span class="number">0.5</span>,sobely,<span class="number">0.5</span>,<span class="number">0</span>)</span><br><span class="line">cv2.imshow (<span class="string">&#x27;img&#x27;</span>,img)</span><br><span class="line">cv2.imshow (<span class="string">&#x27;sobelxy&#x27;</span>,sobelxy)</span><br><span class="line">cv2.waitKey ()</span><br><span class="line">cv2.destroyAllWindows ()</span><br></pre></td></tr></table></figure><br>(2) scharr 算子<br><img src="/2021/11/08/slam-2/photo2.png" alt> Scharr 算子可以被看做是对 Sobel 算子的改进，不仅具有和 sobel 算子同样的速度，且精度更高。<br> 在函数 cv2.Sobel () 中，如果 ksize=-1，则会使用 Scharr 滤波器。<br>Q：为什么换成这样的参数会使得细节处理的比较好？<br>(3) laplace 算子<br><img src="/2021/11/08/slam-2/photo3.png" alt> laplace 算子类似于二阶 sobel 导数，实际上在 opencv 中是通过调用 sobel 算子来计算 laplace 算子。<br>Q：如何通过 sobel 算子计算出 laplace 算子？<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">img = cv2.imread (<span class="string">&#x27;opencv.jpg&#x27;</span>,cv2.IMREAD_GRAYSCALE)</span><br><span class="line">laplacian = cv2.Laplacian (img,cv2.CV_64F)</span><br><span class="line">laplacian = cv2.convertScaleAbs (laplacian)</span><br><span class="line">cv2.imshow (<span class="string">&#x27;img&#x27;</span>,img)</span><br><span class="line">cv2.imshow (<span class="string">&#x27;laplacian&#x27;</span>,laplacian)</span><br><span class="line">cv2.waitKey ()</span><br><span class="line">cv2.destroyAllWindows ()</span><br></pre></td></tr></table></figure></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42415138/article/details/107458973">【OpenCV 学习】图像梯度：Sobel 算子、Scharr 算子、Laplacian 算子 </a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iz411z7uH"> 这系列的视频</a></p>
+<h3 id="四、图像求导"><a href="# 四、图像求导" class="headerlink" title="四、图像求导"></a>四、图像求导 </h3><h3 id="五、非线性滤波器"><a href="# 五、非线性滤波器" class="headerlink" title="五、非线性滤波器"></a> 五、非线性滤波器 </h3><h3 id="六、模板匹配 -SSD-ZNCC"><a href="# 六、模板匹配 -SSD-ZNCC" class="headerlink" title="六、模板匹配 - SSD/ZNCC"></a> 六、模板匹配 - SSD/ZNCC</h3><h3 id="七、直方图均衡化 - 特例化"><a href="# 七、直方图均衡化 - 特例化" class="headerlink" title="七、直方图均衡化 / 特例化"></a>七、直方图均衡化 / 特例化</h3><p>(1)<br>(2)<br>(3)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/11/06/robomaster-1-2/" rel="prev" title="robomaster 机械 (1) 常见机构">
+                  <i class="fa fa-chevron-left"></i> robomaster 机械 (1) 常见机构
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/11/08/slam-3/" rel="next" title="slam-3">
+                  slam-3 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stephen Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+  
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+</body>
+</html>
