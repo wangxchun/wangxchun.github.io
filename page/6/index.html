@@ -174,14 +174,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">200</span>
+          <span class="site-state-item-count">205</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -224,6 +224,439 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/20/computerNetwork-lab4/" class="post-title-link" itemprop="url">计算机网络 lab4 Overlay Network 和 VXLAN</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-05-20 14:49:35" itemprop="dateCreated datePublished" datetime="2021-05-20T14:49:35+08:00">2021-05-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-07-01 12:47:26" itemprop="dateModified" datetime="2021-07-01T12:47:26+08:00">2021-07-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">大学课程-计算机网络</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、任务要求"><a href="# 一、任务要求" class="headerlink" title="一、任务要求"></a>一、任务要求 </h3><p> 用 mininet 创建两个 LAN，然后用 VXLAN 创建 overlay network，让两个局域网可以互相通信。<br><a target="_blank" rel="noopener" href="https://www.voidking.com/dev-openvswitch-vxlan/">参考 </a><br><a target="_blank" rel="noopener" href="https://www.sdnlab.com/openvswitch-vxlan/"> 基于 Open vSwitch 的 VxLAN 隧道实验网络 </a><br><a target="_blank" rel="noopener" href="https://tingkuan.wordpress.com/2017/11/09/% E3%80%90mininet% E6%8C%87% E4% BB% A4% E4% BB%8B% E7% B4% B9% E3%80%91/">【Mininet 指令介紹】</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jjsgxty/p/11817132.html">SDN 第二次作业</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10197632">Openvswitch 介紹</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cing/p/8025173.html"> 自定义 topo 文件解析</a></p>
+<h3 id="二、原理"><a href="# 二、原理" class="headerlink" title="二、原理"></a>二、原理 </h3><h4 id="1-Overlay-Network"><a href="#1-Overlay-Network" class="headerlink" title="1.Overlay Network"></a>1.Overlay Network</h4><h4 id="2- 虚拟机的连网方式"><a href="#2- 虚拟机的连网方式" class="headerlink" title="2. 虚拟机的连网方式"></a>2. 虚拟机的连网方式</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87447426"> 虚拟机三种网络模式 </a><br>nat：enp0s3：上网<br>host-only：enp0s8：两个 LAN 通信<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yeziand01/article/details/88424624">Linux - 网卡命名方式改变了 - enp0s3，enp0s8</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/xulilinman/article/details/82821554"> 配置 host-only 的静态 IP</a></p>
+<h4 id="3- 流表"><a href="#3- 流表" class="headerlink" title="3. 流表"></a>3. 流表 </h4><p>idle_timeout，空闲时间，如值为 10，表示若某条流表在最近 10s 内没有被匹配过则删除。<br>hard_timeout，存活时间，如值为 10，则从该流表被安装经过 10s 后无论被使用情况如何，立即被删除。<br> 而如果在交换机上查看流表，会发现除以上两个时间以外，还有两个：<br>idle_age，未命中时间，如值为 10，表示已经有 10s 没有匹配到过这条流表了。当这个值等于 idle_timeout 时，这条流表就真的失效了。<br>duration，流表年龄，指的是流表自从安装到交换机上总共所经过的时间。</p>
+<p>作者：顽强的猫尾草 <br> 链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/22e6feb2c662">https://www.jianshu.com/p/22e6feb2c662</a><br>来源：简书 <br> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h3 id="三、常用指令"><a href="# 三、常用指令" class="headerlink" title="三、常用指令"></a>三、常用指令</h3><p><a target="_blank" rel="noopener" href="https://lowbee.fun/2020/06/18/SDN% E5% AD% A6% E4% B9% A0% E7% AC%94% E8% AE% B0/">SDN 学习笔记</a><br><a target="_blank" rel="noopener" href="http://www.rendoumi.com/open-vswitchde-ovs-vsctlming-ling-xiang-jie/">Open vSwitch 的 ovs-vsctl 命令详解</a><br><a target="_blank" rel="noopener" href="https://sites.google.com/cnsrl.cycu.edu.tw/glennsdn/openvswitchovs/ovs% E7% B0% A1% E6%98%93% E5% B8% B8% E7%94% A8% E6%8C%87% E4% BB% A4">OVS 簡易常用指令</a></p>
+<h4 id="1- 网桥 -ovs-vsctl- 基本命令"><a href="#1- 网桥 -ovs-vsctl- 基本命令" class="headerlink" title="1. 网桥 ovs-vsctl 基本命令"></a>1. 网桥 ovs-vsctl 基本命令</h4><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ovs-vsctl <span class="keyword">show</span>  <span class="meta"># 查询主机上已有的 OVS bridge 和 port</span></span><br></pre></td></tr></table></figure>
+<h5 id="1-ovs-vsctl- 用于控制 -ovs-db"><a href="#1-ovs-vsctl- 用于控制 -ovs-db" class="headerlink" title="(1) ovs-vsctl 用于控制 ovs db"></a>(1) ovs-vsctl 用于控制 ovs db</h5><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ovs-vsctl</span> <span class="string">add-br</span> <span class="string">br0</span> // 创建 <span class="string">bridge</span></span><br><span class="line"><span class="string">ovs</span>-<span class="string">vsctl</span> <span class="string">del-br</span> <span class="string">br0</span> // 删除 <span class="string">bridge</span></span><br><span class="line"><span class="string">ovs</span>-<span class="string">vsctl</span> <span class="built_in">list-br</span>  // 查询 <span class="string">bridge</span></span><br><span class="line"><span class="string">ovs</span>-<span class="string">vsctl</span> <span class="string">add-port</span> <span class="string">br0</span> <span class="string">eth1</span> // 添加端口 </span><br><span class="line"><span class="string">ovs-vsctl</span> <span class="string">del-port</span> <span class="string">br0</span> <span class="string">eth1</span> // 移除端口</span><br><span class="line"><span class="string">ovs-vsctl</span> <span class="built_in">set-controller</span> <span class="string">br0</span> <span class="string">tcp:1.</span><span class="string">2</span>.<span class="string">3</span>.<span class="string">4:6633 </span><span class="string">tcp:4.</span><span class="string">3</span>.<span class="string">2</span>.<span class="string">1:6633 </span>// 设置多个 <span class="string">controller</span></span><br><span class="line"><span class="string">ovs</span>-<span class="string">vsctl</span> <span class="string">del-controller</span> <span class="string">br0</span>  // 移除控制器</span><br><span class="line"><span class="string">ovs-vsctl</span> <span class="built_in">get-controller</span> <span class="string">br0</span> // 查询 <span class="string">brige</span> 上已配置的控制器</span><br></pre></td></tr></table></figure>
+<h5 id="2-ovs-ofctl- 用于管理 -OpenFlow-switch- 的 -flow"><a href="#2-ovs-ofctl- 用于管理 -OpenFlow-switch- 的 -flow" class="headerlink" title="(2) ovs-ofctl 用于管理 OpenFlow switch 的 flow"></a>(2) ovs-ofctl 用于管理 OpenFlow switch 的 flow</h5><h5 id="3-ovs-dpctl- 用于管理 -ovs- 的 -datapath"><a href="#3-ovs-dpctl- 用于管理 -ovs- 的 -datapath" class="headerlink" title="(3) ovs-dpctl 用于管理 ovs 的 datapath"></a>(3) ovs-dpctl 用于管理 ovs 的 datapath</h5><h5 id="4-ovs-appctl- 用于查询和管理 -ovs-daemon"><a href="#4-ovs-appctl- 用于查询和管理 -ovs-daemon" class="headerlink" title="(4) ovs-appctl 用于查询和管理 ovs daemon"></a>(4) ovs-appctl 用于查询和管理 ovs daemon</h5><h4 id="2- 流表"><a href="#2- 流表" class="headerlink" title="2. 流表"></a>2. 流表 </h4><h3 id="四、实作"><a href="# 四、实作" class="headerlink" title="四、实作"></a> 四、实作 </h3><h4 id="1- 创建拓扑"><a href="#1- 创建拓扑" class="headerlink" title="1. 创建拓扑"></a>1. 创建拓扑</h4><p> 在两台虚拟机上分别设置这样的拓扑<br><img src="/2021/05/20/computerNetwork-lab4/photo2.png" alt><br><img src="/2021/05/20/computerNetwork-lab4/photo3.jpg" alt><br>On VM 1:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; h1 ifconfig h1-eth<span class="number">0 10.0.0</span>.<span class="number">1</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">mininet&gt; h2 ifconfig h2-eth<span class="number">0 10.0.0</span>.<span class="number">2</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">$ sudo ifconfig s<span class="number">1 10.0.0</span>.<span class="number">111</span>/<span class="number">8</span> up</span><br></pre></td></tr></table></figure></p>
+<p>On VM 2:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; h3 ifconfig h3-eth<span class="number">0 10.0.0</span>.<span class="number">3</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">mininet&gt; h4 ifconfig h4-eth<span class="number">0 10.0.0</span>.<span class="number">4</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">$ sudo ifconfig s<span class="number">2 10.0.0</span>.<span class="number">112</span>/<span class="number">8</span> up</span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 网桥配置"><a href="#2- 网桥配置" class="headerlink" title="2. 网桥配置"></a>2. 网桥配置</h4><p>On VM1:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 在 VM1 上添加 br1 网桥</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-br </span>br1</span><br><span class="line">// 在 br1 上添加一个端口，将 enp0s8 挂载到 br1 上</span><br><span class="line">// 将 enp0s8 的 IP 指定给 br1，让虚拟机网络可以通过 br1 继续工作</span><br><span class="line">//24 是掩码位数，up 是网卡启动的意思</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>br1 enp0s8</span><br><span class="line">sudo ifconfig br1 192.168.56.101/24 up</span><br><span class="line">// 根据实际情况配置 br1 的网关（可选）</span><br><span class="line">sudo route<span class="built_in"> add </span>default gw 192.168.56.201</span><br></pre></td></tr></table></figure></p>
+<p>On VM2:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//// 在 VM2 上添加 br1 网桥</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-br </span>br1</span><br><span class="line">// 在 br1 上添加一个端口，将 enp0s8 挂载到 br1 上</span><br><span class="line">// 将 enp0s8 的 IP 指定给 br1，让虚拟机网络可以通过 br1 继续工作</span><br><span class="line">//24 是掩码位数，up 是网卡启动的意思</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>br1 enp0s8</span><br><span class="line">sudo ifconfig br1 192.168.56.102/24 up</span><br><span class="line">// 根据实际情况配置 br1 的网关（可选）</span><br><span class="line">sudo route<span class="built_in"> add </span>default gw 192.168.56.201</span><br></pre></td></tr></table></figure></p>
+<p>这时候查看网络的连通性，会发现 VM2 可以 ping 通 192.168.56.101，却 ping 不通 10.0.0.111</p>
+<h4 id="3- 搭建 -VxLAN- 隧道"><a href="#3- 搭建 -VxLAN- 隧道" class="headerlink" title="3. 搭建 VxLAN 隧道"></a>3. 搭建 VxLAN 隧道</h4><p>On VM1:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>s1 vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=192.168.56.102</span><br></pre></td></tr></table></figure><br>On VM2:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>s2 vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=192.168.56.101</span><br></pre></td></tr></table></figure></p>
+<h3 id="五、遇到问题"><a href="# 五、遇到问题" class="headerlink" title="五、遇到问题"></a>五、遇到问题</h3><h4 id="1- 拓扑没有删除"><a href="#1- 拓扑没有删除" class="headerlink" title="1. 拓扑没有删除"></a>1. 拓扑没有删除</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> mininet/mininet/examples</span><br><span class="line">sudo <span class="keyword">python</span> lab4.<span class="keyword">py</span></span><br></pre></td></tr></table></figure>
+<p>Exception: Error creating interface pair (XX-eth<em>,XX-eth</em>): RTNETLINK answers: File exists error<br>挂号里通常是 Switch 的某个 eth 连到另一台 Switch 的 eth，发生错误的原因是因为当第一次建立拓扑时出错，第二次建立相同拓扑时，第一次的拓扑没有完全消除。<br>解决方法：运行以下指令<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo mn -c</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 局域网 -pingall- 不通"><a href="#2- 局域网 -pingall- 不通" class="headerlink" title="2. 局域网 pingall 不通"></a>2. 局域网 pingall 不通</h4><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; sh ovs-ofctl dump-flows s1 // 查看 s1 的 flow table</span><br><span class="line">mininet&gt; sh ovs-ofctl<span class="built_in"> add-flow </span>s1 <span class="string">&quot;priority=0,action=normal&quot;</span> /// 新增 s1 的 flow table</span><br><span class="line">mininet&gt; pingall // 此時就可以互相 ping 到其他 host</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/05/20/computerNetwork-lab4/photo1.png" alt><br><a target="_blank" rel="noopener" href="https://tingkuan.wordpress.com/2017/12/11/% E3%80%90openvswitch-vs-controller-% E3%80%91/">参考</a></p>
+<p>后来发现是自己用./miniedit 创建的拓扑都 ping 不通，要自己加上流表或是运行 ryu 才会通 <br> 后来就改用 sudo mn 创建拓扑，pingall 就可以直接成功，<br>但是不知道怎么把这种方式创建的拓扑存储成.py 文件 (？)，或是修改 host 和 switch 名字 <br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yezhh/p/11249036.html"> 可以参考这个</a></p>
+<h4 id="3- 两台虚拟机 -ping- 不通原因"><a href="#3- 两台虚拟机 -ping- 不通原因" class="headerlink" title="3. 两台虚拟机 ping 不通原因"></a>3. 两台虚拟机 ping 不通原因 </h4><p> 查到了很多原因，但后来发现我的原因是自己用./miniedit 创建的 LAN 有问题 <br>(1) 虚拟机 mac 地址相同导致，复制虚拟的问题<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/dlh_sycamore/article/details/64440134">https://blog.csdn.net/dlh_sycamore/article/details/64440134</a><br>(2) 虚拟机连接方式设置为桥接<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/AnneQiQi/article/details/51758025">Ubuntu 两台虚拟机之间 Ping 不通</a><br>(3) 防火墙<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/T_Mac9334/article/details/78966029"> 关闭虚拟机 linux 防火墙命令 </a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yangmolulu/article/details/93902358?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control"> 两台虚拟机互相 ping 通（互相通讯）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_15256443/article/details/101289412">ubuntu 查看防火墙状态</a></p>
+<h4 id="4- 如果想要配置的 -IP- 永久生效"><a href="#4- 如果想要配置的 -IP- 永久生效" class="headerlink" title="4. 如果想要配置的 IP 永久生效"></a>4. 如果想要配置的 IP 永久生效 </h4><h4 id="5-ubuntu18-04- 自带 -python- 换成 -python3"><a href="#5-ubuntu18-04- 自带 -python- 换成 -python3" class="headerlink" title="5.ubuntu18.04 自带 python, 换成 python3"></a>5.ubuntu18.04 自带 python, 换成 python3</h4><p> 重装虚拟机，按照 ryu 的时候有一步是：python get-pip.py，出错，因为这个是 python3 的用法<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span> 下载并设置优先级</span><br><span class="line">update-alternatives --install <span class="regexp">/usr/</span>bin<span class="regexp">/python python /u</span>sr<span class="regexp">/bin/</span>python2.<span class="number">7</span> <span class="number">1</span></span><br><span class="line">update-alternatives --install <span class="regexp">/usr/</span>bin<span class="regexp">/python python /u</span>sr<span class="regexp">/bin/</span>python3.<span class="number">6</span> <span class="number">2</span></span><br><span class="line"><span class="regexp">//</span> 查看默认版本</span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-wireshark- 权限问题"><a href="#5-wireshark- 权限问题" class="headerlink" title="5.wireshark 权限问题"></a>5.wireshark 权限问题</h4><p>wireshark 遇到 couldn’t run /usr/bin/dumpcap in child process: Permission Denied<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure wireshark-common <span class="regexp">//</span> 选组 “YES” </span><br><span class="line">sudo adduser <span class="variable">$USER</span> wireshark <span class="regexp">//</span> 添加当前用户到用户组</span><br><span class="line"><span class="regexp">//</span> 重啓，即可正常使用 wireshark</span><br></pre></td></tr></table></figure></p>
+<h4 id="6-ryu- 运行出错，所以想重新按照，但最后还是重装了虚拟机"><a href="#6-ryu- 运行出错，所以想重新按照，但最后还是重装了虚拟机" class="headerlink" title="6.ryu 运行出错，所以想重新按照，但最后还是重装了虚拟机"></a>6.ryu 运行出错，所以想重新按照，但最后还是重装了虚拟机 </h4><p>(1) 运行 ryu 程序出现 ImportError: No module named XX.py<br>(2) 如何在 Ubuntu 中用 apt 命令删除 / 卸载软件包<br>apt-get remove 删除已安装的软件包（保留配置文件），不会删除依赖软件包，保留配置文件。<br>apt-get purge  删除已安装的软件包（不保留配置文件)，删除软件包，同时删除相应依赖软件包。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/LEON1741/article/details/85114318"> 如何在 Ubuntu 中用 apt 命令删除 / 卸载软件包（remove/clean/purge）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/younger_to_older/article/details/109053821">解决 apt-get remove 和 dpkg 删除出现 E: 无法定位软件包 XXXX</a></p>
+<h4 id="7-ovs- 错误解决 -could-not-open-network-device-XXX-No-such-device）"><a href="#7-ovs- 错误解决 -could-not-open-network-device-XXX-No-such-device）" class="headerlink" title="7.ovs 错误解决 could not open network device XXX (No such device）"></a>7.ovs 错误解决 could not open network device XXX (No such device）</h4><p>网络上说设置好端口类型为 internal 就不会再出现这个问题 <br> 但我后来发现只是我命令输错，或是没有设置端口类型</p>
+<h4 id="8- 用自己 -miniedit- 创建的网络，add-route- 之后，ping- 不上外网"><a href="#8- 用自己 -miniedit- 创建的网络，add-route- 之后，ping- 不上外网" class="headerlink" title="8. 用自己./miniedit 创建的网络，add route 之后，ping 不上外网"></a>8. 用自己./miniedit 创建的网络，add route 之后，ping 不上外网 </h4><p> 这个时候进行 ping www.baidu.com 出现：<br>ping: www.baidu.com: Name or service not known<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/XXJ19950917/article/details/82733928">Linux 报错之 ping: www.baidu.com: Name or service not known</a></p>
+<h4 id="9-linux- 中查看网卡 -mac- 地址"><a href="#9-linux- 中查看网卡 -mac- 地址" class="headerlink" title="9.linux 中查看网卡 mac 地址"></a>9.linux 中查看网卡 mac 地址</h4><p>“ifconfig -a 其中 HWaddr 字段就是 mac 地址”，但是我没看到 HWaddr 字段<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/kunatnet/article/details/43408617">linux 中查看网卡 mac 地址</a></p>
+<h4 id="10-Unable-to-fetch-some-archives"><a href="#10-Unable-to-fetch-some-archives" class="headerlink" title="10.Unable to fetch some archives"></a>10.Unable to fetch some archives</h4><p>Ubuntu 安装应用时报错：<br>Unable to fetch some archives, maybe run apt-get update or try with —fix-missing?<br><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 解决办法</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> clean</span><br><span class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="计算机网络系列"><a href="# 计算机网络系列" class="headerlink" title="计算机网络系列"></a>计算机网络系列 </h3><p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/"> 计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑 </a><br><a href="https://wangxchun.github.io/2021/04/24/computerNetwork-lab3-1/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 原理 </a><br><a href="https://wangxchun.github.io/2021/04/27/computerNetwork-lab3-2/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 实作 </a><br><a href="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/"> 计算机网络 lab4 Overlay Network 和 VXLAN</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/18/investment-observe-good-article-or-story/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/18/investment-observe-good-article-or-story/" class="post-title-link" itemprop="url">好的文章或故事</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-05-18 22:31:44" itemprop="dateCreated datePublished" datetime="2021-05-18T22:31:44+08:00">2021-05-18</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-05-30 18:57:46" itemprop="dateModified" datetime="2021-05-30T18:57:46+08:00">2021-05-30</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E5%B8%82%E5%A0%B4%E8%A7%80%E5%AF%9F/" itemprop="url" rel="index"><span itemprop="name">生活-投資市場觀察</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://www.businesstoday.com.tw/article/category/80401/post/202003310046/% E4% BB%96% E6%98% AF% E7%84% A1% E8%89% AF% E7% A6% BF% E9% B7% B9% EF% BC%8C% E9%82%84% E6%98% AF% E6%93%8D% E7%9B% A4% E7% A5%9E% E4% BA% BA% EF% BC%9F">他是無良禿鷹，還是操盤神人？</a><br><a target="_blank" rel="noopener" href="https://meet.bnext.com.tw/articles/view/44610">一個流量企業的沒落：從市值破千億美元到被收購的命運 </a><br><a target="_blank" rel="noopener" href="https://zombit.info/know-the-only-cryptocurrency-financial-products-in-the-current-financial-market/"> 認識目前金融市場唯一的證券型加密貨幣金融商品 </a><br><a target="_blank" rel="noopener" href="https://www.blocktempo.com/11-publicly-traded-companies-own-3-btc/"> 這 11 間上市公司「已掌控 3.2%」的比特幣總供應量，這會是隱憂嗎？</a><br><a target="_blank" rel="noopener" href="https://blog.usstocks.com.tw/?p=3892">產業研究：5G 射頻產業整理（上）</a><br><a target="_blank" rel="noopener" href="https://blog.usstocks.com.tw/?p=3931">產業研究：5G 射頻產業整理（下）</a><br><a target="_blank" rel="noopener" href="https://finance.sina.com.cn/stock/hkstock/hkstocknews/2020-05-25/doc-iircuyvi4966214.shtml">抛弃 Facebook (FB.US) 的野孩子：硅谷的短视，我带不动</a><br><a target="_blank" rel="noopener" href="https://www.dcard.tw/f/money/p/234259731">dcard 投顧老師表演的觀看心得</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/13/money-management-fund/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/13/money-management-fund/" class="post-title-link" itemprop="url">基金</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-05-13 16:20:33 / 修改時間：19:03:04" itemprop="dateCreated datePublished" datetime="2021-05-13T16:20:33+08:00">2021-05-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/" itemprop="url" rel="index"><span itemprop="name">生活-投資理財</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="新手買基金學什麼？"><a href="#新手買基金學什麼？" class="headerlink" title="新手買基金學什麼？"></a>新手買基金學什麼？</h3><p>(1) 長期規劃<br>(2) 投資眼光</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/13/money-management-fund/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/13/money-management-bond/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/13/money-management-bond/" class="post-title-link" itemprop="url">債券</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-05-13 14:38:12" itemprop="dateCreated datePublished" datetime="2021-05-13T14:38:12+08:00">2021-05-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-05-16 11:39:14" itemprop="dateModified" datetime="2021-05-16T11:39:14+08:00">2021-05-16</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/" itemprop="url" rel="index"><span itemprop="name">生活-投資理財</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="債券是什麽？"><a href="#債券是什麽？" class="headerlink" title="債券是什麽？"></a>債券是什麽？</h3><p>債券（Bond）其實就是一種「借據」，債券上由發行者承諾，<br>在到期前每期支付固定的利息、到期時則是會一次還清票面面額上的本金。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/13/money-management-bond/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/12/investment-tips-and-concept/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/12/investment-tips-and-concept/" class="post-title-link" itemprop="url">投資的觀念和技巧</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-05-12 22:34:11" itemprop="dateCreated datePublished" datetime="2021-05-12T22:34:11+08:00">2021-05-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-06-03 16:24:32" itemprop="dateModified" datetime="2021-06-03T16:24:32+08:00">2021-06-03</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一些觀念"><a href="#一些觀念" class="headerlink" title="一些觀念"></a>一些觀念</h3><h4 id="外溢效應"><a href="#外溢效應" class="headerlink" title="外溢效應"></a>外溢效應</h4><p>Ex：台灣人換美金，會導致台幣貶值，救了台灣的出口和科技業。</p>
+<h4 id="什麽是私募基金"><a href="#什麽是私募基金" class="headerlink" title="什麽是私募基金"></a>什麽是私募基金</h4><p>把錢丟給基金公司，由公司去操盤</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/12/investment-tips-and-concept/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -680,409 +1113,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/12/investment-observe-2020-12/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/12/investment-observe-2020-12/" class="post-title-link" itemprop="url">2020/12 投資市場觀察</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-05-12 22:04:34 / 修改時間：22:58:25" itemprop="dateCreated datePublished" datetime="2021-05-12T22:04:34+08:00">2021-05-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E5%B8%82%E5%A0%B4%E8%A7%80%E5%AF%9F/" itemprop="url" rel="index"><span itemprop="name">生活-投資市場觀察</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/12/investment-observe-2020-11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/12/investment-observe-2020-11/" class="post-title-link" itemprop="url">2020/11 投資市場觀察</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-05-12 22:04:31" itemprop="dateCreated datePublished" datetime="2021-05-12T22:04:31+08:00">2021-05-12</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-10 17:44:42" itemprop="dateModified" datetime="2021-06-10T17:44:42+08:00">2021-06-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E5%B8%82%E5%A0%B4%E8%A7%80%E5%AF%9F/" itemprop="url" rel="index"><span itemprop="name">生活-投資市場觀察</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="「先買後付」借貸平台 -Affirm- 申請 -IPO，預計募資千萬美元"><a href="#「先買後付」借貸平台 -Affirm- 申請 -IPO，預計募資千萬美元" class="headerlink" title="「先買後付」借貸平台 Affirm 申請 IPO，預計募資千萬美元"></a>「先買後付」借貸平台 Affirm 申請 IPO，預計募資千萬美元 </h3><p> 由 PayPal 共同創辦人 Max Levchin 創立的線上分期貸款平台 Affirm ，11 月中，向美國證券交易委員會（The U.S. Securities and Exchange Commission, SEC）申請 IPO，預計以「AFRM」作為代號，在納斯達克交易所掛牌上市。</p>
-<h3 id="PayPal、Cash-App- 狂掃比特幣，帶動幣價挑戰歷史新高"><a href="#PayPal、Cash-App- 狂掃比特幣，帶動幣價挑戰歷史新高" class="headerlink" title="PayPal、Cash App 狂掃比特幣，帶動幣價挑戰歷史新高"></a>PayPal、Cash App 狂掃比特幣，帶動幣價挑戰歷史新高 </h3><p> 近期比特幣價格持續飆升，主要受惠美國第三方支付服務商 PayPal 宣布支援比特幣等主流虛擬貨幣。最新數據顯示，在 PayPal 開放用戶使用比特幣後，PayPal 和 Square 公司旗下行動支付服務「Cash App」購買的比特幣數量已超過新開採量，讓原本就供應緊張的比特幣更顯短缺。<br><a target="_blank" rel="noopener" href="https://technews.tw/2020/11/24/paypal-cash-app-bitcoin-price/">PayPal、Cash App 狂掃比特幣，帶動幣價挑戰歷史新高</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/12/investment-observe-2020-10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/12/investment-observe-2020-10/" class="post-title-link" itemprop="url">2020/10 投資市場觀察</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-05-12 22:04:28" itemprop="dateCreated datePublished" datetime="2021-05-12T22:04:28+08:00">2021-05-12</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-10 17:44:15" itemprop="dateModified" datetime="2021-06-10T17:44:15+08:00">2021-06-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E5%B8%82%E5%A0%B4%E8%A7%80%E5%AF%9F/" itemprop="url" rel="index"><span itemprop="name">生活-投資市場觀察</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="川普確診"><a href="# 川普確診" class="headerlink" title="川普確診"></a> 川普確診 </h3>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/12/investment-observe-2020-09/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/12/investment-observe-2020-09/" class="post-title-link" itemprop="url">2020/09 投資市場觀察</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-05-12 22:04:17" itemprop="dateCreated datePublished" datetime="2021-05-12T22:04:17+08:00">2021-05-12</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-10 17:39:16" itemprop="dateModified" datetime="2021-06-10T17:39:16+08:00">2021-06-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E5%B8%82%E5%A0%B4%E8%A7%80%E5%AF%9F/" itemprop="url" rel="index"><span itemprop="name">生活-投資市場觀察</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="支付公司 -Square- 買入 -5-000- 萬美元比特幣，幣價兩小時漲 -2-6"><a href="# 支付公司 -Square- 買入 -5-000- 萬美元比特幣，幣價兩小時漲 -2-6" class="headerlink" title="支付公司 Square 買入 5,000 萬美元比特幣，幣價兩小時漲 2.6%"></a>支付公司 Square 買入 5,000 萬美元比特幣，幣價兩小時漲 2.6%</h3><h3 id="OPEC- 會議，可以多觀察能源板塊走勢"><a href="#OPEC- 會議，可以多觀察能源板塊走勢" class="headerlink" title="OPEC + 會議，可以多觀察能源板塊走勢"></a>OPEC + 會議，可以多觀察能源板塊走勢 </h3><h4 id="利好"><a href="# 利好" class="headerlink" title="利好"></a> 利好</h4><p>（1）OPEC + 會議上，沙特和俄羅斯將緩解市場對於供過於求的擔憂，也是原油投資者保持樂觀<br>（2）中國較好的經濟數據能夠抵消部分國際能源署 (IEA) 月度報告的負面影響</p>
-<h4 id="利空"><a href="# 利空" class="headerlink" title="利空"></a>利空 </h4><p>（1）全球原油需求在 5 月和 6 月大幅復蘇，但隨著部分國家第二波疫情，需求停滯不前<br>（2）美國汽油需求復蘇在 8 月放緩，需求增速甚至在 8 月最後一周轉爲負值<br>（3）大量卡車閑置和航班被取消，柴油和航空燃料受到的打擊尤其嚴重<br>（4）利比亞軍事强人哈利法。哈弗塔爾承諾結束該國對石油的封鎖，這意味著 100 萬桶 / 日將進入市場<br>（5）颱風莎莉降爲一級颶風，對墨西哥灣原油開采和提煉業務的威脅減弱<br> 總的來説，原油市場目前處於供過於求的狀況。</p>
-<h3 id="特斯拉未被選入標普 -500- 指數 - 其他三家公司 -Esty-Teradyne-Catalent- 成功進入"><a href="# 特斯拉未被選入標普 -500- 指數 - 其他三家公司 -Esty-Teradyne-Catalent- 成功進入" class="headerlink" title="特斯拉未被選入標普 500 指數 其他三家公司 (Esty/Teradyne/Catalent) 成功進入"></a>特斯拉未被選入標普 500 指數 其他三家公司 (Esty/Teradyne/Catalent) 成功進入 </h3><p><a target="_blank" rel="noopener" href="https://news.cnyes.com/news/id/4521259"> 特斯拉未被選入標普 500 指數 盤後翻黑重摔 </a><br> 上次財報的獲利是有水分的，獲利指標不夠，可能是這次將特斯拉排除在外的主要因素 <br><a target="_blank" rel="noopener" href="https://www.businessweekly.com.tw/business/blog/3004417"> 特斯拉大賺 340 億，特斯拉靠碳權交易賺到的錢，比產銷電動車更多 </a><br> 特斯拉市值已經是美國前十大，如果特斯拉加入，追蹤該指數的基金就必須購入特斯拉股票，熱錢隨時可能退出，導致標普被迫接盤。<br>這些利空的消息都是特斯拉自己放出來的，可能是爲了協助機構洗盤，要把更多的散戶游資洗出來，才好控制大盤未來走勢；散戶多的股票，機構不好控盤，標普也不喜歡。</p>
-<h3 id="特斯拉 -9- 月在大陸退出電池回收服務，承諾報廢的鋰離子電池均不做填埋處理"><a href="# 特斯拉 -9- 月在大陸退出電池回收服務，承諾報廢的鋰離子電池均不做填埋處理" class="headerlink" title="特斯拉 9 月在大陸退出電池回收服務，承諾報廢的鋰離子電池均不做填埋處理"></a>特斯拉 9 月在大陸退出電池回收服務，承諾報廢的鋰離子電池均不做填埋處理 </h3><h3 id="受惠遠端辦公需求，協同作業溝通軟體 -Slack-WORK-US"><a href="# 受惠遠端辦公需求，協同作業溝通軟體 -Slack-WORK-US" class="headerlink" title="受惠遠端辦公需求，協同作業溝通軟體 Slack (WORK-US)"></a> 受惠遠端辦公需求，協同作業溝通軟體 Slack (WORK-US)</h3><p><a target="_blank" rel="noopener" href="https://news.cnyes.com/news/id/4520208">錯過飆股 Zoom？這 8 檔新冠受益股可望是「Zoom 2.0」</a><br><a target="_blank" rel="noopener" href="https://news.cnyes.com/news/id/4522553">9/9 〈財報〉 Slack Q2 營收年增不敵對手 Zoom 盤後股價暴跌逾 18%</a></p>
-<h3 id="道瓊指數的科技股王 -Salesforce"><a href="# 道瓊指數的科技股王 -Salesforce" class="headerlink" title="道瓊指數的科技股王 Salesforce"></a>道瓊指數的科技股王 Salesforce</h3><p><a target="_blank" rel="noopener" href="https://www.cw.com.tw/article/5101755">道瓊指數的科技股王 Salesforce，你還不認識它嗎？</a><br>客戶關係管理軟體 (CRM) 軟體和技術的主要供應商</p>
-<h3 id="迪士尼"><a href="# 迪士尼" class="headerlink" title="迪士尼"></a>迪士尼 </h3><p><a target="_blank" rel="noopener" href="https://news.cnyes.com/news/id/4522546"> 串流媒體是未來趨勢！分析師看好 Disney+、Hulu 喊買迪士尼</a><br><a target="_blank" rel="noopener" href="https://ec.ltn.com.tw/article/breakingnews/3285966">《花木蘭》推升迪士尼股價 一度創下近月最大單日漲幅</a></p>
-<h3 id="特斯拉"><a href="# 特斯拉" class="headerlink" title="特斯拉"></a>特斯拉 </h3><p><a target="_blank" rel="noopener" href="https://udn.com/news/story/6811/4853889"> 特斯拉陸製 Model 3 將銷歐亞 </a><br><a target="_blank" rel="noopener" href="https://ctee.com.tw/news/global/328668.html">9/2 特斯拉計劃發售新股 市值 1460 億元</a><br> 電動車和太陽能板製造業巨擘特斯拉（Tesla）在 8 月 31 日進行 1 拆 5 的股票分割後，9 月 1 日宣布計畫，將發售至多價值 50 億美元（約新台幣 1460 億元）普通股。<br>美聯社報導，特斯拉周二在股市盤前向美國證券管理委員會（SEC）遞交文件表示，計劃發售 1003 萬股並將收益投入一般公司用途，但未表明用途為何。<br>特斯拉股價今天收跌 4.7% 至 475.05 美元。<br>任何股票出售都可能減少股東當前的投資價值。<br><a target="_blank" rel="noopener" href="https://finance.sina.com.cn/stock/hkstock/hkzmt/2020-09-09/doc-iivhvpwy5691939.shtml">特斯拉完成 50 亿美元股权出售 Nikola 获通用汽车 20 亿美元投资 </a><br><a target="_blank" rel="noopener" href="https://tech.sina.cn/2020-09-05/detail-iivhuipp2665481.d.html"> 马斯克第三档股权奖励解锁，奖励总额达 85 亿美元 </a><br><a target="_blank" rel="noopener" href="https://news.cnyes.com/news/id/4527073"> 一文看懂：特斯拉電池日驚喜與驚嚇 盤後市值蒸發逾 200 億美元</a></p>
-<h3 id="3- 家 -HOT- 云服务商 -Snowflake（SNOW）Rackspace（RXT）Palantir-PLTR"><a href="#3- 家 -HOT- 云服务商 -Snowflake（SNOW）Rackspace（RXT）Palantir-PLTR" class="headerlink" title="3 家 HOT 云服务商: Snowflake（SNOW）Rackspace（RXT）Palantir (PLTR)"></a>3 家 HOT 云服务商: Snowflake（SNOW）Rackspace（RXT）Palantir (PLTR)</h3><p><a target="_blank" rel="noopener" href="https://www.cw.com.tw/article/5101958">一上市股價就翻倍，巴菲特看好的 Snowflake 是做什麼的？</a><br>Snowflake 做的是云上的數據管理平台，競爭對手有 Amazon 的 Redshift、Microsoft 的 Synapse、Google 的 BigQuery<br><a target="_blank" rel="noopener" href="https://finance.technews.tw/2020/09/25/the-palantir-ipo-issue-price-is-estimated-at-10usd/">Palantir IPO 發行價估 10 美元，公司身價上看 220 億美元</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/12/investment-observe-2020-08/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/12/investment-observe-2020-08/" class="post-title-link" itemprop="url">2020/08 投資市場觀察</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-05-12 22:04:12" itemprop="dateCreated datePublished" datetime="2021-05-12T22:04:12+08:00">2021-05-12</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-10 17:44:03" itemprop="dateModified" datetime="2021-06-10T17:44:03+08:00">2021-06-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E5%B8%82%E5%A0%B4%E8%A7%80%E5%AF%9F/" itemprop="url" rel="index"><span itemprop="name">生活-投資市場觀察</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="5G- 趨勢下的穩懋"><a href="#5G- 趨勢下的穩懋" class="headerlink" title="5G 趨勢下的穩懋"></a>5G 趨勢下的穩懋 </h3><p>5G 發展讓砷化鎵需求激增，而貿易戰則讓台廠抓緊中國市場的機會。<br> 原因在於以砷化鎵生產的 PA（功率放大器）晶片。PA 晶片作為手機接收各頻段訊號的元件，進入 5G 時代後手機用量倍增。隨著 5G 的發展，過去 PA 元件由 Skywork、Qrovo、Broadcom 三家獨大，如今加入 Muruta、Qualcomm、Vanchip 等競爭者。在中國去美化發展持續，中國手機業者逐漸降低向 Skywork 與美系 PA 廠的採購。中國 5G 手機成長的需求，加上去美化導致 PA 供應上的不足，在無法靠當地廠商滿足需求的情況下，成為台灣 PA 廠商得以大啖中國市場的機會。</p>
-<p>除了 PA，另一個砷化鎵的應用 VSCEL（垂直共振腔面射型雷射），也是驅動穩懋成長的動能之一。<br>王尊民推估，手機後鏡頭增加 VSCEL 的設計，可能會由蘋果先推出，「iPad 也可能會有。」蘋果在 VSCEL 元件的供應商 lumentum，其主要代工廠正是穩懋。兩腳分別踩在成長趨勢上，讓摩根士丹利也把對穩懋的目標價，從三二六元提升到三七八元。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
 
 

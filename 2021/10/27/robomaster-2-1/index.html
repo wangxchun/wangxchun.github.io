@@ -24,15 +24,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="一、PID 控制器 1. 开环控制系统 (无反馈) 和闭环控制系统 (有反馈) 二、挨打反击 1. 什么是挨打反击 当机器人的装甲板收到攻击后，机器人能够迅速转向受攻击侧  并持续转动底盘向目标发起反击 2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）">
+<meta name="description" content="一、PID 控制器1. 开环控制系统 (无反馈) 和闭环控制系统 (有反馈)二、挨打反击1. 什么是挨打反击当机器人的装甲板收到攻击后，机器人能够迅速转向受攻击侧并持续转动底盘向目标发起反击 2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="robomaster 电控 (2) 常见模块">
 <meta property="og:url" content="https://wangxchun.github.io/2021/10/27/robomaster-2-1/index.html">
 <meta property="og:site_name" content="Stephen自强不息">
-<meta property="og:description" content="一、PID 控制器 1. 开环控制系统 (无反馈) 和闭环控制系统 (有反馈) 二、挨打反击 1. 什么是挨打反击 当机器人的装甲板收到攻击后，机器人能够迅速转向受攻击侧  并持续转动底盘向目标发起反击 2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）">
+<meta property="og:description" content="一、PID 控制器1. 开环控制系统 (无反馈) 和闭环控制系统 (有反馈)二、挨打反击1. 什么是挨打反击当机器人的装甲板收到攻击后，机器人能够迅速转向受攻击侧并持续转动底盘向目标发起反击 2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-10-27T09:37:21.000Z">
-<meta property="article:modified_time" content="2021-11-06T15:45:04.616Z">
+<meta property="article:modified_time" content="2021-11-11T03:24:14.747Z">
 <meta property="article:author" content="Stephen Wang">
 <meta name="twitter:card" content="summary">
 
@@ -177,14 +177,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">200</span>
+          <span class="site-state-item-count">205</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -268,7 +268,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-06 23:45:04" itemprop="dateModified" datetime="2021-11-06T23:45:04+08:00">2021-11-06</time>
+        <time title="修改時間：2021-11-11 11:24:14" itemprop="dateModified" datetime="2021-11-11T11:24:14+08:00">2021-11-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,7 +291,8 @@
     
     <div class="post-body" itemprop="articleBody">
         <h3 id="一、PID- 控制器"><a href="# 一、PID- 控制器" class="headerlink" title="一、PID 控制器"></a>一、PID 控制器 </h3><h4 id="1- 开环控制系统 - 无反馈 - 和闭环控制系统 - 有反馈"><a href="#1- 开环控制系统 - 无反馈 - 和闭环控制系统 - 有反馈" class="headerlink" title="1. 开环控制系统 (无反馈) 和闭环控制系统 (有反馈)"></a>1. 开环控制系统 (无反馈) 和闭环控制系统 (有反馈)</h4><h3 id="二、挨打反击"><a href="# 二、挨打反击" class="headerlink" title="二、挨打反击"></a> 二、挨打反击 </h3><h4 id="1- 什么是挨打反击"><a href="#1- 什么是挨打反击" class="headerlink" title="1. 什么是挨打反击"></a>1. 什么是挨打反击</h4><p> 当机器人的装甲板收到攻击后，机器人能够迅速转向受攻击侧 <br> 并持续转动底盘向目标发起反击</p>
-<h4 id="2- 装甲板的分布位置和工作原理（位于地盘的 -4- 个和位于云台的两个）"><a href="#2- 装甲板的分布位置和工作原理（位于地盘的 -4- 个和位于云台的两个）" class="headerlink" title="2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）"></a>2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）</h4>
+<h4 id="2- 装甲板的分布位置和工作原理（位于地盘的 -4- 个和位于云台的两个）"><a href="#2- 装甲板的分布位置和工作原理（位于地盘的 -4- 个和位于云台的两个）" class="headerlink" title="2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）"></a>2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）</h4><span id="more"></span>
+
     </div>
 
     
