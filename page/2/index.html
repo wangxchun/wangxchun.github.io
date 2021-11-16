@@ -264,7 +264,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-11 16:01:50" itemprop="dateModified" datetime="2021-11-11T16:01:50+08:00">2021-11-11</time>
+        <time title="修改時間：2021-11-11 23:29:41" itemprop="dateModified" datetime="2021-11-11T23:29:41+08:00">2021-11-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -293,9 +293,11 @@
 <li>空间域处理：往往作邻域加权 “和” 处理 <br> ・需考虑邻域大小、形状 <br> ・点变换可看作处理窗为 1×1 的空间域处理</li>
 <li>频域处理</li>
 </ol>
-<h3 id="一、灰度变换"><a href="# 一、灰度变换" class="headerlink" title="一、灰度变换"></a>一、灰度变换 </h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、空间域滤波 -—- 空间域图像锐化"><a href="# 二、空间域滤波 -—- 空间域图像锐化" class="headerlink" title="二、空间域滤波 — 空间域图像锐化"></a> 二、空间域滤波 — 空间域图像锐化 </h3><h4 id="1-laplace- 算子"><a href="#1-laplace- 算子" class="headerlink" title="1.laplace 算子"></a>1.laplace 算子</h4><h4 id="2-roberts- 算子"><a href="#2-roberts- 算子" class="headerlink" title="2.roberts 算子"></a>2.roberts 算子</h4><h4 id="3-sobel- 算子"><a href="#3-sobel- 算子" class="headerlink" title="3.sobel 算子"></a>3.sobel 算子</h4><h4 id="4-Prewitt-amp-Kirsch- 算子"><a href="#4-Prewitt-amp-Kirsch- 算子" class="headerlink" title="4.Prewitt&amp;Kirsch 算子"></a>4.Prewitt&amp;Kirsch 算子</h4><h4 id="5-LoG- 高斯拉普拉斯算子 - 和 -DoG"><a href="#5-LoG- 高斯拉普拉斯算子 - 和 -DoG" class="headerlink" title="5.LoG (高斯拉普拉斯算子) 和 DoG"></a>5.LoG (高斯拉普拉斯算子) 和 DoG</h4><p>(1) LoG<br> 在进行 Laplacian 操作之前通常需要先用高斯平滑滤波器对图像进行平滑处理，以降低 Laplacian 操作对于噪声的敏感性。事实上由于卷积操作具有结合律，因此我们可以先将高斯平滑滤波器与拉普拉斯滤波器进行卷积，然后利用得到的混合滤波器去对图片进行卷积以得到所需的结果。采用这个做法主要有以下两个优点：<br>a. 由于高斯和拉普拉斯核通常都比图像小得多，所以这种方法通常只需要很少的算术运算。<br>b. LoG (Laplacian of Gaussian) 内核的参数可以预先计算，因此在运行时只需要对图像执行一遍的卷积即可。<br>在离散的网格上，简单的拉普拉斯算子可以看成是一种高斯函数很窄的 LoG 函数。<br>(2) DoG<br>DoG 算子和 LoG 算子具有类似的波形，仅仅是幅度不同，不影响极值点的检测，而 DoG 算子的计算复杂度显然低于 LoG，因此一般使用 DoG 代替 LoG 算子</p>
+<h3 id="一、灰度变换"><a href="# 一、灰度变换" class="headerlink" title="一、灰度变换"></a>一、灰度变换 </h3><h4 id="1- 直方图"><a href="#1- 直方图" class="headerlink" title="1. 直方图"></a>1. 直方图</h4><p> 最常用的像素统计特性描述方式<br><img src="/2021/11/08/image-processing-5/photo1.png" alt></p>
+<h4 id="2- 灰度增强"><a href="#2- 灰度增强" class="headerlink" title="2. 灰度增强"></a>2. 灰度增强 </h4><p> 灰度增强就是按照一定变换方式逐点地改变原来图像中每个像素的灰度值 r‘=T (t)。<br>通过改变像素灰度值获得直方图形状的改变。<br>(1) 灰度线性变换 <br>(2) 灰度非线性变换<br> 离散图像</p>
+<h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、空间域滤波 -—- 空间域图像锐化"><a href="# 二、空间域滤波 -—- 空间域图像锐化" class="headerlink" title="二、空间域滤波 — 空间域图像锐化"></a>二、空间域滤波 — 空间域图像锐化 </h3><h4 id="1-laplace- 算子"><a href="#1-laplace- 算子" class="headerlink" title="1.laplace 算子"></a>1.laplace 算子</h4><h4 id="2-roberts- 算子"><a href="#2-roberts- 算子" class="headerlink" title="2.roberts 算子"></a>2.roberts 算子</h4><h4 id="3-sobel- 算子"><a href="#3-sobel- 算子" class="headerlink" title="3.sobel 算子"></a>3.sobel 算子</h4><h4 id="4-Prewitt-amp-Kirsch- 算子"><a href="#4-Prewitt-amp-Kirsch- 算子" class="headerlink" title="4.Prewitt&amp;Kirsch 算子"></a>4.Prewitt&amp;Kirsch 算子</h4><h4 id="5-LoG- 高斯拉普拉斯算子 - 和 -DoG"><a href="#5-LoG- 高斯拉普拉斯算子 - 和 -DoG" class="headerlink" title="5.LoG (高斯拉普拉斯算子) 和 DoG"></a>5.LoG (高斯拉普拉斯算子) 和 DoG</h4><p>(1) LoG<br> 在进行 Laplacian 操作之前通常需要先用高斯平滑滤波器对图像进行平滑处理，以降低 Laplacian 操作对于噪声的敏感性。事实上由于卷积操作具有结合律，因此我们可以先将高斯平滑滤波器与拉普拉斯滤波器进行卷积，然后利用得到的混合滤波器去对图片进行卷积以得到所需的结果。采用这个做法主要有以下两个优点：<br>a. 由于高斯和拉普拉斯核通常都比图像小得多，所以这种方法通常只需要很少的算术运算。<br>b. LoG (Laplacian of Gaussian) 内核的参数可以预先计算，因此在运行时只需要对图像执行一遍的卷积即可。<br>在离散的网格上，简单的拉普拉斯算子可以看成是一种高斯函数很窄的 LoG 函数。<br>(2) DoG<br>DoG 算子和 LoG 算子具有类似的波形，仅仅是幅度不同，不影响极值点的检测，而 DoG 算子的计算复杂度显然低于 LoG，因此一般使用 DoG 代替 LoG 算子</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/92143464">高斯拉普拉斯算子（Laplacian of Gaussian, LoG）</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/49447503">DoG 和 LoG 算子</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yangying1992/article/details/100809629">LoG 算子与 DoG 算子相似性数学推导</a></p>
-<h3 id="三、空间域滤波 -—- 空间域图像平滑"><a href="# 三、空间域滤波 -—- 空间域图像平滑" class="headerlink" title="三、空间域滤波 — 空间域图像平滑"></a>三、空间域滤波 — 空间域图像平滑 </h3><h4 id="1-1"><a href="#1-1" class="headerlink" title="1."></a>1.</h4><h4 id="2-1"><a href="#2-1" class="headerlink" title="2."></a>2.</h4><h4 id="3-1"><a href="#3-1" class="headerlink" title="3."></a>3.</h4><h3 id="四、频域滤波"><a href="# 四、频域滤波" class="headerlink" title="四、频域滤波"></a> 四、频域滤波 </h3><h3 id="五、实作 -canny- 边缘提取"><a href="# 五、实作 -canny- 边缘提取" class="headerlink" title="五、实作 - canny 边缘提取"></a> 五、实作 - canny 边缘提取 </h3><h4 id="1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。"><a href="#1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。" class="headerlink" title="1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。"></a>1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。</h4><h4 id="2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"><a href="#2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。" class="headerlink" title="2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"></a>2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。</h4><h4 id="3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"><a href="#3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？" class="headerlink" title="3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"></a>3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？</h4><h4 id="4- 强化：如何基于提取的边缘图做风格化处理？"><a href="#4- 强化：如何基于提取的边缘图做风格化处理？" class="headerlink" title="4. 强化：如何基于提取的边缘图做风格化处理？"></a>4. 强化：如何基于提取的边缘图做风格化处理？</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Gentleman_Qin/article/details/107027894"> 传统基本图像处理方法：图像增强（灰度变换、直方图增强、空间域滤波、频率域滤波）、图像分割、图像配准等</a></p>
+<h3 id="三、空间域滤波 -—- 空间域图像平滑"><a href="# 三、空间域滤波 -—- 空间域图像平滑" class="headerlink" title="三、空间域滤波 — 空间域图像平滑"></a>三、空间域滤波 — 空间域图像平滑 </h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3-1"><a href="#3-1" class="headerlink" title="3."></a>3.</h4><h3 id="四、频域滤波"><a href="# 四、频域滤波" class="headerlink" title="四、频域滤波"></a> 四、频域滤波 </h3><h3 id="五、实作 -canny- 边缘提取"><a href="# 五、实作 -canny- 边缘提取" class="headerlink" title="五、实作 - canny 边缘提取"></a> 五、实作 - canny 边缘提取 </h3><h4 id="1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。"><a href="#1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。" class="headerlink" title="1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。"></a>1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。</h4><h4 id="2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"><a href="#2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。" class="headerlink" title="2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"></a>2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。</h4><h4 id="3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"><a href="#3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？" class="headerlink" title="3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"></a>3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？</h4><h4 id="4- 强化：如何基于提取的边缘图做风格化处理？"><a href="#4- 强化：如何基于提取的边缘图做风格化处理？" class="headerlink" title="4. 强化：如何基于提取的边缘图做风格化处理？"></a>4. 强化：如何基于提取的边缘图做风格化处理？</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Gentleman_Qin/article/details/107027894"> 传统基本图像处理方法：图像增强（灰度变换、直方图增强、空间域滤波、频率域滤波）、图像分割、图像配准等</a></p>
 
       
     </div>
@@ -353,7 +355,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-11 17:18:04" itemprop="dateModified" datetime="2021-11-11T17:18:04+08:00">2021-11-11</time>
+        <time title="修改時間：2021-11-11 23:29:40" itemprop="dateModified" datetime="2021-11-11T23:29:40+08:00">2021-11-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -388,7 +390,7 @@
 <p>$\displaystyle =10log_{10} \frac {(2^{bits}-1)^2}{\frac {1}{MN} \sum_{i=0}^{M-1} \sum_{i=0}^{N-1}{[f (m,n)-g (m,n)]}}$</p>
 <p>MSE (Mean squared error)：均方误差 <br>SSIM (Structural Similarity)：强调结构相似性<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/edogawachia/article/details/78756680"> 图像质量评估指标 SSIM / PSNR / MSE</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54539091">视频 / 图像质量评价综述 (一)</a></p>
 <h4 id="3- 主观评价指标"><a href="#3- 主观评价指标" class="headerlink" title="3. 主观评价指标"></a>3. 主观评价指标</h4><p>MOS (mean opinion score)</p>
-<h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a>三、</h3><h3 id="四、"><a href="# 四、" class="headerlink" title="四、"></a>四、</h3><h3 id="五、"><a href="# 五、" class="headerlink" title="五、"></a>五、</h3>
+
       
     </div>
 
@@ -532,7 +534,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-11 16:01:52" itemprop="dateModified" datetime="2021-11-11T16:01:52+08:00">2021-11-11</time>
+        <time title="修改時間：2021-11-11 23:29:38" itemprop="dateModified" datetime="2021-11-11T23:29:38+08:00">2021-11-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -555,7 +557,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <span id="more"></span>
-<h3 id="一、成像原理"><a href="# 一、成像原理" class="headerlink" title="一、成像原理"></a>一、成像原理 </h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、采样与量化"><a href="# 二、采样与量化" class="headerlink" title="二、采样与量化"></a> 二、采样与量化 </h3><h3 id="三、人眼视觉特性"><a href="# 三、人眼视觉特性" class="headerlink" title="三、人眼视觉特性"></a> 三、人眼视觉特性 </h3><h4 id="1- 光度学基本原理"><a href="#1- 光度学基本原理" class="headerlink" title="1. 光度学基本原理"></a>1. 光度学基本原理</h4><p> 人眼对 380～780 纳米内不同波长的光具有不同的敏感程度，称为人眼的视敏特性。  衡量描述人眼视敏特性的物理量为视敏函数和相对视敏函数。<br>(1) 视敏函数 在相同亮度感觉的条件下，不同波长上光辐射功率的倒数可以用来衡量人眼对各波长光明亮感觉的敏感程度，称为视敏函数。<br>$K (\lambda)={1 \over p_r (\lambda)}$<br>(2) 相对视敏函数 实验表明，人眼对波长为 555 纳米的光最敏感，因此把任意波长的光的视敏函数与最大视敏函数值 K (555) 相比的比值称为相对视敏函数。<br>$V (\lambda)={K (\lambda) \over k_max}={K (\lambda) \over K (555)}={P_r (555) \over P_r (\lambda)}$</p>
+<h3 id="一、成像原理"><a href="# 一、成像原理" class="headerlink" title="一、成像原理"></a>一、成像原理 </h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、采样与量化"><a href="# 二、采样与量化" class="headerlink" title="二、采样与量化"></a> 二、采样与量化 </h3><h3 id="三、人眼视觉特性"><a href="# 三、人眼视觉特性" class="headerlink" title="三、人眼视觉特性"></a> 三、人眼视觉特性 </h3><h4 id="1- 光度学基本原理"><a href="#1- 光度学基本原理" class="headerlink" title="1. 光度学基本原理"></a>1. 光度学基本原理</h4><p> 人眼对 380～780 纳米内不同波长的光具有不同的敏感程度，称为人眼的视敏特性。  衡量描述人眼视敏特性的物理量为视敏函数和相对视敏函数。<br>(1) 视敏函数 在相同亮度感觉的条件下，不同波长上光辐射功率的倒数可以用来衡量人眼对各波长光明亮感觉的敏感程度，称为视敏函数。<br>$K (\lambda)={1 \over p_r (\lambda)}$<br>(2) 相对视敏函数 实验表明，人眼对波长为 555 纳米的光最敏感，因此把任意波长的光的视敏函数与最大视敏函数值 K (555) 相比的比值称为相对视敏函数。<br>$V (\lambda)={K (\lambda) \over k_max}={K (\lambda) \over K (555)}={P_r (555) \over P_r (\lambda)}$<br><a target="_blank" rel="noopener" href="http://www.360doc.com/content/13/1218/09/153944_338062866.shtml">人眼视觉特性</a></p>
 <h4 id="2- 人眼视觉特性"><a href="#2- 人眼视觉特性" class="headerlink" title="2. 人眼视觉特性"></a>2. 人眼视觉特性 </h4><h4 id="3- 人眼视觉模型"><a href="#3- 人眼视觉模型" class="headerlink" title="3. 人眼视觉模型"></a>3. 人眼视觉模型</h4><h4 id="4- 彩色图像的表示"><a href="#4- 彩色图像的表示" class="headerlink" title="4. 彩色图像的表示"></a>4. 彩色图像的表示</h4><h3 id="四、"><a href="# 四、" class="headerlink" title="四、"></a> 四、</h3><h3 id="五、"><a href="# 五、" class="headerlink" title="五、"></a>五、</h3>
       
     </div>
