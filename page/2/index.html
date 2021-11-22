@@ -395,7 +395,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2021-11-22 16:26:35 / 修改時間：17:09:38" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:35+08:00">2021-11-22</time>
+      <time title="創建時間：2021-11-22 16:26:35 / 修改時間：17:56:51" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:35+08:00">2021-11-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -420,7 +420,7 @@
           <h3 id="一、Reference-Frame- 参考坐标"><a href="# 一、Reference-Frame- 参考坐标" class="headerlink" title="一、Reference Frame 参考坐标"></a>一、Reference Frame 参考坐标 </h3><h4 id="1-Inertial-Frame"><a href="#1-Inertial-Frame" class="headerlink" title="1.Inertial Frame"></a>1.Inertial Frame</h4><p>(1) Earth-Centered Inertial frame (ECI)<br>(2) Earth-Centered and Earth-Fixed Inertial Frame<br>X 轴固定在地球表面随着地球转动而转动<br> 最常见的地球坐标系</p>
 <h4 id="2-Earth-Fixed-Frame- 局部地理坐标系 - 世界坐标系"><a href="#2-Earth-Fixed-Frame- 局部地理坐标系 - 世界坐标系" class="headerlink" title="2.Earth-Fixed Frame 局部地理坐标系 / 世界坐标系"></a>2.Earth-Fixed Frame 局部地理坐标系 / 世界坐标系 </h4><p> 原点在地球表面</p>
 <h4 id="3-Body-fixed-Frame-Body-Frame"><a href="#3-Body-fixed-Frame-Body-Frame" class="headerlink" title="3.Body-fixed Frame (Body Frame)"></a>3.Body-fixed Frame (Body Frame)</h4><p>坐标原点在机体上 <br> 坐标原点是自己定义的 ex：在图像传感器中心 <br> 最后算出来的姿态和定义的坐标系有关</p>
-<h3 id="二、Rigid-Transformation"><a href="# 二、Rigid-Transformation" class="headerlink" title="二、Rigid Transformation"></a>二、Rigid Transformation</h3><p>刚体变换 = 旋转变换 + 平移变换 $x^’=Rx+t$<br>刚体变换保长度、保角度 <br> 证明旋转矩阵都是正交矩阵，反之则否 <br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jhope/article/details/83067956?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-3&amp;spm=1001.2101.3001.4242.2"> 旋转矩阵 (Rotate Matrix) 的性质分析 </a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/316200199"> 正交矩阵都是旋转矩阵吗？</a><br><img src="/2021/11/22/slam-4/photo1.jpg" alt="刚体变换和 t 是无关的，后面会讲到应用 (消失点投影)"></p>
+<h3 id="二、Rigid-Transformation"><a href="# 二、Rigid-Transformation" class="headerlink" title="二、Rigid Transformation"></a>二、Rigid Transformation</h3><p>刚体变换 = 旋转变换 + 平移变换 $x’=Rx+t$<br>刚体变换保长度、保角度 <br> 证明旋转矩阵都是正交矩阵，反之则否 <br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jhope/article/details/83067956?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-3&amp;spm=1001.2101.3001.4242.2"> 旋转矩阵 (Rotate Matrix) 的性质分析 </a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/316200199"> 正交矩阵都是旋转矩阵吗？</a><br><img src="/2021/11/22/slam-4/photo1.jpg" alt="刚体变换和 t 是无关的，后面会讲到应用 (消失点投影)"></p>
 <h4 id="1-Pose-representation- 位姿"><a href="#1-Pose-representation- 位姿" class="headerlink" title="1.Pose representation 位姿"></a>1.Pose representation 位姿 </h4><p> 位姿可以用刚体变换描述</p>
 <h4 id="2-Body-to-world-transformation- 机器人用的比较多"><a href="#2-Body-to-world-transformation- 机器人用的比较多" class="headerlink" title="2.Body-to-world transformation (机器人用的比较多)"></a>2.Body-to-world transformation (机器人用的比较多)</h4><script type="math/tex; mode=display">
 x_w=
@@ -438,7 +438,22 @@ x=
     R_7 & R_8 & R_9 \\
 \end {matrix}
 x_w+t</script><p>旋转矩阵的第一 row 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Row vectors in $R$ are the directions of body axes in the world frame)<br>$x_w^0=-R^T t$</p>
-<h3 id="三、Projective-geometry"><a href="# 三、Projective-geometry" class="headerlink" title="三、Projective geometry"></a>三、Projective geometry</h3><h4 id="1-Homogenous-coordinates"><a href="#1-Homogenous-coordinates" class="headerlink" title="1.Homogenous coordinates"></a>1.Homogenous coordinates</h4><h4 id="2-2D-projective-geometry"><a href="#2-2D-projective-geometry" class="headerlink" title="2.2D projective geometry"></a>2.2D projective geometry</h4><h4 id="3-3D-projective-geometry"><a href="#3-3D-projective-geometry" class="headerlink" title="3.3D projective geometry"></a>3.3D projective geometry</h4>
+<h3 id="三、Projective-geometry"><a href="# 三、Projective-geometry" class="headerlink" title="三、Projective geometry"></a>三、Projective geometry</h3><h4 id="1-Homogenous-coordinates"><a href="#1-Homogenous-coordinates" class="headerlink" title="1.Homogenous coordinates"></a>1.Homogenous coordinates</h4><p>描述比较简洁 ex：一个矩阵就可以描述刚体变换 <br> 可以描述笛卡尔坐标系无法描述的元素 ex：无穷远的点 <br> 齐次坐标在《图形学》应用广泛</p>
+<script type="math/tex; mode=display">
+\begin {matrix}
+    x' \\
+    1 \\
+\end {matrix}
+~
+\begin {matrix}
+    R & t \\
+    0^T & 1 \\
+\end {matrix}
+
+\begin {matrix}
+    x \\
+    1 \\
+\end {matrix}</script><h4 id="2-2D-projective-geometry"><a href="#2-2D-projective-geometry" class="headerlink" title="2.2D projective geometry"></a>2.2D projective geometry</h4><h4 id="3-3D-projective-geometry"><a href="#3-3D-projective-geometry" class="headerlink" title="3.3D projective geometry"></a>3.3D projective geometry</h4>
       
     </div>
 
