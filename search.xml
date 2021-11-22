@@ -4503,12 +4503,55 @@ d. 采用线性插值的方法估计边缘的位置
 <h3 id="四、频域滤波"><a href="# 四、频域滤波" class="headerlink" title="四、频域滤波"></a>四、频域滤波</h3><p><a href="https://blog.csdn.net/zhoufan900428/article/details/17194289">[数字图像处理] 频域滤波 (1)— 基础与低通滤波器</a><br><a href="https://blog.csdn.net/zhoufan900428/article/details/17201293">[数字图像处理] 频域滤波 (2)— 高通滤波器，带阻滤波器与陷波滤波器</a></p>
 <h3 id="五、中值滤波与同态滤波"><a href="# 五、中值滤波与同态滤波" class="headerlink" title="五、中值滤波与同态滤波"></a>五、中值滤波与同态滤波 </h3><h4 id="1- 中值滤波"><a href="#1- 中值滤波" class="headerlink" title="1. 中值滤波"></a>1. 中值滤波</h4><h4 id="2- 同态滤波"><a href="#2- 同态滤波" class="headerlink" title="2. 同态滤波"></a>2. 同态滤波</h4><h3 id="六、色彩增强"><a href="# 六、色彩增强" class="headerlink" title="六、色彩增强"></a> 六、色彩增强 </h3><p><img src="/2021/11/08/image-processing-5/photo4.jpg" alt><br><a href="https://blog.csdn.net/baishuiniyaonulia/article/details/98970461"> 图像增强 — 彩色增强技术 </a><br> 人的肉眼可分辨的灰度级在十几到二十几之间，却能区分几千种不同色度、不同亮度的色彩。可以说人眼对彩色的分辨力可以达到灰度分辨力的百倍以上。</p>
 <h4 id="1- 伪色彩增强：把灰度图像处理成伪彩色图像"><a href="#1- 伪色彩增强：把灰度图像处理成伪彩色图像" class="headerlink" title="1. 伪色彩增强：把灰度图像处理成伪彩色图像"></a>1. 伪色彩增强：把灰度图像处理成伪彩色图像</h4><p>(1) 空域增强<br>(2) 頻域增强</p>
-<h4 id="2- 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像"><a href="#2- 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像" class="headerlink" title="2. 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像"></a>2. 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像 </h4><h3 id="七、实作 -canny- 边缘提取"><a href="# 七、实作 -canny- 边缘提取" class="headerlink" title="七、实作 - canny 边缘提取"></a> 七、实作 - canny 边缘提取 </h3><h4 id="1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。"><a href="#1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。" class="headerlink" title="1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。"></a>1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。</h4><h4 id="2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"><a href="#2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。" class="headerlink" title="2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"></a>2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。</h4><h4 id="3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"><a href="#3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？" class="headerlink" title="3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"></a>3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？</h4><h4 id="4- 强化：如何基于提取的边缘图做风格化处理？"><a href="#4- 强化：如何基于提取的边缘图做风格化处理？" class="headerlink" title="4. 强化：如何基于提取的边缘图做风格化处理？"></a>4. 强化：如何基于提取的边缘图做风格化处理？</h4><h4 id="5- 课后拓展："><a href="#5- 课后拓展：" class="headerlink" title="5. 课后拓展："></a>5. 课后拓展：</h4><h5 id="1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"><a href="#1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）" class="headerlink" title="(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"></a>(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）</h5><p><a href="https://blog.csdn.net/SESESssss/article/details/106774854">【理解】经典角点检测算法 —Harris 角点</a><br><a href="https://zhuanlan.zhihu.com/p/90393907"> 角点检测 (2) - harris 算子 - 理论与 Python 代码 </a><br><a href="https://blog.csdn.net/m0_37170593/article/details/109094382">Gabor 滤波器原理</a><br>《phase congruency detects corners and edges》低层次 (基于像素之间的) 特征提取概述<br> 相位一致性是指在图像的频率域中，边缘相似的特征在同一阶段出现的频率较高 <br><img src="/2021/11/08/image-processing-5/photo5.jpg" alt><br><a href="https://blog.csdn.net/songzitea/article/details/17319769"> 低层次 (基于像素之间的) 特征提取概述</a></p>
+<h4 id="2- 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像"><a href="#2- 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像" class="headerlink" title="2. 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像"></a>2. 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像 </h4><p> 把一种多通道图映射到另一个多通道图</p>
+<h3 id="七、实作 -canny- 边缘提取"><a href="# 七、实作 -canny- 边缘提取" class="headerlink" title="七、实作 - canny 边缘提取"></a>七、实作 - canny 边缘提取 </h3><h4 id="1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。"><a href="#1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。" class="headerlink" title="1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。"></a>1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。</h4><h4 id="2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"><a href="#2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。" class="headerlink" title="2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"></a>2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。</h4><h4 id="3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"><a href="#3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？" class="headerlink" title="3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"></a>3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？</h4><h4 id="4- 强化：如何基于提取的边缘图做风格化处理？"><a href="#4- 强化：如何基于提取的边缘图做风格化处理？" class="headerlink" title="4. 强化：如何基于提取的边缘图做风格化处理？"></a>4. 强化：如何基于提取的边缘图做风格化处理？</h4><h4 id="5- 课后拓展："><a href="#5- 课后拓展：" class="headerlink" title="5. 课后拓展："></a>5. 课后拓展：</h4><h5 id="1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"><a href="#1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）" class="headerlink" title="(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"></a>(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）</h5><p><a href="https://blog.csdn.net/SESESssss/article/details/106774854">【理解】经典角点检测算法 —Harris 角点</a><br><a href="https://zhuanlan.zhihu.com/p/90393907"> 角点检测 (2) - harris 算子 - 理论与 Python 代码 </a><br><a href="https://blog.csdn.net/m0_37170593/article/details/109094382">Gabor 滤波器原理</a><br>《phase congruency detects corners and edges》低层次 (基于像素之间的) 特征提取概述<br> 相位一致性是指在图像的频率域中，边缘相似的特征在同一阶段出现的频率较高 <br><img src="/2021/11/08/image-processing-5/photo5.jpg" alt><br><a href="https://blog.csdn.net/songzitea/article/details/17319769"> 低层次 (基于像素之间的) 特征提取概述</a></p>
 <h5 id="2- 图像平滑 -—- 双边滤波"><a href="#2- 图像平滑 -—- 双边滤波" class="headerlink" title="(2) 图像平滑 — 双边滤波"></a>(2) 图像平滑 — 双边滤波 </h5><p><a href="https://zhuanlan.zhihu.com/p/127023952">OpenCV 学习９：双边滤波 bilateralFilter</a><br><a href="https://blog.csdn.net/Jfuck/article/details/8932978"> 双边滤波（Bilateral Filter）详解</a></p>
 <p><a href="https://blog.csdn.net/Gentleman_Qin/article/details/107027894">传统基本图像处理方法：图像增强（灰度变换、直方图增强、空间域滤波、频率域滤波）、图像分割、图像配准等</a></p>
 ]]></content>
       <categories>
         <category>大学课程-图像处理与分析</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>slam-6</title>
+    <url>/2021/11/22/slam-6/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>slam 基础 --（4）特征检测和追踪</title>
+    <url>/2021/11/22/slam-4/</url>
+    <content><![CDATA[<h3 id="一、Reference-Frame- 参考坐标"><a href="# 一、Reference-Frame- 参考坐标" class="headerlink" title="一、Reference Frame 参考坐标"></a>一、Reference Frame 参考坐标 </h3><h4 id="1-Inertial-Frame"><a href="#1-Inertial-Frame" class="headerlink" title="1.Inertial Frame"></a>1.Inertial Frame</h4><p>(1) Earth-Centered Inertial frame (ECI)<br>(2) Earth-Centered and Earth-Fixed Inertial Frame<br>X 轴固定在地球表面随着地球转动而转动<br> 最常见的地球坐标系</p>
+<h4 id="2-Earth-Fixed-Frame- 局部地理坐标系 - 世界坐标系"><a href="#2-Earth-Fixed-Frame- 局部地理坐标系 - 世界坐标系" class="headerlink" title="2.Earth-Fixed Frame 局部地理坐标系 / 世界坐标系"></a>2.Earth-Fixed Frame 局部地理坐标系 / 世界坐标系 </h4><p> 原点在地球表面</p>
+<h4 id="3-Body-fixed-Frame-Body-Frame"><a href="#3-Body-fixed-Frame-Body-Frame" class="headerlink" title="3.Body-fixed Frame (Body Frame)"></a>3.Body-fixed Frame (Body Frame)</h4><p>坐标原点在机体上 <br> 坐标原点是自己定义的 ex：在图像传感器中心 <br> 最后算出来的姿态和定义的坐标系有关</p>
+<h3 id="二、Rigid-Transformation"><a href="# 二、Rigid-Transformation" class="headerlink" title="二、Rigid Transformation"></a>二、Rigid Transformation</h3><p>刚体变换 = 旋转变换 + 平移变换 $x^’=Rx+t$<br>刚体变换保长度、保角度 <br> 证明旋转矩阵都是正交矩阵，反之则否 <br><a href="https://blog.csdn.net/jhope/article/details/83067956?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-3&amp;spm=1001.2101.3001.4242.2"> 旋转矩阵 (Rotate Matrix) 的性质分析 </a><br><a href="https://www.zhihu.com/question/316200199"> 正交矩阵都是旋转矩阵吗？</a><br><img src="/2021/11/22/slam-4/photo1.jpg" alt="刚体变换和 t 是无关的，后面会讲到应用 (消失点投影)"></p>
+<h4 id="1-Pose-representation- 位姿"><a href="#1-Pose-representation- 位姿" class="headerlink" title="1.Pose representation 位姿"></a>1.Pose representation 位姿 </h4><p> 位姿可以用刚体变换描述</p>
+<h4 id="2-Body-to-world-transformation- 机器人用的比较多"><a href="#2-Body-to-world-transformation- 机器人用的比较多" class="headerlink" title="2.Body-to-world transformation (机器人用的比较多)"></a>2.Body-to-world transformation (机器人用的比较多)</h4><script type="math/tex; mode=display">
+x_w=
+\begin {matrix}
+    R_1 & R_2 & R_3 \\
+    R_4 & R_5 & R_6 \\
+    R_7 & R_8 & R_9 \\
+\end {matrix}
+x+t</script><p>旋转矩阵的第一 column 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Column vectors in $R$ are the directions of body axes in the world frame)<br>$t$ 代表体坐标系原点投影在世界坐标系的坐标</p>
+<h4 id="3-World-to-body-transformation- 计算机视觉用的比较多"><a href="#3-World-to-body-transformation- 计算机视觉用的比较多" class="headerlink" title="3.World-to-body transformation (计算机视觉用的比较多)"></a>3.World-to-body transformation (计算机视觉用的比较多)</h4><script type="math/tex; mode=display">
+x=
+\begin {matrix}
+    R_1 & R_2 & R_3 \\
+    R_4 & R_5 & R_6 \\
+    R_7 & R_8 & R_9 \\
+\end {matrix}
+x_w+t</script><p>旋转矩阵的第一 row 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Row vectors in $R$ are the directions of body axes in the world frame)<br>$x_w^0=-R^T t$</p>
+<h3 id="三、Projective-geometry"><a href="# 三、Projective-geometry" class="headerlink" title="三、Projective geometry"></a>三、Projective geometry</h3><h4 id="1-Homogenous-coordinates"><a href="#1-Homogenous-coordinates" class="headerlink" title="1.Homogenous coordinates"></a>1.Homogenous coordinates</h4><h4 id="2-2D-projective-geometry"><a href="#2-2D-projective-geometry" class="headerlink" title="2.2D projective geometry"></a>2.2D projective geometry</h4><h4 id="3-3D-projective-geometry"><a href="#3-3D-projective-geometry" class="headerlink" title="3.3D projective geometry"></a>3.3D projective geometry</h4>]]></content>
+      <categories>
+        <category>大学课程-slam</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>slam 基础 --（5）</title>
+    <url>/2021/11/22/slam-5/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>大学课程-slam</category>
       </categories>
   </entry>
 </search>
