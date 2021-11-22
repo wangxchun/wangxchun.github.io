@@ -33,7 +33,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://wangxchun.github.io/2021/11/22/slam-4/photo1.jpg">
 <meta property="article:published_time" content="2021-11-22T08:26:35.000Z">
-<meta property="article:modified_time" content="2021-11-22T10:10:57.808Z">
+<meta property="article:modified_time" content="2021-11-22T10:16:06.891Z">
 <meta property="article:author" content="Stephen Wang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wangxchun.github.io/2021/11/22/slam-4/photo1.jpg">
@@ -163,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81Reference-Frame-%20%E5%8F%82%E8%80%83%E5%9D%90%E6%A0%87"><span class="nav-text">一、Reference Frame 参考坐标 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Inertial-Frame"><span class="nav-text">1.Inertial Frame</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Earth-Fixed-Frame-%20%E5%B1%80%E9%83%A8%E5%9C%B0%E7%90%86%E5%9D%90%E6%A0%87%E7%B3%BB%20-%20%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-text">2.Earth-Fixed Frame 局部地理坐标系 &#x2F; 世界坐标系 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Body-fixed-Frame-Body-Frame"><span class="nav-text">3.Body-fixed Frame (Body Frame)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Rigid-Transformation"><span class="nav-text">二、Rigid Transformation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Pose-representation-%20%E4%BD%8D%E5%A7%BF"><span class="nav-text">1.Pose representation 位姿 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Body-to-world-transformation-%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%94%A8%E7%9A%84%E6%AF%94%E8%BE%83%E5%A4%9A"><span class="nav-text">2.Body-to-world transformation (机器人用的比较多)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-World-to-body-transformation-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%94%A8%E7%9A%84%E6%AF%94%E8%BE%83%E5%A4%9A"><span class="nav-text">3.World-to-body transformation (计算机视觉用的比较多)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81Projective-geometry"><span class="nav-text">三、Projective geometry</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Homogenous-coordinates"><span class="nav-text">1.Homogenous coordinates</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2D-projective-geometry"><span class="nav-text">2.2D projective geometry</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3D-projective-geometry"><span class="nav-text">3.3D projective geometry</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81Reference-Frame-%20%E5%8F%82%E8%80%83%E5%9D%90%E6%A0%87"><span class="nav-text">一、Reference Frame 参考坐标 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Inertial-Frame"><span class="nav-text">1.Inertial Frame</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Earth-Fixed-Frame-%20%E5%B1%80%E9%83%A8%E5%9C%B0%E7%90%86%E5%9D%90%E6%A0%87%E7%B3%BB%20-%20%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-text">2.Earth-Fixed Frame 局部地理坐标系 &#x2F; 世界坐标系 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Body-fixed-Frame-Body-Frame"><span class="nav-text">3.Body-fixed Frame (Body Frame)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Rigid-Transformation"><span class="nav-text">二、Rigid Transformation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Pose-representation-%20%E4%BD%8D%E5%A7%BF"><span class="nav-text">1.Pose representation 位姿 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Body-to-world-transformation-%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%94%A8%E7%9A%84%E6%AF%94%E8%BE%83%E5%A4%9A"><span class="nav-text">2.Body-to-world transformation (机器人用的比较多)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-World-to-body-transformation-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%94%A8%E7%9A%84%E6%AF%94%E8%BE%83%E5%A4%9A"><span class="nav-text">3.World-to-body transformation (计算机视觉用的比较多)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81Projective-geometry"><span class="nav-text">三、Projective geometry</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Homogenous-coordinates"><span class="nav-text">1.Homogenous coordinates</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2D-projective-geometry"><span class="nav-text">2.2D projective geometry</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3D-projective-geometry11"><span class="nav-text">3.3D projective geometry11</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -264,7 +264,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2021-11-22 16:26:35 / 修改時間：18:10:57" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:35+08:00">2021-11-22</time>
+      <time title="創建時間：2021-11-22 16:26:35 / 修改時間：18:16:06" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:35+08:00">2021-11-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,43 +291,11 @@
 <h4 id="3-Body-fixed-Frame-Body-Frame"><a href="#3-Body-fixed-Frame-Body-Frame" class="headerlink" title="3.Body-fixed Frame (Body Frame)"></a>3.Body-fixed Frame (Body Frame)</h4><p>坐标原点在机体上 <br> 坐标原点是自己定义的 ex: 在图像传感器中心 <br> 最后算出来的姿态和定义的坐标系有关</p>
 <h3 id="二、Rigid-Transformation"><a href="# 二、Rigid-Transformation" class="headerlink" title="二、Rigid Transformation"></a>二、Rigid Transformation</h3><p>刚体变换 = 旋转变换 + 平移变换 $x’=Rx+t$<br>刚体变换保长度、保角度 <br> 证明旋转矩阵都是正交矩阵，反之则否 <br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jhope/article/details/83067956?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-3&amp;spm=1001.2101.3001.4242.2"> 旋转矩阵 (Rotate Matrix) 的性质分析 </a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/316200199"> 正交矩阵都是旋转矩阵吗？</a><br><img src="/2021/11/22/slam-4/photo1.jpg" alt="刚体变换和 t 是无关的，后面会讲到应用 (消失点投影)"></p>
 <h4 id="1-Pose-representation- 位姿"><a href="#1-Pose-representation- 位姿" class="headerlink" title="1.Pose representation 位姿"></a>1.Pose representation 位姿 </h4><p> 位姿可以用刚体变换描述</p>
-<h4 id="2-Body-to-world-transformation- 机器人用的比较多"><a href="#2-Body-to-world-transformation- 机器人用的比较多" class="headerlink" title="2.Body-to-world transformation (机器人用的比较多)"></a>2.Body-to-world transformation (机器人用的比较多)</h4><script type="math/tex; mode=display">
-x_w=
-\begin {bmatrix}
-    R_1 & R_2 & R_3 \\\\
-    R_4 & R_5 & R_6 \\\\
-    R_7 & R_8 & R_9 \\\\
-\end {bmatrix}
-x+t</script><p>旋转矩阵的第一 column 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Column vectors in $R$ are the directions of body axes in the world frame)<br>$t$ 代表体坐标系原点投影在世界坐标系的坐标</p>
-<h4 id="3-World-to-body-transformation- 计算机视觉用的比较多"><a href="#3-World-to-body-transformation- 计算机视觉用的比较多" class="headerlink" title="3.World-to-body transformation (计算机视觉用的比较多)"></a>3.World-to-body transformation (计算机视觉用的比较多)</h4><script type="math/tex; mode=display">
-x=
-\begin {bmatrix}
-R_1 & R_2 & R_3 \\
-R_4 & R_5 & R_6 \\
-R_7 & R_8 & R_9 \\
-\end {bmatrix}
-x_w+t</script><p>旋转矩阵的第一 row 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Row vectors in $R$ are the directions of body axes in the world frame)<br>$x_w^0=-R^T t$</p>
-<h3 id="三、Projective-geometry"><a href="# 三、Projective-geometry" class="headerlink" title="三、Projective geometry"></a>三、Projective geometry</h3><h4 id="1-Homogenous-coordinates"><a href="#1-Homogenous-coordinates" class="headerlink" title="1.Homogenous coordinates"></a>1.Homogenous coordinates</h4><p>描述比较简洁 ex: 一个矩阵就可以描述刚体变换 <br> 可以描述笛卡尔坐标系无法描述的元素 ex: 无穷远的点 <br> 齐次坐标在《图形学》应用广泛</p>
-<script type="math/tex; mode=display">
-\begin {bmatrix}
-    x' \\
-    1 \\
-\end {matrix}
-~
-\begin {bmatrix}
-    R & t \\
-    0^T & 1 \\
-\end {matrix}
-
-\begin {bmatrix}
-    x \\
-    1 \\
-\end {bmatrix}</script><h4 id="2-2D-projective-geometry"><a href="#2-2D-projective-geometry" class="headerlink" title="2.2D projective geometry"></a>2.2D projective geometry</h4><h4 id="3-3D-projective-geometry"><a href="#3-3D-projective-geometry" class="headerlink" title="3.3D projective geometry"></a>3.3D projective geometry</h4><script type="math/tex; mode=display">
-\begin {matrix}
-1 & x & x^2 \\\\
-1 & y & y^2 \\\\
-1 & z & z^2 \\\\
-\end {matrix}</script>
+<h4 id="2-Body-to-world-transformation- 机器人用的比较多"><a href="#2-Body-to-world-transformation- 机器人用的比较多" class="headerlink" title="2.Body-to-world transformation (机器人用的比较多)"></a>2.Body-to-world transformation (机器人用的比较多)</h4><p>$<br>x_w=<br>\begin {bmatrix}<br>    R_1 &amp; R_2 &amp; R_3 \\<br>    R_4 &amp; R_5 &amp; R_6 \\<br>    R_7 &amp; R_8 &amp; R_9 \\<br>\end {bmatrix}<br>x+t<br>$<br>旋转矩阵的第一 column 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Column vectors in $R$ are the directions of body axes in the world frame)<br>$t$ 代表体坐标系原点投影在世界坐标系的坐标</p>
+<h4 id="3-World-to-body-transformation- 计算机视觉用的比较多"><a href="#3-World-to-body-transformation- 计算机视觉用的比较多" class="headerlink" title="3.World-to-body transformation (计算机视觉用的比较多)"></a>3.World-to-body transformation (计算机视觉用的比较多)</h4><p>$<br>x=<br>\begin {bmatrix}<br>R_1 &amp; R_2 &amp; R_3 \\<br>R_4 &amp; R_5 &amp; R_6 \\<br>R_7 &amp; R_8 &amp; R_9 \\<br>\end {bmatrix}<br>x_w+t<br>$<br>旋转矩阵的第一 row 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Row vectors in $R$ are the directions of body axes in the world frame)<br>$x_w^0=-R^T t$</p>
+<h3 id="三、Projective-geometry"><a href="# 三、Projective-geometry" class="headerlink" title="三、Projective geometry"></a>三、Projective geometry</h3><h4 id="1-Homogenous-coordinates"><a href="#1-Homogenous-coordinates" class="headerlink" title="1.Homogenous coordinates"></a>1.Homogenous coordinates</h4><p>描述比较简洁 ex: 一个矩阵就可以描述刚体变换 <br> 可以描述笛卡尔坐标系无法描述的元素 ex: 无穷远的点 <br> 齐次坐标在《图形学》应用广泛<br>$<br>\begin {bmatrix}<br>    x’ \\<br>    1 \\<br>\end {matrix}<br>~<br>\begin {bmatrix}<br>    R &amp; t \\<br>    0^T &amp; 1 \\<br>\end {matrix}</p>
+<p>\begin {bmatrix}<br>    x \\<br>    1 \\<br>\end {bmatrix}<br>$</p>
+<h4 id="2-2D-projective-geometry"><a href="#2-2D-projective-geometry" class="headerlink" title="2.2D projective geometry"></a>2.2D projective geometry</h4><h4 id="3-3D-projective-geometry11"><a href="#3-3D-projective-geometry11" class="headerlink" title="3.3D projective geometry11"></a>3.3D projective geometry11</h4>
     </div>
 
     
