@@ -393,10 +393,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-11-22 16:26:35 / 修改時間：19:15:50" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:35+08:00">2021-11-22</time>
+      <time title="創建時間：2021-11-22 16:26:35" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:35+08:00">2021-11-22</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-25 12:56:22" itemprop="dateModified" datetime="2021-11-25T12:56:22+08:00">2021-11-25</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -428,7 +434,7 @@
 <p>$<br>\left [\begin {matrix}<br>    x’ \\<br>    1 \\<br>\end {matrix}\right] \sim<br>\left [\begin {matrix}<br>    R &amp; t \\<br>    0^T &amp; 1 \\<br>\end {matrix}\right]<br>\left [\begin {matrix}<br>    x \\<br>    1 \\<br>\end {matrix}\right]<br>$</p>
 <h4 id="2-2D-projective-geometry- 之坐标表示"><a href="#2-2D-projective-geometry- 之坐标表示" class="headerlink" title="2.2D projective geometry 之坐标表示"></a>2.2D projective geometry 之坐标表示 </h4><p> 点的表达 <br> 线的表达 <br> 两线交点 <br> 两个点连成一条线 <br> 无穷远点 <br> 无穷远线</p>
 <h4 id="3-2D-projective-geometry- 之 -homography-matrix- 实现点的变换"><a href="#3-2D-projective-geometry- 之 -homography-matrix- 实现点的变换" class="headerlink" title="3.2D projective geometry 之 homography matrix (实现点的变换)"></a>3.2D projective geometry 之 homography matrix (实现点的变换)</h4><p><img src="/2021/11/22/slam-4/photo3.jpg" alt><br><img src="/2021/11/22/slam-4/photo4.jpg" alt><br><img src="/2021/11/22/slam-4/photo5.jpg" alt><br><img src="/2021/11/22/slam-4/photo6.jpg" alt></p>
-<p><img src="/2021/11/22/slam-4/photo7.jpg" alt="单应矩阵的应用：实现图像校正"><br>step1: 找出两幅图像之间的单应矩阵 <br>step2: 逐行扫描图像二中的像素，透过单应矩阵找出与之对应在图像一中的像素<br> 利用该像素的值对图像一的像素进行着色，如果对应过去是亚像素则进行插值<br>Q: 线条的变换？</p>
+<p><img src="/2021/11/22/slam-4/photo8.jpg" alt><br><img src="/2021/11/22/slam-4/photo9.jpg" alt><br><img src="/2021/11/22/slam-4/photo7.jpg" alt="单应矩阵的应用：实现图像校正"><br>step1: 找出两幅图像之间的单应矩阵 <br>step2: 逐行扫描图像二中的像素，透过单应矩阵找出与之对应在图像一中的像素<br> 利用该像素的值对图像一的像素进行着色，如果对应过去是亚像素则进行插值<br>Q: 线条的变换？<br><img src="/2021/11/22/slam-4/photo10.jpg" alt></p>
 <h4 id="4-3D-projective-geometry11"><a href="#4-3D-projective-geometry11" class="headerlink" title="4.3D projective geometry11"></a>4.3D projective geometry11</h4>
       
     </div>
