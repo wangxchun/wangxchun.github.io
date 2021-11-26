@@ -310,7 +310,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/22/slam-5/" class="post-title-link" itemprop="url">slam 基础 --（5）</a>
+          <a href="/2021/11/22/slam-5/" class="post-title-link" itemprop="url">slam 基础 --（5）3D Rotation</a>
         </h2>
 
         <div class="post-meta-container">
@@ -320,10 +320,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-11-22 16:26:41 / 修改時間：17:06:07" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:41+08:00">2021-11-22</time>
+      <time title="創建時間：2021-11-22 16:26:41" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:41+08:00">2021-11-22</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-26 12:36:54" itemprop="dateModified" datetime="2021-11-26T12:36:54+08:00">2021-11-26</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -344,7 +350,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <p>问题：例如梯度下降法更新参数，如果参数是旋转量，怎么更新这个参数？</p>
+<h3 id="一、Parameter-update"><a href="# 一、Parameter-update" class="headerlink" title="一、Parameter update"></a>一、Parameter update</h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、Rotation-matrix"><a href="# 二、Rotation-matrix" class="headerlink" title="二、Rotation matrix"></a>二、Rotation matrix</h3><h4 id="1- 旋转矩阵是属于 -SO-n- 群"><a href="#1- 旋转矩阵是属于 -SO-n- 群" class="headerlink" title="1. 旋转矩阵是属于 $SO (n)$ 群"></a>1. 旋转矩阵是属于 $SO (n)$ 群</h4><p>Special Orthogonal group SO (n) is a set that satisfies:<br>$SO (n)={\mathbf {M} \in \mathbb {R}|\mathbf {M}\mathbf {M}^T=\mathbf {I},det (\mathbf {M})=1}$<br>▪ A 3x3 rotation matrix is in the SO (3) group<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/liyuanbhu/article/details/51474533">MathJax 支持的 Latex 符号总结（各种数学字体）</a></p>
+<h4 id="2- 什么是群"><a href="#2- 什么是群" class="headerlink" title="2. 什么是群"></a>2. 什么是群 </h4><h4 id="3-1"><a href="#3-1" class="headerlink" title="3."></a>3.</h4><h3 id="三、Lie-group-SO-3-Lie-algebra-so-3"><a href="# 三、Lie-group-SO-3-Lie-algebra-so-3" class="headerlink" title="三、Lie group SO (3) / Lie algebra so (3)"></a> 三、Lie group SO (3) / Lie algebra so (3)</h3><h4 id="1-1"><a href="#1-1" class="headerlink" title="1."></a>1.</h4><h4 id="2-1"><a href="#2-1" class="headerlink" title="2."></a>2.</h4><h4 id="3-2"><a href="#3-2" class="headerlink" title="3."></a>3.</h4><h3 id="四、Euler-angles"><a href="# 四、Euler-angles" class="headerlink" title="四、Euler angles"></a>四、Euler angles</h3><h4 id="1-2"><a href="#1-2" class="headerlink" title="1."></a>1.</h4><h4 id="2-2"><a href="#2-2" class="headerlink" title="2."></a>2.</h4><h4 id="3-3"><a href="#3-3" class="headerlink" title="3."></a>3.</h4><h3 id="五、Quaternion"><a href="# 五、Quaternion" class="headerlink" title="五、Quaternion"></a>五、Quaternion</h3><h4 id="1-3"><a href="#1-3" class="headerlink" title="1."></a>1.</h4><h4 id="2-3"><a href="#2-3" class="headerlink" title="2."></a>2.</h4><h4 id="3-4"><a href="#3-4" class="headerlink" title="3."></a>3.</h4>
       
     </div>
 
@@ -401,7 +409,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-26 12:03:48" itemprop="dateModified" datetime="2021-11-26T12:03:48+08:00">2021-11-26</time>
+        <time title="修改時間：2021-11-26 12:20:15" itemprop="dateModified" datetime="2021-11-26T12:20:15+08:00">2021-11-26</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -432,10 +440,10 @@
 <h4 id="3-World-to-body-transformation- 计算机视觉用的比较多"><a href="#3-World-to-body-transformation- 计算机视觉用的比较多" class="headerlink" title="3.World-to-body transformation (计算机视觉用的比较多)"></a>3.World-to-body transformation (计算机视觉用的比较多)</h4><p>$<br>x=<br>\begin {bmatrix}<br>R_1 &amp; R_2 &amp; R_3 \\<br>R_4 &amp; R_5 &amp; R_6 \\<br>R_7 &amp; R_8 &amp; R_9 \\<br>\end {bmatrix}<br>x_w+t<br>$<br>旋转矩阵的第一 row 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Row vectors in $R$ are the directions of body axes in the world frame)<br>$x_w^0=-R^T t$</p>
 <h3 id="三、Projective-geometry"><a href="# 三、Projective-geometry" class="headerlink" title="三、Projective geometry"></a>三、Projective geometry</h3><h4 id="1-Homogenous-coordinates"><a href="#1-Homogenous-coordinates" class="headerlink" title="1.Homogenous coordinates"></a>1.Homogenous coordinates</h4><p>描述比较简洁 ex: 一个矩阵就可以描述刚体变换 <br> 可以描述笛卡尔坐标系无法描述的元素 ex: 无穷远的点 <br> 齐次坐标在《图形学》应用广泛</p>
 <p>$<br>\left [\begin {matrix}<br>    x’ \\<br>    1 \\<br>\end {matrix}\right] \sim<br>\left [\begin {matrix}<br>    R &amp; t \\<br>    0^T &amp; 1 \\<br>\end {matrix}\right]<br>\left [\begin {matrix}<br>    x \\<br>    1 \\<br>\end {matrix}\right]<br>$</p>
-<h4 id="2-2D-projective-geometry- 之坐标表示"><a href="#2-2D-projective-geometry- 之坐标表示" class="headerlink" title="2.2D projective geometry 之坐标表示"></a>2.2D projective geometry 之坐标表示 </h4><p> 点的表达：$\mathbf {x}=(x,y,1)^T$<br>线的表达 $ax+by+c$：$\mathbf {l}=(a,b,c)^T$<br>两线交点：两条线叉乘 <br> 两个点连成一条线：兩个点叉乘 <br> 无穷远点：两个平行线交点 <br> 无穷远线</p>
-<h4 id="3-2D-projective-geometry- 之 -homography-matrix- 实现点的变换"><a href="#3-2D-projective-geometry- 之 -homography-matrix- 实现点的变换" class="headerlink" title="3.2D projective geometry 之 homography matrix (实现点的变换)"></a>3.2D projective geometry 之 homography matrix (实现点的变换)</h4><p><img src="/2021/11/22/slam-4/photo3.jpg" alt><br><img src="/2021/11/22/slam-4/photo4.jpg" alt><br><img src="/2021/11/22/slam-4/photo5.jpg" alt><br><img src="/2021/11/22/slam-4/photo6.jpg" alt></p>
+<h4 id="2-2D-projective-geometry- 之坐标表示"><a href="#2-2D-projective-geometry- 之坐标表示" class="headerlink" title="2.2D projective geometry 之坐标表示"></a>2.2D projective geometry 之坐标表示 </h4><p> 在二维空间中点和线是对偶关系 <br> 点的表达：$\mathbf {x}=(x,y,1)^T$<br>线的表达 $ax+by+c$：$\mathbf {l}=(a,b,c)^T$<br>两线交点：两条线叉乘 <br> 两个点连成一条线：兩个点叉乘 <br> 无穷远点：两个平行线交点 <br> 无穷远线</p>
+<h4 id="3-2D-projective-geometry- 之 -homography-matrix- 实现点的变换"><a href="#3-2D-projective-geometry- 之 -homography-matrix- 实现点的变换" class="headerlink" title="3.2D projective geometry 之 homography matrix (实现点的变换)"></a>3.2D projective geometry 之 homography matrix (实现点的变换)</h4><p><img src="/2021/11/22/slam-4/photo3.jpg" alt><br><img src="/2021/11/22/slam-4/photo4.jpg" alt><br><img src="/2021/11/22/slam-4/photo5.jpg" alt><br>(1) 刚体变换：保长度，保角度 <br> 刚性变换：只由平移变换和旋转变换组成。<br>(2) 相似变换：保比例 <br>(3) 仿射变换主要包括平移变换、旋转变换、缩放变换、错切变换、翻转变换，有六个自由度。<br> 仿射变换保持二维图形的 “平直性” 和 “平行性”，但是角度会改变。<br>“平直性”：变换后直线还是直线、圆弧还是圆弧。<br>“平行性”：平行线还是平行线，直线上点的位置顺序不变。<br>(4) 射影变换 (投影变换)<br>射影变换：是最一般的线性变换。有 8 个自由度。<br>射影变换保持重合关系和交比不变。但不会保持平行性。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/Homography/article/details/105986226">交比不变 (顺便学习射影几何)</a><br><a target="_blank" rel="noopener" href="https://lyingheart6174.pixnet.net/blog/post/5122408">[射影幾何] 交比 (Cross Ratio)</a><br><img src="/2021/11/22/slam-4/photo6.jpg" alt></p>
 <p><img src="/2021/11/22/slam-4/photo8.jpg" alt="单应矩阵有八个自由度，需要二维空间的四个点对来求解"><br><img src="/2021/11/22/slam-4/photo9.jpg" alt="单应矩阵求解"><br><img src="/2021/11/22/slam-4/photo7.jpg" alt="单应矩阵的应用：实现图像校正"><br>step1: 找出两幅图像之间的单应矩阵 <br>step2: 逐行扫描图像二中的像素，透过单应矩阵找出与之对应在图像一中的像素<br> 利用该像素的值对图像一的像素进行着色，如果对应过去是亚像素则进行插值<br>Q: 线条的变换？<br><img src="/2021/11/22/slam-4/photo10.jpg" alt></p>
-<h4 id="4-3D-projective-geometry11"><a href="#4-3D-projective-geometry11" class="headerlink" title="4.3D projective geometry11"></a>4.3D projective geometry11</h4><p><img src="/2021/11/22/slam-4/photo11.jpg" alt><br>(1) 三维点的表示：<br>(2) 三维平面的表示：<br>(3) 三个点形成一平面：<br>(4) 三个平面确定一个交点：<br>(5) 三维平面的变换：</p>
+<h4 id="4-3D-projective-geometry11"><a href="#4-3D-projective-geometry11" class="headerlink" title="4.3D projective geometry11"></a>4.3D projective geometry11</h4><p>在三维空间中点和面是对偶关系<br><img src="/2021/11/22/slam-4/photo11.jpg" alt><br>(1) 三维点的表示：<br>(2) 三维平面的表示：<br>(3) 三个点形成一平面：<br>(4) 三个平面确定一个交点：<br>(5) 三维平面的变换：</p>
 
       
     </div>
