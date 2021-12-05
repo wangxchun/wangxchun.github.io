@@ -174,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">208</span>
+          <span class="site-state-item-count">209</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -224,6 +224,101 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/29/hexo%20pdf-file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/29/hexo%20pdf-file/" class="post-title-link" itemprop="url">如何在 hexo 文章中插入 pdf 文件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-04-29 17:12:00" itemprop="dateCreated datePublished" datetime="2021-04-29T17:12:00+08:00">2021-04-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-04-30 15:11:34" itemprop="dateModified" datetime="2021-04-30T15:11:34+08:00">2021-04-30</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="利用 -html- 语法"><a href="# 利用 -html- 语法" class="headerlink" title="利用 html 语法"></a>利用 html 语法 </h3><p> 首先修改_config.yml 文件</p>
+<p>将_config.yml 中的 post_asset_folder 选项置为 true</p>
+<p>post_asset_folder: true</p>
+<p>关于这个选项的功能说明如下:</p>
+<p>当您设置 post_asset_folder 为 true 参数后，在建立文件时，Hexo 会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹，如此一来，您便可以更方便的使用资源。</p>
+<p>然后新建一篇文章</p>
+<p>$ hexo new</p>
+<p>由于上一步已经将 post_asset_folder 选项设为了 true 所以这一步新建文章时会创建一个 md 文件和一个同名的文件夹 为了方便叙述，我用 test 作为文件和文件夹名</p>
+<p>编辑 test.md</p>
+<p>用 vim 或者别的编辑器打开 test.md</p>
+<p>test.md 文件中加入如下代码</p>
+<p><object data="./test/test.pdf" type="application/pdf" width="100%" height="100%"><br>data 表示你要上传的 pdf 的路径，使用相对路径，将你要上传的 pdf 放入第二步生成的 test 文件夹。<br>这里注意 height 不能设成 100%，不然太矮了，显示效果不好 可以用浏览器预览，通过 F12 预估一下高度。</object></p>
+<p>例如：</p>
+<object data="./test/test.pdf" type="application/pdf" width="100%" height="877px">
+
+<p>这里不一定非用 object 标签，embed、iframe 标签也一样</p>
+</object>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -987,93 +1082,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/17/5G-3-6-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/17/5G-3-6-2/" class="post-title-link" itemprop="url">5G（三）5G 关键技术 -- 6.Massive MIMO 补充</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-04-17 20:39:35" itemprop="dateCreated datePublished" datetime="2021-04-17T20:39:35+08:00">2021-04-17</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 14:42:58" itemprop="dateModified" datetime="2021-07-01T14:42:58+08:00">2021-07-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/5G/" itemprop="url" rel="index"><span itemprop="name">5G</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="一、MIMO-的来龙去脉"><a href="#一、MIMO-的来龙去脉" class="headerlink" title="一、MIMO 的来龙去脉"></a>一、MIMO 的来龙去脉</h3><h4 id="1-MIMO-的思路"><a href="#1-MIMO-的思路" class="headerlink" title="1.MIMO 的思路"></a>1.MIMO 的思路</h4><p>无线通信的技术进步动力有很大一部分是不断提高空口速率（例如：手机上传和下载的网速）。<br>提高网速的一条路径是增加带宽，从 2G 的 0.2MHz 增加到 5G 的 100MHz。<br>载波聚合 CA 技术也是一种变相增加带宽的技术（例如：4G 3CC 聚合，相当于 60M 带宽）。<br><img src="/2021/04/17/5G-3-6-2/photo1.jpg" alt><br>增加带宽的效果相当于：一个人徒手搬砖 -&gt; 一个人骑一台自行车搬砖，是让一个人搬砖的能力增加。<br>MIMO 的思路：找多个人来搬砖。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/17/5G-3-6-2/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
@@ -1156,38 +1164,7 @@ if (document.querySelectorAll('.pdf-container').length) {
 
 
 
-  <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'none'
-      },
-      options: {
-        renderActions: {
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              const target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
-    script.defer = true;
-    document.head.appendChild(script);
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.typesetClear();
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
+  
 
 
 </body>
