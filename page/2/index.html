@@ -259,6 +259,13 @@
 
       <time title="創建時間：2021-11-28 16:12:50" itemprop="dateCreated datePublished" datetime="2021-11-28T16:12:50+08:00">2021-11-28</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-12-05 18:36:01" itemprop="dateModified" datetime="2021-12-05T18:36:01+08:00">2021-12-05</time>
+      </span>
 
   
 </div>
@@ -567,7 +574,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-12-05 18:35:15" itemprop="dateModified" datetime="2021-12-05T18:35:15+08:00">2021-12-05</time>
+        <time title="修改時間：2021-12-05 18:37:58" itemprop="dateModified" datetime="2021-12-05T18:37:58+08:00">2021-12-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -624,9 +631,15 @@ d. 采用线性插值的方法估计边缘的位置
 <h3 id="五、中值滤波与同态滤波"><a href="# 五、中值滤波与同态滤波" class="headerlink" title="五、中值滤波与同态滤波"></a>五、中值滤波与同态滤波 </h3><h4 id="1- 中值滤波"><a href="#1- 中值滤波" class="headerlink" title="1. 中值滤波"></a>1. 中值滤波</h4><h4 id="2- 同态滤波"><a href="#2- 同态滤波" class="headerlink" title="2. 同态滤波"></a>2. 同态滤波</h4><h3 id="六、色彩增强"><a href="# 六、色彩增强" class="headerlink" title="六、色彩增强"></a> 六、色彩增强 </h3><p><img src="/2021/11/08/image-processing-5/photo4.jpg" alt><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/baishuiniyaonulia/article/details/98970461"> 图像增强 — 彩色增强技术 </a><br> 人的肉眼可分辨的灰度级在十几到二十几之间，却能区分几千种不同色度、不同亮度的色彩。可以说人眼对彩色的分辨力可以达到灰度分辨力的百倍以上。</p>
 <h4 id="1- 伪色彩增强：把灰度图像处理成伪彩色图像"><a href="#1- 伪色彩增强：把灰度图像处理成伪彩色图像" class="headerlink" title="1. 伪色彩增强：把灰度图像处理成伪彩色图像"></a>1. 伪色彩增强：把灰度图像处理成伪彩色图像</h4><p>(1) 空域增强<br>(2) 頻域增强</p>
 <h4 id="2- 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像"><a href="#2- 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像" class="headerlink" title="2. 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像"></a>2. 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像 </h4><p> 把一种多通道图映射到另一个多通道图</p>
-<h3 id="七、实作 -canny- 边缘提取"><a href="# 七、实作 -canny- 边缘提取" class="headerlink" title="七、实作 - canny 边缘提取"></a>七、实作 - canny 边缘提取 </h3><h4 id="1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。"><a href="#1- 选取一张彩色照片 - 图片，利用 -C、C＋＋或者 -MATLAB- 对其进行 -Canny- 边缘提取，并进行简要分析。" class="headerlink" title="1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。"></a>1. 选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。</h4><h4 id="2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"><a href="#2- 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。" class="headerlink" title="2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。"></a>2. 试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。</h4><h4 id="3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"><a href="#3- 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？" class="headerlink" title="3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？"></a>3. 思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？</h4><h4 id="4- 强化：如何基于提取的边缘图做风格化处理？"><a href="#4- 强化：如何基于提取的边缘图做风格化处理？" class="headerlink" title="4. 强化：如何基于提取的边缘图做风格化处理？"></a>4. 强化：如何基于提取的边缘图做风格化处理？</h4><h4 id="5- 课后拓展："><a href="#5- 课后拓展：" class="headerlink" title="5. 课后拓展："></a>5. 课后拓展：</h4><h5 id="1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"><a href="#1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）" class="headerlink" title="(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"></a>(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）</h5><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/SESESssss/article/details/106774854">【理解】经典角点检测算法 —Harris 角点</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/90393907"> 角点检测 (2) - harris 算子 - 理论与 Python 代码 </a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37170593/article/details/109094382">Gabor 滤波器原理</a><br>《phase congruency detects corners and edges》低层次 (基于像素之间的) 特征提取概述<br> 相位一致性是指在图像的频率域中，边缘相似的特征在同一阶段出现的频率较高 <br><img src="/2021/11/08/image-processing-5/photo5.jpg" alt><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/songzitea/article/details/17319769"> 低层次 (基于像素之间的) 特征提取概述</a></p>
+<h3 id="七、实作 -canny- 边缘提取"><a href="# 七、实作 -canny- 边缘提取" class="headerlink" title="七、实作 - canny 边缘提取"></a>七、实作 - canny 边缘提取</h3><ol>
+<li>选取一张彩色照片 / 图片，利用 C、C＋＋或者 MATLAB 对其进行 Canny 边缘提取，并进行简要分析。</li>
+<li>试着改变阈值或者根据图像内容自适应选取阈值，分析不同阈值条件下获得的边缘图像。</li>
+<li>思考：如果仅存在彩色边缘，不存在灰度变化的边缘，如何处理？</li>
+<li>强化：如何基于提取的边缘图做风格化处理？</li>
+</ol>
+<h3 id="八、课后拓展："><a href="# 八、课后拓展：" class="headerlink" title="八、课后拓展："></a>八、课后拓展：</h3><h5 id="1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"><a href="#1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）" class="headerlink" title="(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"></a>(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）</h5><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/SESESssss/article/details/106774854">【理解】经典角点检测算法 —Harris 角点 </a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/90393907"> 角点检测 (2) - harris 算子 - 理论与 Python 代码 </a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37170593/article/details/109094382">Gabor 滤波器原理</a><br>《phase congruency detects corners and edges》低层次 (基于像素之间的) 特征提取概述<br> 相位一致性是指在图像的频率域中，边缘相似的特征在同一阶段出现的频率较高 <br><img src="/2021/11/08/image-processing-5/photo5.jpg" alt><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/songzitea/article/details/17319769"> 低层次 (基于像素之间的) 特征提取概述</a></p>
 <h5 id="2- 图像平滑 -—- 双边滤波"><a href="#2- 图像平滑 -—- 双边滤波" class="headerlink" title="(2) 图像平滑 — 双边滤波"></a>(2) 图像平滑 — 双边滤波 </h5><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/127023952">OpenCV 学习９：双边滤波 bilateralFilter</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/Jfuck/article/details/8932978"> 双边滤波（Bilateral Filter）详解</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Gentleman_Qin/article/details/107027894">传统基本图像处理方法：图像增强（灰度变换、直方图增强、空间域滤波、频率域滤波）、图像分割、图像配准等</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Gentleman_Qin/article/details/107027894">传统基本图像处理方法：图像增强、图像分割、图像配准等</a></p>
 
       
     </div>
