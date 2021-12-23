@@ -4469,15 +4469,14 @@ IP：DC Comics（漫畫部門）
   <entry>
     <title>图像处理与分析 --（5）图像增强变换</title>
     <url>/2021/11/08/image-processing-5/</url>
-    <content><![CDATA[<span id="more"></span>
-<p>增强处理的方法：大致可分为三大类</p>
+    <content><![CDATA[<p>增强处理的方法：大致可分为三大类</p>
 <ol>
 <li>点变换：只与本身像素点的值有关，做灰度值变换，与空间邻点值无关。</li>
 <li>空间域处理：往往作邻域加权和处理 <br> ・需考虑邻域大小、形状 <br> ・点变换可看作处理窗为 1×1 的空间域处理</li>
 <li>频域处理</li>
 </ol>
 <h3 id="一、灰度变换"><a href="# 一、灰度变换" class="headerlink" title="一、灰度变换"></a>一、灰度变换 </h3><h4 id="1- 直方图"><a href="#1- 直方图" class="headerlink" title="1. 直方图"></a>1. 直方图</h4><p> 最常用的像素统计特性描述方式<br><img src="/2021/11/08/image-processing-5/photo1.png" alt></p>
-<h4 id="2- 灰度增强"><a href="#2- 灰度增强" class="headerlink" title="2. 灰度增强"></a>2. 灰度增强 </h4><p> 灰度增强就是按照一定变换方式逐点地改变原来图像中每个像素的灰度值 $r’=T (t)$。<br>通过改变像素灰度值获得直方图形状的改变。<br>(1) 灰度线性变换 <br>(2) 灰度非线性变换<br> 离散图像</p>
+<h4 id="2- 灰度增强"><a href="#2- 灰度增强" class="headerlink" title="2. 灰度增强"></a>2. 灰度增强 </h4><p> 灰度增强就是按照一定变换方式逐点地改变原来图像中每个像素的灰度值 $r’=T (t)$。<br>通过改变像素灰度值获得直方图形状的改变。<br>(1) 灰度线性变换 <br>(2) 灰度非线性变换<br> 离散图像 <span id="more"></span></p>
 <h3 id="二、空间域滤波 -—- 空间域图像锐化"><a href="# 二、空间域滤波 -—- 空间域图像锐化" class="headerlink" title="二、空间域滤波 — 空间域图像锐化"></a>二、空间域滤波 — 空间域图像锐化 </h3><h4 id="1- 边缘检测"><a href="#1- 边缘检测" class="headerlink" title="1. 边缘检测"></a>1. 边缘检测</h4><p> 图像中的边缘一般分为两种：屋脊型边缘和阶跃型边缘。<br>在实际应用中，一般只考虑阶跃边缘，<br>因为只要采样足够或者说窗口足够小，屋脊型边缘也可以看做是阶跃边缘。<br>对于阶跃边缘可以使用一阶导数的极值来判断边缘。<br>对于阶跃边缘还可以使用二阶导数的过零点 (zero-acrossing) 判定。<br><img src="/2021/11/08/image-processing-5/photo2.png" alt><br><a href="https://www.cnblogs.com/YiXiaoZhou/p/5891645.html">斑点检测 (LoG,DoG) [上] 之边缘检测回顾</a></p>
 <h4 id="2-laplace- 算子"><a href="#2-laplace- 算子" class="headerlink" title="2.laplace 算子"></a>2.laplace 算子 </h4><h4 id="3-roberts- 算子"><a href="#3-roberts- 算子" class="headerlink" title="3.roberts 算子"></a>3.roberts 算子</h4><p> 对角线</p>
 <h4 id="4-sobel- 算子"><a href="#4-sobel- 算子" class="headerlink" title="4.sobel 算子"></a>4.sobel 算子 </h4><p> 各向同性 sobel 算子：考虑邻居点的权重（斜对角比较远，权重比较小）</p>
@@ -4501,7 +4500,7 @@ d. 采用线性插值的方法估计边缘的位置
 <h3 id="三、空间域滤波 -—- 空间域图像平滑"><a href="# 三、空间域滤波 -—- 空间域图像平滑" class="headerlink" title="三、空间域滤波 — 空间域图像平滑"></a>三、空间域滤波 — 空间域图像平滑 </h3><h4 id="1- 线性滤波器 - 均值滤波器"><a href="#1- 线性滤波器 - 均值滤波器" class="headerlink" title="1. 线性滤波器 (均值滤波器)"></a>1. 线性滤波器 (均值滤波器)</h4><p>(1) 邻域平均法<br>(2) 带门限的邻域平均法<br> 在 $f$ 和 $f_$ 差别小于门限 T 的时候<br>(3) 半邻域平均法</p>
 <h4 id="2- 非线性滤波器"><a href="#2- 非线性滤波器" class="headerlink" title="2. 非线性滤波器"></a>2. 非线性滤波器</h4><p>(1) 中值滤波<br>(2) 众值滤波</p>
 <h3 id="四、频域滤波"><a href="# 四、频域滤波" class="headerlink" title="四、频域滤波"></a>四、频域滤波</h3><p><a href="https://blog.csdn.net/zhoufan900428/article/details/17194289">[数字图像处理] 频域滤波 (1)— 基础与低通滤波器</a><br><a href="https://blog.csdn.net/zhoufan900428/article/details/17201293">[数字图像处理] 频域滤波 (2)— 高通滤波器，带阻滤波器与陷波滤波器</a></p>
-<h3 id="五、中值滤波与同态滤波"><a href="# 五、中值滤波与同态滤波" class="headerlink" title="五、中值滤波与同态滤波"></a>五、中值滤波与同态滤波 </h3><h4 id="1- 中值滤波"><a href="#1- 中值滤波" class="headerlink" title="1. 中值滤波"></a>1. 中值滤波</h4><h4 id="2- 同态滤波"><a href="#2- 同态滤波" class="headerlink" title="2. 同态滤波"></a>2. 同态滤波</h4><h3 id="六、色彩增强"><a href="# 六、色彩增强" class="headerlink" title="六、色彩增强"></a> 六、色彩增强 </h3><p><img src="/2021/11/08/image-processing-5/photo4.jpg" alt><br><a href="https://blog.csdn.net/baishuiniyaonulia/article/details/98970461"> 图像增强 — 彩色增强技术 </a><br> 人的肉眼可分辨的灰度级在十几到二十几之间，却能区分几千种不同色度、不同亮度的色彩。可以说人眼对彩色的分辨力可以达到灰度分辨力的百倍以上。</p>
+<h3 id="五、中值滤波与同态滤波"><a href="# 五、中值滤波与同态滤波" class="headerlink" title="五、中值滤波与同态滤波"></a>五、中值滤波与同态滤波 </h3><h4 id="1- 中值滤波"><a href="#1- 中值滤波" class="headerlink" title="1. 中值滤波"></a>1. 中值滤波</h4><h4 id="2- 同态滤波"><a href="#2- 同态滤波" class="headerlink" title="2. 同态滤波"></a>2. 同态滤波</h4><h3 id="六、色彩增强"><a href="# 六、色彩增强" class="headerlink" title="六、色彩增强"></a> 六、色彩增强 </h3><p><a href="https://blog.csdn.net/baishuiniyaonulia/article/details/98970461"> 图像增强 — 彩色增强技术 </a><br> 人的肉眼可分辨的灰度级在十几到二十几之间，却能区分几千种不同色度、不同亮度的色彩。可以说人眼对彩色的分辨力可以达到灰度分辨力的百倍以上。</p>
 <h4 id="1- 伪色彩增强：把灰度图像处理成伪彩色图像"><a href="#1- 伪色彩增强：把灰度图像处理成伪彩色图像" class="headerlink" title="1. 伪色彩增强：把灰度图像处理成伪彩色图像"></a>1. 伪色彩增强：把灰度图像处理成伪彩色图像</h4><p>(1) 空域增强<br>(2) 頻域增强</p>
 <h4 id="2- 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像"><a href="#2- 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像" class="headerlink" title="2. 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像"></a>2. 假色彩增强：把自然彩色图像或遥感多光谱图像处理成假彩色图像 </h4><p> 把一种多通道图映射到另一个多通道图</p>
 <h3 id="七、实作 -canny- 边缘提取"><a href="# 七、实作 -canny- 边缘提取" class="headerlink" title="七、实作 - canny 边缘提取"></a>七、实作 - canny 边缘提取</h3><ol>
@@ -4511,7 +4510,7 @@ d. 采用线性插值的方法估计边缘的位置
 <li>强化：如何基于提取的边缘图做风格化处理？</li>
 </ol>
 <h3 id="八、课后拓展："><a href="# 八、课后拓展：" class="headerlink" title="八、课后拓展："></a>八、课后拓展：</h3><h5 id="1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"><a href="#1- 图像锐化 -—- 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）" class="headerlink" title="(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）"></a>(1) 图像锐化 — 基于相位一致性的边缘检测（好处：无量纲、多尺度、去噪）</h5><p><a href="https://blog.csdn.net/SESESssss/article/details/106774854">【理解】经典角点检测算法 —Harris 角点 </a><br><a href="https://zhuanlan.zhihu.com/p/90393907"> 角点检测 (2) - harris 算子 - 理论与 Python 代码 </a><br><a href="https://blog.csdn.net/m0_37170593/article/details/109094382">Gabor 滤波器原理</a><br>《phase congruency detects corners and edges》低层次 (基于像素之间的) 特征提取概述<br> 相位一致性是指在图像的频率域中，边缘相似的特征在同一阶段出现的频率较高 <br><img src="/2021/11/08/image-processing-5/photo5.jpg" alt><br><a href="https://blog.csdn.net/songzitea/article/details/17319769"> 低层次 (基于像素之间的) 特征提取概述</a></p>
-<h5 id="2- 图像平滑 -—- 双边滤波"><a href="#2- 图像平滑 -—- 双边滤波" class="headerlink" title="(2) 图像平滑 — 双边滤波"></a>(2) 图像平滑 — 双边滤波 </h5><p><a href="https://zhuanlan.zhihu.com/p/127023952">OpenCV 学习９：双边滤波 bilateralFilter</a><br><a href="https://blog.csdn.net/Jfuck/article/details/8932978"> 双边滤波（Bilateral Filter）详解</a></p>
+<h5 id="2- 图像平滑 -—- 双边滤波"><a href="#2- 图像平滑 -—- 双边滤波" class="headerlink" title="(2) 图像平滑 — 双边滤波"></a>(2) 图像平滑 — 双边滤波 </h5><p><img src="/2021/11/08/image-processing-5/photo4.jpg" alt><br><a href="https://zhuanlan.zhihu.com/p/127023952">OpenCV 学习９：双边滤波 bilateralFilter</a><br><a href="https://blog.csdn.net/Jfuck/article/details/8932978"> 双边滤波（Bilateral Filter）详解</a></p>
 <p><a href="https://blog.csdn.net/Gentleman_Qin/article/details/107027894">传统基本图像处理方法：图像增强、图像分割、图像配准等</a></p>
 ]]></content>
       <categories>
@@ -4561,5 +4560,32 @@ d. 采用线性插值的方法估计边缘的位置
     <title>slam-7</title>
     <url>/2021/11/28/slam-7/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>图像处理与分析 -- 期末大作业</title>
+    <url>/2021/12/23/image-processing-final/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="一、参考文章"><a href="# 一、参考文章" class="headerlink" title="一、参考文章"></a>一、参考文章</h3><h4 id="1- 方法发想"><a href="#1- 方法发想" class="headerlink" title="1. 方法发想"></a>1. 方法发想</h4><p>(1) 掩膜进行位运算<br>(2) 使用 grabcut<br>(3) 边缘提取<br>(4) 轮廓检测 + 填充法<br>(5) 使用 HSV 颜色空间颜色区域提取的方法，提取出前景或者背景<br><a href="https://blog.csdn.net/weixin_42272768/article/details/110677696">Python 提取前景 - 单一颜色背景</a><br><a href="https://blog.csdn.net/septwolves2015/article/details/97896681?utm_medium=distribute.pc_relevant.none-task-blog-baidulandingword-6&amp;spm=1001.2101.3001.4242">python-opencv 边缘清洗法提取图片轮廓和前景内容</a></p>
+<h4 id="2- 掩膜进行位运算"><a href="#2- 掩膜进行位运算" class="headerlink" title="2. 掩膜进行位运算"></a>2. 掩膜进行位运算</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 读取图像</span></span><br><span class="line">img_src = cv2.imread (<span class="string">&quot;test.png&quot;</span>)</span><br><span class="line">img_gray = cv2.cvtColor (img_src, cv2.COLOR_BGR2GRAY)</span><br><span class="line"><span class="comment"># 灰度处理</span></span><br><span class="line">ret, img_bin = cv2.threshold (img_gray, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line">contours, hierarchy = cv2.findContours (img_bin, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)</span><br><span class="line"><span class="comment"># 制作掩膜</span></span><br><span class="line">img_mask = np.zeros (img_src.shape, np.uint8)</span><br><span class="line">cv2.drawContours (img_mask, contours, -<span class="number">1</span>, (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), -<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 位与运算</span></span><br><span class="line">img_result = cv2.bitwise_and (img_src, img_mask)</span><br></pre></td></tr></table></figure>
+<h5 id="1-cv2-threshold- 函数"><a href="#1-cv2-threshold- 函数" class="headerlink" title="(1) cv2.threshold () 函数"></a>(1) cv2.threshold () 函数</h5><p>ret, dst = cv2.threshold (src, thresh, maxval, type)<br>ret: True 或 False，代表有没有读到图片<br>dst: 目标图像<br>src 是灰度图像<br>thresh 是起始阈值<br>maxval 是最大值<br>type 是定义如何处理数据与阈值的关系<br><img src="/2021/12/23/image-processing-final/photo1.png" alt><br><a href="https://blog.csdn.net/u012566751/article/details/77046445">threshold 函数的使用</a><br><a href="https://blog.csdn.net/weixin_42272768/article/details/110746790">CV2 简单阈值函数：cv2.threshold ()</a><br><a href="https://blog.csdn.net/on2way/article/details/46812121">Python 下 opencv 使用笔记（四）（图像的阈值处理）</a></p>
+<h5 id="2-cv2-adaptivthreshold- 函数"><a href="#2-cv2-adaptivthreshold- 函数" class="headerlink" title="(2) cv2.adaptivthreshold () 函数"></a>(2) cv2.adaptivthreshold () 函数</h5><h5 id="3-cv2-findContours- 函数"><a href="#3-cv2-findContours- 函数" class="headerlink" title="(3) cv2.findContours () 函数"></a>(3) cv2.findContours () 函数</h5><p><a href="https://blog.csdn.net/u011028345/article/details/75396329">OpenCV 之颜色空间转换：cvtColor () 函数</a><br><a href="https://blog.csdn.net/keith_bb/article/details/53470170">opencv 学习（十六）之颜色空间转换 cvtColor ()</a><br><a href="https://blog.csdn.net/hjxu2016/article/details/77833336">python-opencv2 利用 cv2.findContours () 函数来查找检测物体的轮廓</a><br>void cvtColor (InputArray src, OutputArray dst, int code, int dstCn=0)<br>OpenCV2 的 CV_前缀的宏命名规范，被 OpenCV3 中 COLOR_式的宏命名前缀所取代，另外，需要提醒的是 OpenCV 默认的图片通道存储顺序是 BGR, 而不是 RGB</p>
+<h4 id="4-cv2-drawContours- 函数"><a href="#4-cv2-drawContours- 函数" class="headerlink" title="(4) cv2.drawContours () 函数"></a>(4) cv2.drawContours () 函数 </h4><p>cv2.drawContours (img_mask, contours, -1, (255, 255, 255), -1)<br> 其中第一个参数 image 表示目标图像，<br>第二个参数 contours 表示输入的轮廓组，每一组轮廓由点 vector 构成，<br>第三个参数 contourIdx 指明画第几个轮廓，如果该参数为负值，则画全部轮廓，<br>第四个参数 color 为轮廓的颜色，<br>第五个参数 thickness 为轮廓的线宽，如果为负值或 CV_FILLED 表示填充轮廓内部，</p>
+<h4 id="5- 小知识点"><a href="#5- 小知识点" class="headerlink" title="(5) 小知识点"></a>(5) 小知识点</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">&#x27;one two one two one&#x27;</span></span><br><span class="line"><span class="built_in">print</span> (s.replace (<span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;-&#x27;</span>))</span><br><span class="line"><span class="comment"># one-two-one-two-one</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/u013019701/article/details/104056898">在 Python 中的常见的几种字符串替换操作</a></p>
+<p><a href="https://blog.csdn.net/weixin_41770169/article/details/80565326">numpy 库数组属性查看：类型、尺寸、形状、维度</a><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a1 = np.array ([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],dtype=np.complex128) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot; 数组的维度数目 &quot;</span>,a1.ndim) </span><br></pre></td></tr></table></figure></p>
+<h4 id="3-matlab"><a href="#3-matlab" class="headerlink" title="3.matlab"></a>3.matlab</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>大学课程-图像处理与分析</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>slam 基础 -- 期末作业</title>
+    <url>/2021/12/11/slam-final-hw/</url>
+    <content><![CDATA[<h3 id="前期知识："><a href="# 前期知识：" class="headerlink" title="前期知识："></a>前期知识：</h3><h4 id="1- 复习深度学习基础知识"><a href="#1- 复习深度学习基础知识" class="headerlink" title="1. 复习深度学习基础知识"></a>1. 复习深度学习基础知识 </h4><p>(1) 【神经网络】 卷基层和池化层输出大小计算公式（长、宽、深度）<br> 先定义几个参数 <br> 输入图片大小 $W×W$<br>Filter 大小 $F×F$<br>步长 $S$<br>padding 的像素数 $P$<br>于是我们可以得出 <br>$N = (W − F + 2P)/S+1$<br> 输出图片大小为 $N×N$</p>
+<h4 id="2-VGG"><a href="#2-VGG" class="headerlink" title="2.VGG"></a>2.VGG</h4><p>(深度学习之路四 ——vgg16 的学习)[<a href="https://www.jianshu.com/p/2728610a6130">https://www.jianshu.com/p/2728610a6130</a>]<br>(4.1 VGG 网络详解及感受野的计算)[<a href="https://www.bilibili.com/video/BV1q7411T7Y6?from=search&amp;seid=14261498746433466254&amp;spm_id_from=333.337.0.0">https://www.bilibili.com/video/BV1q7411T7Y6?from=search&amp;seid=14261498746433466254&amp;spm_id_from=333.337.0.0</a>]</p>
+]]></content>
+      <categories>
+        <category>大学课程-slam</category>
+      </categories>
   </entry>
 </search>
