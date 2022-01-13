@@ -174,14 +174,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">211</span>
+          <span class="site-state-item-count">215</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -224,6 +224,360 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/image-processing-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/image-processing-5/" class="post-title-link" itemprop="url">图像处理与分析 --（5）图像增强变换</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 17:59:33" itemprop="dateCreated datePublished" datetime="2021-11-08T17:59:33+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-12-23 15:46:27" itemprop="dateModified" datetime="2021-12-23T15:46:27+08:00">2021-12-23</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">大学课程-图像处理与分析</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>增强处理的方法：大致可分为三大类</p>
+<ol>
+<li>点变换：只与本身像素点的值有关，做灰度值变换，与空间邻点值无关。</li>
+<li>空间域处理：往往作邻域加权和处理<br>・需考虑邻域大小、形状<br>・点变换可看作处理窗为 1×1 的空间域处理</li>
+<li>频域处理</li>
+</ol>
+<h3 id="一、灰度变换"><a href="#一、灰度变换" class="headerlink" title="一、灰度变换"></a>一、灰度变换</h3><h4 id="1-直方图"><a href="#1-直方图" class="headerlink" title="1. 直方图"></a>1. 直方图</h4><p>最常用的像素统计特性描述方式<br><img src="/2021/11/08/image-processing-5/photo1.png" alt></p>
+<h4 id="2-灰度增强"><a href="#2-灰度增强" class="headerlink" title="2. 灰度增强"></a>2. 灰度增强</h4><p>灰度增强就是按照一定变换方式逐点地改变原来图像中每个像素的灰度值 $r’=T (t)$。<br>通过改变像素灰度值获得直方图形状的改变。<br>(1) 灰度线性变换<br>(2) 灰度非线性变换<br>离散图像</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/08/image-processing-5/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/image-processing-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/image-processing-4/" class="post-title-link" itemprop="url">图像处理与分析 --（4）视觉系统 / 彩色图像表示 / 图像质量评估</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 17:59:23" itemprop="dateCreated datePublished" datetime="2021-11-08T17:59:23+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-11 23:29:40" itemprop="dateModified" datetime="2021-11-11T23:29:40+08:00">2021-11-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">大学课程-图像处理与分析</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <span id="more"></span>
+<h3 id="一、视觉系统"><a href="# 一、视觉系统" class="headerlink" title="一、视觉系统"></a>一、视觉系统 </h3><h4 id="1- 色彩是一种光的视觉效应"><a href="#1- 色彩是一种光的视觉效应" class="headerlink" title="1. 色彩是一种光的视觉效应"></a>1. 色彩是一种光的视觉效应</h4><p> 这句话蕴含了两层含义，首先，色彩依赖于场景发射或者反射的可见光，但这还不够，还需要经过人的视觉系统处理过后，才能得到可见光对应的视觉效应。注意，这种对应并不是一一映射。</p>
+<h4 id="2- 视杆 -rod- 细胞和视锥 -cone- 细胞"><a href="#2- 视杆 -rod- 细胞和视锥 -cone- 细胞" class="headerlink" title="2. 视杆 (rod) 细胞和视锥 (cone) 细胞"></a>2. 视杆 (rod) 细胞和视锥 (cone) 细胞 </h4><p> 在眼睛中用于感受光的细胞有两种，视杆（rod）细胞和视锥（cone）细胞，其中视杆细胞不区分光线波长，主要在低光时起作用（猫咪的视杆细胞就超级多，所以它们暗光视觉很棒），分布在视网膜中心凹的边缘。而视锥细胞则对波长敏感，按照敏感波长为三种：长、中、短，分布在视网膜的中间。</p>
+<p>无穷维的 SPD 在三维上 (三种不同的视锥细胞) 的投影，就是我们所能感受到的色彩空间，这也解释了为什么我们在表示色彩时总是会取三个参数。</p>
+<h4 id="3- 格拉斯曼定律 -Grassmann’s-law"><a href="#3- 格拉斯曼定律 -Grassmann’s-law" class="headerlink" title="3. 格拉斯曼定律 (Grassmann’s law)"></a>3. 格拉斯曼定律 (Grassmann’s law)</h4><p>人眼看到的色彩具有很强的线性加和性质。</p>
+<h4 id="4- 闪烁混合测试 -Flicker-Fusion-Test"><a href="#4- 闪烁混合测试 -Flicker-Fusion-Test" class="headerlink" title="4. 闪烁混合测试 (Flicker Fusion Test)"></a>4. 闪烁混合测试 (Flicker Fusion Test)</h4><p>其目的是得到人对不同波长光的感受亮度，得到不同波长下的敏感度分布曲线。<br>这条曲线又被称为光度函数 (luminosity function)，记作 y-bar ($\lambda$) 或者 V ($\lambda$)<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/157463063"></a></p>
+<h4 id="5- 色彩匹配实验 -Metameric-Matches"><a href="#5- 色彩匹配实验 -Metameric-Matches" class="headerlink" title="5. 色彩匹配实验 (Metameric Matches)"></a>5. 色彩匹配实验 (Metameric Matches)</h4><p>目的是量化所有的可见颜色。<br>测试单色光 vs 可调整的光。<br>可调整的光是三种单色光的混合，他们波长固定（700 nm, 546 nm, 435 nm）强度可调节，并称这三个波长为原色。 选择 546.1 nm 和 435.8 nm 的原色是因为它们是汞蒸气放电的颜色，容易复现，而选择 700 nm 是因为眼睛在 700 nm 处对光线的变化不敏感，波长的误差对感知的影响不大。<br><img src="/2021/11/08/image-processing-4/photo1.png" alt="CIE RGB 颜色匹配函数"><br><img src="/2021/11/08/image-processing-4/photo2.png" alt="CIE XYZ 颜色匹配函数"><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/157463063">相机图像处理 1 色彩与色彩空间</a></p>
+<h4 id="6-HSI- 顏色模型 -HSI〔Hue-Saturation-Intensity-Lightness-HSI- 或 -HSL〕"><a href="#6-HSI- 顏色模型 -HSI〔Hue-Saturation-Intensity-Lightness-HSI- 或 -HSL〕" class="headerlink" title="6.HSI 顏色模型 HSI〔Hue-Saturation-Intensity (Lightness),HSI 或 HSL〕"></a>6.HSI 顏色模型 HSI〔Hue-Saturation-Intensity (Lightness),HSI 或 HSL〕</h4><h4 id="7-YUV- 坐标系"><a href="#7-YUV- 坐标系" class="headerlink" title="7.YUV 坐标系"></a>7.YUV 坐标系</h4><p>$Y$: 亮度<br>$C_b,C_r$：色差<br>(R-Y),(B-Y),(G-Y) 可从中选取两个。但由于对大多数彩色来说，(G-Y) 比 (R-Y),(B-Y) 数值还小，选择 (G-Y) 对改善信号比不利。通常选用 (R-Y) 和 (B-Y) 两个色差信号来代表色度信息。</p>
+<h3 id="二、图像质量评估"><a href="# 二、图像质量评估" class="headerlink" title="二、图像质量评估"></a>二、图像质量评估 </h3><h4 id="1- 图像质量"><a href="#1- 图像质量" class="headerlink" title="1. 图像质量"></a>1. 图像质量</h4><p>(1) 平均亮度<br>(2) 对比度<br> 一幅图像中灰度反差的大小。对比度 = 最大亮度 / 最小亮度。<br>(3) 清晰度 <br> 应用：用传统方法做超分辨率图像<br>(4) 分辨度</p>
+<h4 id="2- 客观评价指标"><a href="#2- 客观评价指标" class="headerlink" title="2. 客观评价指标"></a>2. 客观评价指标</h4><p>PSNR (Peak Signal to Noise Ratio)：峰值信噪比<br>$\displaystyle PSNR=10log_{10} \frac {MaxValue^2}{MSE}$</p>
+<p>$\displaystyle =10log_{10} \frac {(2^{bits}-1)^2}{\frac {1}{MN} \sum_{i=0}^{M-1} \sum_{i=0}^{N-1}{[f (m,n)-g (m,n)]}}$</p>
+<p>MSE (Mean squared error)：均方误差 <br>SSIM (Structural Similarity)：强调结构相似性<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/edogawachia/article/details/78756680"> 图像质量评估指标 SSIM / PSNR / MSE</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54539091">视频 / 图像质量评价综述 (一)</a></p>
+<h4 id="3- 主观评价指标"><a href="#3- 主观评价指标" class="headerlink" title="3. 主观评价指标"></a>3. 主观评价指标</h4><p>MOS (mean opinion score)</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/image-processing-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/image-processing-3/" class="post-title-link" itemprop="url">图像处理与分析 --（3）图像代数变换和几何变换</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 17:59:18" itemprop="dateCreated datePublished" datetime="2021-11-08T17:59:18+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-11 16:01:51" itemprop="dateModified" datetime="2021-11-11T16:01:51+08:00">2021-11-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">大学课程-图像处理与分析</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <span id="more"></span>
+<h3 id="一、"><a href="# 一、" class="headerlink" title="一、"></a> 一、</h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、"><a href="# 二、" class="headerlink" title="二、"></a> 二、</h3><h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a> 三、</h3><h3 id="四、"><a href="# 四、" class="headerlink" title="四、"></a> 四、</h3><h3 id="五、"><a href="# 五、" class="headerlink" title="五、"></a> 五、</h3><p> 代数变换应用：</p>
+<ol>
+<li> 提取前景物体（帧差法、背景差分法、GMM、Vibe、稀疏表示）<br> 几何变换应用：</li>
+<li> 图像拼接（立体图特征点匹配、要有 overlap、SIFT 不受尺度和旋转的变化、特征点可以看成一个向量、求解单应矩阵）</li>
+<li> 虚拟视生成 </li>
+<li> 图像变形 </li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/image-processing-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/image-processing-2/" class="post-title-link" itemprop="url">图像处理与分析 --（2）数字图像处理基础</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 17:59:05" itemprop="dateCreated datePublished" datetime="2021-11-08T17:59:05+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-11 23:29:38" itemprop="dateModified" datetime="2021-11-11T23:29:38+08:00">2021-11-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">大学课程-图像处理与分析</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <span id="more"></span>
+<h3 id="一、成像原理"><a href="# 一、成像原理" class="headerlink" title="一、成像原理"></a>一、成像原理 </h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、采样与量化"><a href="# 二、采样与量化" class="headerlink" title="二、采样与量化"></a> 二、采样与量化 </h3><h3 id="三、人眼视觉特性"><a href="# 三、人眼视觉特性" class="headerlink" title="三、人眼视觉特性"></a> 三、人眼视觉特性 </h3><h4 id="1- 光度学基本原理"><a href="#1- 光度学基本原理" class="headerlink" title="1. 光度学基本原理"></a>1. 光度学基本原理</h4><p> 人眼对 380～780 纳米内不同波长的光具有不同的敏感程度，称为人眼的视敏特性。  衡量描述人眼视敏特性的物理量为视敏函数和相对视敏函数。<br>(1) 视敏函数 在相同亮度感觉的条件下，不同波长上光辐射功率的倒数可以用来衡量人眼对各波长光明亮感觉的敏感程度，称为视敏函数。<br>$K (\lambda)={1 \over p_r (\lambda)}$<br>(2) 相对视敏函数 实验表明，人眼对波长为 555 纳米的光最敏感，因此把任意波长的光的视敏函数与最大视敏函数值 K (555) 相比的比值称为相对视敏函数。<br>$V (\lambda)={K (\lambda) \over k_max}={K (\lambda) \over K (555)}={P_r (555) \over P_r (\lambda)}$<br><a target="_blank" rel="noopener" href="http://www.360doc.com/content/13/1218/09/153944_338062866.shtml">人眼视觉特性</a></p>
+<h4 id="2- 人眼视觉特性"><a href="#2- 人眼视觉特性" class="headerlink" title="2. 人眼视觉特性"></a>2. 人眼视觉特性 </h4><h4 id="3- 人眼视觉模型"><a href="#3- 人眼视觉模型" class="headerlink" title="3. 人眼视觉模型"></a>3. 人眼视觉模型</h4><h4 id="4- 彩色图像的表示"><a href="#4- 彩色图像的表示" class="headerlink" title="4. 彩色图像的表示"></a>4. 彩色图像的表示</h4><h3 id="四、"><a href="# 四、" class="headerlink" title="四、"></a> 四、</h3><h3 id="五、"><a href="# 五、" class="headerlink" title="五、"></a>五、</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -701,388 +1055,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/04/slam-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/04/slam-1/" class="post-title-link" itemprop="url">slam-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-11-04 17:36:15" itemprop="dateCreated datePublished" datetime="2021-11-04T17:36:15+08:00">2021-11-04</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-08 17:57:11" itemprop="dateModified" datetime="2021-11-08T17:57:11+08:00">2021-11-08</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-slam/" itemprop="url" rel="index"><span itemprop="name">大学课程-slam</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/10/27/robomaster-3-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/10/27/robomaster-3-1/" class="post-title-link" itemprop="url">robomaster 视觉 (1) 概述</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-10-27 17:37:35" itemprop="dateCreated datePublished" datetime="2021-10-27T17:37:35+08:00">2021-10-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-11 11:24:07" itemprop="dateModified" datetime="2021-11-11T11:24:07+08:00">2021-11-11</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E6%AF%94%E8%B5%9B-robomaster/" itemprop="url" rel="index"><span itemprop="name">大学比赛-robomaster</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>机器人的视野中出现视觉标签的时候，机器人的云台会迅速瞄准视觉标签的中心同时发射弹丸<br>当视觉标签在视野中移动的时候，云台会跟着移动</p>
-<h3 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h3><h4 id="1-各个兵种需的功能和需要的视觉算法"><a href="#1-各个兵种需的功能和需要的视觉算法" class="headerlink" title="1. 各个兵种需的功能和需要的视觉算法"></a>1. 各个兵种需的功能和需要的视觉算法</h4><h4 id="2-计算平台的选择"><a href="#2-计算平台的选择" class="headerlink" title="2. 计算平台的选择"></a>2. 计算平台的选择</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>名字</th>
-<th>说明</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>NUC</td>
-<td>英特尔推出的移动便携式计算平台</td>
-<td>CPU 强劲，但是 GPU 比较弱，同时 nuc 体积较小</td>
-</tr>
-<tr>
-<td>minipc</td>
-<td>继承 NUC 的传统，但是体积更加小，同时更轻便</td>
-<td>CPU 继承 NUC，GPU 根据每个厂商的情况，结构一般为定制盒装的，成本比偏高</td>
-</tr>
-<tr>
-<td>工控机</td>
-<td>这种一般为实验室使用的低成本高效益的计算平台，一般用于工厂之类的</td>
-<td>CPU 可能要略差于 NUC 和 minipc，但是够用，体积英特尔系列中最小的也是最轻的，同时散热性出众，成本较低</td>
-</tr>
-<tr>
-<td>Jetson TX2</td>
-<td>英伟达推出的计算平台，主要应用于人工智能与图像处理等方面</td>
-<td>在同等价格上，CPU 比较弱。GPU 强劲，体格较小，安装在机器人时需要自己定制外壳，成本较高</td>
-</tr>
-<tr>
-<td>妙算</td>
-<td>DJI 所推出的机载计算机，主要应用在无人机上面</td>
-<td>机载计算集群，CPU 较弱，GPU 较强（继承了 Jetson TX2 的性能），同性能上，成本是最高的（6999￥不打折的话）</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/whl970831/article/details/103152735?utm_medium=distribute.pc_relevant.none-task-blog-title-2&amp;spm=1001.2101.3001.4242">Robomaster 计算平台的选型与感想（主流几款）</a><br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/10/27/robomaster-3-1/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/10/27/robomaster-2-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/10/27/robomaster-2-1/" class="post-title-link" itemprop="url">robomaster 电控 (2) 常见模块</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-10-27 17:37:21" itemprop="dateCreated datePublished" datetime="2021-10-27T17:37:21+08:00">2021-10-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-11 11:24:14" itemprop="dateModified" datetime="2021-11-11T11:24:14+08:00">2021-11-11</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E6%AF%94%E8%B5%9B-robomaster/" itemprop="url" rel="index"><span itemprop="name">大学比赛-robomaster</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="一、PID-控制器"><a href="#一、PID-控制器" class="headerlink" title="一、PID 控制器"></a>一、PID 控制器</h3><h4 id="1-开环控制系统-无反馈-和闭环控制系统-有反馈"><a href="#1-开环控制系统-无反馈-和闭环控制系统-有反馈" class="headerlink" title="1. 开环控制系统 (无反馈) 和闭环控制系统 (有反馈)"></a>1. 开环控制系统 (无反馈) 和闭环控制系统 (有反馈)</h4><h3 id="二、挨打反击"><a href="#二、挨打反击" class="headerlink" title="二、挨打反击"></a>二、挨打反击</h3><h4 id="1-什么是挨打反击"><a href="#1-什么是挨打反击" class="headerlink" title="1. 什么是挨打反击"></a>1. 什么是挨打反击</h4><p>当机器人的装甲板收到攻击后，机器人能够迅速转向受攻击侧<br>并持续转动底盘向目标发起反击</p>
-<h4 id="2-装甲板的分布位置和工作原理（位于地盘的-4-个和位于云台的两个）"><a href="#2-装甲板的分布位置和工作原理（位于地盘的-4-个和位于云台的两个）" class="headerlink" title="2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）"></a>2. 装甲板的分布位置和工作原理（位于地盘的 4 个和位于云台的两个）</h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/10/27/robomaster-2-1/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/10/27/robomaster-1-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/10/27/robomaster-1-1/" class="post-title-link" itemprop="url">robomaster 机械 (1) 兵种机器人介绍</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-10-27 17:37:06" itemprop="dateCreated datePublished" datetime="2021-10-27T17:37:06+08:00">2021-10-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-11 11:25:54" itemprop="dateModified" datetime="2021-11-11T11:25:54+08:00">2021-11-11</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E6%AF%94%E8%B5%9B-robomaster/" itemprop="url" rel="index"><span itemprop="name">大学比赛-robomaster</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>【一句话规则】在 5 种机器人的配合下，发射弹丸互怼，7 分钟内率先摧毁敌方基地就胜利<br><img src="/2021/10/27/robomaster-1-1/photo1.jpg" alt="2019 赛季比赛场地"></p>
-<h3 id="一、步兵机器人"><a href="#一、步兵机器人" class="headerlink" title="一、步兵机器人"></a>一、步兵机器人</h3><p><img src="/2021/10/27/robomaster-1-1/photo2.png" alt="2019 赛季比赛场地"></p>
-<h4 id="1-主要功能"><a href="#1-主要功能" class="headerlink" title="1. 主要功能"></a>1. 主要功能</h4><p>步兵机器人灵活小巧，一般负责游走偷家、围殴敌方机器人。<br>主要组成：发射结构 、云台 架 、车架 、 轮组系统 、 外壳。<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/10/27/robomaster-1-1/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
@@ -1118,7 +1090,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
