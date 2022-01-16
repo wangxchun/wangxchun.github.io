@@ -174,14 +174,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">218</span>
+          <span class="site-state-item-count">222</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -224,6 +224,334 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/image-processing-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/image-processing-2/" class="post-title-link" itemprop="url">图像处理与分析 --（2）数字图像处理基础</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 17:59:05" itemprop="dateCreated datePublished" datetime="2021-11-08T17:59:05+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-11 23:29:38" itemprop="dateModified" datetime="2021-11-11T23:29:38+08:00">2021-11-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">大学课程-图像处理与分析</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <span id="more"></span>
+<h3 id="一、成像原理"><a href="# 一、成像原理" class="headerlink" title="一、成像原理"></a>一、成像原理 </h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、采样与量化"><a href="# 二、采样与量化" class="headerlink" title="二、采样与量化"></a> 二、采样与量化 </h3><h3 id="三、人眼视觉特性"><a href="# 三、人眼视觉特性" class="headerlink" title="三、人眼视觉特性"></a> 三、人眼视觉特性 </h3><h4 id="1- 光度学基本原理"><a href="#1- 光度学基本原理" class="headerlink" title="1. 光度学基本原理"></a>1. 光度学基本原理</h4><p> 人眼对 380～780 纳米内不同波长的光具有不同的敏感程度，称为人眼的视敏特性。  衡量描述人眼视敏特性的物理量为视敏函数和相对视敏函数。<br>(1) 视敏函数 在相同亮度感觉的条件下，不同波长上光辐射功率的倒数可以用来衡量人眼对各波长光明亮感觉的敏感程度，称为视敏函数。<br>$K (\lambda)={1 \over p_r (\lambda)}$<br>(2) 相对视敏函数 实验表明，人眼对波长为 555 纳米的光最敏感，因此把任意波长的光的视敏函数与最大视敏函数值 K (555) 相比的比值称为相对视敏函数。<br>$V (\lambda)={K (\lambda) \over k_max}={K (\lambda) \over K (555)}={P_r (555) \over P_r (\lambda)}$<br><a target="_blank" rel="noopener" href="http://www.360doc.com/content/13/1218/09/153944_338062866.shtml">人眼视觉特性</a></p>
+<h4 id="2- 人眼视觉特性"><a href="#2- 人眼视觉特性" class="headerlink" title="2. 人眼视觉特性"></a>2. 人眼视觉特性 </h4><h4 id="3- 人眼视觉模型"><a href="#3- 人眼视觉模型" class="headerlink" title="3. 人眼视觉模型"></a>3. 人眼视觉模型</h4><h4 id="4- 彩色图像的表示"><a href="#4- 彩色图像的表示" class="headerlink" title="4. 彩色图像的表示"></a>4. 彩色图像的表示</h4><h3 id="四、"><a href="# 四、" class="headerlink" title="四、"></a> 四、</h3><h3 id="五、"><a href="# 五、" class="headerlink" title="五、"></a>五、</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/image-processing-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/image-processing-1/" class="post-title-link" itemprop="url">图像处理与分析 --（1）绪论</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 17:59:00" itemprop="dateCreated datePublished" datetime="2021-11-08T17:59:00+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-11 16:01:53" itemprop="dateModified" datetime="2021-11-11T16:01:53+08:00">2021-11-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">大学课程-图像处理与分析</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <span id="more"></span>
+<h3 id="一、"><a href="# 一、" class="headerlink" title="一、"></a> 一、</h3><h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h3 id="二、"><a href="# 二、" class="headerlink" title="二、"></a> 二、</h3><h3 id="三、"><a href="# 三、" class="headerlink" title="三、"></a> 三、</h3><h3 id="四、"><a href="# 四、" class="headerlink" title="四、"></a> 四、</h3><h3 id="五、"><a href="# 五、" class="headerlink" title="五、"></a> 五、</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/slam-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/slam-3/" class="post-title-link" itemprop="url">slam 基础 --（3）特征检测和追踪</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 14:59:30" itemprop="dateCreated datePublished" datetime="2021-11-08T14:59:30+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-11 11:48:53" itemprop="dateModified" datetime="2021-11-11T11:48:53+08:00">2021-11-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-slam/" itemprop="url" rel="index"><span itemprop="name">大学课程-slam</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、特征点"><a href="# 一、特征点" class="headerlink" title="一、特征点"></a>一、特征点 </h3><h4 id="1- 好的特征点：稳定、可识别、精确"><a href="#1- 好的特征点：稳定、可识别、精确" class="headerlink" title="1. 好的特征点：稳定、可识别、精确"></a>1. 好的特征点：稳定、可识别、精确</h4><h4 id="2- 特征检测和描述"><a href="#2- 特征检测和描述" class="headerlink" title="2. 特征检测和描述"></a>2. 特征检测和描述</h4><h4 id="3- 特征匹配和追踪"><a href="#3- 特征匹配和追踪" class="headerlink" title="3. 特征匹配和追踪"></a>3. 特征匹配和追踪</h4><h3 id="二、光流算法"><a href="# 二、光流算法" class="headerlink" title="二、光流算法"></a> 二、光流算法 </h3><h3 id="三、FAST-Corner-detector"><a href="# 三、FAST-Corner-detector" class="headerlink" title="三、FAST (Corner detector)"></a> 三、FAST (Corner detector)</h3><h3 id="四、LoG-DoG-MSER-Blob-detector"><a href="# 四、LoG-DoG-MSER-Blob-detector" class="headerlink" title="四、LoG/DoG/MSER (Blob detector)"></a>四、LoG/DoG/MSER (Blob detector)</h3><h3 id="五、BRIEF-ORB-BRISK-FREAK-fast-descriptor"><a href="# 五、BRIEF-ORB-BRISK-FREAK-fast-descriptor" class="headerlink" title="五、BRIEF/ORB/BRISK/FREAK (fast descriptor)"></a>五、BRIEF/ORB/BRISK/FREAK (fast descriptor)</h3><h3 id="六、SIFT-SURF-HOG-slow-descriptor"><a href="# 六、SIFT-SURF-HOG-slow-descriptor" class="headerlink" title="六、SIFT/SURF/HOG (slow descriptor)"></a>六、SIFT/SURF/HOG (slow descriptor)</h3><h3 id="七、Learning-based-features"><a href="# 七、Learning-based-features" class="headerlink" title="七、Learning-based features"></a>七、Learning-based features</h3><h3 id="八、Other-features"><a href="# 八、Other-features" class="headerlink" title="八、Other features"></a>八、Other features</h3><h3 id="九、"><a href="# 九、" class="headerlink" title="九、"></a>九、</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/slam-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/slam-2/" class="post-title-link" itemprop="url">slam 基础 --（2）基本图像处理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 14:59:22" itemprop="dateCreated datePublished" datetime="2021-11-08T14:59:22+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-11 11:26:12" itemprop="dateModified" datetime="2021-11-11T11:26:12+08:00">2021-11-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-slam/" itemprop="url" rel="index"><span itemprop="name">大学课程-slam</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、图像传感器"><a href="#一、图像传感器" class="headerlink" title="一、图像传感器"></a>一、图像传感器</h3><h4 id="1-CMOS-和-CCD"><a href="#1-CMOS-和-CCD" class="headerlink" title="1.CMOS 和 CCD"></a>1.CMOS 和 CCD</h4><h4 id="1-CMOS"><a href="#1-CMOS" class="headerlink" title="(1) CMOS"></a>(1) CMOS</h4><p>每个像素里的光电二极管遇到光时，就会因为光电效应累计一定数量的电荷，将光信号转为电信号<br>CMOS 每个像素均包含放大器和 AD 转换电路，额外的电路使得像素的可感光面积变小，感光度低<br>每个像素也会因为电路干扰产生固定的噪声信号</p>
+<h5 id="2-CCD"><a href="#2-CCD" class="headerlink" title="(2) CCD"></a>(2) CCD</h5><p>在像素上增加电压，透过电荷耦合，将像素点中的电荷逐级转移到相同输出端，<br>最后逐个输出电压信号，通过 A/D 转换变为数字信号<br>CCD 需要比较高的电压，增加功耗</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/08/slam-2/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -747,326 +1075,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/10/27/robomaster-1-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/10/27/robomaster-1-1/" class="post-title-link" itemprop="url">robomaster 机械 (1) 兵种机器人介绍</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-10-27 17:37:06" itemprop="dateCreated datePublished" datetime="2021-10-27T17:37:06+08:00">2021-10-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-11 11:25:54" itemprop="dateModified" datetime="2021-11-11T11:25:54+08:00">2021-11-11</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E6%AF%94%E8%B5%9B-robomaster/" itemprop="url" rel="index"><span itemprop="name">大学比赛-robomaster</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>【一句话规则】在 5 种机器人的配合下，发射弹丸互怼，7 分钟内率先摧毁敌方基地就胜利<br><img src="/2021/10/27/robomaster-1-1/photo1.jpg" alt="2019 赛季比赛场地"></p>
-<h3 id="一、步兵机器人"><a href="#一、步兵机器人" class="headerlink" title="一、步兵机器人"></a>一、步兵机器人</h3><p><img src="/2021/10/27/robomaster-1-1/photo2.png" alt="2019 赛季比赛场地"></p>
-<h4 id="1-主要功能"><a href="#1-主要功能" class="headerlink" title="1. 主要功能"></a>1. 主要功能</h4><p>步兵机器人灵活小巧，一般负责游走偷家、围殴敌方机器人。<br>主要组成：发射结构 、云台 架 、车架 、 轮组系统 、 外壳。<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/10/27/robomaster-1-1/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/07/03/python-pachong/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/03/python-pachong/" class="post-title-link" itemprop="url">python-pachong</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-07-03 13:36:12" itemprop="dateCreated datePublished" datetime="2021-07-03T13:36:12+08:00">2021-07-03</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-07 12:53:37" itemprop="dateModified" datetime="2021-07-07T12:53:37+08:00">2021-07-07</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://www.codenong.com/cs106018741/">https://www.codenong.com/cs106018741/</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/07/03/GNN-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/03/GNN-1/" class="post-title-link" itemprop="url">GNN-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-07-03 12:41:04" itemprop="dateCreated datePublished" datetime="2021-07-03T12:41:04+08:00">2021-07-03</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-07 12:53:37" itemprop="dateModified" datetime="2021-07-07T12:53:37+08:00">2021-07-07</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>AttributeError: module ‘matplotlib.cbook’ has no attribute ‘iterable’<br>matplotlib 版本问题，降到 3 以下即可 <br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/262476516">《Python 数据可视化之美》勘误更新 </a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/06/28/python-basic-5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/28/python-basic-5/" class="post-title-link" itemprop="url">python 基础 - 5.Numpy 数据处理</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-06-28 11:29:22" itemprop="dateCreated datePublished" datetime="2021-06-28T11:29:22+08:00">2021-06-28</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-06-29 22:04:08" itemprop="dateModified" datetime="2021-06-29T22:04:08+08:00">2021-06-29</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/python%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">python基础</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Numpy-和原生-Python-list-性能对比"><a href="#Numpy-和原生-Python-list-性能对比" class="headerlink" title="Numpy 和原生 Python list 性能对比"></a>Numpy 和原生 Python list 性能对比</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">def <span class="title">numpy_sum</span> <span class="params">(n)</span>:</span></span><br><span class="line"><span class="function">	a =</span> np.<span class="built_in">arange</span> (n) ** <span class="number">2</span></span><br><span class="line">	b = np.<span class="built_in">arange</span> (n) ** <span class="number">3</span></span><br><span class="line">	<span class="keyword">return</span> a+b</span><br><span class="line"><span class="comment">// 调用函数后输出：array ([  0,   2,  12,  36,  80, 150, 252, 392, 576, 810], dtype=int32)</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/28/python-basic-5/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
 
 
