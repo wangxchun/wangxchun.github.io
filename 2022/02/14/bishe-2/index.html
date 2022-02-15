@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="google-site-verification" content="SEuuKcxiY0Z6R9aAPIZyU5Y9rFqpgO9gKES--zhFX24" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wangxchun.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
+  </script>
+<meta name="description" content="一、深度学习基础1. 前言(1) 领域专家，数据科学家，AI 专家Q：数据科学家和 AI 专家的区别？数据科学家可以有两条职业规划广：不断开拓模型在不同领域的应用深：专攻一个领域，成为该领域的专家(2) 2012 年令深度學習和 NVIDIA 股價火爆起來的真正關鍵──GPU(3) 模型的可解释性(4) 符号学可以和深度学习结合吗？可以，例如图神经网络(5) 学习的阶段：看 -&gt; 听 -&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="毕业设计 -(2) 知识学习">
+<meta property="og:url" content="https://wangxchun.github.io/2022/02/14/bishe-2/index.html">
+<meta property="og:site_name" content="Stephen自强不息">
+<meta property="og:description" content="一、深度学习基础1. 前言(1) 领域专家，数据科学家，AI 专家Q：数据科学家和 AI 专家的区别？数据科学家可以有两条职业规划广：不断开拓模型在不同领域的应用深：专攻一个领域，成为该领域的专家(2) 2012 年令深度學習和 NVIDIA 股價火爆起來的真正關鍵──GPU(3) 模型的可解释性(4) 符号学可以和深度学习结合吗？可以，例如图神经网络(5) 学习的阶段：看 -&gt; 听 -&amp;g">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://wangxchun.github.io/2022/02/14/bishe-2/photo1.png">
+<meta property="og:image" content="https://wangxchun.github.io/2022/02/14/bishe-2/photo2.png">
+<meta property="article:published_time" content="2022-02-14T04:50:25.000Z">
+<meta property="article:modified_time" content="2022-02-15T02:51:50.600Z">
+<meta property="article:author" content="Stephen Wang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangxchun.github.io/2022/02/14/bishe-2/photo1.png">
+
+
+<link rel="canonical" href="https://wangxchun.github.io/2022/02/14/bishe-2/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<title>毕业设计 -(2) 知识学习 | Stephen自强不息</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Stephen自强不息</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80"><span class="nav-text">一、深度学习基础 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E5%89%8D%E8%A8%80"><span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%20-%20%E7%BA%BF%E6%80%A7%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%8C%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E5%99%A8"><span class="nav-text">2. 深度学习基础 - 线性神经网络，多层感知器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%20-LeNet-Alexnet-VGG-Inception-Resnet"><span class="nav-text">3. 卷积神经网络 - LeNet, Alexnet, VGG, Inception, Resnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%20-RNN-GRU-LSTM-seq2seq"><span class="nav-text">4. 循环神经网络 - RNN, GRU, LSTM, seq2seq</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%20-Attention-Transformer"><span class="nav-text">5. 注意力机制 - Attention, Transformer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%20%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%20-SGD-Momentum-Adam"><span class="nav-text">6. 优化算法 - SGD, Momentum, Adam</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%20%E9%AB%98%E6%80%A7%E8%83%BD%E7%AE%97%E6%B3%95%20-%20%E5%B9%B6%E8%A1%8C%EF%BC%8C%E5%A4%9A%20-GPU-%20%E5%88%86%E5%B8%83%E5%BC%8F"><span class="nav-text">7. 高性能算法 -  并行，多 GPU, 分布式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%20-%20%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%EF%BC%8C%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90"><span class="nav-text">8. 计算机视觉 - 目标检测，语义分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-%20%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%20-%20%E8%AF%8D%E5%B5%8C%E5%85%A5%EF%BC%8CBERT"><span class="nav-text">9. 自然语言处理 - 词嵌入，BERT</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81pytorch"><span class="nav-text">二、pytorch</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E5%88%9B%E5%BB%BA%E5%BC%A0%E9%87%8F"><span class="nav-text">1. 创建张量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6"><span class="nav-text">2. 广播机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3"><span class="nav-text">3.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Numpy-%20%E6%98%AF%20-python-%20%E4%B8%AD%E6%9C%80%E5%9F%BA%E7%A1%80%E7%9A%84%E5%A4%9A%E5%85%83%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97%E6%A1%86%E6%9E%B6"><span class="nav-text">4.Numpy 是 python 中最基础的多元数组运算框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%85%B6%E4%BB%96%20-Python-%20%E5%AF%B9%E8%B1%A1"><span class="nav-text">5. 转换为其他 Python 对象</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-text">三、数据预处理 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-text">1. 数据预处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-pytorch-%20%E5%92%8C%20-reshape-%20%E5%92%8C%20-view-%20%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C"><span class="nav-text">2.pytorch 和 reshape 和 view 有什么不同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-torch-%20%E7%9A%84%20-tensor-%20%E5%92%8C%20-numpy-%20%E7%9A%84%20-array-%20%E7%B1%BB%E4%BC%BC%E5%90%97%EF%BC%9F"><span class="nav-text">3.torch 的 tensor 和 numpy 的 array 类似吗？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-tensor-%20%E6%9C%89%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89%EF%BC%8Carray-%20%E5%8F%AA%E6%98%AF%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%A7%E7%89%A9%EF%BC%8C%E4%BD%86%E6%98%AF%E5%85%B6%E5%AE%9E%E6%98%AF%E4%B8%80%E6%A0%B7%E7%9A%84%E4%B8%9C%E8%A5%BF"><span class="nav-text">4.tensor 有数学定义，array 只是计算机产物，但是其实是一样的东西 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%20-jax-%20%E5%8F%96%E4%BB%A3%20-jupyter-%20%E5%90%97%EF%BC%9F"><span class="nav-text">5. 可以使用 jax 取代 jupyter 吗？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E5%AD%A6"><span class="nav-text"> 四、数学 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="nav-text">1. 线性代数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%BE%AE%E7%A7%AF%E5%88%86"><span class="nav-text">2. 微积分 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7"><span class="nav-text"> 五、深度学习技巧 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB"><span class="nav-text"> 六、图像分类 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B"><span class="nav-text"> 七、目标检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2"><span class="nav-text">八、图像分割 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E8%8A%B1%E4%B9%A6%E7%B2%BE%E8%AF%BB"><span class="nav-text"> 九、花书精读 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E6%9D%8E%E9%A3%9E%E9%A3%9E%20-CS231"><span class="nav-text"> 十、李飞飞 CS231</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Stephen Wang"
+      src="/img/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Stephen Wang</p>
+  <div class="site-description" itemprop="description">機器學習 / C++ / 投資 / 台灣景點</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">224</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">303</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stephenwang0205@outlook.com" title="E-Mail → mailto:stephenwang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/02/14/bishe-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          毕业设计 -(2) 知识学习
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-02-14 12:50:25" itemprop="dateCreated datePublished" datetime="2022-02-14T12:50:25+08:00">2022-02-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2022-02-15 10:51:50" itemprop="dateModified" datetime="2022-02-15T10:51:50+08:00">2022-02-15</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-advance/" itemprop="url" rel="index"><span itemprop="name">C++ advance</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="一、深度学习基础"><a href="# 一、深度学习基础" class="headerlink" title="一、深度学习基础"></a>一、深度学习基础 </h3><h4 id="1- 前言"><a href="#1- 前言" class="headerlink" title="1. 前言"></a>1. 前言</h4><p>(1) 领域专家，数据科学家，AI 专家<br>Q：数据科学家和 AI 专家的区别？<br> 数据科学家可以有两条职业规划 <br> 广：不断开拓模型在不同领域的应用 <br> 深：专攻一个领域，成为该领域的专家<br>(2) <a target="_blank" rel="noopener" href="https://kopu.chat/2012-deeplearning-nvidia-gpu/">2012 年令深度學習和 NVIDIA 股價火爆起來的真正關鍵──GPU</a><br>(3) 模型的可解释性<br>(4) 符号学可以和深度学习结合吗？可以，例如图神经网络<br>(5) 学习的阶段：看 -&gt; 听 -&gt; 看 + 听 -&gt; 动手做 -&gt; 讲解一遍给自己或别人听</p>
+<h4 id="2- 深度学习基础 - 线性神经网络，多层感知器"><a href="#2- 深度学习基础 - 线性神经网络，多层感知器" class="headerlink" title="2. 深度学习基础 - 线性神经网络，多层感知器"></a>2. 深度学习基础 - 线性神经网络，多层感知器</h4><h4 id="3- 卷积神经网络 -LeNet-Alexnet-VGG-Inception-Resnet"><a href="#3- 卷积神经网络 -LeNet-Alexnet-VGG-Inception-Resnet" class="headerlink" title="3. 卷积神经网络 - LeNet, Alexnet, VGG, Inception, Resnet"></a>3. 卷积神经网络 - LeNet, Alexnet, VGG, Inception, Resnet</h4><h4 id="4- 循环神经网络 -RNN-GRU-LSTM-seq2seq"><a href="#4- 循环神经网络 -RNN-GRU-LSTM-seq2seq" class="headerlink" title="4. 循环神经网络 - RNN, GRU, LSTM, seq2seq"></a>4. 循环神经网络 - RNN, GRU, LSTM, seq2seq</h4><h4 id="5- 注意力机制 -Attention-Transformer"><a href="#5- 注意力机制 -Attention-Transformer" class="headerlink" title="5. 注意力机制 - Attention, Transformer"></a>5. 注意力机制 - Attention, Transformer</h4><h4 id="6- 优化算法 -SGD-Momentum-Adam"><a href="#6- 优化算法 -SGD-Momentum-Adam" class="headerlink" title="6. 优化算法 - SGD, Momentum, Adam"></a>6. 优化算法 - SGD, Momentum, Adam</h4><h4 id="7- 高性能算法 - 并行，多 -GPU- 分布式"><a href="#7- 高性能算法 - 并行，多 -GPU- 分布式" class="headerlink" title="7. 高性能算法 -  并行，多 GPU, 分布式"></a>7. 高性能算法 -  并行，多 GPU, 分布式</h4><h4 id="8- 计算机视觉 - 目标检测，语义分析"><a href="#8- 计算机视觉 - 目标检测，语义分析" class="headerlink" title="8. 计算机视觉 - 目标检测，语义分析"></a>8. 计算机视觉 - 目标检测，语义分析</h4><h4 id="9- 自然语言处理 - 词嵌入，BERT"><a href="#9- 自然语言处理 - 词嵌入，BERT" class="headerlink" title="9. 自然语言处理 - 词嵌入，BERT"></a>9. 自然语言处理 - 词嵌入，BERT</h4><span id="more"></span>
+<h3 id="二、pytorch"><a href="# 二、pytorch" class="headerlink" title="二、pytorch"></a>二、pytorch</h3><h4 id="1- 创建张量"><a href="#1- 创建张量" class="headerlink" title="1. 创建张量"></a>1. 创建张量</h4><p><img src="/2022/02/14/bishe-2/photo1.png" alt><br><img src="/2022/02/14/bishe-2/photo2.png" alt><br>Q: 张量和多维数组有什么不同？</p>
+<h4 id="2- 广播机制"><a href="#2- 广播机制" class="headerlink" title="2. 广播机制"></a>2. 广播机制</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">before = <span class="built_in">id</span> (Y)  <span class="comment"># id () 函数提供了内存中引用对象的确切地址</span></span><br><span class="line">Y = Y + X</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">id</span> (Y) == before)</span><br><span class="line"></span><br><span class="line">before = <span class="built_in">id</span> (X)</span><br><span class="line">X += Y</span><br><span class="line"><span class="comment"># X [:] = X + Y</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">id</span> (X) == before)  <span class="comment"># 使用 X [:] = X + Y 或 X += Y 来减少操作的内存开销。</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-Numpy- 是 -python- 中最基础的多元数组运算框架"><a href="#4-Numpy- 是 -python- 中最基础的多元数组运算框架" class="headerlink" title="4.Numpy 是 python 中最基础的多元数组运算框架"></a>4.Numpy 是 python 中最基础的多元数组运算框架</h4><h4 id="5- 转换为其他 -Python- 对象"><a href="#5- 转换为其他 -Python- 对象" class="headerlink" title="5. 转换为其他 Python 对象"></a>5. 转换为其他 Python 对象</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Y = torch.tensor ([[<span class="number">2.0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>], [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]])</span><br><span class="line">A = Y.numpy ()</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span> (A))  <span class="comment"># 打印 A 的类型</span></span><br><span class="line"><span class="built_in">print</span> (A)</span><br><span class="line">B = torch.tensor (A)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span> (B))  <span class="comment"># 打印 B 的类型</span></span><br><span class="line"><span class="built_in">print</span> (B)</span><br><span class="line"></span><br><span class="line">a = torch.tensor ([<span class="number">3.5</span>])</span><br><span class="line"><span class="built_in">print</span> (a, a.item (), <span class="built_in">float</span> (a), <span class="built_in">int</span> (a))</span><br></pre></td></tr></table></figure>
+<h3 id="三、数据预处理"><a href="# 三、数据预处理" class="headerlink" title="三、数据预处理"></a>三、数据预处理 </h3><h4 id="1- 数据预处理"><a href="#1- 数据预处理" class="headerlink" title="1. 数据预处理"></a>1. 数据预处理</h4><p> 读写文件背景 <br> 读写文件是最常见的 IO 操作。Python 内置了读写文件的函数，用法和 C 是兼容的。</p>
+<p>在磁盘上读写文件的功能都是由操作系统提供的，现代操作系统不允许普通的程序直接操作磁盘。</p>
+<p>读写文件就是请求操作系统打开一个文件对象（通常称为文件描述符），然后，通过操作系统提供的接口从这个文件对象中读取数据（读文件），或者把数据写入这个文件对象（写文件）。</p>
+<h4 id="2-pytorch- 和 -reshape- 和 -view- 有什么不同"><a href="#2-pytorch- 和 -reshape- 和 -view- 有什么不同" class="headerlink" title="2.pytorch 和 reshape 和 view 有什么不同"></a>2.pytorch 和 reshape 和 view 有什么不同</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = torch.arange (<span class="number">12</span>)</span><br><span class="line">b = a.reshape ((<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line">b [:] = <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span> (a)</span><br></pre></td></tr></table></figure>
+<h4 id="3-torch- 的 -tensor- 和 -numpy- 的 -array- 类似吗？"><a href="#3-torch- 的 -tensor- 和 -numpy- 的 -array- 类似吗？" class="headerlink" title="3.torch 的 tensor 和 numpy 的 array 类似吗？"></a>3.torch 的 tensor 和 numpy 的 array 类似吗？</h4><h4 id="4-tensor- 有数学定义，array- 只是计算机产物，但是其实是一样的东西"><a href="#4-tensor- 有数学定义，array- 只是计算机产物，但是其实是一样的东西" class="headerlink" title="4.tensor 有数学定义，array 只是计算机产物，但是其实是一样的东西"></a>4.tensor 有数学定义，array 只是计算机产物，但是其实是一样的东西 </h4><h4 id="5- 可以使用 -jax- 取代 -jupyter- 吗？"><a href="#5- 可以使用 -jax- 取代 -jupyter- 吗？" class="headerlink" title="5. 可以使用 jax 取代 jupyter 吗？"></a>5. 可以使用 jax 取代 jupyter 吗？</h4><h3 id="四、数学"><a href="# 四、数学" class="headerlink" title="四、数学"></a> 四、数学 </h3><h4 id="1- 线性代数"><a href="#1- 线性代数" class="headerlink" title="1. 线性代数"></a>1. 线性代数</h4><p>axis=0 代表往跨行（down)，而 axis=1 代表跨列（across)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">u = torch.tensor ([<span class="number">3.0</span>, -<span class="number">4.0</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27; 向量的𝐿2 范数:&#x27;</span>, torch.norm (u))  <span class="comment"># 向量的𝐿2 范数</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27; 向量的𝐿1 范数:&#x27;</span>, torch.<span class="built_in">abs</span> (u).<span class="built_in">sum</span> ())  <span class="comment"># 向量的𝐿1 范数</span></span><br><span class="line">v = torch.ones ((<span class="number">4</span>, <span class="number">9</span>))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;v:&#x27;</span>, v)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27; 矩阵的𝐿2 范数:&#x27;</span>, torch.norm (v))  <span class="comment"># 矩阵的𝐿2 范数</span></span><br></pre></td></tr></table></figure><br> 一维向量是一个 row vector（从计算机的角度来说就是一个数组）<br>在 pytorch 中 column vector 是一个矩阵，要区分 row vector 和 column vector 可以用二维数组</p>
+<h4 id="2- 微积分"><a href="#2- 微积分" class="headerlink" title="2. 微积分"></a>2. 微积分 </h4><h3 id="五、深度学习技巧"><a href="# 五、深度学习技巧" class="headerlink" title="五、深度学习技巧"></a> 五、深度学习技巧 </h3><h3 id="六、图像分类"><a href="# 六、图像分类" class="headerlink" title="六、图像分类"></a> 六、图像分类 </h3><h3 id="七、目标检测"><a href="# 七、目标检测" class="headerlink" title="七、目标检测"></a> 七、目标检测</h3><p>Ross Girshick (rbg 大神）2014 年提出 R-CNN 架构，可谓给 object detection 领域一个里程碑的前进，在此之前 object detection 性能已经好些年没有大的提高了。</p>
+<h3 id="八、图像分割"><a href="# 八、图像分割" class="headerlink" title="八、图像分割"></a>八、图像分割 </h3><h3 id="九、花书精读"><a href="# 九、花书精读" class="headerlink" title="九、花书精读"></a> 九、花书精读 </h3><h3 id="十、李飞飞 -CS231"><a href="# 十、李飞飞 -CS231" class="headerlink" title="十、李飞飞 CS231"></a> 十、李飞飞 CS231</h3><p>参考：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37541097">太阳花的小绿豆 </a><br><a target="_blank" rel="noopener" href="https://zh-v2.d2l.ai/"> 李沐 动手学深度学习</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/14/bishe-1/" rel="prev" title="毕业设计 -(1) 前期准备">
+                  <i class="fa fa-chevron-left"></i> 毕业设计 -(1) 前期准备
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stephen Wang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+<script>
+if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+  
+
+
+
+
+  
+
+
+</body>
+</html>
