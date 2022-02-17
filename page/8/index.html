@@ -174,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">224</span>
+          <span class="site-state-item-count">225</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -224,6 +224,112 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/20/computerNetwork-lab4/" class="post-title-link" itemprop="url">计算机网络 lab4 Overlay Network 和 VXLAN</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-05-20 14:49:35" itemprop="dateCreated datePublished" datetime="2021-05-20T14:49:35+08:00">2021-05-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-07-01 12:47:26" itemprop="dateModified" datetime="2021-07-01T12:47:26+08:00">2021-07-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">大学课程-计算机网络</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、任务要求"><a href="# 一、任务要求" class="headerlink" title="一、任务要求"></a>一、任务要求 </h3><p> 用 mininet 创建两个 LAN，然后用 VXLAN 创建 overlay network，让两个局域网可以互相通信。<br><a target="_blank" rel="noopener" href="https://www.voidking.com/dev-openvswitch-vxlan/">参考 </a><br><a target="_blank" rel="noopener" href="https://www.sdnlab.com/openvswitch-vxlan/"> 基于 Open vSwitch 的 VxLAN 隧道实验网络 </a><br><a target="_blank" rel="noopener" href="https://tingkuan.wordpress.com/2017/11/09/% E3%80%90mininet% E6%8C%87% E4% BB% A4% E4% BB%8B% E7% B4% B9% E3%80%91/">【Mininet 指令介紹】</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jjsgxty/p/11817132.html">SDN 第二次作业</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10197632">Openvswitch 介紹</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cing/p/8025173.html"> 自定义 topo 文件解析</a></p>
+<h3 id="二、原理"><a href="# 二、原理" class="headerlink" title="二、原理"></a>二、原理 </h3><h4 id="1-Overlay-Network"><a href="#1-Overlay-Network" class="headerlink" title="1.Overlay Network"></a>1.Overlay Network</h4><h4 id="2- 虚拟机的连网方式"><a href="#2- 虚拟机的连网方式" class="headerlink" title="2. 虚拟机的连网方式"></a>2. 虚拟机的连网方式</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87447426"> 虚拟机三种网络模式 </a><br>nat：enp0s3：上网<br>host-only：enp0s8：两个 LAN 通信<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yeziand01/article/details/88424624">Linux - 网卡命名方式改变了 - enp0s3，enp0s8</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/xulilinman/article/details/82821554"> 配置 host-only 的静态 IP</a></p>
+<h4 id="3- 流表"><a href="#3- 流表" class="headerlink" title="3. 流表"></a>3. 流表 </h4><p>idle_timeout，空闲时间，如值为 10，表示若某条流表在最近 10s 内没有被匹配过则删除。<br>hard_timeout，存活时间，如值为 10，则从该流表被安装经过 10s 后无论被使用情况如何，立即被删除。<br> 而如果在交换机上查看流表，会发现除以上两个时间以外，还有两个：<br>idle_age，未命中时间，如值为 10，表示已经有 10s 没有匹配到过这条流表了。当这个值等于 idle_timeout 时，这条流表就真的失效了。<br>duration，流表年龄，指的是流表自从安装到交换机上总共所经过的时间。</p>
+<p>作者：顽强的猫尾草 <br> 链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/22e6feb2c662">https://www.jianshu.com/p/22e6feb2c662</a><br>来源：简书 <br> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h3 id="三、常用指令"><a href="# 三、常用指令" class="headerlink" title="三、常用指令"></a>三、常用指令</h3><p><a target="_blank" rel="noopener" href="https://lowbee.fun/2020/06/18/SDN% E5% AD% A6% E4% B9% A0% E7% AC%94% E8% AE% B0/">SDN 学习笔记</a><br><a target="_blank" rel="noopener" href="http://www.rendoumi.com/open-vswitchde-ovs-vsctlming-ling-xiang-jie/">Open vSwitch 的 ovs-vsctl 命令详解</a><br><a target="_blank" rel="noopener" href="https://sites.google.com/cnsrl.cycu.edu.tw/glennsdn/openvswitchovs/ovs% E7% B0% A1% E6%98%93% E5% B8% B8% E7%94% A8% E6%8C%87% E4% BB% A4">OVS 簡易常用指令</a></p>
+<h4 id="1- 网桥 -ovs-vsctl- 基本命令"><a href="#1- 网桥 -ovs-vsctl- 基本命令" class="headerlink" title="1. 网桥 ovs-vsctl 基本命令"></a>1. 网桥 ovs-vsctl 基本命令</h4><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ovs-vsctl <span class="keyword">show</span>  <span class="meta"># 查询主机上已有的 OVS bridge 和 port</span></span><br></pre></td></tr></table></figure>
+<h5 id="1-ovs-vsctl- 用于控制 -ovs-db"><a href="#1-ovs-vsctl- 用于控制 -ovs-db" class="headerlink" title="(1) ovs-vsctl 用于控制 ovs db"></a>(1) ovs-vsctl 用于控制 ovs db</h5><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ovs-vsctl</span> <span class="string">add-br</span> <span class="string">br0</span> // 创建 <span class="string">bridge</span></span><br><span class="line"><span class="string">ovs</span>-<span class="string">vsctl</span> <span class="string">del-br</span> <span class="string">br0</span> // 删除 <span class="string">bridge</span></span><br><span class="line"><span class="string">ovs</span>-<span class="string">vsctl</span> <span class="built_in">list-br</span>  // 查询 <span class="string">bridge</span></span><br><span class="line"><span class="string">ovs</span>-<span class="string">vsctl</span> <span class="string">add-port</span> <span class="string">br0</span> <span class="string">eth1</span> // 添加端口 </span><br><span class="line"><span class="string">ovs-vsctl</span> <span class="string">del-port</span> <span class="string">br0</span> <span class="string">eth1</span> // 移除端口</span><br><span class="line"><span class="string">ovs-vsctl</span> <span class="built_in">set-controller</span> <span class="string">br0</span> <span class="string">tcp:1.</span><span class="string">2</span>.<span class="string">3</span>.<span class="string">4:6633 </span><span class="string">tcp:4.</span><span class="string">3</span>.<span class="string">2</span>.<span class="string">1:6633 </span>// 设置多个 <span class="string">controller</span></span><br><span class="line"><span class="string">ovs</span>-<span class="string">vsctl</span> <span class="string">del-controller</span> <span class="string">br0</span>  // 移除控制器</span><br><span class="line"><span class="string">ovs-vsctl</span> <span class="built_in">get-controller</span> <span class="string">br0</span> // 查询 <span class="string">brige</span> 上已配置的控制器</span><br></pre></td></tr></table></figure>
+<h5 id="2-ovs-ofctl- 用于管理 -OpenFlow-switch- 的 -flow"><a href="#2-ovs-ofctl- 用于管理 -OpenFlow-switch- 的 -flow" class="headerlink" title="(2) ovs-ofctl 用于管理 OpenFlow switch 的 flow"></a>(2) ovs-ofctl 用于管理 OpenFlow switch 的 flow</h5><h5 id="3-ovs-dpctl- 用于管理 -ovs- 的 -datapath"><a href="#3-ovs-dpctl- 用于管理 -ovs- 的 -datapath" class="headerlink" title="(3) ovs-dpctl 用于管理 ovs 的 datapath"></a>(3) ovs-dpctl 用于管理 ovs 的 datapath</h5><h5 id="4-ovs-appctl- 用于查询和管理 -ovs-daemon"><a href="#4-ovs-appctl- 用于查询和管理 -ovs-daemon" class="headerlink" title="(4) ovs-appctl 用于查询和管理 ovs daemon"></a>(4) ovs-appctl 用于查询和管理 ovs daemon</h5><h4 id="2- 流表"><a href="#2- 流表" class="headerlink" title="2. 流表"></a>2. 流表 </h4><h3 id="四、实作"><a href="# 四、实作" class="headerlink" title="四、实作"></a> 四、实作 </h3><h4 id="1- 创建拓扑"><a href="#1- 创建拓扑" class="headerlink" title="1. 创建拓扑"></a>1. 创建拓扑</h4><p> 在两台虚拟机上分别设置这样的拓扑<br><img src="/2021/05/20/computerNetwork-lab4/photo2.png" alt><br><img src="/2021/05/20/computerNetwork-lab4/photo3.jpg" alt><br>On VM 1:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; h1 ifconfig h1-eth<span class="number">0 10.0.0</span>.<span class="number">1</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">mininet&gt; h2 ifconfig h2-eth<span class="number">0 10.0.0</span>.<span class="number">2</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">$ sudo ifconfig s<span class="number">1 10.0.0</span>.<span class="number">111</span>/<span class="number">8</span> up</span><br></pre></td></tr></table></figure></p>
+<p>On VM 2:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; h3 ifconfig h3-eth<span class="number">0 10.0.0</span>.<span class="number">3</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">mininet&gt; h4 ifconfig h4-eth<span class="number">0 10.0.0</span>.<span class="number">4</span> netmask <span class="number">255.0.0.0</span></span><br><span class="line">$ sudo ifconfig s<span class="number">2 10.0.0</span>.<span class="number">112</span>/<span class="number">8</span> up</span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 网桥配置"><a href="#2- 网桥配置" class="headerlink" title="2. 网桥配置"></a>2. 网桥配置</h4><p>On VM1:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 在 VM1 上添加 br1 网桥</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-br </span>br1</span><br><span class="line">// 在 br1 上添加一个端口，将 enp0s8 挂载到 br1 上</span><br><span class="line">// 将 enp0s8 的 IP 指定给 br1，让虚拟机网络可以通过 br1 继续工作</span><br><span class="line">//24 是掩码位数，up 是网卡启动的意思</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>br1 enp0s8</span><br><span class="line">sudo ifconfig br1 192.168.56.101/24 up</span><br><span class="line">// 根据实际情况配置 br1 的网关（可选）</span><br><span class="line">sudo route<span class="built_in"> add </span>default gw 192.168.56.201</span><br></pre></td></tr></table></figure></p>
+<p>On VM2:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//// 在 VM2 上添加 br1 网桥</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-br </span>br1</span><br><span class="line">// 在 br1 上添加一个端口，将 enp0s8 挂载到 br1 上</span><br><span class="line">// 将 enp0s8 的 IP 指定给 br1，让虚拟机网络可以通过 br1 继续工作</span><br><span class="line">//24 是掩码位数，up 是网卡启动的意思</span><br><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>br1 enp0s8</span><br><span class="line">sudo ifconfig br1 192.168.56.102/24 up</span><br><span class="line">// 根据实际情况配置 br1 的网关（可选）</span><br><span class="line">sudo route<span class="built_in"> add </span>default gw 192.168.56.201</span><br></pre></td></tr></table></figure></p>
+<p>这时候查看网络的连通性，会发现 VM2 可以 ping 通 192.168.56.101，却 ping 不通 10.0.0.111</p>
+<h4 id="3- 搭建 -VxLAN- 隧道"><a href="#3- 搭建 -VxLAN- 隧道" class="headerlink" title="3. 搭建 VxLAN 隧道"></a>3. 搭建 VxLAN 隧道</h4><p>On VM1:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>s1 vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=192.168.56.102</span><br></pre></td></tr></table></figure><br>On VM2:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ovs-vsctl<span class="built_in"> add-port </span>s2 vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=192.168.56.101</span><br></pre></td></tr></table></figure></p>
+<h3 id="五、遇到问题"><a href="# 五、遇到问题" class="headerlink" title="五、遇到问题"></a>五、遇到问题</h3><h4 id="1- 拓扑没有删除"><a href="#1- 拓扑没有删除" class="headerlink" title="1. 拓扑没有删除"></a>1. 拓扑没有删除</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> mininet/mininet/examples</span><br><span class="line">sudo <span class="keyword">python</span> lab4.<span class="keyword">py</span></span><br></pre></td></tr></table></figure>
+<p>Exception: Error creating interface pair (XX-eth<em>,XX-eth</em>): RTNETLINK answers: File exists error<br>挂号里通常是 Switch 的某个 eth 连到另一台 Switch 的 eth，发生错误的原因是因为当第一次建立拓扑时出错，第二次建立相同拓扑时，第一次的拓扑没有完全消除。<br>解决方法：运行以下指令<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo mn -c</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2- 局域网 -pingall- 不通"><a href="#2- 局域网 -pingall- 不通" class="headerlink" title="2. 局域网 pingall 不通"></a>2. 局域网 pingall 不通</h4><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; sh ovs-ofctl dump-flows s1 // 查看 s1 的 flow table</span><br><span class="line">mininet&gt; sh ovs-ofctl<span class="built_in"> add-flow </span>s1 <span class="string">&quot;priority=0,action=normal&quot;</span> /// 新增 s1 的 flow table</span><br><span class="line">mininet&gt; pingall // 此時就可以互相 ping 到其他 host</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/05/20/computerNetwork-lab4/photo1.png" alt><br><a target="_blank" rel="noopener" href="https://tingkuan.wordpress.com/2017/12/11/% E3%80%90openvswitch-vs-controller-% E3%80%91/">参考</a></p>
+<p>后来发现是自己用./miniedit 创建的拓扑都 ping 不通，要自己加上流表或是运行 ryu 才会通 <br> 后来就改用 sudo mn 创建拓扑，pingall 就可以直接成功，<br>但是不知道怎么把这种方式创建的拓扑存储成.py 文件 (？)，或是修改 host 和 switch 名字 <br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yezhh/p/11249036.html"> 可以参考这个</a></p>
+<h4 id="3- 两台虚拟机 -ping- 不通原因"><a href="#3- 两台虚拟机 -ping- 不通原因" class="headerlink" title="3. 两台虚拟机 ping 不通原因"></a>3. 两台虚拟机 ping 不通原因 </h4><p> 查到了很多原因，但后来发现我的原因是自己用./miniedit 创建的 LAN 有问题 <br>(1) 虚拟机 mac 地址相同导致，复制虚拟的问题<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/dlh_sycamore/article/details/64440134">https://blog.csdn.net/dlh_sycamore/article/details/64440134</a><br>(2) 虚拟机连接方式设置为桥接<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/AnneQiQi/article/details/51758025">Ubuntu 两台虚拟机之间 Ping 不通</a><br>(3) 防火墙<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/T_Mac9334/article/details/78966029"> 关闭虚拟机 linux 防火墙命令 </a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yangmolulu/article/details/93902358?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control"> 两台虚拟机互相 ping 通（互相通讯）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_15256443/article/details/101289412">ubuntu 查看防火墙状态</a></p>
+<h4 id="4- 如果想要配置的 -IP- 永久生效"><a href="#4- 如果想要配置的 -IP- 永久生效" class="headerlink" title="4. 如果想要配置的 IP 永久生效"></a>4. 如果想要配置的 IP 永久生效 </h4><h4 id="5-ubuntu18-04- 自带 -python- 换成 -python3"><a href="#5-ubuntu18-04- 自带 -python- 换成 -python3" class="headerlink" title="5.ubuntu18.04 自带 python, 换成 python3"></a>5.ubuntu18.04 自带 python, 换成 python3</h4><p> 重装虚拟机，按照 ryu 的时候有一步是：python get-pip.py，出错，因为这个是 python3 的用法<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span> 下载并设置优先级</span><br><span class="line">update-alternatives --install <span class="regexp">/usr/</span>bin<span class="regexp">/python python /u</span>sr<span class="regexp">/bin/</span>python2.<span class="number">7</span> <span class="number">1</span></span><br><span class="line">update-alternatives --install <span class="regexp">/usr/</span>bin<span class="regexp">/python python /u</span>sr<span class="regexp">/bin/</span>python3.<span class="number">6</span> <span class="number">2</span></span><br><span class="line"><span class="regexp">//</span> 查看默认版本</span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-wireshark- 权限问题"><a href="#5-wireshark- 权限问题" class="headerlink" title="5.wireshark 权限问题"></a>5.wireshark 权限问题</h4><p>wireshark 遇到 couldn’t run /usr/bin/dumpcap in child process: Permission Denied<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure wireshark-common <span class="regexp">//</span> 选组 “YES” </span><br><span class="line">sudo adduser <span class="variable">$USER</span> wireshark <span class="regexp">//</span> 添加当前用户到用户组</span><br><span class="line"><span class="regexp">//</span> 重啓，即可正常使用 wireshark</span><br></pre></td></tr></table></figure></p>
+<h4 id="6-ryu- 运行出错，所以想重新按照，但最后还是重装了虚拟机"><a href="#6-ryu- 运行出错，所以想重新按照，但最后还是重装了虚拟机" class="headerlink" title="6.ryu 运行出错，所以想重新按照，但最后还是重装了虚拟机"></a>6.ryu 运行出错，所以想重新按照，但最后还是重装了虚拟机 </h4><p>(1) 运行 ryu 程序出现 ImportError: No module named XX.py<br>(2) 如何在 Ubuntu 中用 apt 命令删除 / 卸载软件包<br>apt-get remove 删除已安装的软件包（保留配置文件），不会删除依赖软件包，保留配置文件。<br>apt-get purge  删除已安装的软件包（不保留配置文件)，删除软件包，同时删除相应依赖软件包。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/LEON1741/article/details/85114318"> 如何在 Ubuntu 中用 apt 命令删除 / 卸载软件包（remove/clean/purge）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/younger_to_older/article/details/109053821">解决 apt-get remove 和 dpkg 删除出现 E: 无法定位软件包 XXXX</a></p>
+<h4 id="7-ovs- 错误解决 -could-not-open-network-device-XXX-No-such-device）"><a href="#7-ovs- 错误解决 -could-not-open-network-device-XXX-No-such-device）" class="headerlink" title="7.ovs 错误解决 could not open network device XXX (No such device）"></a>7.ovs 错误解决 could not open network device XXX (No such device）</h4><p>网络上说设置好端口类型为 internal 就不会再出现这个问题 <br> 但我后来发现只是我命令输错，或是没有设置端口类型</p>
+<h4 id="8- 用自己 -miniedit- 创建的网络，add-route- 之后，ping- 不上外网"><a href="#8- 用自己 -miniedit- 创建的网络，add-route- 之后，ping- 不上外网" class="headerlink" title="8. 用自己./miniedit 创建的网络，add route 之后，ping 不上外网"></a>8. 用自己./miniedit 创建的网络，add route 之后，ping 不上外网 </h4><p> 这个时候进行 ping www.baidu.com 出现：<br>ping: www.baidu.com: Name or service not known<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/XXJ19950917/article/details/82733928">Linux 报错之 ping: www.baidu.com: Name or service not known</a></p>
+<h4 id="9-linux- 中查看网卡 -mac- 地址"><a href="#9-linux- 中查看网卡 -mac- 地址" class="headerlink" title="9.linux 中查看网卡 mac 地址"></a>9.linux 中查看网卡 mac 地址</h4><p>“ifconfig -a 其中 HWaddr 字段就是 mac 地址”，但是我没看到 HWaddr 字段<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/kunatnet/article/details/43408617">linux 中查看网卡 mac 地址</a></p>
+<h4 id="10-Unable-to-fetch-some-archives"><a href="#10-Unable-to-fetch-some-archives" class="headerlink" title="10.Unable to fetch some archives"></a>10.Unable to fetch some archives</h4><p>Ubuntu 安装应用时报错：<br>Unable to fetch some archives, maybe run apt-get update or try with —fix-missing?<br><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 解决办法</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> clean</span><br><span class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="计算机网络系列"><a href="# 计算机网络系列" class="headerlink" title="计算机网络系列"></a>计算机网络系列 </h3><p><a href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/"> 计算机网络 lab1</a><br><a href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">计算机网络 lab2 使用 Mininet 创建网络拓扑 </a><br><a href="https://wangxchun.github.io/2021/04/24/computerNetwork-lab3-1/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 原理 </a><br><a href="https://wangxchun.github.io/2021/04/27/computerNetwork-lab3-2/"> 计算机网络 lab3 使用 Socket 完成多人聊天室 — 实作 </a><br><a href="https://wangxchun.github.io/2021/05/20/computerNetwork-lab4/"> 计算机网络 lab4 Overlay Network 和 VXLAN</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -990,79 +1096,6 @@
 <h3 id="SNOW- 持續下跌"><a href="#SNOW- 持續下跌" class="headerlink" title="SNOW 持續下跌"></a>SNOW 持續下跌</h3><p>SNOW 估值被嚴重高估<br>（但是特斯拉的估值也遠高於所謂的合理估值，所以這種股票就是買一個信仰，長期投資）</p>
 <h3 id="Beyond-Meat（BYND）爲何下跌？"><a href="#Beyond-Meat（BYND）爲何下跌？" class="headerlink" title="Beyond Meat（BYND）爲何下跌？"></a>Beyond Meat（BYND）爲何下跌？</h3><p>第三季度的銷售額低於預期，對於高增長公司而言，增長趨勢一旦被打斷，股價震蕩在所難免。<br>競爭對手 ImpossibleFoods 的降價也對股價造成影響（老牌企業和新秀加入未來肉的戰場）。</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/12/investment-observe-2020-12/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/12/investment-observe-2020-12/" class="post-title-link" itemprop="url">2020/12 投資市場觀察</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-05-12 22:04:34 / 修改時間：22:58:25" itemprop="dateCreated datePublished" datetime="2021-05-12T22:04:34+08:00">2021-05-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E5%B8%82%E5%A0%B4%E8%A7%80%E5%AF%9F/" itemprop="url" rel="index"><span itemprop="name">生活-投資市場觀察</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
       
     </div>
 

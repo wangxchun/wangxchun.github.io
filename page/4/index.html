@@ -174,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">224</span>
+          <span class="site-state-item-count">225</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -224,6 +224,100 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/08/image-processing-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/08/image-processing-5/" class="post-title-link" itemprop="url">图像处理与分析 --（5）图像增强变换</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-08 17:59:33" itemprop="dateCreated datePublished" datetime="2021-11-08T17:59:33+08:00">2021-11-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-12-23 15:46:27" itemprop="dateModified" datetime="2021-12-23T15:46:27+08:00">2021-12-23</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">大学课程-图像处理与分析</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>增强处理的方法：大致可分为三大类</p>
+<ol>
+<li>点变换：只与本身像素点的值有关，做灰度值变换，与空间邻点值无关。</li>
+<li>空间域处理：往往作邻域加权和处理<br>・需考虑邻域大小、形状<br>・点变换可看作处理窗为 1×1 的空间域处理</li>
+<li>频域处理</li>
+</ol>
+<h3 id="一、灰度变换"><a href="#一、灰度变换" class="headerlink" title="一、灰度变换"></a>一、灰度变换</h3><h4 id="1-直方图"><a href="#1-直方图" class="headerlink" title="1. 直方图"></a>1. 直方图</h4><p>最常用的像素统计特性描述方式<br><img src="/2021/11/08/image-processing-5/photo1.png" alt></p>
+<h4 id="2-灰度增强"><a href="#2-灰度增强" class="headerlink" title="2. 灰度增强"></a>2. 灰度增强</h4><p>灰度增强就是按照一定变换方式逐点地改变原来图像中每个像素的灰度值 $r’=T (t)$。<br>通过改变像素灰度值获得直方图形状的改变。<br>(1) 灰度线性变换<br>(2) 灰度非线性变换<br>离散图像</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/08/image-processing-5/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -931,85 +1025,6 @@
       
 
       <time title="創建時間：2021-11-04 17:36:33 / 修改時間：17:45:49" itemprop="dateCreated datePublished" datetime="2021-11-04T17:36:33+08:00">2021-11-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/04/slam-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/04/slam-1/" class="post-title-link" itemprop="url">slam-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-11-04 17:36:15" itemprop="dateCreated datePublished" datetime="2021-11-04T17:36:15+08:00">2021-11-04</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-08 17:57:11" itemprop="dateModified" datetime="2021-11-08T17:57:11+08:00">2021-11-08</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-slam/" itemprop="url" rel="index"><span itemprop="name">大学课程-slam</span></a>
-        </span>
     </span>
 
   

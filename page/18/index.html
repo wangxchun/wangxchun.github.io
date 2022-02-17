@@ -174,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">224</span>
+          <span class="site-state-item-count">225</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -224,6 +224,88 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/11/19/machineLearning-7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Stephen Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stephen自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/11/19/machineLearning-7/" class="post-title-link" itemprop="url">机器学习算法 --（7）贝叶斯算法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2020-11-19 16:21:17" itemprop="dateCreated datePublished" datetime="2020-11-19T16:21:17+08:00">2020-11-19</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-06-29 22:04:06" itemprop="dateModified" datetime="2021-06-29T22:04:06+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">大学课程-机器学习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <span id="more"></span>
+<h3 id="实作"><a href="# 实作" class="headerlink" title="实作"></a>实作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"></span><br><span class="line">iris = datasets.load_iris ()</span><br><span class="line"><span class="built_in">print</span> (iris.keys ())</span><br><span class="line"><span class="comment"># dict_keys ([&#x27;data&#x27;, &#x27;target&#x27;, &#x27;frame&#x27;, &#x27;target_names&#x27;, &#x27;DESCR&#x27;, &#x27;feature_names&#x27;, &#x27;filename&#x27;])</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span> (iris [<span class="string">&#x27;data&#x27;</span>]))</span><br><span class="line"><span class="comment"># &lt;class &#x27;numpy.ndarray&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span> (iris.data))</span><br><span class="line"><span class="comment"># &lt;class &#x27;numpy.ndarray&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="机器学习算法系列"><a href="# 机器学习算法系列" class="headerlink" title="机器学习算法系列"></a>机器学习算法系列 </h3><p><a href="https://wangxchun.github.io/2020/11/06/machineLearning-1/"> 机器学习算法 —（1）线性回归和非线性回归 </a><br><a href="https://wangxchun.github.io/2020/11/11/machineLearning-2/"> 机器学习算法 —（2）逻辑回归 </a><br><a href="https://wangxchun.github.io/2020/11/13/machineLearning-3/"> 机器学习算法 —（3）神经网络 </a><br><a href="https://wangxchun.github.io/2020/11/18/machineLearning-4/"> 机器学习算法 —（4）KNN</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-5/">机器学习算法 —（5）决策树 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-6/"> 机器学习算法 —（6）集成学习 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-7/"> 机器学习算法 —（7）贝叶斯算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-8/"> 机器学习算法 —（8）聚类算法 </a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-9/"> 机器学习算法 —（9）主成分分析 PCA</a><br><a href="https://wangxchun.github.io/2020/11/19/machineLearning-10/">机器学习算法 —（10）支持向量机 SVM</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -993,95 +1075,6 @@
 <p>问题 1：如何实现数字通信系统传输模拟信号？<br><img src="/2020/09/23/communicationSystem-digitization/photo1.jpg" alt><br>问题 2：如何实现模拟信号的数字化？<br><img src="/2020/09/23/communicationSystem-digitization/photo2.jpg" alt></p>
 <h3 id="一、模拟信号的抽样"><a href="# 一、模拟信号的抽样" class="headerlink" title="一、模拟信号的抽样"></a>一、模拟信号的抽样 </h3><h4 id="1- 低通模拟信号的抽样定理"><a href="#1- 低通模拟信号的抽样定理" class="headerlink" title="1. 低通模拟信号的抽样定理"></a>1. 低通模拟信号的抽样定理</h4><p> 时域：$m_s (t) = m (t) \delta_{T_s}(t)$<br>频域：$M_s (f) = M (f) * \Delta_\Omega (f) = {1 \over T_s} \sum_{n= -\infty}^\infty M (f - nf_s)$<br>$\Delta_\Omega (f)$ 是周期性单位冲激脉冲的频谱 $\Delta_\Omega (f) = {1 \over T_s} \sum_{n= -\infty}^\infty \delta (f - nf_s)$<br>恢复信号的条件：$f_s \geq 2f_H$ 奈奎斯特抽样频率</p>
 <h4 id="2- 带通模拟信号的抽样定理"><a href="#2- 带通模拟信号的抽样定理" class="headerlink" title="2. 带通模拟信号的抽样定理"></a>2. 带通模拟信号的抽样定理 </h4><h4 id="3- 实际抽样"><a href="#3- 实际抽样" class="headerlink" title="3. 实际抽样"></a>3. 实际抽样</h4><h3 id="二、抽样信号的量化"><a href="# 二、抽样信号的量化" class="headerlink" title="二、抽样信号的量化"></a> 二、抽样信号的量化 </h3><h3 id="三、脉冲编码调制"><a href="# 三、脉冲编码调制" class="headerlink" title="三、脉冲编码调制"></a> 三、脉冲编码调制 </h3><h3 id="四、差分脉码调制与增量调制"><a href="# 四、差分脉码调制与增量调制" class="headerlink" title="四、差分脉码调制与增量调制"></a> 四、差分脉码调制与增量调制 </h3><h3 id="五、时分复用"><a href="# 五、时分复用" class="headerlink" title="五、时分复用"></a> 五、时分复用</h3>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Stephen Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stephen自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/09/17/communicationSystem-analogModulation/" class="post-title-link" itemprop="url">通信原理 --（3）模拟调制技术</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2020-09-17 09:05:38" itemprop="dateCreated datePublished" datetime="2020-09-17T09:05:38+08:00">2020-09-17</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-05-10 15:45:18" itemprop="dateModified" datetime="2021-05-10T15:45:18+08:00">2021-05-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">大学课程-通信原理</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="https://wangxchun.github.io/2020/09/10/communicationSystem-introduction/">通信原理 —（1）绪论</a><br><a href="https://wangxchun.github.io/2020/09/14/communicationSystem-channel/">通信原理 —（2）信道</a><br><a href="https://wangxchun.github.io/2020/09/17/communicationSystem-analogModulation/">通信原理 —（3）模拟调制技术</a><br><a href="https://wangxchun.github.io/2020/09/23/communicationSystem-digitization/">通信原理 —（4）模拟信号数字化</a><br><a href="https://wangxchun.github.io/2020/09/29/communicationSystem-digitalBasebandTransmission/">通信原理 —（5）数字基带传输</a><br><a href="https://wangxchun.github.io/2020/10/03/communicationSystem-digitalFrequencyBandTransmission/">通信原理 —（6）数字频带传输</a><br><a href="https://wangxchun.github.io/2020/10/15/communicationSystem-BestAccepted/">通信原理 —（7）最佳接收</a><br><a href="https://wangxchun.github.io/2020/10/21/communicationSystem-synchronize/">通信原理 —（8）同步</a></p>
-<h3 id="一、调制的概念和幅度调制"><a href="#一、调制的概念和幅度调制" class="headerlink" title="一、调制的概念和幅度调制"></a>一、调制的概念和幅度调制</h3><h4 id="1-调制的概念"><a href="#1-调制的概念" class="headerlink" title="1. 调制的概念"></a>1. 调制的概念</h4><p>Q：为什么调制之后，扩展信号带宽，可以提高系统抗干扰能力、抗衰弱能力<br>思路 1：根据香浓公式，传输带宽和信噪比之间可以互换。</p>
-<h4 id="2-幅度调制基本原理"><a href="#2-幅度调制基本原理" class="headerlink" title="2. 幅度调制基本原理"></a>2. 幅度调制基本原理</h4><h5 id="1-幅度调制的时域和频域"><a href="#1-幅度调制的时域和频域" class="headerlink" title="(1) 幅度调制的时域和频域"></a>(1) 幅度调制的时域和频域</h5><p>时域：$s_m (t) = Am (t) cos (\omega_c t + \varphi_0)$<br>频域：$\displaystyle S_m (\omega) = {A \over 2}[M (\omega+\omega_c) + M (\omega-\omega_c)]$</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/17/communicationSystem-analogModulation/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
