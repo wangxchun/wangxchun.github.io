@@ -197,7 +197,7 @@
         <a href="https://github.com/wangxchun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangxchun" rel="noopener" target="_blank"><i class="GitHub fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:stephenwang0205@outlook.com" title="E-Mail → mailto:stephenwang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
+        <a href="mailto:nathanwang0205@outlook.com" title="E-Mail → mailto:nathanwang0205@outlook.com" rel="noopener" target="_blank"><i class="e-mail fa-fw"></i>E-Mail</a>
       </span>
   </div>
 
@@ -321,6 +321,37 @@
 
 <script>
 if (document.querySelectorAll('.pdf-container').length) {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+    document.querySelectorAll('.pdf-container').forEach(element => {
+      PDFObject.embed(element.dataset.target, element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.dataset.height
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+  
+
+
+
+
+  
+
+
+</body>
+</html>
+document.querySelectorAll('.pdf-container').length) {
   NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
     document.querySelectorAll('.pdf-container').forEach(element => {
       PDFObject.embed(element.dataset.target, element, {
