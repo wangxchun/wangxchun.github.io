@@ -174,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">226</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -224,6 +224,100 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/22/slam-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Nathan Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nathan自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/22/slam-4/" class="post-title-link" itemprop="url">slam 基础 --（4）特征检测和追踪</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-11-22 16:26:35" itemprop="dateCreated datePublished" datetime="2021-11-22T16:26:35+08:00">2021-11-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-11-26 23:51:01" itemprop="dateModified" datetime="2021-11-26T23:51:01+08:00">2021-11-26</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-slam/" itemprop="url" rel="index"><span itemprop="name">大学课程-slam</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、Reference-Frame- 参考坐标"><a href="# 一、Reference-Frame- 参考坐标" class="headerlink" title="一、Reference Frame 参考坐标"></a>一、Reference Frame 参考坐标 </h3><h4 id="1-Inertial-Frame"><a href="#1-Inertial-Frame" class="headerlink" title="1.Inertial Frame"></a>1.Inertial Frame</h4><p>(1) Earth-Centered Inertial frame (ECI)<br>(2) Earth-Centered and Earth-Fixed Inertial Frame<br>X 轴固定在地球表面随着地球转动而转动<br> 最常见的地球坐标系</p>
+<h4 id="2-Earth-Fixed-Frame- 局部地理坐标系 - 世界坐标系"><a href="#2-Earth-Fixed-Frame- 局部地理坐标系 - 世界坐标系" class="headerlink" title="2.Earth-Fixed Frame 局部地理坐标系 / 世界坐标系"></a>2.Earth-Fixed Frame 局部地理坐标系 / 世界坐标系 </h4><p> 原点在地球表面</p>
+<h4 id="3-Body-fixed-Frame-Body-Frame"><a href="#3-Body-fixed-Frame-Body-Frame" class="headerlink" title="3.Body-fixed Frame (Body Frame)"></a>3.Body-fixed Frame (Body Frame)</h4><p>坐标原点在机体上 <br> 坐标原点是自己定义的 ex: 在图像传感器中心 <br> 最后算出来的姿态和定义的坐标系有关</p>
+<h3 id="二、Rigid-Transformation"><a href="# 二、Rigid-Transformation" class="headerlink" title="二、Rigid Transformation"></a>二、Rigid Transformation</h3><p>刚体变换 = 旋转变换 + 平移变换 $x’=Rx+t$<br>刚体变换保长度、保角度 <br> 证明旋转矩阵都是正交矩阵，反之则否 <br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jhope/article/details/83067956?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-3&amp;spm=1001.2101.3001.4242.2"> 旋转矩阵 (Rotate Matrix) 的性质分析 </a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/316200199"> 正交矩阵都是旋转矩阵吗？</a><br><img src="/2021/11/22/slam-4/photo1.jpg" alt="刚体变换和 t 是无关的，后面会讲到应用 (消失点投影)"></p>
+<h4 id="1-Pose-representation- 位姿"><a href="#1-Pose-representation- 位姿" class="headerlink" title="1.Pose representation 位姿"></a>1.Pose representation 位姿 </h4><p> 位姿可以用刚体变换描述</p>
+<h4 id="2-Body-to-world-transformation- 机器人用的比较多"><a href="#2-Body-to-world-transformation- 机器人用的比较多" class="headerlink" title="2.Body-to-world transformation (机器人用的比较多)"></a>2.Body-to-world transformation (机器人用的比较多)</h4><p>$<br>x_w=<br>\begin {bmatrix}<br>    R_1 &amp; R_2 &amp; R_3 \\<br>    R_4 &amp; R_5 &amp; R_6 \\<br>    R_7 &amp; R_8 &amp; R_9 \\<br>\end {bmatrix}<br>x+t<br>$<br>旋转矩阵的第一 column 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Column vectors in $R$ are the directions of body axes in the world frame)<br>$t$ 代表体坐标系原点投影在世界坐标系的坐标</p>
+<h4 id="3-World-to-body-transformation- 计算机视觉用的比较多"><a href="#3-World-to-body-transformation- 计算机视觉用的比较多" class="headerlink" title="3.World-to-body transformation (计算机视觉用的比较多)"></a>3.World-to-body transformation (计算机视觉用的比较多)</h4><p>$<br>x=<br>\begin {bmatrix}<br>R_1 &amp; R_2 &amp; R_3 \\<br>R_4 &amp; R_5 &amp; R_6 \\<br>R_7 &amp; R_8 &amp; R_9 \\<br>\end {bmatrix}<br>x_w+t<br>$<br>旋转矩阵的第一 row 表示 body 坐标系 X 轴在世界坐标系下投影<br>(Row vectors in $R$ are the directions of body axes in the world frame)<br>$x_w^0=-R^T t$</p>
+<h3 id="三、Projective-geometry"><a href="# 三、Projective-geometry" class="headerlink" title="三、Projective geometry"></a>三、Projective geometry</h3><h4 id="1-Homogenous-coordinates"><a href="#1-Homogenous-coordinates" class="headerlink" title="1.Homogenous coordinates"></a>1.Homogenous coordinates</h4><p>描述比较简洁 ex: 一个矩阵就可以描述刚体变换 <br> 可以描述笛卡尔坐标系无法描述的元素 ex: 无穷远的点 <br> 齐次坐标在《图形学》应用广泛</p>
+<p>$<br>\left [\begin {matrix}<br>    x’ \\<br>    1 \\<br>\end {matrix}\right] \sim<br>\left [\begin {matrix}<br>    R &amp; t \\<br>    0^T &amp; 1 \\<br>\end {matrix}\right]<br>\left [\begin {matrix}<br>    x \\<br>    1 \\<br>\end {matrix}\right]<br>$</p>
+<h4 id="2-2D-projective-geometry- 之坐标表示"><a href="#2-2D-projective-geometry- 之坐标表示" class="headerlink" title="2.2D projective geometry 之坐标表示"></a>2.2D projective geometry 之坐标表示 </h4><p> 在二维空间中点和线是对偶关系 <br> 点的表达：$\mathbf {x}=(x,y,1)^T$<br>线的表达 $ax+by+c$：$\mathbf {l}=(a,b,c)^T$<br>两线交点：两条线叉乘 <br> 两个点连成一条线：兩个点叉乘 <br> 无穷远点：两个平行线交点 <br> 无穷远线</p>
+<h4 id="3-2D-projective-geometry- 之 -homography-matrix- 实现点的变换"><a href="#3-2D-projective-geometry- 之 -homography-matrix- 实现点的变换" class="headerlink" title="3.2D projective geometry 之 homography matrix (实现点的变换)"></a>3.2D projective geometry 之 homography matrix (实现点的变换)</h4><p><img src="/2021/11/22/slam-4/photo3.jpg" alt><br><img src="/2021/11/22/slam-4/photo4.jpg" alt><br><img src="/2021/11/22/slam-4/photo5.jpg" alt><br>(1) 刚体变换：保长度，保角度 <br> 刚性变换：只由平移变换和旋转变换组成。<br>(2) 相似变换：保比例 <br>(3) 仿射变换主要包括平移变换、旋转变换、缩放变换、错切变换、翻转变换，有六个自由度。<br> 仿射变换保持二维图形的 “平直性” 和 “平行性”，但是角度会改变。<br>“平直性”：变换后直线还是直线、圆弧还是圆弧。<br>“平行性”：平行线还是平行线，直线上点的位置顺序不变。<br>(4) 射影变换 (投影变换)<br>射影变换：是最一般的线性变换。有 8 个自由度。<br>射影变换保持重合关系和交比不变。但不会保持平行性。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/Homography/article/details/105986226">交比不变 (顺便学习射影几何)</a><br><a target="_blank" rel="noopener" href="https://lyingheart6174.pixnet.net/blog/post/5122408">[射影幾何] 交比 (Cross Ratio)</a><br><img src="/2021/11/22/slam-4/photo6.jpg" alt></p>
+<p><img src="/2021/11/22/slam-4/photo8.jpg" alt="单应矩阵有八个自由度，需要二维空间的四个点对来求解"><br><img src="/2021/11/22/slam-4/photo9.jpg" alt="单应矩阵求解"><br><img src="/2021/11/22/slam-4/photo7.jpg" alt="单应矩阵的应用：实现图像校正"><br>step1: 找出两幅图像之间的单应矩阵 <br>step2: 逐行扫描图像二中的像素，透过单应矩阵找出与之对应在图像一中的像素<br> 利用该像素的值对图像一的像素进行着色，如果对应过去是亚像素则进行插值<br>Q: 线条的变换？<br><img src="/2021/11/22/slam-4/photo10.jpg" alt></p>
+<h4 id="4-3D-projective-geometry"><a href="#4-3D-projective-geometry" class="headerlink" title="4.3D projective geometry"></a>4.3D projective geometry</h4><p>在三维空间中点和面是对偶关系<br><img src="/2021/11/22/slam-4/photo11.jpg" alt><br>(1) 三维点的表示：<br>(2) 三维平面的表示：<br>(3) 三个点形成一平面：<br>(4) 三个平面确定一个交点：<br>(5) 三维平面的变换：</p>
+<h3 id="补充 - 动三维空间刚体运 - 一、旋转矩阵"><a href="# 补充 - 动三维空间刚体运 - 一、旋转矩阵" class="headerlink" title="[补充 动三维空间刚体运] 一、旋转矩阵"></a>[补充 动三维空间刚体运] 一、旋转矩阵 </h3><h4 id="1- 点、向量、坐标系"><a href="#1- 点、向量、坐标系" class="headerlink" title="1. 点、向量、坐标系"></a>1. 点、向量、坐标系</h4><p> 大部分 3D 程序库使用右手系 (如 OpenGL、3DMax 等)，<br>也有部分库使用左手系 (如 Unity、Direct3D 等)<br>$a \dot b$<br>$<br>a \times b =<br>\begin {Vmatrix}<br>    \mathbf {e_1} &amp; \mathbf {e_2} &amp; \mathbf {e_3} \\<br>    a_1 &amp; a_2 &amp; a_3 \\<br>    b_1 &amp; b_2 &amp; b_3 \\<br>\end {Vmatrix} =<br>\left [\begin {matrix}<br>    a_2 b_3 - a_3 b_2 \\<br>    a_3 b_1 - a_1 b_3 \\<br>    a_1 b_2 - a_2 b_1 \\<br>\end {matrix}\right] =<br>\left [\begin {matrix}<br>    0 &amp; -a_3 &amp; a_2 \\<br>    a_3 &amp; 0 &amp; -a_1 \\<br>    -a_2 &amp; a_1 &amp; 0 \\<br>\end {matrix}\right] \mathbf {b} \overset {def}{=}<br>a<br>$^$b$</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yihaizhiyan/article/details/12707459?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link">latex 等号上面有字 \overset {def}{=}</a></p>
+<h4 id="2- 坐标矩阵间的欧式变换"><a href="#2- 坐标矩阵间的欧式变换" class="headerlink" title="2. 坐标矩阵间的欧式变换"></a>2. 坐标矩阵间的欧式变换</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -974,70 +1068,6 @@
 <h3 id="三、坐标轴可视化"><a href="# 三、坐标轴可视化" class="headerlink" title="三、坐标轴可视化"></a>三、坐标轴可视化 </h3><h4 id="1- 题目 -2"><a href="#1- 题目 -2" class="headerlink" title="1. 题目"></a>1. 题目</h4><p> 附件 (camera_pose.txt) 保存的是每个时刻相机的位姿 ($R^i$, $t^i$)，文件中每一行代表的是第𝑖<br>时刻旋转与平移量的各个元素，排列如下</p>
 <p>若已知该相机在做圆周运动，请分析该相机位姿表示方式是 world-to-body 还是 body-toworld?<br>并编写程序将相机每个时刻三个坐标轴进行可视化</p>
 <h4 id="四、"><a href="# 四、" class="headerlink" title="四、"></a>四、</h4>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/11/04/slam-hw-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Nathan Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/04/slam-hw-1/" class="post-title-link" itemprop="url">slam-hw-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2021-11-04 17:36:33 / 修改時間：21:19:54" itemprop="dateCreated datePublished" datetime="2021-11-04T17:36:33+08:00">2021-11-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
       
     </div>
 
