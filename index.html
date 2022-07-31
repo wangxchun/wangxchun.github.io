@@ -233,7 +233,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/11/06/machineLearning-1/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/07/29/yanjiu-1-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -246,7 +246,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/11/06/machineLearning-1/" class="post-title-link" itemprop="url">机器学习算法 --（1）线性回归和非线性回归</a>
+          <a href="/2022/07/29/yanjiu-1-1/" class="post-title-link" itemprop="url">硕士研究 1-1</a>
         </h2>
 
         <div class="post-meta-container">
@@ -257,24 +257,15 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2020-11-06 10:42:55" itemprop="dateCreated datePublished" datetime="2020-11-06T10:42:55+08:00">2020-11-06</time>
+      <time title="創建時間：2022-07-29 21:02:03" itemprop="dateCreated datePublished" datetime="2022-07-29T21:02:03+08:00">2022-07-29</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-11-08 15:32:27" itemprop="dateModified" datetime="2021-11-08T15:32:27+08:00">2021-11-08</time>
+        <time title="修改時間：2022-07-31 15:37:55" itemprop="dateModified" datetime="2022-07-31T15:37:55+08:00">2022-07-31</time>
       </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">大学课程-机器学习</span></a>
-        </span>
-    </span>
 
   
 </div>
@@ -286,189 +277,552 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-数据挖掘和机器学习的关系"><a href="#1-数据挖掘和机器学习的关系" class="headerlink" title="1. 数据挖掘和机器学习的关系"></a>1. 数据挖掘和机器学习的关系</h4><h4 id="2-训练数据-vs-验证数据-vs-测试数据"><a href="#2-训练数据-vs-验证数据-vs-测试数据" class="headerlink" title="2. 训练数据 vs 验证数据 vs 测试数据"></a>2. 训练数据 vs 验证数据 vs 测试数据</h4><h4 id="3-监督学习-vs-无监督学习-vs-半监督学习"><a href="#3-监督学习-vs-无监督学习-vs-半监督学习" class="headerlink" title="3. 监督学习 vs 无监督学习 vs 半监督学习"></a>3. 监督学习 vs 无监督学习 vs 半监督学习</h4><h4 id="4-回归-vs-分类-vs-聚类"><a href="#4-回归-vs-分类-vs-聚类" class="headerlink" title="4. 回归 vs 分类 vs 聚类"></a>4. 回归 vs 分类 vs 聚类</h4><h3 id="一、一元线性回归概念"><a href="#一、一元线性回归概念" class="headerlink" title="一、一元线性回归概念"></a>一、一元线性回归概念</h3><p>回归：高尔顿提出<br>回归分析：建立方程模拟两个或多个变量之间如何关联<br>一个线性回归：包含一个自变量和一个应变量，用一条直线来模拟<br>一元线性回归的模型：$h_\theta (x) = \theta_0 + \theta_1x$<br>$\theta_0$ 是截距，$\theta_1$ 是斜率<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/06/machineLearning-1/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2020/11/11/machineLearning-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Nathan Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/11/11/machineLearning-2/" class="post-title-link" itemprop="url">机器学习算法 --（2）逻辑回归</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2020-11-11 16:59:25" itemprop="dateCreated datePublished" datetime="2020-11-11T16:59:25+08:00">2020-11-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 12:40:18" itemprop="dateModified" datetime="2021-07-01T12:40:18+08:00">2021-07-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">大学课程-机器学习</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="一、预测函数"><a href="#一、预测函数" class="headerlink" title="一、预测函数"></a>一、预测函数</h3><p>预测函数 $h_\theta (x)=g (\theta^Tx)$<br>$\displaystyle g (x)={1 \over {1+e^{-x}}}$ $\quad \quad$ $\displaystyle h_\theta (x)={1 \over {1+e^{-\theta^Tx}}}$<br><img src="/2020/11/11/machineLearning-2/photo1.jpg" alt></p>
-<h3 id="二、代价函数"><a href="#二、代价函数" class="headerlink" title="二、代价函数"></a>二、代价函数</h3><p>线性回归：$\displaystyle J (\theta)={1 \over m}\sum_{i=0}^m {1 \over 2}(h_\theta (x_i)-y_i)^2$<br>逻辑回归：$cost (h_\theta (x), y)=<br>\begin {cases}<br>-log (h_\theta (x)),  &amp; \text {if $y=1$} \\<br>-log (1-h_\theta (x)), &amp; \text {if $y=0$}<br>\end {cases}$</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/11/machineLearning-2/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/10/money-management-basic-concept/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Nathan Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/10/money-management-basic-concept/" class="post-title-link" itemprop="url">社會小菜雞 理財基本觀念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-05-10 14:05:11" itemprop="dateCreated datePublished" datetime="2021-05-10T14:05:11+08:00">2021-05-10</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 15:43:28" itemprop="dateModified" datetime="2021-07-01T15:43:28+08:00">2021-07-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/" itemprop="url" rel="index"><span itemprop="name">生活-投資理財</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="一、月底記帳法和支出管理"><a href="#一、月底記帳法和支出管理" class="headerlink" title="一、月底記帳法和支出管理"></a>一、月底記帳法和支出管理</h3><h4 id="1-月底記帳法"><a href="#1-月底記帳法" class="headerlink" title="1. 月底記帳法"></a>1. 月底記帳法</h4><p>每個月底記錄：<br>(1) 資產市值<br>(2) 收入<br>(3) 負債<br>(4) 支出<br>就可以算出自己净值 (净值 = 資產 – 負債) 的變化</p>
+          <p>安装流程，主要参考这两篇，但是安装 python3.6 会有问题，于是我安装 python3.8<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/hehedadaq/article/details/109012048">安装 mujoco, mujoco-py,gym [all],robosuite</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/captainAAAjohn/article/details/123024952">这篇主要参考 dm_control 的安装</a></p>
+<h4 id="安装 -tf-gpu"><a href="# 安装 -tf-gpu" class="headerlink" title="安装 tf-gpu"></a>安装 tf-gpu</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">conda create -n mujoco_38 python==<span class="number">3.8</span></span><br><span class="line">conda activate mujoco_38</span><br><span class="line"><span class="comment"># 注意，一定要用 conda 来安装，而不是 pip，conda 会帮你安装相关依赖。依赖冲突后面我们再解决</span></span><br><span class="line">conda install tensorflow-gpu</span><br><span class="line"></span><br><span class="line">python</span><br><span class="line"><span class="comment"># 进入 python 程序</span></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">sess = tf.Session ()</span><br><span class="line"><span class="comment"># 若上述命名执行没有报错，则说明 tensorflow 安装成功。</span></span><br></pre></td></tr></table></figure>
+<h4 id="安装 -mujoco210"><a href="# 安装 -mujoco210" class="headerlink" title="安装 mujoco210"></a>安装 mujoco210</h4><p><a target="_blank" rel="noopener" href="http://www.roboti.us/license.html">(1) 下载 license—mjkey.txt</a><br><a target="_blank" rel="noopener" href="http://www.roboti.us/download.html">(2) 下载 mujoco210</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#(3) 在 home 目录下创建隐藏文件夹 mujoco，并将刚才下载好的安装包解压到这个文件夹下</span></span><br><span class="line">mkdir ~/.mujoco</span><br><span class="line">cp mujoco210_linux.<span class="built_in">zip</span> ~/.mujoco</span><br><span class="line">cd ~/.mujoco</span><br><span class="line">unzip mujoco210_linux.<span class="built_in">zip</span> </span><br><span class="line"><span class="comment"># 注意，这时候要修改 mujoco210_linux 文件夹名称为 mujoco210</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#(4) 将获得的 mjkey.txt 放到～/.mujoco 和～/.mujoco/mujoco210/bin 下</span></span><br><span class="line">cp mjkey.txt ~/.mujoco</span><br><span class="line">cp mjkey.txt ~/.mujoco/mujoco210/<span class="built_in">bin</span></span><br><span class="line"><span class="comment">#(5) 添加环境变量，打开～/.bashrc 文件，将以下命令添加进去</span></span><br><span class="line">vim ~/.bashrc</span><br><span class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.mujoco/mujoco210/<span class="built_in">bin</span></span><br><span class="line">export LD_LIBRARY_PATH=~/.mujoco/mujoco210/<span class="built_in">bin</span>$&#123;LID_LIBRARY_PATH:+:$&#123;LD_LIBRARY_PATH&#125;&#125;</span><br><span class="line">export MUJOCO_KEY_PATH=~/.mujoco$&#123;MUJOCO_KEY_PATH&#125;</span><br><span class="line">source ~/.bashrc</span><br><span class="line"><span class="comment">#(6) 运行测试</span></span><br><span class="line">cd ~/.mujoco/mujoco210/<span class="built_in">bin</span></span><br><span class="line">./simulate ../model/humanoid.xml</span><br></pre></td></tr></table></figure>
+<h4 id="安装 -mujoco-py"><a href="# 安装 -mujoco-py" class="headerlink" title="安装 mujoco_py"></a>安装 mujoco_py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 同样在 mujoco_38 环境中</span></span><br><span class="line"><span class="comment">#(1) 先在 github 上下载源码（或是使用 wget）</span></span><br><span class="line">git clone https://github.com/openai/mujoco-py.git</span><br><span class="line"><span class="comment">#(2) pip 国内源</span></span><br><span class="line">cd ~ &amp;&amp; mkdir .pip</span><br><span class="line">cd .pip &amp;&amp; vim pip.conf</span><br><span class="line"><span class="comment"># 加入这四句话</span></span><br><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url = http://pypi.douban.com/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.douban.com</span><br><span class="line">timeout = <span class="number">6000</span></span><br><span class="line"><span class="comment"># 编译</span></span><br><span class="line">cd ~/.mujoco/mujoco-py-master</span><br><span class="line">pip install -r requirement.txt -i  http://pypi.douban.com/simple  --trusted-host pypi.douban.com</span><br><span class="line">pip install -r requirement.dev.txt -i  http://pypi.douban.com/simple  --trusted-host pypi.douban.com</span><br><span class="line">python setup.py install </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 常见错误 (1) gcc error:</span></span><br><span class="line"><span class="comment"># 试了网上很多解决办法，包括 mujoco_py 的 github 官方解决办法都不行，试了如下方法，完美解决</span></span><br><span class="line">sudo apt-get update -q</span><br><span class="line">sudo DEBIAN_FRONTEND=noninteractive apt-get install -y curl  libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev </span><br><span class="line">sudo apt-get clean</span><br><span class="line">rm -rf /var/lib/apt/lists/* </span><br><span class="line"></span><br><span class="line"><span class="comment"># 常见错误 (2) No such file or directory: ‘patchelf’</span></span><br><span class="line">conda install -y patchelf</span><br></pre></td></tr></table></figure>
+<h4 id="安装 -gym-all"><a href="# 安装 -gym-all" class="headerlink" title="安装 gym [all]"></a>安装 gym [all]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法 1</span></span><br><span class="line">git clone https://github.com/openai/gym.git</span><br><span class="line">python setup.py install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法 2</span></span><br><span class="line">pip install gym [<span class="built_in">all</span>] --no-deps mujoco_py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法 3</span></span><br><span class="line">conda install gym</span><br></pre></td></tr></table></figure>
+<h4 id="安装 -dm-control"><a href="# 安装 -dm-control" class="headerlink" title="安装 dm_control"></a>安装 dm_control</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#wget https://github.com/deepmind/dm_control.git</span></span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">python setup.py install</span><br><span class="line"><span class="comment"># 遇到 GL/glew.h 问题需要</span></span><br><span class="line">sudo apt-get install libosmesa6-dev</span><br><span class="line"><span class="comment"># 遇到 absl 问题</span></span><br><span class="line">pip install absl-py <span class="comment"># 然后重新安装 dm_control</span></span><br></pre></td></tr></table></figure>
+<h4 id="安装 -d4rl"><a href="# 安装 -d4rl" class="headerlink" title="安装 d4rl"></a>安装 d4rl</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install git+https://github.com/rail-berkeley/d4rl@master<span class="comment">#egg=d4rl</span></span><br></pre></td></tr></table></figure>
+<h3 id="补充注意事项"><a href="# 补充注意事项" class="headerlink" title="补充注意事项"></a>补充注意事项</h3><h4 id="x86-64-amd64"><a href="#x86-64-amd64" class="headerlink" title="x86_64 = amd64"></a>x86_64 = amd64</h4><h4 id="python- 和 -tensorflow- 和各个软件之间都会有版本问题，要注意"><a href="#python- 和 -tensorflow- 和各个软件之间都会有版本问题，要注意" class="headerlink" title="python 和 tensorflow 和各个软件之间都会有版本问题，要注意"></a>python 和 tensorflow 和各个软件之间都会有版本问题，要注意</h4><h4 id="Anaconda- 创建环境、删除环境、激活环境、退出环境"><a href="#Anaconda- 创建环境、删除环境、激活环境、退出环境" class="headerlink" title="Anaconda 创建环境、删除环境、激活环境、退出环境"></a>Anaconda 创建环境、删除环境、激活环境、退出环境</h4><p>conda create -n py36 python=3.6<br>conda remove -n py36 —all<br>conda activate py36<br>conda deactivate   </p>
+<h4 id="anaconda- 中的指定虚拟环境 -python- 版本升级"><a href="#anaconda- 中的指定虚拟环境 -python- 版本升级" class="headerlink" title="anaconda 中的指定虚拟环境 python 版本升级"></a>anaconda 中的指定虚拟环境 python 版本升级 </h4><p>conda install python=3.6<br> 但会有 package 匹配的问题，不如直接创立一个新环境</p>
+<h4 id="tensorflow1- 和 -2- 的不同"><a href="#tensorflow1- 和 -2- 的不同" class="headerlink" title="tensorflow1 和 2 的不同"></a>tensorflow1 和 2 的不同</h4><p>AttributeError: module ‘tensorflow’ has no attribute ‘Session’</p>
+<h4 id="参数种类"><a href="# 参数种类" class="headerlink" title="参数种类"></a>参数种类</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/brucewong0516/article/details/78985353">【python】函数调用的参数规则、位置参数、关键参数、任意参数与解包</a></p>
+<h4 id="类的实例化"><a href="# 类的实例化" class="headerlink" title="类的实例化"></a>类的实例化</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34659777/article/details/104233039?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-104233039-blog-105192611.pc_relevant_multi_platform_whitelistv1&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-104233039-blog-105192611.pc_relevant_multi_platform_whitelistv1&amp;utm_relevant_index=1">【Python】Missing 1 required positional argument 解决方案</a></p>
+<h4 id="python-kwargs- 传递多个参数"><a href="#python-kwargs- 传递多个参数" class="headerlink" title="python kwargs 传递多个参数"></a>python kwargs 传递多个参数 </h4><h4 id="PackagesNotFoundError-The-following-packages-are-not-available-from-current-channels"><a href="#PackagesNotFoundError-The-following-packages-are-not-available-from-current-channels" class="headerlink" title="PackagesNotFoundError: The following packages are not available from current channels"></a>PackagesNotFoundError: The following packages are not available from current channels</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45552562/article/details/109668589"> 一些解决办法</a></p>
+<h4 id="linux- 下查看硬件架构"><a href="#linux- 下查看硬件架构" class="headerlink" title="linux 下查看硬件架构"></a>linux 下查看硬件架构</h4><p>uname -m</p>
+<h4 id="ubuntu- 安装 -tar-gz- 文件"><a href="#ubuntu- 安装 -tar-gz- 文件" class="headerlink" title="ubuntu 安装 tar.gz 文件"></a>ubuntu 安装 tar.gz 文件</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf FileName.tar.gz</span><br><span class="line">cd FileName</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<h3 id="犯的一些愚蠢错误"><a href="# 犯的一些愚蠢错误" class="headerlink" title="犯的一些愚蠢错误"></a>犯的一些愚蠢错误 </h3><p> 下载安装成 windows 的版本</p>
+<h3 id="参考"><a href="# 参考" class="headerlink" title="参考"></a>参考 </h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/77020893">Ubuntu 18.04 强化学习 RL gym mujoco 环境配置</a><br><a target="_blank" rel="noopener" href="https://github.com/openai/mujoco-py/issues/323">Installation error: “libgcrypt.so.11: cannot open shared object file”</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44420419/article/details/116231500"> 安装 mujoco_py 遇到的一些问题与解决方法 </a><br><a target="_blank" rel="noopener" href="https://github.com/openai/mujoco-py/issues/90">fatal error: GL/osmesa.h: No such file or directory</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/23b58f66e6d9">ImportError:lib<em>*</em>.so—cannot open shared object file: No such file or directory</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/124001142"> 安装 Mujoco+Gym 踩的坑</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hehedadaq/article/details/109012048">fatal error: GL/osmesa.h: No such file or directory</a><br><a target="_blank" rel="noopener" href="https://github.com/openai/mujoco-py/issues/269">error while importing mujoco_py into python</a><br>/home/avi/miniconda3/compiler_compat/ld: cannot find -lmujoco150<br>/home/avi/miniconda3/compiler_compat/ld: cannot find -lglewosmesa</p>
+<p>PackagesNotFoundError: The following packages are not available from current channels:</p>
 <ul>
-<li>想理財之前先理債</li>
-<li>緊急預備金 (安全存款)：15-30 萬</li>
-<li>小心被動支出<br>常見被動支出：第四台、手機吃到飽、多餘的成長、循環利息、免費試用</li></ul>
+<li>python==3.6</li>
+</ul>
+<p>conda config —append channels conda-forge</p>
+<p><a target="_blank" rel="noopener" href="https://pypi.org/project/mujoco-py/2.0.2.9/#files"></a></p>
+<p>conda update python</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/brucewong0516/article/details/78985353"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/07/05/rl-baseline-2-result-plotter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Nathan Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nathan自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/05/rl-baseline-2-result-plotter/" class="post-title-link" itemprop="url">rl-baseline-2-result_plotter</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-07-05 11:34:42" itemprop="dateCreated datePublished" datetime="2022-07-05T11:34:42+08:00">2022-07-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2022-07-31 00:51:27" itemprop="dateModified" datetime="2022-07-31T00:51:27+08:00">2022-07-31</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/07/05/rl-baseline-2-run/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Nathan Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nathan自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/05/rl-baseline-2-run/" class="post-title-link" itemprop="url">openai baselines/run.py 分析学习</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-07-05 11:34:23" itemprop="dateCreated datePublished" datetime="2022-07-05T11:34:23+08:00">2022-07-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2022-07-31 00:51:27" itemprop="dateModified" datetime="2022-07-31T00:51:27+08:00">2022-07-31</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/07/05/rl-baseline-1-logger/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Nathan Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nathan自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/05/rl-baseline-1-logger/" class="post-title-link" itemprop="url">openai baselines/logger.py 分析学习</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-07-05 11:34:15" itemprop="dateCreated datePublished" datetime="2022-07-05T11:34:15+08:00">2022-07-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2022-07-31 00:51:27" itemprop="dateModified" datetime="2022-07-31T00:51:27+08:00">2022-07-31</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="python3- 自动继承 -object- 这个 -class"><a href="#python3- 自动继承 -object- 这个 -class" class="headerlink" title="python3 自动继承 object 这个 class"></a>python3 自动继承 object 这个 class</h3><p>[‘<strong>class</strong>‘, ‘<strong>delattr</strong>‘, ‘<strong>dir</strong>‘, ‘<strong>doc</strong>‘, ‘<strong>eq</strong>‘, ‘<strong>format</strong>‘, ‘<strong>ge</strong>‘, ‘<strong>getattribute</strong>‘, ‘<strong>gt</strong>‘, ‘<strong>hash</strong>‘, ‘<strong>init</strong>‘, ‘<strong>le</strong>‘, ‘<strong>lt</strong>‘, ‘<strong>ne</strong>‘, ‘<strong>new</strong>‘, ‘<strong>reduce</strong>‘, ‘<strong>reduce_ex</strong>‘, ‘<strong>repr</strong>‘, ‘<strong>setattr</strong>‘, ‘<strong>sizeof</strong>‘, ‘<strong>str</strong>‘, ‘<strong>subclasshook</strong>‘]</p>
+<p>（待更：这些 attribute 的用法）</p>
+<h3 id="一个 -object- 就是某个 -class- 的 -instance"><a href="# 一个 -object- 就是某个 -class- 的 -instance" class="headerlink" title="一个 object 就是某个 class 的 instance"></a>一个 object 就是某个 class 的 instance</h3><h3 id="怎么写一个 -logger- 模块"><a href="# 怎么写一个 -logger- 模块" class="headerlink" title="怎么写一个 logger 模块"></a>怎么写一个 logger 模块</h3><p><a target="_blank" rel="noopener" href="https://editor.leonh.space/2022/python-log/">python log 从小白到入门</a></p>
+<h3 id="Python-isinstance- 函数：判断 -A- 是否是 -B- 类型，输出 -True- 或 -False"><a href="#Python-isinstance- 函数：判断 -A- 是否是 -B- 类型，输出 -True- 或 -False" class="headerlink" title="Python isinstance () 函数：判断 A 是否是 B 类型，输出 True 或 False"></a>Python isinstance () 函数：判断 A 是否是 B 类型，输出 True 或 False</h3><p>isinstance () 与 type () 区别：<br>type () 不会认为子类是一种父类类型，不考虑继承关系。<br>isinstance () 会认为子类是一种父类类型，考虑继承关系。</p>
+<h3 id="四种 -python- 底线命名"><a href="# 四种 -python- 底线命名" class="headerlink" title="四种 python 底线命名"></a>四种 python 底线命名 </h3><h4 id="1-foo"><a href="#1-foo" class="headerlink" title="1.foo_"></a>1.foo_</h4><p> 避免与 Python 的 built-in keywords 或 built-in functions 取一样的名字</p>
+<h4 id="2-foo"><a href="#2-foo" class="headerlink" title="2._foo"></a>2._foo</h4><p>不希望他直接被访问</p>
+<h4 id="3-foo"><a href="#3-foo" class="headerlink" title="3.foo"></a>3.<strong>foo</strong></h4><p>Never invent such names; only use them as documented.</p>
+<h4 id="4-foo"><a href="#4-foo" class="headerlink" title="4.__foo"></a>4.__foo</h4><p>you have attributes that you do not want subclasses to use<br><a target="_blank" rel="noopener" href="https://medium.com/ai% E5%8F%8D% E6%96%97% E5%9F%8E/python-% E5% BA%95% E7% B7%9A-% E4% BB%8B% E7% B4% B9-% E8% BD%89% E9%8C%84-5b0349efdf52">(Python)<strong>底線 </strong> 介紹！(轉錄)</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/07/05/baseline-1-logger/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Nathan Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nathan自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/05/baseline-1-logger/" class="post-title-link" itemprop="url">baseline-1-logger</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-07-05 11:34:04" itemprop="dateCreated datePublished" datetime="2022-07-05T11:34:04+08:00">2022-07-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2022-07-31 00:51:27" itemprop="dateModified" datetime="2022-07-31T00:51:27+08:00">2022-07-31</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/05/07/machine-learning-practice-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Nathan Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nathan自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/05/07/machine-learning-practice-1/" class="post-title-link" itemprop="url">机器学习实战 --（1）regression</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-05-07 20:36:29" itemprop="dateCreated datePublished" datetime="2022-05-07T20:36:29+08:00">2022-05-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2022-05-08 15:37:51" itemprop="dateModified" datetime="2022-05-08T15:37:51+08:00">2022-05-08</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、前言"><a href="# 一、前言" class="headerlink" title="一、前言"></a> 一、前言 </h3><p>Objectives:</p>
+<ul>
+<li>Solve a regression problem with deep neural networks (DNN).</li>
+<li>Understand basic DNN training tips.</li>
+<li>Familiarize yourself with PyTorch.</li>
+</ul>
+<h3 id="二、引入 -python- 库"><a href="# 二、引入 -python- 库" class="headerlink" title="二、引入 python 库"></a> 二、引入 python 库 </h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;# Import packages&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Numerical Operations</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reading/Writing Data</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="comment"># For Progress Bar</span></span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"></span><br><span class="line"><span class="comment"># Pytorch</span></span><br><span class="line"><span class="keyword">import</span> torch </span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> Dataset, DataLoader, random_split</span><br><span class="line"></span><br><span class="line"><span class="comment"># For plotting learning curve</span></span><br><span class="line"><span class="keyword">from</span> torch.utils.tensorboard <span class="keyword">import</span> SummaryWriter</span><br></pre></td></tr></table></figure>
+<h3 id="三、Utility-Functions"><a href="# 三、Utility-Functions" class="headerlink" title="三、Utility Functions"></a> 三、Utility Functions</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">same_seed</span> (<span class="params">seed</span>):</span> </span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;Fixes random number generator seeds for reproducibility.&#x27;&#x27;&#x27;</span></span><br><span class="line">    torch.backends.cudnn.deterministic = <span class="literal">True</span></span><br><span class="line">    torch.backends.cudnn.benchmark = <span class="literal">False</span></span><br><span class="line">    np.random.seed (seed)</span><br><span class="line">    torch.manual_seed (seed)</span><br><span class="line">    <span class="keyword">if</span> torch.cuda.is_available ():</span><br><span class="line">        torch.cuda.manual_seed_all (seed)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train_valid_split</span> (<span class="params">data_set, valid_ratio, seed</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;Split provided training data into training set and validation set&#x27;&#x27;&#x27;</span></span><br><span class="line">    valid_set_size = <span class="built_in">int</span> (valid_ratio * <span class="built_in">len</span> (data_set)) </span><br><span class="line">    train_set_size = <span class="built_in">len</span> (data_set) - valid_set_size</span><br><span class="line">    train_set, valid_set = random_split (data_set, [train_set_size, valid_set_size], generator=torch.Generator ().manual_seed (seed))</span><br><span class="line">    <span class="keyword">return</span> np.array (train_set), np.array (valid_set)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">predict</span> (<span class="params">test_loader, model, device</span>):</span></span><br><span class="line">    model.<span class="built_in">eval</span> () <span class="comment"># Set your model to evaluation mode.</span></span><br><span class="line">    preds = []</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> tqdm (test_loader):</span><br><span class="line">        x = x.to (device)                        </span><br><span class="line">        <span class="keyword">with</span> torch.no_grad ():                   </span><br><span class="line">            pred = model (x)                     </span><br><span class="line">            preds.append (pred.detach ().cpu ())   </span><br><span class="line">    preds = torch.cat (preds, dim=<span class="number">0</span>).numpy ()  </span><br><span class="line">    <span class="keyword">return</span> preds</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> 设置 torch.backends.cudnn.benchmark=<span class="literal">True</span> 将会让程序在开始时花费一点额外时间，为整个网络的每个卷积层搜索最适合它的卷积实现算法，进而实现网络的加速。适用场景是网络结构固定（不是动态变化的），网络的输入形状（包括 batch size，图片大小，输入的通道）是不变的，其实也就是一般情况下都比较适用。反之，如果卷积层的设置一直变化，将会导致程序不停地做优化，反而会耗费更多的时间。</span><br><span class="line"></span><br><span class="line">torch.backends.cudnn.deterministic=<span class="literal">True</span></span><br><span class="line"> 每次返回的卷积算法将是确定的，即默认算法。cudnn 中包含很多卷积算法。基于 GEMM (General Matrix Multiply) 的，基于 FFT 的，基于 Winograd 算法的等等。</span><br><span class="line"></span><br><span class="line"> 设置 seed () 里的数字就相当于设置了一个盛有随机数的 “聚宝盆”，一个数字代表一个 “聚宝盆”，当我们在 seed（）的括号里设置相同的 seed，“聚宝盆” 就是一样的，从里面拿出的随机数就会相同。</span><br><span class="line"></span><br><span class="line">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;rng&lt;/span&gt; ():&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;range&lt;/span&gt; (&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        np.random.seed (&lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; (np.random.rand (&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rng ()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;[&lt;span class=&quot;number&quot;&gt;0.69646919&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.28613933&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.22685145&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.55131477&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [&lt;span class=&quot;number&quot;&gt;0.69646919&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.28613933&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.22685145&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.55131477&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [&lt;span class=&quot;number&quot;&gt;0.69646919&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.28613933&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.22685145&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.55131477&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [&lt;span class=&quot;number&quot;&gt;0.69646919&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.28613933&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.22685145&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.55131477&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [&lt;span class=&quot;number&quot;&gt;0.69646919&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.28613933&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.22685145&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.55131477&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;rng_n&lt;/span&gt; ():&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    np.random.seed (&lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;range&lt;/span&gt; (&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; (np.random.rand (&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rng_n ()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;[&lt;span class=&quot;number&quot;&gt;0.69646919&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.28613933&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.22685145&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.55131477&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [&lt;span class=&quot;number&quot;&gt;0.71946897&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.42310646&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.9807642&lt;/span&gt;  &lt;span class=&quot;number&quot;&gt;0.68482974&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [&lt;span class=&quot;number&quot;&gt;0.4809319&lt;/span&gt;  &lt;span class=&quot;number&quot;&gt;0.39211752&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.34317802&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.72904971&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [&lt;span class=&quot;number&quot;&gt;0.43857224&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.0596779&lt;/span&gt;  &lt;span class=&quot;number&quot;&gt;0.39804426&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.73799541&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [&lt;span class=&quot;number&quot;&gt;0.18249173&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.17545176&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.53155137&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0.53182759&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</span><br><span class="line">&lt;p&gt; 在神经网络中，参数默认是进行随机初始化的。如果不设置的话每次训练时的初始化都是随机的，导致结果不确定。如果设置初始化，则每次初始化都是固定的。&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; args.seed &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;None&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    random.seed (args.seed) &lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    torch.manual_seed (args.seed)  &lt;span class=&quot;comment&quot;&gt;# 为 CPU 设置种子用于生成随机数，以使得结果是确定的   　　 torch.cuda.manual_seed (args.seed) #为当前 GPU 设置随机种子；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    cudnn.deterministic = &lt;span class=&quot;literal&quot;&gt;True&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 如果使用多个 GPU，应该使用 torch.cuda.manual_seed_all () 为所有的 GPU 设置种子。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;</span><br><span class="line">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;torch.utils.data.random_split (dataset, lengths, generator=&amp;lt;torch._C.Generator &lt;span class=&quot;built_in&quot;&gt;object&lt;/span&gt;&amp;gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</span><br><span class="line">&lt;p&gt; 在 CPU 中设置生成随机数的种子，并返回一个 torch.Generator 对象。当设置的种子固定下来的时候，之后依次 pytorch 生成的随机数序列也被固定下来。需要注意的是当只调用 torch.manual_seed () 一次时并不能生成相同的随机数序列。如果想要得到相同的随机数序列就需要每次产生随机数的时候都要调用一下 torch.manual_seed ()。&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; torch&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;torch.manual_seed (&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;torch._C.Generator &lt;span class=&quot;built_in&quot;&gt;object&lt;/span&gt; at &lt;span class=&quot;number&quot;&gt;0x000001EB8F3A1918&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; (torch.randn (&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tensor ([[&lt;span class=&quot;number&quot;&gt;0.3923&lt;/span&gt;, -&lt;span class=&quot;number&quot;&gt;0.2236&lt;/span&gt;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [-&lt;span class=&quot;number&quot;&gt;0.3195&lt;/span&gt;, -&lt;span class=&quot;number&quot;&gt;1.2050&lt;/span&gt;]])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; (torch.randn (&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tensor ([[&lt;span class=&quot;number&quot;&gt;1.0445&lt;/span&gt;, -&lt;span class=&quot;number&quot;&gt;0.6332&lt;/span&gt;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [&lt;span class=&quot;number&quot;&gt;0.5731&lt;/span&gt;,  &lt;span class=&quot;number&quot;&gt;0.5409&lt;/span&gt;]])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/357075502&quot;&gt;Pytorch：model.train () 和 model.eval () 用法和区别 &lt;/a&gt;&lt;/p&gt;</span><br><span class="line">&lt;h3 id=&quot; 四、Dataset”&quot;&gt;&lt;a href=&quot;# 四、Dataset”&quot; class=&quot;headerlink&quot; title=&quot; 四、Dataset”&quot;&gt;&lt;/a&gt; 四、Dataset”&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;COVID19Dataset&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;Dataset&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;&amp;#x27;&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;    x: Features.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;    y: Targets, if none, do prediction.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;    &amp;#x27;&amp;#x27;&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;__init__&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;self, x, y=&lt;span class=&quot;literal&quot;&gt;None&lt;/span&gt;&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; y &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;None&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.y = y&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.y = torch.FloatTensor (y)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.x = torch.FloatTensor (x)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;__getitem__&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;self, idx&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; self.y &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;None&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; self.x [idx]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; self.x [idx], self.y [idx]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;__len__&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;self&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt; (self.x)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</span><br><span class="line">&lt;h3 id=&quot; 五、Neural-Network-Model&quot;&gt;&lt;a href=&quot;# 五、Neural-Network-Model&quot; class=&quot;headerlink&quot; title=&quot; 五、Neural Network Model&quot;&gt;&lt;/a&gt; 五、Neural Network Model&lt;/h3&gt;&lt;p&gt;Try out different model architectures by modifying the class below.&lt;/p&gt;</span><br><span class="line">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;My_Model&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;nn.Module&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;__init__&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;self, input_dim&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;super&lt;/span&gt; (My_Model, self).__init__()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;# &lt;span class=&quot;doctag&quot;&gt;TODO:&lt;/span&gt; modify model&amp;#x27;s structure, be aware of dimensions. &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.layers = nn.Sequential (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            nn.Linear (input_dim, &lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            nn.ReLU (),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            nn.Linear (&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            nn.ReLU (),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            nn.Linear (&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;forward&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;self, x&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        x = self.layers (x)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        x = x.squeeze (&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;# (B, 1) -&amp;gt; (B)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; x&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</span><br><span class="line">&lt;p&gt;Pytorch Tensor 的通道排序：[batch, channel, height, weight]&lt;br&gt;&lt;a href=&quot;https://pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html&quot;&gt;pytorch lenet&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/jokerxsy/article/details/108614661&quot;&gt;nn.Conv1d\nn.Conv2d 以及 groups\dilation 参数的理解 &lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/p/c1232e47661f&quot;&gt;PyTorch 教程 - 3：PyTorch 中神经网络的构建与训练基础 &lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/qq_26442553/article/details/81775449&quot;&gt;Python 多继承与 super 使用详解 &lt;/a&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;img src=&quot;./machineLearning-1/1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/york1996/article/details/81949843&quot;&gt;PyTorch 中 view 的用法 &lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27382990&quot;&gt; 图像基本操作 torchvision.transforms&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt; ():&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    transform = transforms.Compose (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [transforms.ToTensor (),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         transforms.Normalize ((&lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;), (&lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;))])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 50000 张训练图片 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 第一次使用时要将 download 设置为 True 才会自动去下载数据集 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    train_set = torchvision.datasets.CIFAR10 (root=&lt;span class=&quot;string&quot;&gt;&amp;#x27;./data&amp;#x27;&lt;/span&gt;, train=&lt;span class=&quot;literal&quot;&gt;True&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                             download=&lt;span class=&quot;literal&quot;&gt;False&lt;/span&gt;, transform=transform)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    train_loader = torch.utils.data.DataLoader (train_set, batch_size=&lt;span class=&quot;number&quot;&gt;36&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                               shuffle=&lt;span class=&quot;literal&quot;&gt;True&lt;/span&gt;, num_workers=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 10000 张验证图片 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 第一次使用时要将 download 设置为 True 才会自动去下载数据集 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    val_set = torchvision.datasets.CIFAR10 (root=&lt;span class=&quot;string&quot;&gt;&amp;#x27;./data&amp;#x27;&lt;/span&gt;, train=&lt;span class=&quot;literal&quot;&gt;False&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                           download=&lt;span class=&quot;literal&quot;&gt;False&lt;/span&gt;, transform=transform)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    val_loader = torch.utils.data.DataLoader (val_set, batch_size=&lt;span class=&quot;number&quot;&gt;5000&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                             shuffle=&lt;span class=&quot;literal&quot;&gt;False&lt;/span&gt;, num_workers=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    val_data_iter = &lt;span class=&quot;built_in&quot;&gt;iter&lt;/span&gt; (val_loader)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    val_image, val_label = val_data_iter.&lt;span class=&quot;built_in&quot;&gt;next&lt;/span&gt; ()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</span><br><span class="line">&lt;p&gt;&lt;img src=&quot;./machineLearning-1/photo2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</span><br><span class="line">&lt;h3 id=&quot; 六、Feature-Selection&quot;&gt;&lt;a href=&quot;# 六、Feature-Selection&quot; class=&quot;headerlink&quot; title=&quot; 六、Feature Selection&quot;&gt;&lt;/a&gt; 六、Feature Selection&lt;/h3&gt;&lt;p&gt;Choose features you deem useful by modifying the function below.&lt;/p&gt;</span><br><span class="line">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;select_feat&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;train_data, valid_data, test_data, select_all=&lt;span class=&quot;literal&quot;&gt;True&lt;/span&gt;&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;&amp;#x27;&amp;#x27;Selects useful features to perform regression&amp;#x27;&amp;#x27;&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    y_train, y_valid = train_data [:,-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;], valid_data [:,-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    raw_x_train, raw_x_valid, raw_x_test = train_data [:,:-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;], valid_data [:,:-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;], test_data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; select_all:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        feat_idx = &lt;span class=&quot;built_in&quot;&gt;list&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;range&lt;/span&gt; (raw_x_train.shape [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        feat_idx = [&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;# &lt;span class=&quot;doctag&quot;&gt;TODO:&lt;/span&gt; Select suitable feature columns.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; raw_x_train [:,feat_idx], raw_x_valid [:,feat_idx], raw_x_test [:,feat_idx], y_train, y_valid&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</span><br><span class="line">&lt;h3 id=&quot; 六、Training-Loop&quot;&gt;&lt;a href=&quot;# 六、Training-Loop&quot; class=&quot;headerlink&quot; title=&quot; 六、Training Loop&quot;&gt;&lt;/a&gt; 六、Training Loop&lt;/h3&gt;&lt;p&gt;(1) batchsize：批大小。在深度学习中，一般采用 SGD 训练，即每次训练在训练集中取 batchsize 个样本训练；&lt;br&gt;(2) iteration：1 个 iteration 等于使用 batchsize 个样本训练一次；&lt;br&gt;(3) epoch：1 个 epoch 等于使用训练集中的全部样本训练一次；&lt;/p&gt;</span><br><span class="line">&lt;p&gt; 举个例子，训练集有 1000 个样本，batchsize=10，那么，&lt;br&gt; 训练完整个样本集需要：100 次 iteration，1 次 epoch。&lt;/p&gt;</span><br><span class="line">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;trainer&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;train_loader, valid_loader, model, config, device&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    criterion = nn.MSELoss (reduction=&lt;span class=&quot;string&quot;&gt;&amp;#x27;mean&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;# Define your loss function, do not modify this.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# Define your optimization algorithm. &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# &lt;span class=&quot;doctag&quot;&gt;TODO:&lt;/span&gt; Please check https://pytorch.org/docs/stable/optim.html to get more available algorithms.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# &lt;span class=&quot;doctag&quot;&gt;TODO:&lt;/span&gt; L2 regularization (optimizer (weight decay...) or implement by your self).&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    optimizer = torch.optim.SGD (model.parameters (), lr=config [&lt;span class=&quot;string&quot;&gt;&amp;#x27;learning_rate&amp;#x27;&lt;/span&gt;], momentum=&lt;span class=&quot;number&quot;&gt;0.9&lt;/span&gt;) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    writer = SummaryWriter () &lt;span class=&quot;comment&quot;&gt;# Writer of tensoboard.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; os.path.isdir (&lt;span class=&quot;string&quot;&gt;&amp;#x27;./models&amp;#x27;&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        os.mkdir (&lt;span class=&quot;string&quot;&gt;&amp;#x27;./models&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;# Create directory of saving models.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    n_epochs, best_loss, step, early_stop_count = config [&lt;span class=&quot;string&quot;&gt;&amp;#x27;n_epochs&amp;#x27;&lt;/span&gt;], math.inf, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; epoch &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;range&lt;/span&gt; (n_epochs):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        model.train () &lt;span class=&quot;comment&quot;&gt;# Set your model to train mode.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        loss_record = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;# tqdm is a package to visualize your training progress.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        train_pbar = tqdm (train_loader, position=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, leave=&lt;span class=&quot;literal&quot;&gt;True&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; x, y &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; train_pbar:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            optimizer.zero_grad ()               &lt;span class=&quot;comment&quot;&gt;# Set gradient to zero.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            x, y = x.to (device), y.to (device)   &lt;span class=&quot;comment&quot;&gt;# Move your data to device. &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            pred = model (x)             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            loss = criterion (pred, y)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            loss.backward ()                     &lt;span class=&quot;comment&quot;&gt;# Compute gradient (backpropagation).&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            optimizer.step ()                    &lt;span class=&quot;comment&quot;&gt;# Update parameters.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            step += &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            loss_record.append (loss.detach ().item ())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;comment&quot;&gt;# Display current epoch number and loss on tqdm progress bar.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            train_pbar.set_description (&lt;span class=&quot;string&quot;&gt;f&amp;#x27;Epoch [&lt;span class=&quot;subst&quot;&gt;&amp;#123;epoch+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt;/&lt;span class=&quot;subst&quot;&gt;&amp;#123;n_epochs&amp;#125;&lt;/span&gt;]&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            train_pbar.set_postfix (&amp;#123;&lt;span class=&quot;string&quot;&gt;&amp;#x27;loss&amp;#x27;&lt;/span&gt;: loss.detach ().item ()&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        mean_train_loss = &lt;span class=&quot;built_in&quot;&gt;sum&lt;/span&gt; (loss_record)/&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt; (loss_record)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        writer.add_scalar (&lt;span class=&quot;string&quot;&gt;&amp;#x27;Loss/train&amp;#x27;&lt;/span&gt;, mean_train_loss, step)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        model.&lt;span class=&quot;built_in&quot;&gt;eval&lt;/span&gt; () &lt;span class=&quot;comment&quot;&gt;# Set your model to evaluation mode.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        loss_record = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; x, y &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; valid_loader:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            x, y = x.to (device), y.to (device)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt; torch.no_grad ():&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                pred = model (x)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                loss = criterion (pred, y)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            loss_record.append (loss.item ())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        mean_valid_loss = &lt;span class=&quot;built_in&quot;&gt;sum&lt;/span&gt; (loss_record)/&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt; (loss_record)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;f&amp;#x27;Epoch [&lt;span class=&quot;subst&quot;&gt;&amp;#123;epoch+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt;/&lt;span class=&quot;subst&quot;&gt;&amp;#123;n_epochs&amp;#125;&lt;/span&gt;]: Train loss: &lt;span class=&quot;subst&quot;&gt;&amp;#123;mean_train_loss:&lt;span class=&quot;number&quot;&gt;.4&lt;/span&gt;f&amp;#125;&lt;/span&gt;, Valid loss: &lt;span class=&quot;subst&quot;&gt;&amp;#123;mean_valid_loss:&lt;span class=&quot;number&quot;&gt;.4&lt;/span&gt;f&amp;#125;&lt;/span&gt;&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        writer.add_scalar (&lt;span class=&quot;string&quot;&gt;&amp;#x27;Loss/valid&amp;#x27;&lt;/span&gt;, mean_valid_loss, step)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; mean_valid_loss &amp;lt; best_loss:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            best_loss = mean_valid_loss&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            torch.save (model.state_dict (), config [&lt;span class=&quot;string&quot;&gt;&amp;#x27;save_path&amp;#x27;&lt;/span&gt;]) &lt;span class=&quot;comment&quot;&gt;# Save your best model&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&amp;#x27;Saving model with loss &amp;#123;:.3f&amp;#125;...&amp;#x27;&lt;/span&gt;.&lt;span class=&quot;built_in&quot;&gt;format&lt;/span&gt; (best_loss))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            early_stop_count = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;: &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            early_stop_count += &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; early_stop_count &amp;gt;= config [&lt;span class=&quot;string&quot;&gt;&amp;#x27;early_stop&amp;#x27;&lt;/span&gt;]:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&amp;#x27;\nModel is not improving, so we halt the training session.&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</span><br><span class="line">&lt;h2 id=&quot; 七、Configurations&quot;&gt;&lt;a href=&quot;# 七、Configurations&quot; class=&quot;headerlink&quot; title=&quot; 七、Configurations&quot;&gt;&lt;/a&gt; 七、Configurations&lt;/h2&gt;&lt;p&gt;&lt;code&gt;config&lt;/code&gt; contains hyper-parameters for training and the path to save your model.&lt;/p&gt;</span><br><span class="line">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;device = &lt;span class=&quot;string&quot;&gt;&amp;#x27;cuda&amp;#x27;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; torch.cuda.is_available () &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;cpu&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;config = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;seed&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;5201314&lt;/span&gt;,      &lt;span class=&quot;comment&quot;&gt;# Your seed number, you can pick your lucky number. :)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;select_all&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;True&lt;/span&gt;,   &lt;span class=&quot;comment&quot;&gt;# Whether to use all features.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;valid_ratio&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt;,   &lt;span class=&quot;comment&quot;&gt;# validation_size = train_size * valid_ratio&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;n_epochs&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;3000&lt;/span&gt;,     &lt;span class=&quot;comment&quot;&gt;# Number of epochs.            &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;batch_size&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;256&lt;/span&gt;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;learning_rate&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;1e-5&lt;/span&gt;,              &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;early_stop&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;400&lt;/span&gt;,    &lt;span class=&quot;comment&quot;&gt;# If model has not improved for this many consecutive epochs, stop training.     &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;save_path&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&amp;#x27;./models/model.ckpt&amp;#x27;&lt;/span&gt;  &lt;span class=&quot;comment&quot;&gt;# Your model will be saved here.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</span><br><span class="line">&lt;p&gt;“””<span class="comment"># Dataloader&lt;br&gt;Read data from files and set up training, validation, and testing sets. You do not need to modify this part.&lt;br&gt;“””&lt;/p&gt;</span></span><br><span class="line">&lt;h1 id=&quot;Set-seed-for-reproducibility&quot;&gt;&lt;a href=&quot;#Set-seed-for-reproducibility&quot; class=&quot;headerlink&quot; title=&quot;Set seed for reproducibility&quot;&gt;&lt;/a&gt;Set seed for reproducibility&lt;/h1&gt;&lt;p&gt;same_seed (config [‘seed’])&lt;/p&gt;</span><br><span class="line">&lt;h1 id=&quot;train-data-size-2699-x-118-id-37-states-16-features-x-5-days&quot;&gt;&lt;a href=&quot;#train-data-size-2699-x-118-id-37-states-16-features-x-5-days&quot; class=&quot;headerlink&quot; title=&quot;train_data size: 2699 x 118 (id + 37 states + 16 features x 5 days)&quot;&gt;&lt;/a&gt;train_data size: 2699 x 118 (id + 37 states + 16 features x 5 days)&lt;/h1&gt;&lt;h1 id=&quot;test-data-size-1078-x-117-without-last-day’s-positive-rate&quot;&gt;&lt;a href=&quot;#test-data-size-1078-x-117-without-last-day’s-positive-rate&quot; class=&quot;headerlink&quot; title=&quot;test_data size: 1078 x 117 (without last day’s positive rate)&quot;&gt;&lt;/a&gt;test_data size: 1078 x 117 (without last day’s positive rate)&lt;/h1&gt;&lt;p&gt;train_data, test_data = pd.read_csv (‘./covid.train.csv’).values, pd.read_csv (‘./covid.test.csv’).values&lt;br&gt;train_data, valid_data = train_valid_split (train_data, config [‘valid_ratio’], config [‘seed’])&lt;/p&gt;</span><br><span class="line">&lt;h1 id=&quot;Print-out-the-data-size&quot;&gt;&lt;a href=&quot;#Print-out-the-data-size&quot; class=&quot;headerlink&quot; title=&quot;Print out the data size.&quot;&gt;&lt;/a&gt;Print out the data size.&lt;/h1&gt;&lt;p&gt;print (f”””train_data size: &#123;train_data.shape&#125;&lt;br&gt;valid_data size: &#123;valid_data.shape&#125;&lt;br&gt;test_data size: &#123;test_data.shape&#125;”””)&lt;/p&gt;</span><br><span class="line">&lt;h1 id=&quot;Select-features&quot;&gt;&lt;a href=&quot;#Select-features&quot; class=&quot;headerlink&quot; title=&quot;Select features&quot;&gt;&lt;/a&gt;Select features&lt;/h1&gt;&lt;p&gt;x_train, x_valid, x_test, y_train, y_valid = select_feat (train_data, valid_data, test_data, config [‘select_all’])&lt;/p&gt;</span><br><span class="line">&lt;h1 id=&quot;Print-out-the-number-of-features&quot;&gt;&lt;a href=&quot;#Print-out-the-number-of-features&quot; class=&quot;headerlink&quot; title=&quot;Print out the number of features.&quot;&gt;&lt;/a&gt;Print out the number of features.&lt;/h1&gt;&lt;p&gt;print (f’number of features: &#123;x_train.shape [1]&#125;’)&lt;/p&gt;</span><br><span class="line">&lt;p&gt;train_dataset, valid_dataset, test_dataset = COVID19Dataset (x_train, y_train), \&lt;br&gt;                                            COVID19Dataset (x_valid, y_valid), \&lt;br&gt;                                            COVID19Dataset (x_test)&lt;/p&gt;</span><br><span class="line">&lt;h1 id=&quot;Pytorch-data-loader-loads-pytorch-dataset-into-batches&quot;&gt;&lt;a href=&quot;#Pytorch-data-loader-loads-pytorch-dataset-into-batches&quot; class=&quot;headerlink&quot; title=&quot;Pytorch data loader loads pytorch dataset into batches.&quot;&gt;&lt;/a&gt;Pytorch data loader loads pytorch dataset into batches.&lt;/h1&gt;&lt;p&gt;train_loader = DataLoader (train_dataset, batch_size=config [‘batch_size’], shuffle=True, pin_memory=True)&lt;br&gt;valid_loader = DataLoader (valid_dataset, batch_size=config [‘batch_size’], shuffle=True, pin_memory=True)&lt;br&gt;test_loader = DataLoader (test_dataset, batch_size=config [‘batch_size’], shuffle=False, pin_memory=True)&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Start-training"><a href="#Start-training" class="headerlink" title="Start training!"></a>Start training!</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">model = My_Model (input_dim=x_train.shape [<span class="number">1</span>]).to (device) <span class="comment"># put your model and data on the same computation device.</span></span><br><span class="line">trainer (train_loader, valid_loader, model, config, device)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Plot-learning-curves-with-tensorboard-optional"><a href="#Plot-learning-curves-with-tensorboard-optional" class="headerlink" title="Plot learning curves with tensorboard (optional)"></a>Plot learning curves with <code>tensorboard</code> (optional)</h3><h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><p>The predictions of your model on testing set will be stored at <code>pred.csv</code>.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_pred</span> (<span class="params">preds, file</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; Save predictions to specified file &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span> (file, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        writer = csv.writer (fp)</span><br><span class="line">        writer.writerow ([<span class="string">&#x27;id&#x27;</span>, <span class="string">&#x27;tested_positive&#x27;</span>])</span><br><span class="line">        <span class="keyword">for</span> i, p <span class="keyword">in</span> <span class="built_in">enumerate</span> (preds):</span><br><span class="line">            writer.writerow ([i, p])</span><br><span class="line"></span><br><span class="line">model = My_Model (input_dim=x_train.shape [<span class="number">1</span>]).to (device)</span><br><span class="line">model.load_state_dict (torch.load (config [<span class="string">&#x27;save_path&#x27;</span>]))</span><br><span class="line">preds = predict (test_loader, model, device) </span><br><span class="line">save_pred (preds, <span class="string">&#x27;pred.csv&#x27;</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>This notebook uses code written by Heng-Jui Chang @ NTUEE (<a target="_blank" rel="noopener" href="https://github.com/ga642381/ML2021-Spring/blob/main/HW01/HW01.ipynb">https://github.com/ga642381/ML2021-Spring/blob/main/HW01/HW01.ipynb</a>)</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/02/17/bishe-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Nathan Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nathan自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/17/bishe-3/" class="post-title-link" itemprop="url">bishe-3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2022-02-17 21:26:43 / 修改時間：21:47:53" itemprop="dateCreated datePublished" datetime="2022-02-17T21:26:43+08:00">2022-02-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/02/14/bishe-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Nathan Wang">
+      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nathan自强不息">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/14/bishe-2/" class="post-title-link" itemprop="url">毕业设计 -(2) 知识学习</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-02-14 12:50:25" itemprop="dateCreated datePublished" datetime="2022-02-14T12:50:25+08:00">2022-02-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2022-02-17 21:50:02" itemprop="dateModified" datetime="2022-02-17T21:50:02+08:00">2022-02-17</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-advance/" itemprop="url" rel="index"><span itemprop="name">C++ advance</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、深度学习基础"><a href="#一、深度学习基础" class="headerlink" title="一、深度学习基础"></a>一、深度学习基础</h3><h4 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h4><p>(1) 领域专家，数据科学家，AI 专家<br>Q：数据科学家和 AI 专家的区别？<br>数据科学家可以有两条职业规划<br>广：不断开拓模型在不同领域的应用<br>深：专攻一个领域，成为该领域的专家<br>(2) <a target="_blank" rel="noopener" href="https://kopu.chat/2012-deeplearning-nvidia-gpu/">2012 年令深度學習和 NVIDIA 股價火爆起來的真正關鍵──GPU</a><br>(3) 模型的可解释性<br>(4) 符号学可以和深度学习结合吗？可以，例如图神经网络<br>(5) 学习的阶段：看 -&gt; 听 -&gt; 看 + 听 -&gt; 动手做 -&gt; 讲解一遍给自己或别人听</p>
+<h4 id="2-深度学习基础-线性神经网络，多层感知器"><a href="#2-深度学习基础-线性神经网络，多层感知器" class="headerlink" title="2. 深度学习基础 - 线性神经网络，多层感知器"></a>2. 深度学习基础 - 线性神经网络，多层感知器</h4><h4 id="3-卷积神经网络-LeNet-Alexnet-VGG-Inception-Resnet"><a href="#3-卷积神经网络-LeNet-Alexnet-VGG-Inception-Resnet" class="headerlink" title="3. 卷积神经网络 - LeNet, Alexnet, VGG, Inception, Resnet"></a>3. 卷积神经网络 - LeNet, Alexnet, VGG, Inception, Resnet</h4><h4 id="4-循环神经网络-RNN-GRU-LSTM-seq2seq"><a href="#4-循环神经网络-RNN-GRU-LSTM-seq2seq" class="headerlink" title="4. 循环神经网络 - RNN, GRU, LSTM, seq2seq"></a>4. 循环神经网络 - RNN, GRU, LSTM, seq2seq</h4><h4 id="5-注意力机制-Attention-Transformer"><a href="#5-注意力机制-Attention-Transformer" class="headerlink" title="5. 注意力机制 - Attention, Transformer"></a>5. 注意力机制 - Attention, Transformer</h4><h4 id="6-优化算法-SGD-Momentum-Adam"><a href="#6-优化算法-SGD-Momentum-Adam" class="headerlink" title="6. 优化算法 - SGD, Momentum, Adam"></a>6. 优化算法 - SGD, Momentum, Adam</h4><h4 id="7-高性能算法-并行，多-GPU-分布式"><a href="#7-高性能算法-并行，多-GPU-分布式" class="headerlink" title="7. 高性能算法 -  并行，多 GPU, 分布式"></a>7. 高性能算法 -  并行，多 GPU, 分布式</h4><h4 id="8-计算机视觉-目标检测，语义分析"><a href="#8-计算机视觉-目标检测，语义分析" class="headerlink" title="8. 计算机视觉 - 目标检测，语义分析"></a>8. 计算机视觉 - 目标检测，语义分析</h4><h4 id="9-自然语言处理-词嵌入，BERT"><a href="#9-自然语言处理-词嵌入，BERT" class="headerlink" title="9. 自然语言处理 - 词嵌入，BERT"></a>9. 自然语言处理 - 词嵌入，BERT</h4>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/05/10/money-management-basic-concept/#more" rel="contents">
+              <a class="btn" href="/2022/02/14/bishe-2/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -499,7 +853,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/13/money-management-macroconomics/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/02/14/bishe-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -512,7 +866,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/13/money-management-macroconomics/" class="post-title-link" itemprop="url">總體經濟學</a>
+          <a href="/2022/02/14/bishe-1/" class="post-title-link" itemprop="url">毕业设计 -(1) 前期准备</a>
         </h2>
 
         <div class="post-meta-container">
@@ -523,14 +877,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2021-05-13 14:53:38" itemprop="dateCreated datePublished" datetime="2021-05-13T14:53:38+08:00">2021-05-13</time>
+      <time title="創建時間：2022-02-14 12:42:08" itemprop="dateCreated datePublished" datetime="2022-02-14T12:42:08+08:00">2022-02-14</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 15:43:27" itemprop="dateModified" datetime="2021-07-01T15:43:27+08:00">2021-07-01</time>
+        <time title="修改時間：2022-02-17 01:08:40" itemprop="dateModified" datetime="2022-02-17T01:08:40+08:00">2022-02-17</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -538,7 +892,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/" itemprop="url" rel="index"><span itemprop="name">生活-投資理財</span></a>
+          <a href="/categories/C-advance/" itemprop="url" rel="index"><span itemprop="name">C++ advance</span></a>
         </span>
     </span>
 
@@ -552,11 +906,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="一、背景知識"><a href="#一、背景知識" class="headerlink" title="一、背景知識"></a>一、背景知識</h3><h4 id="1-定存利率"><a href="#1-定存利率" class="headerlink" title="1. 定存利率"></a>1. 定存利率</h4><p>在比較各種投資理財工具的時候，定存利率就變成一個最直觀的衡量標準。<br>每個國家決定利率升降的單位就是各國的中央銀行 Ex：美國聯准會 FED</p>
-<h5 id="1-銀行利息"><a href="#1-銀行利息" class="headerlink" title="(1) 銀行利息"></a>(1) 銀行利息</h5><p>銀行降息<br>-&gt; 利率變低，錢流出銀行<br>-&gt; 借貸壓力變小，企業就比較願意和銀行融資買機器設備<br>-&gt; 個人比較願意買房貸和車貸<br>-&gt; 通貨膨脹（景氣擴張的自然現象）<br>-&gt; 升息<br>-&gt; 通貨緊縮</p>
+          <h3 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/343592923">PyCharm+Anaconda+CUDA+Pytorch 安装教程（个人经验帖）</a></p>
+<h4 id="1-工具的作用"><a href="#1-工具的作用" class="headerlink" title="1. 工具的作用"></a>1. 工具的作用</h4><h5 id="1-PyCharm"><a href="#1-PyCharm" class="headerlink" title="(1) PyCharm"></a>(1) PyCharm</h5><p>PyCharm 是一个 Python 语言的一个开发工具，类似于 Eclipse（Java）</p>
+<h5 id="2-Anaconda"><a href="#2-Anaconda" class="headerlink" title="(2) Anaconda"></a>(2) Anaconda</h5><p>Anaconda 里面集成了很多关于 python 科学计算的第三方库。我们安装了它，就安装了很多我们需要用到的工具包</p>
+<h5 id="3-CUDA（Compute-Unified-Device-Architecture"><a href="#3-CUDA（Compute-Unified-Device-Architecture" class="headerlink" title="(3) CUDA（Compute Unified Device Architecture"></a>(3) CUDA（Compute Unified Device Architecture</h5><p>CUDA 是显卡厂商 NVIDIA 推出的运算平台，可以针对 GPU 做加速神经网络计算。<br>CUDA™是一种由 NVIDIA 推出的通用并行计算架构，该架构使 GPU 能够解决复杂的计算问题。<br>cudnn 是 pytorch 搭建深度学习模型的依赖，没有它，不能运行卷积等操作。</p>
+<h5 id="4-PyTorch-是一个开源的-Python-机器学习库，不仅能够实现强大的-GPU-加速，同时还支持动态神经网络"><a href="#4-PyTorch-是一个开源的-Python-机器学习库，不仅能够实现强大的-GPU-加速，同时还支持动态神经网络" class="headerlink" title="(4) PyTorch 是一个开源的 Python 机器学习库，不仅能够实现强大的 GPU 加速，同时还支持动态神经网络"></a>(4) PyTorch 是一个开源的 Python 机器学习库，不仅能够实现强大的 GPU 加速，同时还支持动态神经网络</h5><h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><h5 id="1-安装-Anaconda"><a href="#1-安装-Anaconda" class="headerlink" title="(1) 安装 Anaconda"></a>(1) 安装 Anaconda</h5><h5 id="2-打开-Anaconda-Prompt"><a href="#2-打开-Anaconda-Prompt" class="headerlink" title="(2) 打开 Anaconda Prompt"></a>(2) 打开 Anaconda Prompt</h5><h5 id="3-显卡配置（没有独立显卡，略）"><a href="#3-显卡配置（没有独立显卡，略）" class="headerlink" title="(3) 显卡配置（没有独立显卡，略）"></a>(3) 显卡配置（没有独立显卡，略）</h5><p>CUDN 安装<br>cuDNN 下载</p>
+<h5 id="4-激活环境"><a href="#4-激活环境" class="headerlink" title="(4) 激活环境"></a>(4) 激活环境</h5><p>检查 Python 版本：在 cmd 输入 python<br>管理环境<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 Anaconda Prompt 中输入</span></span><br><span class="line">conda create -n pytorch python=<span class="number">3.7</span></span><br><span class="line">conda activate pytorch</span><br></pre></td></tr></table></figure></p>
+<h5 id="5-安装-pytorch"><a href="#5-安装-pytorch" class="headerlink" title="(5) 安装 pytorch"></a>(5) 安装 pytorch</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 到 pytorch 官网查询安装指令</span></span><br><span class="line">conda install pytorch torchvision cpuonly -c pytorch</span><br><span class="line"><span class="comment"># -c 参数指明了下载 pytorch 的通道，优先级比清华镜像更高</span></span><br><span class="line"><span class="comment">#（如果你有更改镜像源，会被盖过去）</span></span><br></pre></td></tr></table></figure>
+<h5 id="6-验证-PyTorch-安装成功"><a href="#6-验证-PyTorch-安装成功" class="headerlink" title="(6) 验证 PyTorch 安装成功"></a>(6) 验证 PyTorch 安装成功</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 在 Anaconda Prompt 中的 pytorch 环境中</span><br><span class="line"># 输入 python 进到 python 界面</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvison</span><br><span class="line"><span class="built_in">print</span> (torch)</span><br></pre></td></tr></table></figure>
+<h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h5 id="1"><a href="#1" class="headerlink" title="(1)"></a>(1)</h5><h5 id="2"><a href="#2" class="headerlink" title="(2)"></a>(2)</h5><h5 id="3-1"><a href="#3-1" class="headerlink" title="(3)"></a>(3)</h5><h5 id="4"><a href="#4" class="headerlink" title="(4)"></a>(4)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+<p><a href>Windows10 系统中配置安装 PyTorch 环境，无显卡配置</a><br></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/05/13/money-management-macroconomics/#more" rel="contents">
+              <a class="btn" href="/2022/02/14/bishe-1/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -587,7 +949,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/05/10/money-management-stock-entry-level/">
+    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2022/01/16/quick-read-wenxue-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar.jpg">
@@ -600,7 +962,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/10/money-management-stock-entry-level/" class="post-title-link" itemprop="url">股票入門</a>
+          <a href="/2022/01/16/quick-read-wenxue-1/" class="post-title-link" itemprop="url">西方古典文学 -《神曲》（但丁）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -610,23 +972,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2021-05-10 14:32:04" itemprop="dateCreated datePublished" datetime="2021-05-10T14:32:04+08:00">2021-05-10</time>
+      <time title="創建時間：2022-01-16 00:13:59 / 修改時間：23:11:24" itemprop="dateCreated datePublished" datetime="2022-01-16T00:13:59+08:00">2022-01-16</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-07 12:51:18" itemprop="dateModified" datetime="2021-07-07T12:51:18+08:00">2021-07-07</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB-%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/" itemprop="url" rel="index"><span itemprop="name">生活-投資理財</span></a>
+          <a href="/categories/%E4%B8%BB%E9%A2%98%E4%B9%A6%E7%B1%8D%E9%80%9F%E8%AF%BB-%E6%96%87%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">主题书籍速读-文学</span></a>
         </span>
     </span>
 
@@ -640,454 +996,40 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="一、一些知識"><a href="#一、一些知識" class="headerlink" title="一、一些知識"></a>一、一些知識</h3><h4 id="1-基金"><a href="#1-基金" class="headerlink" title="1. 基金"></a>1. 基金</h4><h5 id="1-廣義的基金：爲了達成某種目的而設立的具有一定數量的基金"><a href="#1-廣義的基金：爲了達成某種目的而設立的具有一定數量的基金" class="headerlink" title="(1) 廣義的基金：爲了達成某種目的而設立的具有一定數量的基金"></a>(1) 廣義的基金：爲了達成某種目的而設立的具有一定數量的基金</h5><h5 id="2-狹義的基金：證券-各種-“有效憑證”-的總稱，例如：股票，債券，期貨-投資基金"><a href="#2-狹義的基金：證券-各種-“有效憑證”-的總稱，例如：股票，債券，期貨-投資基金" class="headerlink" title="(2) 狹義的基金：證券 (各種 “有效憑證” 的總稱，例如：股票，債券，期貨) 投資基金"></a>(2) 狹義的基金：證券 (各種 “有效憑證” 的總稱，例如：股票，債券，期貨) 投資基金</h5><p>小額投資沒有足夠的資本可以做分散投資，所以可以購買基金<br>基金公司，保險公司，銀行發行基金</p>
-<h4 id="2-股票市場的三大法人：外資、投信、自營商"><a href="#2-股票市場的三大法人：外資、投信、自營商" class="headerlink" title="2. 股票市場的三大法人：外資、投信、自營商"></a>2. 股票市場的三大法人：外資、投信、自營商</h4><h5 id="1-外資"><a href="#1-外資" class="headerlink" title="(1) 外資"></a>(1) 外資</h5><p>(a) 主動型基金：基金經理人主動選股 / 配置<br>(b) 被動型基金 (ETF)：依照指數成分被動的調整</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/10/money-management-stock-entry-level/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/20/computerNetwork-lab1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Nathan Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/20/computerNetwork-lab1/" class="post-title-link" itemprop="url">计算机网络 lab1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-03-20 20:37:54" itemprop="dateCreated datePublished" datetime="2021-03-20T20:37:54+08:00">2021-03-20</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 12:51:09" itemprop="dateModified" datetime="2021-07-01T12:51:09+08:00">2021-07-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">大学课程-计算机网络</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Lab-1-Set-Up-Environment-and-Test-Basic-Softwares"><a href="#Lab-1-Set-Up-Environment-and-Test-Basic-Softwares" class="headerlink" title="Lab 1: Set Up Environment and Test Basic Softwares"></a>Lab 1: Set Up Environment and Test Basic Softwares</h3><p>准备工作：</p>
-<h5 id="1-安装-Virtualbox"><a href="#1-安装-Virtualbox" class="headerlink" title="(1) 安装 Virtualbox"></a>(1) 安装 Virtualbox</h5><h5 id="2-在-Virtualbox-中建立安装-ubuntu-作业系统的虚拟机"><a href="#2-在-Virtualbox-中建立安装-ubuntu-作业系统的虚拟机" class="headerlink" title="(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机"></a>(2) 在 Virtualbox 中建立安装 ubuntu 作业系统的虚拟机</h5><p>在 Windows 下安裝 VirtualBox 及 Ubuntu 18.04：<br>(Ubuntu18.04 可以在官网下载，或是下载阿里镜像)<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/20/computerNetwork-lab1/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/03/30/computerNetwork-lab2-Mininet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Nathan Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/30/computerNetwork-lab2-Mininet/" class="post-title-link" itemprop="url">计算机网络 lab2 使用 Mininet 创建网络拓扑</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-03-30 22:10:32" itemprop="dateCreated datePublished" datetime="2021-03-30T22:10:32+08:00">2021-03-30</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 12:51:08" itemprop="dateModified" datetime="2021-07-01T12:51:08+08:00">2021-07-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">大学课程-计算机网络</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="一、Miniset-简介"><a href="#一、Miniset-简介" class="headerlink" title="一、Miniset 简介"></a>一、Miniset 简介</h3><p>Miniset 是一个开源的网络仿真器，是一个轻量级软件定义网络和测试平台，支持 OpenFlow 和 OpenSwitch 等协议。<br>Miniset 上运行的代码可以轻松移植到支持 OpenFlow 的硬件设备上。<br>Mininet 提供 python API，简单易用</p>
-<h3 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h3><h4 id="安装-mininet"><a href="#安装-mininet" class="headerlink" title="安装 mininet"></a>安装 mininet</h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/30/computerNetwork-lab2-Mininet/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/15/5G-3-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Nathan Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/15/5G-3-1/" class="post-title-link" itemprop="url">5G（三）5G 关键技术 -- 1.NFV 网络功能虚拟化</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-04-15 16:02:22" itemprop="dateCreated datePublished" datetime="2021-04-15T16:02:22+08:00">2021-04-15</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 14:43:56" itemprop="dateModified" datetime="2021-07-01T14:43:56+08:00">2021-07-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/5G/" itemprop="url" rel="index"><span itemprop="name">5G</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="5G-新技术"><a href="#5G-新技术" class="headerlink" title="5G 新技术"></a>5G 新技术</h3><p>网络新技术：NFV、SDN、MEC、UDN、NS<br>无线新技术：mmW、Massive MIMO、NOMA、Flexible PHY、Flexible Duplex</p>
-<h3 id="一、从电子游戏说起"><a href="#一、从电子游戏说起" class="headerlink" title="一、从电子游戏说起"></a>一、从电子游戏说起</h3><p>一开始的游戏，不同的游戏运行在不同的游戏硬件上<br>缺点：成本高、不灵活、部署慢<br>优点：性能好 (每个游戏都是针对特定硬件的性能开发的)、高可靠 (主机游戏死机的情况少)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/15/5G-3-1/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/15/5G-3-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Nathan Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/15/5G-3-2/" class="post-title-link" itemprop="url">5G（三）5G 关键技术 -- 2.SDN 软件定义网络</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-04-15 22:02:45" itemprop="dateCreated datePublished" datetime="2021-04-15T22:02:45+08:00">2021-04-15</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 14:43:41" itemprop="dateModified" datetime="2021-07-01T14:43:41+08:00">2021-07-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/5G/" itemprop="url" rel="index"><span itemprop="name">5G</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="一、从真人足球比赛和足球电子游戏说起"><a href="#一、从真人足球比赛和足球电子游戏说起" class="headerlink" title="一、从真人足球比赛和足球电子游戏说起"></a>一、从真人足球比赛和足球电子游戏说起</h3><h4 id="真人足球比赛"><a href="#真人足球比赛" class="headerlink" title="真人足球比赛"></a>真人足球比赛</h4><p>赛前教练布置战术<br>赛中球员自行发挥<br>教练需改变战术策略只能依靠中场休息时间<br>替补球员上场前需进行热身</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/15/5G-3-2/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wangxchun.github.io/2021/04/16/5G-3-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/avatar.jpg">
-      <meta itemprop="name" content="Nathan Wang">
-      <meta itemprop="description" content="機器學習 / C++ / 投資 / 台灣景點">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/16/5G-3-3/" class="post-title-link" itemprop="url">5G（三）5G 关键技术 -- 3.MEC 移动边缘计算</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2021-04-16 13:47:01" itemprop="dateCreated datePublished" datetime="2021-04-16T13:47:01+08:00">2021-04-16</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-07-01 14:43:30" itemprop="dateModified" datetime="2021-07-01T14:43:30+08:00">2021-07-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/5G/" itemprop="url" rel="index"><span itemprop="name">5G</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="一、从京东物流说起"><a href="#一、从京东物流说起" class="headerlink" title="一、从京东物流说起"></a>一、从京东物流说起</h3><p><img src="/2021/04/16/5G-3-3/photo1.jpg" alt><br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/16/5G-3-3/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h3 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a>介绍 </h3><h4 id="作者"><a href="# 作者" class="headerlink" title="作者"></a> 作者 </h4><p> 但丁</p>
+<ul>
+<li>中世纪伟大诗人</li>
+<li>文艺复兴的先驱</li>
+<li>意大利语之父</li>
+</ul>
+<p>如果说西方文学史的殿堂只能保留两个名字，那只能是但丁和莎士比亚。但丁对后世的影响极为深远，我们中国的文化进程也深受其影响。比如，他曾激励戊戌变法失败后的梁启超，让在日本留学的鲁迅看到了用语言凝聚民族的希望，而发起 “白话文运动” 的胡适，效仿的正是但丁对意大利语的创造和革新。</p>
+<p>但丁是用他惊人的原创力征服世界的。他发明了意大利语。但丁出生于 1265 年的意大利，当时意大利并不是一个统一的国家，只是一个地理概念。当时的欧洲通用语是拉丁文，各地老百姓说的语言被称为 “俗语”，英语、法语、意大利语，都是俗语。文人著书立说用的都是拉丁文，因为这种语言被认为是神圣和不朽的。拉丁文和俗语的关系，很像我们新文化运动前文言文和白话文的关系。</p>
+<h4 id="作品"><a href="# 作品" class="headerlink" title="作品"></a>作品</h4><p>《神曲》</p>
+<ul>
+<li>一部百科全书式作品</li>
+<li>一册不朽诗篇</li>
+</ul>
+<p>简单地说，《神曲》写的是神游三界的故事：朝圣者但丁在人生旅途上迷失了，陷入了一片黑暗森林，找不到出路，这时，罗马大诗人维吉尔出现了，他和一个叫贝亚特丽斯的圣女带领但丁游历了地狱、炼狱和天堂，最终见到了上帝。</p>
+<p>几个世纪以来，几乎每个重视教育的西方家庭中都有一本《神曲》，一般来说都是多雷的版画插图珍藏版，孩子们从小就阅读甚至背诵它，被其中或可怖或怪诞或恢宏的景象所征服。但其实，它实在是一本极为复杂的书。它是一部百科全书式作品，囊括了中世纪所有的人文知识，有着把整个宇宙囊括进去的野心。它写了一百多个人物，从地狱一路铺到天堂，这一百多个灵魂的故事，贯穿了从古希腊罗马到但丁生活的中世纪尾页的历史人物、神话人物、文学人物和与但丁同时代的真实人物。</p>
+<h3 id="创作神曲的原动力"><a href="# 创作神曲的原动力" class="headerlink" title="创作神曲的原动力"></a>创作神曲的原动力 </h3><h4 id="贝亚特丽斯是最重要的事"><a href="# 贝亚特丽斯是最重要的事" class="headerlink" title="贝亚特丽斯是最重要的事"></a> 贝亚特丽斯是最重要的事 </h4><p> 美德美人 -&gt; 精神苦恋 -&gt; 私人神话 -&gt; 永恒纪念</p>
+<h4 id="被佛罗伦萨放逐开始流亡"><a href="# 被佛罗伦萨放逐开始流亡" class="headerlink" title="被佛罗伦萨放逐开始流亡"></a>被佛罗伦萨放逐开始流亡 </h4><p> 政治斗争 -&gt; 放逐流亡 -&gt; 独特观点 -&gt; 创作史诗</p>
+<p>那时候，流亡是对一个人最严厉的惩罚。因为在中世纪的观念中，一个人在城邦里占据的位置是他最重要的东西，不能占有城市中的一个位置，就意味着你什么也不是。这对一个致力于世俗生活的普通人来说是惩罚，但对一个诗人来说却是一种幸福。</p>
+<p>开始流亡后，但丁彻底抛弃了忠于哪种党派的观念，开始拥有自己的独特观点。他开始了语言上的研究，试图找到一个统一的、可以综合所有意大利语言的可能，来描述以君主帝国来统一世界的必要性。他开始继续写作《神曲》，他的生命也因此重新绽放。这一次，他的创作从早年私人的爱情神话变成了属于公众的神话、史诗和百科全书。</p>
+<h3 id="神曲开篇"><a href="# 神曲开篇" class="headerlink" title="神曲开篇"></a>神曲开篇 </h3><p> 古罗马最伟大的诗人罗吉尔，他的灵活作为但丁的导师</p>
+<p>神曲是有韵的诗，开篇的韵脚是由 vita（也就是 “生命” 这个词）和 smarrita（也就是 “迷失”）所构成的，故事的开局就是 “迷失的生命”。主人公是朝圣者但丁，一个迷途的普通人，而叙述者是全知全能的作者但丁，我们必须把这两者区分开。按照当时人对寿命的理解，人的寿命最长大约 70 岁，那么人生的中途就是 35 岁，一个容易产生中年危机的年龄。</p>
+<p>开篇有一系列象征和用典。黑暗森林象征人类精神世界的种种罪恶和过失，也指当时的意大利社会的腐败和党派之争。三只猛兽来源于圣经中的典故，在《启示录》中代表 “反基督”，因为豹子（lonza）、狮子（leone）、狼（lupa）的意大利文都以字母 “l” 开头，这正是魔鬼路西法（Lucifer）名字的起首字母。豹象征的是肉欲和享乐，在政治上指的是将但丁驱逐出去的佛罗伦萨，狮子象征野心和强权，在政治上指法兰西国王出兵意大利，母狼象征贪欲，在政治上指的是贪婪的罗马教皇。在《地狱篇》第 2 歌中，但丁借维吉尔之口预言说，一只猎犬将成为意大利的救星，将象征贪欲的母狼赶回地狱，这只猎犬以 “智慧、爱和美德” 为食，指的是当时但丁给予厚望的君主：神圣罗马帝国的皇帝亨利七世。</p>
+<p>你看，这里的象征都是具有双重含义的，既是在说人生面临的困境，也是在说意大利面临的困境，而但丁的写作意图也是双重的，他要讲述自己摆脱人性的诱惑，走出人生困境的旅程，也希望意大利能扫除罪恶，得到拯救。其实，《神曲》讲述的就是但丁在流亡期间，游走在不同城市之间，作为一个旁观者，深刻地发现意大利的真正问题所在的故事，他讲述自己对这个四分五裂的世界的认知，告诉人们如何才能齐心协力，从分裂走向整合。</p>
+<h3 id="朝圣者但丁的新三界"><a href="# 朝圣者但丁的新三界" class="headerlink" title="朝圣者但丁的新三界"></a>朝圣者但丁的新三界 </h3><h4 id="地狱"><a href="# 地狱" class="headerlink" title="地狱"></a> 地狱 </h4><p> 地狱最外围的一层叫灵泊，limbo，这里漂浮着古代圣贤的灵魂，其中有哲学家苏格拉底、诗人荷马，还有但丁诗歌上的老师维吉尔等等。你可能要问，他们有什么罪呢？</p>
+<p>按照但丁的神学观念，古代圣贤生活在基督诞生之前，当然不可能有基督教信仰，所以，他们不能得到救赎，永远悬在半空，地狱不罚他们，天堂也不要他们。正像维吉尔说的，他们既不期盼，也不等候，不抱希望地存在着。所以，这其实也是一种惩罚，因为这种状态就是被放逐。但丁对灵泊的创造很可能来源于自己被放逐的经历。不同的是，但丁始终是怀有希望的。如今 limbo 早已成为一个常用词，用来指这种边缘和放逐的状态。比如电影《盗梦空间》中的 limbo，“迷失域”，指的就是潜意识的边缘，一种没有构建、没有秩序、仅有潜意识投射的状态。人一旦进入到这里，就会忘了自己在做梦，也忘了时间，这无疑是一种放逐。</p>
+<p>我们再沿着《神曲》中的地狱往下走。真正的地狱开始于第二圈，这里住着色欲场中的灵魂，在狂风中飘荡；第三圈是犯了饕餮罪的，躺在臭雨冰雹之下，第四圈是贪婪浪费者，永远推着重物上山，互相冲撞；第五圈是愤怒者，他们的灵魂在死的河里争斗。地狱前五圈的罪基本对应的是 “七宗罪”：骄傲，妒忌，愤怒，懒惰，贪财，贪吃，贪色，第五圈之下是 “下层地狱”，这里的罪出自但丁的原创，因此分类也更详细。第六圈是不信灵魂存在的邪教徒。第七圈是残暴者，包括对他人施暴的人和对自己施暴的人也就是自杀者，以及对上帝残暴的人和对自然残暴的人等等。但丁的老师拉蒂尼就被安排在这一圈，学者认为，但丁给老师安排的罪名不太有说服力，他这么安排很可能只是为了凸显自己在道德上比老师更高尚。第八圈是欺诈者，包括但丁痛恨的贪官污吏、伪君子等，著名的尤利西斯的灵魂也在这里。第九圈是一个冰湖，罪人都冰冻在里面，中心是万恶所归的魔王路西法，就是撒旦。</p>
+<p>爱欲问题是西方文化的关键词之一，很多学者认为，爱欲问题也是但丁的 “全部问题”。这里的爱是希腊语 Eros 也就是 “爱欲” 的爱，它是一种生命动力，类似于 “力比多” 和 “自由意志”。</p>
+<p>在但丁心里，狂妄的求知欲是一种很深的罪。作为一个百科全书式的求知者，但丁是矛盾的。一方面，他像笔下的尤利西斯一样，想要穷尽一切知识，另一方面，按照他的信仰，求知欲始于过度的好奇，来自人对超越自身限度的善的渴望，而这种渴望是一种傲慢，傲慢是最深的罪。在圣经故事中，人类的始祖亚当夏娃正是因为过度的好奇而吃下智慧树的果子，有了原罪。对未知世界，正确的态度是保持几分审慎和谦卑。</p>
+<h4 id="炼狱"><a href="# 炼狱" class="headerlink" title="炼狱"></a>炼狱 </h4><p> 炼狱是一座山，形状跟地狱正相反，像一个倒立的漏斗，加上净界山和地上乐园，也是 9 层，越往上越接近天堂。炼狱的灵魂犯下的也是七宗罪，但跟地狱的灵魂不同的是，他们知道忏悔，还有得救的希望。</p>
+<p>如果说《地狱篇》展示的是各种堕落的爱，《炼狱篇》展示的就是人用自由意志对爱欲的纠正，对爱之罪的医治。自由意志是《炼狱篇》重点讨论的关键词。</p>
+<h4 id="天堂"><a href="# 天堂" class="headerlink" title="天堂"></a>天堂</h4><p>《天堂篇》所展示的，是爱的完满状态，这里居住着幸福的灵魂，他们是行善者、虔诚的教士、为信仰而战死的英雄、哲学家和神学家、正直的君主，基督和天使。</p>
+<p>宇宙运转的真理 - 爱 <br> 这种爱，是基督教中的仁爱（caritas），或者说信仰之爱。</p>
+<p>爱的完满状态就是兼具人性与神性，调和了尤利西斯的求知之爱，维吉尔的理智之爱，贝亚特丽斯的信仰之爱的状态。这就是但丁关于爱的理想，是他对自己灵魂进阶的要求，也是他为纷乱的人世间开出的药方。</p>
+<h3 id="延伸阅读 -《月亮与六便士》-《千面英雄》-《荷马史诗》"><a href="# 延伸阅读 -《月亮与六便士》-《千面英雄》-《荷马史诗》" class="headerlink" title="延伸阅读 《月亮与六便士》 《千面英雄》 《荷马史诗》"></a>延伸阅读 《月亮与六便士》 《千面英雄》 《荷马史诗》</h3>
       
     </div>
 
