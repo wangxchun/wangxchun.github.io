@@ -32,7 +32,7 @@
 <meta property="og:description" content="安装流程，主要参考这两篇，但是安装 python3.6 会有问题，于是我安装 python3.8安装 mujoco, mujoco-py,gym [all],robosuite这篇主要参考 dm_control 的安装 安装 tf-gpu12345678910conda create -n mujoco_38 python&#x3D;&#x3D;3.8conda activate mujoco_38# 注意，一定要用">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-07-29T13:02:03.000Z">
-<meta property="article:modified_time" content="2022-08-03T04:14:26.093Z">
+<meta property="article:modified_time" content="2022-10-05T03:22:45.918Z">
 <meta property="article:author" content="Nathan Wang">
 <meta name="twitter:card" content="summary">
 
@@ -177,14 +177,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">231</span>
+          <span class="site-state-item-count">232</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -268,8 +268,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2022-08-03 12:14:26" itemprop="dateModified" datetime="2022-08-03T12:14:26+08:00">2022-08-03</time>
+        <time title="修改時間：2022-10-05 11:22:45" itemprop="dateModified" datetime="2022-10-05T11:22:45+08:00">2022-10-05</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">硕士研究</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -290,7 +299,9 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 常见错误 (1) gcc error:</span></span><br><span class="line"><span class="comment"># 试了网上很多解决办法，包括 mujoco_py 的 github 官方解决办法都不行，试了如下方法，完美解决</span></span><br><span class="line">sudo apt-get update -q</span><br><span class="line">sudo DEBIAN_FRONTEND=noninteractive apt-get install -y curl  libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev </span><br><span class="line">sudo apt-get clean</span><br><span class="line">rm -rf /var/lib/apt/lists/* </span><br><span class="line"></span><br><span class="line"><span class="comment"># 常见错误 (2) No such file or directory: ‘patchelf’</span></span><br><span class="line">conda install -y patchelf</span><br></pre></td></tr></table></figure>
 <h4 id="安装 -gym-all"><a href="# 安装 -gym-all" class="headerlink" title="安装 gym [all]"></a>安装 gym [all]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法 1</span></span><br><span class="line">git clone https://github.com/openai/gym.git</span><br><span class="line">python setup.py install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法 2</span></span><br><span class="line">pip install gym [<span class="built_in">all</span>] --no-deps mujoco_py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法 3</span></span><br><span class="line">conda install gym</span><br></pre></td></tr></table></figure>
 <h4 id="安装 -dm-control"><a href="# 安装 -dm-control" class="headerlink" title="安装 dm_control"></a>安装 dm_control</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/deepmind/dm_control.git</span><br><span class="line">cd dm_control</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">python setup.py install</span><br><span class="line"><span class="comment"># 遇到 GL/glew.h 问题需要</span></span><br><span class="line">sudo apt-get install libosmesa6-dev</span><br><span class="line"><span class="comment"># 遇到 absl 问题</span></span><br><span class="line">pip install absl-py <span class="comment"># 然后重新安装 dm_control</span></span><br></pre></td></tr></table></figure>
-<h4 id="安装 -d4rl"><a href="# 安装 -d4rl" class="headerlink" title="安装 d4rl"></a>安装 d4rl</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install git+https://github.com/rail-berkeley/d4rl@master<span class="comment">#egg=d4rl</span></span><br></pre></td></tr></table></figure>
+<h4 id="安装 -d4rl"><a href="# 安装 -d4rl" class="headerlink" title="安装 d4rl"></a>安装 d4rl</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/rail-berkeley/d4rl.git</span><br><span class="line">cd d4rl</span><br><span class="line">pip install -e .</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">pip install git+https://github.com/rail-berkeley/d4rl@master<span class="comment">#egg=d4rl</span></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://github.com/rail-berkeley/d4rl/issues/80">這些方法我試了都沒效 </a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/Huang_8208_sibo/article/details/124748199?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=error:%20subprocess-exited-with-&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-5-124748199.142^v35^new_blog_pos_by_title&amp;spm=1018.2226.3001.4187"> 這些方法我試了都沒效 </a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44949421/article/details/123422983"> 這些方法我試了都沒效 </a><br>pip install -U -f <a target="_blank" rel="noopener" href="https://github.com/deepmind/dm_control">https://github.com/deepmind/dm_control</a> -e .<br>pip install -U -f <a target="_blank" rel="noopener" href="https://github.com/rail-berkeley/d4rl">https://github.com/rail-berkeley/d4rl</a> -e .<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/joey_ada/article/details/123580592?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-123580592-blog-119415061.pc_relevant_show_downloadRating&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-123580592-blog-119415061.pc_relevant_show_downloadRating&amp;utm_relevant_index=1"> 這些方法我試了都沒效</a><br>pip install git+<a target="_blank" rel="noopener" href="https://github.com/deepmind/dm_control@main#egg=dm_control">https://github.com/deepmind/dm_control@main#egg=dm_control</a></p>
+<p>最后解决办法：<br>setup.py 中的 dm_control 和 mjrl</p>
 <h4 id="安装 -opencv"><a href="# 安装 -opencv" class="headerlink" title="安装 opencv"></a>安装 opencv</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python</span><br><span class="line">pip install opencv-contrib-python</span><br></pre></td></tr></table></figure>
 <h3 id="补充注意事项"><a href="# 补充注意事项" class="headerlink" title="补充注意事项"></a>补充注意事项</h3><h4 id="x86-64-amd64"><a href="#x86-64-amd64" class="headerlink" title="x86_64 = amd64"></a>x86_64 = amd64</h4><h4 id="python- 和 -tensorflow- 和各个软件之间都会有版本问题，要注意"><a href="#python- 和 -tensorflow- 和各个软件之间都会有版本问题，要注意" class="headerlink" title="python 和 tensorflow 和各个软件之间都会有版本问题，要注意"></a>python 和 tensorflow 和各个软件之间都会有版本问题，要注意</h4><h4 id="Anaconda- 创建环境、删除环境、激活环境、退出环境"><a href="#Anaconda- 创建环境、删除环境、激活环境、退出环境" class="headerlink" title="Anaconda 创建环境、删除环境、激活环境、退出环境"></a>Anaconda 创建环境、删除环境、激活环境、退出环境</h4><p>conda create -n py36 python=3.6<br>conda remove -n py36 —all<br>conda activate py36<br>conda deactivate   </p>
 <h4 id="anaconda- 中的指定虚拟环境 -python- 版本升级"><a href="#anaconda- 中的指定虚拟环境 -python- 版本升级" class="headerlink" title="anaconda 中的指定虚拟环境 python 版本升级"></a>anaconda 中的指定虚拟环境 python 版本升级 </h4><p>conda install python=3.6<br> 但会有 package 匹配的问题，不如直接创立一个新环境</p>
@@ -331,6 +342,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2022/10/05/yanjiu-1-2/" rel="next" title="硕士研究 1-2：遇到的问题">
+                  硕士研究 1-2：遇到的问题 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
