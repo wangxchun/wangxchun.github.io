@@ -32,7 +32,7 @@
 <meta property="og:description" content="matplotlib.animation:MovieWriter在使用 matplotlib.animation:MovieWriter 存储影片时 memory 和 cache 不够 123WARNING:matplotlib.animation:MovieWriter stderr:convert-im6.q16: cache resources exhausted &#96;.&#x2F;gym_animat">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-10-05T03:18:11.000Z">
-<meta property="article:modified_time" content="2022-10-05T03:32:24.234Z">
+<meta property="article:modified_time" content="2022-10-05T03:38:39.859Z">
 <meta property="article:author" content="Nathan Wang">
 <meta name="twitter:card" content="summary">
 
@@ -161,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#matplotlib-animation-MovieWriter"><span class="nav-text">matplotlib.animation:MovieWriter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cache-%20%E4%B8%8D%E5%A4%9F"><span class="nav-text">cache 不够 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%20-array-%20%E7%94%A8%20-np-save-%20%E5%82%A8%E5%AD%98%E6%88%90%20-csv-%20%E6%A1%A3%E6%A1%88"><span class="nav-text">字符串 array 用 np.save 储存成 csv 档案 </span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#matplotlib-animation-MovieWriter"><span class="nav-text">matplotlib.animation:MovieWriter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cache-%20%E4%B8%8D%E5%A4%9F"><span class="nav-text">cache 不够 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%20-array-%20%E7%94%A8%20-np-save-%20%E5%82%A8%E5%AD%98%E6%88%90%20-csv-%20%E6%A1%A3%E6%A1%88"><span class="nav-text">字符串 array 用 np.save 储存成 csv 档案</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,7 +177,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-count">217</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -262,7 +262,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2022-10-05 11:18:11 / 修改時間：11:32:24" itemprop="dateCreated datePublished" datetime="2022-10-05T11:18:11+08:00">2022-10-05</time>
+      <time title="創建時間：2022-10-05 11:18:11 / 修改時間：11:38:39" itemprop="dateCreated datePublished" datetime="2022-10-05T11:18:11+08:00">2022-10-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -286,7 +286,7 @@
     <div class="post-body" itemprop="articleBody">
         <h4 id="matplotlib-animation-MovieWriter"><a href="#matplotlib-animation-MovieWriter" class="headerlink" title="matplotlib.animation:MovieWriter"></a>matplotlib.animation:MovieWriter</h4><p>在使用 matplotlib.animation:MovieWriter 存储影片时 memory 和 cache 不够 <br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WARNING:matplotlib.animation:MovieWriter stderr:</span><br><span class="line">convert-im6.q16: cache resources exhausted `./gym_animation.gi<span class="string">f&#x27; @ error/cache.c/OpenPixelCache/4083.</span></span><br><span class="line"><span class="string">convert-im6.q16: memory allocation failed `./gym_animation.gif&#x27;</span> @ error/quantize.c/AssignImageColors/<span class="number">496</span></span><br></pre></td></tr></table></figure><br><a target="_blank" rel="noopener" href="https://github.com/ImageMagick/ImageMagick/issues/396"> 原因：For some reason, my ImageMagick came with very low limits:</a></p>
 <h4 id="cache- 不够"><a href="#cache- 不够" class="headerlink" title="cache 不够"></a>cache 不够 </h4><p> 解决办法：清理 pip cache<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.cache/pip</span><br><span class="line">sudo rm -rf *</span><br><span class="line"><span class="comment"># 或者在 pip 安装的时候，跳过缓存</span></span><br><span class="line">pip install ... --no-cache-<span class="built_in">dir</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="字符串 -array- 用 -np-save- 储存成 -csv- 档案"><a href="# 字符串 -array- 用 -np-save- 储存成 -csv- 档案" class="headerlink" title="字符串 array 用 np.save 储存成 csv 档案"></a>字符串 array 用 np.save 储存成 csv 档案 </h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 报错 TypeError: Mismatch between array dtype (<span class="string">&#x27;&lt;U21&#x27;</span>) <span class="keyword">and</span> <span class="built_in">format</span> specifier (<span class="string">&#x27;%.18e,%.18e&#x27;</span>)</span><br><span class="line">You have to specify the <span class="built_in">format</span> (fmt) of you data <span class="keyword">in</span> savetxt, <span class="keyword">in</span> this case <span class="keyword">as</span> a string (% s):</span><br><span class="line">np.savetxt (<span class="string">&#x27;test.csv&#x27;</span>, DAT, delimiter=<span class="string">&quot;&quot;</span>, fmt=<span class="string">&quot;% s&quot;</span>) </span><br></pre></td></tr></table></figure>
+<h4 id="字符串 -array- 用 -np-save- 储存成 -csv- 档案"><a href="# 字符串 -array- 用 -np-save- 储存成 -csv- 档案" class="headerlink" title="字符串 array 用 np.save 储存成 csv 档案"></a>字符串 array 用 np.save 储存成 csv 档案</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 报错 TypeError: Mismatch between array dtype (&#x27;&lt;U21&#x27;) and format specifier (&#x27;%.18e,%.18e&#x27;)</span></span><br><span class="line"><span class="comment">#You have to specify the format (fmt) of you data in savetxt, in this case as a string (% s):</span></span><br><span class="line">np.savetxt (<span class="string">&#x27;test.csv&#x27;</span>, DAT, delimiter=<span class="string">&quot;&quot;</span>, fmt=<span class="string">&quot;% s&quot;</span>) </span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 
