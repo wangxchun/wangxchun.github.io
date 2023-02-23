@@ -26,9 +26,9 @@
   </script>
 <meta name="description" content="機器學習 &#x2F; C++ &#x2F; 投資 &#x2F; 台灣景點">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Nathan自强不息">
+<meta property="og:title" content="Nathan&#39;s whisper">
 <meta property="og:url" content="https://wangxchun.github.io/page/2/index.html">
-<meta property="og:site_name" content="Nathan自强不息">
+<meta property="og:site_name" content="Nathan&#39;s whisper">
 <meta property="og:description" content="機器學習 &#x2F; C++ &#x2F; 投資 &#x2F; 台灣景點">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="Nathan Wang">
@@ -47,7 +47,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>Nathan自强不息</title>
+<title>Nathan's whisper</title>
   
 
 
@@ -108,7 +108,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Nathan自强不息</h1>
+      <h1 class="site-title">Nathan's whisper</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Be Friend with Time</p>
@@ -242,7 +242,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -258,7 +258,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2022-10-05 11:18:11 / 修改時間：12:10:53" itemprop="dateCreated datePublished" datetime="2022-10-05T11:18:11+08:00">2022-10-05</time>
+      <time title="創建時間：2022-10-05 11:18:11 / 修改時間：12:23:56" itemprop="dateCreated datePublished" datetime="2022-10-05T11:18:11+08:00">2022-10-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -283,7 +283,8 @@
           <h4 id="matplotlib-animation-MovieWriter"><a href="#matplotlib-animation-MovieWriter" class="headerlink" title="matplotlib.animation:MovieWriter"></a>matplotlib.animation:MovieWriter</h4><p>在使用 matplotlib.animation:MovieWriter 存储影片时 memory 和 cache 不够 <br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WARNING:matplotlib.animation:MovieWriter stderr:</span><br><span class="line">convert-im6.q16: cache resources exhausted `./gym_animation.gi<span class="string">f&#x27; @ error/cache.c/OpenPixelCache/4083.</span></span><br><span class="line"><span class="string">convert-im6.q16: memory allocation failed `./gym_animation.gif&#x27;</span> @ error/quantize.c/AssignImageColors/<span class="number">496</span></span><br></pre></td></tr></table></figure><br><a target="_blank" rel="noopener" href="https://github.com/ImageMagick/ImageMagick/issues/396"> 原因：For some reason, my ImageMagick came with very low limits:</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/31407010/cache-resources-exhausted-imagemagick"><policy domain="resource" name="disk" value="8GiB"></policy></a></p>
 <h4 id="cache- 不够"><a href="#cache- 不够" class="headerlink" title="cache 不够"></a>cache 不够 </h4><p> 解决办法：清理 pip cache<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.cache/pip</span><br><span class="line">sudo rm -rf *</span><br><span class="line"><span class="comment"># 或者在 pip 安装的时候，跳过缓存</span></span><br><span class="line">pip install ... --no-cache-<span class="built_in">dir</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="字符串 -array- 用 -np-save- 储存成 -csv- 档案"><a href="# 字符串 -array- 用 -np-save- 储存成 -csv- 档案" class="headerlink" title="字符串 array 用 np.save 储存成 csv 档案"></a>字符串 array 用 np.save 储存成 csv 档案</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 报错 TypeError: Mismatch between array dtype (&#x27;&lt;U21&#x27;) and format specifier (&#x27;%.18e,%.18e&#x27;)</span></span><br><span class="line"><span class="comment">#You have to specify the format (fmt) of you data in savetxt, in this case as a string (% s):</span></span><br><span class="line">np.savetxt (<span class="string">&#x27;test.csv&#x27;</span>, DAT, delimiter=<span class="string">&quot;&quot;</span>, fmt=<span class="string">&quot;% s&quot;</span>) </span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="transforms-Resize- 只接受 -PIL- 类型"><a href="#transforms-Resize- 只接受 -PIL- 类型" class="headerlink" title="transforms.Resize () 只接受 PIL 类型"></a>transforms.Resize () 只接受 PIL 类型 </h4><h4 id="可以参考的 -implement"><a href="# 可以参考的 -implement" class="headerlink" title="可以参考的 implement"></a> 可以参考的 implement</h4><p><a target="_blank" rel="noopener" href="https://github.com/aviralkumar2907/CQL">有用到 d4rl 和 Atari</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><br><a target="_blank" rel="noopener" href="https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html">pytorch tutorial</a></p>
+
       
     </div>
 
@@ -318,7 +319,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -431,7 +432,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -501,7 +502,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -571,7 +572,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -649,7 +650,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -731,7 +732,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -819,7 +820,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -915,7 +916,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1021,7 +1022,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nathan自强不息">
+      <meta itemprop="name" content="Nathan's whisper">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1127,7 +1128,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
